@@ -2,7 +2,7 @@ import { Keyring } from '@polkadot/keyring';
 import { KeyringPair as KeyringPairBase } from '@polkadot/keyring/types';
 import { hexToU8a } from '@polkadot/util';
 
-import { KUSAMA_SS58_FORMAT } from './util/constants';
+import { KUSAMA_SS58_FORMAT } from './customTypes/constants';
 
 /**
  * A keyring pair

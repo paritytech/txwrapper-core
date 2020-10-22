@@ -9,7 +9,7 @@ import { Call } from '@polkadot/types/interfaces';
 import { AnyJson, Codec } from '@polkadot/types/types';
 import { stringCamelCase } from '@polkadot/util';
 
-import { EXTRINSIC_VERSION } from './constants';
+import { EXTRINSIC_VERSION } from '../customTypes/constants';
 import { createDecorated, createMetadata } from './metadata';
 import { BaseTxInfo, OptionsWithMeta, UnsignedTransaction } from './types';
 

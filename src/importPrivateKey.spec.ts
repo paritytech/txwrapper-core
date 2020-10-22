@@ -1,5 +1,5 @@
 import { importPrivateKey } from './importPrivateKey';
-import { KUSAMA_SS58_FORMAT, POLKADOT_SS58_FORMAT } from './util/constants';
+import { KUSAMA_SS58_FORMAT, POLKADOT_SS58_FORMAT } from './customTypes/constants';
 
 const PRIVATE_KEY =
   '0x9d61b19deffd5a60ba844af492ec2cc44449c5697b326919703bac031cae7f60';
