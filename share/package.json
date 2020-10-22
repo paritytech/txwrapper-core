@@ -1,0 +1,51 @@
+{
+  "name": "@substrate/txwrapper",
+  "version": "3.10.1",
+  "author": "Parity Technologies <admin@parity.io>",
+  "description": "Helper funtions for offline transaction generation.",
+  "files": [
+    "lib"
+  ],
+  "license": "Apache-2.0",
+  "main": "lib/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": "https://github.com/paritytech/txwrapper",
+  "scripts": {
+    "build": "rimraf lib/ && tsc -p tsconfig.build.json",
+    "deploy": "yarn build && standard-version",
+    "docs": "typedoc",
+    "lint": "tsc --noEmit && eslint . --ext ts",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@polkadot/api": "^2.2.1",
+    "@types/memoizee": "^0.4.3",
+    "acorn": ">=7.4.0",
+    "dot-prop": "^5.3.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.3.0",
+    "@typescript-eslint/parser": "^4.3.0",
+    "eslint": "^7.4.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-simple-import-sort": "^5.0.3",
+    "jest": "^26.2.2",
+    "prettier": "^2.0.5",
+    "standard-version": "^9.0.0",
+    "ts-jest": "^26.4.1",
+    "ts-node": "^9.0.0",
+    "typedoc": "^0.19.1",
+    "typedoc-plugin-markdown": "^3.0.2",
+    "typescript": "^4.0.2"
+  },
+  "resolutions": {
+    "acorn": ">=7.1.1",
+    "kind-of": ">=6.0.3",
+    "minimist": ">=1.2.2",
+    "dot-prop": "^5.1.1"
+  }
+}
