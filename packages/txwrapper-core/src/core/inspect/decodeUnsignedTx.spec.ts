@@ -1,6 +1,3 @@
-// TODO test for all methods in native lib
-//
-
 import {
 	balancesTransfer,
 	POLKADOT_25_TEST_OPTIONS,

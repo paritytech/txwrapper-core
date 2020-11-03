@@ -1,57 +1,43 @@
-// import { createSigningPayload } from '../createSigningPayload';
-// import * as methods from '../methods';
-// import {
-//   getAllMethods,
-//   KUSAMA_TEST_OPTIONS,
-//   TEST_BASE_TX_INFO,
-//   TEST_METHOD_ARGS,
-// } from '../../util';
-// import {
-//   DecodedSigningPayload,
-//   decodeSigningPayload,
-// } from './decodeSigningPayload';
+import {
+	balancesTransfer,
+	POLKADOT_25_TEST_OPTIONS,
+	TEST_BASE_TX_INFO,
+	TEST_METHOD_ARGS,
+} from '../../test/';
+import { createSigningPayload } from '../create';
+import { decodeSigningPayload } from './decodeSigningPayload';
 
-// /**
-//  * Helper function to decode base tx info
-//  */
-// export function decodeBaseTxInfo(txInfo: DecodedSigningPayload): void {
-//   ([
-//     'blockHash',
-//     'genesisHash',
-//     'metadataRpc',
-//     'nonce',
-//     'specVersion',
-//     'tip',
-//   ] as const).forEach((key) =>
-//     expect(txInfo[key]).toBe(TEST_BASE_TX_INFO[key])
-//   );
-// }
+describe('decodeSigningPayload', () => {
+	it('should decode balances::transfer', () => {
+		const signingPayload = createSigningPayload(
+			balancesTransfer(
+				TEST_METHOD_ARGS.balances.transfer,
+				TEST_BASE_TX_INFO,
+				POLKADOT_25_TEST_OPTIONS
+			),
+			POLKADOT_25_TEST_OPTIONS
+		);
 
-// /**
-//  * Test the [[decodeSigningPayload]] function
-//  */
-// function testDecodeSigningPayload(pallet: string, name: string): void {
-//   it(`should decode ${pallet}::${name}`, () => {
-//     const signingPayload = createSigningPayload(
-//       // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call, @typescript-eslint/no-explicit-any
-//       (methods as any)[pallet][name](
-//         // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-explicit-any
-//         (TEST_METHOD_ARGS as any)[pallet][name],
-//         TEST_BASE_TX_INFO,
-//         KUSAMA_TEST_OPTIONS
-//       ),
-//       KUSAMA_TEST_OPTIONS
-//     );
-//     const txInfo = decodeSigningPayload(signingPayload, KUSAMA_TEST_OPTIONS);
+		const decoded = decodeSigningPayload(
+			signingPayload,
+			POLKADOT_25_TEST_OPTIONS
+		);
 
-//     decodeBaseTxInfo(txInfo);
-//     expect(txInfo.method.pallet).toBe(pallet);
-//     expect(txInfo.method.name).toBe(name);
-//     // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-explicit-any
-//     expect(txInfo.method.args).toEqual((TEST_METHOD_ARGS as any)[pallet][name]);
-//   });
-// }
+		([
+			'blockHash',
+			'genesisHash',
+			'metadataRpc',
+			'nonce',
+			'specVersion',
+			'tip',
+		] as const).forEach((key) =>
+			expect(decoded[key]).toBe(TEST_BASE_TX_INFO[key])
+		);
 
-// describe('decodeSigningPayload', () => {
-//   getAllMethods().forEach((method) => testDecodeSigningPayload(...method));
-// });
+		expect(decoded.method.pallet).toBe('balances');
+		expect(decoded.method.name).toBe('transfer');
+		expect(decoded.method.args).toStrictEqual(
+			TEST_METHOD_ARGS.balances.transfer
+		);
+	});
+});
