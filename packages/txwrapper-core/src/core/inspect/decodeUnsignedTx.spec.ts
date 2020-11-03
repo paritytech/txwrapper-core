@@ -3,8 +3,9 @@ import {
 	POLKADOT_25_TEST_OPTIONS,
 	TEST_BASE_TX_INFO,
 	TEST_METHOD_ARGS,
-} from '../../test/';
+} from '../../test-helpers';
 import { decodeUnsignedTx } from './decodeUnsignedTx';
+import { itDecodesBalancesTransferCommon } from './test-helpers';
 
 describe('decodeUnsignedTx', () => {
 	it('should decode balances::transfer', () => {
@@ -30,16 +31,6 @@ describe('decodeUnsignedTx', () => {
 			expect(decoded[key]).toBe(TEST_BASE_TX_INFO[key])
 		);
 
-		// The actual period is the smallest power of 2 greater than the input
-		// period.
-		expect(decoded.eraPeriod).toBeGreaterThanOrEqual(
-			TEST_BASE_TX_INFO.eraPeriod
-		);
-
-		expect(decoded.method.pallet).toBe('balances');
-		expect(decoded.method.name).toBe('transfer');
-		expect(decoded.method.args).toStrictEqual(
-			TEST_METHOD_ARGS.balances.transfer
-		);
+		itDecodesBalancesTransferCommon(decoded);
 	});
 });

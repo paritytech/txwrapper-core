@@ -3,8 +3,8 @@ import {
 	signWithAlice,
 	TEST_BASE_TX_INFO,
 	TEST_METHOD_ARGS,
-} from '../../test';
-import { balancesTransfer } from '../../test';
+} from '../../test-helpers';
+import { balancesTransfer } from '../../test-helpers';
 import { createSignedTx } from './createSignedTx';
 import { createSigningPayload } from './createSigningPayload';
 

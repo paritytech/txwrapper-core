@@ -5,7 +5,7 @@ import {
 	signWithAlice,
 	TEST_BASE_TX_INFO,
 	TEST_METHOD_ARGS,
-} from '../../test';
+} from '../../test-helpers';
 import { decode } from './decode';
 import { itDecodesSignedBalancesTransferTx } from './decodeSignedTx.spec';
 // import { DecodedSigningPayload } from '../../types';
@@ -37,19 +37,19 @@ describe('decode', () => {
 		itDecodesSignedBalancesTransferTx(txInfo);
 	});
 
-	//   it('decode unsigned tx', () => {
-	//     const unsigned = balancesTransfer(
-	//       TEST_METHOD_ARGS.balances.transfer,
-	//       TEST_BASE_TX_INFO,
-	//       POLKADOT_25_TEST_OPTIONS
-	//     );
-	//     const txInfo = decode(unsigned, POLKADOT_25_TEST_OPTIONS);
+	// it('decodes an unsigned tx', () => {
+	// 	const unsigned = balancesTransfer(
+	// 		TEST_METHOD_ARGS.balances.transfer,
+	// 		TEST_BASE_TX_INFO,
+	// 		POLKADOT_25_TEST_OPTIONS
+	// 	);
+	// 	const txInfo = decode(unsigned, POLKADOT_25_TEST_OPTIONS);
 
-	//     decodeUnsignedBase(txInfo);
-	//     expect(txInfo.method.pallet).toBe('balances');
-	//     expect(txInfo.method.name).toBe('transfer');
-	//     expect(txInfo.method.args).toEqual(TEST_METHOD_ARGS.balances.transfer);
-	//   });
+	// 	decodeUnsignedBase(txInfo);
+	// 	expect(txInfo.method.pallet).toBe('balances');
+	// 	expect(txInfo.method.name).toBe('transfer');
+	// 	expect(txInfo.method.args).toEqual(TEST_METHOD_ARGS.balances.transfer);
+	// });
 
 	//   it('should decode signing payload', (done) => {
 	//     const unsigned = balancesTransfer(

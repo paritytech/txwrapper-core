@@ -4,8 +4,9 @@ import {
 	POLKADOT_25_TEST_OPTIONS,
 	TEST_BASE_TX_INFO,
 	TEST_METHOD_ARGS,
-} from '../../test/';
+} from '../../test-helpers';
 import { decodeSigningPayload } from './decodeSigningPayload';
+import { itDecodesBalancesTransferCommon } from './test-helpers';
 
 describe('decodeSigningPayload', () => {
 	it('should decode balances::transfer', () => {
@@ -34,10 +35,6 @@ describe('decodeSigningPayload', () => {
 			expect(decoded[key]).toBe(TEST_BASE_TX_INFO[key])
 		);
 
-		expect(decoded.method.pallet).toBe('balances');
-		expect(decoded.method.name).toBe('transfer');
-		expect(decoded.method.args).toStrictEqual(
-			TEST_METHOD_ARGS.balances.transfer
-		);
+		itDecodesBalancesTransferCommon(decoded);
 	});
 });

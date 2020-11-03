@@ -5,25 +5,16 @@ import {
 	signWithAlice,
 	TEST_BASE_TX_INFO,
 	TEST_METHOD_ARGS,
-} from '../../test/';
+} from '../../test-helpers';
 import { DecodedSignedTx } from '../../types';
 import { decodeSignedTx } from './decodeSignedTx';
+import { itDecodesBalancesTransferCommon } from './test-helpers';
 
 export function itDecodesSignedBalancesTransferTx(
 	decoded: DecodedSignedTx
 ): void {
 	(['address', 'metadataRpc', 'nonce', 'tip'] as const).forEach((key) =>
 		expect(decoded[key]).toBe(TEST_BASE_TX_INFO[key])
-	);
-
-	expect(decoded.method.pallet).toBe('balances');
-	expect(decoded.method.name).toBe('transfer');
-	expect(decoded.method.args).toEqual(TEST_METHOD_ARGS.balances.transfer);
-
-	// The actual period is the smallest power of 2 greater than the input
-	// period.
-	expect(decoded.eraPeriod).toBeGreaterThanOrEqual(
-		TEST_BASE_TX_INFO.eraPeriod
 	);
 }
 
@@ -49,18 +40,6 @@ describe('decodeSignedTx', () => {
 
 		itDecodesSignedBalancesTransferTx(decoded);
 
-		// (['address', 'metadataRpc', 'nonce', 'tip'] as const).forEach((key) =>
-		// 	expect(decoded[key]).toBe(TEST_BASE_TX_INFO[key])
-		// );
-
-		// expect(decoded.method.pallet).toBe('balances');
-		// expect(decoded.method.name).toBe('transfer');
-		// expect(decoded.method.args).toEqual(TEST_METHOD_ARGS.balances.transfer);
-
-		// // The actual period is the smallest power of 2 greater than the input
-		// // period.
-		// expect(decoded.eraPeriod).toBeGreaterThanOrEqual(
-		// 	TEST_BASE_TX_INFO.eraPeriod
-		// );
+		itDecodesBalancesTransferCommon(decoded);
 	});
 });

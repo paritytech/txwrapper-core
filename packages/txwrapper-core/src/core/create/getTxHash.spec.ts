@@ -5,7 +5,7 @@ import {
 	signWithAlice,
 	TEST_BASE_TX_INFO,
 	TEST_METHOD_ARGS,
-} from '../../test';
+} from '../../test-helpers';
 import { getTxHash } from './getTxHash';
 
 describe('getTxHash', () => {

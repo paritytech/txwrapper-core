@@ -1,7 +1,7 @@
 import {
 	POLKADOT_25_TEST_OPTIONS,
 	TEST_BASE_TX_INFO,
-} from '../../test/constants';
+} from '../../test-helpers/constants';
 import { defineMethod } from './defineMethod';
 
 describe('defineMethod', () => {
