@@ -40,7 +40,7 @@ export const POLKADOT_25_TEST_OPTIONS = {
 export const TEST_METHOD_ARGS = {
 	balances: {
 		transfer: {
-			dest: 'Fy2rsYCoowQBtuFXqLE65ehAY9T6KWcGiNCQAyPDCkfpm4s',
+			dest: '14PiLtTQ3EBwsn6KimaBLH7qsZrryxFZtqFwAognHVZhFxU1',
 			value: 12,
 		},
 	},
