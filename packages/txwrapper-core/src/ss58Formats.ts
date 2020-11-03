@@ -11,8 +11,3 @@ export const POLKADOT_SS58_FORMAT = 0;
  * Also the default for Substrate-based chains.
  */
 export const WESTEND_SS58_FORMAT = 42;
-
-/**
- * Latest extrinsic version.
- */
-export const EXTRINSIC_VERSION = 4;

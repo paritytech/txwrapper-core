@@ -28,7 +28,7 @@ describe('getTxHash', () => {
 
 		const txHash = getTxHash(signedTx);
 		expect(txHash).toBe(
-			'0x4dadb8ff06968c48b58479d1c255a529ffacd85d7e72497cdf1a16eb9d6834e3'
+			'0xaab69a09a92afaa992d369304b58cd698db1153d48a271e7f9bf4156a9cc5b00'
 		);
 
 		done();

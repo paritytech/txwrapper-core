@@ -1,4 +1,4 @@
-import { KUSAMA_SS58_FORMAT } from '../../customTypes/constants';
+import { KUSAMA_SS58_FORMAT } from '../../ss58Formats';
 import { deriveAddress } from './deriveAddress';
 
 describe('deriveAddress', () => {

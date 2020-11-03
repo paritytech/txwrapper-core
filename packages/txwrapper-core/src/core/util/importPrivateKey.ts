@@ -2,7 +2,7 @@ import { Keyring } from '@polkadot/keyring';
 import { KeyringPair as KeyringPairBase } from '@polkadot/keyring/types';
 import { hexToU8a } from '@polkadot/util';
 
-import { KUSAMA_SS58_FORMAT } from '../../customTypes/constants';
+import { KUSAMA_SS58_FORMAT } from '../../ss58Formats';
 
 /**
  * A keyring pair
@@ -17,7 +17,7 @@ export type KeyringPair = KeyringPairBase; // eslint-disable-line @typescript-es
  */
 export function importPrivateKey(
 	privateKey: string | Uint8Array,
-	ss58Format: number = KUSAMA_SS58_FORMAT
+	ss58Format: number
 ): KeyringPair {
 	const keyring = new Keyring({ type: 'ed25519' });
 	keyring.setSS58Format(ss58Format);

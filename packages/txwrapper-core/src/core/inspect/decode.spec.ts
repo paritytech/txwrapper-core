@@ -6,11 +6,12 @@ import {
 	TEST_BASE_TX_INFO,
 	TEST_METHOD_ARGS,
 } from '../../test-helpers';
+import { DecodedSigningPayload } from '../../types';
 import { decode } from './decode';
 import { itDecodesSignedBalancesTransferTx } from './decodeSignedTx.spec';
-// import { DecodedSigningPayload } from '../../types';
-// import { decodeBaseTxInfo as decodeSigningBase } from './decodeSigningPayload.spec';
-// // import { decodeBaseTxInfo as decodeUnsignedBase } from './decodeUnsignedTx.spec';
+import { itDecodesSigningPayloadBalancesTransfer } from './decodeSigningPayload.spec';
+import { itDecodesUnsignedBalanceTransferTx } from './decodeUnsignedTx.spec';
+import { itDecodesBalancesTransferCommon } from './test-helpers';
 
 describe('decode', () => {
 	it('should decode signedTx', async () => {
@@ -32,9 +33,11 @@ describe('decode', () => {
 			POLKADOT_25_TEST_OPTIONS
 		);
 
-		const txInfo = decode(signedTx, POLKADOT_25_TEST_OPTIONS);
+		const decoded = decode(signedTx, POLKADOT_25_TEST_OPTIONS);
 
-		itDecodesSignedBalancesTransferTx(txInfo);
+		itDecodesSignedBalancesTransferTx(decoded);
+
+		itDecodesBalancesTransferCommon(decoded);
 	});
 
 	it('decodes an unsigned tx', () => {
@@ -43,32 +46,31 @@ describe('decode', () => {
 			TEST_BASE_TX_INFO,
 			POLKADOT_25_TEST_OPTIONS
 		);
-		const txInfo = decode(unsigned, POLKADOT_25_TEST_OPTIONS);
+		const decoded = decode(unsigned, POLKADOT_25_TEST_OPTIONS);
 
-		decodeUnsignedBase(txInfo);
-		expect(txInfo.method.pallet).toBe('balances');
-		expect(txInfo.method.name).toBe('transfer');
-		expect(txInfo.method.args).toEqual(TEST_METHOD_ARGS.balances.transfer);
+		itDecodesUnsignedBalanceTransferTx(decoded);
+
+		itDecodesBalancesTransferCommon(decoded);
 	});
 
-	//   it('should decode signing payload', (done) => {
-	//     const unsigned = balancesTransfer(
-	//       TEST_METHOD_ARGS.balances.transfer,
-	//       TEST_BASE_TX_INFO,
-	//       POLKADOT_25_TEST_OPTIONS
-	//     );
-	//     const signingPayload = core.create.createSigningPayload(unsigned, POLKADOT_25_TEST_OPTIONS);
+	it('should decode signing payload', () => {
+		const unsigned = balancesTransfer(
+			TEST_METHOD_ARGS.balances.transfer,
+			TEST_BASE_TX_INFO,
+			POLKADOT_25_TEST_OPTIONS
+		);
+		const signingPayload = core.create.createSigningPayload(
+			unsigned,
+			POLKADOT_25_TEST_OPTIONS
+		);
 
-	//     const txInfo = decode(
-	//       signingPayload,
-	//       POLKADOT_25_TEST_OPTIONS
-	//     ) as DecodedSigningPayload;
+		const decoded = decode(
+			signingPayload,
+			POLKADOT_25_TEST_OPTIONS
+		) as DecodedSigningPayload;
 
-	//     decodeSigningBase(txInfo);
-	//     expect(txInfo.method.pallet).toBe('balances');
-	//     expect(txInfo.method.name).toBe('transfer');
-	//     expect(txInfo.method.args).toEqual(TEST_METHOD_ARGS.balances.transfer);
+		itDecodesSigningPayloadBalancesTransfer(decoded);
 
-	//     done();
-	//   });
+		itDecodesBalancesTransferCommon(decoded);
+	});
 });

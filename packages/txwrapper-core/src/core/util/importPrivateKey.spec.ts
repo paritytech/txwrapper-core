@@ -1,7 +1,4 @@
-import {
-	KUSAMA_SS58_FORMAT,
-	POLKADOT_SS58_FORMAT,
-} from '../../customTypes/constants';
+import { KUSAMA_SS58_FORMAT, POLKADOT_SS58_FORMAT } from '../../ss58Formats';
 import { importPrivateKey } from './importPrivateKey';
 
 const PRIVATE_KEY =

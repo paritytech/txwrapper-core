@@ -1,5 +1,4 @@
 import { Keyring } from '@polkadot/api';
-import { EXTRINSIC_VERSION } from '@polkadot/types/extrinsic/v4/Extrinsic';
 import { cryptoWaitReady } from '@polkadot/util-crypto';
 
 import { core } from '../core';
@@ -25,7 +24,7 @@ export async function signWithAlice(signingPayload: string): Promise<string> {
 
 	const { signature } = registry
 		.createType('ExtrinsicPayload', signingPayload, {
-			version: EXTRINSIC_VERSION,
+			version: 4,
 		})
 		.sign(alice);
 

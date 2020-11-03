@@ -1,10 +1,10 @@
 /**
  * @ignore
  */ /** */
+import { EXTRINSIC_VERSION } from '@polkadot/types/extrinsic/v4/Extrinsic';
 import { stringCamelCase } from '@polkadot/util';
 
 import { core } from '..';
-import { EXTRINSIC_VERSION } from '../../customTypes/constants';
 import { OptionsWithMeta, TxInfo } from '../../types/method';
 import { UnsignedTransaction } from '../../types/types';
 

@@ -4,8 +4,27 @@ import {
 	TEST_BASE_TX_INFO,
 	TEST_METHOD_ARGS,
 } from '../../test-helpers';
+import { DecodedUnsignedTx } from '../../types';
 import { decodeUnsignedTx } from './decodeUnsignedTx';
 import { itDecodesBalancesTransferCommon } from './test-helpers';
+
+export function itDecodesUnsignedBalanceTransferTx(
+	decoded: DecodedUnsignedTx
+): void {
+	([
+		'address',
+		'blockHash',
+		'blockNumber',
+		'genesisHash',
+		'metadataRpc',
+		'nonce',
+		'specVersion',
+		'transactionVersion',
+		'tip',
+	] as const).forEach((key) =>
+		expect(decoded[key]).toBe(TEST_BASE_TX_INFO[key])
+	);
+}
 
 describe('decodeUnsignedTx', () => {
 	it('should decode balances::transfer', () => {
@@ -17,19 +36,7 @@ describe('decodeUnsignedTx', () => {
 
 		const decoded = decodeUnsignedTx(unsigned, POLKADOT_25_TEST_OPTIONS);
 
-		([
-			'address',
-			'blockHash',
-			'blockNumber',
-			'genesisHash',
-			'metadataRpc',
-			'nonce',
-			'specVersion',
-			'transactionVersion',
-			'tip',
-		] as const).forEach((key) =>
-			expect(decoded[key]).toBe(TEST_BASE_TX_INFO[key])
-		);
+		itDecodesUnsignedBalanceTransferTx(decoded);
 
 		itDecodesBalancesTransferCommon(decoded);
 	});

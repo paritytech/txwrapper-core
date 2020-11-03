@@ -35,20 +35,3 @@ export const core: Core = {
 	util,
 	method,
 };
-
-// export {
-//   KUSAMA_SS58_FORMAT,
-//   POLKADOT_SS58_FORMAT,
-//   WESTEND_SS58_FORMAT,
-// } from '../customTypes/constants';
-// export { getRegistry } from './util/metadata';
-
-/**
- * TODO
- * Make sure all of the types that chain makers need to re-export come from the same module for
- * clarity
- *
- * Also exports from types should not happen here since this is core
- */
-// export { Args, TxMethod, TxInfo } from '../types/method';
-// export * from '../types/types';

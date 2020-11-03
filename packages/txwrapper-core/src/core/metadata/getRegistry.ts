@@ -5,7 +5,7 @@ import {
 	KUSAMA_SS58_FORMAT,
 	POLKADOT_SS58_FORMAT,
 	WESTEND_SS58_FORMAT,
-} from '../../customTypes/constants'; // TODO
+} from '../../ss58Formats';
 import { createMetadata } from './createMetadata';
 
 /**
@@ -49,6 +49,7 @@ const defaultChainProperties: Record<string, ChainProperties> = {
 	},
 };
 
+//TODO update which chains this supports / should this just be in polkadot repo?
 /**
  * Given a chain name, a spec name, and a spec version, return the
  * corresponding type registry. This function only returns the correct type
@@ -62,9 +63,9 @@ const defaultChainProperties: Record<string, ChainProperties> = {
  *
  * @see https://github.com/polkadot-js/api/tree/master/packages/types-known
  * @param chainName - The chain to create the type registry for. Returned by
- * RPC `system_chain`.
+ * RPC `system_chain`. Common ones are 'Kusama' | 'Polkadot' | 'Westend',
  * @param specName - The name of the runtime spec. Returned by RPC
- * `state_getRuntimeVersion`.
+ * `state_getRuntimeVersion`. Common ones are 'kusama' | 'polkadot' | 'westend'
  * @param specVersion - The spec version of that chain for which we want to
  * create a type registry. Returned by RPC `state_getRuntimeVersion`.
  * @param metadataRpc - If you pass the optional `metadataRpc` argument, then
@@ -72,9 +73,9 @@ const defaultChainProperties: Record<string, ChainProperties> = {
  * pass this argument, make sure to call `registry.setMetadata()` yourself!
  */
 export function getRegistry(
-	chainName: 'Kusama' | 'Polkadot' | 'Polkadot CC1' | 'Westend', // TODO create a way to make these configurable
-	_specName: 'kusama' | 'polkadot' | 'westend',
-	_specVersion: number,
+	chainName: string,
+	specName: string,
+	specVersion: number,
 	metadataRpc: string
 ): TypeRegistry {
 	const registry = new TypeRegistry();
@@ -83,7 +84,7 @@ export function getRegistry(
 	// Register types specific to chain/runtimeVersion
 	// TODO ask jaco if plans having any parachain spec type? If so add instructions on how to add spec
 	// types to polkadot-js
-	// registry.register(getSpecTypes(registry, chainName, specName, specVersion));
+	registry.register(getSpecTypes(registry, chainName, specName, specVersion));
 
 	registry.setMetadata(metadata);
 

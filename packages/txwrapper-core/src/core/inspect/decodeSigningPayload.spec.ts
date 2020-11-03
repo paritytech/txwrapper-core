@@ -5,8 +5,24 @@ import {
 	TEST_BASE_TX_INFO,
 	TEST_METHOD_ARGS,
 } from '../../test-helpers';
+import { DecodedSigningPayload } from '../../types';
 import { decodeSigningPayload } from './decodeSigningPayload';
 import { itDecodesBalancesTransferCommon } from './test-helpers';
+
+export function itDecodesSigningPayloadBalancesTransfer(
+	decoded: DecodedSigningPayload
+): void {
+	([
+		'blockHash',
+		'genesisHash',
+		'metadataRpc',
+		'nonce',
+		'specVersion',
+		'tip',
+	] as const).forEach((key) =>
+		expect(decoded[key]).toBe(TEST_BASE_TX_INFO[key])
+	);
+}
 
 describe('decodeSigningPayload', () => {
 	it('should decode balances::transfer', () => {
@@ -24,16 +40,7 @@ describe('decodeSigningPayload', () => {
 			POLKADOT_25_TEST_OPTIONS
 		);
 
-		([
-			'blockHash',
-			'genesisHash',
-			'metadataRpc',
-			'nonce',
-			'specVersion',
-			'tip',
-		] as const).forEach((key) =>
-			expect(decoded[key]).toBe(TEST_BASE_TX_INFO[key])
-		);
+		itDecodesSigningPayloadBalancesTransfer(decoded);
 
 		itDecodesBalancesTransferCommon(decoded);
 	});
