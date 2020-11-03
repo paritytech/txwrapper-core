@@ -1,29 +1,15 @@
 {
-  "name": "@substrate/txwrapper",
-  "version": "3.10.1",
+  "repository": "https://github.com/paritytech/txwrapper-core",
   "author": "Parity Technologies <admin@parity.io>",
-  "description": "Helper funtions for offline transaction generation.",
-  "files": [
-    "lib"
-  ],
   "license": "Apache-2.0",
-  "main": "lib/index.js",
-  "publishConfig": {
-    "access": "public"
-  },
-  "repository": "https://github.com/paritytech/txwrapper",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
-    "build": "rimraf lib/ && tsc -p tsconfig.build.json",
-    "deploy": "yarn build && standard-version",
-    "docs": "typedoc",
+    "build": "(cd packages/txwrapper-core && yarn build)",
     "lint": "tsc --noEmit && eslint . --ext ts",
     "test": "jest"
-  },
-  "dependencies": {
-    "@polkadot/api": "^2.2.1",
-    "@types/memoizee": "^0.4.3",
-    "acorn": ">=7.4.0",
-    "dot-prop": "^5.3.0"
   },
   "devDependencies": {
     "@types/jest": "^26.0.0",
@@ -41,11 +27,5 @@
     "typedoc": "^0.19.1",
     "typedoc-plugin-markdown": "^3.0.2",
     "typescript": "^4.0.2"
-  },
-  "resolutions": {
-    "acorn": ">=7.1.1",
-    "kind-of": ">=6.0.3",
-    "minimist": ">=1.2.2",
-    "dot-prop": "^5.1.1"
   }
 }

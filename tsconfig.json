@@ -3,8 +3,14 @@
     "declaration": true,
     "module": "CommonJS",
     "target": "ES2015",
-    "outDir": "lib",
     "esModuleInterop": true,
-    "strict": true
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "@substrate/txwrapper-core": ["packages/txwrapper-core/src"],
+      "@substrate/txwrapper-core/*": [
+        "packages/txwrapper-core/src/*"
+      ]
+    }
   }
 }
