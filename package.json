@@ -7,8 +7,7 @@
     "packages/*"
   ],
   "scripts": {
-    "clean:core": "rimraf packages/txwrapper-core/lib",
-    "build": "tsc",
+    "build": "(cd packages/txwrapper-core && yarn build)",
     "lint": "tsc --noEmit && eslint . --ext ts",
     "test": "jest"
   },
