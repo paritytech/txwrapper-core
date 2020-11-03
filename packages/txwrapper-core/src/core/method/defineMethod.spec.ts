@@ -54,9 +54,7 @@ describe('defineMethod', () => {
 		]);
 		expect(unsigned.method).toBe('0x0806');
 		expect(unsigned.nonce).toBe('0x00000002');
-		expect(unsigned.address).toBe(
-			'HNZata7iMYWmk5RvZRTiAsSDhV8366zq2YGb3tLH5Upf74F'
-		);
+		expect(unsigned.address).toBe(TEST_BASE_TX_INFO.address);
 		expect(unsigned.blockNumber).toBe('0x0041a58e');
 	});
 });

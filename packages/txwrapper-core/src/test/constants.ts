@@ -7,7 +7,7 @@ export { metadataRpc };
  * Base tx information common to all tested transactions
  */
 export const TEST_BASE_TX_INFO = {
-	address: 'HNZata7iMYWmk5RvZRTiAsSDhV8366zq2YGb3tLH5Upf74F', // seed "//Alice"
+	address: '15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5', // seed "//Alice"
 	blockHash:
 		'0x1fc7493f3c1e9ac758a183839906475f8363aafb1b1d3e910fe16fab4ae1b582',
 	blockNumber: 4302222,

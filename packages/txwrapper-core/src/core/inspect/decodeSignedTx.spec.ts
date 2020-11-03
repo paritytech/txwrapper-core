@@ -1,60 +1,66 @@
-// TODO move this to a generic testing function
-// TODO creates static test for decodeSignedTx
+import { core } from '../../core';
+import {
+	balancesTransfer,
+	POLKADOT_25_TEST_OPTIONS,
+	signWithAlice,
+	TEST_BASE_TX_INFO,
+	TEST_METHOD_ARGS,
+} from '../../test/';
+import { DecodedSignedTx } from '../../types';
+import { decodeSignedTx } from './decodeSignedTx';
 
-// /* eslint-disable @typescript-eslint/no-explicit-any */
-// /* eslint-disable @typescript-eslint/no-unsafe-assignment */
-// /* eslint-disable @typescript-eslint/no-unsafe-member-access */
-// /* eslint-disable @typescript-eslint/no-unsafe-call */
-// import {core} from '../../core';
-// import * as methods from '../methods';
-// import {
-//   getAllMethods,
-//   KUSAMA_TEST_OPTIONS,
-//   signWithAlice,
-//   TEST_BASE_TX_INFO,
-//   TEST_METHOD_ARGS,
-// } from '../../util';
-// import { DecodedSignedTx, decodeSignedTx } from './decodeSignedTx';
+export function itDecodesSignedBalancesTransferTx(
+	decoded: DecodedSignedTx
+): void {
+	(['address', 'metadataRpc', 'nonce', 'tip'] as const).forEach((key) =>
+		expect(decoded[key]).toBe(TEST_BASE_TX_INFO[key])
+	);
 
-// /**
-//  * Helper function to decode base tx info
-//  */
-// export function decodeBaseTxInfo(txInfo: DecodedSignedTx): void {
-//   (['address', 'metadataRpc', 'nonce', 'tip'] as const).forEach((key) =>
-//     expect(txInfo[key]).toBe(TEST_BASE_TX_INFO[key])
-//   );
+	expect(decoded.method.pallet).toBe('balances');
+	expect(decoded.method.name).toBe('transfer');
+	expect(decoded.method.args).toEqual(TEST_METHOD_ARGS.balances.transfer);
 
-//   // The actual period is the smallest power of 2 greater than the input
-//   // period.
-//   expect(txInfo.eraPeriod).toBeGreaterThanOrEqual(TEST_BASE_TX_INFO.eraPeriod);
-// }
+	// The actual period is the smallest power of 2 greater than the input
+	// period.
+	expect(decoded.eraPeriod).toBeGreaterThanOrEqual(
+		TEST_BASE_TX_INFO.eraPeriod
+	);
+}
 
-// /**
-//  * Test the [[decodeSignedTx]] function
-//  */
-// function testDecodeSignedTx(pallet: string, name: string): void {
-//   it(`should decode ${pallet}::${name}`, async (done) => {
-//     const unsigned = (methods as any)[pallet][name](
-//       (TEST_METHOD_ARGS as any)[pallet][name],
-//       TEST_BASE_TX_INFO,
-//       KUSAMA_TEST_OPTIONS
-//     );
-//     const signingPayload = createSigningPayload(unsigned, KUSAMA_TEST_OPTIONS);
-//     const signature = await signWithAlice(signingPayload);
+describe('decodeSignedTx', () => {
+	it('should decode balances::transfer', async () => {
+		const unsigned = balancesTransfer(
+			TEST_METHOD_ARGS.balances.transfer,
+			TEST_BASE_TX_INFO,
+			POLKADOT_25_TEST_OPTIONS
+		);
+		const signingPayload = core.create.createSigningPayload(
+			unsigned,
+			POLKADOT_25_TEST_OPTIONS
+		);
+		const signature = await signWithAlice(signingPayload);
+		const signedTx = core.create.createSignedTx(
+			unsigned,
+			signature,
+			POLKADOT_25_TEST_OPTIONS
+		);
 
-//     const signedTx = createSignedTx(unsigned, signature, KUSAMA_TEST_OPTIONS);
+		const decoded = decodeSignedTx(signedTx, POLKADOT_25_TEST_OPTIONS);
 
-//     const txInfo = decodeSignedTx(signedTx, KUSAMA_TEST_OPTIONS);
+		itDecodesSignedBalancesTransferTx(decoded);
 
-//     decodeBaseTxInfo(txInfo);
-//     expect(txInfo.method.pallet).toBe(pallet);
-//     expect(txInfo.method.name).toBe(name);
-//     expect(txInfo.method.args).toEqual((TEST_METHOD_ARGS as any)[pallet][name]);
+		// (['address', 'metadataRpc', 'nonce', 'tip'] as const).forEach((key) =>
+		// 	expect(decoded[key]).toBe(TEST_BASE_TX_INFO[key])
+		// );
 
-//     done();
-//   });
-// }
+		// expect(decoded.method.pallet).toBe('balances');
+		// expect(decoded.method.name).toBe('transfer');
+		// expect(decoded.method.args).toEqual(TEST_METHOD_ARGS.balances.transfer);
 
-// describe('decodeSignedTx', () => {
-//   getAllMethods().forEach((method) => testDecodeSignedTx(...method));
-// });
+		// // The actual period is the smallest power of 2 greater than the input
+		// // period.
+		// expect(decoded.eraPeriod).toBeGreaterThanOrEqual(
+		// 	TEST_BASE_TX_INFO.eraPeriod
+		// );
+	});
+});
