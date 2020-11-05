@@ -4,9 +4,8 @@
 import { EXTRINSIC_VERSION } from '@polkadot/types/extrinsic/v4/Extrinsic';
 import { stringCamelCase } from '@polkadot/util';
 
-import { core } from '..';
-import { OptionsWithMeta, TxInfo } from '../../types/method';
-import { UnsignedTransaction } from '../../types/types';
+import { OptionsWithMeta, TxInfo, UnsignedTransaction } from '../../types/';
+import { createDecoratedTx, createMetadata } from '../metadata';
 
 /**
  * Default values for tx info, if the user doesn't specify any
@@ -33,11 +32,11 @@ export function defineMethod(
 	options: OptionsWithMeta
 ): UnsignedTransaction {
 	const { metadataRpc, registry } = options;
-	registry.setMetadata(core.metadata.createMetadata(registry, metadataRpc));
+	registry.setMetadata(createMetadata(registry, metadataRpc));
 
-	const metadata = core.metadata.createDecorated(registry, metadataRpc);
+	const tx = createDecoratedTx(registry, metadataRpc);
 
-	const methodFunction = metadata.tx[info.method.pallet][info.method.name];
+	const methodFunction = tx[info.method.pallet][info.method.name];
 	const method = methodFunction(
 		...methodFunction.meta.args.map((arg) => {
 			if (

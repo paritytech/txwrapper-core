@@ -1,6 +1,6 @@
-import metadataRpc from '@polkadot/metadata/Metadata/v12/static';
+import metadataRpc from '@polkadot/metadata/v12/static';
 
-import { core } from '../core';
+import { getRegistryPolkadot } from '../polkadot';
 export { metadataRpc };
 
 /**
@@ -26,12 +26,7 @@ export const TEST_BASE_TX_INFO = {
  */
 export const POLKADOT_25_TEST_OPTIONS = {
 	metadataRpc,
-	registry: core.metadata.getRegistry(
-		'Polkadot',
-		'polkadot',
-		25,
-		metadataRpc
-	),
+	registry: getRegistryPolkadot(25, metadataRpc),
 };
 
 /**

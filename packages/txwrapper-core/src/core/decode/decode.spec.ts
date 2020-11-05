@@ -1,4 +1,4 @@
-import { core } from '../../core';
+import { construct } from '..';
 import {
 	balancesTransfer,
 	POLKADOT_25_TEST_OPTIONS,
@@ -21,13 +21,13 @@ describe('decode', () => {
 			POLKADOT_25_TEST_OPTIONS
 		);
 
-		const signingPayload = core.create.createSigningPayload(
+		const signingPayload = construct.signingPayload(
 			unsigned,
 			POLKADOT_25_TEST_OPTIONS
 		);
 		const signature = await signWithAlice(signingPayload);
 
-		const signedTx = core.create.createSignedTx(
+		const signedTx = construct.signedTx(
 			unsigned,
 			signature,
 			POLKADOT_25_TEST_OPTIONS
@@ -59,7 +59,7 @@ describe('decode', () => {
 			TEST_BASE_TX_INFO,
 			POLKADOT_25_TEST_OPTIONS
 		);
-		const signingPayload = core.create.createSigningPayload(
+		const signingPayload = construct.signingPayload(
 			unsigned,
 			POLKADOT_25_TEST_OPTIONS
 		);

@@ -1,17 +1,13 @@
-import { defineMethod } from '../core';
-import { Args, OptionsWithMeta } from '../types/method';
-import { BaseTxInfo, UnsignedTransaction } from '../types/types';
+import {
+	BaseTxInfo,
+	defineMethod,
+	OptionsWithMeta,
+	UnsignedTransaction,
+} from '@substrate/txwrapper-core';
 
-export interface TestBalancesTransferArgs extends Args {
-	/**
-	 * The recipient address, SS-58 encoded.
-	 */
-	dest: string;
-	/**
-	 * The amount to send.
-	 */
-	value: number | string;
-}
+import { BalancesTransferArgs } from './transfer';
+
+export type BalancesTransferKeepAliveArgs = BalancesTransferArgs;
 
 /**
  * Construct a balance transfer transaction offline.
@@ -20,8 +16,8 @@ export interface TestBalancesTransferArgs extends Args {
  * @param info - Information required to construct the transaction.
  * @param options - Registry and metadata used for constructing the method.
  */
-export function balancesTransfer(
-	args: TestBalancesTransferArgs,
+export function transferKeepAlive(
+	args: BalancesTransferKeepAliveArgs,
 	info: BaseTxInfo,
 	options: OptionsWithMeta
 ): UnsignedTransaction {
@@ -29,7 +25,7 @@ export function balancesTransfer(
 		{
 			method: {
 				args,
-				name: 'transfer',
+				name: 'transferKeepAlive',
 				pallet: 'balances',
 			},
 			...info,

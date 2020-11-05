@@ -1,4 +1,4 @@
-import { KUSAMA_SS58_FORMAT, POLKADOT_SS58_FORMAT } from '../../ss58Formats';
+import { PolkadotSS58Format } from '../../polkadot';
 import { importPrivateKey } from './importPrivateKey';
 
 const PRIVATE_KEY =
@@ -6,7 +6,10 @@ const PRIVATE_KEY =
 
 describe('importPrivateKey', () => {
 	it('should work', () => {
-		const keypair = importPrivateKey(PRIVATE_KEY, KUSAMA_SS58_FORMAT);
+		const keypair = importPrivateKey(
+			PRIVATE_KEY,
+			PolkadotSS58Format.kusama
+		);
 
 		expect(keypair.address).toBe(
 			'HSgj13mnepYxuysui2XroHKigftFpQsg1dcSfA9PckdZJW4'
@@ -14,7 +17,10 @@ describe('importPrivateKey', () => {
 	});
 
 	it('should work', () => {
-		const keypair = importPrivateKey(PRIVATE_KEY, POLKADOT_SS58_FORMAT);
+		const keypair = importPrivateKey(
+			PRIVATE_KEY,
+			PolkadotSS58Format.polkadot
+		);
 
 		expect(keypair.address).toBe(
 			'15sND1xy2556eoAx6eGV6zkURiPJ9T9qJ8XMDHsYTuZezp7f'

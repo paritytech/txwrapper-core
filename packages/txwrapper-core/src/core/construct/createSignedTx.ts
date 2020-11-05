@@ -1,4 +1,4 @@
-import { core } from '..';
+import { createMetadata } from '..';
 import { OptionsWithMeta, UnsignedTransaction } from '../../types';
 
 /**
@@ -17,7 +17,7 @@ export function createSignedTx(
 	options: OptionsWithMeta
 ): string {
 	const { metadataRpc, registry } = options;
-	registry.setMetadata(core.metadata.createMetadata(registry, metadataRpc));
+	registry.setMetadata(createMetadata(registry, metadataRpc));
 
 	const extrinsic = registry.createType(
 		'Extrinsic',

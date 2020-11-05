@@ -1,7 +1,7 @@
 /**
  * @ignore
  */ /** */
-import { core } from '..';
+import { createMetadata, toTxMethod } from '..';
 import {
 	DecodedUnsignedTx,
 	OptionsWithMeta,
@@ -21,10 +21,10 @@ export function decodeUnsignedTx(
 ): DecodedUnsignedTx {
 	const { metadataRpc, registry } = options;
 
-	registry.setMetadata(core.metadata.createMetadata(registry, metadataRpc));
+	registry.setMetadata(createMetadata(registry, metadataRpc));
 
 	const methodCall = registry.createType('Call', unsigned.method);
-	const method = core.method.toTxMethod(registry, methodCall, toInt);
+	const method = toTxMethod(registry, methodCall, toInt);
 
 	return {
 		address: unsigned.address,

@@ -4,7 +4,7 @@
 
 import { hexToU8a } from '@polkadot/util';
 
-import { core } from '..';
+import { createMetadata, toTxMethod } from '..';
 import { DecodedSignedTx, OptionsWithMeta } from '../../types';
 
 /**
@@ -20,13 +20,13 @@ export function decodeSignedTx(
 ): DecodedSignedTx {
 	const { metadataRpc, registry } = options;
 
-	registry.setMetadata(core.metadata.createMetadata(registry, metadataRpc));
+	registry.setMetadata(createMetadata(registry, metadataRpc));
 
 	const tx = registry.createType('Extrinsic', hexToU8a(signedTx), {
 		isSigned: true,
 	});
 	const methodCall = registry.createType('Call', tx.method);
-	const method = core.method.toTxMethod(registry, methodCall, toInt);
+	const method = toTxMethod(registry, methodCall, toInt);
 
 	return {
 		address: tx.signer.toString(),

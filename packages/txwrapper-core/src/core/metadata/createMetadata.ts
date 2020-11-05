@@ -18,7 +18,13 @@ function createMetadataUnmemoized(
 }
 
 /**
+ * From a metadata hex string (for example returned by RPC), create a Metadata
+ * class instance. Metadata decoding is expensive, so this function is
+ * memoized.
+ *
  * @ignore
+ * @param registry - The registry of the metadata.
+ * @param metadata - The metadata as hex string.
  */
 export const createMetadata = memoizee(createMetadataUnmemoized, {
 	length: 2,

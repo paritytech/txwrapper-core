@@ -1,4 +1,4 @@
-import { core } from '../../core';
+import { construct } from '..';
 import {
 	balancesTransfer,
 	POLKADOT_25_TEST_OPTIONS,
@@ -26,7 +26,7 @@ export function itDecodesSigningPayloadBalancesTransfer(
 
 describe('decodeSigningPayload', () => {
 	it('should decode balances::transfer', () => {
-		const signingPayload = core.create.createSigningPayload(
+		const signingPayload = construct.signingPayload(
 			balancesTransfer(
 				TEST_METHOD_ARGS.balances.transfer,
 				TEST_BASE_TX_INFO,

@@ -3,7 +3,7 @@
  */ /** */
 import { EXTRINSIC_VERSION } from '@polkadot/types/extrinsic/v4/Extrinsic';
 
-import { core } from '..';
+import { createMetadata, toTxMethod } from '..';
 import { DecodedSigningPayload, OptionsWithMeta } from '../../types';
 
 /**
@@ -19,13 +19,13 @@ export function decodeSigningPayload(
 ): DecodedSigningPayload {
 	const { metadataRpc, registry } = options;
 
-	registry.setMetadata(core.metadata.createMetadata(registry, metadataRpc));
+	registry.setMetadata(createMetadata(registry, metadataRpc));
 
 	const payload = registry.createType('ExtrinsicPayload', signingPayload, {
 		version: EXTRINSIC_VERSION,
 	});
 	const methodCall = registry.createType('Call', payload.method);
-	const method = core.method.toTxMethod(registry, methodCall, toInt);
+	const method = toTxMethod(registry, methodCall, toInt);
 
 	return {
 		blockHash: payload.blockHash.toHex(),

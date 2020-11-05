@@ -1,0 +1,21 @@
+{
+  "name": "examples",
+  "version": "0.0.0",
+  "author": "Parity Technologies <admin@parity.io>",
+  "description": "Examples for txwrapper-* usage.",
+  "license": "Apache-2.0",
+  "main": "lib/index.js",
+  "private": true,
+  "repository": "https://github.com/paritytech/txwrapper-core",
+  "scripts": {
+    "docs": "typedoc",
+    "lint": "tsc --noEmit && eslint . --ext ts",
+    "build": "tsc --noEmit -p tsconfig.json",
+    "polkadot": "../../node_modules/.bin/ts-node src/polkadot.ts"
+  },
+  "dependencies": {
+    "@polkadot/api": "^2.4.1",
+    "@substrate/txwrapper-polkadot": "^0.0.0",
+    "ts-node": "9.0.0"
+  }
+}
