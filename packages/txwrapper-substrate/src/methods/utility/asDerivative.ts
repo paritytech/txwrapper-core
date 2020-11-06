@@ -20,10 +20,17 @@ export interface UtilityAsDerivativeArgs extends Args {
 }
 
 /**
- * Send a call through an indexed pseudonym of the sender.
+ * Send a call through an indexed pseudonym of the sender. In other words, send a call through a
+ * derivative account of the signer. The signer will need to have an already existing index derived
+ * account in order to succesfully execute this call.
  *
- * Proxy filters from the origin are passed along. The call will be dispatched
- * with an origin which uses the same proxy filters as the origin of this call.
+ * Each account has 2**16 possible "pseudonyms" (alternative account IDs) and these can be
+ * stacked. This can be useful as a key management tool, where you need multiple distinct accounts
+ * (e.g. as controllers for many staking accounts), but where it's perfectly fine to have each of
+ * them controlled by the same underlying keypair.
+ *
+ * Derivative accounts are, for the purposes of proxy filtering considered exactly
+ * the same as the oigin and are thus hampered with the origin's filters.
  *
  * NOTE: If you need to ensure that any account-based filtering is ignored (i.e.
  * because you expect `proxy` to have been used prior in the call stack and you do not want
