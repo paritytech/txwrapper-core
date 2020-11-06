@@ -12,7 +12,7 @@ export interface UtilityAsDerivativeArgs extends Args {
 	 */
 	index: number | string;
 	/**
-	 * The call to be dispatched from pseudonym account derived from the origin.
+	 * The call to be dispatched from pseudonymous account derived from the origin.
 	 * To take advantage of txwrapper methods, this could be an array of
 	 * UnsignedTransaction.method.
 	 */
@@ -25,7 +25,7 @@ export interface UtilityAsDerivativeArgs extends Args {
  * Proxy filters from the origin are passed along. The call will be dispatched
  * with an origin which uses the same proxy filters as the origin of this call.
  *
- * NOTE: If you need to ensure that any account-based filtering is not honored (i.e.
+ * NOTE: If you need to ensure that any account-based filtering is ignored (i.e.
  * because you expect `proxy` to have been used prior in the call stack and you do not want
  * the call restrictions to apply to any sub-accounts), then use `as_multi_threshold_1`
  * in the Multisig pallet instead.

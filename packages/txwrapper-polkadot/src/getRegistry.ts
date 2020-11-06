@@ -4,7 +4,7 @@ import { getRegistry } from '@substrate/txwrapper-core';
 import {
 	PolkadotChainName,
 	polkadotChainProperties,
-	PolkdotSpecName,
+	PolkadotSpecName,
 } from '@substrate/txwrapper-core/src/polkadot';
 
 // Re-export here for clear module organization
@@ -25,7 +25,7 @@ export function getRegistryKusama(
 		specTypes: getSpecTypes(
 			new TypeRegistry(),
 			PolkadotChainName.Kusama,
-			PolkdotSpecName.kusama,
+			PolkadotSpecName.kusama,
 			specVersion
 		),
 		metadataRpc,
@@ -47,7 +47,7 @@ export function getRegistryWestend(
 		specTypes: getSpecTypes(
 			new TypeRegistry(),
 			PolkadotChainName.Westend,
-			PolkdotSpecName.westend,
+			PolkadotSpecName.westend,
 			specVersion
 		),
 		metadataRpc,

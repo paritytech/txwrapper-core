@@ -16,7 +16,7 @@ import fetch from 'node-fetch';
  * @param method - The JSONRPC request method.
  * @param params - The JSONRPC request params.
  */
-export function rpcToNode(method: string, params: any[] = []): Promise<any> {
+export function rpcToLocalNode(method: string, params: any[] = []): Promise<any> {
 	return fetch('http://localhost:9933', {
 		body: JSON.stringify({
 			id: 1,

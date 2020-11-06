@@ -63,7 +63,7 @@ export const polkadotChainProperties: Record<string, ChainProperties> = {
 /**
  * Polkadot, Kusama, and Westened specNames.
  */
-export enum PolkdotSpecName {
+export enum PolkadotSpecName {
 	kusama = 'kusama',
 	westend = 'westend',
 	polkadot = 'polkadot',
@@ -78,7 +78,7 @@ export enum PolkadotChainName {
 	Polkadot = 'Polkadot',
 }
 
-// Note: registries creators for Kusama and Westend can be found in txwrapper-polkadot.
+// Note: registry creators for Kusama and Westend can be found in txwrapper-polkadot.
 // This registry creator is here for testing purposes
 /**
  * Get the Polkadot type registry for a given spec version.
@@ -95,7 +95,7 @@ export function getRegistryPolkadot(
 		specTypes: getSpecTypes(
 			new TypeRegistry(),
 			PolkadotChainName.Polkadot,
-			PolkdotSpecName.polkadot,
+			PolkadotSpecName.polkadot,
 			specVersion
 		),
 		metadataRpc,

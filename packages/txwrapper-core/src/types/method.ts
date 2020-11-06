@@ -92,7 +92,7 @@ export interface BaseTxInfo {
 	 */
 	nonce: number;
 	/**
-	 * The current spec version for the runtime.
+	 * The current spec version of the runtime.
 	 */
 	specVersion: number;
 	/**
