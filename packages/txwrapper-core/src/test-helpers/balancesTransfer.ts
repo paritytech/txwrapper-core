@@ -1,6 +1,6 @@
 import { defineMethod } from '../core';
-import { Args, OptionsWithMeta } from '../types/method';
-import { BaseTxInfo, UnsignedTransaction } from '../types/types';
+import { Args, OptionsWithMeta } from '../types';
+import { BaseTxInfo, UnsignedTransaction } from '../types';
 
 export interface TestBalancesTransferArgs extends Args {
 	/**

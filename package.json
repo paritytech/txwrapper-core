@@ -4,7 +4,10 @@
   "license": "Apache-2.0",
   "private": true,
   "workspaces": [
-    "packages/*"
+    "packages/txwrapper-core",
+    "packages/txwrapper-substrate",
+    "packages/txwrapper-polkadot",
+    "packages/txwrapper-example"
   ],
   "scripts": {
     "build": "yarn workspaces run build",

@@ -3,7 +3,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /**
  * @ignore Don't show this file in documentation.
- */ /** */
+ */
 
 import { Keyring } from '@polkadot/api';
 import { cryptoWaitReady } from '@polkadot/util-crypto';
@@ -16,7 +16,7 @@ import {
 	PolkadotSS58Format,
 } from '@substrate/txwrapper-polkadot';
 
-import { rpcToNode, signWith } from './util';
+import { rpcToLocalNode, signWith } from './util';
 
 /**
  * Entry point of the script. This script assumes a Polkadot node is running
@@ -37,11 +37,11 @@ async function main(): Promise<void> {
 	// To construct the tx, we need some up-to-date information from the node.
 	// `txwrapper` is offline-only, so does not care how you retrieve this info.
 	// In this tutorial, we simply send RPC requests to the node.
-	const { block } = await rpcToNode('chain_getBlock');
-	const blockHash = await rpcToNode('chain_getBlockHash');
-	const genesisHash = await rpcToNode('chain_getBlockHash', [0]);
-	const metadataRpc = await rpcToNode('state_getMetadata');
-	const { specVersion, transactionVersion } = await rpcToNode(
+	const { block } = await rpcToLocalNode('chain_getBlock');
+	const blockHash = await rpcToLocalNode('chain_getBlockHash');
+	const genesisHash = await rpcToLocalNode('chain_getBlockHash', [0]);
+	const metadataRpc = await rpcToLocalNode('state_getMetadata');
+	const { specVersion, transactionVersion } = await rpcToLocalNode(
 		'state_getRuntimeVersion'
 	);
 
@@ -132,7 +132,7 @@ async function main(): Promise<void> {
 	// Send the tx to the node. Again, since `txwrapper` is offline-only, this
 	// operation should be handled externally. Here, we just send a JSONRPC
 	// request directly to the node.
-	const actualTxHash = await rpcToNode('author_submitExtrinsic', [tx]);
+	const actualTxHash = await rpcToLocalNode('author_submitExtrinsic', [tx]);
 	console.log(`Actual Tx Hash: ${actualTxHash}`);
 
 	// Decode a signed payload.
