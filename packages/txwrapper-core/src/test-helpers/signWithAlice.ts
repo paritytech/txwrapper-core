@@ -1,7 +1,7 @@
 import { Keyring } from '@polkadot/api';
 import { cryptoWaitReady } from '@polkadot/util-crypto';
 
-import { core } from '../core';
+import { getRegistryPolkadot } from '../polkadot';
 import { metadataRpc } from './constants';
 
 /**
@@ -12,12 +12,7 @@ export async function signWithAlice(signingPayload: string): Promise<string> {
 	// Wait for the promise to resolve async WASM
 	await cryptoWaitReady();
 
-	const registry = core.metadata.getRegistry(
-		'Polkadot',
-		'polkadot',
-		25,
-		metadataRpc
-	);
+	const registry = getRegistryPolkadot(25, metadataRpc);
 	// Use ed25519 because it has deterministic signatures
 	const keyring = new Keyring({ type: 'ed25519' });
 	const alice = keyring.addFromUri('//Alice', { name: 'Alice default' });

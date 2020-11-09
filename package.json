@@ -4,22 +4,25 @@
   "license": "Apache-2.0",
   "private": true,
   "workspaces": [
-    "packages/*"
+    "packages/txwrapper-core",
+    "packages/txwrapper-substrate",
+    "packages/txwrapper-polkadot",
+    "packages/txwrapper-example"
   ],
   "scripts": {
-    "build": "(cd packages/txwrapper-core && yarn build)",
+    "build": "yarn workspaces run build",
     "lint": "tsc --noEmit && eslint . --ext ts",
     "test": "jest"
   },
   "devDependencies": {
     "@types/jest": "^26.0.0",
-    "@typescript-eslint/eslint-plugin": "^4.3.0",
-    "@typescript-eslint/parser": "^4.3.0",
+    "@typescript-eslint/eslint-plugin": "^4.6.1",
+    "@typescript-eslint/parser": "^4.6.1",
     "eslint": "^7.4.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-simple-import-sort": "^5.0.3",
-    "jest": "^26.2.2",
+    "jest": "^26.6.2",
     "prettier": "^2.0.5",
     "standard-version": "^9.0.0",
     "ts-jest": "^26.4.1",

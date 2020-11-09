@@ -1,37 +1,21 @@
-import * as create from './create';
-import * as inspect from './inspect';
-import * as metadata from './metadata';
-import * as method from './method';
-import * as util from './util';
+import {
+	createSignedTx as signedTx,
+	createSigningPayload as signingPayload,
+	encodeUnsignedTransaction,
+	getTxHash as txHash,
+} from './construct';
 
-export interface Core {
-	/**
-	 * Tools for generating metadata, decorated metadata, registries.
-	 */
-	metadata: typeof metadata;
-	/**
-	 * Tools for decoding and deriving info from transacšions at different stages
-	 * of construction.
-	 */
-	inspect: typeof inspect;
-	/**
-	 * Tools for constructing the transaction at various stages.
-	 */
-	create: typeof create;
-	/**
-	 * Various utilities adjacent to txwrapper's purpose.
-	 */
-	util: typeof util;
-	/**
-	 * Tools to define the dispatchable methods.
-	 */
-	method: typeof method;
-}
+export { createMetadata, getRegistry } from './metadata';
+export * from './util';
+export { decode } from './decode';
+export { defineMethod, toTxMethod } from './method';
 
-export const core: Core = {
-	metadata,
-	inspect,
-	create,
-	util,
-	method,
+/**
+ * Functions for each step of the transaction construction process.
+ */
+export const construct = {
+	signedTx,
+	signingPayload,
+	encodeUnsignedTransaction,
+	txHash,
 };

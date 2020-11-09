@@ -1,8 +1,8 @@
 {
-  "name": "@substrate/txwrapper",
-  "version": "3.10.1",
+  "name": "@substrate/txwrapper-core",
+  "version": "0.0.0",
   "author": "Parity Technologies <admin@parity.io>",
-  "description": "Helper functions for offline transaction generation.",
+  "description": "Tools for substrate chain builders to build chain specific offline signing lib",
   "files": [
     "lib"
   ],
@@ -20,7 +20,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@types/memoizee": "^0.4.3",
-    "@polkadot/api": "^2.2.1"
+    "@polkadot/api": "^2.4.1",
+    "@types/memoizee": "^0.4.3"
   }
 }

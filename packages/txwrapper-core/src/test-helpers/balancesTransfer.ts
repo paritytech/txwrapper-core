@@ -1,6 +1,6 @@
-import { core } from '../core';
-import { Args, OptionsWithMeta } from '../types/method';
-import { BaseTxInfo, UnsignedTransaction } from '../types/types';
+import { defineMethod } from '../core';
+import { Args, OptionsWithMeta } from '../types';
+import { BaseTxInfo, UnsignedTransaction } from '../types';
 
 export interface TestBalancesTransferArgs extends Args {
 	/**
@@ -25,7 +25,7 @@ export function balancesTransfer(
 	info: BaseTxInfo,
 	options: OptionsWithMeta
 ): UnsignedTransaction {
-	return core.method.defineMethod(
+	return defineMethod(
 		{
 			method: {
 				args,
