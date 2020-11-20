@@ -14,8 +14,7 @@ import { createMetadata, toTxMethod } from '..';
  */
 export function decodeSigningPayload(
 	signingPayload: string,
-	options: OptionsWithMeta,
-	toInt = false
+	options: OptionsWithMeta
 ): DecodedSigningPayload {
 	const { metadataRpc, registry } = options;
 
@@ -25,7 +24,7 @@ export function decodeSigningPayload(
 		version: EXTRINSIC_VERSION,
 	});
 	const methodCall = registry.createType('Call', payload.method);
-	const method = toTxMethod(registry, methodCall, toInt);
+	const method = toTxMethod(registry, methodCall);
 
 	return {
 		blockHash: payload.blockHash.toHex(),

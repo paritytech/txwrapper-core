@@ -15,7 +15,10 @@ export function itDecodesBalancesTransferCommon(
 ): void {
 	expect(decoded.method.pallet).toBe('balances');
 	expect(decoded.method.name).toBe('transfer');
-	expect(decoded.method.args).toEqual(TEST_METHOD_ARGS.balances.transfer);
+	expect(decoded.method.args.dest).toEqual(
+		TEST_METHOD_ARGS.balances.transfer.dest
+	);
+	expect(decoded.method.args.value).toEqual('12');
 
 	// The actual period is the smallest power of 2 greater than the input
 	// period.

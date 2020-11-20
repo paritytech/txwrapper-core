@@ -80,14 +80,10 @@ async function main(): Promise<void> {
 	);
 
 	// Decode an unsigned transaction.
-	const decodedUnsigned = decode(
-		unsigned,
-		{
-			metadataRpc,
-			registry,
-		},
-		true
-	);
+	const decodedUnsigned = decode(unsigned, {
+		metadataRpc,
+		registry,
+	});
 	console.log(
 		`\nDecoded Transaction\n  To: ${decodedUnsigned.method.args.dest}\n` +
 			`  Amount: ${decodedUnsigned.method.args.value}`
@@ -136,14 +132,10 @@ async function main(): Promise<void> {
 	console.log(`Actual Tx Hash: ${actualTxHash}`);
 
 	// Decode a signed payload.
-	const txInfo = decode(
-		tx,
-		{
-			metadataRpc,
-			registry,
-		},
-		true
-	);
+	const txInfo = decode(tx, {
+		metadataRpc,
+		registry,
+	});
 	console.log(
 		`\nDecoded Transaction\n  To: ${txInfo.method.args.dest}\n` +
 			`  Amount: ${txInfo.method.args.value}\n`
