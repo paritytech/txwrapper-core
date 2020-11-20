@@ -14,6 +14,7 @@ jobs:
       - name: Generate docs
         run: |
           yarn install
+          yarn build
           yarn docs
           git add .
           git commit -m "docs: Generate docs"
