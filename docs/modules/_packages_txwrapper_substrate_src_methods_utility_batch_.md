@@ -20,7 +20,7 @@
 
 ▸ **batch**(`args`: [UtilityBatch](../interfaces/_packages_txwrapper_substrate_src_methods_utility_batch_.utilitybatch.md), `info`: BaseTxInfo, `options`: OptionsWithMeta): UnsignedTransaction
 
-*Defined in [packages/txwrapper-substrate/src/methods/utility/batch.ts:18](https://github.com/paritytech/txwrapper-core/blob/e071077/packages/txwrapper-substrate/src/methods/utility/batch.ts#L18)*
+*Defined in [packages/txwrapper-substrate/src/methods/utility/batch.ts:18](https://github.com/paritytech/txwrapper-core/blob/a5bee61/packages/txwrapper-substrate/src/methods/utility/batch.ts#L18)*
 
 #### Parameters:
 

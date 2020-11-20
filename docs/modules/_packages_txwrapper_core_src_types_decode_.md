@@ -18,7 +18,7 @@
 
 Ƭ  **DecodedSignedTx**: Omit\<[TxInfo](../interfaces/_packages_txwrapper_core_src_types_method_.txinfo.md), \"blockHash\" \| \"blockNumber\" \| \"genesisHash\" \| \"specVersion\" \| \"transactionVersion\" \| \"version\">
 
-*Defined in [packages/txwrapper-core/src/types/decode.ts:7](https://github.com/paritytech/txwrapper-core/blob/e071077/packages/txwrapper-core/src/types/decode.ts#L7)*
+*Defined in [packages/txwrapper-core/src/types/decode.ts:7](https://github.com/paritytech/txwrapper-core/blob/a5bee61/packages/txwrapper-core/src/types/decode.ts#L7)*
 
 ___
 
@@ -26,7 +26,7 @@ ___
 
 Ƭ  **DecodedSigningPayload**: Omit\<[TxInfo](../interfaces/_packages_txwrapper_core_src_types_method_.txinfo.md), \"address\" \| \"blockNumber\">
 
-*Defined in [packages/txwrapper-core/src/types/decode.ts:5](https://github.com/paritytech/txwrapper-core/blob/e071077/packages/txwrapper-core/src/types/decode.ts#L5)*
+*Defined in [packages/txwrapper-core/src/types/decode.ts:5](https://github.com/paritytech/txwrapper-core/blob/a5bee61/packages/txwrapper-core/src/types/decode.ts#L5)*
 
 ___
 
@@ -34,4 +34,4 @@ ___
 
 Ƭ  **DecodedUnsignedTx**: [TxInfo](../interfaces/_packages_txwrapper_core_src_types_method_.txinfo.md)
 
-*Defined in [packages/txwrapper-core/src/types/decode.ts:3](https://github.com/paritytech/txwrapper-core/blob/e071077/packages/txwrapper-core/src/types/decode.ts#L3)*
+*Defined in [packages/txwrapper-core/src/types/decode.ts:3](https://github.com/paritytech/txwrapper-core/blob/a5bee61/packages/txwrapper-core/src/types/decode.ts#L3)*

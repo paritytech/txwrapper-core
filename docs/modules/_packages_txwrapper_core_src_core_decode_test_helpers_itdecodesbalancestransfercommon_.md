@@ -16,7 +16,7 @@
 
 ▸ **itDecodesBalancesTransferCommon**(`decoded`: [DecodedSignedTx](_packages_txwrapper_core_src_types_decode_.md#decodedsignedtx) \| [DecodedSigningPayload](_packages_txwrapper_core_src_types_decode_.md#decodedsigningpayload) \| [DecodedUnsignedTx](_packages_txwrapper_core_src_types_decode_.md#decodedunsignedtx)): void
 
-*Defined in [packages/txwrapper-core/src/core/decode/test-helpers/itDecodesBalancesTransferCommon.ts:13](https://github.com/paritytech/txwrapper-core/blob/e071077/packages/txwrapper-core/src/core/decode/test-helpers/itDecodesBalancesTransferCommon.ts#L13)*
+*Defined in [packages/txwrapper-core/src/core/decode/test-helpers/itDecodesBalancesTransferCommon.ts:13](https://github.com/paritytech/txwrapper-core/blob/a5bee61/packages/txwrapper-core/src/core/decode/test-helpers/itDecodesBalancesTransferCommon.ts#L13)*
 
 Information common to all decoded balances transfers used for testing.
 

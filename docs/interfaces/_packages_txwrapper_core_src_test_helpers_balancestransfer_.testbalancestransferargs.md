@@ -23,7 +23,7 @@
 
 •  **dest**: string
 
-*Defined in [packages/txwrapper-core/src/test-helpers/balancesTransfer.ts:9](https://github.com/paritytech/txwrapper-core/blob/e071077/packages/txwrapper-core/src/test-helpers/balancesTransfer.ts#L9)*
+*Defined in [packages/txwrapper-core/src/test-helpers/balancesTransfer.ts:9](https://github.com/paritytech/txwrapper-core/blob/a5bee61/packages/txwrapper-core/src/test-helpers/balancesTransfer.ts#L9)*
 
 The recipient address, SS-58 encoded.
 
@@ -33,6 +33,6 @@ ___
 
 •  **value**: number \| string
 
-*Defined in [packages/txwrapper-core/src/test-helpers/balancesTransfer.ts:13](https://github.com/paritytech/txwrapper-core/blob/e071077/packages/txwrapper-core/src/test-helpers/balancesTransfer.ts#L13)*
+*Defined in [packages/txwrapper-core/src/test-helpers/balancesTransfer.ts:13](https://github.com/paritytech/txwrapper-core/blob/a5bee61/packages/txwrapper-core/src/test-helpers/balancesTransfer.ts#L13)*
 
 The amount to send.
