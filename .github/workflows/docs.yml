@@ -27,7 +27,7 @@ jobs:
         git config --local user.name "GitHub Action"
         git commit -m "docs: Generate docs" -a
     - name: Push changes
-      uses: ad-m/github-push-action@master
+      uses: ad-m/github-push-action@master # https://github.com/marketplace/actions/github-push
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         branch: ${{ github.ref }}
