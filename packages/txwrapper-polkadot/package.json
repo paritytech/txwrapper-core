@@ -15,8 +15,6 @@
   "scripts": {
     "build": "rimraf lib/ && tsc -p tsconfig.json",
     "deploy": "yarn build && standard-version",
-    "docs": "typedoc",
-    "lint": "tsc --noEmit && eslint . --ext ts",
     "test": "jest"
   },
   "dependencies": {
