@@ -94,14 +94,10 @@ async function main(): Promise<void> {
 	console.log(`\nPayload to Sign: ${signingPayload}`);
 
 	// Decode the information from a signing payload.
-	const payloadInfo = decode(
-		signingPayload,
-		{
-			metadataRpc,
-			registry,
-		},
-		true
-	);
+	const payloadInfo = decode(signingPayload, {
+		metadataRpc,
+		registry,
+	});
 	console.log(
 		`\nDecoded Transaction\n  To: ${payloadInfo.method.args.dest}\n` +
 			`  Amount: ${payloadInfo.method.args.value}`
