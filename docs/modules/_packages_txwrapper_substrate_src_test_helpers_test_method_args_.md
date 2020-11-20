@@ -16,7 +16,7 @@
 
 ▪ `Const` **TEST\_METHOD\_ARGS**: object
 
-*Defined in [packages/txwrapper-substrate/src/test-helpers/TEST_METHOD_ARGS.ts:4](https://github.com/paritytech/txwrapper-core/blob/79cbc99/packages/txwrapper-substrate/src/test-helpers/TEST_METHOD_ARGS.ts#L4)*
+*Defined in [packages/txwrapper-substrate/src/test-helpers/TEST_METHOD_ARGS.ts:4](https://github.com/paritytech/txwrapper-core/blob/e071077/packages/txwrapper-substrate/src/test-helpers/TEST_METHOD_ARGS.ts#L4)*
 
 Arguments for methods to use in testing.
 

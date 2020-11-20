@@ -20,7 +20,7 @@ Polkadot, Kusama, and Westened specNames.
 
 •  **kusama**:  = "kusama"
 
-*Defined in [packages/txwrapper-core/src/polkadot.ts:67](https://github.com/paritytech/txwrapper-core/blob/79cbc99/packages/txwrapper-core/src/polkadot.ts#L67)*
+*Defined in [packages/txwrapper-core/src/polkadot.ts:67](https://github.com/paritytech/txwrapper-core/blob/e071077/packages/txwrapper-core/src/polkadot.ts#L67)*
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 •  **polkadot**:  = "polkadot"
 
-*Defined in [packages/txwrapper-core/src/polkadot.ts:69](https://github.com/paritytech/txwrapper-core/blob/79cbc99/packages/txwrapper-core/src/polkadot.ts#L69)*
+*Defined in [packages/txwrapper-core/src/polkadot.ts:69](https://github.com/paritytech/txwrapper-core/blob/e071077/packages/txwrapper-core/src/polkadot.ts#L69)*
 
 ___
 
@@ -36,4 +36,4 @@ ___
 
 •  **westend**:  = "westend"
 
-*Defined in [packages/txwrapper-core/src/polkadot.ts:68](https://github.com/paritytech/txwrapper-core/blob/79cbc99/packages/txwrapper-core/src/polkadot.ts#L68)*
+*Defined in [packages/txwrapper-core/src/polkadot.ts:68](https://github.com/paritytech/txwrapper-core/blob/e071077/packages/txwrapper-core/src/polkadot.ts#L68)*

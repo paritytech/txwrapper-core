@@ -16,7 +16,7 @@
 
 ▸ **encodeUnsignedTransaction**(`unsigned`: [UnsignedTransaction](../interfaces/_packages_txwrapper_core_src_types_method_.unsignedtransaction.md), `options`: [Options](../interfaces/_packages_txwrapper_core_src_types_method_.options.md)): string
 
-*Defined in [packages/txwrapper-core/src/core/construct/encodeUnsignedTx.ts:9](https://github.com/paritytech/txwrapper-core/blob/79cbc99/packages/txwrapper-core/src/core/construct/encodeUnsignedTx.ts#L9)*
+*Defined in [packages/txwrapper-core/src/core/construct/encodeUnsignedTx.ts:9](https://github.com/paritytech/txwrapper-core/blob/e071077/packages/txwrapper-core/src/core/construct/encodeUnsignedTx.ts#L9)*
 
 Encode an unsigned transaction to submit.
 
