@@ -15,8 +15,7 @@ import { createMetadata, toTxMethod } from '..';
  */
 export function decodeSignedTx(
 	signedTx: string,
-	options: OptionsWithMeta,
-	toInt = false
+	options: OptionsWithMeta
 ): DecodedSignedTx {
 	const { metadataRpc, registry } = options;
 
@@ -26,7 +25,7 @@ export function decodeSignedTx(
 		isSigned: true,
 	});
 	const methodCall = registry.createType('Call', tx.method);
-	const method = toTxMethod(registry, methodCall, toInt);
+	const method = toTxMethod(registry, methodCall);
 
 	return {
 		address: tx.signer.toString(),

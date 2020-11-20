@@ -13,19 +13,12 @@ import { Args, TxMethod } from '../../types/method';
 
 /**
  * From a PolkadotJs `Call` type, get a serializable object representing the
- * call.
+ * call. All integers are serialized to base 10 strings in order to be safe.
  *
  * @param registry - The type registry
  * @param method - The method to serialize
- * @param toInt - Whether or not to forcibly serialize integers in the call args
- * to base-10 strings. If false, integers will either be a number or hex.
- * Defaults to false
  */
-export function toTxMethod(
-	registry: TypeRegistry,
-	method: Call,
-	toInt = false
-): TxMethod {
+export function toTxMethod(registry: TypeRegistry, method: Call): TxMethod {
 	// Mapping of argName->argType
 	// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
 	const argsDef = JSON.parse(method.Type.args);
@@ -35,16 +28,14 @@ export function toTxMethod(
 			method.args[index],
 		]);
 
-		if (toInt && codec instanceof Compact) {
+		if (codec instanceof Compact) {
 			// Unwrap the compact so we can check the interior type
 			codec = codec.unwrap() as Codec;
 		}
 
-		// Forcibly serialize all integers to strings if toInt is true
+		// Forcibly serialize all integers to strings
 		const jsonArg =
-			toInt && codec instanceof AbstractInt
-				? codec.toString(10)
-				: codec.toJSON();
+			codec instanceof AbstractInt ? codec.toString(10) : codec.toJSON();
 
 		accumulator[stringCamelCase(key)] = jsonArg;
 		return accumulator;
