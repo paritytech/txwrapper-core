@@ -19,3 +19,5 @@ jobs:
           git add .
           git commit -m "docs: Generate docs"
           git push
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
