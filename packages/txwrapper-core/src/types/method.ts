@@ -2,8 +2,8 @@ import { TypeRegistry } from '@polkadot/types';
 import { AnyJson } from '@polkadot/types/types';
 import { SignerPayloadJSON } from '@polkadot/types/types';
 
-export { SignerPayloadJSON } from '@polkadot/types/types';
 export { TypeRegistry } from '@polkadot/types';
+export { SignerPayloadJSON } from '@polkadot/types/types';
 
 /**
  * Runtime-specific options for encoding/decoding transactions. Pass these

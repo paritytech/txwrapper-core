@@ -1,4 +1,3 @@
-import { construct } from '..';
 import {
 	balancesTransfer,
 	POLKADOT_25_TEST_OPTIONS,
@@ -7,6 +6,7 @@ import {
 	TEST_METHOD_ARGS,
 } from '../../test-helpers';
 import { DecodedSigningPayload } from '../../types';
+import { construct } from '..';
 import { decode } from './decode';
 import { itDecodesSignedBalancesTransferTx } from './decodeSignedTx.spec';
 import { itDecodesSigningPayloadBalancesTransfer } from './decodeSigningPayload.spec';

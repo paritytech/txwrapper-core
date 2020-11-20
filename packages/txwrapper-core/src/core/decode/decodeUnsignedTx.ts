@@ -1,12 +1,12 @@
 /**
  * @ignore
  */ /** */
-import { createMetadata, toTxMethod } from '..';
 import {
 	DecodedUnsignedTx,
 	OptionsWithMeta,
 	UnsignedTransaction,
 } from '../../types';
+import { createMetadata, toTxMethod } from '..';
 
 /**
  * Parse the transaction information from an unsigned transaction offline.

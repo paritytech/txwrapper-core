@@ -3,8 +3,8 @@
  */ /** */
 import { EXTRINSIC_VERSION } from '@polkadot/types/extrinsic/v4/Extrinsic';
 
-import { createMetadata, toTxMethod } from '..';
 import { DecodedSigningPayload, OptionsWithMeta } from '../../types';
+import { createMetadata, toTxMethod } from '..';
 
 /**
  * Parse the transaction information from a signing payload.

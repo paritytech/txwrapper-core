@@ -1,4 +1,4 @@
-export * from './constants';
 export * from './balancesTransfer';
-export * from './signWithAlice';
+export * from './constants';
 export * from './itHasCorrectBaseTxInfo';
+export * from './signWithAlice';
