@@ -1,2 +1,2 @@
-export * from './toTxMethod';
 export * from './defineMethod';
+export * from './toTxMethod';

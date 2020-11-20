@@ -1,5 +1,5 @@
-import { createMetadata } from '..';
 import { OptionsWithMeta, UnsignedTransaction } from '../../types';
+import { createMetadata } from '..';
 
 /**
  * Serialize a signed transaction in a format that can be submitted over the

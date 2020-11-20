@@ -5,10 +5,10 @@ import {
 	getTxHash as txHash,
 } from './construct';
 
-export { createMetadata, getRegistry } from './metadata';
-export * from './util';
 export { decode } from './decode';
+export { createMetadata, getRegistry } from './metadata';
 export { defineMethod, toTxMethod } from './method';
+export * from './util';
 
 /**
  * Functions for each step of the transaction construction process.

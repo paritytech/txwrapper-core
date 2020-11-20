@@ -1,4 +1,3 @@
-import { construct } from '..';
 import {
 	balancesTransfer,
 	POLKADOT_25_TEST_OPTIONS,
@@ -6,6 +5,7 @@ import {
 	TEST_BASE_TX_INFO,
 	TEST_METHOD_ARGS,
 } from '../../test-helpers';
+import { construct } from '..';
 import { getTxHash } from './getTxHash';
 
 describe('getTxHash', () => {

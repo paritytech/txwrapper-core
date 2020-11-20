@@ -4,8 +4,8 @@
 
 import { hexToU8a } from '@polkadot/util';
 
-import { createMetadata, toTxMethod } from '..';
 import { DecodedSignedTx, OptionsWithMeta } from '../../types';
+import { createMetadata, toTxMethod } from '..';
 
 /**
  * Parse the transaction information from a signed transaction offline.

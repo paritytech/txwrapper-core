@@ -1,3 +1,3 @@
-export * from './method';
-export * from './decode';
 export * from './codec';
+export * from './decode';
+export * from './method';
