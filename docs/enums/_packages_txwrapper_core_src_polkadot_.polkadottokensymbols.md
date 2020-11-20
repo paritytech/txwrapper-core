@@ -20,7 +20,7 @@ Token symbols for Polkadot, Kusama, and Westend.
 
 •  **kusama**:  = "KSM"
 
-*Defined in [packages/txwrapper-core/src/polkadot.ts:25](https://github.com/paritytech/txwrapper-core/blob/79cbc99/packages/txwrapper-core/src/polkadot.ts#L25)*
+*Defined in [packages/txwrapper-core/src/polkadot.ts:25](https://github.com/paritytech/txwrapper-core/blob/e071077/packages/txwrapper-core/src/polkadot.ts#L25)*
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 •  **polkadot**:  = "DOT"
 
-*Defined in [packages/txwrapper-core/src/polkadot.ts:24](https://github.com/paritytech/txwrapper-core/blob/79cbc99/packages/txwrapper-core/src/polkadot.ts#L24)*
+*Defined in [packages/txwrapper-core/src/polkadot.ts:24](https://github.com/paritytech/txwrapper-core/blob/e071077/packages/txwrapper-core/src/polkadot.ts#L24)*
 
 ___
 
@@ -36,4 +36,4 @@ ___
 
 •  **westend**:  = "WND"
 
-*Defined in [packages/txwrapper-core/src/polkadot.ts:26](https://github.com/paritytech/txwrapper-core/blob/79cbc99/packages/txwrapper-core/src/polkadot.ts#L26)*
+*Defined in [packages/txwrapper-core/src/polkadot.ts:26](https://github.com/paritytech/txwrapper-core/blob/e071077/packages/txwrapper-core/src/polkadot.ts#L26)*
