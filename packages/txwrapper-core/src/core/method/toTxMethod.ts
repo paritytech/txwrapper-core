@@ -13,13 +13,10 @@ import { Args, TxMethod } from '../../types/method';
 
 /**
  * From a PolkadotJs `Call` type, get a serializable object representing the
- * call. All integers are also serialized to base 10 strings in order to be safe.
+ * call. All integers are serialized to base 10 strings in order to be safe.
  *
  * @param registry - The type registry
  * @param method - The method to serialize
- * @param toInt - Whether or not to forcibly serialize integers in the call args
- * to base-10 strings. If false, integers will either be a number or hex.
- * Defaults to false
  */
 export function toTxMethod(registry: TypeRegistry, method: Call): TxMethod {
 	// Mapping of argName->argType
