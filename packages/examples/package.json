@@ -8,8 +8,6 @@
   "private": true,
   "repository": "https://github.com/paritytech/txwrapper-core",
   "scripts": {
-    "docs": "typedoc",
-    "lint": "tsc --noEmit && eslint . --ext ts",
     "build": "tsc --noEmit -p tsconfig.json",
     "polkadot": "../../node_modules/.bin/ts-node src/polkadot.ts"
   },

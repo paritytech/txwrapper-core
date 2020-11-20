@@ -12,7 +12,8 @@
   "scripts": {
     "build": "yarn workspaces run build",
     "lint": "tsc --noEmit && eslint . --ext ts",
-    "test": "jest"
+    "test": "jest",
+    "docs": "typedoc"
   },
   "devDependencies": {
     "@types/jest": "^26.0.0",
