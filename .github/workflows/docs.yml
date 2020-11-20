@@ -25,7 +25,8 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git commit -m "docs: Generate docs" -a
+        git add .
+        git commit -m "docs: Generate docs"
     - name: Push changes
       uses: ad-m/github-push-action@master # https://github.com/marketplace/actions/github-push
       with:
