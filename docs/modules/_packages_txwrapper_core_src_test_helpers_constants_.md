@@ -18,7 +18,7 @@
 
 ▪ `Const` **POLKADOT\_25\_TEST\_OPTIONS**: object
 
-*Defined in [packages/txwrapper-core/src/test-helpers/constants.ts:27](https://github.com/paritytech/txwrapper-core/blob/e071077/packages/txwrapper-core/src/test-helpers/constants.ts#L27)*
+*Defined in [packages/txwrapper-core/src/test-helpers/constants.ts:27](https://github.com/paritytech/txwrapper-core/blob/a5bee61/packages/txwrapper-core/src/test-helpers/constants.ts#L27)*
 
 Use this registry in tests.
 
@@ -35,7 +35,7 @@ ___
 
 ▪ `Const` **TEST\_BASE\_TX\_INFO**: object
 
-*Defined in [packages/txwrapper-core/src/test-helpers/constants.ts:9](https://github.com/paritytech/txwrapper-core/blob/e071077/packages/txwrapper-core/src/test-helpers/constants.ts#L9)*
+*Defined in [packages/txwrapper-core/src/test-helpers/constants.ts:9](https://github.com/paritytech/txwrapper-core/blob/a5bee61/packages/txwrapper-core/src/test-helpers/constants.ts#L9)*
 
 Base tx information common to all tested transactions
 
@@ -60,7 +60,7 @@ ___
 
 ▪ `Const` **TEST\_METHOD\_ARGS**: object
 
-*Defined in [packages/txwrapper-core/src/test-helpers/constants.ts:35](https://github.com/paritytech/txwrapper-core/blob/e071077/packages/txwrapper-core/src/test-helpers/constants.ts#L35)*
+*Defined in [packages/txwrapper-core/src/test-helpers/constants.ts:35](https://github.com/paritytech/txwrapper-core/blob/a5bee61/packages/txwrapper-core/src/test-helpers/constants.ts#L35)*
 
 Dummy arguments for all methods we're testing.
 

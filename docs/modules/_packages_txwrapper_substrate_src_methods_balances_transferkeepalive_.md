@@ -20,7 +20,7 @@
 
 Ƭ  **BalancesTransferKeepAliveArgs**: [BalancesTransferArgs](../interfaces/_packages_txwrapper_substrate_src_methods_balances_transfer_.balancestransferargs.md)
 
-*Defined in [packages/txwrapper-substrate/src/methods/balances/transferKeepAlive.ts:10](https://github.com/paritytech/txwrapper-core/blob/e071077/packages/txwrapper-substrate/src/methods/balances/transferKeepAlive.ts#L10)*
+*Defined in [packages/txwrapper-substrate/src/methods/balances/transferKeepAlive.ts:10](https://github.com/paritytech/txwrapper-core/blob/a5bee61/packages/txwrapper-substrate/src/methods/balances/transferKeepAlive.ts#L10)*
 
 ## Functions
 
@@ -28,7 +28,7 @@
 
 ▸ **transferKeepAlive**(`args`: [BalancesTransferKeepAliveArgs](_packages_txwrapper_substrate_src_methods_balances_transferkeepalive_.md#balancestransferkeepaliveargs), `info`: BaseTxInfo, `options`: OptionsWithMeta): UnsignedTransaction
 
-*Defined in [packages/txwrapper-substrate/src/methods/balances/transferKeepAlive.ts:19](https://github.com/paritytech/txwrapper-core/blob/e071077/packages/txwrapper-substrate/src/methods/balances/transferKeepAlive.ts#L19)*
+*Defined in [packages/txwrapper-substrate/src/methods/balances/transferKeepAlive.ts:19](https://github.com/paritytech/txwrapper-core/blob/a5bee61/packages/txwrapper-substrate/src/methods/balances/transferKeepAlive.ts#L19)*
 
 Construct a balance transfer transaction offline.
 
