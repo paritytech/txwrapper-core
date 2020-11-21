@@ -16,7 +16,7 @@
 
 ▸ **createDecoratedConstants**(`registry`: TypeRegistry, `metadataRpc`: string): Constants
 
-*Defined in [packages/txwrapper-core/src/core/metadata/createDecorated.ts:33](https://github.com/paritytech/txwrapper-core/blob/a5bee61/packages/txwrapper-core/src/core/metadata/createDecorated.ts#L33)*
+*Defined in [packages/txwrapper-core/src/core/metadata/createDecorated.ts:33](https://github.com/paritytech/txwrapper-core/blob/95825c7/packages/txwrapper-core/src/core/metadata/createDecorated.ts#L33)*
 
 From a metadata hex string (for example returned by RPC), create decorated
 modules with their constants.

@@ -25,6 +25,6 @@
 
 Ƭ  **Args**: Record\<string, AnyJson>
 
-*Defined in [packages/txwrapper-core/src/types/method.ts:22](https://github.com/paritytech/txwrapper-core/blob/a5bee61/packages/txwrapper-core/src/types/method.ts#L22)*
+*Defined in [packages/txwrapper-core/src/types/method.ts:22](https://github.com/paritytech/txwrapper-core/blob/95825c7/packages/txwrapper-core/src/types/method.ts#L22)*
 
 Base Argument object for methods.

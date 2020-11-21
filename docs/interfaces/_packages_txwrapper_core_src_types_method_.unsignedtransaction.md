@@ -96,7 +96,7 @@ ___
 
 •  **metadataRpc**: string
 
-*Defined in [packages/txwrapper-core/src/types/method.ts:55](https://github.com/paritytech/txwrapper-core/blob/a5bee61/packages/txwrapper-core/src/types/method.ts#L55)*
+*Defined in [packages/txwrapper-core/src/types/method.ts:55](https://github.com/paritytech/txwrapper-core/blob/95825c7/packages/txwrapper-core/src/types/method.ts#L55)*
 
 The SCALE-encoded metadata, as a hex string. Can be retrieved via the RPC
 call `state_getMetadata`.

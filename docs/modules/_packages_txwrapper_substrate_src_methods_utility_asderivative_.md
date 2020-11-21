@@ -20,7 +20,7 @@
 
 ▸ **asDerivative**(`args`: [UtilityAsDerivativeArgs](../interfaces/_packages_txwrapper_substrate_src_methods_utility_asderivative_.utilityasderivativeargs.md), `info`: BaseTxInfo, `options`: OptionsWithMeta): UnsignedTransaction
 
-*Defined in [packages/txwrapper-substrate/src/methods/utility/asDerivative.ts:48](https://github.com/paritytech/txwrapper-core/blob/a5bee61/packages/txwrapper-substrate/src/methods/utility/asDerivative.ts#L48)*
+*Defined in [packages/txwrapper-substrate/src/methods/utility/asDerivative.ts:48](https://github.com/paritytech/txwrapper-core/blob/95825c7/packages/txwrapper-substrate/src/methods/utility/asDerivative.ts#L48)*
 
 Send a call through an indexed pseudonym of the sender. In other words, send a call through a
 derivative account of the signer. The signer will need to have an already existing index derived

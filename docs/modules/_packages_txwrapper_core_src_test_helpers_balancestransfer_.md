@@ -20,7 +20,7 @@
 
 ▸ **balancesTransfer**(`args`: [TestBalancesTransferArgs](../interfaces/_packages_txwrapper_core_src_test_helpers_balancestransfer_.testbalancestransferargs.md), `info`: [BaseTxInfo](../interfaces/_packages_txwrapper_core_src_types_method_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_packages_txwrapper_core_src_types_method_.optionswithmeta.md)): [UnsignedTransaction](../interfaces/_packages_txwrapper_core_src_types_method_.unsignedtransaction.md)
 
-*Defined in [packages/txwrapper-core/src/test-helpers/balancesTransfer.ts:23](https://github.com/paritytech/txwrapper-core/blob/a5bee61/packages/txwrapper-core/src/test-helpers/balancesTransfer.ts#L23)*
+*Defined in [packages/txwrapper-core/src/test-helpers/balancesTransfer.ts:23](https://github.com/paritytech/txwrapper-core/blob/95825c7/packages/txwrapper-core/src/test-helpers/balancesTransfer.ts#L23)*
 
 Construct a balance transfer transaction offline.
 

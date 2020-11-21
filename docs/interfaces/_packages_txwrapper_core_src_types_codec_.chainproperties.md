@@ -24,7 +24,7 @@ JSON object of ChainProperties codec from `@polkadot/api`.
 
 • `Optional` **ss58Format**: undefined \| number
 
-*Defined in [packages/txwrapper-core/src/types/codec.ts:5](https://github.com/paritytech/txwrapper-core/blob/a5bee61/packages/txwrapper-core/src/types/codec.ts#L5)*
+*Defined in [packages/txwrapper-core/src/types/codec.ts:5](https://github.com/paritytech/txwrapper-core/blob/95825c7/packages/txwrapper-core/src/types/codec.ts#L5)*
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 • `Optional` **tokenDecimals**: undefined \| number
 
-*Defined in [packages/txwrapper-core/src/types/codec.ts:6](https://github.com/paritytech/txwrapper-core/blob/a5bee61/packages/txwrapper-core/src/types/codec.ts#L6)*
+*Defined in [packages/txwrapper-core/src/types/codec.ts:6](https://github.com/paritytech/txwrapper-core/blob/95825c7/packages/txwrapper-core/src/types/codec.ts#L6)*
 
 ___
 
@@ -40,4 +40,4 @@ ___
 
 • `Optional` **tokenSymbol**: undefined \| string
 
-*Defined in [packages/txwrapper-core/src/types/codec.ts:7](https://github.com/paritytech/txwrapper-core/blob/a5bee61/packages/txwrapper-core/src/types/codec.ts#L7)*
+*Defined in [packages/txwrapper-core/src/types/codec.ts:7](https://github.com/paritytech/txwrapper-core/blob/95825c7/packages/txwrapper-core/src/types/codec.ts#L7)*
