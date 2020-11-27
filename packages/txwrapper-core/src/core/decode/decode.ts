@@ -51,7 +51,7 @@ export function decode(
 ): DecodedSignedTx | DecodedUnsignedTx | DecodedSigningPayload {
 	if (typeof data === 'string') {
 		// Overide console.error so the user does not get an unnecesarily alarming message if their data
-		// fails to decode as a signing payload (which is the expected behaviour when they pass a signed tx)
+		// fails to decode as a signing payload (which is the expected behavior when they pass a signed tx)
 		const temp = console.error;
 		console.error = () => undefined;
 
