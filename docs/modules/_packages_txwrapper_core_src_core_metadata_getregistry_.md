@@ -20,7 +20,7 @@
 
 ▸ **getRegistry**(`__namedParameters`: { chainProperties: undefined \| null \| string \| number \| false \| true \| AnyJson[] \| { [index:string]: AnyJson;  } \| [ChainProperties](../interfaces/_packages_txwrapper_core_src_types_codec_.chainproperties.md) ; metadataRpc: string ; specTypes: Record\<string, string \| Constructor\<Codec> \| Record\<string, string> \| { _enum: string[] \| Record\<string, string \| null>  } \| { _set: Record\<string, number>  }>  }): TypeRegistry
 
-*Defined in [packages/txwrapper-core/src/core/metadata/getRegistry.ts:25](https://github.com/paritytech/txwrapper-core/blob/a5bee61/packages/txwrapper-core/src/core/metadata/getRegistry.ts#L25)*
+*Defined in [packages/txwrapper-core/src/core/metadata/getRegistry.ts:25](https://github.com/paritytech/txwrapper-core/blob/1c09a0e/packages/txwrapper-core/src/core/metadata/getRegistry.ts#L25)*
 
 Create a type registry given chainProperties, specTypes, and metadataRpc.
 
