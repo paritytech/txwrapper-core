@@ -21,7 +21,7 @@ Prefix for ss58-encoded addresses on Polkadot, Kusama, and Westend. Note:
 
 •  **kusama**:  = 2
 
-*Defined in [packages/txwrapper-core/src/polkadot.ts:16](https://github.com/paritytech/txwrapper-core/blob/1c09a0e/packages/txwrapper-core/src/polkadot.ts#L16)*
+*Defined in [packages/txwrapper-core/src/polkadot.ts:16](https://github.com/paritytech/txwrapper-core/blob/32a3349/packages/txwrapper-core/src/polkadot.ts#L16)*
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 •  **polkadot**:  = 0
 
-*Defined in [packages/txwrapper-core/src/polkadot.ts:15](https://github.com/paritytech/txwrapper-core/blob/1c09a0e/packages/txwrapper-core/src/polkadot.ts#L15)*
+*Defined in [packages/txwrapper-core/src/polkadot.ts:15](https://github.com/paritytech/txwrapper-core/blob/32a3349/packages/txwrapper-core/src/polkadot.ts#L15)*
 
 ___
 
@@ -37,4 +37,4 @@ ___
 
 •  **westend**:  = 42
 
-*Defined in [packages/txwrapper-core/src/polkadot.ts:17](https://github.com/paritytech/txwrapper-core/blob/1c09a0e/packages/txwrapper-core/src/polkadot.ts#L17)*
+*Defined in [packages/txwrapper-core/src/polkadot.ts:17](https://github.com/paritytech/txwrapper-core/blob/32a3349/packages/txwrapper-core/src/polkadot.ts#L17)*

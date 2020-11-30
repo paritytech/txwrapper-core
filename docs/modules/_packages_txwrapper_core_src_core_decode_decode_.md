@@ -16,7 +16,7 @@
 
 ▸ **decode**(`unsignedTx`: [UnsignedTransaction](../interfaces/_packages_txwrapper_core_src_types_method_.unsignedtransaction.md), `options`: [OptionsWithMeta](../interfaces/_packages_txwrapper_core_src_types_method_.optionswithmeta.md)): [DecodedUnsignedTx](_packages_txwrapper_core_src_types_decode_.md#decodedunsignedtx)
 
-*Defined in [packages/txwrapper-core/src/core/decode/decode.ts:19](https://github.com/paritytech/txwrapper-core/blob/1c09a0e/packages/txwrapper-core/src/core/decode/decode.ts#L19)*
+*Defined in [packages/txwrapper-core/src/core/decode/decode.ts:19](https://github.com/paritytech/txwrapper-core/blob/32a3349/packages/txwrapper-core/src/core/decode/decode.ts#L19)*
 
 Parse the transaction information from a signing payload, an unsigned tx, or a signed tx.
 All integers are serialized to a base-10 string.
@@ -32,7 +32,7 @@ Name | Type | Description |
 
 ▸ **decode**(`signedTx`: string, `options`: [OptionsWithMeta](../interfaces/_packages_txwrapper_core_src_types_method_.optionswithmeta.md)): [DecodedSignedTx](_packages_txwrapper_core_src_types_decode_.md#decodedsignedtx)
 
-*Defined in [packages/txwrapper-core/src/core/decode/decode.ts:31](https://github.com/paritytech/txwrapper-core/blob/1c09a0e/packages/txwrapper-core/src/core/decode/decode.ts#L31)*
+*Defined in [packages/txwrapper-core/src/core/decode/decode.ts:31](https://github.com/paritytech/txwrapper-core/blob/32a3349/packages/txwrapper-core/src/core/decode/decode.ts#L31)*
 
 Parse the transaction information from a signing payload, an unsigned tx, or a signed tx.
 All integers are serialized to a base-10 string.
@@ -48,7 +48,7 @@ Name | Type | Description |
 
 ▸ **decode**(`signingPayload`: string, `options`: [OptionsWithMeta](../interfaces/_packages_txwrapper_core_src_types_method_.optionswithmeta.md)): [DecodedSigningPayload](_packages_txwrapper_core_src_types_decode_.md#decodedsigningpayload)
 
-*Defined in [packages/txwrapper-core/src/core/decode/decode.ts:43](https://github.com/paritytech/txwrapper-core/blob/1c09a0e/packages/txwrapper-core/src/core/decode/decode.ts#L43)*
+*Defined in [packages/txwrapper-core/src/core/decode/decode.ts:43](https://github.com/paritytech/txwrapper-core/blob/32a3349/packages/txwrapper-core/src/core/decode/decode.ts#L43)*
 
 Parse the transaction information from a signing payload, an unsigned tx, or a signed tx.
 All integers are serialized to a base-10 string.

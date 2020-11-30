@@ -16,7 +16,7 @@
 
 ▸ **main**(): Promise\<void>
 
-*Defined in [packages/examples/src/polkadot.ts:25](https://github.com/paritytech/txwrapper-core/blob/1c09a0e/packages/examples/src/polkadot.ts#L25)*
+*Defined in [packages/examples/src/polkadot.ts:25](https://github.com/paritytech/txwrapper-core/blob/32a3349/packages/examples/src/polkadot.ts#L25)*
 
 Entry point of the script. This script assumes a Polkadot node is running
 locally on `http://localhost:9933`.

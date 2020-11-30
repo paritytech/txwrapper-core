@@ -20,7 +20,7 @@ Token decimal places for Polkadot, Kusama, and Westend.
 
 •  **kusama**:  = 12
 
-*Defined in [packages/txwrapper-core/src/polkadot.ts:34](https://github.com/paritytech/txwrapper-core/blob/1c09a0e/packages/txwrapper-core/src/polkadot.ts#L34)*
+*Defined in [packages/txwrapper-core/src/polkadot.ts:34](https://github.com/paritytech/txwrapper-core/blob/32a3349/packages/txwrapper-core/src/polkadot.ts#L34)*
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 •  **polkadot**:  = 10
 
-*Defined in [packages/txwrapper-core/src/polkadot.ts:33](https://github.com/paritytech/txwrapper-core/blob/1c09a0e/packages/txwrapper-core/src/polkadot.ts#L33)*
+*Defined in [packages/txwrapper-core/src/polkadot.ts:33](https://github.com/paritytech/txwrapper-core/blob/32a3349/packages/txwrapper-core/src/polkadot.ts#L33)*
 
 ___
 
@@ -36,4 +36,4 @@ ___
 
 •  **westend**:  = 12
 
-*Defined in [packages/txwrapper-core/src/polkadot.ts:35](https://github.com/paritytech/txwrapper-core/blob/1c09a0e/packages/txwrapper-core/src/polkadot.ts#L35)*
+*Defined in [packages/txwrapper-core/src/polkadot.ts:35](https://github.com/paritytech/txwrapper-core/blob/32a3349/packages/txwrapper-core/src/polkadot.ts#L35)*

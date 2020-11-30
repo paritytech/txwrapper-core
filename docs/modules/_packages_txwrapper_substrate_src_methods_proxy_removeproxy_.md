@@ -16,7 +16,7 @@
 
 ▸ **removeProxy**(`args`: [ProxyAddProxy](../interfaces/_packages_txwrapper_substrate_src_methods_proxy_addproxy_.proxyaddproxy.md), `info`: BaseTxInfo, `options`: OptionsWithMeta): UnsignedTransaction
 
-*Defined in [packages/txwrapper-substrate/src/methods/proxy/removeProxy.ts:17](https://github.com/paritytech/txwrapper-core/blob/1c09a0e/packages/txwrapper-substrate/src/methods/proxy/removeProxy.ts#L17)*
+*Defined in [packages/txwrapper-substrate/src/methods/proxy/removeProxy.ts:17](https://github.com/paritytech/txwrapper-core/blob/32a3349/packages/txwrapper-substrate/src/methods/proxy/removeProxy.ts#L17)*
 
 Unregister a proxy account for the sender.
 

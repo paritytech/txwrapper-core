@@ -24,7 +24,7 @@
 
 •  **call**: { args?: undefined \| string ; callIndex?: undefined \| string  } \| string
 
-*Defined in [packages/txwrapper-substrate/src/methods/proxy/proxy.ts:23](https://github.com/paritytech/txwrapper-core/blob/1c09a0e/packages/txwrapper-substrate/src/methods/proxy/proxy.ts#L23)*
+*Defined in [packages/txwrapper-substrate/src/methods/proxy/proxy.ts:23](https://github.com/paritytech/txwrapper-core/blob/32a3349/packages/txwrapper-substrate/src/methods/proxy/proxy.ts#L23)*
 
 The call to be made by the `real` account.
 To take advantage of txwrapper methods, this could be UnsignedTransaction.method.
@@ -35,7 +35,7 @@ ___
 
 •  **forceProxyType**: string
 
-*Defined in [packages/txwrapper-substrate/src/methods/proxy/proxy.ts:18](https://github.com/paritytech/txwrapper-core/blob/1c09a0e/packages/txwrapper-substrate/src/methods/proxy/proxy.ts#L18)*
+*Defined in [packages/txwrapper-substrate/src/methods/proxy/proxy.ts:18](https://github.com/paritytech/txwrapper-core/blob/32a3349/packages/txwrapper-substrate/src/methods/proxy/proxy.ts#L18)*
 
 Specify the exact proxy type to be used and checked for this call.
 
@@ -45,7 +45,7 @@ ___
 
 •  **real**: string
 
-*Defined in [packages/txwrapper-substrate/src/methods/proxy/proxy.ts:14](https://github.com/paritytech/txwrapper-core/blob/1c09a0e/packages/txwrapper-substrate/src/methods/proxy/proxy.ts#L14)*
+*Defined in [packages/txwrapper-substrate/src/methods/proxy/proxy.ts:14](https://github.com/paritytech/txwrapper-core/blob/32a3349/packages/txwrapper-substrate/src/methods/proxy/proxy.ts#L14)*
 
 Dispatch the given `call` from an account that the sender is authorized for
 through, `add_proxy`.

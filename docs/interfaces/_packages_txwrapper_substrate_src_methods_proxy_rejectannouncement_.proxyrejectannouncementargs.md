@@ -23,7 +23,7 @@
 
 •  **callHash**: string
 
-*Defined in [packages/txwrapper-substrate/src/methods/proxy/rejectAnnouncement.ts:17](https://github.com/paritytech/txwrapper-core/blob/1c09a0e/packages/txwrapper-substrate/src/methods/proxy/rejectAnnouncement.ts#L17)*
+*Defined in [packages/txwrapper-substrate/src/methods/proxy/rejectAnnouncement.ts:17](https://github.com/paritytech/txwrapper-core/blob/32a3349/packages/txwrapper-substrate/src/methods/proxy/rejectAnnouncement.ts#L17)*
 
 The hash of the call that the proxy wants to execute.
 
@@ -33,6 +33,6 @@ ___
 
 •  **delegate**: string
 
-*Defined in [packages/txwrapper-substrate/src/methods/proxy/rejectAnnouncement.ts:13](https://github.com/paritytech/txwrapper-core/blob/1c09a0e/packages/txwrapper-substrate/src/methods/proxy/rejectAnnouncement.ts#L13)*
+*Defined in [packages/txwrapper-substrate/src/methods/proxy/rejectAnnouncement.ts:13](https://github.com/paritytech/txwrapper-core/blob/32a3349/packages/txwrapper-substrate/src/methods/proxy/rejectAnnouncement.ts#L13)*
 
 The account that previously announced the call.

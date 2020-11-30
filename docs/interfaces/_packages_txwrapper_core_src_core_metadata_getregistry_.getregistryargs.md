@@ -22,7 +22,7 @@
 
 •  **chainProperties**: [ChainProperties](_packages_txwrapper_core_src_types_codec_.chainproperties.md) \| AnyJson
 
-*Defined in [packages/txwrapper-core/src/core/metadata/getRegistry.ts:11](https://github.com/paritytech/txwrapper-core/blob/1c09a0e/packages/txwrapper-core/src/core/metadata/getRegistry.ts#L11)*
+*Defined in [packages/txwrapper-core/src/core/metadata/getRegistry.ts:11](https://github.com/paritytech/txwrapper-core/blob/32a3349/packages/txwrapper-core/src/core/metadata/getRegistry.ts#L11)*
 
 Chain properties, normally returned by the `system_properties` call.
 
@@ -32,7 +32,7 @@ ___
 
 •  **metadataRpc**: string
 
-*Defined in [packages/txwrapper-core/src/core/metadata/getRegistry.ts:19](https://github.com/paritytech/txwrapper-core/blob/1c09a0e/packages/txwrapper-core/src/core/metadata/getRegistry.ts#L19)*
+*Defined in [packages/txwrapper-core/src/core/metadata/getRegistry.ts:19](https://github.com/paritytech/txwrapper-core/blob/32a3349/packages/txwrapper-core/src/core/metadata/getRegistry.ts#L19)*
 
 Used to set the correct metadata for the registry
 
@@ -42,6 +42,6 @@ ___
 
 •  **specTypes**: RegistryTypes
 
-*Defined in [packages/txwrapper-core/src/core/metadata/getRegistry.ts:15](https://github.com/paritytech/txwrapper-core/blob/1c09a0e/packages/txwrapper-core/src/core/metadata/getRegistry.ts#L15)*
+*Defined in [packages/txwrapper-core/src/core/metadata/getRegistry.ts:15](https://github.com/paritytech/txwrapper-core/blob/32a3349/packages/txwrapper-core/src/core/metadata/getRegistry.ts#L15)*
 
 Chain specific type definitions to registry.

@@ -20,7 +20,7 @@
 
 ▸ **rejectAnnouncement**(`args`: [ProxyRejectAnnouncementArgs](../interfaces/_packages_txwrapper_substrate_src_methods_proxy_rejectannouncement_.proxyrejectannouncementargs.md), `info`: BaseTxInfo, `options`: OptionsWithMeta): UnsignedTransaction
 
-*Defined in [packages/txwrapper-substrate/src/methods/proxy/rejectAnnouncement.ts:27](https://github.com/paritytech/txwrapper-core/blob/1c09a0e/packages/txwrapper-substrate/src/methods/proxy/rejectAnnouncement.ts#L27)*
+*Defined in [packages/txwrapper-substrate/src/methods/proxy/rejectAnnouncement.ts:27](https://github.com/paritytech/txwrapper-core/blob/32a3349/packages/txwrapper-substrate/src/methods/proxy/rejectAnnouncement.ts#L27)*
 
 Remove the given announcement of a delegate and return the deposit. Made by the proxied account.
 

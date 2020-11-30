@@ -27,7 +27,7 @@ Re-exports: [getRegistryPolkadot](_packages_txwrapper_core_src_polkadot_.md#getr
 
 ▸ **getRegistryKusama**(`specVersion`: number, `metadataRpc`: string): TypeRegistry
 
-*Defined in [packages/txwrapper-polkadot/src/getRegistry.ts:19](https://github.com/paritytech/txwrapper-core/blob/1c09a0e/packages/txwrapper-polkadot/src/getRegistry.ts#L19)*
+*Defined in [packages/txwrapper-polkadot/src/getRegistry.ts:19](https://github.com/paritytech/txwrapper-core/blob/32a3349/packages/txwrapper-polkadot/src/getRegistry.ts#L19)*
 
 Get the Kusama type registry for a given spec version.
 
@@ -46,7 +46,7 @@ ___
 
 ▸ **getRegistryWestend**(`specVersion`: number, `metadataRpc`: string): TypeRegistry
 
-*Defined in [packages/txwrapper-polkadot/src/getRegistry.ts:41](https://github.com/paritytech/txwrapper-core/blob/1c09a0e/packages/txwrapper-polkadot/src/getRegistry.ts#L41)*
+*Defined in [packages/txwrapper-polkadot/src/getRegistry.ts:41](https://github.com/paritytech/txwrapper-core/blob/32a3349/packages/txwrapper-polkadot/src/getRegistry.ts#L41)*
 
 Get the Westend type registry for a given spec version.
 
