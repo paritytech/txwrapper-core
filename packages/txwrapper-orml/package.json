@@ -1,0 +1,24 @@
+{
+  "name": "@substrate/txwrapper-core",
+  "version": "0.0.0",
+  "author": "Parity Technologies <admin@parity.io>",
+  "description": "Tools for substrate chain builders to build chain specific offline signing lib",
+  "files": [
+    "lib"
+  ],
+  "license": "Apache-2.0",
+  "main": "lib/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": "https://github.com/paritytech/txwrapper-core",
+  "scripts": {
+    "build": "rimraf lib/ && tsc -p tsconfig.json",
+    "deploy": "yarn build && standard-version",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@polkadot/api": "^2.4.1",
+    "@types/memoizee": "^0.4.3"
+  }
+}
