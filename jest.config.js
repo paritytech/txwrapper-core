@@ -1,22 +1,17 @@
+/* eslint-disable no-undef */
+const { pathsToModuleNameMapper } = require('ts-jest/utils');
+// Config with path aliases
+
+const {
+	compilerOptions: { paths },
+} = require('./tsconfig.json');
+
 module.exports = {
 	preset: 'ts-jest',
 	testPathIgnorePatterns: ['lib', 'node_modules'],
-	moduleNameMapper: {
-		'@acala-network/txwrapper-acala(.*)$':
-			'<rootDir>/packages/txwrapper-acala/src/$1',
-		'@substrate/txwrapper-core(.*)$':
-			'<rootDir>/packages/txwrapper-core/src/$1',
-		'@substrate/txwrapper-examples(.*)$':
-			'<rootDir>/packages/txwrapper-examples/src/$1',
-		'@substrate/txwrapper-orml(.*)$':
-			'<rootDir>/packages/txwrapper-orml/src/$1',
-		'@substrate/txwrapper-polkadot(.*)$':
-			'<rootDir>/packages/txwrapper-polkadot/src/$1',
-		'@substrate/txwrapper-registry(.*)$':
-			'<rootDir>/packages/txwrapper-registry/src/$1',
-		'@substrate/txwrapper-substrate(.*)$':
-			'<rootDir>/packages/txwrapper-substrate/src/$1',
-	},
+	moduleNameMapper: pathsToModuleNameMapper(paths, {
+		prefix: '<rootDir>',
+	}),
 	modulePathIgnorePatterns: [
 		'<rootDir>/lib',
 		'<rootDir>/packages/txwrapper-acala/lib',

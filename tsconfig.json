@@ -49,7 +49,7 @@
       ],
       "@substrate/txwrapper-substrate/*": [
         "packages/txwrapper-substrate/src/*"
-      ],
-    },
-  },
+      ]
+    }
+  }
 }
