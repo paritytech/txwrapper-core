@@ -1,2 +1,2 @@
 export * from './transfer';
-export * from './transferNativeCurrency';
+// export * from './transferNativeCurrency';

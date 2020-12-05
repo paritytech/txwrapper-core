@@ -1,1 +1,1 @@
-export * from 'methods';
+export * from './methods';
