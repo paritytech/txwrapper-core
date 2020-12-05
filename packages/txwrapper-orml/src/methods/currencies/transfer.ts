@@ -1,24 +1,18 @@
 import {
-	Args,
 	BaseTxInfo,
 	defineMethod,
 	OptionsWithMeta,
 	UnsignedTransaction,
 } from '@substrate/txwrapper-core';
 
-export interface CurrenciesTransferArgs extends Args {
-	/**
-	 * The recipient address, SS-58 encoded.
-	 */
-	dest: string;
+import { CurrenciesTransferNativeCurrencyArgs } from './transferNativeCurrency';
+
+export interface CurrenciesTransferArgs
+	extends CurrenciesTransferNativeCurrencyArgs {
 	/**
 	 * The `CurrencyId` of the token to send.
 	 */
 	currencyId: string | { Token: string } | { DEXShare: string };
-	/**
-	 * The amount to send.
-	 */
-	amount: number | string;
 }
 
 export function transfer(

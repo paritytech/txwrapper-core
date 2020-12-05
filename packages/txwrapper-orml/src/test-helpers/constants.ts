@@ -16,5 +16,9 @@ export const TEST_METHOD_ARGS = {
 			dest: '5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty',
 			currencyId: { Token: 'ACA' },
 		},
+		transferNativeCurrency: {
+			amount: 12,
+			dest: '5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty',
+		},
 	},
 };
