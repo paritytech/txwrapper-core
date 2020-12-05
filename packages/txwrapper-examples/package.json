@@ -15,7 +15,7 @@
   "dependencies": {
     "@polkadot/api": "^2.8.1",
     "@substrate/txwrapper-polkadot": "^0.0.0",
-    "@substrate/txwrapper-acala": "^0.0.0",
+    "@acala-network/txwrapper-acala": "^0.0.0",
     "ts-node": "9.0.0"
   }
 }

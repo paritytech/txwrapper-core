@@ -5,8 +5,6 @@
  * @ignore Don't show this file in documentation.
  */
 
-import { Keyring } from '@polkadot/api';
-import { cryptoWaitReady } from '@polkadot/util-crypto';
 import {
 	construct,
 	decode,
@@ -15,7 +13,9 @@ import {
 	knownChainProperties,
 	methods,
 	TokenSymbol,
-} from '@substrate/txwrapper-acala';
+} from '@acala-network/txwrapper-acala';
+import { Keyring } from '@polkadot/api';
+import { cryptoWaitReady } from '@polkadot/util-crypto';
 
 import { rpcToLocalNode, signWith } from './util';
 
