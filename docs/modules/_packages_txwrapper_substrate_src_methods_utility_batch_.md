@@ -1,4 +1,4 @@
-**[@substrate/txwrapper-substrate](../README.md)**
+**[@substrate/txwrapper-core](../README.md)**
 
 > [Globals](../globals.md) / "packages/txwrapper-substrate/src/methods/utility/batch"
 
@@ -18,16 +18,16 @@
 
 ### batch
 
-▸ **batch**(`args`: [UtilityBatch](../interfaces/_packages_txwrapper_substrate_src_methods_utility_batch_.utilitybatch.md), `info`: BaseTxInfo, `options`: OptionsWithMeta): UnsignedTransaction
+▸ **batch**(`args`: [UtilityBatch](../interfaces/_packages_txwrapper_substrate_src_methods_utility_batch_.utilitybatch.md), `info`: [BaseTxInfo](../interfaces/_packages_txwrapper_core_src_types_method_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_packages_txwrapper_core_src_types_method_.optionswithmeta.md)): [UnsignedTransaction](../interfaces/_packages_txwrapper_core_src_types_method_.unsignedtransaction.md)
 
-*Defined in [packages/txwrapper-substrate/src/methods/utility/batch.ts:18](https://github.com/paritytech/txwrapper-core/blob/1c09a0e/packages/txwrapper-substrate/src/methods/utility/batch.ts#L18)*
+*Defined in [packages/txwrapper-substrate/src/methods/utility/batch.ts:18](https://github.com/paritytech/txwrapper-core/blob/a0a9a76/packages/txwrapper-substrate/src/methods/utility/batch.ts#L18)*
 
 #### Parameters:
 
 Name | Type |
 ------ | ------ |
 `args` | [UtilityBatch](../interfaces/_packages_txwrapper_substrate_src_methods_utility_batch_.utilitybatch.md) |
-`info` | BaseTxInfo |
-`options` | OptionsWithMeta |
+`info` | [BaseTxInfo](../interfaces/_packages_txwrapper_core_src_types_method_.basetxinfo.md) |
+`options` | [OptionsWithMeta](../interfaces/_packages_txwrapper_core_src_types_method_.optionswithmeta.md) |
 
-**Returns:** UnsignedTransaction
+**Returns:** [UnsignedTransaction](../interfaces/_packages_txwrapper_core_src_types_method_.unsignedtransaction.md)

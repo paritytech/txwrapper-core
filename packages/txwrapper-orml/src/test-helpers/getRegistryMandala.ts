@@ -1,5 +1,5 @@
 import { TypeRegistry } from '@polkadot/types';
-import { PolkadotSS58Format } from '@substrate/txwrapper-core/src/test-helpers';
+import { PolkadotSS58Format } from '@substrate/txwrapper-core/test-helpers';
 import {
 	getRegistry,
 	knownChainProperties,

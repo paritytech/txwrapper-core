@@ -1,5 +1,5 @@
-**[@substrate/txwrapper-substrate](README.md)**
+**[@substrate/txwrapper-core](README.md)**
 
 > [Globals](globals.md)
 
-# WIP Offline transaction generation methods for substrate pallets
+# WIP library for chain builders to make and publish their chain specific txwrapper-* lib

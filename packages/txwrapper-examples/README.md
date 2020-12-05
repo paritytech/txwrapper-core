@@ -1,4 +1,4 @@
-# WIP Examples for end users of txwrapper-substrate and txwrapper-polkadot
+# Examples for end users of txwrapper-* libraries
 
 ## Usage
  - clone repo

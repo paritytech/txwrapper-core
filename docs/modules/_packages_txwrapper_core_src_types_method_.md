@@ -1,4 +1,4 @@
-**[@substrate/txwrapper-substrate](../README.md)**
+**[@substrate/txwrapper-core](../README.md)**
 
 > [Globals](../globals.md) / "packages/txwrapper-core/src/types/method"
 
@@ -25,6 +25,6 @@
 
 Ƭ  **Args**: Record\<string, AnyJson>
 
-*Defined in [packages/txwrapper-core/src/types/method.ts:22](https://github.com/paritytech/txwrapper-core/blob/1c09a0e/packages/txwrapper-core/src/types/method.ts#L22)*
+*Defined in [packages/txwrapper-core/src/types/method.ts:22](https://github.com/paritytech/txwrapper-core/blob/a0a9a76/packages/txwrapper-core/src/types/method.ts#L22)*
 
 Base Argument object for methods.

@@ -1,4 +1,4 @@
-**[@substrate/txwrapper-substrate](../README.md)**
+**[@substrate/txwrapper-core](../README.md)**
 
 > [Globals](../globals.md) / ["packages/txwrapper-core/src/types/codec"](../modules/_packages_txwrapper_core_src_types_codec_.md) / ChainProperties
 
@@ -24,20 +24,20 @@ JSON object of ChainProperties codec from `@polkadot/api`.
 
 • `Optional` **ss58Format**: undefined \| number
 
-*Defined in [packages/txwrapper-core/src/types/codec.ts:5](https://github.com/paritytech/txwrapper-core/blob/1c09a0e/packages/txwrapper-core/src/types/codec.ts#L5)*
+*Defined in [packages/txwrapper-core/src/types/codec.ts:5](https://github.com/paritytech/txwrapper-core/blob/a0a9a76/packages/txwrapper-core/src/types/codec.ts#L5)*
 
 ___
 
 ### tokenDecimals
 
-• `Optional` **tokenDecimals**: undefined \| number
+• `Optional` **tokenDecimals**: number \| number[]
 
-*Defined in [packages/txwrapper-core/src/types/codec.ts:6](https://github.com/paritytech/txwrapper-core/blob/1c09a0e/packages/txwrapper-core/src/types/codec.ts#L6)*
+*Defined in [packages/txwrapper-core/src/types/codec.ts:6](https://github.com/paritytech/txwrapper-core/blob/a0a9a76/packages/txwrapper-core/src/types/codec.ts#L6)*
 
 ___
 
 ### tokenSymbol
 
-• `Optional` **tokenSymbol**: undefined \| string
+• `Optional` **tokenSymbol**: string \| string[]
 
-*Defined in [packages/txwrapper-core/src/types/codec.ts:7](https://github.com/paritytech/txwrapper-core/blob/1c09a0e/packages/txwrapper-core/src/types/codec.ts#L7)*
+*Defined in [packages/txwrapper-core/src/types/codec.ts:7](https://github.com/paritytech/txwrapper-core/blob/a0a9a76/packages/txwrapper-core/src/types/codec.ts#L7)*

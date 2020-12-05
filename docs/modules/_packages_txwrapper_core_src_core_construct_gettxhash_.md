@@ -1,4 +1,4 @@
-**[@substrate/txwrapper-substrate](../README.md)**
+**[@substrate/txwrapper-core](../README.md)**
 
 > [Globals](../globals.md) / "packages/txwrapper-core/src/core/construct/getTxHash"
 
@@ -16,7 +16,7 @@
 
 ▸ **getTxHash**(`signedTx`: string): string
 
-*Defined in [packages/txwrapper-core/src/core/construct/getTxHash.ts:8](https://github.com/paritytech/txwrapper-core/blob/1c09a0e/packages/txwrapper-core/src/core/construct/getTxHash.ts#L8)*
+*Defined in [packages/txwrapper-core/src/core/construct/getTxHash.ts:8](https://github.com/paritytech/txwrapper-core/blob/a0a9a76/packages/txwrapper-core/src/core/construct/getTxHash.ts#L8)*
 
 Derive the tx hash of a signed transaction offline.
 

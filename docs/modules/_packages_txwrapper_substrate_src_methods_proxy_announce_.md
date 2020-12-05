@@ -1,4 +1,4 @@
-**[@substrate/txwrapper-substrate](../README.md)**
+**[@substrate/txwrapper-core](../README.md)**
 
 > [Globals](../globals.md) / "packages/txwrapper-substrate/src/methods/proxy/announce"
 
@@ -18,9 +18,9 @@
 
 ### announce
 
-▸ **announce**(`args`: [ProxyAnnounceArgs](../interfaces/_packages_txwrapper_substrate_src_methods_proxy_announce_.proxyannounceargs.md), `info`: BaseTxInfo, `options`: OptionsWithMeta): UnsignedTransaction
+▸ **announce**(`args`: [ProxyAnnounceArgs](../interfaces/_packages_txwrapper_substrate_src_methods_proxy_announce_.proxyannounceargs.md), `info`: [BaseTxInfo](../interfaces/_packages_txwrapper_core_src_types_method_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_packages_txwrapper_core_src_types_method_.optionswithmeta.md)): [UnsignedTransaction](../interfaces/_packages_txwrapper_core_src_types_method_.unsignedtransaction.md)
 
-*Defined in [packages/txwrapper-substrate/src/methods/proxy/announce.ts:40](https://github.com/paritytech/txwrapper-core/blob/1c09a0e/packages/txwrapper-substrate/src/methods/proxy/announce.ts#L40)*
+*Defined in [packages/txwrapper-substrate/src/methods/proxy/announce.ts:40](https://github.com/paritytech/txwrapper-core/blob/a0a9a76/packages/txwrapper-substrate/src/methods/proxy/announce.ts#L40)*
 
 Publish the hash of a proxy-call that will be made in the future.
 
@@ -42,7 +42,7 @@ The dispatch origin for this call must be _Signed_ and a proxy of `real`.
 Name | Type | Description |
 ------ | ------ | ------ |
 `args` | [ProxyAnnounceArgs](../interfaces/_packages_txwrapper_substrate_src_methods_proxy_announce_.proxyannounceargs.md) | Arguments specific to this method. |
-`info` | BaseTxInfo | Information required to construct the transaction. |
-`options` | OptionsWithMeta | Registry and metadata used for constructing the method.  |
+`info` | [BaseTxInfo](../interfaces/_packages_txwrapper_core_src_types_method_.basetxinfo.md) | Information required to construct the transaction. |
+`options` | [OptionsWithMeta](../interfaces/_packages_txwrapper_core_src_types_method_.optionswithmeta.md) | Registry and metadata used for constructing the method.  |
 
-**Returns:** UnsignedTransaction
+**Returns:** [UnsignedTransaction](../interfaces/_packages_txwrapper_core_src_types_method_.unsignedtransaction.md)

@@ -1,4 +1,4 @@
-**[@substrate/txwrapper-substrate](../README.md)**
+**[@substrate/txwrapper-core](../README.md)**
 
 > [Globals](../globals.md) / "packages/txwrapper-core/src/test-helpers/itHasCorrectBaseTxInfo"
 
@@ -16,7 +16,7 @@
 
 ▸ **itHasCorrectBaseTxInfo**(`unsigned`: [UnsignedTransaction](../interfaces/_packages_txwrapper_core_src_types_method_.unsignedtransaction.md)): void
 
-*Defined in [packages/txwrapper-core/src/test-helpers/itHasCorrectBaseTxInfo.ts:9](https://github.com/paritytech/txwrapper-core/blob/1c09a0e/packages/txwrapper-core/src/test-helpers/itHasCorrectBaseTxInfo.ts#L9)*
+*Defined in [packages/txwrapper-core/src/test-helpers/itHasCorrectBaseTxInfo.ts:9](https://github.com/paritytech/txwrapper-core/blob/a0a9a76/packages/txwrapper-core/src/test-helpers/itHasCorrectBaseTxInfo.ts#L9)*
 
 Test helper to test that all base tx information is correctly populated.
 

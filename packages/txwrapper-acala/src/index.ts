@@ -1,4 +1,4 @@
-import { currencies } from '@substrate/txwrapper-orml/src/methods';
+import { currencies } from '@substrate/txwrapper-orml/methods';
 
 // Export methods of pallets included in the Acala/ Mandala runtimes.
 export const methods = {

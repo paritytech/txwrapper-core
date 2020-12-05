@@ -1,4 +1,4 @@
-**[@substrate/txwrapper-substrate](../README.md)**
+**[@substrate/txwrapper-core](../README.md)**
 
 > [Globals](../globals.md) / "packages/txwrapper-substrate/src/test-helpers/TEST\_METHOD\_ARGS"
 
@@ -16,7 +16,7 @@
 
 ▪ `Const` **TEST\_METHOD\_ARGS**: object
 
-*Defined in [packages/txwrapper-substrate/src/test-helpers/TEST_METHOD_ARGS.ts:4](https://github.com/paritytech/txwrapper-core/blob/1c09a0e/packages/txwrapper-substrate/src/test-helpers/TEST_METHOD_ARGS.ts#L4)*
+*Defined in [packages/txwrapper-substrate/src/test-helpers/TEST_METHOD_ARGS.ts:4](https://github.com/paritytech/txwrapper-core/blob/a0a9a76/packages/txwrapper-substrate/src/test-helpers/TEST_METHOD_ARGS.ts#L4)*
 
 Arguments for methods to use in testing.
 

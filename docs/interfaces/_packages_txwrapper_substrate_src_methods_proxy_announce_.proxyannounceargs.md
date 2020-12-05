@@ -1,4 +1,4 @@
-**[@substrate/txwrapper-substrate](../README.md)**
+**[@substrate/txwrapper-core](../README.md)**
 
 > [Globals](../globals.md) / ["packages/txwrapper-substrate/src/methods/proxy/announce"](../modules/_packages_txwrapper_substrate_src_methods_proxy_announce_.md) / ProxyAnnounceArgs
 
@@ -23,7 +23,7 @@
 
 •  **callHash**: string
 
-*Defined in [packages/txwrapper-substrate/src/methods/proxy/announce.ts:17](https://github.com/paritytech/txwrapper-core/blob/1c09a0e/packages/txwrapper-substrate/src/methods/proxy/announce.ts#L17)*
+*Defined in [packages/txwrapper-substrate/src/methods/proxy/announce.ts:17](https://github.com/paritytech/txwrapper-core/blob/a0a9a76/packages/txwrapper-substrate/src/methods/proxy/announce.ts#L17)*
 
 The hash of the call to be made by the `real` account.
 
@@ -33,6 +33,6 @@ ___
 
 •  **real**: string
 
-*Defined in [packages/txwrapper-substrate/src/methods/proxy/announce.ts:13](https://github.com/paritytech/txwrapper-core/blob/1c09a0e/packages/txwrapper-substrate/src/methods/proxy/announce.ts#L13)*
+*Defined in [packages/txwrapper-substrate/src/methods/proxy/announce.ts:13](https://github.com/paritytech/txwrapper-core/blob/a0a9a76/packages/txwrapper-substrate/src/methods/proxy/announce.ts#L13)*
 
 The account that the proxy will make a call on behalf of.

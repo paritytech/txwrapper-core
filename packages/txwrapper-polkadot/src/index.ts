@@ -2,7 +2,7 @@ import {
 	balances,
 	proxy,
 	utility,
-} from '@substrate/txwrapper-substrate/src/methods';
+} from '@substrate/txwrapper-substrate/methods';
 
 // Export methods of pallets included in the Polkadot/ Kusama/ Westend runtimes.
 // Note: in the future this may also include methods defined within this package

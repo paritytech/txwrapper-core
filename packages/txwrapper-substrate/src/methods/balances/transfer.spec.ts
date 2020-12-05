@@ -3,7 +3,7 @@ import {
 	POLKADOT_25_TEST_OPTIONS,
 	TEST_BASE_TX_INFO,
 	TEST_METHOD_ARGS,
-} from '@substrate/txwrapper-core/src/test-helpers';
+} from '@substrate/txwrapper-core/test-helpers';
 
 import { transfer } from './transfer';
 

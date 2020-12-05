@@ -1,4 +1,4 @@
-**[@substrate/txwrapper-substrate](../README.md)**
+**[@substrate/txwrapper-core](../README.md)**
 
 > [Globals](../globals.md) / "packages/txwrapper-substrate/src/methods/balances/transferKeepAlive"
 
@@ -20,15 +20,15 @@
 
 Ƭ  **BalancesTransferKeepAliveArgs**: [BalancesTransferArgs](../interfaces/_packages_txwrapper_substrate_src_methods_balances_transfer_.balancestransferargs.md)
 
-*Defined in [packages/txwrapper-substrate/src/methods/balances/transferKeepAlive.ts:10](https://github.com/paritytech/txwrapper-core/blob/1c09a0e/packages/txwrapper-substrate/src/methods/balances/transferKeepAlive.ts#L10)*
+*Defined in [packages/txwrapper-substrate/src/methods/balances/transferKeepAlive.ts:10](https://github.com/paritytech/txwrapper-core/blob/a0a9a76/packages/txwrapper-substrate/src/methods/balances/transferKeepAlive.ts#L10)*
 
 ## Functions
 
 ### transferKeepAlive
 
-▸ **transferKeepAlive**(`args`: [BalancesTransferKeepAliveArgs](_packages_txwrapper_substrate_src_methods_balances_transferkeepalive_.md#balancestransferkeepaliveargs), `info`: BaseTxInfo, `options`: OptionsWithMeta): UnsignedTransaction
+▸ **transferKeepAlive**(`args`: [BalancesTransferKeepAliveArgs](_packages_txwrapper_substrate_src_methods_balances_transferkeepalive_.md#balancestransferkeepaliveargs), `info`: [BaseTxInfo](../interfaces/_packages_txwrapper_core_src_types_method_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_packages_txwrapper_core_src_types_method_.optionswithmeta.md)): [UnsignedTransaction](../interfaces/_packages_txwrapper_core_src_types_method_.unsignedtransaction.md)
 
-*Defined in [packages/txwrapper-substrate/src/methods/balances/transferKeepAlive.ts:19](https://github.com/paritytech/txwrapper-core/blob/1c09a0e/packages/txwrapper-substrate/src/methods/balances/transferKeepAlive.ts#L19)*
+*Defined in [packages/txwrapper-substrate/src/methods/balances/transferKeepAlive.ts:19](https://github.com/paritytech/txwrapper-core/blob/a0a9a76/packages/txwrapper-substrate/src/methods/balances/transferKeepAlive.ts#L19)*
 
 Construct a balance transfer transaction offline.
 
@@ -37,7 +37,7 @@ Construct a balance transfer transaction offline.
 Name | Type | Description |
 ------ | ------ | ------ |
 `args` | [BalancesTransferKeepAliveArgs](_packages_txwrapper_substrate_src_methods_balances_transferkeepalive_.md#balancestransferkeepaliveargs) | Arguments specific to this method. |
-`info` | BaseTxInfo | Information required to construct the transaction. |
-`options` | OptionsWithMeta | Registry and metadata used for constructing the method.  |
+`info` | [BaseTxInfo](../interfaces/_packages_txwrapper_core_src_types_method_.basetxinfo.md) | Information required to construct the transaction. |
+`options` | [OptionsWithMeta](../interfaces/_packages_txwrapper_core_src_types_method_.optionswithmeta.md) | Registry and metadata used for constructing the method.  |
 
-**Returns:** UnsignedTransaction
+**Returns:** [UnsignedTransaction](../interfaces/_packages_txwrapper_core_src_types_method_.unsignedtransaction.md)

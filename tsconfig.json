@@ -5,7 +5,51 @@
     "target": "ES2015",
     "esModuleInterop": true,
     "strict": true,
-    "baseUrl": ".",
     "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@acala-network/txwrapper-acala": [
+        "packages/txwrapper-acala/src"
+      ],
+      "@acala-network/txwrapper-acala/*": [
+        "packages/txwrapper-acala/src/*"
+      ],
+      "@substrate/txwrapper-core": [
+        "packages/txwrapper-core/src"
+      ],
+      "@substrate/txwrapper-core/*": [
+        "packages/txwrapper-core/src/*"
+      ],
+      "@substrate/txwrapper-examples": [
+        "packages/txwrapper-examples/src"
+      ],
+      "@substrate/txwrapper-examples/*": [
+        "packages/txwrapper-examples/src/*"
+      ],
+      "@substrate/txwrapper-orml": [
+        "packages/txwrapper-orml/src"
+      ],
+      "@substrate/txwrapper-orml/*": [
+        "packages/txwrapper-orml/src/*"
+      ],
+      "@substrate/txwrapper-polkadot": [
+        "packages/txwrapper-polkadot/src"
+      ],
+      "@substrate/txwrapper-polkadot/*": [
+        "packages/txwrapper-polkadot/src/*"
+      ],
+      "@substrate/txwrapper-registry": [
+        "packages/txwrapper-registry/src"
+      ],
+      "@substrate/txwrapper-registry/*": [
+        "packages/txwrapper-registry/src/*"
+      ],
+      "@substrate/txwrapper-substrate": [
+        "packages/txwrapper-substrate/src"
+      ],
+      "@substrate/txwrapper-substrate/*": [
+        "packages/txwrapper-substrate/src/*"
+      ],
+    },
   },
 }

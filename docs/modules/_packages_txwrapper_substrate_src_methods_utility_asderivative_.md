@@ -1,4 +1,4 @@
-**[@substrate/txwrapper-substrate](../README.md)**
+**[@substrate/txwrapper-core](../README.md)**
 
 > [Globals](../globals.md) / "packages/txwrapper-substrate/src/methods/utility/asDerivative"
 
@@ -18,9 +18,9 @@
 
 ### asDerivative
 
-▸ **asDerivative**(`args`: [UtilityAsDerivativeArgs](../interfaces/_packages_txwrapper_substrate_src_methods_utility_asderivative_.utilityasderivativeargs.md), `info`: BaseTxInfo, `options`: OptionsWithMeta): UnsignedTransaction
+▸ **asDerivative**(`args`: [UtilityAsDerivativeArgs](../interfaces/_packages_txwrapper_substrate_src_methods_utility_asderivative_.utilityasderivativeargs.md), `info`: [BaseTxInfo](../interfaces/_packages_txwrapper_core_src_types_method_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_packages_txwrapper_core_src_types_method_.optionswithmeta.md)): [UnsignedTransaction](../interfaces/_packages_txwrapper_core_src_types_method_.unsignedtransaction.md)
 
-*Defined in [packages/txwrapper-substrate/src/methods/utility/asDerivative.ts:48](https://github.com/paritytech/txwrapper-core/blob/1c09a0e/packages/txwrapper-substrate/src/methods/utility/asDerivative.ts#L48)*
+*Defined in [packages/txwrapper-substrate/src/methods/utility/asDerivative.ts:48](https://github.com/paritytech/txwrapper-core/blob/a0a9a76/packages/txwrapper-substrate/src/methods/utility/asDerivative.ts#L48)*
 
 Send a call through an indexed pseudonym of the sender. In other words, send a call through a
 derivative account of the signer. The signer will need to have an already existing index derived
@@ -48,7 +48,7 @@ The dispatch origin for this call must be _Signed_.
 Name | Type | Description |
 ------ | ------ | ------ |
 `args` | [UtilityAsDerivativeArgs](../interfaces/_packages_txwrapper_substrate_src_methods_utility_asderivative_.utilityasderivativeargs.md) |  |
-`info` | BaseTxInfo |  |
-`options` | OptionsWithMeta |   |
+`info` | [BaseTxInfo](../interfaces/_packages_txwrapper_core_src_types_method_.basetxinfo.md) |  |
+`options` | [OptionsWithMeta](../interfaces/_packages_txwrapper_core_src_types_method_.optionswithmeta.md) |   |
 
-**Returns:** UnsignedTransaction
+**Returns:** [UnsignedTransaction](../interfaces/_packages_txwrapper_core_src_types_method_.unsignedtransaction.md)
