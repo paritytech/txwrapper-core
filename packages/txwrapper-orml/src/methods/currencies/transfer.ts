@@ -15,7 +15,6 @@ export interface CurrenciesTransferArgs extends Args {
 	 * The `CurrencyId` of the token to send.
 	 */
 	currencyId: string | { Token: string } | { DEXShare: string };
-	// currencyId: string | { Toke: string } | { DEXShare: string } | CurrencyIdOf;
 	/**
 	 * The amount to send.
 	 */

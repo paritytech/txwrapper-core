@@ -18,6 +18,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@substrate/txwrapper-core": "^0.0.0"
+    "@substrate/txwrapper-core": "^0.0.0",
+    "@substrate/txwrapper-registry": "^0.0.0"
   }
 }
