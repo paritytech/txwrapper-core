@@ -4,52 +4,6 @@ import { TypeRegistry } from '@polkadot/types';
 import { getSpecTypes } from '@polkadot/types-known';
 import { ChainProperties, getRegistryBase } from '@substrate/txwrapper-core';
 
-// import { AcalaSS58Format, AcalaTokenDecimal, AcalaTokenSymbol } from './acala';
-// import {
-// 	PolkadotSS58Format,
-// 	PolkadotTokenDecimal,
-// 	PolkadotTokenSymbol,
-// } from './polkadot';
-
-// export * from './acala';
-// export * from './polkadot';
-
-/**
- * Hardcode some chain properties of known chains. These are normally returned
- * by `system_properties` call, but since they don't change much, it's pretty
- * safe to hardcode them.
- *
- * @ignore
- */
-// // TODO replace with @polkadot/network package
-// export const chainProperties: Record<string, ChainProperties> = {
-// 	kusama: {
-// 		ss58Format: PolkadotSS58Format.kusama,
-// 		tokenDecimals: PolkadotTokenDecimal.kusama,
-// 		tokenSymbol: PolkadotTokenSymbol.kusama,
-// 	},
-// 	polkadot: {
-// 		ss58Format: PolkadotSS58Format.polkadot,
-// 		tokenDecimals: PolkadotTokenDecimal.polkadot,
-// 		tokenSymbol: PolkadotTokenSymbol.polkadot,
-// 	},
-// 	westend: {
-// 		ss58Format: PolkadotSS58Format.westend,
-// 		tokenDecimals: PolkadotTokenDecimal.westend,
-// 		tokenSymbol: PolkadotTokenSymbol.westend,
-// 	},
-// 	acala: {
-// 		ss58Format: AcalaSS58Format.acala,
-// 		tokenDecimals: AcalaTokenDecimal.acala,
-// 		tokenSymbol: AcalaTokenSymbol.acala,
-// 	},
-// 	mandala: {
-// 		ss58Format: AcalaSS58Format.mandala,
-// 		tokenDecimals: AcalaTokenDecimal.mandala,
-// 		tokenSymbol: AcalaTokenSymbol.mandala,
-// 	},
-// };
-
 /**
  * Known chain properties based on the substrate ss58 registry.
  * Chain properties are derived from the substrate ss58 registry:

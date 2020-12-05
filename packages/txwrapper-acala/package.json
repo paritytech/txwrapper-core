@@ -1,8 +1,8 @@
 {
-  "name": "@substrate/txwrapper-acala",
+  "name": "@acala-network/txwrapper-acala",
   "version": "0.0.0",
   "author": "Parity Technologies <admin@parity.io>",
-  "description": "Tools for constructing acala transactions offline",
+  "description": "Tools for constructing Acala transactions offline",
   "files": [
     "lib"
   ],
