@@ -5,11 +5,12 @@
   "private": true,
   "workspaces": [
     "packages/txwrapper-core",
+    "packages/txwrapper-registry",
     "packages/txwrapper-substrate",
     "packages/txwrapper-polkadot",
     "packages/txwrapper-orml",
     "packages/txwrapper-acala",
-    "packages/txwrapper-example"
+    "packages/txwrapper-examples"
   ],
   "scripts": {
     "build": "yarn workspaces run build",

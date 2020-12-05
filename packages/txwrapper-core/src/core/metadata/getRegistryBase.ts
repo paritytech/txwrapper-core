@@ -4,7 +4,7 @@ import { AnyJson, RegistryTypes } from '@polkadot/types/types';
 import { ChainProperties } from '../../types';
 import { createMetadata } from './createMetadata';
 
-export interface GetRegistryArgs {
+export interface GetRegistryBaseArgs {
 	/**
 	 * Chain properties, normally returned by the `system_properties` call.
 	 */
@@ -22,11 +22,11 @@ export interface GetRegistryArgs {
 /**
  * Create a type registry given chainProperties, specTypes, and metadataRpc.
  */
-export function getRegistry({
+export function getRegistryBase({
 	chainProperties,
 	specTypes,
 	metadataRpc,
-}: GetRegistryArgs): TypeRegistry {
+}: GetRegistryBaseArgs): TypeRegistry {
 	const registry = new TypeRegistry();
 
 	const metadata = createMetadata(registry, metadataRpc);

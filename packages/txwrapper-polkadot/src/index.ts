@@ -19,7 +19,4 @@ export * from '@substrate/txwrapper-core';
 
 // SS58 is not exported at the top level since most txwrapper-core users don't need it,
 // so we have to reach in and grab it
-export { PolkadotSS58Format } from '@substrate/txwrapper-core/src/polkadot';
-
-// exports getRegistry{Polkadot, Westend, Kusama}
-export * from './getRegistry';
+export { getRegistry, PolkadotSS58Format } from '@substrate/txwrapper-registry';

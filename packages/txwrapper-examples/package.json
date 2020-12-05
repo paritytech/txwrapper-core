@@ -1,5 +1,5 @@
 {
-  "name": "examples",
+  "name": "@substrate/txwrapper-examples",
   "version": "0.0.0",
   "author": "Parity Technologies <admin@parity.io>",
   "description": "Examples for txwrapper-* usage.",
@@ -15,6 +15,7 @@
   "dependencies": {
     "@polkadot/api": "^2.8.1",
     "@substrate/txwrapper-polkadot": "^0.0.0",
+    "@substrate/txwrapper-acala": "^0.0.0",
     "ts-node": "9.0.0"
   }
 }

@@ -8,17 +8,20 @@
 import { Keyring } from '@polkadot/api';
 import { cryptoWaitReady } from '@polkadot/util-crypto';
 import {
-	AcalaSS58Format,
 	construct,
 	decode,
 	deriveAddress,
-	getRegistryMandala,
+	getRegistry,
 	methods,
-	TokenSymbol,
-} from '@substrate/txwrapper-acala';
+	PolkadotSS58Format,
+} from '@substrate/txwrapper-polkadot';
 
 import { rpcToLocalNode, signWith } from './util';
 
+/**
+ * Entry point of the script. This script assumes a Polkadot node is running
+ * locally on `http://localhost:9933`.
+ */
 async function main(): Promise<void> {
 	// Wait for the promise to resolve async WASM
 	await cryptoWaitReady();
@@ -27,7 +30,7 @@ async function main(): Promise<void> {
 	const alice = keyring.addFromUri('//Alice', { name: 'Alice' }, 'sr25519');
 	console.log(
 		"Alice's SS58-Encoded Address:",
-		deriveAddress(alice.publicKey, AcalaSS58Format.mandala)
+		deriveAddress(alice.publicKey, PolkadotSS58Format.polkadot)
 	);
 
 	// Construct a balance transfer transaction offline.
@@ -38,20 +41,31 @@ async function main(): Promise<void> {
 	const blockHash = await rpcToLocalNode('chain_getBlockHash');
 	const genesisHash = await rpcToLocalNode('chain_getBlockHash', [0]);
 	const metadataRpc = await rpcToLocalNode('state_getMetadata');
-	const { specVersion, transactionVersion } = await rpcToLocalNode(
+	const { specVersion, transactionVersion, specName } = await rpcToLocalNode(
 		'state_getRuntimeVersion'
 	);
 
-	const registry = getRegistryMandala(specVersion, metadataRpc);
+	// Create Polkadot's type registry.
+	const registry = getRegistry({
+		chainName: 'Polkadot',
+		specName,
+		specVersion,
+		metadataRpc,
+	});
 
-	const unsigned = methods.currencies.transfer(
+	// Now we can create our `balances.transfer` unsigned tx. The following
+	// function takes the above data as arguments, so can be performed offline
+	// if desired.
+	const unsigned = methods.balances.transfer(
 		{
-			amount: '90071992547409910',
-			currencyId: { Token: TokenSymbol.ACA }, // OR registry.createType('CurrencyId', { Token: TokenSymbol.ACA })
-			dest: '5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty', // Bob
+			value: '90071992547409910',
+			dest: '14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3', // Bob
 		},
 		{
-			address: deriveAddress(alice.publicKey, AcalaSS58Format.mandala),
+			address: deriveAddress(
+				alice.publicKey,
+				PolkadotSS58Format.polkadot
+			),
 			blockHash,
 			blockNumber: registry
 				.createType('BlockNumber', block.header.number)
@@ -59,7 +73,7 @@ async function main(): Promise<void> {
 			eraPeriod: 64,
 			genesisHash,
 			metadataRpc,
-			nonce: 0,
+			nonce: 0, // Assuming this is Alice's first tx on the chain
 			specVersion,
 			tip: 0,
 			transactionVersion,
@@ -77,23 +91,21 @@ async function main(): Promise<void> {
 	});
 	console.log(
 		`\nDecoded Transaction\n  To: ${decodedUnsigned.method.args.dest}\n` +
-			`  Amount: ${decodedUnsigned.method.args.amount}\n` +
-			`  CurrencyId ${JSON.stringify(
-				decodedUnsigned.method.args.currencyId
-			)}`
+			`  Amount: ${decodedUnsigned.method.args.value}`
 	);
 
 	// Construct the signing payload from an unsigned transaction.
 	const signingPayload = construct.signingPayload(unsigned, { registry });
 	console.log(`\nPayload to Sign: ${signingPayload}`);
+
+	// Decode the information from a signing payload.
 	const payloadInfo = decode(signingPayload, {
 		metadataRpc,
 		registry,
 	});
 	console.log(
 		`\nDecoded Transaction\n  To: ${payloadInfo.method.args.dest}\n` +
-			`  Amount: ${payloadInfo.method.args.amount}\n` +
-			`  CurrencyId ${JSON.stringify(payloadInfo.method.args.currencyId)}`
+			`  Amount: ${payloadInfo.method.args.value}`
 	);
 
 	// Sign a payload. This operation should be performed on an offline device.
@@ -119,6 +131,16 @@ async function main(): Promise<void> {
 	// request directly to the node.
 	const actualTxHash = await rpcToLocalNode('author_submitExtrinsic', [tx]);
 	console.log(`Actual Tx Hash: ${actualTxHash}`);
+
+	// Decode a signed payload.
+	const txInfo = decode(tx, {
+		metadataRpc,
+		registry,
+	});
+	console.log(
+		`\nDecoded Transaction\n  To: ${txInfo.method.args.dest}\n` +
+			`  Amount: ${txInfo.method.args.value}\n`
+	);
 }
 
 main().catch((error) => {
