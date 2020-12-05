@@ -12,8 +12,8 @@ import {
 	decode,
 	deriveAddress,
 	getRegistry,
+	knownChainProperties,
 	methods,
-	PolkadotSS58Format,
 } from '@substrate/txwrapper-polkadot';
 
 import { rpcToLocalNode, signWith } from './util';
@@ -30,7 +30,10 @@ async function main(): Promise<void> {
 	const alice = keyring.addFromUri('//Alice', { name: 'Alice' }, 'sr25519');
 	console.log(
 		"Alice's SS58-Encoded Address:",
-		deriveAddress(alice.publicKey, PolkadotSS58Format.polkadot)
+		deriveAddress(
+			alice.publicKey,
+			knownChainProperties.polkadot.ss58Format as number
+		)
 	);
 
 	// Construct a balance transfer transaction offline.
@@ -64,7 +67,7 @@ async function main(): Promise<void> {
 		{
 			address: deriveAddress(
 				alice.publicKey,
-				PolkadotSS58Format.polkadot
+				knownChainProperties.polkadot.ss58Format as number
 			),
 			blockHash,
 			blockNumber: registry

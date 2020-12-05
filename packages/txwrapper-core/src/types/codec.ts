@@ -3,6 +3,6 @@
  */
 export interface ChainProperties {
 	ss58Format?: number;
-	tokenDecimals?: number;
-	tokenSymbol?: string;
+	tokenDecimals?: number | number[];
+	tokenSymbol?: string | string[];
 }

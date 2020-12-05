@@ -12,4 +12,7 @@ export * from './TokenSymbol';
 export * from '@substrate/txwrapper-core';
 
 // Exort getRegistry
-export { AcalaSS58Format, getRegistry } from '@substrate/txwrapper-registry';
+export {
+	getRegistry,
+	knownChainProperties,
+} from '@substrate/txwrapper-registry';

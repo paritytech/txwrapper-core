@@ -8,11 +8,11 @@
 import { Keyring } from '@polkadot/api';
 import { cryptoWaitReady } from '@polkadot/util-crypto';
 import {
-	AcalaSS58Format,
 	construct,
 	decode,
 	deriveAddress,
 	getRegistry,
+	knownChainProperties,
 	methods,
 	TokenSymbol,
 } from '@substrate/txwrapper-acala';
@@ -27,7 +27,11 @@ async function main(): Promise<void> {
 	const alice = keyring.addFromUri('//Alice', { name: 'Alice' }, 'sr25519');
 	console.log(
 		"Alice's SS58-Encoded Address:",
-		deriveAddress(alice.publicKey, AcalaSS58Format.mandala)
+		deriveAddress(
+			alice.publicKey,
+			// Use the default substrate development ss58 format
+			knownChainProperties.substrate.ss58Format as number
+		)
 	);
 
 	// Construct a balance transfer transaction offline.
@@ -56,7 +60,11 @@ async function main(): Promise<void> {
 			dest: '5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty', // Bob
 		},
 		{
-			address: deriveAddress(alice.publicKey, AcalaSS58Format.mandala),
+			address: deriveAddress(
+				alice.publicKey,
+				// Use the default substrate development ss58 format
+				knownChainProperties.substrate.ss58Format as number
+			),
 			blockHash,
 			blockNumber: registry
 				.createType('BlockNumber', block.header.number)

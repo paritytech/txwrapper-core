@@ -19,4 +19,7 @@ export * from '@substrate/txwrapper-core';
 
 // SS58 is not exported at the top level since most txwrapper-core users don't need it,
 // so we have to reach in and grab it
-export { getRegistry, PolkadotSS58Format } from '@substrate/txwrapper-registry';
+export {
+	getRegistry,
+	knownChainProperties,
+} from '@substrate/txwrapper-registry';
