@@ -6,15 +6,10 @@
   "license": "Apache-2.0",
   "private": true,
   "workspaces": [
-    "packages/txwrapper-core",
-    "packages/txwrapper-registry",
-    "packages/txwrapper-substrate",
-    "packages/txwrapper-polkadot",
-    "packages/txwrapper-orml",
-    "packages/txwrapper-acala",
-    "packages/txwrapper-examples"
+    "packages/*"
   ],
   "scripts": {
+    "publish": "yarn run build && lerna publish",
     "build": "lerna run build",
     "lint": "tsc --noEmit && eslint . --ext ts",
     "test": "jest",
