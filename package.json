@@ -10,7 +10,6 @@
   ],
   "scripts": {
     "deploy": "yarn run build && lerna publish --conventional-commits --create-release github",
-    "deploy:dry-run": "yarn run build && lerna publish --conventional-commits --no-git-tag-version --no-push",
     "build": "lerna run build",
     "lint": "tsc --noEmit && eslint . --ext ts",
     "test": "jest",
