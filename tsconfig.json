@@ -1,54 +1,49 @@
 {
+  "extends": "./tsconfig.build.json",
   "compilerOptions": {
-    "declaration": true,
-    "module": "CommonJS",
-    "target": "ES2015",
-    "esModuleInterop": true,
-    "strict": true,
-    "skipLibCheck": true,
-    "baseUrl": ".",
+    "baseUrl": "./packages",
     "paths": {
       "@acala-network/txwrapper-acala": [
-        "packages/txwrapper-acala/src"
+        "txwrapper-acala/src"
       ],
       "@acala-network/txwrapper-acala/*": [
-        "packages/txwrapper-acala/src/*"
+        "txwrapper-acala/src/*"
       ],
       "@substrate/txwrapper-core": [
-        "packages/txwrapper-core/src"
+        "txwrapper-core/src"
       ],
       "@substrate/txwrapper-core/*": [
-        "packages/txwrapper-core/src/*"
+        "txwrapper-core/src/*"
       ],
       "@substrate/txwrapper-examples": [
-        "packages/txwrapper-examples/src"
+        "txwrapper-examples/src"
       ],
       "@substrate/txwrapper-examples/*": [
-        "packages/txwrapper-examples/src/*"
+        "txwrapper-examples/src/*"
       ],
       "@substrate/txwrapper-orml": [
-        "packages/txwrapper-orml/src"
+        "txwrapper-orml/src"
       ],
       "@substrate/txwrapper-orml/*": [
-        "packages/txwrapper-orml/src/*"
+        "txwrapper-orml/src/*"
       ],
       "@substrate/txwrapper-polkadot": [
-        "packages/txwrapper-polkadot/src"
+        "txwrapper-polkadot/src"
       ],
       "@substrate/txwrapper-polkadot/*": [
-        "packages/txwrapper-polkadot/src/*"
+        "txwrapper-polkadot/src/*"
       ],
       "@substrate/txwrapper-registry": [
-        "packages/txwrapper-registry/src"
+        "txwrapper-registry/src"
       ],
       "@substrate/txwrapper-registry/*": [
-        "packages/txwrapper-registry/src/*"
+        "txwrapper-registry/src/*"
       ],
       "@substrate/txwrapper-substrate": [
-        "packages/txwrapper-substrate/src"
+        "txwrapper-substrate/src"
       ],
       "@substrate/txwrapper-substrate/*": [
-        "packages/txwrapper-substrate/src/*"
+        "txwrapper-substrate/src/*"
       ]
     }
   }

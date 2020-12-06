@@ -15,7 +15,7 @@
   "bugs": "https://github.com/paritytech/txwrapper-core/issues",
   "homepage": "https://github.com/paritytech/txwrapper-core/tree/master/packages/txwrapper-substrate#readme",
   "scripts": {
-    "build": "rimraf lib/ && tsc -p tsconfig.json",
+    "build": "rimraf lib/ && tsc -p tsconfig.build.json",
     "deploy": "yarn build && standard-version",
     "test": "jest"
   },

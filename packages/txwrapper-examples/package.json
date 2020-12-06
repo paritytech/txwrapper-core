@@ -8,7 +8,7 @@
   "private": true,
   "repository": "https://github.com/paritytech/txwrapper-core",
   "scripts": {
-    "build": "tsc --noEmit -p tsconfig.json",
+    "build": "tsc --noEmit -p tsconfig.build.json",
     "polkadot": "../../node_modules/.bin/ts-node src/polkadot.ts",
     "mandala": "../../node_modules/.bin/ts-node src/mandala.ts"
   },

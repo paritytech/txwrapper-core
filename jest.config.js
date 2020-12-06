@@ -10,7 +10,7 @@ module.exports = {
 	preset: 'ts-jest',
 	testPathIgnorePatterns: ['lib', 'node_modules'],
 	moduleNameMapper: pathsToModuleNameMapper(paths, {
-		prefix: '<rootDir>',
+		prefix: '<rootDir>/packages',
 	}),
 	modulePathIgnorePatterns: [
 		'<rootDir>/lib',

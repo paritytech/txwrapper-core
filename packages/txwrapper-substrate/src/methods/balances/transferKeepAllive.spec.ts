@@ -2,7 +2,7 @@ import {
 	itHasCorrectBaseTxInfo,
 	POLKADOT_25_TEST_OPTIONS,
 	TEST_BASE_TX_INFO,
-} from '@substrate/txwrapper-core/test-helpers';
+} from '@substrate/txwrapper-core';
 
 import { TEST_METHOD_ARGS } from '../../test-helpers';
 import { transferKeepAlive } from './transferKeepAlive';
