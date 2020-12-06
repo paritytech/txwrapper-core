@@ -9,7 +9,8 @@
     "packages/*"
   ],
   "scripts": {
-    "publish": "yarn run build && lerna publish",
+    "deploy": "yarn run build && lerna publish --conventional-commits --create-release github",
+    "deploy:dry-run": "yarn run build && lerna publish --conventional-commits --no-git-tag-version --no-push",
     "build": "lerna run build",
     "lint": "tsc --noEmit && eslint . --ext ts",
     "test": "jest",
@@ -30,7 +31,6 @@
     "jest": "^26.6.3",
     "lerna": "^3.22.1",
     "prettier": "^2.2.1",
-    "standard-version": "^9.0.0",
     "ts-jest": "^26.4.4",
     "ts-node": "^9.1.0",
     "tsconfig-paths": "^3.9.0",

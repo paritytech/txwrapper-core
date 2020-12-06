@@ -23,3 +23,11 @@ Run all tests:
 ```
 yarn test
 ```
+
+### Publishing
+
+Publish with lerna by running:
+
+```
+yarn deploy
+```
