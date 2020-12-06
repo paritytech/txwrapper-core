@@ -7,7 +7,7 @@
   "useWorkspaces": true,
   "command": {
     "publish": {
-      "allowBranch": "main",
+
       "ignoreChanges": [
         "*.md"
       ],
