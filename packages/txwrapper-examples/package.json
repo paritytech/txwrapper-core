@@ -1,6 +1,6 @@
 {
   "name": "@substrate/txwrapper-examples",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "author": "Parity Technologies <admin@parity.io>",
   "description": "Examples for txwrapper-* usage.",
   "license": "Apache-2.0",
@@ -13,9 +13,9 @@
     "mandala": "../../node_modules/.bin/ts-node src/mandala.ts"
   },
   "dependencies": {
+    "@acala-network/txwrapper-acala": "^0.1.0",
     "@polkadot/api": "^2.8.1",
-    "@substrate/txwrapper-polkadot": "^0.0.0",
-    "@acala-network/txwrapper-acala": "^0.0.0",
+    "@substrate/txwrapper-polkadot": "^0.1.0",
     "ts-node": "9.0.0"
   }
 }

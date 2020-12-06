@@ -1,6 +1,6 @@
 {
   "name": "@substrate/txwrapper-core",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "author": "Parity Technologies <admin@parity.io>",
   "description": "Tools for substrate chain builders to build chain specific offline signing lib",
   "files": [
@@ -20,5 +20,6 @@
   "dependencies": {
     "@polkadot/api": "^2.8.1",
     "@types/memoizee": "^0.4.3"
-  }
+  },
+  "gitHead": "b970ba74e8e9261c29d23adc2ccf8358dbd156f4"
 }

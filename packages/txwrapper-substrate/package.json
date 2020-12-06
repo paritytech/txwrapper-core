@@ -1,6 +1,6 @@
 {
   "name": "@substrate/txwrapper-substrate",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "author": "Parity Technologies <admin@parity.io>",
   "description": "Helper functions for offline transaction generation for selected Substrat.",
   "files": [
@@ -19,6 +19,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@substrate/txwrapper-core": "^0.0.0"
-  }
+    "@substrate/txwrapper-core": "^0.1.0"
+  },
+  "gitHead": "b970ba74e8e9261c29d23adc2ccf8358dbd156f4"
 }
