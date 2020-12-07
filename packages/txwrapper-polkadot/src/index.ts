@@ -12,9 +12,6 @@ export const methods = {
 // Rexport all of txwrapper-core so users have access to utilities, construct functions,
 // decode function, and types.
 export * from '@substrate/txwrapper-core';
-
-// SS58 is not exported at the top level since most txwrapper-core users don't need it,
-// so we have to reach in and grab it
 export {
 	getRegistry,
 	knownChainProperties,

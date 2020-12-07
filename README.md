@@ -12,7 +12,7 @@ Install dependencies:
 yarn install
 ```
 
-Distribution build all packages:
+Build all packages with distribution settings:
 
 ```
 yarn build

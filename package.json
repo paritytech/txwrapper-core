@@ -2,7 +2,6 @@
   "name": "txwrapper-core",
   "repository": "https://github.com/paritytech/txwrapper-core",
   "author": "Parity Technologies <admin@parity.io>",
-  "version": "0.0.0",
   "license": "Apache-2.0",
   "private": true,
   "workspaces": [

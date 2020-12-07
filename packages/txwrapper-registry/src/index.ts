@@ -37,7 +37,7 @@ export const knownChainProperties = substrateSS58Registry.reduce(
 
 export interface GetRegistryOpts {
 	/**
-	 * Rntime specName
+	 * Runtime specName
 	 */
 	specName: keyof typeof knownChainProperties; // TODO dynamically use polkadot networks package
 	/**

@@ -13,13 +13,11 @@
   },
   "repository": "https://github.com/paritytech/txwrapper-core",
   "scripts": {
-    "build": "rimraf lib/ && tsc -p tsconfig.build.json",
-    "test": "jest"
+    "build": "rimraf lib/ && tsc -p tsconfig.build.json"
   },
   "dependencies": {
     "@substrate/txwrapper-core": "^0.1.0",
     "@substrate/txwrapper-registry": "^0.1.0",
     "@substrate/txwrapper-substrate": "^0.1.0"
-  },
-  "gitHead": "b970ba74e8e9261c29d23adc2ccf8358dbd156f4"
+  }
 }
