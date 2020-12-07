@@ -12,6 +12,8 @@
     "access": "public"
   },
   "repository": "https://github.com/paritytech/txwrapper-core",
+  "bugs": "https://github.com/paritytech/txwrapper-core/issues",
+  "homepage": "https://github.com/paritytech/txwrapper-core/tree/master/packages/txwrapper-polkadot#readme",
   "scripts": {
     "build": "rimraf lib/ && tsc -p tsconfig.build.json"
   },

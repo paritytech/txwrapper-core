@@ -1,3 +1,3 @@
 # @substrate/txwrapper-orml
 
-txwrapper methods for ORML pallets
+Helper functions for offline transaction generation for selected ORML pallets.

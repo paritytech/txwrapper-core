@@ -1,1 +1,3 @@
-# PoC for @acala-network/txwrapper-acala
+# @acala-network/txwrapper-acala
+
+Proof of concept package for txwrapper-acala.
