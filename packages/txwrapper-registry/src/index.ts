@@ -15,18 +15,8 @@ import { ChainProperties, getRegistryBase } from '@substrate/txwrapper-core';
 export const knownChainProperties = substrateSS58Registry.reduce(
 	(acc, { decimals, network, symbols, prefix }) => {
 		acc[network] = {
-			tokenDecimals:
-				decimals?.length === 1
-					? decimals[0]
-					: decimals === null
-					? undefined
-					: decimals,
-			tokenSymbol:
-				symbols?.length === 1
-					? symbols[0]
-					: symbols === null
-					? undefined
-					: symbols,
+			tokenDecimals: decimals?.length === 1 ? decimals[0] : decimals,
+			tokenSymbol: symbols?.length === 1 ? symbols[0] : symbols,
 			ss58Format: prefix,
 		};
 
@@ -39,7 +29,7 @@ export interface GetRegistryOpts {
 	/**
 	 * Runtime specName
 	 */
-	specName: keyof typeof knownChainProperties; // TODO dynamically use polkadot networks package
+	specName: keyof typeof knownChainProperties;
 	/**
 	 * chainName
 	 */
