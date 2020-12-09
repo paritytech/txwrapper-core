@@ -37,7 +37,7 @@ async function main(): Promise<void> {
 	// Construct a balance transfer transaction offline.
 	// To construct the tx, we need some up-to-date information from the node.
 	// `txwrapper` is offline-only, so does not care how you retrieve this info.
-	// In this tutorial, we simply send RPC requests to the node.
+	// In this example, we simply send RPC requests to the node.
 	const { block } = await rpcToLocalNode('chain_getBlock');
 	const blockHash = await rpcToLocalNode('chain_getBlockHash');
 	const genesisHash = await rpcToLocalNode('chain_getBlockHash', [0]);
@@ -56,7 +56,8 @@ async function main(): Promise<void> {
 	const unsigned = methods.currencies.transfer(
 		{
 			amount: '90071992547409910',
-			currencyId: { Token: TokenSymbol.ACA }, // OR registry.createType('CurrencyId', { Token: TokenSymbol.ACA })
+			// Alternative syntax: `registry.createType('CurrencyId', { Token: TokenSymbol.ACA })`
+			currencyId: { Token: TokenSymbol.ACA },
 			dest: '5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty', // Bob
 		},
 		{
