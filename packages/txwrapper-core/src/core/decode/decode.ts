@@ -50,20 +50,12 @@ export function decode(
 	options: OptionsWithMeta
 ): DecodedSignedTx | DecodedUnsignedTx | DecodedSigningPayload {
 	if (typeof data === 'string') {
-		// Overide console.error so the user does not get an unnecesarily alarming message if their data
-		// fails to decode as a signing payload (which is the expected behavior when they pass a signed tx)
-		const temp = console.error;
-		console.error = () => undefined;
-
 		let decodedInfo: DecodedSigningPayload | DecodedSignedTx;
 		try {
 			decodedInfo = decodeSigningPayload(data, options);
 		} catch {
 			decodedInfo = decodeSignedTx(data, options);
 		}
-
-		// Reassign console.error to the original function so it will behave as expected in other cases
-		console.error = temp;
 
 		return decodedInfo;
 	}
