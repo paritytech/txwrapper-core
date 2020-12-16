@@ -7,7 +7,7 @@
     "packages/txwrapper-core",
     "packages/txwrapper-substrate",
     "packages/txwrapper-polkadot",
-    "packages/txwrapper-example"
+    "packages/examples"
   ],
   "scripts": {
     "build": "yarn workspaces run build",
@@ -16,7 +16,7 @@
     "docs": "typedoc"
   },
   "resolutions": {
-    "@polkadot/api": "^2.8.1"
+    "@polkadot/api": "^3.0.2-6"
   },
   "devDependencies": {
     "@types/jest": "^26.0.0",
