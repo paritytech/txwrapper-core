@@ -25,6 +25,6 @@ functions that only require registry.
 
 •  **registry**: TypeRegistry
 
-*Defined in [packages/txwrapper-core/src/types/method.ts:118](https://github.com/paritytech/txwrapper-core/blob/a5bee61/packages/txwrapper-core/src/types/method.ts#L118)*
+*Defined in [packages/txwrapper-core/src/types/method.ts:118](https://github.com/paritytech/txwrapper-core/blob/1c09a0e/packages/txwrapper-core/src/types/method.ts#L118)*
 
 The type registry of the runtime.
