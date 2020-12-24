@@ -2,7 +2,7 @@
  * JSON object of ChainProperties codec from `@polkadot/api`.
  */
 export interface ChainProperties {
-	ss58Format?: number;
-	tokenDecimals?: number;
-	tokenSymbol?: string;
+	ss58Format?: number | null;
+	tokenDecimals?: number | number[] | null;
+	tokenSymbol?: string | string[] | null;
 }

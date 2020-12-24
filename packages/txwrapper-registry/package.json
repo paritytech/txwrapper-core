@@ -1,0 +1,25 @@
+{
+  "name": "@substrate/txwrapper-registry",
+  "version": "0.1.0",
+  "author": "Parity Technologies <admin@parity.io>",
+  "description": "Polkadot-js type registry creation assistants for txwrapper libraries.",
+  "files": [
+    "lib"
+  ],
+  "license": "Apache-2.0",
+  "main": "lib/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": "https://github.com/paritytech/txwrapper-core",
+  "bugs": "https://github.com/paritytech/txwrapper-core/issues",
+  "homepage": "https://github.com/paritytech/txwrapper-core/tree/master/packages/txwrapper-registry#readme",
+  "scripts": {
+    "build": "rimraf lib/ && tsc -p tsconfig.build.json"
+  },
+  "dependencies": {
+    "@polkadot/apps-config": "^0.72.1",
+    "@polkadot/networks": "^4.2.1",
+    "@substrate/txwrapper-core": "^0.1.0"
+  }
+}

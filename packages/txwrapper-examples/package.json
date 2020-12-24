@@ -1,0 +1,22 @@
+{
+  "name": "@substrate/txwrapper-examples",
+  "version": "0.1.0",
+  "author": "Parity Technologies <admin@parity.io>",
+  "description": "Examples for txwrapper-* usage.",
+  "license": "Apache-2.0",
+  "main": "lib/index.js",
+  "private": true,
+  "repository": "https://github.com/paritytech/txwrapper-core",
+  "bugs": "https://github.com/paritytech/txwrapper-core/issues",
+  "homepage": "https://github.com/paritytech/txwrapper-core/tree/master/packages/txwrapper-examples#readme",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "polkadot": "node lib/polkadot",
+    "mandala": "node lib/mandala"
+  },
+  "dependencies": {
+    "@acala-network/txwrapper-acala": "^0.1.0",
+    "@polkadot/api": "^3.1.1",
+    "@substrate/txwrapper-polkadot": "^0.1.0"
+  }
+}

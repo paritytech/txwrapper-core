@@ -1,1 +1,3 @@
-# WIP offline transaction generation methods for Polkadot, Kusama, and Westend
+# @substrate/txwrapper-polkadot
+
+Helper functions for offline transaction generation for Polkadot and Kusama.

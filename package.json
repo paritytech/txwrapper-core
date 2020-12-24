@@ -1,38 +1,39 @@
 {
+  "name": "txwrapper-core",
   "repository": "https://github.com/paritytech/txwrapper-core",
   "author": "Parity Technologies <admin@parity.io>",
   "license": "Apache-2.0",
   "private": true,
   "workspaces": [
-    "packages/txwrapper-core",
-    "packages/txwrapper-substrate",
-    "packages/txwrapper-polkadot",
-    "packages/examples"
+    "packages/*"
   ],
   "scripts": {
-    "build": "yarn workspaces run build",
+    "deploy": "yarn run build && lerna publish --conventional-commits --create-release github",
+    "build": "lerna run build",
+    "upgrade": "lerna exec -- yarn upgrade",
     "lint": "tsc --noEmit && eslint . --ext ts",
     "test": "jest",
     "docs": "typedoc"
   },
-  "resolutions": {
-    "@polkadot/api": "^3.0.2-6"
-  },
   "devDependencies": {
-    "@types/jest": "^26.0.0",
-    "@typescript-eslint/eslint-plugin": "^4.8.2",
-    "@typescript-eslint/parser": "^4.8.2",
-    "eslint": "^7.14.0",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-prettier": "^3.1.4",
-    "eslint-plugin-simple-import-sort": "^6.0.1",
+    "@types/jest": "^26.0.19",
+    "@typescript-eslint/eslint-plugin": "^4.11.0",
+    "@typescript-eslint/parser": "^4.11.0",
+    "eslint": "^7.16.0",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-plugin-prettier": "^3.3.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
     "jest": "^26.6.3",
-    "prettier": "^2.2.0",
-    "standard-version": "^9.0.0",
+    "lerna": "^3.22.1",
+    "prettier": "^2.2.1",
     "ts-jest": "^26.4.4",
-    "ts-node": "^9.0.0",
+    "ts-node": "^9.1.1",
+    "tsconfig-paths": "^3.9.0",
     "typedoc": "^0.19.1",
     "typedoc-plugin-markdown": "^3.0.2",
     "typescript": "^4.1.2"
+  },
+  "resolutions": {
+    "@polkadot/api": "^3.1.1"
   }
 }

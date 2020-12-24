@@ -1,6 +1,6 @@
 {
   "name": "@substrate/txwrapper-polkadot",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "author": "Parity Technologies <admin@parity.io>",
   "description": "Helper functions for offline transaction generation for Polkadot and Kusama.",
   "files": [
@@ -12,13 +12,14 @@
     "access": "public"
   },
   "repository": "https://github.com/paritytech/txwrapper-core",
+  "bugs": "https://github.com/paritytech/txwrapper-core/issues",
+  "homepage": "https://github.com/paritytech/txwrapper-core/tree/master/packages/txwrapper-polkadot#readme",
   "scripts": {
-    "build": "rimraf lib/ && tsc -p tsconfig.json",
-    "deploy": "yarn build && standard-version",
-    "test": "jest"
+    "build": "rimraf lib/ && tsc -p tsconfig.build.json"
   },
   "dependencies": {
-    "@substrate/txwrapper-core": "^0.0.0",
-    "@substrate/txwrapper-substrate": "^0.0.0"
+    "@substrate/txwrapper-core": "^0.1.0",
+    "@substrate/txwrapper-registry": "^0.1.0",
+    "@substrate/txwrapper-substrate": "^0.1.0"
   }
 }

@@ -6,7 +6,7 @@ import {
 } from './construct';
 
 export { decode } from './decode';
-export { createMetadata, getRegistry } from './metadata';
+export { createMetadata, getRegistryBase } from './metadata';
 export { defineMethod, toTxMethod } from './method';
 export * from './util';
 

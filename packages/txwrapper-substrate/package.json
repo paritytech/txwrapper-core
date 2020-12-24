@@ -1,8 +1,8 @@
 {
   "name": "@substrate/txwrapper-substrate",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "author": "Parity Technologies <admin@parity.io>",
-  "description": "Helper functions for offline transaction generation for selected Substrat.",
+  "description": "Helper functions for offline transaction generation for selected Substrate pallets.",
   "files": [
     "lib"
   ],
@@ -12,12 +12,12 @@
     "access": "public"
   },
   "repository": "https://github.com/paritytech/txwrapper-core",
+  "bugs": "https://github.com/paritytech/txwrapper-core/issues",
+  "homepage": "https://github.com/paritytech/txwrapper-core/tree/master/packages/txwrapper-substrate#readme",
   "scripts": {
-    "build": "rimraf lib/ && tsc -p tsconfig.json",
-    "deploy": "yarn build && standard-version",
-    "test": "jest"
+    "build": "rimraf lib/ && tsc -p tsconfig.build.json"
   },
   "dependencies": {
-    "@substrate/txwrapper-core": "^0.0.0"
+    "@substrate/txwrapper-core": "^0.1.0"
   }
 }

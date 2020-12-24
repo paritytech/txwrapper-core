@@ -1,1 +1,3 @@
-# WIP Offline transaction generation methods for substrate pallets
+# @substrate/txwrapper-substrate
+
+Helper functions for offline transaction generation for selected Substrate pallets.

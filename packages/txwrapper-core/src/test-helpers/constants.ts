@@ -1,6 +1,6 @@
 import metadataRpc from '@polkadot/metadata/v12/static';
 
-import { getRegistryPolkadot } from '../polkadot';
+import { getRegistryPolkadot } from './getRegistryPolkadot';
 export { metadataRpc };
 
 /**
@@ -40,3 +40,14 @@ export const TEST_METHOD_ARGS = {
 		},
 	},
 };
+
+/**
+ * Prefix for ss58-encoded addresses on Polkadot, Kusama, and Westend. Note:
+ * 42, the Westend prefix, is also the default for Substrate-based chains.
+ */
+export enum PolkadotSS58Format {
+	polkadot = 0,
+	kusama = 2,
+	westend = 42,
+	substrate = 42,
+}

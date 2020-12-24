@@ -1,0 +1,22 @@
+{
+  "name": "@acala-network/txwrapper-acala",
+  "version": "0.1.0",
+  "author": "",
+  "description": "Tools for constructing Acala transactions offline",
+  "files": [
+    "lib"
+  ],
+  "license": "Apache-2.0",
+  "main": "lib/index.js",
+  "private": true,
+  "repository": "https://github.com/paritytech/txwrapper-core",
+  "scripts": {
+    "build": "rimraf lib/ && tsc -p tsconfig.build.json",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@substrate/txwrapper-orml": "^0.1.0",
+    "@substrate/txwrapper-core": "^0.1.0",
+    "@substrate/txwrapper-registry": "^0.1.0"
+  }
+}

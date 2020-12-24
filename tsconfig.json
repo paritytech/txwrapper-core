@@ -1,11 +1,50 @@
 {
+  "extends": "./tsconfig.build.json",
   "compilerOptions": {
-    "declaration": true,
-    "module": "CommonJS",
-    "target": "ES2015",
-    "esModuleInterop": true,
-    "strict": true,
-    "baseUrl": ".",
-    "skipLibCheck": true,
-  },
+    "baseUrl": "./packages",
+    "paths": {
+      "@acala-network/txwrapper-acala": [
+        "txwrapper-acala/src"
+      ],
+      "@acala-network/txwrapper-acala/*": [
+        "txwrapper-acala/src/*"
+      ],
+      "@substrate/txwrapper-core": [
+        "txwrapper-core/src"
+      ],
+      "@substrate/txwrapper-core/*": [
+        "txwrapper-core/src/*"
+      ],
+      "@substrate/txwrapper-examples": [
+        "txwrapper-examples/src"
+      ],
+      "@substrate/txwrapper-examples/*": [
+        "txwrapper-examples/src/*"
+      ],
+      "@substrate/txwrapper-orml": [
+        "txwrapper-orml/src"
+      ],
+      "@substrate/txwrapper-orml/*": [
+        "txwrapper-orml/src/*"
+      ],
+      "@substrate/txwrapper-polkadot": [
+        "txwrapper-polkadot/src"
+      ],
+      "@substrate/txwrapper-polkadot/*": [
+        "txwrapper-polkadot/src/*"
+      ],
+      "@substrate/txwrapper-registry": [
+        "txwrapper-registry/src"
+      ],
+      "@substrate/txwrapper-registry/*": [
+        "txwrapper-registry/src/*"
+      ],
+      "@substrate/txwrapper-substrate": [
+        "txwrapper-substrate/src"
+      ],
+      "@substrate/txwrapper-substrate/*": [
+        "txwrapper-substrate/src/*"
+      ]
+    }
+  }
 }
