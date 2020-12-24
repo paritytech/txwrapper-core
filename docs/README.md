@@ -2,4 +2,8 @@
 
 > [Globals](globals.md)
 
-# WIP library for chain builders to make and publish their chain specific txwrapper-* lib
+# @substrate/txwrapper-core
+
+Components for making offline transaction signing libraries for Substrate based chains.
+
+How to guide for chain builders coming soon...

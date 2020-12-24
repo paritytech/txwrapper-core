@@ -16,7 +16,7 @@
 
 ▸ **getRegistryMandala**(`specVersion`: number, `metadataRpc`: string): TypeRegistry
 
-*Defined in [packages/txwrapper-orml/src/test-helpers/getRegistryMandala.ts:14](https://github.com/paritytech/txwrapper-core/blob/33adddf/packages/txwrapper-orml/src/test-helpers/getRegistryMandala.ts#L14)*
+*Defined in [packages/txwrapper-orml/src/test-helpers/getRegistryMandala.ts:14](https://github.com/paritytech/txwrapper-core/blob/731a943/packages/txwrapper-orml/src/test-helpers/getRegistryMandala.ts#L14)*
 
 Mandala registry creator for testing.
 

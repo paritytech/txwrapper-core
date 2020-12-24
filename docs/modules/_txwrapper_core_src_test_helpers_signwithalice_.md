@@ -14,9 +14,9 @@
 
 ### signWithAlice
 
-▸ **signWithAlice**(`signingPayload`: string): Promise\<string>
+▸ **signWithAlice**(`signingPayload`: string): Promise<string\>
 
-*Defined in [packages/txwrapper-core/src/test-helpers/signWithAlice.ts:10](https://github.com/paritytech/txwrapper-core/blob/33adddf/packages/txwrapper-core/src/test-helpers/signWithAlice.ts#L10)*
+*Defined in [packages/txwrapper-core/src/test-helpers/signWithAlice.ts:10](https://github.com/paritytech/txwrapper-core/blob/731a943/packages/txwrapper-core/src/test-helpers/signWithAlice.ts#L10)*
 
 Sign a payload with seed `//Alice`.
 
@@ -26,4 +26,4 @@ Name | Type |
 ------ | ------ |
 `signingPayload` | string |
 
-**Returns:** Promise\<string>
+**Returns:** Promise<string\>
