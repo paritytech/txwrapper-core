@@ -21,7 +21,7 @@
 ## Get Started
 
 ```bash
-yarn add @substrate/txwrapper
+yarn add @substrate/txwrapper-polkadot
 ```
 
 In a JS/TS file:
@@ -50,4 +50,4 @@ const signature = myOfflineSigning(signingPayload);
 const tx = construct.signedTx(unsigned, signature, { metadataRpc, registry });
 ```
 
-Have a look at the [examples](/packages/txwrapper-examples) to see how you can perform the whole lifecycle of a transaction, from generation to signing to broadcast.
+Have a look at the [examples](/packages/txwrapper-examples/README.md) to see how you can perform the whole lifecycle of a transaction, from generation to signing to broadcast.
