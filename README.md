@@ -15,13 +15,13 @@ yarn install
 Build all packages with distribution settings:
 
 ```
-yarn build
+yarn run build
 ```
 
 Run all tests:
 
 ```
-yarn test
+yarn run test
 ```
 
 ### Publishing
