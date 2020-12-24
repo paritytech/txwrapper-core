@@ -56,6 +56,7 @@ export function decode(
 		} catch {
 			decodedInfo = decodeSignedTx(data, options);
 		}
+
 		return decodedInfo;
 	}
 

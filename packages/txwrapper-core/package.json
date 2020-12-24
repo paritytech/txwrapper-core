@@ -18,7 +18,8 @@
     "test": "jest"
   },
   "dependencies": {
-    "@polkadot/api": "^2.8.1",
-    "@types/memoizee": "^0.4.3"
+    "@polkadot/api": "3.0.2-6",
+    "@types/memoizee": "^0.4.3",
+    "memoizee": "^0.4.14"
   }
 }
