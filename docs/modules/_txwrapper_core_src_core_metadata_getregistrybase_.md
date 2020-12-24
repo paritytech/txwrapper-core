@@ -18,9 +18,9 @@
 
 ### getRegistryBase
 
-▸ **getRegistryBase**(`__namedParameters`: { chainProperties: undefined \| null \| string \| number \| false \| true \| AnyJson[] \| { [index:string]: AnyJson;  } \| [ChainProperties](../interfaces/_txwrapper_core_src_types_codec_.chainproperties.md) ; metadataRpc: string ; specTypes: Record\<string, string \| Constructor\<Codec> \| Record\<string, string> \| { _enum: string[] \| Record\<string, string \| null>  } \| { _set: Record\<string, number>  }>  }): TypeRegistry
+▸ **getRegistryBase**(`__namedParameters`: { chainProperties: undefined \| null \| string \| number \| false \| true \| AnyJson[] \| { [index:string]: AnyJson;  } \| [ChainProperties](../interfaces/_txwrapper_core_src_types_codec_.chainproperties.md) ; metadataRpc: string ; specTypes: Record<string, string \| Constructor<Codec\> \| Record<string, string\> \| { _enum: string[] \| Record<string, string \| null\>  } \| { _set: Record<string, number\>  }\>  }): TypeRegistry
 
-*Defined in [packages/txwrapper-core/src/core/metadata/getRegistryBase.ts:25](https://github.com/paritytech/txwrapper-core/blob/33adddf/packages/txwrapper-core/src/core/metadata/getRegistryBase.ts#L25)*
+*Defined in [packages/txwrapper-core/src/core/metadata/getRegistryBase.ts:25](https://github.com/paritytech/txwrapper-core/blob/731a943/packages/txwrapper-core/src/core/metadata/getRegistryBase.ts#L25)*
 
 Create a type registry given chainProperties, specTypes, and metadataRpc.
 
@@ -28,6 +28,6 @@ Create a type registry given chainProperties, specTypes, and metadataRpc.
 
 Name | Type |
 ------ | ------ |
-`__namedParameters` | { chainProperties: undefined \| null \| string \| number \| false \| true \| AnyJson[] \| { [index:string]: AnyJson;  } \| [ChainProperties](../interfaces/_txwrapper_core_src_types_codec_.chainproperties.md) ; metadataRpc: string ; specTypes: Record\<string, string \| Constructor\<Codec> \| Record\<string, string> \| { _enum: string[] \| Record\<string, string \| null>  } \| { _set: Record\<string, number>  }>  } |
+`__namedParameters` | { chainProperties: undefined \| null \| string \| number \| false \| true \| AnyJson[] \| { [index:string]: AnyJson;  } \| [ChainProperties](../interfaces/_txwrapper_core_src_types_codec_.chainproperties.md) ; metadataRpc: string ; specTypes: Record<string, string \| Constructor<Codec\> \| Record<string, string\> \| { _enum: string[] \| Record<string, string \| null\>  } \| { _set: Record<string, number\>  }\>  } |
 
 **Returns:** TypeRegistry

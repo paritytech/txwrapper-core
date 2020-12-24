@@ -22,7 +22,7 @@ Prefix for ss58-encoded addresses on Polkadot, Kusama, and Westend. Note:
 
 •  **kusama**:  = 2
 
-*Defined in [packages/txwrapper-core/src/test-helpers/constants.ts:50](https://github.com/paritytech/txwrapper-core/blob/33adddf/packages/txwrapper-core/src/test-helpers/constants.ts#L50)*
+*Defined in [packages/txwrapper-core/src/test-helpers/constants.ts:50](https://github.com/paritytech/txwrapper-core/blob/731a943/packages/txwrapper-core/src/test-helpers/constants.ts#L50)*
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 •  **polkadot**:  = 0
 
-*Defined in [packages/txwrapper-core/src/test-helpers/constants.ts:49](https://github.com/paritytech/txwrapper-core/blob/33adddf/packages/txwrapper-core/src/test-helpers/constants.ts#L49)*
+*Defined in [packages/txwrapper-core/src/test-helpers/constants.ts:49](https://github.com/paritytech/txwrapper-core/blob/731a943/packages/txwrapper-core/src/test-helpers/constants.ts#L49)*
 
 ___
 
@@ -38,7 +38,7 @@ ___
 
 •  **substrate**:  = 42
 
-*Defined in [packages/txwrapper-core/src/test-helpers/constants.ts:52](https://github.com/paritytech/txwrapper-core/blob/33adddf/packages/txwrapper-core/src/test-helpers/constants.ts#L52)*
+*Defined in [packages/txwrapper-core/src/test-helpers/constants.ts:52](https://github.com/paritytech/txwrapper-core/blob/731a943/packages/txwrapper-core/src/test-helpers/constants.ts#L52)*
 
 ___
 
@@ -46,4 +46,4 @@ ___
 
 •  **westend**:  = 42
 
-*Defined in [packages/txwrapper-core/src/test-helpers/constants.ts:51](https://github.com/paritytech/txwrapper-core/blob/33adddf/packages/txwrapper-core/src/test-helpers/constants.ts#L51)*
+*Defined in [packages/txwrapper-core/src/test-helpers/constants.ts:51](https://github.com/paritytech/txwrapper-core/blob/731a943/packages/txwrapper-core/src/test-helpers/constants.ts#L51)*
