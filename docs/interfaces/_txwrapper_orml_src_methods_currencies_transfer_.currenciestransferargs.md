@@ -26,7 +26,7 @@
 
 *Inherited from [CurrenciesTransferNativeCurrencyArgs](_txwrapper_orml_src_methods_currencies_transfernativecurrency_.currenciestransfernativecurrencyargs.md).[amount](_txwrapper_orml_src_methods_currencies_transfernativecurrency_.currenciestransfernativecurrencyargs.md#amount)*
 
-*Defined in [packages/txwrapper-orml/src/methods/currencies/transferNativeCurrency.ts:17](https://github.com/paritytech/txwrapper-core/blob/731a943/packages/txwrapper-orml/src/methods/currencies/transferNativeCurrency.ts#L17)*
+*Defined in [packages/txwrapper-orml/src/methods/currencies/transferNativeCurrency.ts:17](https://github.com/paritytech/txwrapper-core/blob/2862592/packages/txwrapper-orml/src/methods/currencies/transferNativeCurrency.ts#L17)*
 
 The amount to send.
 
@@ -36,7 +36,7 @@ ___
 
 •  **currencyId**: string \| { Token: string  } \| { DEXShare: string  }
 
-*Defined in [packages/txwrapper-orml/src/methods/currencies/transfer.ts:15](https://github.com/paritytech/txwrapper-core/blob/731a943/packages/txwrapper-orml/src/methods/currencies/transfer.ts#L15)*
+*Defined in [packages/txwrapper-orml/src/methods/currencies/transfer.ts:15](https://github.com/paritytech/txwrapper-core/blob/2862592/packages/txwrapper-orml/src/methods/currencies/transfer.ts#L15)*
 
 The `CurrencyId` of the token to send.
 
@@ -48,6 +48,6 @@ ___
 
 *Inherited from [CurrenciesTransferNativeCurrencyArgs](_txwrapper_orml_src_methods_currencies_transfernativecurrency_.currenciestransfernativecurrencyargs.md).[dest](_txwrapper_orml_src_methods_currencies_transfernativecurrency_.currenciestransfernativecurrencyargs.md#dest)*
 
-*Defined in [packages/txwrapper-orml/src/methods/currencies/transferNativeCurrency.ts:13](https://github.com/paritytech/txwrapper-core/blob/731a943/packages/txwrapper-orml/src/methods/currencies/transferNativeCurrency.ts#L13)*
+*Defined in [packages/txwrapper-orml/src/methods/currencies/transferNativeCurrency.ts:13](https://github.com/paritytech/txwrapper-core/blob/2862592/packages/txwrapper-orml/src/methods/currencies/transferNativeCurrency.ts#L13)*
 
 The recipient address, SS-58 encoded.

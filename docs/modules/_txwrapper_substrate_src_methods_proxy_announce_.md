@@ -20,7 +20,7 @@
 
 ▸ **announce**(`args`: [ProxyAnnounceArgs](../interfaces/_txwrapper_substrate_src_methods_proxy_announce_.proxyannounceargs.md), `info`: [BaseTxInfo](../interfaces/_txwrapper_core_src_types_method_.basetxinfo.md), `options`: [OptionsWithMeta](../interfaces/_txwrapper_core_src_types_method_.optionswithmeta.md)): [UnsignedTransaction](../interfaces/_txwrapper_core_src_types_method_.unsignedtransaction.md)
 
-*Defined in [packages/txwrapper-substrate/src/methods/proxy/announce.ts:40](https://github.com/paritytech/txwrapper-core/blob/731a943/packages/txwrapper-substrate/src/methods/proxy/announce.ts#L40)*
+*Defined in [packages/txwrapper-substrate/src/methods/proxy/announce.ts:40](https://github.com/paritytech/txwrapper-core/blob/2862592/packages/txwrapper-substrate/src/methods/proxy/announce.ts#L40)*
 
 Publish the hash of a proxy-call that will be made in the future.
 

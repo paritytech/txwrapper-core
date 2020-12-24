@@ -17,7 +17,7 @@
 
 ▪ `Const` **MANDALA\_602\_TEST\_OPTIONS**: object
 
-*Defined in [packages/txwrapper-orml/src/test-helpers/constants.ts:8](https://github.com/paritytech/txwrapper-core/blob/731a943/packages/txwrapper-orml/src/test-helpers/constants.ts#L8)*
+*Defined in [packages/txwrapper-orml/src/test-helpers/constants.ts:8](https://github.com/paritytech/txwrapper-core/blob/2862592/packages/txwrapper-orml/src/test-helpers/constants.ts#L8)*
 
 Test options for the mandala v602 runtime.
 
@@ -34,7 +34,7 @@ ___
 
 ▪ `Const` **TEST\_METHOD\_ARGS**: object
 
-*Defined in [packages/txwrapper-orml/src/test-helpers/constants.ts:16](https://github.com/paritytech/txwrapper-core/blob/731a943/packages/txwrapper-orml/src/test-helpers/constants.ts#L16)*
+*Defined in [packages/txwrapper-orml/src/test-helpers/constants.ts:16](https://github.com/paritytech/txwrapper-core/blob/2862592/packages/txwrapper-orml/src/test-helpers/constants.ts#L16)*
 
 Centralized source for all arguments used in specs for methods.
 
