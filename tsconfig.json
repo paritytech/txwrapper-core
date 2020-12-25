@@ -3,10 +3,10 @@
   "compilerOptions": {
     "baseUrl": "./packages",
     "paths": {
-      "@acala-network/txwrapper-acala": [
+      "txwrapper-acala": [
         "txwrapper-acala/src"
       ],
-      "@acala-network/txwrapper-acala/*": [
+      "txwrapper-acala/*": [
         "txwrapper-acala/src/*"
       ],
       "@substrate/txwrapper-core": [
