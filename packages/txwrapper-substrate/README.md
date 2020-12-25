@@ -8,7 +8,7 @@
     <img alt="npm" src="https://img.shields.io/npm/v/@substrate/txwrapper-substrate.svg" />
   </a>
   <a href="https://github.com/paritytech/txwrapper/actions">
-    <img alt="Github Actions" src="https://github.com/paritytech/txwrapper/workflows/pr/badge.svg" />
+    <img alt="Github Actions" src="https://github.com/paritytech/txwrapper-core/workflows/pr/badge.svg" />
   </a>
   <a href="https://david-dm.org/paritytech/txwrapper">
     <img alt="david-dm" src="https://img.shields.io/david/paritytech/txwrapper-core.svg" />
@@ -21,7 +21,7 @@
 yarn add @substrate/txwrapper-substrate
 ```
 
-In a JS/TS file:
+In a JS/TS index file of package:
 
 ```typescript
 import { methods as substrateMethods } from '@substrate/txwrapper-substrate';
@@ -34,4 +34,4 @@ export const methods = {
   };
 ```
 
-Have a look at the [txwrapper creation guide for chain builders](../../CHAIN_BUILDER.md) to see more guidance how to use this package.
+Have a look at the [txwrapper creation guide for chain builders](../../CHAIN_BUILDER.md) to see more guidance on how to use this package in a chain specific txwrapper.

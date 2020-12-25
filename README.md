@@ -1,18 +1,23 @@
-# txwrapper packages
+# [WIP] txwrapper-core
+
+Tools for FRAME chain builders to publish chain specific offline transaction generation libraries.
 
 ## Table of contents
 
-- Overview
-- End user guides
-- Packages
-- Chain builder guides
-- Hack and maintain txwrapper-core
+- [Overview](#overview)
+- [End user examples](packages/txwrapper-examples/README.md)
+- [Chain builder guide](CHAIN_BUILDER.md)
+- [Develop, contribute, and maintain](#develop-contribute-and-maintain)
 
 ## Overview
 
-The polkadot.js based txwrapper suite of packages provides chain builders with the tools to quickly create, test, and maintain a library of helper function offline transaction generation with their chain. For example, those looking to construct a transaction offline on Kusama or Polkadot would require @substrate/txwrapper-polkadot.
+The polkadot.js based txwrapper suite of packages provides chain builders with the tools to quickly create, test, and maintain a library of helper functions for offline transaction generation with their chain. End users can then use these chain specific packages to create an offline transaction workflow. (We sometimes refer to chain specific libs as txwrappers.)
+
+For example, those looking to construct a transaction offline on Polkadot would require @substrate/txwrapper-polkadot. @substrate/txwrapper-polkadot is built by requiring @substrate/txwrapper-core, @substrate/txwrapper-registry, and @substrate/txwrapper-substrate and re-exporting utilities and dispatchables relevant to Polkadot.
 
 ### Packages
+
+(At the moment nothing is actually published as the contents of the repo are WIP, but the below lists reflect current plans.)
 
 #### Published
 
@@ -20,18 +25,22 @@ The polkadot.js based txwrapper suite of packages provides chain builders with t
 - [@substrate/txwrapper-core](/packages/txwrapper-core/README.md) The essentials for creating a chain specific txwrapper lib.
 - [@substrate/txwrapper-registry](/packages/txwrapper-registry/README.md) Registry creation support, catering to chains with types in [@polkadot/apps-config](https://github.com/polkadot-js/apps/tree/master/packages/apps-config/README.md)
 - [@substrate/txwrapper-substrate](/packages/txwrapper-substrate/README.md) Selected dispatchables of Substrate pallets, to be re-exported by chain specific libs (e.g. @substrate/txwrapper-polkadot)
-- [@substrate/txwrapper-orml](/packages/txwrapper-orml/README.md) Selected dispatchables of ORML pallets, to be re-exported by chain specific libs (e.g. @substrate/txwrapper-acala)
+- [@substrate/txwrapper-orml](/packages/txwrapper-orml/README.md) Selected dispatchables of ORML pallets, to be re-exported by chain specific libs (e.g. txwrapper-acala)
 
 #### Non-published
 
 - [@substrate/txwrapper-example](/packages/txwrapper-example/README.md) Usage examples including how to construct, sign, and send an extrinsic with @substrate/txwrapper-polkadot
-- [@acala-network/txwrapper-acala](/packages/txwrapper-acala/README.md) PoC of how a `FRAME`-based chain can leverage txwrapper packages to create a txwrapper lib. N.B. This is only for PoC usage and not intended to be published by txwrapper-core repo maintainers
+- [txwrapper-acala](/packages/txwrapper-acala/README.md) PoC of how a `FRAME`-based chain can leverage txwrapper packages to create a txwrapper lib. **N.B.** This is only for PoC usage and not intended to be published by txwrapper-core repo maintainers
 
-## End user guides
+## End user examples
 
-## Chain builder guides
+[Click here for examples on how to use txwrappers for constructing, signing, and decoding transactions.](packages/txwrapper-examples/README.md)
 
-## Hack and maintain txwrapper-core
+## Chain builder guide
+
+[Click here to find our guide for chain builders.](CHAIN_BUILDER.md) The guide explains how to make a chain specific txwrapper.
+
+## Develop, contribute, and maintain
 
 ### Develop
 
@@ -47,24 +56,35 @@ Build all packages with distribution settings:
 yarn build
 ```
 
+### Contribute
+
+We welcome contributions!
+
+#### Before submitting your PR, make sure to run the following commands
+
 Run all tests:
 
 ```bash
 yarn test
 ```
 
-### Contribute
+Run the linter:
 
-We welcome contributions. Before submitting your PR, make sure to run the following commands:
+```bash
+yarn lint
 
-- `yarn docs`: Will generate docs based on code comments.
-- `yarn test`: Make sure all tests pass.
-- `yarn lint`: Make sure your code follows our linting rules. You can also run `yarn lint --fix` to automatically fix some of those errors.
+# to automatically fix warnings:
 
-### Publish
+yarn lint --fix
 
-Publish with lerna by running:
+```
+
+### Maintain
+
+Publish with lerna by running:*
 
 ```bash
 yarn deploy
 ```
+
+*The publisher will need publishing permissions to the @substrate npm org.

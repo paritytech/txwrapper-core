@@ -8,10 +8,10 @@
     <img alt="npm" src="https://img.shields.io/npm/v/@substrate/txwrapper-registry.svg" />
   </a>
   <a href="https://github.com/paritytech/txwrapper/actions">
-    <img alt="Github Actions" src="https://github.com/paritytech/txwrapper/workflows/pr/badge.svg" />
+    <img alt="Github Actions" src="https://github.com/paritytech/txwrapper-core/workflows/pr/badge.svg" />
   </a>
   <a href="https://david-dm.org/paritytech/txwrapper">
-    <img alt="david-dm" src="https://img.shields.io/david/paritytech/txwrapper.svg" />
+    <img alt="david-dm" src="https://img.shields.io/david/paritytech/txwrapper-core.svg" />
   </a>
 </p>
 
@@ -21,7 +21,7 @@
 yarn add @substrate/txwrapper-registry
 ```
 
-In a JS/TS file:
+In a JS/TS index file of package:
 
 ```typescript
 import { getRegistry } from '@substrate/txwrapper-registry';
