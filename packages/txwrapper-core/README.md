@@ -7,10 +7,10 @@
   <a href="https://www.npmjs.com/package/@substrate/txwrapper-orml">
     <img alt="npm" src="https://img.shields.io/npm/v/@substrate/txwrapper-core.svg" />
   </a>
-  <a href="https://github.com/paritytech/txwrapper/actions">
+  <a href="https://github.com/paritytech/txwrapper-core/actions">
     <img alt="Github Actions" src="https://github.com/paritytech/txwrapper-core/workflows/pr/badge.svg" />
   </a>
-  <a href="https://david-dm.org/paritytech/txwrapper">
+  <a href="https://david-dm.org/paritytech/txwrapper-core">
     <img alt="david-dm" src="https://img.shields.io/david/paritytech/txwrapper-core.svg" />
   </a>
 </p>
@@ -32,4 +32,4 @@ export const methods = {
 };
 ```
 
-Have a look at the [txwrapper creation guide for chain builders](../../CHAIN_BUILDER.md) to see more guidance on how to use this package in a chain specific txwrapper.
+Have a look at the [txwrapper creation guide for chain builders](../../CHAIN_BUILDER.md) to see more guidance on how to use this package to build a chain specific txwrapper.

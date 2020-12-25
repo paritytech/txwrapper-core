@@ -13,24 +13,24 @@ Tools for FRAME chain builders to publish chain specific offline transaction gen
 
 The polkadot.js based txwrapper suite of packages provides chain builders with the tools to quickly create, test, and maintain a library of helper functions for offline transaction generation with their chain. End users can then use these chain specific packages to create an offline transaction workflow. (We sometimes refer to chain specific libs as txwrappers.)
 
-For example, those looking to construct a transaction offline on Polkadot would require @substrate/txwrapper-polkadot. @substrate/txwrapper-polkadot is built by requiring @substrate/txwrapper-core, @substrate/txwrapper-registry, and @substrate/txwrapper-substrate and re-exporting utilities and dispatchables relevant to Polkadot.
+For example, those looking to construct a transaction offline on Polkadot would require @substrate/txwrapper-polkadot. @substrate/txwrapper-polkadot is built by requiring @substrate/txwrapper-core, @substrate/txwrapper-registry, @substrate/txwrapper-substrate and re-exporting utilities and dispatchables relevant to Polkadot.
 
 ### Packages
 
-(At the moment nothing is actually published as the contents of the repo are WIP, but the below lists reflect current plans.)
+(At the moment nothing is actually published as the contents of the repo are WIP, but the below lists reflect current plans for what we will publish.)
 
 #### Published
 
 - [@substrate/txwrapper-polkadot](/packages/txwrapper-polkadot/README.md) Helper functions for Polkadot, Kusama, Rococo and Westend offline transaction generation.
 - [@substrate/txwrapper-core](/packages/txwrapper-core/README.md) The essentials for creating a chain specific txwrapper lib.
 - [@substrate/txwrapper-registry](/packages/txwrapper-registry/README.md) Registry creation support, catering to chains with types in [@polkadot/apps-config](https://github.com/polkadot-js/apps/tree/master/packages/apps-config/README.md)
-- [@substrate/txwrapper-substrate](/packages/txwrapper-substrate/README.md) Selected dispatchables of Substrate pallets, to be re-exported by chain specific libs (e.g. @substrate/txwrapper-polkadot)
-- [@substrate/txwrapper-orml](/packages/txwrapper-orml/README.md) Selected dispatchables of ORML pallets, to be re-exported by chain specific libs (e.g. txwrapper-acala)
+- [@substrate/txwrapper-substrate](/packages/txwrapper-substrate/README.md) Selected dispatchables of Substrate pallets, to be re-exported by txwrappers (e.g. @substrate/txwrapper-polkadot)
+- [@substrate/txwrapper-orml](/packages/txwrapper-orml/README.md) Selected dispatchables of ORML pallets, to be re-exported by txwrappers (e.g. txwrapper-acala)
 
 #### Non-published
 
 - [@substrate/txwrapper-example](/packages/txwrapper-example/README.md) Usage examples including how to construct, sign, and send an extrinsic with @substrate/txwrapper-polkadot
-- [txwrapper-acala](/packages/txwrapper-acala/README.md) PoC of how a `FRAME`-based chain can leverage txwrapper packages to create a txwrapper lib. **N.B.** This is only for PoC usage and not intended to be published by txwrapper-core repo maintainers
+- [txwrapper-acala](/packages/txwrapper-acala/README.md) PoC of how a `FRAME`-based chain can leverage txwrapper packages to create a txwrapper. **N.B.** This is only for PoC usage and not intended to be published by txwrapper-core repo maintainers
 
 ## End user examples
 
@@ -50,7 +50,7 @@ Install dependencies:
 yarn install
 ```
 
-Build all packages with distribution settings:
+Build all packages:
 
 ```bash
 yarn run build

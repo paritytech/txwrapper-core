@@ -7,10 +7,10 @@
   <a href="https://www.npmjs.com/package/@substrate/txwrapper-registry">
     <img alt="npm" src="https://img.shields.io/npm/v/@substrate/txwrapper-registry.svg" />
   </a>
-  <a href="https://github.com/paritytech/txwrapper/actions">
+  <a href="https://github.com/paritytech/txwrapper-core/actions">
     <img alt="Github Actions" src="https://github.com/paritytech/txwrapper-core/workflows/pr/badge.svg" />
   </a>
-  <a href="https://david-dm.org/paritytech/txwrapper">
+  <a href="https://david-dm.org/paritytech/txwrapper-core">
     <img alt="david-dm" src="https://img.shields.io/david/paritytech/txwrapper-core.svg" />
   </a>
 </p>
