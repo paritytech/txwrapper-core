@@ -21,7 +21,7 @@ Here's a mini-tutorial on how `txwrapper-polkadot` can interact with a Polkadot 
     # change to the examples directory
     cd packages/txwrapper-examples
 
-    # use tsc to build the JS target
+    # build the JS target
     yarn run build
     ```
 
