@@ -53,7 +53,7 @@ yarn install
 Build all packages with distribution settings:
 
 ```bash
-yarn build
+yarn run build
 ```
 
 ### Contribute
@@ -65,18 +65,17 @@ We welcome contributions!
 Run all tests:
 
 ```bash
-yarn test
+yarn run test
 ```
 
 Run the linter:
 
 ```bash
-yarn lint
+yarn run lint
 
-# to automatically fix warnings:
+# or to automatically fix warnings:
 
-yarn lint --fix
-
+yarn run lint --fix
 ```
 
 ### Maintain
@@ -84,7 +83,13 @@ yarn lint --fix
 Publish with lerna by running:*
 
 ```bash
-yarn deploy
+yarn run deploy
 ```
 
 *The publisher will need publishing permissions to the @substrate npm org.
+
+Update dependencies:
+
+```bash
+yarn run upgrade
+```
