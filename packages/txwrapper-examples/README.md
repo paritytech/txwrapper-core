@@ -68,7 +68,7 @@ In the examples, the `rpcToLocalNode` function is the only function that needs t
 - Create its signing payload
 - Sign the signing payload
 - Derive the tx hash
-- Decode at various levels of the tx lifecycle
+- Decode at various points in the tx lifecycle
 
 ## Questions?
 
