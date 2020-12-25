@@ -25,7 +25,7 @@ The polkadot.js based txwrapper suite of packages provides chain builders with t
 #### Non-published
 
 - [@substrate/txwrapper-example](/packages/txwrapper-example/README.md) Usage examples including how to construct, sign, and send an extrinsic with @substrate/txwrapper-polkadot
-- [@acala-network/txwrapper-acala](/packages/txwrapper-acala/README.md) PoC of how a `FRAME`-based chain can leverage txwrapper packages to create a txwrapper lib. N.B. This is only temporary and will likely move soon
+- [@acala-network/txwrapper-acala](/packages/txwrapper-acala/README.md) PoC of how a `FRAME`-based chain can leverage txwrapper packages to create a txwrapper lib. N.B. This is only for PoC usage and not intended to be published by txwrapper-core repo maintainers
 
 ## End user guides
 
@@ -44,13 +44,13 @@ yarn install
 Build all packages with distribution settings:
 
 ```bash
-yarn run build
+yarn build
 ```
 
 Run all tests:
 
 ```bash
-yarn run test
+yarn test
 ```
 
 ### Contribute

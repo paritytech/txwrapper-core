@@ -4,7 +4,7 @@
 <h4 align="center">Helper functions for Polkadot, Kusama, Rococo and Westend offline transaction generation.</h4>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/@substrate/txwrapper">
+  <a href="https://www.npmjs.com/package/@substrate/txwrapper-polkadot">
     <img alt="npm" src="https://img.shields.io/npm/v/@substrate/txwrapper-polkadot.svg" />
   </a>
   <a href="https://github.com/paritytech/txwrapper/actions">

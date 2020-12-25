@@ -1,12 +1,10 @@
-# @substrate/txwrapper-registry
-
 <br /><br />
 
 <h1 align="center">@substrate/txwrapper-registry</h1>
 <h4 align="center">Registry creation support, catering to chains with types in [@polkadot/apps-config](https://github.com/polkadot-js/apps/tree/master/packages/apps-config/README.md)</h4>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/@substrate/txwrapper">
+  <a href="https://www.npmjs.com/package/@substrate/txwrapper-registry">
     <img alt="npm" src="https://img.shields.io/npm/v/@substrate/txwrapper-registry.svg" />
   </a>
   <a href="https://github.com/paritytech/txwrapper/actions">
