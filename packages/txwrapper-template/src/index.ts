@@ -1,8 +1,8 @@
 import { methods as substrateMethods } from '@substrate/txwrapper-substrate';
 
 // Export methods of pallets included in your chains runtimes.
-// Note: you may also want to create methods for pallets specifc to your chain. In that case look
-// at `defineMethod` in txwrapper-core and consult the CHAIN_BUILDER.md guide.
+// Note: you may also want to create methods for pallets specifc to your chain. In that case
+// consult the CHAIN_BUILDER.md guide.
 export const methods = {
 	balances: substrateMethods.balances,
 	utility: substrateMethods.utility,
