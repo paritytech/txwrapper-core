@@ -29,7 +29,7 @@ For example, those looking to construct a transaction offline on Polkadot would 
 
 #### Non-published
 
-- [@substrate/txwrapper-example](/packages/txwrapper-example/README.md) Usage examples including how to construct, sign, and send an extrinsic with @substrate/txwrapper-polkadot.
+- [@substrate/txwrapper-example](/packages/txwrapper-example/README.md) Usage examples including how to construct, sign, and decode an extrinsic with @substrate/txwrapper-polkadot.
 - [@substrate/txwrapper-template](/packages/txwrapper-template/README.md) Template package for chain builders.
 - [txwrapper-acala](/packages/txwrapper-acala/README.md) PoC of how a `FRAME`-based chain can leverage txwrapper packages to create a txwrapper. **N.B.** This is only for PoC usage and not intended to be published by txwrapper-core repo maintainers.
 
