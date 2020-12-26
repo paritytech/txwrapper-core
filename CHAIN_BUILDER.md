@@ -122,4 +122,4 @@ export * from './transfer';
 export * as methods from './methods';
 ```
 
-Once you have completed writing unit tests and testing it against at least a dev node it should be good to go.
+Once it is successfully passing unit tests and it works against a dev node it should be good to go.
