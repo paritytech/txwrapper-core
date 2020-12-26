@@ -1,10 +1,10 @@
-# How to use `txwrapper-TODO`
+# How to use `txwrapper-[TODO]`
 
-Here's a mini-tutorial on how `txwrapper-TODO` can interact with a Substrate chain. We're using a [LINK TO YOUR CHAINS REPO] dev chain:
+Here's a mini-tutorial on how `txwrapper-[TODO]` can interact with a Substrate chain. We're using a [TODO LINK TO YOUR CHAINS REPO] dev chain:
 
 ## Get Started
 
-1. Fetch the latest [YOUR CHAINS NAME] node from the above links. Follow instructions to build it, and start a dev chain.
+1. Fetch the latest [TODO YOUR CHAINS NAME] node from the above links. Follow instructions to build it, and start a dev chain.
 
     ```bash
 
@@ -14,15 +14,15 @@ Here's a mini-tutorial on how `txwrapper-TODO` can interact with a Substrate cha
 2. Run the example script in this folder. It will interact with your local node.
 
     ```bash
-    ./node_modules/.bin/ts-node examples/TODO.ts
+    ./node_modules/.bin/ts-node examples/[TODO].ts
     ```
 
 ## Expected Output
 
-Here's a sample output of the above script, using a Substrate node. Your payload to sign and signature will of course differ from this example.
+Here's a sample output of the above script, using a [TODO YOUR CHAINS NAME] node. Your payload to sign and signature will of course differ from this example.
 
 ```
-TODO [PUT OUTPUT FROM SCRIPT HERE]
+[TODO PUT OUTPUT FROM SCRIPT HERE]
 ```
 
 ## Offline vs. Online
