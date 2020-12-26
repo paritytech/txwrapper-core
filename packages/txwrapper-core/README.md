@@ -1,7 +1,7 @@
 <br /><br />
 
 <h1 align="center">@substrate/txwrapper-core</h1>
-<h4 align="center">Core components for creating a chain specific txwrapper lib.</h4>
+<h4 align="center">Core components for creating a txwrapper lib.</h4>
 
 <p align="center">
   <a href="https://www.npmjs.com/package/@substrate/txwrapper-orml">
