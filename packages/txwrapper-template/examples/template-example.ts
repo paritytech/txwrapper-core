@@ -80,6 +80,7 @@ async function main(): Promise<void> {
 		registry,
 	});
 	console.log(
+			// TODO all the logged from the decoded need to be updated to be relevant to the method used
 		`\nDecoded Transaction\n  To: ${decodedUnsigned.method.args.dest}\n` +
 			`  Amount: ${decodedUnsigned.method.args.value}`
 	);
@@ -94,6 +95,7 @@ async function main(): Promise<void> {
 		registry,
 	});
 	console.log(
+			// TODO all the logged from the decoded need to be updated to be relevant to the method used
 		`\nDecoded Transaction\n  To: ${payloadInfo.method.args.dest}\n` +
 			`  Amount: ${payloadInfo.method.args.value}`
 	);
@@ -128,6 +130,7 @@ async function main(): Promise<void> {
 		registry,
 	});
 	console.log(
+		// TODO all the logged from the decoded need to be updated to be relevant to the method used
 		`\nDecoded Transaction\n  To: ${txInfo.method.args.dest}\n` +
 			`  Amount: ${txInfo.method.args.value}\n`
 	);
