@@ -4,7 +4,7 @@ Here's a mini-tutorial on how `txwrapper-[TODO]` can interact with a Substrate c
 
 ## Get Started
 
-1. Fetch the latest [TODO YOUR CHAINS NAME] node from the above links. Follow instructions to build it, and start a dev chain.
+1. Fetch the latest [TODO YOUR CHAINS NAME] node from the above link. Follow instructions to build it, and start a dev chain.
 
     ```bash
 

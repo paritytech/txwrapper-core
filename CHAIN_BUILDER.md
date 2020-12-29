@@ -12,7 +12,7 @@ This guide has very specific instructions on how to structure the public API of 
 
 ## Template project
 
-We provide the [txwrapper-template](packages/txwrapper-template) directory to use as a starting point for your own package.
+The [txwrapper-template](packages/txwrapper-template) directory is provided to use as a starting point for your own package.
 
 ## Steps
 
@@ -32,28 +32,28 @@ Update `package.json` to reflect your chains information. You need to modify the
 
 3) **Choose relevant methods to re-export**
 You will need to choose what pallet methods you want your txwrapper to expose. If you just need methods from Substrate or ORML pallets, checkout txwrapper-substrate and txwrapper-orml to see if the methods are already defined.
-    - If a method is already defined in txwrapper-substrate or txwrapper-orml you can simply re-export methods.{pallet name} as a property in the `method` object export. (This will re-export all the methods defined for that pallet, which should be fine as long as you are not using a forked version).
-    - If a Substrate or ORML pallet method is not already defined you can either make a github issue or submit a PR in this repo for the new method.
+    - If a method is already defined in txwrapper-substrate or txwrapper-orml you can simply re-export methods.{pallet name} as a property in the `method` object export. (This will re-export all the methods defined for that pallet, which should be fine as long as you are not using a modified version of the pallet).
+    - If a Substrate or ORML pallet method you need is not already defined you can either make a github issue or submit a PR in this repo for the new method.
     - If you need methods that do not exist in a Substrate or ORML pallet you will then need to add the method directly to your package. See the [Adding a method](#adding-a-method) section for details.
-    - The template already requires @substrate/txwrapper-substrate, but if you do not need and methods for Substrate pallets ensure to remove that dependency.
+    - The template already imports @substrate/txwrapper-substrate, but if you do not need any methods from Substrate pallets feel free to remove that dependency.
 
 4) **Create a working example**
 Create an end-to-end example so users have a clear understanding of the full flow for offline transaction generation for your chain. A good example can ease user friction and reduce workload for maintainers.
-In the template we provide an example directory that should have all the pieces to create a running example. You will need to rename `template-example.ts` with your chains name, and update all the areas within the file marked `TODO`. The file `examples/README.md` will need to updated as well in the sections marked `TODO`. Finally, make sure the example is fully run-able using a development node for your chain.
+In the template we provide an example directory that has all the pieces you need to create a running example. You need to rename `template-example.ts` to something appropriate to your chain and update all the sections in the file marked `TODO`. The file `examples/README.md` will need to be updated as well in the sections marked `TODO`. Finally, make sure the example is fully runable using a development node for your chain.
 
 5) **Publish**
-  Prior to every publish make sure the package works locally, ([npm pack](https://docs.npmjs.com/cli/v6/commands/npm-pack) command may be useful) and the versioning makes sense. Once you complete those tasks go ahead and [publish your package to NPM](https://docs.npmjs.com/cli/v6/commands/npm-publish).
+  Prior to publishing, make sure the package works locally, ([npm pack](https://docs.npmjs.com/cli/v6/commands/npm-pack) command may be useful) and that the versioning makes sense. Once you complete those tasks go ahead and [publish your package to NPM](https://docs.npmjs.com/cli/v6/commands/npm-publish).
 
 6) **Maintain**
 Keep dependencies up to date, paying special attention to security vulnerability warnings.
 If polkadot-js API types for your chain are coming from @polkadot/apps-config you may need to update the `package.json` [resolutions](https://classic.yarnpkg.com/en/docs/selective-version-resolutions/) with the @polkadot/apps-config version that includes your chain's latest types.
-Also keep in mind that if method signatures change by adding or removing an argument, the corresponding txwrapper method definition will need to be updated as well.
+Also keep in mind that if method signatures change (e.g. arguments were added/removed or the return value changed), the corresponding txwrapper method definition will need to be updated as well.
 
 ## Adding a method
 
-In some circumstances you may want to add a methods for a pallet that does not exist in Substrate or ORML. As an example we will build and test the [ORML `Currencies` pallet `transfer` method](https://github.com/open-web3-stack/open-runtime-module-library/blob/de2c87064161595b5f6cc9d3e163e576247ff88f/currencies/src/lib.rs#L143-L169).
+In some circumstances you may want to add a method for a pallet that does not exist in Substrate or ORML. As an example we will build and test the [ORML `Currencies` pallet's `transfer` method](https://github.com/open-web3-stack/open-runtime-module-library/blob/de2c87064161595b5f6cc9d3e163e576247ff88f/currencies/src/lib.rs#L143-L169).
 
-Note: you will need to create unit tests as well to ensure consistent serialization/ deserialization. Creating unit tests is a bit more involved and we do not go into detail here. Take a look at [packages/txwrapper-orml/src/methods/currencies/transfer.spec.ts](packages/txwrapper-orml/src/methods/currencies/transfer.spec.ts) to see how the unit testing is done with jest. Among other things, you will need static metadata stored in the repo to use as the `metadataRpc`, which is used to create the type registry, and past in as options to the method. In general, the unit tests follow a consistent pattern and should be understandable by looking at all the components.
+Note: you will need to create unit tests as well to ensure consistent serialization/deserialization. Creating unit tests is a bit more involved and we do not go into detail here. Take a look at [packages/txwrapper-orml/src/methods/currencies/transfer.spec.ts](packages/txwrapper-orml/src/methods/currencies/transfer.spec.ts) for an example of how unit testing is done using `jest`. Among other things, you will need static metadata stored in the repo to use as the `metadataRpc`, which is used to create the type registry, and passed in as options to the method. In general, the unit tests follow a consistent pattern and should be understandable by looking at all the components.
 
 ```typescript
 // src/methods/currencies/transfer.ts
@@ -74,7 +74,7 @@ import {
 // https://github.com/AcalaNetwork/acala.js/blob/4fe5881058003fdb5bc9e3b0c505f3846426db96/packages/types/src/interfaces/augment-api-tx.ts#L213
 export interface CurrenciesTransferArgs {
   /**
-   * The recipient address, SS-58 encoded.
+   * The recipient address, SS58 encoded.
    */
   dest: string;
   /**
