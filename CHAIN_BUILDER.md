@@ -34,7 +34,7 @@ Update `package.json` to reflect your chains information. You need to modify the
 You will need to choose what pallet methods you want your txwrapper to expose. We recommend choosing methods that are likely to be signed by keys stored offline. If you just need methods from Substrate or ORML pallets, checkout [txwrapper-substrate](packages/txwrapper-substrate/README.md) and [txwrapper-orml](packages/txwrapper-orml/README.md) to see if the methods are already defined.
     - If a method is already defined in txwrapper-substrate or txwrapper-orml you can simply re-export methods.{pallet name} as a property in the `method` object export. (This will re-export all the methods defined for that pallet, which should be fine as long as you are not using a modified version of the pallet).
     - If a Substrate or ORML pallet method you need is not already defined you can either make a github issue or submit a PR in this repo for the new method.
-    - If you need methods that do not exist in a Substrate or ORML pallet you will then need to add the method directly to your package. See the [Adding a method](#adding-a-method) section for details.
+    - If you need methods that do not exist in a Substrate or ORML pallet you have to add what you need directly to your package. See the [Adding a method](#adding-a-method) section for details.
     - The template already imports @substrate/txwrapper-substrate, but if you do not need any methods from Substrate pallets feel free to remove that dependency.
 
 4) **Create a working example**
