@@ -81,7 +81,7 @@ async function main(): Promise<void> {
 		registry,
 	});
 	console.log(
-		// TODO all the logged from the decoded need to be updated to be relevant to the method used
+		// TODO all the log messages need to be updated to be relevant to the method used
 		`\nDecoded Transaction\n  To: ${decodedUnsigned.method.args.dest}\n` +
 			`  Amount: ${decodedUnsigned.method.args.value}`
 	);
@@ -96,7 +96,7 @@ async function main(): Promise<void> {
 		registry,
 	});
 	console.log(
-		// TODO all the logged from the decoded need to be updated to be relevant to the method used
+		// TODO all the log messages need to be updated to be relevant to the method used
 		`\nDecoded Transaction\n  To: ${payloadInfo.method.args.dest}\n` +
 			`  Amount: ${payloadInfo.method.args.value}`
 	);
@@ -108,18 +108,18 @@ async function main(): Promise<void> {
 	});
 	console.log(`\nSignature: ${signature}`);
 
-	// Serialize a signed transaction.
+	// Encode a signed transaction.
 	const tx = construct.signedTx(unsigned, signature, {
 		metadataRpc,
 		registry,
 	});
 	console.log(`\nTransaction to Submit: ${tx}`);
 
-	// Derive the tx hash of a signed transaction offline.
+	// Calculate the tx hash of the signed transaction offline.
 	const expectedTxHash = construct.txHash(tx);
 	console.log(`\nExpected Tx Hash: ${expectedTxHash}`);
 
-	// Send the tx to the node. Again, since `txwrapper` is offline-only, this
+	// Send the tx to the node. Since `txwrapper` is offline-only, this
 	// operation should be handled externally. Here, we just send a JSONRPC
 	// request directly to the node.
 	const actualTxHash = await rpcToLocalNode('author_submitExtrinsic', [tx]);
@@ -131,7 +131,7 @@ async function main(): Promise<void> {
 		registry,
 	});
 	console.log(
-		// TODO all the logged from the decoded need to be updated to be relevant to the method used
+		// TODO all the log messages need to be updated to be relevant to the method used
 		`\nDecoded Transaction\n  To: ${txInfo.method.args.dest}\n` +
 			`  Amount: ${txInfo.method.args.value}\n`
 	);

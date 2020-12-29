@@ -2,7 +2,7 @@
   "name": "@substrate/txwrapper-orml",
   "version": "0.1.0",
   "author": "Parity Technologies <admin@parity.io>",
-  "description": "elected dispatchables of ORML pallets, to be re-exported by txwrappers.",
+  "description": "Selected dispatchables of ORML pallets, to be re-exported by txwrappers.",
   "files": [
     "lib"
   ],
