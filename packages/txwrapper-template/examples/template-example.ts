@@ -39,7 +39,7 @@ async function main(): Promise<void> {
 
 	// Create [TODO CHAIN NAME] type registry.
 	const registry = getRegistry({
-		chainName: 'TODO',
+		chainName: '[TODO]',
 		specName,
 		specVersion,
 		metadataRpc,

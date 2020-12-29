@@ -8,7 +8,7 @@ Here's a mini-tutorial on how `txwrapper-[TODO]` can interact with a Substrate c
 
     ```bash
 
-    polkadot --dev
+    [TODO YOUR CHAINS BINARY NAME/PATH] --dev
     ```
 
 2. Run the example script in this folder. It will interact with your local node.
@@ -27,10 +27,10 @@ Here's a sample output of the above script, using a [TODO YOUR CHAINS NAME] node
 
 ## Offline vs. Online
 
-In the examples, the `rpcToNode` function is the only function that needs to be called with internet access. Everything else can be performed offline. In particular, this example shows how to perform the following operations offline:
+In the examples, the `rpcToLocalNode` function is the only function that needs to be called with internet access. Everything else can be performed offline. In particular, this example shows how to perform the following operations offline:
 
 - Generate a tx,
 - Create its signing payload,
 - Sign the signing payload,
-- Derive the tx hash,
+- Calculate the tx hash,
 - Decode at various levels of the tx lifecycle.
