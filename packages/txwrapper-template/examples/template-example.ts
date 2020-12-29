@@ -12,7 +12,7 @@ import { construct, decode, deriveAddress, getRegistry, methods } from '../src';
 import { rpcToLocalNode, signWith } from './util';
 
 /**
- * Entry point of the script. This script assumes a Polkadot node is running
+ * Entry point of the script. This script assumes a [TODO CHAIN NAME] node is running
  * locally on `http://localhost:9933`.
  */
 async function main(): Promise<void> {
@@ -23,10 +23,9 @@ async function main(): Promise<void> {
 	const alice = keyring.addFromUri('//Alice', { name: 'Alice' }, 'sr25519');
 	console.log(
 		"Alice's SS58-Encoded Address:",
-		deriveAddress(alice.publicKey, 42) // TODO
+		deriveAddress(alice.publicKey, 42) // TODO, use correct prefix
 	);
 
-	// Construct a balance transfer transaction offline.
 	// To construct the tx, we need some up-to-date information from the node.
 	// `txwrapper` is offline-only, so does not care how you retrieve this info.
 	// In this tutorial, we simply send RPC requests to the node.
@@ -38,7 +37,7 @@ async function main(): Promise<void> {
 		'state_getRuntimeVersion'
 	);
 
-	// Create TODO type registry.
+	// Create [TODO CHAIN NAME] type registry.
 	const registry = getRegistry({
 		chainName: 'TODO',
 		specName,
@@ -49,14 +48,15 @@ async function main(): Promise<void> {
 	// Now we can create our `balances.transfer` unsigned tx. The following
 	// function takes the above data as arguments, so can be performed offline
 	// if desired.
+	// TODO In this example we use the `transfer` method; feel free to pick a
+	// different method that illustrates using your chain.
 	const unsigned = methods.balances.transfer(
-		// TODO choose a common method relevant to your chain
 		{
 			value: '90071992547409910',
 			dest: '14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3', // Bob
 		},
 		{
-			address: deriveAddress(alice.publicKey, 42), // TODO
+			address: deriveAddress(alice.publicKey, 42), // TODO, use correct prefix
 			blockHash,
 			blockNumber: registry
 				.createType('BlockNumber', block.header.number)
