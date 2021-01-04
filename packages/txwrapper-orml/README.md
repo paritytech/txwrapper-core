@@ -24,9 +24,13 @@ yarn add @substrate/txwrapper-orml
 In a JS/TS index file of package:
 
 ```typescript
-// Rexport all of txwrapper-core so users have access to utilities, construct functions,
-// decode function, and types.
-export * from '@substrate/txwrapper-core';
+import { methods as ORMLMethods } from '@substrate/txwrapper-orml';
+
+// Export methods of pallets included in the chain
+export const methods = {
+	currencies: ORMLMethods.currencies,
+  ...
+};
 ```
 
 Have a look at the [txwrapper creation guide for chain builders](../../CHAIN_BUILDER.md) to see more guidance on how to use this package in a chain specific txwrapper.
