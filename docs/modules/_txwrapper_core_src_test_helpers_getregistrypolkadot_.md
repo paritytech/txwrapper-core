@@ -16,7 +16,7 @@
 
 ▸ **getRegistryPolkadot**(`specVersion`: number, `metadataRpc`: string): TypeRegistry
 
-*Defined in [packages/txwrapper-core/src/test-helpers/getRegistryPolkadot.ts:15](https://github.com/paritytech/txwrapper-core/blob/731a943/packages/txwrapper-core/src/test-helpers/getRegistryPolkadot.ts#L15)*
+*Defined in [packages/txwrapper-core/src/test-helpers/getRegistryPolkadot.ts:15](https://github.com/paritytech/txwrapper-core/blob/15c9541/packages/txwrapper-core/src/test-helpers/getRegistryPolkadot.ts#L15)*
 
 Get the Polkadot type registry for a given spec version for testing purposes
 

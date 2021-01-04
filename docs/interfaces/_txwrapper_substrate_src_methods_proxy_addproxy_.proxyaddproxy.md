@@ -24,7 +24,7 @@
 
 •  **delay**: number \| string
 
-*Defined in [packages/txwrapper-substrate/src/methods/proxy/addProxy.ts:22](https://github.com/paritytech/txwrapper-core/blob/731a943/packages/txwrapper-substrate/src/methods/proxy/addProxy.ts#L22)*
+*Defined in [packages/txwrapper-substrate/src/methods/proxy/addProxy.ts:22](https://github.com/paritytech/txwrapper-core/blob/15c9541/packages/txwrapper-substrate/src/methods/proxy/addProxy.ts#L22)*
 
 The number of blocks that an announcement must be in place for before the corresponding call
 may be dispatched. If zero, then no announcement is needed.
@@ -35,7 +35,7 @@ ___
 
 •  **delegate**: string
 
-*Defined in [packages/txwrapper-substrate/src/methods/proxy/addProxy.ts:13](https://github.com/paritytech/txwrapper-core/blob/731a943/packages/txwrapper-substrate/src/methods/proxy/addProxy.ts#L13)*
+*Defined in [packages/txwrapper-substrate/src/methods/proxy/addProxy.ts:13](https://github.com/paritytech/txwrapper-core/blob/15c9541/packages/txwrapper-substrate/src/methods/proxy/addProxy.ts#L13)*
 
 The account that the `caller` would like to make a proxy.
 
@@ -45,6 +45,6 @@ ___
 
 •  **proxyType**: string
 
-*Defined in [packages/txwrapper-substrate/src/methods/proxy/addProxy.ts:17](https://github.com/paritytech/txwrapper-core/blob/731a943/packages/txwrapper-substrate/src/methods/proxy/addProxy.ts#L17)*
+*Defined in [packages/txwrapper-substrate/src/methods/proxy/addProxy.ts:17](https://github.com/paritytech/txwrapper-core/blob/15c9541/packages/txwrapper-substrate/src/methods/proxy/addProxy.ts#L17)*
 
 The permissions for this proxy account. See the chain's runtime for the `call` filters.

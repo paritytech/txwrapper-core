@@ -16,6 +16,6 @@
 
 ▸ **main**(): Promise<void\>
 
-*Defined in [packages/txwrapper-examples/src/mandala.ts:22](https://github.com/paritytech/txwrapper-core/blob/731a943/packages/txwrapper-examples/src/mandala.ts#L22)*
+*Defined in [packages/txwrapper-examples/src/mandala.ts:22](https://github.com/paritytech/txwrapper-core/blob/15c9541/packages/txwrapper-examples/src/mandala.ts#L22)*
 
 **Returns:** Promise<void\>

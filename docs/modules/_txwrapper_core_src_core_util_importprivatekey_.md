@@ -20,7 +20,7 @@
 
 Ƭ  **KeyringPair**: KeyringPairBase
 
-*Defined in [packages/txwrapper-core/src/core/util/importPrivateKey.ts:8](https://github.com/paritytech/txwrapper-core/blob/731a943/packages/txwrapper-core/src/core/util/importPrivateKey.ts#L8)*
+*Defined in [packages/txwrapper-core/src/core/util/importPrivateKey.ts:8](https://github.com/paritytech/txwrapper-core/blob/15c9541/packages/txwrapper-core/src/core/util/importPrivateKey.ts#L8)*
 
 A keyring pair
 
@@ -30,7 +30,7 @@ A keyring pair
 
 ▸ **importPrivateKey**(`privateKey`: string \| Uint8Array, `ss58Format`: number): KeyringPair
 
-*Defined in [packages/txwrapper-core/src/core/util/importPrivateKey.ts:16](https://github.com/paritytech/txwrapper-core/blob/731a943/packages/txwrapper-core/src/core/util/importPrivateKey.ts#L16)*
+*Defined in [packages/txwrapper-core/src/core/util/importPrivateKey.ts:16](https://github.com/paritytech/txwrapper-core/blob/15c9541/packages/txwrapper-core/src/core/util/importPrivateKey.ts#L16)*
 
 Import a private key and create a KeyringPair.
 

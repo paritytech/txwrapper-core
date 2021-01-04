@@ -23,7 +23,7 @@
 
 •  **callHash**: string
 
-*Defined in [packages/txwrapper-substrate/src/methods/proxy/announce.ts:17](https://github.com/paritytech/txwrapper-core/blob/731a943/packages/txwrapper-substrate/src/methods/proxy/announce.ts#L17)*
+*Defined in [packages/txwrapper-substrate/src/methods/proxy/announce.ts:17](https://github.com/paritytech/txwrapper-core/blob/15c9541/packages/txwrapper-substrate/src/methods/proxy/announce.ts#L17)*
 
 The hash of the call to be made by the `real` account.
 
@@ -33,6 +33,6 @@ ___
 
 •  **real**: string
 
-*Defined in [packages/txwrapper-substrate/src/methods/proxy/announce.ts:13](https://github.com/paritytech/txwrapper-core/blob/731a943/packages/txwrapper-substrate/src/methods/proxy/announce.ts#L13)*
+*Defined in [packages/txwrapper-substrate/src/methods/proxy/announce.ts:13](https://github.com/paritytech/txwrapper-core/blob/15c9541/packages/txwrapper-substrate/src/methods/proxy/announce.ts#L13)*
 
 The account that the proxy will make a call on behalf of.

@@ -26,7 +26,7 @@ options to functions that require registry and metadata.
 
 •  **metadataRpc**: string
 
-*Defined in [packages/txwrapper-core/src/types/method.ts:16](https://github.com/paritytech/txwrapper-core/blob/731a943/packages/txwrapper-core/src/types/method.ts#L16)*
+*Defined in [packages/txwrapper-core/src/types/method.ts:16](https://github.com/paritytech/txwrapper-core/blob/15c9541/packages/txwrapper-core/src/types/method.ts#L16)*
 
 The metadata of the runtime.
 
@@ -38,6 +38,6 @@ ___
 
 *Inherited from [OptionsWithMeta](_txwrapper_core_src_types_method_.optionswithmeta.md).[registry](_txwrapper_core_src_types_method_.optionswithmeta.md#registry)*
 
-*Defined in [packages/txwrapper-core/src/types/method.ts:118](https://github.com/paritytech/txwrapper-core/blob/731a943/packages/txwrapper-core/src/types/method.ts#L118)*
+*Defined in [packages/txwrapper-core/src/types/method.ts:118](https://github.com/paritytech/txwrapper-core/blob/15c9541/packages/txwrapper-core/src/types/method.ts#L118)*
 
 The type registry of the runtime.

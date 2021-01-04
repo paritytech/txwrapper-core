@@ -25,7 +25,7 @@
 
 •  **amount**: number \| string
 
-*Defined in [packages/txwrapper-orml/src/methods/currencies/transferNativeCurrency.ts:17](https://github.com/paritytech/txwrapper-core/blob/731a943/packages/txwrapper-orml/src/methods/currencies/transferNativeCurrency.ts#L17)*
+*Defined in [packages/txwrapper-orml/src/methods/currencies/transferNativeCurrency.ts:17](https://github.com/paritytech/txwrapper-core/blob/15c9541/packages/txwrapper-orml/src/methods/currencies/transferNativeCurrency.ts#L17)*
 
 The amount to send.
 
@@ -35,6 +35,6 @@ ___
 
 •  **dest**: string
 
-*Defined in [packages/txwrapper-orml/src/methods/currencies/transferNativeCurrency.ts:13](https://github.com/paritytech/txwrapper-core/blob/731a943/packages/txwrapper-orml/src/methods/currencies/transferNativeCurrency.ts#L13)*
+*Defined in [packages/txwrapper-orml/src/methods/currencies/transferNativeCurrency.ts:13](https://github.com/paritytech/txwrapper-core/blob/15c9541/packages/txwrapper-orml/src/methods/currencies/transferNativeCurrency.ts#L13)*
 
 The recipient address, SS-58 encoded.

@@ -47,3 +47,4 @@
 * ["txwrapper-substrate/src/methods/utility/asDerivative"](modules/_txwrapper_substrate_src_methods_utility_asderivative_.md)
 * ["txwrapper-substrate/src/methods/utility/batch"](modules/_txwrapper_substrate_src_methods_utility_batch_.md)
 * ["txwrapper-substrate/src/test-helpers/TEST\_METHOD\_ARGS"](modules/_txwrapper_substrate_src_test_helpers_test_method_args_.md)
+* ["txwrapper-template/examples/template-example"](modules/_txwrapper_template_examples_template_example_.md)
