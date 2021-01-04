@@ -69,7 +69,7 @@ import {
 // understand the arguments they need to provide (docstrings also play nice with IDEs).
 //
 // For choosing what type to give each argument it is very helpful to look at the auto-generated
-// typing that polkadot-js typegen creates fore each method. In this case, we can refer to the types generated
+// typing that polkadot-js typegen creates for each method. In this case, we can refer to the types generated
 // for Acala since the runtime uses the ORML currencies pallets. We find the definitions here:
 // https://github.com/AcalaNetwork/acala.js/blob/4fe5881058003fdb5bc9e3b0c505f3846426db96/packages/types/src/interfaces/augment-api-tx.ts#L213
 //
