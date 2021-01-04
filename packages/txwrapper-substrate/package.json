@@ -2,7 +2,7 @@
   "name": "@substrate/txwrapper-substrate",
   "version": "0.1.0",
   "author": "Parity Technologies <admin@parity.io>",
-  "description": "Helper functions for offline transaction generation for selected Substrate pallets.",
+  "description": "Selected dispatchables of Substrate pallets, to be re-exported by txwrappers.",
   "files": [
     "lib"
   ],

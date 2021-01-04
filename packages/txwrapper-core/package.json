@@ -2,7 +2,7 @@
   "name": "@substrate/txwrapper-core",
   "version": "0.1.0",
   "author": "Parity Technologies <admin@parity.io>",
-  "description": "Tools for substrate chain builders to build chain specific offline signing lib",
+  "description": "Core components for creating a txwrapper lib.",
   "files": [
     "lib"
   ],
