@@ -1492,24 +1492,12 @@
     "@polkadot/util-crypto" "^5.2.3"
     bn.js "^4.11.9"
 
-"@polkadot/networks@5.2.3", "@polkadot/networks@^5.1.1":
+"@polkadot/networks@5.2.3", "@polkadot/networks@^5.1.1", "@polkadot/networks@^5.2.3":
   version "5.2.3"
   resolved "https://registry.yarnpkg.com/@polkadot/networks/-/networks-5.2.3.tgz#c14de05995636391514220c40f4e0373ffacbaa9"
   integrity sha512-lDS34KyyIGkxh0Hm8LkZUAB8Rk6BLGd4YeUWy2HyeEj5AvD0t9EC95SMPgMGEfwsmBdF1IWIEV6fL5dnidL94w==
   dependencies:
     "@babel/runtime" "^7.12.5"
-
-"@polkadot/rpc-core@3.3.1":
-  version "3.3.1"
-  resolved "https://registry.yarnpkg.com/@polkadot/rpc-core/-/rpc-core-3.3.1.tgz#60233fea680483a76af0d68d618eb2095b53e562"
-  integrity sha512-OBQZl1PNlLTMG1vte6YXwfC7HJqqyQSGLaxS1xJUFJVdIN9txwbsrrqbhgYwWfsWdacFZ11r/rB0HfZ89zdqDg==
-  dependencies:
-    "@babel/runtime" "^7.12.5"
-    "@polkadot/metadata" "3.3.1"
-    "@polkadot/rpc-provider" "3.3.1"
-    "@polkadot/types" "3.3.1"
-    "@polkadot/util" "^5.2.3"
-    "@polkadot/x-rxjs" "3.3.1"
 
 "@polkadot/rpc-core@3.3.1":
   version "3.3.1"

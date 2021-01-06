@@ -6,7 +6,7 @@ export { metadataRpc };
  * Base tx information common to all tested transactions
  */
 export const TEST_BASE_TX_INFO = {
-	address: '5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY', // seed "//Alice"
+	address: '15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5', // seed "//Alice"
 	blockHash:
 		'0x1fc7493f3c1e9ac758a183839906475f8363aafb1b1d3e910fe16fab4ae1b582',
 	blockNumber: 4302222,
@@ -34,7 +34,7 @@ export const POLKADOT_25_TEST_OPTIONS = {
 export const TEST_METHOD_ARGS = {
 	balances: {
 		transfer: {
-			dest: '5FTRCZCLBSvUSF5om8XBC8Hh1wsDHehRpLXT1WhRjQYB5W4q',
+			dest: '14PiLtTQ3EBwsn6KimaBLH7qsZrryxFZtqFwAognHVZhFxU1',
 			value: 12,
 		},
 	},
