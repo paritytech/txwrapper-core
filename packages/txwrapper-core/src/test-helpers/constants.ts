@@ -1,7 +1,5 @@
-import metadataRpc from '@polkadot/metadata/v12/static';
-
 import { getRegistryPolkadot } from './getRegistryPolkadot';
-
+import metadataRpc from './staticV3-1-1';
 export { metadataRpc };
 
 /**
