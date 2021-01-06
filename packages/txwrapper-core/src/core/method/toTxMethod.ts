@@ -43,7 +43,7 @@ export function toTxMethod(registry: TypeRegistry, method: Call): TxMethod {
 
 	return {
 		args,
-		name: method.methodName,
-		pallet: method.sectionName,
+		name: method.method,
+		pallet: method.section,
 	};
 }

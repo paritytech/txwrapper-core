@@ -1,10 +1,9 @@
 import {
-	constantsFromMeta,
-	extrinsicsFromMeta,
+	decorateConstants,
+	decorateExtrinsics,
 } from '@polkadot/metadata/decorate';
-import { Constants } from '@polkadot/metadata/decorate/types';
+import { Constants, Extrinsics } from '@polkadot/metadata/decorate/types';
 import { TypeRegistry } from '@polkadot/types';
-import { ModulesWithCalls } from '@polkadot/types/types';
 
 import { createMetadata } from './createMetadata';
 
@@ -19,8 +18,9 @@ import { createMetadata } from './createMetadata';
 export function createDecoratedTx(
 	registry: TypeRegistry,
 	metadataRpc: string
-): ModulesWithCalls {
-	return extrinsicsFromMeta(registry, createMetadata(registry, metadataRpc));
+): Extrinsics {
+	const metadata = createMetadata(registry, metadataRpc);
+	return decorateExtrinsics(registry, metadata.asLatest, metadata.version);
 }
 
 /**
@@ -34,5 +34,8 @@ export function createDecoratedConstants(
 	registry: TypeRegistry,
 	metadataRpc: string
 ): Constants {
-	return constantsFromMeta(registry, createMetadata(registry, metadataRpc));
+	return decorateConstants(
+		registry,
+		createMetadata(registry, metadataRpc).asLatest
+	);
 }
