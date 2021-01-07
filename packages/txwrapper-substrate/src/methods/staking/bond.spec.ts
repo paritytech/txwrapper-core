@@ -17,7 +17,7 @@ describe('staking::bond', () => {
 
         itHasCorrectBaseTxInfo(unsigned);
         expect(unsigned.method).toBe(
-            '0x07008eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48910100'
+            '0x08008eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48910100'
         );
     });
 
