@@ -7,4 +7,5 @@ export * from './rebond';
 export * from './setController';
 export * from './setPayee';
 export * from './unbond';
+export * from './validate';
 export * from './withdrawUnbonded';
