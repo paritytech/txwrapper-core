@@ -38,4 +38,49 @@ export const TEST_METHOD_ARGS = {
 				'0x0500306721211d5404bd9da88e0204360a1a9ab8b87c66c1bc2fcdd37f3c2222cc200f00a0be1c448399',
 		},
 	},
+	staking: {
+		bond: {
+			controller: 'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP', // seed "//Bob"
+			value: 100,
+			payee: 'Staked',
+		},
+		bondExtra: {
+			maxAdditional: 100,
+		},
+		chill: {},
+		nominate: {
+			targets: [
+				'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP', // seed "//Bob"
+				'Fr4NzY1udSFFLzb2R3qxVQkwz9cZraWkyfH4h3mVVk7BK7P', // seed "//Charlie"
+			],
+		},
+		payoutNominator: {
+			era: 100,
+			validators: [['FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP', 2]] as [
+				string,
+				number
+			][],
+		},
+		payoutValidator: {
+			era: 100,
+		},
+		payoutStakers: {
+			validatorStash: 'HNZata7iMYWmk5RvZRTiAsSDhV8366zq2YGb3tLH5Upf74F', // seed "//Alice"
+			era: 100,
+		},
+		rebond: {
+			value: 100,
+		},
+		setController: {
+			controller: 'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP', // seed "//Bob"
+		},
+		setPayee: {
+			payee: 'Staked',
+		},
+		unbond: { value: 100 },
+		validate: {
+			prefs: { commission: 5 },
+		},
+		withdrawUnbonded: { numSlashingSpans: 11 },
+	},
 };
