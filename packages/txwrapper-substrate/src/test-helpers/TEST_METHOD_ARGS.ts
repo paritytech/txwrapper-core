@@ -62,7 +62,7 @@ export const TEST_METHOD_ARGS = {
 			value: 100,
 		},
 		setController: {
-			controller: 'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP', // seed "//Bob"
+			controller: '14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3', // seed "//Bob"
 		},
 		setPayee: {
 			payee: 'Staked',
