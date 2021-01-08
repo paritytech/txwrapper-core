@@ -54,16 +54,6 @@ export const TEST_METHOD_ARGS = {
 				'Fr4NzY1udSFFLzb2R3qxVQkwz9cZraWkyfH4h3mVVk7BK7P', // seed "//Charlie"
 			],
 		},
-		payoutNominator: {
-			era: 100,
-			validators: [['FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP', 2]] as [
-				string,
-				number
-			][],
-		},
-		payoutValidator: {
-			era: 100,
-		},
 		payoutStakers: {
 			validatorStash: 'HNZata7iMYWmk5RvZRTiAsSDhV8366zq2YGb3tLH5Upf74F', // seed "//Alice"
 			era: 100,
