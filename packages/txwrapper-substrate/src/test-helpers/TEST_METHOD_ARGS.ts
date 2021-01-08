@@ -55,7 +55,7 @@ export const TEST_METHOD_ARGS = {
 			],
 		},
 		payoutStakers: {
-			validatorStash: 'HNZata7iMYWmk5RvZRTiAsSDhV8366zq2YGb3tLH5Upf74F', // seed "//Alice"
+			validatorStash: '15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5', // seed "//Alice"
 			era: 100,
 		},
 		rebond: {
