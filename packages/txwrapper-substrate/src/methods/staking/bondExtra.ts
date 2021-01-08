@@ -14,7 +14,7 @@ export interface StakingBondExtraArgs extends Args {
 }
 
 /**
- * Add some extra amount that have appeared in the stash `free_balance` into
+ * Add some extra amount from the stash's `free_balance` into
  * the balance up for staking.
  *
  * Can only be called when `EraElectionStatus` is `Closed`.
