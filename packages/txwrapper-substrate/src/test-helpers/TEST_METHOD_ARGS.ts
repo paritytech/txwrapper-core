@@ -40,7 +40,7 @@ export const TEST_METHOD_ARGS = {
 	},
 	staking: {
 		bond: {
-			controller: 'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP', // seed "//Bob"
+			controller: '14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3, // seed "//Bob"
 			value: 100,
 			payee: 'Staked',
 		},
