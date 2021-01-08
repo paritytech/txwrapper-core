@@ -11,7 +11,7 @@ export interface StakingValidateArgs extends Args {
 	 * Set the desired commission for the validator. Value is Perbill.
 	 */
 	prefs: {
-		commission: number;
+		commission: number | string;
 	};
 }
 
