@@ -1,13 +1,13 @@
 import {
-    Args,
-    BaseTxInfo,
-    defineMethod,
-    OptionsWithMeta,
-    UnsignedTransaction,
+	Args,
+	BaseTxInfo,
+	defineMethod,
+	OptionsWithMeta,
+	UnsignedTransaction,
 } from '@substrate/txwrapper-core';
 
 export interface StakingWithdrawUnbondedArgs extends Args {
-    numSlashingSpans: number;
+	numSlashingSpans: number;
 }
 
 /**
@@ -20,19 +20,19 @@ export interface StakingWithdrawUnbondedArgs extends Args {
  * @param options - Registry and metadata used for constructing the method.
  */
 export function withdrawUnbonded(
-    args: StakingWithdrawUnbondedArgs,
-    info: BaseTxInfo,
-    options: OptionsWithMeta
+	args: StakingWithdrawUnbondedArgs,
+	info: BaseTxInfo,
+	options: OptionsWithMeta
 ): UnsignedTransaction {
-    return defineMethod(
-        {
-            method: {
-                args,
-                name: 'withdrawUnbonded',
-                pallet: 'staking',
-            },
-            ...info,
-        },
-        options
-    );
+	return defineMethod(
+		{
+			method: {
+				args,
+				name: 'withdrawUnbonded',
+				pallet: 'staking',
+			},
+			...info,
+		},
+		options
+	);
 }

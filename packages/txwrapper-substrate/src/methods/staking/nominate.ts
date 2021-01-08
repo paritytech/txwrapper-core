@@ -1,19 +1,19 @@
 import {
-    Args,
-    BaseTxInfo,
-    defineMethod,
-    OptionsWithMeta,
-    UnsignedTransaction,
+	Args,
+	BaseTxInfo,
+	defineMethod,
+	OptionsWithMeta,
+	UnsignedTransaction,
 } from '@substrate/txwrapper-core';
 
 export interface StakingNominateArgs extends Args {
-    /**
-     * The SS-58 encoded addresses of the targets you wish to nominate. A maximum of 16
-     * nominations are allowed.
-     *
-     * Warning: This provides no checks as to whether these targets are actual validators.
-     */
-    targets: Array<string>;
+	/**
+	 * The SS-58 encoded addresses of the targets you wish to nominate. A maximum of 16
+	 * nominations are allowed.
+	 *
+	 * Warning: This provides no checks as to whether these targets are actual validators.
+	 */
+	targets: Array<string>;
 }
 
 /**
@@ -26,19 +26,19 @@ export interface StakingNominateArgs extends Args {
  * @param options - Registry and metadata used for constructing the method.
  */
 export function nominate(
-    args: StakingNominateArgs,
-    info: BaseTxInfo,
-    options: OptionsWithMeta
+	args: StakingNominateArgs,
+	info: BaseTxInfo,
+	options: OptionsWithMeta
 ): UnsignedTransaction {
-    return defineMethod(
-        {
-            method: {
-                args,
-                name: 'nominate',
-                pallet: 'staking',
-            },
-            ...info,
-        },
-        options
-    );
+	return defineMethod(
+		{
+			method: {
+				args,
+				name: 'nominate',
+				pallet: 'staking',
+			},
+			...info,
+		},
+		options
+	);
 }

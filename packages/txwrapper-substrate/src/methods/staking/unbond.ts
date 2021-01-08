@@ -1,16 +1,16 @@
 import {
-    Args,
-    BaseTxInfo,
-    defineMethod,
-    OptionsWithMeta,
-    UnsignedTransaction,
+	Args,
+	BaseTxInfo,
+	defineMethod,
+	OptionsWithMeta,
+	UnsignedTransaction,
 } from '@substrate/txwrapper-core';
 
 export interface StakingUnbondArgs extends Args {
-    /**
-     * The number of tokens to unbond.
-     */
-    value: number | string;
+	/**
+	 * The number of tokens to unbond.
+	 */
+	value: number | string;
 }
 
 /**
@@ -24,19 +24,19 @@ export interface StakingUnbondArgs extends Args {
  * @param options - Registry and metadata used for constructing the method.
  */
 export function unbond(
-    args: StakingUnbondArgs,
-    info: BaseTxInfo,
-    options: OptionsWithMeta
+	args: StakingUnbondArgs,
+	info: BaseTxInfo,
+	options: OptionsWithMeta
 ): UnsignedTransaction {
-    return defineMethod(
-        {
-            method: {
-                args,
-                name: 'unbond',
-                pallet: 'staking',
-            },
-            ...info,
-        },
-        options
-    );
+	return defineMethod(
+		{
+			method: {
+				args,
+				name: 'unbond',
+				pallet: 'staking',
+			},
+			...info,
+		},
+		options
+	);
 }

@@ -1,16 +1,16 @@
 import {
-    Args,
-    BaseTxInfo,
-    defineMethod,
-    OptionsWithMeta,
-    UnsignedTransaction,
+	Args,
+	BaseTxInfo,
+	defineMethod,
+	OptionsWithMeta,
+	UnsignedTransaction,
 } from '@substrate/txwrapper-core';
 
 export interface StakingBondExtraArgs extends Args {
-    /**
-     * The maximum amount to bond.
-     */
-    maxAdditional: number | string;
+	/**
+	 * The maximum amount to bond.
+	 */
+	maxAdditional: number | string;
 }
 
 /**
@@ -24,19 +24,19 @@ export interface StakingBondExtraArgs extends Args {
  * @param options - Registry and metadata used for constructing the method.
  */
 export function bondExtra(
-    args: StakingBondExtraArgs,
-    info: BaseTxInfo,
-    options: OptionsWithMeta
+	args: StakingBondExtraArgs,
+	info: BaseTxInfo,
+	options: OptionsWithMeta
 ): UnsignedTransaction {
-    return defineMethod(
-        {
-            method: {
-                args,
-                name: 'bondExtra',
-                pallet: 'staking',
-            },
-            ...info,
-        },
-        options
-    );
+	return defineMethod(
+		{
+			method: {
+				args,
+				name: 'bondExtra',
+				pallet: 'staking',
+			},
+			...info,
+		},
+		options
+	);
 }

@@ -1,18 +1,18 @@
 import {
-    Args,
-    BaseTxInfo,
-    defineMethod,
-    OptionsWithMeta,
-    UnsignedTransaction,
+	Args,
+	BaseTxInfo,
+	defineMethod,
+	OptionsWithMeta,
+	UnsignedTransaction,
 } from '@substrate/txwrapper-core';
 
 export interface StakingValidateArgs extends Args {
-    /**
-     * Set the desired commission for the validator. Value is Perbill.
-     */
-    prefs: {
-        commission: number;
-    };
+	/**
+	 * Set the desired commission for the validator. Value is Perbill.
+	 */
+	prefs: {
+		commission: number;
+	};
 }
 
 /**
@@ -25,19 +25,19 @@ export interface StakingValidateArgs extends Args {
  * @param options - Registry and metadata used for constructing the method.
  */
 export function validate(
-    args: StakingValidateArgs,
-    info: BaseTxInfo,
-    options: OptionsWithMeta
+	args: StakingValidateArgs,
+	info: BaseTxInfo,
+	options: OptionsWithMeta
 ): UnsignedTransaction {
-    return defineMethod(
-        {
-            method: {
-                args,
-                name: 'validate',
-                pallet: 'staking',
-            },
-            ...info,
-        },
-        options
-    );
+	return defineMethod(
+		{
+			method: {
+				args,
+				name: 'validate',
+				pallet: 'staking',
+			},
+			...info,
+		},
+		options
+	);
 }

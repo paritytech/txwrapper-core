@@ -1,16 +1,16 @@
 import {
-    Args,
-    BaseTxInfo,
-    defineMethod,
-    OptionsWithMeta,
-    UnsignedTransaction,
+	Args,
+	BaseTxInfo,
+	defineMethod,
+	OptionsWithMeta,
+	UnsignedTransaction,
 } from '@substrate/txwrapper-core';
 
 export interface StakingSetPayeeArgs extends Args {
-    /**
-     * The `RewardDestination`. It can be one of 'Staking', 'Stash', or 'Controller'.
-     */
-    payee: string;
+	/**
+	 * The `RewardDestination`. It can be one of 'Staking', 'Stash', or 'Controller'.
+	 */
+	payee: string;
 }
 
 /**
@@ -25,19 +25,19 @@ export interface StakingSetPayeeArgs extends Args {
  * @param options - Registry and metadata used for constructing the method.
  */
 export function setPayee(
-    args: StakingSetPayeeArgs,
-    info: BaseTxInfo,
-    options: OptionsWithMeta
+	args: StakingSetPayeeArgs,
+	info: BaseTxInfo,
+	options: OptionsWithMeta
 ): UnsignedTransaction {
-    return defineMethod(
-        {
-            method: {
-                args,
-                name: 'setPayee',
-                pallet: 'staking',
-            },
-            ...info,
-        },
-        options
-    );
+	return defineMethod(
+		{
+			method: {
+				args,
+				name: 'setPayee',
+				pallet: 'staking',
+			},
+			...info,
+		},
+		options
+	);
 }

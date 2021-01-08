@@ -1,16 +1,16 @@
 import {
-    Args,
-    BaseTxInfo,
-    defineMethod,
-    OptionsWithMeta,
-    UnsignedTransaction,
+	Args,
+	BaseTxInfo,
+	defineMethod,
+	OptionsWithMeta,
+	UnsignedTransaction,
 } from '@substrate/txwrapper-core';
 
 export interface StakingRebondArgs extends Args {
-    /**
-     * The number of tokens to rebond.
-     */
-    value: number | string;
+	/**
+	 * The number of tokens to rebond.
+	 */
+	value: number | string;
 }
 
 /**
@@ -21,19 +21,19 @@ export interface StakingRebondArgs extends Args {
  *
  **/
 export function rebond(
-    args: StakingRebondArgs,
-    info: BaseTxInfo,
-    options: OptionsWithMeta
+	args: StakingRebondArgs,
+	info: BaseTxInfo,
+	options: OptionsWithMeta
 ): UnsignedTransaction {
-    return defineMethod(
-        {
-            method: {
-                args,
-                name: 'rebond',
-                pallet: 'staking',
-            },
-            ...info,
-        },
-        options
-    );
+	return defineMethod(
+		{
+			method: {
+				args,
+				name: 'rebond',
+				pallet: 'staking',
+			},
+			...info,
+		},
+		options
+	);
 }
