@@ -11,10 +11,10 @@ export interface StakingWithdrawUnbondedArgs extends Args {
 }
 
 /**
- * If 100% of staked funds are withdrawn, cleans up staking-related 
- * storage for the account and decrements the ref_count. Note that accounts 
- * that set session keys must remove them before calling this, else they will 
- * lose their Controller status and be unable to remove them 
+ * If 100% of staked funds are withdrawn, cleans up staking-related
+ * storage for the account and decrements the ref_count. Note that accounts
+ * that set session keys must remove them before calling this, else they will
+ * lose their Controller status and be unable to remove them
  * without bonding some funds again.
  *
  * Can only be called when `EraElectionStatus` is `Closed`.
