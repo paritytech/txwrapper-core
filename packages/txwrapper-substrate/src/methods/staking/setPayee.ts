@@ -16,7 +16,7 @@ export interface StakingSetPayeeArgs extends Args {
 /**
  * (Re-)set the payment target for staking rewards.
  *
- * Effects will be felt at the beginning of the next era.
+ * Comes into effect at the beginning of the next era.
  *
  *  The dispatch origin for this call must be _Signed_ by the controller, not the stash.
  *
