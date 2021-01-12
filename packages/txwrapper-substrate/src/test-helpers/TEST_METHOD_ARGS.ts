@@ -38,4 +38,39 @@ export const TEST_METHOD_ARGS = {
 				'0x0500306721211d5404bd9da88e0204360a1a9ab8b87c66c1bc2fcdd37f3c2222cc200f00a0be1c448399',
 		},
 	},
+	staking: {
+		bond: {
+			controller: '14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3', // seed "//Bob"
+			value: 100,
+			payee: 'Staked',
+		},
+		bondExtra: {
+			maxAdditional: 100,
+		},
+		chill: {},
+		nominate: {
+			targets: [
+				'14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3', // seed "//Bob"
+				'14Gjs1TD93gnwEBfDMHoCgsuf1s2TVKUP6Z1qKmAZnZ8cW5q', // seed "//Charlie"
+			],
+		},
+		payoutStakers: {
+			validatorStash: '15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5', // seed "//Alice"
+			era: 100,
+		},
+		rebond: {
+			value: 100,
+		},
+		setController: {
+			controller: '14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3', // seed "//Bob"
+		},
+		setPayee: {
+			payee: 'Staked',
+		},
+		unbond: { value: 100 },
+		validate: {
+			prefs: { commission: 5 },
+		},
+		withdrawUnbonded: { numSlashingSpans: 11 },
+	},
 };
