@@ -2,7 +2,18 @@
 
 This guide walks through the steps that a chain builder will need to take in order to create, publish, and maintain a chain specific txwrapper package.
 
-## Motivation: why would I want to create a txwrapper for my chain?
+## Table of contents
+
+- [Motivation](#motivation)
+- [Note](#note)
+- [Template project](#template-project)
+- [Steps](#steps)
+- [Create `getRegistry`](#create-getregistry)
+- [Adding a method](#adding-a-method)
+
+## Motivation
+
+**Why would I want to create a txwrapper for my chain?**
 
 Creating a txwrapper package will expand the offline signing options for users of your chain. This is important for security conscious users who need to facilitate transaction signing, construction and/or decoding with an air-gapped device(s). This includes (but is not limited to) custodians, exchanges, and cold storage users.
 
@@ -37,17 +48,94 @@ You will need to choose what pallet methods you want your txwrapper to expose. W
     - If you need methods that do not exist in a Substrate or ORML pallet you have to add what you need directly to your package. See the [Adding a method](#adding-a-method) section for details.
     - The template already imports @substrate/txwrapper-substrate, but if you do not need any methods from Substrate pallets feel free to remove that dependency.
 
-4) **Create a working example**
+4) **Create a `getRegistry` function**
+Your txwrapper will need to export a `getRegistry` method so users can get a polkadot-js `TypeRegistry` with the most up-to-date types for your chain. There are two primary options for how to approach this:
+    1) Leave the template as is, re-exporting `getRegistry` from txwrapper-registry. txwrapper-registry gets chain types from @polkadot/apps-config, so your chain will need to have its most recent types defined in @polkadot/apps-config.
+    2) Create your own `getRegistry` method, pulling types directly from your chain's type package (or simply defining the types directly in txwrapper). This is the recommended approach as it reduces supply-chain complexity for your chains types. Using txwrapper-registry the supply-chain for types would be: `@your-chain/types => @polkadot/apps-config => @substrate/txwrapper-regsitry => @your-chain/txwrapper-your-chain`. If you define your own `getRegistry` method and import types directly your supply-chain for types is reduced to: `@your-chain/types => @your-chain/txwrapper-your-chain`. See the [Create `getRegistry`](#create-getregistry) section for details on how to implement a `getRegistry` function.
+
+5) **Create a working example**
 Create an end-to-end example so users have a clear understanding of the full flow for offline transaction generation for your chain. A good example can ease user friction and reduce workload for maintainers.
 In the template we provide an example directory that has all the pieces you need to create a running example. You need to rename `template-example.ts` to something appropriate to your chain and update all the sections in the file marked `TODO`. The file `examples/README.md` will need to be updated as well in the sections marked `TODO`. Finally, make sure the example is fully runable using a development node for your chain.
 
-5) **Publish**
-  Prior to publishing, make sure the package works locally, ([npm pack](https://docs.npmjs.com/cli/v6/commands/npm-pack) command may be useful) and that the versioning makes sense. Once you complete those tasks go ahead and [publish your package to NPM](https://docs.npmjs.com/cli/v6/commands/npm-publish).
+6) **Publish**
+Prior to publishing, make sure the package works locally, ([npm pack](https://docs.npmjs.com/cli/v6/commands/npm-pack) command may be useful) and that the versioning makes sense. Once you complete those tasks go ahead and [publish your package to NPM](https://docs.npmjs.com/cli/v6/commands/npm-publish).
 
-6) **Maintain**
+7) **Maintain**
 Keep dependencies up to date, paying special attention to security vulnerability warnings.
 If polkadot-js API types for your chain are coming from @polkadot/apps-config you may need to update the `package.json` [resolutions](https://classic.yarnpkg.com/en/docs/selective-version-resolutions/) with the @polkadot/apps-config version that includes your chain's latest types.
 Also keep in mind that if method signatures change (e.g. arguments were added/removed or the return value changed), the corresponding txwrapper method definition will need to be updated as well.
+
+## Create `getRegistry`
+
+In this example we will build a `getRegistry` function, using polkadot-js api types imported directly from a chain's type-definitions package. We use the acala network for this example, but with some small modifications this example can be applied to any `FRAME`-based chain that plays friendly with polkadot-js types.
+
+```typescript
+// src/index.ts
+
+import { typesBundleForPolkadot } from '@acala-network/type-definitions';
+import { OverrideBundleType } from '@polkadot/types/types';
+import {
+  getRegistryBase,
+  GetRegistryOptsCore,
+  getSpecTypes,
+  TypeRegistry,
+} from '@substrate/txwrapper-core';
+
+// As a convenience to users we can provide them with hardcoded chain properties
+// as these rarely change.
+/**
+ * `ChainProperties` for networks that txwrapper-acala supports. These are normally returned
+ * by `system_properties` call, but since they don't change much, it's pretty safe to hardcode them.
+ */
+const KNOWN_CHAIN_PROPERTIES = {
+  acala: {
+    ss58Format: 10,
+    tokenDecimals: 18,
+    tokenSymbol: 'ACA',
+  },
+  mandala: {
+    ss58Format: 42,
+    tokenDecimals: 18,
+    tokenSymbol: 'ACA',
+  },
+};
+
+// We override the `specName` property of `GetRegistryOptsCore` in order to get narrower type specificity,
+// hopefully creating a better experience for users.
+/**
+ * Options for the `getRegistry` function.
+ */
+export interface GetRegistryOpts extends GetRegistryOptsCore {
+  specName: keyof typeof KNOWN_CHAIN_PROPERTIES;
+}
+
+/**
+ * Get a type registry for networks that txwrapper-acala supports.
+ *
+ * @param GetRegistryOptions specName, chainName, specVersion, and metadataRpc of the current runtime
+ */
+export function getRegistry({
+  specName,
+  chainName,
+  specVersion,
+  metadataRpc,
+  properties,
+}: GetRegistryOpts): TypeRegistry {
+  const registry = new TypeRegistry();
+  registry.setKnownTypes({
+    // If your types are not packaged in the `OverrideBundleType` format, you can
+    // specify types in any of the formats supported by `RegisteredTypes`:
+    // https://github.com/polkadot-js/api/blob/4ff9b51af2c49294c676cc80abc6476565c70b11/packages/types/src/types/registry.ts#L59
+    typesBundle: (typesBundleForPolkadot as unknown) as OverrideBundleType,
+  });
+
+  return getRegistryBase({
+    chainProperties: properties || KNOWN_CHAIN_PROPERTIES[specName],
+    specTypes: getSpecTypes(registry, chainName, specName, specVersion),
+    metadataRpc,
+  });
+}
+```
 
 ## Adding a method
 

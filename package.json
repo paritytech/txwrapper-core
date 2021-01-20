@@ -10,7 +10,6 @@
   "scripts": {
     "deploy": "yarn run build && lerna publish --conventional-commits --create-release github",
     "build": "lerna run build",
-    "upgrade": "lerna exec -- yarn upgrade",
     "lint": "tsc --noEmit && eslint . --ext ts",
     "test": "jest",
     "docs": "typedoc"
@@ -34,6 +33,6 @@
     "typescript": "^4.1.2"
   },
   "resolutions": {
-    "@polkadot/api": "^3.3.1"
+    "@polkadot/api": "^3.5.1"
   }
 }

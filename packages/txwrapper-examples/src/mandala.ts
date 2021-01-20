@@ -12,7 +12,6 @@ import {
 	decode,
 	deriveAddress,
 	getRegistry,
-	knownChainProperties,
 	methods,
 	TokenSymbol,
 } from 'txwrapper-acala';
@@ -30,7 +29,7 @@ async function main(): Promise<void> {
 		deriveAddress(
 			alice.publicKey,
 			// Use the default substrate development ss58 format
-			knownChainProperties.substrate.ss58Format as number
+			42
 		)
 	);
 
@@ -64,7 +63,7 @@ async function main(): Promise<void> {
 			address: deriveAddress(
 				alice.publicKey,
 				// Use the default substrate development ss58 format
-				knownChainProperties.substrate.ss58Format as number
+				42
 			),
 			blockHash,
 			blockNumber: registry

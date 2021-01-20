@@ -2,7 +2,11 @@ import { typesBundle, typesChain, typesSpec } from '@polkadot/apps-config/api';
 import { all as substrateSS58Registry } from '@polkadot/networks';
 import { TypeRegistry } from '@polkadot/types';
 import { getSpecTypes } from '@polkadot/types-known';
-import { ChainProperties, getRegistryBase } from '@substrate/txwrapper-core';
+import {
+	ChainProperties,
+	getRegistryBase,
+	GetRegistryOptsCore,
+} from '@substrate/txwrapper-core';
 
 /**
  * Known chain properties based on the substrate ss58 registry.
@@ -25,23 +29,13 @@ export const knownChainProperties = substrateSS58Registry.reduce(
 	{} as Record<string, ChainProperties>
 );
 
-export interface GetRegistryOpts {
-	/**
-	 * Runtime specName
-	 */
+// We override the`specName` property in order to get narrower type specificity. We add a doc
+// comment to`properties` with relevant info. The goal is just to improve UX.
+/**
+ * Options for `getRegistry`.
+ */
+export interface GetRegistryOpts extends GetRegistryOptsCore {
 	specName: keyof typeof knownChainProperties;
-	/**
-	 * chainName
-	 */
-	chainName: string;
-	/**
-	 * Runtime specVersion
-	 */
-	specVersion: number;
-	/**
-	 * SCALE encoded runtime metadata as a hex string
-	 */
-	metadataRpc: string;
 	/**
 	 * Optionally specify the chain properties if they are not included in
 	 * https://raw.githubusercontent.com/paritytech/substrate/master/ss58-registry.json
