@@ -20,7 +20,7 @@ export function getRegistryMandala(
 		chainProperties: {
 			tokenDecimals: 18,
 			tokenSymbol: 'ACA',
-			// substrate prefix, 42,is the common prefix for test chains
+			// substrate prefix (42), is the common prefix for the test chains
 			ss58Format: PolkadotSS58Format.substrate,
 		},
 		specTypes: getSpecTypes(registry, 'Mandala', 'mandala', specVersion),

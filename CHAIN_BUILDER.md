@@ -50,7 +50,7 @@ You will need to choose what pallet methods you want your txwrapper to expose. W
 
 1) **Create a `getRegistry` function**
 Your txwrapper will need to export a `getRegistry` method so users can get a polkadot-js `TypeRegistry` with the most up-to-date types for your chain. There are two primary options for how to approach this:
-    1) Create your own `getRegistry` method, pulling types directly from your chain's type package (or simply defining the types directly in txwrapper). This is the recommended approach as it reduces supply-chain complexity for your chains types. Using txwrapper-registry the supply-chain for types would be: `@your-chain/types => @polkadot/apps-config => @substrate/txwrapper-regsitry => @your-chain/txwrapper-your-chain`. If you define your own `getRegistry` method and import types directly your supply-chain for types is reduced to: `@your-chain/types => @your-chain/txwrapper-your-chain`. See the [Create `getRegistry`](#create-getregistry) section for details on how to implement a `getRegistry` function.
+    1) Create your own `getRegistry` method, pulling types directly from your chain's type package (or simply defining the types directly in txwrapper). This is the recommended approach as it reduces supply-chain complexity for your chain's types. Using txwrapper-registry the supply-chain for types would be: `@your-chain/types => @polkadot/apps-config => @substrate/txwrapper-regsitry => @your-chain/txwrapper-your-chain`. If you define your own `getRegistry` method and import types directly your supply-chain for types is reduced to: `@your-chain/types => @your-chain/txwrapper-your-chain`. See the [Create `getRegistry`](#create-getregistry) section for details on how to implement a `getRegistry` function.
     1) Leave the template as is, re-exporting `getRegistry` from txwrapper-registry. txwrapper-registry gets chain types from @polkadot/apps-config, so your chain will need to have its most recent types defined in @polkadot/apps-config.
 
 1) **Create a working example**
@@ -72,7 +72,7 @@ In this example we will build a `getRegistry` function, using polkadot-js api ty
 ```typescript
 // src/index.ts
 
-import { typesBundleForPolkadot } from '@acala-network/type-definitions';
+import { typesBundleForPolkadot } from '@foo-network/type-definitions';
 import { OverrideBundleType } from '@polkadot/types/types';
 import {
   getRegistryBase,
@@ -84,19 +84,19 @@ import {
 // As a convenience to users we can provide them with hardcoded chain properties
 // as these rarely change.
 /**
- * `ChainProperties` for networks that txwrapper-acala supports. These are normally returned
+ * `ChainProperties` for networks that txwrapper-foo supports. These are normally returned
  * by `system_properties` call, but since they don't change much, it's pretty safe to hardcode them.
  */
 const KNOWN_CHAIN_PROPERTIES = {
-  acala: {
-    ss58Format: 10,
+  foo: {
+    ss58Format: 3,
     tokenDecimals: 18,
-    tokenSymbol: 'ACA',
+    tokenSymbol: 'FOO',
   },
-  mandala: {
+  bar: {
     ss58Format: 42,
     tokenDecimals: 18,
-    tokenSymbol: 'ACA',
+    tokenSymbol: 'FOO',
   },
 };
 
@@ -110,7 +110,7 @@ export interface GetRegistryOpts extends GetRegistryOptsCore {
 }
 
 /**
- * Get a type registry for networks that txwrapper-acala supports.
+ * Get a type registry for networks that txwrapper-foo supports.
  *
  * @param GetRegistryOptions specName, chainName, specVersion, and metadataRpc of the current runtime
  */
