@@ -1,9 +1,7 @@
+import { types } from '@acala-network/type-definitions';
 import { TypeRegistry } from '@polkadot/types';
-import { PolkadotSS58Format } from '@substrate/txwrapper-core';
-import {
-	getRegistry,
-	knownChainProperties,
-} from '@substrate/txwrapper-registry';
+import { getSpecTypes } from '@polkadot/types-known';
+import { getRegistryBase, PolkadotSS58Format } from '@substrate/txwrapper-core';
 
 /**
  * Mandala registry creator for testing.
@@ -15,14 +13,17 @@ export function getRegistryMandala(
 	specVersion: number,
 	metadataRpc: string
 ): TypeRegistry {
-	return getRegistry({
-		specName: 'mandala',
-		chainName: 'Mandala',
-		specVersion,
-		metadataRpc,
-		properties: {
-			...knownChainProperties.acala,
+	const registry = new TypeRegistry();
+	registry.setKnownTypes({ types });
+
+	return getRegistryBase({
+		chainProperties: {
+			tokenDecimals: 18,
+			tokenSymbol: 'ACA',
+			// substrate prefix (42), is the common prefix for the test chains
 			ss58Format: PolkadotSS58Format.substrate,
 		},
+		specTypes: getSpecTypes(registry, 'Mandala', 'mandala', specVersion),
+		metadataRpc,
 	});
 }

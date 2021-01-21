@@ -15,8 +15,8 @@
     "test": "jest"
   },
   "dependencies": {
+    "@acala-network/type-definitions": "0.6.2-7",
     "@substrate/txwrapper-core": "^0.1.0",
-    "@substrate/txwrapper-orml": "^0.1.0",
-    "@substrate/txwrapper-registry": "^0.1.0"
+    "@substrate/txwrapper-orml": "^0.1.0"
   }
 }
