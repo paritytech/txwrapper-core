@@ -15,7 +15,7 @@ export const methods = {
 
 export * from './TokenSymbol';
 
-// Rexport all of txwrapper-core so users have access to utilities, construct functions,
+// Re-export all of txwrapper-core so users have access to utilities, construct functions,
 // decode function, and types.
 export * from '@substrate/txwrapper-core';
 

@@ -16,7 +16,7 @@ export const methods = {
 	proxy: substrateMethods.proxy,
 };
 
-// Rexport all of txwrapper-core so users have access to utilities, construct functions,
+// Re-export all of txwrapper-core so users have access to utilities, construct functions,
 // decode function, and types.
 export * from '@substrate/txwrapper-core';
 
