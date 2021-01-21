@@ -67,7 +67,7 @@ Also keep in mind that if method signatures change (e.g. arguments were added/re
 
 ## Create `getRegistry`
 
-In this example we will build a `getRegistry` function, using polkadot-js api types imported directly from a chain's type-definitions package. We use the acala network for this example, but with some small modifications this example can be applied to any `FRAME`-based chain that plays friendly with polkadot-js types.
+In this example we will build a `getRegistry` function, using polkadot-js api types imported directly from a chain's type-definitions package. We use the fictional foo network for this example, but with some small modifications this example can be applied to any `FRAME`-based chain that plays friendly with polkadot-js types.
 
 ```typescript
 // src/index.ts
