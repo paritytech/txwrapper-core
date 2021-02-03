@@ -1,21 +1,22 @@
 import {
-    Args,
-    BaseTxInfo,
-    defineMethod,
-    OptionsWithMeta,
-    UnsignedTransaction,
+	Args,
+	BaseTxInfo,
+	defineMethod,
+	OptionsWithMeta,
+	UnsignedTransaction,
 } from '@substrate/txwrapper-core';
+
 import { AccountVote } from './types';
 
 export interface DemocracyVoteArgs extends Args {
-    /*
-     * Referendum index.
-     */
-    refIndex: number;
-    /**
-     * Vote.
-     */
-    vote: AccountVote;
+	/*
+	 * Referendum index.
+	 */
+	refIndex: number;
+	/**
+	 * Vote.
+	 */
+	vote: AccountVote;
 }
 
 /**
@@ -26,19 +27,19 @@ export interface DemocracyVoteArgs extends Args {
  * @param options - Registry and metadata used for constructing the method.
  */
 export function vote(
-    args: DemocracyVoteArgs,
-    info: BaseTxInfo,
-    options: OptionsWithMeta
+	args: DemocracyVoteArgs,
+	info: BaseTxInfo,
+	options: OptionsWithMeta
 ): UnsignedTransaction {
-    return defineMethod(
-        {
-            method: {
-                args,
-                name: 'vote',
-                pallet: 'democracy',
-            },
-            ...info,
-        },
-        options
-    );
+	return defineMethod(
+		{
+			method: {
+				args,
+				name: 'vote',
+				pallet: 'democracy',
+			},
+			...info,
+		},
+		options
+	);
 }
