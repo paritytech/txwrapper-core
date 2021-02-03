@@ -1,17 +1,17 @@
 import {
-    Args,
-    BaseTxInfo,
-    defineMethod,
-    OptionsWithMeta,
-    UnsignedTransaction,
+	Args,
+	BaseTxInfo,
+	defineMethod,
+	OptionsWithMeta,
+	UnsignedTransaction,
 } from '@substrate/txwrapper-core';
 
 export interface VestingVestOtherArgs extends Args {
-    /**
-     * The account whose vested funds should be unlocked. Must have funds still
-     * locked under this module.
-     */
-    target: string;
+	/**
+	 * The account whose vested funds should be unlocked. Must have funds still
+	 * locked under this module.
+	 */
+	target: string;
 }
 
 /**
@@ -22,19 +22,19 @@ export interface VestingVestOtherArgs extends Args {
  * @param options - Registry and metadata used for constructing the method.
  */
 export function vestOther(
-    args: VestingVestOtherArgs,
-    info: BaseTxInfo,
-    options: OptionsWithMeta
+	args: VestingVestOtherArgs,
+	info: BaseTxInfo,
+	options: OptionsWithMeta
 ): UnsignedTransaction {
-    return defineMethod(
-        {
-            method: {
-                args,
-                name: 'vestOther',
-                pallet: 'vesting',
-            },
-            ...info,
-        },
-        options
-    );
+	return defineMethod(
+		{
+			method: {
+				args,
+				name: 'vestOther',
+				pallet: 'vesting',
+			},
+			...info,
+		},
+		options
+	);
 }
