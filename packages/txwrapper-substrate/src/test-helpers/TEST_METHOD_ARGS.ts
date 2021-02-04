@@ -73,6 +73,17 @@ export const TEST_METHOD_ARGS = {
 		},
 		withdrawUnbonded: { numSlashingSpans: 11 },
 	},
+	democracy: {
+		vote: {
+			refIndex: 0,
+			vote: {
+				Standard: {
+					balance: 1234,
+					vote: { aye: true, conviction: 'Locked1x' },
+				},
+			},
+		},
+	},
 	vesting: {
 		vest: {},
 		vestOther: {
