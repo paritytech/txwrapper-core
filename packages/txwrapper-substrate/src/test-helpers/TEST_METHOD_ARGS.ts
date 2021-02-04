@@ -84,4 +84,10 @@ export const TEST_METHOD_ARGS = {
 			},
 		},
 	},
+	vesting: {
+		vest: {},
+		vestOther: {
+			target: 'Fr4NzY1udSFFLzb2R3qxVQkwz9cZraWkyfH4h3mVVk7BK7P', // seed "//Charlie"
+		},
+	},
 };
