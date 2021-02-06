@@ -84,6 +84,11 @@ export const TEST_METHOD_ARGS = {
 			},
 		},
 	},
+	system: {
+		remark: {
+			remark: '0x42194253', // random bytes
+		},
+	},
 	vesting: {
 		vest: {},
 		vestOther: {
