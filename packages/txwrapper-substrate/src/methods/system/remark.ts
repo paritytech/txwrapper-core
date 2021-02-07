@@ -1,16 +1,16 @@
 import {
-    Args,
-    BaseTxInfo,
-    defineMethod,
-    OptionsWithMeta,
-    UnsignedTransaction,
+	Args,
+	BaseTxInfo,
+	defineMethod,
+	OptionsWithMeta,
+	UnsignedTransaction,
 } from '@substrate/txwrapper-core';
 
 export interface SystemRemarkArgs extends Args {
-    /**
-     * The remark to set on chain, in hex or bytes.
-     */
-    remark: string;
+	/**
+	 * The remark to set on chain, in hex or bytes.
+	 */
+	remark: string;
 }
 
 /**
@@ -21,19 +21,19 @@ export interface SystemRemarkArgs extends Args {
  * @param options - Registry and metadata used for constructing the method.
  */
 export function remark(
-    args: SystemRemarkArgs,
-    info: BaseTxInfo,
-    options: OptionsWithMeta
+	args: SystemRemarkArgs,
+	info: BaseTxInfo,
+	options: OptionsWithMeta
 ): UnsignedTransaction {
-    return defineMethod(
-        {
-            method: {
-                args,
-                name: 'remark',
-                pallet: 'system',
-            },
-            ...info,
-        },
-        options
-    );
+	return defineMethod(
+		{
+			method: {
+				args,
+				name: 'remark',
+				pallet: 'system',
+			},
+			...info,
+		},
+		options
+	);
 }
