@@ -9,7 +9,7 @@ export type Timepoint = {
 	 */
 	height: number | string;
 	/**
-	 *  The index of the extrinsic in the block it was executed in.
+	 * The index of the extrinsic in the block it was executed in.
 	 */
 	index: number | string;
 };
