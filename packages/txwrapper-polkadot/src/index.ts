@@ -14,6 +14,11 @@ export const methods = {
 	balances: substrateMethods.balances,
 	utility: substrateMethods.utility,
 	proxy: substrateMethods.proxy,
+	democracy: substrateMethods.democracy,
+	session: substrateMethods.session,
+	staking: substrateMethods.staking,
+	system: substrateMethods.system,
+	vesting: substrateMethods.vesting,
 };
 
 // Re-export all of txwrapper-core so users have access to utilities, construct functions,
