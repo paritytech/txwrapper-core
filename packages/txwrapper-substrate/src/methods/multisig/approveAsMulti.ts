@@ -14,7 +14,7 @@ export interface MultiSigApproveAsMulti extends Args {
 	 */
 	threshold: number | string;
 	/**
-	 * The accounts (other than the sender) who can approve this dispatch.
+	 * The accounts (other than the sender) who can approve this call.
 	 * May not be empty.
 	 */
 	otherSignatories: string[];
@@ -35,14 +35,14 @@ export interface MultiSigApproveAsMulti extends Args {
 }
 
 /**
- * Register approval for a dispatch to be made from a deterministic composite account if
- * approved by a total of `threshold - 1` of `other_signatories`.
+ * Register approval for a dispatch to be made from a deterministic composite account (i.e. multisig
+ * account) if approved by a total of `threshold - 1` of `other_signatories`.
  *
  * Payment: `DepositBase` will be reserved if this is the first approval, plus
  * `threshold` times `DepositFactor`. It is returned once this dispatch happens or
  * is cancelled.
  *
- * NOTE: If this is the final approval, you will want to use `as_multi` instead.
+ * NOTE: If this is the final approval, you must use `as_multi` instead.
  *
  * @param args - Arguments specific to this method.
  * @param info - Information required to construct the transaction.
