@@ -17,11 +17,11 @@
   },
   "dependencies": {
     "@substrate/txwrapper-core": "^0.1.0",
-    "@substrate/txwrapper-substrate": "^0.1.0",
-    "@substrate/txwrapper-registry": "^0.1.0"
+    "@substrate/txwrapper-registry": "^0.1.0",
+    "@substrate/txwrapper-substrate": "^0.1.0"
   },
   "devDependencies": {
-      "typescript": "^4.1.2",
-      "ts-node": "^9.0.0"
+    "ts-node": "^9.0.0",
+    "typescript": "4.1.5"
   }
 }
