@@ -10,7 +10,7 @@ import { Timepoint } from './types';
 
 export interface MultiSigApproveAsMulti extends Args {
 	/**
-	 * The total number of approvals for this dispatch before it is executed.
+	 * The total number of approvals required for this dispatch before it is executed.
 	 */
 	threshold: number | string;
 	/**
@@ -21,7 +21,7 @@ export interface MultiSigApproveAsMulti extends Args {
 	/**
 	 * If this is the first approval, then this must be `null`. If it is not the first
 	 * approval, then it must be the timepoint (block number and transaction index) of the first
-	 * approval transaction.
+	 * approving transaction.
 	 */
 	maybeTimepoint: null | Timepoint;
 	/**
