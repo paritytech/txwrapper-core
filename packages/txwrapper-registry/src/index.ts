@@ -20,8 +20,8 @@ export const knownChainProperties = substrateSS58Registry.reduce(
 	(acc, { decimals, network, symbols, prefix }) => {
 		if (network !== null) {
 			acc[network] = {
-				tokenDecimals: decimals?.length === 1 ? decimals[0] : decimals,
-				tokenSymbol: symbols?.length === 1 ? symbols[0] : symbols,
+				tokenDecimals: decimals,
+				tokenSymbol: symbols,
 				ss58Format: prefix,
 			};
 		}
