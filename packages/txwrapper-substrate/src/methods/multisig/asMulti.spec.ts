@@ -23,7 +23,7 @@ describe('multisig::asMulti', () => {
 		);
 	});
 
-	it('should work another txwrapper call as the `call`', () => {
+	it('should accept another txwrapper method as a `call`', () => {
 		const unsignedBalancesTransferKeepAlive = transferKeepAlive(
 			TEST_METHOD_ARGS.balances.transferKeepAlive,
 			TEST_BASE_TX_INFO,
