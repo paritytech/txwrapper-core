@@ -1732,17 +1732,17 @@
     "@open-web3/orml-type-definitions" "^0.6.0-beta.26"
 
 "@subsocial/types@^0.4.29":
-  version "0.4.33"
-  resolved "https://registry.yarnpkg.com/@subsocial/types/-/types-0.4.33.tgz#5d5078886af0315f64a4ef567a9b10c118b1623f"
-  integrity sha512-y7LTeorOtztDFTs0gyGyKEqfsGEnzuNKhTR3POFjp2IB72TSft0lEOfCJI65Wgqg6JwgfiE1InAYUlQaYJTR5Q==
+  version "0.4.32"
+  resolved "https://registry.yarnpkg.com/@subsocial/types/-/types-0.4.32.tgz#1b3716ba6615ef4ec0ab1758a6d5ccbad7817cd4"
+  integrity sha512-7kG7BwSVU2R+D/+U6fP+7zNvq8lFDCZp/6sEgdonMMkOjCX4g8aFr2QatQPnSHdt8ifo1dkns6wZ0XafCU3/1g==
   dependencies:
-    "@subsocial/utils" "^0.4.33"
+    "@subsocial/utils" "^0.4.26"
     cids "^0.7.1"
 
-"@subsocial/utils@^0.4.33":
-  version "0.4.34"
-  resolved "https://registry.yarnpkg.com/@subsocial/utils/-/utils-0.4.34.tgz#90057e9f79916b496fbbde957aa8bd74aeeabe34"
-  integrity sha512-e/n1tBYnEjtJvsYnVF3q6O3jPh+8wm8L9T9Nk6CpPZ1wuFyX4s4EqDBjm2ERjHQpvKSGdiakW3vGfQdVTOeBDA==
+"@subsocial/utils@^0.4.26":
+  version "0.4.30"
+  resolved "https://registry.yarnpkg.com/@subsocial/utils/-/utils-0.4.30.tgz#d12620d2f7493095afef9963a96187fabf7e1b89"
+  integrity sha512-y7FXzlGmMt1zKxSCd391hPbIRiNkr17i0j8NAp6iqIIJo/J8l5KTBjD8fe99bNH94G07fjnf8BvBp7ejoWTFmA==
   dependencies:
     "@sindresorhus/slugify" "^1.1.0"
     bn.js "^5.1.1"
@@ -8279,10 +8279,10 @@ typedoc@^0.20.12:
     shiki "^0.2.7"
     typedoc-default-themes "^0.12.4"
 
-typescript@4.1.5:
-  version "4.1.5"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.1.5.tgz#123a3b214aaff3be32926f0d8f1f6e704eb89a72"
-  integrity sha512-6OSu9PTIzmn9TCDiovULTnET6BgXtDYL4Gg4szY+cGsc3JP1dQL8qvE8kShTRx1NIw4Q9IBHlwODjkjWEtMUyA==
+typescript@4.1.4:
+  version "4.1.4"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.1.4.tgz#f058636e2f4f83f94ddaae07b20fd5e14598432f"
+  integrity sha512-+Uru0t8qIRgjuCpiSPpfGuhHecMllk5Zsazj5LZvVsEStEjmIRRBZe+jHjGQvsgS7M1wONy2PQXd67EMyV6acg==
 
 typescript@^4.1.2, typescript@^4.1.3:
   version "4.1.3"
