@@ -1,4 +1,4 @@
-import { typesBundle, typesChain, typesSpec } from '@polkadot/apps-config/api';
+import { typesBundle, typesChain } from '@polkadot/apps-config/api';
 import { all as substrateSS58Registry } from '@polkadot/networks';
 import { TypeRegistry } from '@polkadot/types';
 import { getSpecTypes } from '@polkadot/types-known';
@@ -18,11 +18,13 @@ import {
  */
 export const knownChainProperties = substrateSS58Registry.reduce(
 	(acc, { decimals, network, symbols, prefix }) => {
-		acc[network] = {
-			tokenDecimals: decimals?.length === 1 ? decimals[0] : decimals,
-			tokenSymbol: symbols?.length === 1 ? symbols[0] : symbols,
-			ss58Format: prefix,
-		};
+		if (network !== null) {
+			acc[network] = {
+				tokenDecimals: decimals,
+				tokenSymbol: symbols,
+				ss58Format: prefix,
+			};
+		}
 
 		return acc;
 	},
@@ -52,7 +54,6 @@ function getAppsConfigRegistry(): TypeRegistry {
 	registry.setKnownTypes({
 		typesBundle,
 		typesChain,
-		typesSpec,
 	});
 
 	return registry;

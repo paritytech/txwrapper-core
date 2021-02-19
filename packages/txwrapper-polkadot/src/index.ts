@@ -19,6 +19,7 @@ export const methods = {
 	staking: substrateMethods.staking,
 	system: substrateMethods.system,
 	vesting: substrateMethods.vesting,
+	multisig: substrateMethods.multisig,
 };
 
 // Re-export all of txwrapper-core so users have access to utilities, construct functions,

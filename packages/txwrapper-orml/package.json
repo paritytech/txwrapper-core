@@ -1,6 +1,6 @@
 {
   "name": "@substrate/txwrapper-orml",
-  "version": "0.1.0",
+  "version": "0.1.1-beta.0",
   "author": "Parity Technologies <admin@parity.io>",
   "description": "Selected dispatchables of ORML pallets, to be re-exported by txwrappers.",
   "files": [
@@ -18,9 +18,9 @@
     "build": "rimraf lib/ && tsc -p tsconfig.build.json"
   },
   "dependencies": {
-    "@substrate/txwrapper-core": "^0.1.0"
+    "@substrate/txwrapper-core": "^0.1.1-beta.0"
   },
   "devDependencies": {
-    "@acala-network/type-definitions": "0.6.2-7"
+    "@acala-network/type-definitions": "0.6.2-14"
   }
 }
