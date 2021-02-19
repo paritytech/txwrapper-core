@@ -8,6 +8,17 @@ export const TEST_METHOD_ARGS = {
 			value: 12,
 		},
 	},
+	democracy: {
+		vote: {
+			refIndex: 0,
+			vote: {
+				Standard: {
+					balance: 1234,
+					vote: { aye: true, conviction: 'Locked1x' },
+				},
+			},
+		},
+	},
 	proxy: {
 		addProxy: {
 			delegate: '14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3', // seed "//Bob",
@@ -36,6 +47,18 @@ export const TEST_METHOD_ARGS = {
 			forceProxyType: 'Any',
 			call:
 				'0x0500306721211d5404bd9da88e0204360a1a9ab8b87c66c1bc2fcdd37f3c2222cc200f00a0be1c448399',
+		},
+	},
+	session: {
+		setKeys: {
+			keys: [
+				'HNZata7iMYWmk5RvZRTiAsSDhV8366zq2YGb3tLH5Upf74F', // seed "//Alice"
+				'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP', // seed "//Bob"
+				'Fr4NzY1udSFFLzb2R3qxVQkwz9cZraWkyfH4h3mVVk7BK7P', // seed "//Charlie"
+				'HNZata7iMYWmk5RvZRTiAsSDhV8366zq2YGb3tLH5Upf74F', // seed "//Alice"
+				'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP', // seed "//Bob"
+			],
+			proof: '0x',
 		},
 	},
 	staking: {
@@ -73,15 +96,9 @@ export const TEST_METHOD_ARGS = {
 		},
 		withdrawUnbonded: { numSlashingSpans: 11 },
 	},
-	democracy: {
-		vote: {
-			refIndex: 0,
-			vote: {
-				Standard: {
-					balance: 1234,
-					vote: { aye: true, conviction: 'Locked1x' },
-				},
-			},
+	system: {
+		remark: {
+			remark: '0x42194253', // random bytes
 		},
 	},
 	vesting: {
