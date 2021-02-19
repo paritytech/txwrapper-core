@@ -12,7 +12,7 @@ export interface SessionSetKeysArgs extends Args {
 	 */
 	keys: string[];
 	/**
-	 * Proof (unused for now).
+	 * Proof of key ownership (currently unused).
 	 */
 	proof?: string;
 }
