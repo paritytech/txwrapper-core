@@ -88,9 +88,3 @@ yarn run deploy
 ```
 
 *The publisher will need publishing permissions to the @substrate npm org.
-
-Update dependencies:
-
-```bash
-yarn run upgrade
-```

@@ -8,7 +8,7 @@
     "packages/*"
   ],
   "scripts": {
-    "deploy": "yarn run build && lerna publish --conventional-commits --create-release github",
+    "deploy": "yarn run build && lerna version --conventional-commits --create-release github && lerna publish",
     "build": "lerna run build",
     "lint": "tsc --noEmit && eslint . --ext ts",
     "test": "jest",
