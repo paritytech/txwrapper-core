@@ -8,9 +8,9 @@ import {
 
 export interface StakingSetPayeeArgs extends Args {
 	/**
-	 * The `RewardDestination`. It can be one of 'Staking', 'Stash', or 'Controller'.
+	 * The rewards destination. Can be "Stash", "Staked", "Controller" or "{ Account: accountId }".
 	 */
-	payee: string;
+	payee: string | { Account: string };
 }
 
 /**
