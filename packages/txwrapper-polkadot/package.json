@@ -1,6 +1,6 @@
 {
   "name": "@substrate/txwrapper-polkadot",
-  "version": "0.1.1-beta.0",
+  "version": "0.2.0-beta.0",
   "author": "Parity Technologies <admin@parity.io>",
   "description": "Helper functions for Polkadot, Kusama, Rococo and Westend offline transaction generation.",
   "files": [
@@ -18,7 +18,7 @@
     "build": "rimraf lib/ && tsc -p tsconfig.build.json"
   },
   "dependencies": {
-    "@substrate/txwrapper-core": "^0.1.1-beta.0",
-    "@substrate/txwrapper-substrate": "^0.1.1-beta.0"
+    "@substrate/txwrapper-core": "^0.2.0-beta.0",
+    "@substrate/txwrapper-substrate": "^0.2.0-beta.0"
   }
 }

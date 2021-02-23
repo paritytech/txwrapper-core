@@ -1,3 +1,16 @@
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+# [0.2.0-beta.0](http://%3Clink%20to%20the%20github%20repo%20this%20package%20lives%20in%3E/compare/v0.1.1-beta.0...v0.2.0-beta.0) (2021-02-23)
+
+**Note:** Version bump only for package @substrate/txwrapper-template
+
+
+
+
+
 # 0.1.0 (2021-02-15)
 
 
@@ -9,6 +22,3 @@
 ### Features
 
 * txwrapper-template & CHAIN_BUILDER guide ([#35](http://%3Clink%20to%20the%20github%20repo%20this%20package%20lives%20in%3E/issues/35)) ([427ea8c](http://%3Clink%20to%20the%20github%20repo%20this%20package%20lives%20in%3E/commits/427ea8cd645c139617bf0c647adc90ac293f35fe))
-
-
-
