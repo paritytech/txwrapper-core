@@ -1,6 +1,6 @@
 {
   "name": "@substrate/txwrapper-core",
-  "version": "0.2.0-beta.0",
+  "version": "0.2.0",
   "author": "Parity Technologies <admin@parity.io>",
   "description": "Core components for creating a txwrapper lib.",
   "files": [
@@ -18,7 +18,7 @@
     "build": "rimraf lib/ && tsc -p tsconfig.build.json"
   },
   "dependencies": {
-    "@polkadot/api": "3.10.2",
+    "@polkadot/api": "3.11.1",
     "memoizee": "0.4.15"
   },
   "devDependencies": {
