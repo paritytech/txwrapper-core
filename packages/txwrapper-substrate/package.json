@@ -1,6 +1,6 @@
 {
   "name": "@substrate/txwrapper-substrate",
-  "version": "0.2.0-beta.0",
+  "version": "0.2.0",
   "author": "Parity Technologies <admin@parity.io>",
   "description": "Selected dispatchables of Substrate pallets, to be re-exported by txwrappers.",
   "files": [
@@ -18,6 +18,6 @@
     "build": "rimraf lib/ && tsc -p tsconfig.build.json"
   },
   "dependencies": {
-    "@substrate/txwrapper-core": "^0.2.0-beta.0"
+    "@substrate/txwrapper-core": "^0.2.0"
   }
 }
