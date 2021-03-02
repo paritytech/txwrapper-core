@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.1](http://%3Clink%20to%20the%20github%20repo%20this%20package%20lives%20in%3E/compare/v0.2.0-beta.0...v0.2.1) (2021-03-02)
+
+
+### Bug Fixes
+
+* **types:** Bump deps to get latest type definitions ([#59](http://%3Clink%20to%20the%20github%20repo%20this%20package%20lives%20in%3E/issues/59)) ([76b5e55](http://%3Clink%20to%20the%20github%20repo%20this%20package%20lives%20in%3E/commits/76b5e551ae0fcdcc6f932473129879f7fe87a939))
+
+
+
+
+
 # [0.2.0-beta.0](http://%3Clink%20to%20the%20github%20repo%20this%20package%20lives%20in%3E/compare/v0.1.1-beta.0...v0.2.0-beta.0) (2021-02-23)
 
 **Note:** Version bump only for package @substrate/txwrapper-template
