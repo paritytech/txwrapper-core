@@ -87,4 +87,6 @@ Publish with lerna by running:*
 yarn run deploy
 ```
 
+**N.B.** Ensure you have [`GH_TOKEN` env variable set](https://github.com/lerna/lerna/tree/main/commands/version#--create-release-type) to a GitHub personal access token (PAT) so lerna can publish the release on github.
+
 *The publisher will need publishing permissions to the @substrate npm org.
