@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@polkadot/api": "3.11.1",
-    "@substrate/txwrapper-polkadot": "^0.2.0-beta.0",
-    "txwrapper-acala": "^0.2.0-beta.0"
+    "@substrate/txwrapper-polkadot": "^0.2.0",
+    "txwrapper-acala": "^0.2.0"
   }
 }
