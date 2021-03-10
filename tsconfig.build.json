@@ -1,11 +1,3 @@
 {
-  "compilerOptions": {
-    "declaration": true,
-    "module": "CommonJS",
-    "target": "ES2015",
-    "esModuleInterop": true,
-    "strict": true,
-    "skipLibCheck": true,
-    "sourceMap": true
-  }
+  "extends": "@substrate/dev/config/tsconfig.json",
 }

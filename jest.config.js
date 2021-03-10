@@ -4,9 +4,10 @@ const { pathsToModuleNameMapper } = require('ts-jest/utils');
 const {
 	compilerOptions: { paths },
 } = require('./tsconfig.json');
+const base = require('@substrate/dev/config/jest');
 
 module.exports = {
-	preset: 'ts-jest',
+	...base,
 	testPathIgnorePatterns: ['lib', 'node_modules'],
 	moduleNameMapper: pathsToModuleNameMapper(paths, {
 		prefix: '<rootDir>/packages',

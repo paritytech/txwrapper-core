@@ -1,6 +1,7 @@
 /**
  * @ignore
  */ /** */
+import { ModuleExtrinsics } from '@polkadot/metadata/decorate/types';
 import { EXTRINSIC_VERSION } from '@polkadot/types/extrinsic/v4/Extrinsic';
 import { stringCamelCase } from '@polkadot/util';
 
@@ -36,12 +37,17 @@ export function defineMethod(
 
 	const tx = createDecoratedTx(registry, metadataRpc);
 
-	const methodFunction = tx[info.method.pallet][info.method.name];
+	const methodFunction =
+		!!tx[info.method.pallet] &&
+		((tx[info.method.pallet] as unknown) as ModuleExtrinsics)[info.method.name];
+	if (!methodFunction) {
+		throw new Error('paller or method not found in metadat');
+	}
+
 	const method = methodFunction(
 		...methodFunction.meta.args.map((arg) => {
 			if (
-				info.method.args[stringCamelCase(arg.name.toString())] ===
-				undefined
+				info.method.args[stringCamelCase(arg.name.toString())] === undefined
 			) {
 				throw new Error(
 					`Method ${info.method.pallet}::${
@@ -63,9 +69,7 @@ export function defineMethod(
 	return {
 		address: info.address,
 		blockHash: info.blockHash,
-		blockNumber: registry
-			.createType('BlockNumber', info.blockNumber)
-			.toHex(),
+		blockNumber: registry.createType('BlockNumber', info.blockNumber).toHex(),
 		era: registry
 			.createType('ExtrinsicEra', {
 				current: info.blockNumber,

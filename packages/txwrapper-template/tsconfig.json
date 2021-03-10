@@ -2,7 +2,7 @@
   "compilerOptions": {
     "declaration": true,
     "module": "CommonJS",
-    "target": "ES2015",
+    "target": "ES2019",
     "esModuleInterop": true,
     "strict": true,
     "skipLibCheck": true,

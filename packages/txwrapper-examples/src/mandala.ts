@@ -91,9 +91,7 @@ async function main(): Promise<void> {
 	console.log(
 		`\nDecoded Transaction\n  To: ${decodedUnsigned.method.args.dest}\n` +
 			`  Amount: ${decodedUnsigned.method.args.amount}\n` +
-			`  CurrencyId ${JSON.stringify(
-				decodedUnsigned.method.args.currencyId
-			)}`
+			`  CurrencyId ${JSON.stringify(decodedUnsigned.method.args.currencyId)}`
 	);
 
 	// Construct the signing payload from an unsigned transaction.

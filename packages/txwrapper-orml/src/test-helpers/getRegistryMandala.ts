@@ -1,5 +1,6 @@
 import { typesBundleForPolkadot } from '@acala-network/type-definitions';
 import { TypeRegistry } from '@polkadot/types';
+import { OverrideBundleType } from '@polkadot/types/types';
 import { getSpecTypes } from '@polkadot/types-known';
 import { getRegistryBase, PolkadotSS58Format } from '@substrate/txwrapper-core';
 
@@ -14,7 +15,9 @@ export function getRegistryMandala(
 	metadataRpc: string
 ): TypeRegistry {
 	const registry = new TypeRegistry();
-	registry.setKnownTypes({ typesBundle: typesBundleForPolkadot });
+	registry.setKnownTypes({
+		typesBundle: (typesBundleForPolkadot as unknown) as OverrideBundleType,
+	});
 
 	return getRegistryBase({
 		chainProperties: {

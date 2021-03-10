@@ -62,10 +62,7 @@ async function main(): Promise<void> {
 			dest: '14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3', // Bob
 		},
 		{
-			address: deriveAddress(
-				alice.publicKey,
-				PolkadotSS58Format.polkadot
-			),
+			address: deriveAddress(alice.publicKey, PolkadotSS58Format.polkadot),
 			blockHash,
 			blockNumber: registry
 				.createType('BlockNumber', block.header.number)
