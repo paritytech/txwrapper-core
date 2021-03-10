@@ -31,16 +31,12 @@ export function decodeUnsignedTx(
 		blockNumber: registry
 			.createType('BlockNumber', unsigned.blockNumber)
 			.toNumber(),
-		eraPeriod: registry
-			.createType('MortalEra', unsigned.era)
-			.period.toNumber(),
+		eraPeriod: registry.createType('MortalEra', unsigned.era).period.toNumber(),
 		genesisHash: unsigned.genesisHash,
 		metadataRpc,
 		method,
 		nonce: registry.createType('Compact<Index>', unsigned.nonce).toNumber(),
-		specVersion: registry
-			.createType('u32', unsigned.specVersion)
-			.toNumber(),
+		specVersion: registry.createType('u32', unsigned.specVersion).toNumber(),
 		tip: registry.createType('Compact<Balance>', unsigned.tip).toNumber(),
 		transactionVersion: registry
 			.createType('u32', unsigned.transactionVersion)

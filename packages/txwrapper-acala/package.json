@@ -10,12 +10,15 @@
   "main": "lib/index.js",
   "private": true,
   "repository": "https://github.com/paritytech/txwrapper-core",
+  "engine": {
+    "node": ">=12"
+  },
   "scripts": {
     "build": "rimraf lib/ && tsc -p tsconfig.build.json",
     "test": "jest"
   },
   "dependencies": {
-    "@acala-network/type-definitions": "0.6.2-17",
+    "@acala-network/type-definitions": "0.6.2-22",
     "@substrate/txwrapper-core": "^0.2.1",
     "@substrate/txwrapper-orml": "^0.2.1"
   }

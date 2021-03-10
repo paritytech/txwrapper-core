@@ -22,7 +22,5 @@ export function itDecodesBalancesTransferCommon(
 
 	// The actual period is the smallest power of 2 greater than the input
 	// period.
-	expect(decoded.eraPeriod).toBeGreaterThanOrEqual(
-		TEST_BASE_TX_INFO.eraPeriod
-	);
+	expect(decoded.eraPeriod).toBeGreaterThanOrEqual(TEST_BASE_TX_INFO.eraPeriod);
 }

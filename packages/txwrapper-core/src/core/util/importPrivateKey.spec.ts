@@ -6,10 +6,7 @@ const PRIVATE_KEY =
 
 describe('importPrivateKey', () => {
 	it('should work', () => {
-		const keypair = importPrivateKey(
-			PRIVATE_KEY,
-			PolkadotSS58Format.kusama
-		);
+		const keypair = importPrivateKey(PRIVATE_KEY, PolkadotSS58Format.kusama);
 
 		expect(keypair.address).toBe(
 			'HSgj13mnepYxuysui2XroHKigftFpQsg1dcSfA9PckdZJW4'
@@ -17,10 +14,7 @@ describe('importPrivateKey', () => {
 	});
 
 	it('should work', () => {
-		const keypair = importPrivateKey(
-			PRIVATE_KEY,
-			PolkadotSS58Format.polkadot
-		);
+		const keypair = importPrivateKey(PRIVATE_KEY, PolkadotSS58Format.polkadot);
 
 		expect(keypair.address).toBe(
 			'15sND1xy2556eoAx6eGV6zkURiPJ9T9qJ8XMDHsYTuZezp7f'

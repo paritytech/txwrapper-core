@@ -14,11 +14,14 @@
   "repository": "https://github.com/paritytech/txwrapper-core",
   "bugs": "https://github.com/paritytech/txwrapper-core/issues",
   "homepage": "https://github.com/paritytech/txwrapper-core/tree/master/packages/txwrapper-core#readme",
+  "engine": {
+    "node": ">=12"
+  },
   "scripts": {
     "build": "rimraf lib/ && tsc -p tsconfig.build.json"
   },
   "dependencies": {
-    "@polkadot/api": "3.11.1",
+    "@polkadot/api": "4.0.3",
     "memoizee": "0.4.15"
   },
   "devDependencies": {

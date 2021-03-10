@@ -3,6 +3,5 @@
 .DS_Store
 **/*yarn-error.log
 **/**.d.ts
-**/**.js
 **/**.js.map
 

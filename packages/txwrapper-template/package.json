@@ -12,6 +12,9 @@
   "repository": "<link to the github repo this package lives in>",
   "bugs": "<link to the github repo this package lives in>/issues",
   "homepage": "<link to the github repo this package lives in>#readme",
+  "engine": {
+    "node": ">=12"
+  },
   "scripts": {
     "build": "tsc -p tsconfig.json"
   },

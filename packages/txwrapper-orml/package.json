@@ -11,6 +11,9 @@
   "publishConfig": {
     "access": "public"
   },
+  "engine": {
+    "node": ">=12"
+  },
   "repository": "https://github.com/paritytech/txwrapper-core",
   "bugs": "https://github.com/paritytech/txwrapper-core/issues",
   "homepage": "https://github.com/paritytech/txwrapper-core/tree/master/packages/txwrapper-orml#readme",
@@ -21,6 +24,6 @@
     "@substrate/txwrapper-core": "^0.2.1"
   },
   "devDependencies": {
-    "@acala-network/type-definitions": "0.6.2-17"
+    "@acala-network/type-definitions": "0.6.2-22"
   }
 }

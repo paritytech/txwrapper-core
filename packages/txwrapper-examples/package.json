@@ -9,13 +9,16 @@
   "repository": "https://github.com/paritytech/txwrapper-core",
   "bugs": "https://github.com/paritytech/txwrapper-core/issues",
   "homepage": "https://github.com/paritytech/txwrapper-core/tree/master/packages/txwrapper-examples#readme",
+  "engine": {
+    "node": ">=12"
+  },
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
     "polkadot": "node lib/polkadot",
     "mandala": "node lib/mandala"
   },
   "dependencies": {
-    "@polkadot/api": "3.11.1",
+    "@polkadot/api": "4.0.3",
     "@substrate/txwrapper-polkadot": "^0.2.1",
     "txwrapper-acala": "^0.2.1"
   }

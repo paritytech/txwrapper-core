@@ -14,12 +14,15 @@
   "repository": "https://github.com/paritytech/txwrapper-core",
   "bugs": "https://github.com/paritytech/txwrapper-core/issues",
   "homepage": "https://github.com/paritytech/txwrapper-core/tree/master/packages/txwrapper-registry#readme",
+  "engine": {
+    "node": ">=12"
+  },
   "scripts": {
     "build": "rimraf lib/ && tsc -p tsconfig.build.json"
   },
   "dependencies": {
-    "@polkadot/apps-config": "0.82.1",
-    "@polkadot/networks": "5.9.2",
+    "@polkadot/apps-config": "0.83.1",
+    "@polkadot/networks": "6.0.5",
     "@substrate/txwrapper-core": "^0.2.1"
   }
 }

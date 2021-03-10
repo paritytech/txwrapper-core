@@ -36,9 +36,7 @@ export function rpcToLocalNode(
 		.then(({ error, result }) => {
 			if (error) {
 				throw new Error(
-					`${error.code} ${error.message}: ${JSON.stringify(
-						error.data
-					)}`
+					`${error.code} ${error.message}: ${JSON.stringify(error.data)}`
 				);
 			}
 
