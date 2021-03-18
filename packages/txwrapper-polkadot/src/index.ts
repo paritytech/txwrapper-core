@@ -7,6 +7,8 @@ import {
 } from '@substrate/txwrapper-core';
 import { methods as substrateMethods } from '@substrate/txwrapper-substrate';
 
+import * as polkadotMethods from './methods';
+
 // Export methods of pallets included in the Polkadot/ Kusama/ Westend runtimes.
 // Note: in the future this may also include methods defined within this package
 // that do not exist in Substrate.
@@ -20,6 +22,7 @@ export const methods = {
 	system: substrateMethods.system,
 	vesting: substrateMethods.vesting,
 	multisig: substrateMethods.multisig,
+	crowdloan: polkadotMethods.crowdloan,
 };
 
 // Re-export all of txwrapper-core so users have access to utilities, construct functions,
@@ -58,7 +61,7 @@ export interface GetRegistryOpts extends GetRegistryOptsCore {
 }
 
 /**
- * Get a type registry for networks that txwrapper-acala supports.
+ * Get a type registry for networks that txwrapper-polkadot supports.
  *
  * @param GetRegistryOptions specName, chainName, specVersion, and metadataRpc of the current runtime
  */
