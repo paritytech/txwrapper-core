@@ -113,8 +113,6 @@ async function main(): Promise<void> {
 
 	// Create an array of `balances.transferKeepAlive().method`s. We just need the
 	// `method` from the `UnsignedTransaction` that txwrapper methods returns.
-	// The `calls` argument for `batchAll` in this case is of type
-	// `Array<UnsignedTransaction.method>`
 	const txMethods = transferArgs.map((args) => {
 		const txInfo = methods.balances.transferKeepAlive(
 			args,
@@ -134,7 +132,9 @@ async function main(): Promise<void> {
 		return txInfo.method;
 	});
 
-	// Create a `utility.batchAll` unsigned tx
+	// Create a `utility.batchAll` unsigned tx. Based on the above code the
+	// `calls` argument for `batchAll` (`txMethods`)  is of type
+	// `Array<UnsignedTransaction.method>`
 	const unsigned = methods.utility.batchAll(
 		{
 			calls: txMethods,
