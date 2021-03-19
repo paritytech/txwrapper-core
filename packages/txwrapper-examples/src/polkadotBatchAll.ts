@@ -53,32 +53,105 @@ async function main(): Promise<void> {
 		metadataRpc,
 	});
 
-	// Now we can create our `balances.transferKeepAlive` unsigned tx. The following
-	// function takes the above data as arguments, so can be performed offline
-	// if desired.
-	const unsigned = methods.balances.transferKeepAlive(
+	// Metadata and type defintion registry used to create the calls
+	const optionsWithMeta = {
+		registry: registry,
+		metadataRpc: metadataRpc,
+	};
+
+	// Arguments for 12 balances transferKeepAlive
+	const transferArgs = [
 		{
-			value: '90071992547409910',
-			dest: '14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3', // Bob
+			dest: '5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty',
+			value: '1000000000',
 		},
 		{
-			address: deriveAddress(alice.publicKey, PolkadotSS58Format.polkadot),
-			blockHash,
-			blockNumber: registry
-				.createType('BlockNumber', block.header.number)
-				.toNumber(),
-			eraPeriod: 64,
+			dest: '5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty',
+			value: '2000000000',
+		},
+		{
+			dest: '5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty',
+			value: '3000000000',
+		},
+		{
+			dest: '5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty',
+			value: '4000000000',
+		},
+		{
+			dest: '5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty',
+			value: '5000000000',
+		},
+		{
+			dest: '5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty',
+			value: '6000000000',
+		},
+		{
+			dest: '5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty',
+			value: '7000000000',
+		},
+		{
+			dest: '5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty',
+			value: '8000000000',
+		},
+		{
+			dest: '5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty',
+			value: '9000000000',
+		},
+		{
+			dest: '5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty',
+			value: '10000000000',
+		},
+		{
+			dest: '5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty',
+			value: '11000000000',
+		},
+		{
+			dest: '5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty',
+			value: '12000000000',
+		},
+	];
+
+	// Create an array of `balances.transferKeepAlive().method`s. We just need the
+	// `method` from the `UnsignedTransaction` that txwrapper methods returns.
+	// The `calls` argument for `batchAll` in this case is of type
+	// `Array<UnsignedTransaction.method>`
+	const txMethods = transferArgs.map((args) => {
+		const txInfo = methods.balances.transferKeepAlive(
+			args,
+			{
+				address: alice.address,
+				blockHash: blockHash,
+				blockNumber: block.header.number,
+				genesisHash,
+				metadataRpc,
+				nonce: 0,
+				specVersion: specVersion,
+				transactionVersion,
+			},
+			optionsWithMeta
+		);
+
+		return txInfo.method;
+	});
+
+	// Create a `utility.batchAll` unsigned tx
+	const unsigned = methods.utility.batchAll(
+		{
+			calls: txMethods,
+		},
+		{
+			address: alice.address,
+			blockHash: blockHash,
+			blockNumber: block.header.number,
 			genesisHash,
 			metadataRpc,
-			nonce: 0, // Assuming this is Alice's first tx on the chain
-			specVersion,
+			nonce: 0,
+			specVersion: specVersion,
 			tip: 0,
+			eraPeriod: 64,
 			transactionVersion,
 		},
-		{
-			metadataRpc,
-			registry,
-		}
+		optionsWithMeta
 	);
 
 	// Decode an unsigned transaction.
@@ -87,9 +160,9 @@ async function main(): Promise<void> {
 		registry,
 	});
 	console.log(
-		`\nDecoded Transaction\n  To: ${
-			(decodedUnsigned.method.args.dest as { id: string })?.id
-		}\n` + `  Amount: ${decodedUnsigned.method.args.value}`
+		`\nDecoded Transaction\n  calls: ${JSON.stringify(
+			decodedUnsigned.method.args.calls
+		)}\n`
 	);
 
 	// Construct the signing payload from an unsigned transaction.
@@ -102,9 +175,9 @@ async function main(): Promise<void> {
 		registry,
 	});
 	console.log(
-		`\nDecoded Transaction\n  To: ${
-			(payloadInfo.method.args.dest as { id: string })?.id
-		}\n` + `  Amount: ${payloadInfo.method.args.value}`
+		`\nDecoded Transaction\n  calls: ${JSON.stringify(
+			payloadInfo.method.args.calls
+		)}\n`
 	);
 
 	// Sign a payload. This operation should be performed on an offline device.
@@ -137,9 +210,9 @@ async function main(): Promise<void> {
 		registry,
 	});
 	console.log(
-		`\nDecoded Transaction\n  To: ${
-			(txInfo.method.args.dest as { id: string })?.id
-		}\n` + `  Amount: ${txInfo.method.args.value}\n`
+		`\nDecoded Transaction\n  calls: ${JSON.stringify(
+			txInfo.method.args.calls
+		)}\n`
 	);
 }
 

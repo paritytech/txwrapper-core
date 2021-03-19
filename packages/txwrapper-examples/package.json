@@ -15,6 +15,7 @@
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
     "polkadot": "node lib/polkadot",
+    "polkadotBatchAll": "node lib/polkadotBatchAll",
     "mandala": "node lib/mandala"
   },
   "dependencies": {

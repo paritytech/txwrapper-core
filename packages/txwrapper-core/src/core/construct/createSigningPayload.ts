@@ -34,8 +34,16 @@ import { Options, UnsignedTransaction } from '../../types';
  *  });
  *
  * // With the `ExtrinsicPayload` class, construct the actual payload to sign.
- * const actualPayload = extrinsicPayload.toU8a({ method: true });
+ * // N.B. signing payloads bigger than 256 bits get hashed with blake2_256
+ * // ref: https://substrate.dev/rustdocs/v3.0.0/src/sp_runtime/generic/unchecked_extrinsic.rs.html#201-209
+ * extrinsicPayloadU8a = extrinsicPayload.toU8a({ method: true })
+ * const actualPayload = extrinsicPayloadU8a.length > 256
+ *   ? registry.hash(extrinsicPayloadU8a)
+ *   : extrinsicPayloadU8a;
+ *
  * // You can now sign `actualPayload` with you private key.
+ * // Note: you can can use `u8ToHex` from @polkadot/util to convert `actualPayload`
+ * // to a hex string.
  *
  * // Alternatively, call the `.sign()` method directly on the
  * `ExtrinsicPayload` class.
