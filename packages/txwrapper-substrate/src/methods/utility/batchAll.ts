@@ -13,8 +13,7 @@ import { UtilityBatch } from './batch';
  *
  * May be called from any origin.
  *
- *
- * If origin is root then call are dispatch without checking origin filter.
+ * If origin is root then calls are dispatch without checking origin filter.
  * (This includes bypassing `frame_system::Config::BaseCallFilter`).
  *
  * @param args
