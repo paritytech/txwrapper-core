@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/paritytech/txwrapper-core/compare/v0.3.0...v0.4.0) (2021-03-22)
+
+
+### Bug Fixes
+
+* **deps:** Update [@polkadot](https://github.com/polkadot) deps to get latest types ([#66](https://github.com/paritytech/txwrapper-core/issues/66)) ([be8ca96](https://github.com/paritytech/txwrapper-core/commit/be8ca96910c98717edc9e2b0abd3d1816faa9eca))
+
+
+### Features
+
+* **substrate:** Add pallet method `utility.batchAll` + example ([#65](https://github.com/paritytech/txwrapper-core/issues/65)) ([a89bd5a](https://github.com/paritytech/txwrapper-core/commit/a89bd5a7395701a4b19426108edc3871960ad0b6))
+
+
+
+
+
 # [0.3.0](https://github.com/paritytech/txwrapper-core/compare/v0.2.1...v0.3.0) (2021-03-15)
 
 **Note:** Version bump only for package @substrate/txwrapper-core

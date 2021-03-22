@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/paritytech/txwrapper-core/compare/v0.3.0...v0.4.0) (2021-03-22)
+
+
+### Features
+
+* **polkadot:** Add pallet methods `crowdloan.{contribute, withdraw}` ([#64](https://github.com/paritytech/txwrapper-core/issues/64)) ([09542bd](https://github.com/paritytech/txwrapper-core/commit/09542bd63eed83d05d22bf003219b4be6d1b7975)), closes [#63](https://github.com/paritytech/txwrapper-core/issues/63)
+
+
+
+
+
 # [0.3.0](https://github.com/paritytech/txwrapper-core/compare/v0.2.1...v0.3.0) (2021-03-15)
 
 **Note:** Version bump only for package @substrate/txwrapper-polkadot
