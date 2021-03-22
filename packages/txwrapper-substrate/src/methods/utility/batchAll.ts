@@ -9,12 +9,12 @@ import { UtilityBatch } from './batch';
 
 /**
  * Send a batch of dispatch calls and atomically execute them.
- * The whole transaction will rollback and fail if any of the calls failed.
+ * The whole transaction will rollback and fail if any of the calls fail.
  *
  * May be called from any origin.
  *
  *
- * If origin is root then call are dispatch without checking origin filter.
+ * If origin is root then calls are dispatched without checking the origin.
  * (This includes bypassing `frame_system::Config::BaseCallFilter`).
  *
  * @param args
