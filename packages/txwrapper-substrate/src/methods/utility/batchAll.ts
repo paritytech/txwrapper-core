@@ -9,7 +9,7 @@ import { UtilityBatch } from './batch';
 
 /**
  * Send a batch of dispatch calls and atomically execute them.
- * The whole transaction will rollback and fail if any of the calls failed.
+ * The whole transaction will rollback and fail if any of the calls fail.
  *
  * May be called from any origin.
  *
