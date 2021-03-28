@@ -17,8 +17,6 @@ For example, those looking to construct a transaction offline on Polkadot would 
 
 ### Packages
 
-(At the moment nothing is actually published as the contents of the repo are WIP, but the below lists reflect current plans for what we will publish.)
-
 #### Published
 
 - [@substrate/txwrapper-polkadot](/packages/txwrapper-polkadot/README.md) Helper functions for Polkadot, Kusama, Rococo and Westend offline transaction generation.
