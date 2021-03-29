@@ -21,7 +21,7 @@
     "build": "rimraf lib/ && tsc -p tsconfig.build.json"
   },
   "dependencies": {
-    "@polkadot/apps-config": "0.85.1",
+    "@polkadot/apps-config": "0.86.2",
     "@polkadot/networks": "6.0.5",
     "@substrate/txwrapper-core": "^0.4.0"
   }
