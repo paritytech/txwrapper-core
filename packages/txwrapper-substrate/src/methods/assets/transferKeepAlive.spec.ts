@@ -1,7 +1,7 @@
 import {
 	itHasCorrectBaseTxInfo,
 	POLKADOT_29_TEST_OPTIONS,
-	TEST_BASE_TX_INFO,
+	TEST_BASE_TX_INFO_V29,
 } from '@substrate/txwrapper-core';
 
 import { TEST_METHOD_ARGS } from '../../test-helpers';
@@ -11,7 +11,7 @@ describe('assets:transferKeepAlive', () => {
 	it('should work', () => {
 		const unsigned = transferKeepAlive(
 			TEST_METHOD_ARGS.assets.transferKeepAlive,
-			TEST_BASE_TX_INFO,
+			TEST_BASE_TX_INFO_V29,
 			POLKADOT_29_TEST_OPTIONS
 		);
 
