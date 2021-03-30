@@ -1,5 +1,6 @@
 import { getRegistryPolkadot } from './getRegistryPolkadot';
 import metadataRpc from './staticV3-1-1';
+import metadataRpcV29 from './staticV4-3-1';
 export { metadataRpc };
 
 /**
@@ -26,6 +27,14 @@ export const TEST_BASE_TX_INFO = {
 export const POLKADOT_25_TEST_OPTIONS = {
 	metadataRpc,
 	registry: getRegistryPolkadot(25, metadataRpc),
+};
+
+/**
+ * Test options for runtime v29
+ */
+export const POLKADOT_29_TEST_OPTIONS = {
+	metadataRpc: metadataRpcV29,
+	registry: getRegistryPolkadot(29, metadataRpcV29),
 };
 
 /**
