@@ -15,7 +15,7 @@ export interface AssetsTransferApprovedArgs extends Args {
 	 * The account which previously approved for a transfer of at least `amount` and
 	 * from which the asset balance will be withdrawn.
 	 */
-	target: string;
+	owner: string;
 	/**
 	 * The account to which the asset balance of `amount` will be transferred.
 	 */

@@ -9,12 +9,10 @@ import {
 export interface AssetsCancelApprovalArgs extends Args {
 	/**
 	 * The identifier of the asset.
-	 *
 	 */
 	id: number;
 	/**
 	 * The account delegated permission to transfer asset.
-	 *
 	 */
 	delegate: string;
 }
