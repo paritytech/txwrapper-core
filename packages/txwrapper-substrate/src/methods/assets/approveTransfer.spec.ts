@@ -1,6 +1,6 @@
 import {
 	itHasCorrectBaseTxInfo,
-	POLKADOT_25_TEST_OPTIONS,
+	POLKADOT_29_TEST_OPTIONS,
 	TEST_BASE_TX_INFO,
 } from '@substrate/txwrapper-core';
 
@@ -12,7 +12,7 @@ describe('assets:approveTransfer', () => {
 		const unsigned = approveTransfer(
 			TEST_METHOD_ARGS.assets.approveTransfer,
 			TEST_BASE_TX_INFO,
-			POLKADOT_25_TEST_OPTIONS
+			POLKADOT_29_TEST_OPTIONS
 		);
 
 		itHasCorrectBaseTxInfo(unsigned);
