@@ -1,4 +1,5 @@
 // Name exports to create namespaces that map to pallets
+export * as assets from './assets';
 export * as balances from './balances';
 export * as democracy from './democracy';
 export * as multisig from './multisig';

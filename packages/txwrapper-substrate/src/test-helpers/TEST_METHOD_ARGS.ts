@@ -2,6 +2,33 @@
  * Arguments for methods to use in testing.
  */
 export const TEST_METHOD_ARGS = {
+	assets: {
+		transfer: {
+			id: 10,
+			target: '14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3', // seed "//Bob"
+			amount: 1234,
+		},
+		transferKeepAlive: {
+			id: 10,
+			target: '14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3', // seed "//Bob"
+			amount: 1234,
+		},
+		approveTransfer: {
+			id: 10,
+			delegate: '14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3', // seed "//Bob"
+			amount: 1234,
+		},
+		transferApproved: {
+			id: 10,
+			owner: '14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3', // seed "//Bob",
+			destination: 'HNZata7iMYWmk5RvZRTiAsSDhV8366zq2YGb3tLH5Upf74F', // seed "//Alice"
+			amount: 1234,
+		},
+		cancelApproval: {
+			id: 10,
+			delegate: '14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3', // seed "//Bob"
+		},
+	},
 	balances: {
 		transferKeepAlive: {
 			dest: 'Fy2rsYCoowQBtuFXqLE65ehAY9T6KWcGiNCQAyPDCkfpm4s',
