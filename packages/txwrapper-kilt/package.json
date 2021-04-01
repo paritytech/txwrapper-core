@@ -16,7 +16,8 @@
 		"node": ">=12"
 	},
 	"scripts": {
-		"build": "rimraf lib/ && tsc -p tsconfig.build.json"
+		"build": "rimraf lib/ && tsc -p tsconfig.build.json",
+		"kilt": "node lib/kilt"
 	},
 	"dependencies": {
 		"@substrate/txwrapper-core": "^0.4.1",

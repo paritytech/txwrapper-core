@@ -48,7 +48,7 @@ export function getRegistry({
 		// If your types are not packaged in the `OverrideBundleType` format, you can
 		// specify types in any of the formats supported by `RegisteredTypes`:
 		// https://github.com/polkadot-js/api/blob/4ff9b51af2c49294c676cc80abc6476565c70b11/packages/types/src/types/registry.ts#L59
-		typesBundle: kiltDefinitions as OverrideBundleType,
+		typesBundle: (kiltDefinitions as unknown) as OverrideBundleType,
 	});
 
 	return getRegistryBase({
