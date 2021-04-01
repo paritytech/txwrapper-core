@@ -26,7 +26,7 @@ async function main(): Promise<void> {
 	await cryptoWaitReady();
 	// Create a new keyring, and add an "Alice" account
 	const keyring = new Keyring();
-	const alice = keyring.addFromUri('//Alice', { name: 'Alice' }, 'sr25519');
+	const alice = keyring.addFromUri('//Alice', { name: 'Alice' }, 'ed25519');
 	console.log(
 		"Alice's SS58-Encoded Address:",
 		deriveAddress(alice.publicKey, 38) // TODO, use correct prefix
@@ -59,7 +59,7 @@ async function main(): Promise<void> {
 	const unsigned = methods.balances.transfer(
 		{
 			value: '90071992547409910',
-			dest: '14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3', // Bob
+			dest: '4sejigvu6STHdYmmYf2SuN92aNp8TbrsnBBDUj7tMrJ9Z3cG', // Bob
 		},
 		{
 			address: deriveAddress(alice.publicKey, 38), // TODO, use correct prefix
