@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/paritytech/txwrapper-core/compare/v0.4.1...v0.5.0) (2021-04-05)
+
+
+### Features
+
+* **assets:** add assets to txwrapper-substrate package ([#71](https://github.com/paritytech/txwrapper-core/issues/71)) ([e72b012](https://github.com/paritytech/txwrapper-core/commit/e72b01248088c7582180d1a98f783d8fdfbd991f))
+
+
+
+
+
 ## [0.4.1](https://github.com/paritytech/txwrapper-core/compare/v0.4.0...v0.4.1) (2021-03-29)
 
 **Note:** Version bump only for package @substrate/txwrapper-substrate
