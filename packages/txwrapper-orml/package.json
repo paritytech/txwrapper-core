@@ -24,6 +24,6 @@
     "@substrate/txwrapper-core": "^0.4.1"
   },
   "devDependencies": {
-    "@acala-network/type-definitions": "0.7.2-4"
+    "@acala-network/type-definitions": "0.7.2-5"
   }
 }
