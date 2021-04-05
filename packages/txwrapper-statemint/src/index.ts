@@ -11,6 +11,7 @@ export const methods = {
 	assets: substrateMethods.assets,
 	proxy: substrateMethods.proxy,
 	multisig: substrateMethods.multisig,
+	utility: substrateMethods.utility,
 };
 
 // Re-export all of txwrapper-core so users have access to utilities, construct functions,
