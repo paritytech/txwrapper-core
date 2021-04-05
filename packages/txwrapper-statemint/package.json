@@ -21,6 +21,7 @@
         "build": "rimraf lib/ && tsc -p tsconfig.build.json"
     },
     "dependencies": {
-        "@substrate/txwrapper-core": "^0.4.1"
+        "@substrate/txwrapper-core": "^0.4.1",
+        "@substrate/txwrapper-substrate": "^0.4.1"
     }
 }
