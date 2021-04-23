@@ -1,3 +1,4 @@
+import { types as kiltDefinitions } from '@kiltprotocol/type-definitions';
 import { RegistryTypes } from '@polkadot/types/types';
 import {
 	getRegistryBase,
@@ -5,8 +6,6 @@ import {
 	getSpecTypes,
 	TypeRegistry,
 } from '@substrate/txwrapper-core';
-
-import kiltDefinitions from './types';
 
 // As a convenience to users we can provide them with hardcoded chain properties
 // as these rarely change.

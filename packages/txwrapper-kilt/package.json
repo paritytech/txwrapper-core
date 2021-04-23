@@ -20,6 +20,7 @@
 		"kilt": "node lib/kilt"
 	},
 	"dependencies": {
+		"@kiltprotocol/type-definitions": "latest",
 		"@substrate/txwrapper-core": "^0.4.1",
 		"@substrate/txwrapper-polkadot": "^0.4.1",
 		"@substrate/txwrapper-registry": "^0.4.1",
