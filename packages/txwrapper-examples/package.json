@@ -10,7 +10,7 @@
   "bugs": "https://github.com/paritytech/txwrapper-core/issues",
   "homepage": "https://github.com/paritytech/txwrapper-core/tree/master/packages/txwrapper-examples#readme",
   "engine": {
-    "node": ">=12"
+    "node": ">=14"
   },
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
