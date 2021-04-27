@@ -18,7 +18,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@acala-network/type-definitions": "0.7.4-1",
+    "@acala-network/type-definitions": "0.7.4-4",
     "@substrate/txwrapper-core": "^0.5.1",
     "@substrate/txwrapper-orml": "^0.5.1"
   }
