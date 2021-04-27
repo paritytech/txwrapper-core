@@ -21,7 +21,7 @@
     "build": "rimraf lib/ && tsc -p tsconfig.build.json"
   },
   "dependencies": {
-    "@polkadot/api": "4.6.2",
+    "@polkadot/api": "4.7.2",
     "memoizee": "0.4.15"
   },
   "devDependencies": {
