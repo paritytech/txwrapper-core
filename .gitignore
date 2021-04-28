@@ -4,4 +4,5 @@
 **/*yarn-error.log
 **/**.d.ts
 **/**.js.map
-
+.yarn/*
+!.yarn/releases
