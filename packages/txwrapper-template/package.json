@@ -13,7 +13,7 @@
   "bugs": "<link to the github repo this package lives in>/issues",
   "homepage": "<link to the github repo this package lives in>#readme",
   "engine": {
-    "node": ">=12"
+    "node": ">=14"
   },
   "scripts": {
     "build": "tsc -p tsconfig.json"
