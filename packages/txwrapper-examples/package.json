@@ -13,7 +13,7 @@
     "node": ">=14"
   },
   "scripts": {
-    "build": "yarn build:example",
+    "build": "yarn build:workspace",
     "polkadot": "node lib/polkadot",
     "polkadotBatchAll": "node lib/polkadotBatchAll",
     "mandala": "node lib/mandala"
