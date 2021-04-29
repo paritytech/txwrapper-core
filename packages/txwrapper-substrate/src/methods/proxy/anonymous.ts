@@ -29,10 +29,10 @@ interface ProxyAnonymousArgs extends Args {
  * greater than zero. When a `ProxyDefinition.delay` is 0 `anonymous` is not neccesary
  * and `proxy` can be called at any time.
  *
- * No more than `MaxPending` anonymousments may be made at any one time. On Kusama and Polkadot
+ * No more than `MaxPending` anouncements may be made at any one time. On Kusama and Polkadot
  * `MaxPending` is set to 32.
  *
- * This will take a deposit of `AnonymousmentDepositFactor` as well as
+ * This will take a deposit of `AnouncementDepositFactor` as well as
  * `AnonymousmentDepositBase` if there are no other pending anonymousments.
  *
  * The dispatch origin for this call must be _Signed_ and a proxy of `real`.
