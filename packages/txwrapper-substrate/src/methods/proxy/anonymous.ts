@@ -8,34 +8,34 @@ import {
 
 interface ProxyAnonymousArgs extends Args {
 	/**
-	 * The type of proxy to be created. (Proxy types are runtime dependant)
+	 * The type of the proxy that the sender will be registered as over the
+	 * new account. This will almost always be the most permissive `ProxyType` possible to
+	 * allow for maximum flexibility. (`ProxyType` variants vary by runtime.)
 	 */
 	proxyType: string;
 	/**
-	 * The time delay (measured in blocks) before an announced call can be executed.
+	 * The announcement period (measured in blokcs) required of the initial proxy.
+	 * Will generally ben zero.
 	 */
 	delay: number;
 	/**
-	 * The positive, non-zero index of the anonymous proxy.
+	 * A positive, non-zero disambiguation index, in case this is called multiple times in the same
+	 * transaction (e.g. with `utility::batch`). Unless you're using `batch` you probably just
+	 * want to use `0`.
 	 */
 	index: number;
 }
 
 /**
- * Create an anonymous proxy.
+ * Spawn a fresh new account that is guaranteed to be otherwise inaccessible, and
+ * initialize it with a proxy of `proxy_type` for `origin` sender.
  *
- * This must be called `ProxyDefinition.delay` blocks before the corresponding
- * `proxy` is attempted if the delay associated with the proxy relationship is
- * greater than zero. When a `ProxyDefinition.delay` is 0 `anonymous` is not neccesary
- * and `proxy` can be called at any time.
+ * Requires a `Signed` origin
  *
- * No more than `MaxPending` anouncements may be made at any one time. On Kusama and Polkadot
- * `MaxPending` is set to 32.
+ * Fails with `Duplicate` if this has already been called in this transaction, from the
+ * same sender, with the same parameters.
  *
- * This will take a deposit of `AnouncementDepositFactor` as well as
- * `AnonymousmentDepositBase` if there are no other pending anonymousments.
- *
- * The dispatch origin for this call must be _Signed_ and a proxy of `real`.
+ * Fails if there are insufficient funds to pay for deposit.
  *
  * @param args - Arguments specific to this method.
  * @param info - Information required to construct the transaction.
