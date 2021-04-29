@@ -14,7 +14,7 @@
     "node": ">=14"
   },
   "scripts": {
-    "build": "rimraf lib/ && substrate-exec-tsc -p tsconfig.build.json",
+    "build": "yarn build:workspace",
     "test": "jest"
   },
   "dependencies": {

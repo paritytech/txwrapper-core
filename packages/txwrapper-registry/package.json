@@ -18,7 +18,7 @@
     "node": ">=14"
   },
   "scripts": {
-    "build": "rimraf lib/ && substrate-exec-tsc -p tsconfig.build.json"
+    "build": "yarn build:workspace"
   },
   "dependencies": {
     "@polkadot/apps-config": "0.89.1",

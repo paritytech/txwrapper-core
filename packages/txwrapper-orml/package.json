@@ -18,7 +18,7 @@
   "bugs": "https://github.com/paritytech/txwrapper-core/issues",
   "homepage": "https://github.com/paritytech/txwrapper-core/tree/master/packages/txwrapper-orml#readme",
   "scripts": {
-    "build": "rimraf lib/ && substrate-exec-tsc -p tsconfig.build.json"
+    "build": "yarn build:workspace"
   },
   "dependencies": {
     "@substrate/txwrapper-core": "^0.5.1"
