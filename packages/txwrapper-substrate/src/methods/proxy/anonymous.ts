@@ -8,15 +8,15 @@ import {
 
 interface ProxyAnonymousArgs extends Args {
 	/**
-	 * The type of proxy to be created.
+	 * The type of proxy to be created. (Proxy types are runtime dependant)
 	 */
 	proxyType: string;
 	/**
-	 * The time delay before an announced call can be executed.
+	 * The time delay (measured in blocks) before an announced call can be executed.
 	 */
 	delay: number;
 	/**
-	 * The index of the anonymous proxy.
+	 * The positive, non-zero index of the anonymous proxy.
 	 */
 	index: number;
 }
