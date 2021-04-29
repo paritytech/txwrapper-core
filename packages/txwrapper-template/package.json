@@ -16,7 +16,7 @@
     "node": ">=14"
   },
   "scripts": {
-    "build": "yarn build:template"
+    "build": "tsc"
   },
   "dependencies": {
     "@substrate/txwrapper-core": "^0.5.1",
