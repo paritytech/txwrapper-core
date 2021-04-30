@@ -75,6 +75,11 @@ export const TEST_METHOD_ARGS = {
 			call:
 				'0x0500306721211d5404bd9da88e0204360a1a9ab8b87c66c1bc2fcdd37f3c2222cc200f00a0be1c448399',
 		},
+		anonymous: {
+			proxyType: 'Any',
+			delay: 30,
+			index: 1,
+		},
 	},
 	session: {
 		setKeys: {
