@@ -14,7 +14,7 @@ interface ProxyAnonymousArgs extends Args {
 	 */
 	proxyType: string;
 	/**
-	 * The announcement period (measured in blokcs) required of the initial proxy.
+	 * The announcement period (measured in number of blocks) required of the initial proxy.
 	 * Will generally be zero.
 	 */
 	delay: number;
