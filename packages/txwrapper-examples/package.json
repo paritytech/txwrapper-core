@@ -13,7 +13,7 @@
     "node": ">=14"
   },
   "scripts": {
-    "build": "substrate-exec-tsc -p tsconfig.build.json",
+    "build": "yarn build:workspace",
     "polkadot": "node lib/polkadot",
     "polkadotBatchAll": "node lib/polkadotBatchAll",
     "mandala": "node lib/mandala"
