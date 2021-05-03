@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0](https://github.com/paritytech/txwrapper-core/compare/v0.5.1...v1.0.0) (2021-05-03)
+
+
+### Bug Fixes
+
+* update deps for latest types ([#82](https://github.com/paritytech/txwrapper-core/issues/82)) ([fa89090](https://github.com/paritytech/txwrapper-core/commit/fa8909020664c786d319e36bf1a39a000a99f02a))
+* update polkadot-js deps; update `decorateConstants` usage ([#88](https://github.com/paritytech/txwrapper-core/issues/88)) ([d6176b8](https://github.com/paritytech/txwrapper-core/commit/d6176b8165261ec5c448d4f2ca8d68a66161d76f))
+* workspace script sharing ([#86](https://github.com/paritytech/txwrapper-core/issues/86)) ([207d0bb](https://github.com/paritytech/txwrapper-core/commit/207d0bbd50e7bf2be4217072eae8c2b7eead0810))
+
+
+
+
+
 ## [0.5.1](https://github.com/paritytech/txwrapper-core/compare/v0.5.0...v0.5.1) (2021-04-19)
 
 **Note:** Version bump only for package @substrate/txwrapper-core
