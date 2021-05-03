@@ -34,8 +34,6 @@ export function createDecoratedConstants(
 	registry: TypeRegistry,
 	metadataRpc: string
 ): Constants {
-	return decorateConstants(
-		registry,
-		createMetadata(registry, metadataRpc).asLatest
-	);
+	const metadata = createMetadata(registry, metadataRpc);
+	return decorateConstants(registry, metadata.asLatest, metadata.version);
 }
