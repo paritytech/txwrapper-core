@@ -88,9 +88,18 @@ export function getRegistry({
 	// The default type registry has polkadot types
 	const registry = new TypeRegistry();
 
+	// As of now statemine is not a supported specName in the default polkadot-js/api type registry.
+	const chainNameAdjusted = chainName === 'Statemine' ? 'Statemint' : chainName;
+	const specNameAdjusted = specName === 'statemine' ? 'statemint' : specName;
+
 	return getRegistryBase({
-		chainProperties: properties || KNOWN_CHAIN_PROPERTIES[specName],
-		specTypes: getSpecTypes(registry, chainName, specName, specVersion),
+		chainProperties: properties || KNOWN_CHAIN_PROPERTIES[specNameAdjusted],
+		specTypes: getSpecTypes(
+			registry,
+			chainNameAdjusted,
+			specNameAdjusted,
+			specVersion
+		),
 		metadataRpc,
 	});
 }
