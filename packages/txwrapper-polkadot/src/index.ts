@@ -93,7 +93,7 @@ export function getRegistry({
 	const specNameAdjusted = specName === 'statemine' ? 'statemint' : specName;
 
 	return getRegistryBase({
-		chainProperties: properties || KNOWN_CHAIN_PROPERTIES[specNameAdjusted],
+		chainProperties: properties || KNOWN_CHAIN_PROPERTIES[specName],
 		specTypes: getSpecTypes(
 			registry,
 			chainNameAdjusted,
