@@ -9,7 +9,8 @@ import { methods as substrateMethods } from '@substrate/txwrapper-substrate';
 
 import * as polkadotMethods from './methods';
 
-// Export methods of pallets included in the Polkadot/ Kusama/ Westend runtimes.
+// Export methods of pallets included in the Polkadot, Kusama, Westend, Rococo
+// and State{mint, mine} runtimes.
 // Note: in the future this may also include methods defined within this package
 // that do not exist in Substrate.
 export const methods = {
@@ -23,6 +24,8 @@ export const methods = {
 	vesting: substrateMethods.vesting,
 	multisig: substrateMethods.multisig,
 	crowdloan: polkadotMethods.crowdloan,
+	// assets is only applicable to State{mint, mine}
+	assets: substrateMethods.assets,
 };
 
 // Re-export all of txwrapper-core so users have access to utilities, construct functions,
@@ -48,6 +51,16 @@ const KNOWN_CHAIN_PROPERTIES = {
 		ss58Format: PolkadotSS58Format.westend,
 		tokenDecimals: 12,
 		tokenSymbol: 'WND',
+	},
+	statemint: {
+		ss58Format: PolkadotSS58Format.polkadot,
+		tokenDecimals: 10,
+		tokenSymbol: 'DOT',
+	},
+	statemine: {
+		ss58Format: PolkadotSS58Format.kusama,
+		tokenDecimals: 12,
+		tokenSymbol: 'KSM',
 	},
 };
 
@@ -75,9 +88,18 @@ export function getRegistry({
 	// The default type registry has polkadot types
 	const registry = new TypeRegistry();
 
+	// As of now statemine is not a supported specName in the default polkadot-js/api type registry.
+	const chainNameAdjusted = chainName === 'Statemine' ? 'Statemint' : chainName;
+	const specNameAdjusted = specName === 'statemine' ? 'statemint' : specName;
+
 	return getRegistryBase({
 		chainProperties: properties || KNOWN_CHAIN_PROPERTIES[specName],
-		specTypes: getSpecTypes(registry, chainName, specName, specVersion),
+		specTypes: getSpecTypes(
+			registry,
+			chainNameAdjusted,
+			specNameAdjusted,
+			specVersion
+		),
 		metadataRpc,
 	});
 }

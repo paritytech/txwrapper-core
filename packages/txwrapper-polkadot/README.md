@@ -17,6 +17,12 @@
 
 <br /><br />
 
+# About
+
+Txwrapper library for polkadot relay and system chains; specifically Polkadot, Kusama, Rococo, Westend, Statemint and Statemine.
+
+Note: not all methods available apply to all supported chains. To check what methods are supported by a chain consult the pallets included in chain's runtime.
+
 
 ## Get Started
 

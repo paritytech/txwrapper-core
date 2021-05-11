@@ -11,19 +11,19 @@ import { itDecodesBalancesTransferCommon } from './test-helpers';
 export function itDecodesUnsignedBalanceTransferTx(
 	decoded: DecodedUnsignedTx
 ): void {
-	([
-		'address',
-		'blockHash',
-		'blockNumber',
-		'genesisHash',
-		'metadataRpc',
-		'nonce',
-		'specVersion',
-		'transactionVersion',
-		'tip',
-	] as const).forEach((key) =>
-		expect(decoded[key]).toBe(TEST_BASE_TX_INFO[key])
-	);
+	(
+		[
+			'address',
+			'blockHash',
+			'blockNumber',
+			'genesisHash',
+			'metadataRpc',
+			'nonce',
+			'specVersion',
+			'transactionVersion',
+			'tip',
+		] as const
+	).forEach((key) => expect(decoded[key]).toBe(TEST_BASE_TX_INFO[key]));
 }
 
 describe('decodeUnsignedTx', () => {

@@ -23,7 +23,7 @@ export interface AssetsTransferApprovedArgs extends Args {
 	/**
 	 * The amount of assets to transfer.
 	 */
-	amount: number;
+	amount: number | string;
 }
 
 /**

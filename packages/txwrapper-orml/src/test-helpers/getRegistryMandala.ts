@@ -16,7 +16,7 @@ export function getRegistryMandala(
 ): TypeRegistry {
 	const registry = new TypeRegistry();
 	registry.setKnownTypes({
-		typesBundle: (typesBundleForPolkadot as unknown) as OverrideBundleType,
+		typesBundle: typesBundleForPolkadot as unknown as OverrideBundleType,
 	});
 
 	return getRegistryBase({

@@ -57,7 +57,7 @@ export function getRegistry({
 }: GetRegistryOpts): TypeRegistry {
 	const registry = new TypeRegistry();
 	registry.setKnownTypes({
-		typesBundle: (typesBundleForPolkadot as unknown) as OverrideBundleType,
+		typesBundle: typesBundleForPolkadot as unknown as OverrideBundleType,
 	});
 
 	return getRegistryBase({

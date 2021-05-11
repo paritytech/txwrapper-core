@@ -12,16 +12,16 @@ import { itDecodesBalancesTransferCommon } from './test-helpers';
 export function itDecodesSigningPayloadBalancesTransfer(
 	decoded: DecodedSigningPayload
 ): void {
-	([
-		'blockHash',
-		'genesisHash',
-		'metadataRpc',
-		'nonce',
-		'specVersion',
-		'tip',
-	] as const).forEach((key) =>
-		expect(decoded[key]).toBe(TEST_BASE_TX_INFO[key])
-	);
+	(
+		[
+			'blockHash',
+			'genesisHash',
+			'metadataRpc',
+			'nonce',
+			'specVersion',
+			'tip',
+		] as const
+	).forEach((key) => expect(decoded[key]).toBe(TEST_BASE_TX_INFO[key]));
 }
 
 describe('decodeSigningPayload', () => {
