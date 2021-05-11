@@ -1,6 +1,6 @@
 {
   "name": "txwrapper-acala",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "",
   "description": "Tools for constructing Acala transactions offline",
   "files": [
@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "@acala-network/type-definitions": "0.7.4-1",
-    "@substrate/txwrapper-core": "^1.0.0",
-    "@substrate/txwrapper-orml": "^1.0.0"
+    "@substrate/txwrapper-core": "^1.1.0",
+    "@substrate/txwrapper-orml": "^1.1.0"
   }
 }

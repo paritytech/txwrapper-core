@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](http://%3Clink%20to%20the%20github%20repo%20this%20package%20lives%20in%3E/compare/v1.0.0...v1.1.0) (2021-05-11)
+
+**Note:** Version bump only for package @substrate/txwrapper-template
+
+
+
+
+
 # [1.0.0](http://%3Clink%20to%20the%20github%20repo%20this%20package%20lives%20in%3E/compare/v0.5.1...v1.0.0) (2021-05-03)
 
 

@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/paritytech/txwrapper-core/compare/v1.0.0...v1.1.0) (2021-05-11)
+
+
+### Bug Fixes
+
+* Bump polkadot-js/api; Remove deprecated createType log option ([#89](https://github.com/paritytech/txwrapper-core/issues/89)) ([989cd7d](https://github.com/paritytech/txwrapper-core/commit/989cd7d6a2e25a7cbc7982da211e4c5239bbed22))
+* Update polkadot scoped deps to latest types ([#90](https://github.com/paritytech/txwrapper-core/issues/90)) ([60b9e23](https://github.com/paritytech/txwrapper-core/commit/60b9e23beb776f153515897c96efa64b7ccad29a))
+
+
+### Features
+
+* **txwrapper-polkadot:** Add support for Statemint & Statemine ([#75](https://github.com/paritytech/txwrapper-core/issues/75)) ([8958d30](https://github.com/paritytech/txwrapper-core/commit/8958d30891f8bbc340f72faa50dd28790a49997d))
+
+
+
+
+
 # [1.0.0](https://github.com/paritytech/txwrapper-core/compare/v0.5.1...v1.0.0) (2021-05-03)
 
 
