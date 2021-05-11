@@ -47,7 +47,7 @@ async function main(): Promise<void> {
 
 	// Create Polkadot's type registry.
 	const registry = getRegistry({
-		chainName: 'Polkadot',
+		chainName: 'Statemint',
 		specName,
 		specVersion,
 		metadataRpc,
@@ -56,10 +56,11 @@ async function main(): Promise<void> {
 	// Now we can create our `balances.transferKeepAlive` unsigned tx. The following
 	// function takes the above data as arguments, so can be performed offline
 	// if desired.
-	const unsigned = methods.balances.transferKeepAlive(
+	const unsigned = methods.assets.transferKeepAlive(
 		{
-			value: '90071992547409910',
-			dest: '14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3', // Bob
+			id: 1,
+			amount: '90071992547409910',
+			target: '14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3', // Bob
 		},
 		{
 			address: deriveAddress(alice.publicKey, PolkadotSS58Format.polkadot),
