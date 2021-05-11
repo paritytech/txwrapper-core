@@ -19,7 +19,7 @@ export interface AssetsApproveTransferArgs extends Args {
 	 * The amount of asset that may be transferred by `delegate`. If there is
 	 * already an approval in place, then this acts additively.
 	 */
-	amount: number;
+	amount: number | string;
 }
 
 /**

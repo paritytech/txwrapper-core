@@ -21,7 +21,7 @@ export interface AssetsTransferArgs extends Args {
 	 * the case that the transfer would otherwise take the sender balance above zero but below
 	 * the minimum balance. Must be greater than zero.
 	 */
-	amount: number;
+	amount: number | string;
 }
 
 /**
