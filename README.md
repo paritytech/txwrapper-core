@@ -79,6 +79,12 @@ yarn run lint --fix
 
 ### Maintain
 
+Bump `polkadot-js` scoped deps
+
+```bash
+yarn up "@polkadot/*"
+```
+
 Publish with lerna by running:*
 
 ```bash

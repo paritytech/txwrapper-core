@@ -37,15 +37,9 @@ export function decodeSigningPayload(
 			{
 				version: EXTRINSIC_VERSION,
 			},
-		],
-		{ withoutLog: true }
+		]
 	);
-	const methodCall: Call = createTypeUnsafe(
-		registry,
-		'Call',
-		[payload.method],
-		{ withoutLog: true }
-	);
+	const methodCall: Call = createTypeUnsafe(registry, 'Call', [payload.method]);
 	const method = toTxMethod(registry, methodCall);
 
 	return {
