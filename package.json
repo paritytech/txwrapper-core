@@ -10,16 +10,18 @@
   "scripts": {
     "deploy": "yarn run build && lerna version --conventional-commits --create-release github && lerna publish from-package",
     "build": "lerna run build",
-    "lint": "tsc --noEmit && eslint . --ext ts",
-    "test": "jest",
+    "build:workspace": "cd $INIT_CWD && rimraf lib/ && substrate-exec-tsc -p tsconfig.build.json",
+    "lint": "substrate-dev-run-lint",
+    "test": "substrate-exec-jest",
     "docs": "typedoc"
   },
   "devDependencies": {
-    "@substrate/dev": "^0.3.0",
+    "@substrate/dev": "^0.5.2",
     "lerna": "^4.0.0",
+    "rimraf": "^3.0.2",
     "ts-node": "^9.1.1",
     "tsconfig-paths": "^3.9.0",
-    "typedoc": "^0.20.34",
-    "typedoc-plugin-markdown": "^3.5.0"
+    "typedoc": "^0.20.35",
+    "typedoc-plugin-markdown": "^3.7.1"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "@substrate/txwrapper-substrate",
-  "version": "0.4.1",
+  "version": "1.0.0",
   "author": "Parity Technologies <admin@parity.io>",
   "description": "Selected dispatchables of Substrate pallets, to be re-exported by txwrappers.",
   "files": [
@@ -15,12 +15,12 @@
   "bugs": "https://github.com/paritytech/txwrapper-core/issues",
   "homepage": "https://github.com/paritytech/txwrapper-core/tree/master/packages/txwrapper-substrate#readme",
   "engine": {
-    "node": ">=12"
+    "node": ">=14"
   },
   "scripts": {
-    "build": "rimraf lib/ && tsc -p tsconfig.build.json"
+    "build": "yarn build:workspace"
   },
   "dependencies": {
-    "@substrate/txwrapper-core": "^0.4.1"
+    "@substrate/txwrapper-core": "^1.0.0"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "@substrate/txwrapper-examples",
-  "version": "0.4.1",
+  "version": "1.0.0",
   "author": "Parity Technologies <admin@parity.io>",
   "description": "Examples for txwrapper-* usage.",
   "license": "Apache-2.0",
@@ -10,17 +10,17 @@
   "bugs": "https://github.com/paritytech/txwrapper-core/issues",
   "homepage": "https://github.com/paritytech/txwrapper-core/tree/master/packages/txwrapper-examples#readme",
   "engine": {
-    "node": ">=12"
+    "node": ">=14"
   },
   "scripts": {
-    "build": "tsc -p tsconfig.build.json",
+    "build": "yarn build:workspace",
     "polkadot": "node lib/polkadot",
     "polkadotBatchAll": "node lib/polkadotBatchAll",
     "mandala": "node lib/mandala"
   },
   "dependencies": {
-    "@polkadot/api": "4.3.1",
-    "@substrate/txwrapper-polkadot": "^0.4.1",
-    "txwrapper-acala": "^0.4.1"
+    "@polkadot/api": "4.8.1",
+    "@substrate/txwrapper-polkadot": "^1.0.0",
+    "txwrapper-acala": "^1.0.0"
   }
 }

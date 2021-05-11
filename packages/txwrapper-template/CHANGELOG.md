@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0](http://%3Clink%20to%20the%20github%20repo%20this%20package%20lives%20in%3E/compare/v0.5.1...v1.0.0) (2021-05-03)
+
+
+### Bug Fixes
+
+* workspace script sharing ([#86](http://%3Clink%20to%20the%20github%20repo%20this%20package%20lives%20in%3E/issues/86)) ([207d0bb](http://%3Clink%20to%20the%20github%20repo%20this%20package%20lives%20in%3E/commits/207d0bbd50e7bf2be4217072eae8c2b7eead0810))
+
+
+
+
+
+## [0.5.1](http://%3Clink%20to%20the%20github%20repo%20this%20package%20lives%20in%3E/compare/v0.5.0...v0.5.1) (2021-04-19)
+
+**Note:** Version bump only for package @substrate/txwrapper-template
+
+
+
+
+
+# [0.5.0](http://%3Clink%20to%20the%20github%20repo%20this%20package%20lives%20in%3E/compare/v0.4.1...v0.5.0) (2021-04-05)
+
+**Note:** Version bump only for package @substrate/txwrapper-template
+
+
+
+
+
 ## [0.4.1](http://%3Clink%20to%20the%20github%20repo%20this%20package%20lives%20in%3E/compare/v0.4.0...v0.4.1) (2021-03-29)
 
 **Note:** Version bump only for package @substrate/txwrapper-template
