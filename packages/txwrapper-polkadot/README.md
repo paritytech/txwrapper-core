@@ -17,6 +17,11 @@
 
 <br /><br />
 
+# About
+
+Txwrapper library for Polkadot, Kusama, Westend, Statemint and Statemine.
+
+Note: not all methods avaible apply to all supported chains. In particular the parachains Statemint and Statemine use the `assets` pallet which is not a part of the relay chain.
 
 ## Get Started
 
