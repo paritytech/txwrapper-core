@@ -62,10 +62,10 @@ describe('decode', () => {
 			POLKADOT_25_TEST_OPTIONS
 		);
 
-		const decoded = (decode(
+		const decoded = decode(
 			signingPayload,
 			POLKADOT_25_TEST_OPTIONS
-		) as unknown) as DecodedSigningPayload;
+		) as unknown as DecodedSigningPayload;
 
 		itDecodesSigningPayloadBalancesTransfer(decoded);
 

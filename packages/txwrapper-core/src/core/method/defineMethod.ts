@@ -39,7 +39,7 @@ export function defineMethod(
 
 	const methodFunction =
 		!!tx[info.method.pallet] &&
-		((tx[info.method.pallet] as unknown) as ModuleExtrinsics)[info.method.name];
+		(tx[info.method.pallet] as unknown as ModuleExtrinsics)[info.method.name];
 	if (!methodFunction) {
 		throw new Error('pallet or method not found in metadata');
 	}
