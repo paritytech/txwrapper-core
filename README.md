@@ -87,7 +87,7 @@ yarn run lint --fix
 yarn up "@polkadot/*"
 ```
 
-2. Ensure there are no issues by running the commands below. If any type errors occur due to the updated dependencies, you may file an issue [here](https://github.com/paritytech/txwrapper-core/issues).
+2. Ensure there are no issues by running the following commands. If any type errors occur due to the updated dependencies, you may file an issue [here](https://github.com/paritytech/txwrapper-core/issues).
 
 ```bash
 yarn run build
