@@ -77,20 +77,45 @@ yarn run lint
 yarn run lint --fix
 ```
 
-### Maintain
+### Release & Publishing
 
-Bump `polkadot-js` scoped deps
+#### Preparation
+
+1. Checkout a branch `name-update-deps`, and ensure we have the latest polkadot-js dependencies by running the command below. If all packages are already up to date you may skip to the "Publishing" section below.
 
 ```bash
 yarn up "@polkadot/*"
 ```
 
-Publish with lerna by running:*
+2. Ensure there are no issues by running the commands below. If any type errors occur due to the updated dependencies, you may file an issue [here](https://github.com/paritytech/txwrapper-core/issues).
+
+```bash
+yarn run build
+yarn run test
+yarn run lint
+```
+
+3. If all tests pass and all packages build successfully, commit your changes with the following format `fix(types): Update polkadot-js to get the latest types`. Then push your branch up to Github for review, then merge. 
+
+#### Publishing
+
+This libraries release process uses Lerna, and the following below is required to have a successful release.  
+
+* **N.B.** Ensure you have [`GH_TOKEN` env variable set](https://github.com/lerna/lerna/tree/main/commands/version#--create-release-type) to a GitHub personal access token (PAT) so lerna can publish the release on github.
+
+* The publisher will need publishing permissions to the @substrate npm org.
+
+1. Make sure to be in the `main` branch, and `git pull origin main`. 
+
+2. Before deploying a new release run the following sanity checks.
+
+```bash
+yarn run build
+yarn run test
+```
+
+3. Deploy the new release.
 
 ```bash
 yarn run deploy
 ```
-
-**N.B.** Ensure you have [`GH_TOKEN` env variable set](https://github.com/lerna/lerna/tree/main/commands/version#--create-release-type) to a GitHub personal access token (PAT) so lerna can publish the release on github.
-
-*The publisher will need publishing permissions to the @substrate npm org.
