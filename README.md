@@ -119,3 +119,10 @@ yarn run test
 ```bash
 yarn run deploy
 ```
+
+NOTE (Yubikey Warning): This repo requires signed and verified commits, so when using a yubikey there is step where you are required to sign a commit while Lerna sets up the github release. The output from Lerna wont warn you that you have to sign it though so the release will error out, and you will have to `git reset --hard <last-commit-hash>` and `rm -rf lerna-debug.log`. When you see the following message, sign your commit with your Yubikey to avoid the error. 
+
+```bash
+? Are you sure you want to create these versions? Yes
+lerna info execute Creating releases...
+```
