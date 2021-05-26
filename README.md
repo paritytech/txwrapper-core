@@ -95,7 +95,7 @@ yarn run test
 yarn run lint
 ```
 
-3. If all tests pass and all packages build successfully, commit your changes with the following format `fix(types): Update polkadot-js to get the latest types`. Then push your branch up to Github for review, then merge. 
+3. If all tests pass and all packages build successfully, commit your changes with the following format `fix(types): Update polkadot-js deps to get the latest types`. Then push your branch up to Github for review, then merge. 
 
 #### Publishing
 
