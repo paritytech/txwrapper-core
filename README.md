@@ -95,17 +95,17 @@ yarn run test
 yarn run lint
 ```
 
-3. If all tests pass and all packages build successfully, commit your changes with the following format `fix(types): Update polkadot-js deps to get the latest types`. Then push your branch up to Github for review, then merge. 
+3. If all tests pass and all packages build successfully, commit your changes with the following format `fix(types): Update polkadot-js deps to get the latest types`. Then push your branch up to Github for review, then merge. The release tooling takes care of bumping the version so no need for a manual update (see below).
 
 #### Publishing
 
-This libraries release process uses Lerna, and the following below is required to have a successful release.  
+This libraries release process uses Lerna, and the following below is required to have a successful release.
 
 * **N.B.** Ensure you have [`GH_TOKEN` env variable set](https://github.com/lerna/lerna/tree/main/commands/version#--create-release-type) to a GitHub personal access token (PAT) so lerna can publish the release on github.
 
 * The publisher will need publishing permissions to the @substrate npm org.
 
-1. Make sure to be in the `main` branch, and `git pull origin main`. 
+1. Make sure to be in the `main` branch, and `git pull origin main`.
 
 2. Before deploying a new release run the following sanity checks.
 
@@ -120,7 +120,7 @@ yarn run test
 yarn run deploy
 ```
 
-NOTE (Yubikey Warning): This repo requires signed and verified commits, so when using a yubikey there is a step where you are required to sign a commit while Lerna sets up the github release. The output from Lerna wont warn you that you have to sign it so the release will error out, and you will have to `git reset --hard <last-commit-hash>` and `rm -rf lerna-debug.log`. When you see the following message, sign your underlying Lerna commit with your Yubikey to avoid the error. 
+NOTE (Yubikey Warning): This repo requires signed and verified commits, so when using a yubikey there is a step where you are required to sign a commit while Lerna sets up the github release. The output from Lerna wont warn you that you have to sign it so the release will error out, and you will have to `git reset --hard <last-commit-hash>` and `rm -rf lerna-debug.log`. When you see the following message, sign your underlying Lerna commit with your Yubikey to avoid the error.
 
 ```bash
 ? Are you sure you want to create these versions? Yes
