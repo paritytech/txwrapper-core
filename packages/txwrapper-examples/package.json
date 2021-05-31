@@ -19,7 +19,7 @@
     "mandala": "node lib/mandala"
   },
   "dependencies": {
-    "@polkadot/api": "^4.11.2",
+    "@polkadot/api": "^4.12.1",
     "@substrate/txwrapper-polkadot": "^1.1.2",
     "txwrapper-acala": "^1.1.2"
   }
