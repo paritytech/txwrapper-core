@@ -26,5 +26,6 @@
   },
   "devDependencies": {
     "@types/memoizee": "^0.4.3"
-  }
+  },
+  "gitHead": "f13e3adeebaa8efbc4f6a309268a479c219d560b"
 }

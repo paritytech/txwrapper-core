@@ -25,5 +25,6 @@
   },
   "devDependencies": {
     "@acala-network/type-definitions": "0.7.4-1"
-  }
+  },
+  "gitHead": "f13e3adeebaa8efbc4f6a309268a479c219d560b"
 }
