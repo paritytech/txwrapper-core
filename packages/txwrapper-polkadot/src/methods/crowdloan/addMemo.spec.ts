@@ -7,20 +7,18 @@ import {
 	TEST_METHOD_ARGS,
 	WESTEND_9030_TEST_OPTIONS,
 } from '../../test-helpers';
-import { withdraw } from './withdraw';
+import { addMemo } from './addMemo';
 
-describe('crowdloan::withdraw', () => {
+describe('crowdloan::addMemo', () => {
 	it('should work', () => {
-		const unsigned = withdraw(
-			TEST_METHOD_ARGS.crowdloan.withdraw,
+		const unsigned = addMemo(
+			TEST_METHOD_ARGS.crowdloan.addMemo,
 			TEST_BASE_TX_INFO,
 			WESTEND_9030_TEST_OPTIONS
 		);
 
 		itHasCorrectBaseTxInfo(unsigned);
 
-		expect(unsigned.method).toBe(
-			'0x400290b5ab205c6974c9ea841be688864633dc9ca8a357843eeacf2314649965fe2230'
-		);
+		expect(unsigned.method).toBe('0x40060c00000020ffffffffffffffff');
 	});
 });

@@ -1,12 +1,12 @@
 import { getRegistry } from '../index';
-import metadataRpc from './westendMetadataRpc50';
+import metadataRpc from './westendMetadataRpc9030';
 
-export const WESTEND_50_TEST_OPTIONS = {
+export const WESTEND_9030_TEST_OPTIONS = {
 	metadataRpc,
 	registry: getRegistry({
 		specName: 'westend',
 		chainName: 'Westend',
-		specVersion: 50,
+		specVersion: 9030,
 		metadataRpc,
 	}),
 };
@@ -26,6 +26,10 @@ export const TEST_METHOD_ARGS = {
 		withdraw: {
 			index: 12,
 			who: 'Fr4NzY1udSFFLzb2R3qxVQkwz9cZraWkyfH4h3mVVk7BK7P', // seed "//Charlie"
+		},
+		addMemo: {
+			index: 12,
+			memo: '0xFFFFFFFFFFFFFFFF',
 		},
 	},
 };
