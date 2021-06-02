@@ -3,7 +3,10 @@ import {
 	TEST_BASE_TX_INFO,
 } from '@substrate/txwrapper-core';
 
-import { TEST_METHOD_ARGS, WESTEND_9030_TEST_OPTIONS } from '../../test-helpers';
+import {
+	TEST_METHOD_ARGS,
+	WESTEND_9030_TEST_OPTIONS,
+} from '../../test-helpers';
 import { contribute } from './contribute';
 
 describe('crowdloan::contribute', () => {
