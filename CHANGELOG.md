@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/paritytech/txwrapper-core/compare/v1.1.3...v1.2.0) (2021-06-02)
+
+
+### Features
+
+* **txwrapper-polkadot:** Add `crowdloan.addMemo` ([#99](https://github.com/paritytech/txwrapper-core/issues/99)) ([0b305ec](https://github.com/paritytech/txwrapper-core/commit/0b305eca51ed6ebb751e5b813257c9e6244b43af))
+
+
+
+
+
 ## [1.1.3](https://github.com/paritytech/txwrapper-core/compare/v1.1.2...v1.1.3) (2021-05-31)
 
 
