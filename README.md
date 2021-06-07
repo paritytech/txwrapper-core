@@ -82,6 +82,7 @@ yarn run lint --fix
 #### Preparation
 
 1. Checkout a branch `name-update-deps`, and ensure we have the latest polkadot-js dependencies by running the command below. If all packages are already up to date you may skip to the "Publishing" section below.
+Note: what follows assumes `yarn` at version 2.4.2 or above.
 
 ```bash
 yarn up "@polkadot/*"
