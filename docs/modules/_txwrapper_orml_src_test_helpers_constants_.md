@@ -8,7 +8,7 @@
 
 ### Object literals
 
-* [MANDALA\_602\_TEST\_OPTIONS](_txwrapper_orml_src_test_helpers_constants_.md#mandala_602_test_options)
+* [MANDALA\_602\_TEST\_OPTIONS](_txwrapper_orml_src_test_helpers_constants_.md#MANDALA_722_test_options)
 * [TEST\_METHOD\_ARGS](_txwrapper_orml_src_test_helpers_constants_.md#test_method_args)
 
 ## Object literals

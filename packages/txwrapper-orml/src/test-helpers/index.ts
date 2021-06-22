@@ -1,3 +1,3 @@
 export * from './constants';
 export * from './getRegistryMandala';
-export * from './mandala602MetadataRpc';
+export * from './mandala722MetadataRpc';

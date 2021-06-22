@@ -34,7 +34,7 @@
 * ["txwrapper-orml/src/methods/currencies/transferNativeCurrency"](modules/_txwrapper_orml_src_methods_currencies_transfernativecurrency_.md)
 * ["txwrapper-orml/src/test-helpers/constants"](modules/_txwrapper_orml_src_test_helpers_constants_.md)
 * ["txwrapper-orml/src/test-helpers/getRegistryMandala"](modules/_txwrapper_orml_src_test_helpers_getregistrymandala_.md)
-* ["txwrapper-orml/src/test-helpers/mandala602MetadataRpc"](modules/_txwrapper_orml_src_test_helpers_mandala602metadatarpc_.md)
+* ["txwrapper-orml/src/test-helpers/mandala722MetadataRpc"](modules/_txwrapper_orml_src_test_helpers_mandala722metadatarpc_.md)
 * ["txwrapper-substrate/src/methods/balances/transfer"](modules/_txwrapper_substrate_src_methods_balances_transfer_.md)
 * ["txwrapper-substrate/src/methods/balances/transferKeepAlive"](modules/_txwrapper_substrate_src_methods_balances_transferkeepalive_.md)
 * ["txwrapper-substrate/src/methods/proxy/addProxy"](modules/_txwrapper_substrate_src_methods_proxy_addproxy_.md)

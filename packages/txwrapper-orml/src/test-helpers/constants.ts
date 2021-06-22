@@ -1,11 +1,11 @@
 import { getRegistryMandala } from './getRegistryMandala';
 // Static metadata from mandala, an acala test network that uses ORML pallets
-import { mandala602MetadataRpc as metadataRpc } from './mandala602MetadataRpc';
+import { mandala722MetadataRpc as metadataRpc } from './mandala722MetadataRpc';
 
 /**
  * Test options for the mandala v602 runtime.
  */
-export const MANDALA_602_TEST_OPTIONS = {
+export const MANDALA_722_TEST_OPTIONS = {
 	metadataRpc,
 	registry: getRegistryMandala(602, metadataRpc),
 };
