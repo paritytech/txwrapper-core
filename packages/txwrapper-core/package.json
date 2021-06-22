@@ -1,6 +1,6 @@
 {
   "name": "@substrate/txwrapper-core",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "author": "Parity Technologies <admin@parity.io>",
   "description": "Core components for creating a txwrapper lib.",
   "files": [
@@ -21,7 +21,7 @@
     "build": "yarn build:workspace"
   },
   "dependencies": {
-    "@polkadot/api": "^4.14.1",
+    "@polkadot/api": "^4.15.1",
     "memoizee": "0.4.15"
   },
   "devDependencies": {
