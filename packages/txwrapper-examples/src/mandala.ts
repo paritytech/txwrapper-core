@@ -7,11 +7,11 @@
 
 import { Keyring } from '@polkadot/api';
 import { cryptoWaitReady } from '@polkadot/util-crypto';
+import { getRegistry } from '@substrate/txwrapper-registry';
 import {
 	construct,
 	decode,
 	deriveAddress,
-	getRegistry,
 	methods,
 	TokenSymbol,
 } from 'txwrapper-acala';
@@ -41,12 +41,13 @@ async function main(): Promise<void> {
 	const blockHash = await rpcToLocalNode('chain_getBlockHash');
 	const genesisHash = await rpcToLocalNode('chain_getBlockHash', [0]);
 	const metadataRpc = await rpcToLocalNode('state_getMetadata');
+	const chainName = await rpcToLocalNode('system_chain');
 	const { specVersion, transactionVersion, specName } = await rpcToLocalNode(
 		'state_getRuntimeVersion'
 	);
 
 	const registry = getRegistry({
-		chainName: 'Mandala',
+		chainName,
 		specName,
 		specVersion,
 		metadataRpc,

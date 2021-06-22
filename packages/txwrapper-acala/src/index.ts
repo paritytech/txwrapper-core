@@ -26,12 +26,12 @@ export * from '@substrate/txwrapper-core';
 const KNOWN_CHAIN_PROPERTIES = {
 	acala: {
 		ss58Format: 10,
-		tokenDecimals: 18,
+		tokenDecimals: 12,
 		tokenSymbol: 'ACA',
 	},
 	mandala: {
 		ss58Format: 42,
-		tokenDecimals: 18,
+		tokenDecimals: 12,
 		tokenSymbol: 'ACA',
 	},
 };
