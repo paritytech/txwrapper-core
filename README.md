@@ -135,6 +135,8 @@ This libraries release process uses Lerna, and the following below is required t
     - If a new tag was created locally, `git tag -d <new-version>` to remove it.
     - If `lerna-debug.log` was created, `rm -rf lerna-debug.log` to remove it.
 
-    If you forget to login to NPM, the GitHub steps will all complete successfully, but the publishing step will fail. In that case, run `npx lerna publish from-package` to resume from the publish step (make sure that a release has been created on github as expected first).
+    If you forget to login to NPM, the GitHub steps will all complete successfully, but the publishing step will fail. In that case, you can do the following:
+    - run `yarn run build` to ensure that all packages are built and ready to be published (**This is important; `yarn run deploy` does this for us, but if we skip to publishing, we must ensure that the packages are in a good state ourselves**).
+    - run `npx lerna publish from-package` to publish the packages.
 
-    If you don't have the permissions you need on the GitHub repository, you may find that you're able to push a tag but not the actual commit. In this case, you can delete the version tag on GitHub with `github push origin :<new-version>`.
+    If you don't have the permissions you need on the GitHub repository, you may find that you're able to push a tag but not the actual commit. In this case, you can delete the version tag on GitHub with `git push origin :<new-version>`.
