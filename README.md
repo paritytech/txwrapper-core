@@ -139,4 +139,4 @@ This libraries release process uses Lerna, and the following below is required t
     - run `yarn run build` to ensure that all packages are built and ready to be published (**This is important; `yarn run deploy` does this for us, but if we skip to publishing, we must ensure that the packages are in a good state ourselves**).
     - run `npx lerna publish from-package` to publish the packages.
 
-    If you don't have the permissions you need on the GitHub repository, you may find that you're able to push a tag but not the actual commit. In this case, you can delete the version tag on GitHub with `github push origin :<new-version>`.
+    If you don't have the permissions you need on the GitHub repository, you may find that you're able to push a tag but not the actual commit. In this case, you can delete the version tag on GitHub with `git push origin :<new-version>`.
