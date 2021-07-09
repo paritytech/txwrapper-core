@@ -5,6 +5,18 @@ __metadata:
   version: 4
   cacheKey: 7
 
+"@acala-network/txwrapper-acala@npm:^0.2.0":
+  version: 0.2.0
+  resolution: "@acala-network/txwrapper-acala@npm:0.2.0"
+  dependencies:
+    "@acala-network/type-definitions": ^0.7.4-1
+    "@substrate/txwrapper-core": ^1.2.5
+    "@substrate/txwrapper-orml": ^1.2.5
+    lodash: ^4.17.21
+  checksum: e1ee203c8def9393f7b7e2b9c4235c21e18ae29d938e5aac2875c4eeaa8a9f37e87824d0d70889820de3c1a29aad4ca04896eaaf2fe4df2e15874765a48014be
+  languageName: node
+  linkType: hard
+
 "@acala-network/type-definitions@npm:^0.7.4-1, @acala-network/type-definitions@npm:^0.7.4-11":
   version: 0.7.4-17
   resolution: "@acala-network/type-definitions@npm:0.7.4-17"
@@ -2377,7 +2389,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@substrate/txwrapper-core@^1.2.5, @substrate/txwrapper-core@workspace:packages/txwrapper-core":
+"@substrate/txwrapper-core@^1.2.5, @substrate/txwrapper-core@^1.2.6, @substrate/txwrapper-core@workspace:packages/txwrapper-core":
   version: 0.0.0-use.local
   resolution: "@substrate/txwrapper-core@workspace:packages/txwrapper-core"
   dependencies:
@@ -2391,10 +2403,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@substrate/txwrapper-examples@workspace:packages/txwrapper-examples"
   dependencies:
+    "@acala-network/txwrapper-acala": ^0.2.0
     "@polkadot/api": ^4.17.1
-    "@substrate/txwrapper-polkadot": ^1.2.5
-    "@substrate/txwrapper-registry": ^1.2.5
-    txwrapper-acala: ^1.2.5
+    "@substrate/txwrapper-polkadot": ^1.2.6
+    "@substrate/txwrapper-registry": ^1.2.6
   languageName: unknown
   linkType: soft
 
@@ -2403,34 +2415,34 @@ __metadata:
   resolution: "@substrate/txwrapper-orml@workspace:packages/txwrapper-orml"
   dependencies:
     "@acala-network/type-definitions": ^0.7.4-1
-    "@substrate/txwrapper-core": ^1.2.5
+    "@substrate/txwrapper-core": ^1.2.6
   languageName: unknown
   linkType: soft
 
-"@substrate/txwrapper-polkadot@^1.2.5, @substrate/txwrapper-polkadot@workspace:packages/txwrapper-polkadot":
+"@substrate/txwrapper-polkadot@^1.2.6, @substrate/txwrapper-polkadot@workspace:packages/txwrapper-polkadot":
   version: 0.0.0-use.local
   resolution: "@substrate/txwrapper-polkadot@workspace:packages/txwrapper-polkadot"
   dependencies:
-    "@substrate/txwrapper-core": ^1.2.5
-    "@substrate/txwrapper-substrate": ^1.2.5
+    "@substrate/txwrapper-core": ^1.2.6
+    "@substrate/txwrapper-substrate": ^1.2.6
   languageName: unknown
   linkType: soft
 
-"@substrate/txwrapper-registry@^1.2.5, @substrate/txwrapper-registry@workspace:packages/txwrapper-registry":
+"@substrate/txwrapper-registry@^1.2.6, @substrate/txwrapper-registry@workspace:packages/txwrapper-registry":
   version: 0.0.0-use.local
   resolution: "@substrate/txwrapper-registry@workspace:packages/txwrapper-registry"
   dependencies:
     "@polkadot/apps-config": ^0.94.1
     "@polkadot/networks": ^6.11.1
-    "@substrate/txwrapper-core": ^1.2.5
+    "@substrate/txwrapper-core": ^1.2.6
   languageName: unknown
   linkType: soft
 
-"@substrate/txwrapper-substrate@^1.2.5, @substrate/txwrapper-substrate@workspace:packages/txwrapper-substrate":
+"@substrate/txwrapper-substrate@^1.2.6, @substrate/txwrapper-substrate@workspace:packages/txwrapper-substrate":
   version: 0.0.0-use.local
   resolution: "@substrate/txwrapper-substrate@workspace:packages/txwrapper-substrate"
   dependencies:
-    "@substrate/txwrapper-core": ^1.2.5
+    "@substrate/txwrapper-core": ^1.2.6
   languageName: unknown
   linkType: soft
 
@@ -2438,9 +2450,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@substrate/txwrapper-template@workspace:packages/txwrapper-template"
   dependencies:
-    "@substrate/txwrapper-core": ^1.2.5
-    "@substrate/txwrapper-registry": ^1.2.5
-    "@substrate/txwrapper-substrate": ^1.2.5
+    "@substrate/txwrapper-core": ^1.2.6
+    "@substrate/txwrapper-registry": ^1.2.6
+    "@substrate/txwrapper-substrate": ^1.2.6
     ts-node: 9.1.1
     typescript: 4.1.5
   languageName: unknown
@@ -9939,16 +9951,6 @@ fsevents@^2.3.2:
   checksum: 1188f3ef85db04d6dba632d211e481ae0a5805974491633ff60bd56ae3362312dfea1515e0d200685867b69ff212e8778e26923f8203e3c335064b07f620a6c7
   languageName: node
   linkType: hard
-
-"txwrapper-acala@^1.2.5, txwrapper-acala@workspace:packages/txwrapper-acala":
-  version: 0.0.0-use.local
-  resolution: "txwrapper-acala@workspace:packages/txwrapper-acala"
-  dependencies:
-    "@acala-network/type-definitions": ^0.7.4-1
-    "@substrate/txwrapper-core": ^1.2.5
-    "@substrate/txwrapper-orml": ^1.2.5
-  languageName: unknown
-  linkType: soft
 
 "txwrapper-core@workspace:.":
   version: 0.0.0-use.local

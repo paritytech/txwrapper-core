@@ -5,16 +5,16 @@
  * @ignore Don't show this file in documentation.
  */
 
-import { Keyring } from '@polkadot/api';
-import { cryptoWaitReady } from '@polkadot/util-crypto';
-import { getRegistry } from '@substrate/txwrapper-registry';
 import {
 	construct,
 	decode,
 	deriveAddress,
+	getRegistry,
 	methods,
 	TokenSymbol,
-} from 'txwrapper-acala';
+} from '@acala-network/txwrapper-acala';
+import { Keyring } from '@polkadot/api';
+import { cryptoWaitReady } from '@polkadot/util-crypto';
 
 import { rpcToLocalNode, signWith } from './util';
 
