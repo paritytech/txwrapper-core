@@ -36,5 +36,8 @@
     "tsconfig-paths": "^3.9.0",
     "typedoc": "^0.20.35",
     "typedoc-plugin-markdown": "^3.7.1"
+  },
+  "dependencies": {
+    "yarn": "^1.22.10"
   }
 }
