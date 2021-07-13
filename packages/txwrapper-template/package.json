@@ -1,6 +1,6 @@
 {
   "name": "@substrate/txwrapper-template",
-  "version": "1.2.6",
+  "version": "1.2.7",
   "author": "",
   "description": "Helper functions for {chain and test network names} offline transaction generation.",
   "files": [
@@ -19,9 +19,9 @@
     "build": "tsc"
   },
   "dependencies": {
-    "@substrate/txwrapper-core": "^1.2.6",
-    "@substrate/txwrapper-registry": "^1.2.6",
-    "@substrate/txwrapper-substrate": "^1.2.6"
+    "@substrate/txwrapper-core": "^1.2.7",
+    "@substrate/txwrapper-registry": "^1.2.7",
+    "@substrate/txwrapper-substrate": "^1.2.7"
   },
   "devDependencies": {
     "ts-node": "9.1.1",
