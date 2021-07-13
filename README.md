@@ -89,6 +89,7 @@ Note: what follows assumes `yarn` at version 2.4.2 or above.
     ```bash
     yarn up "@polkadot/*"
     ```
+2. Next make sure to update the resolutions inside of the `package.json` to match polkadot-js [here](https://github.com/polkadot-js/apps/blob/master/package.json).
 
 3. Ensure there are no issues by running the following commands. If any type errors occur due to the updated dependencies, you may file an issue [here](https://github.com/paritytech/txwrapper-core/issues).
 
