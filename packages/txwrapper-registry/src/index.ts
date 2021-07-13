@@ -1,5 +1,5 @@
 import { typesBundle, typesChain } from '@polkadot/apps-config/api';
-import { all as substrateSS58Registry } from '@polkadot/networks';
+import { allNetworks as substrateSS58Registry } from '@polkadot/networks';
 import { TypeRegistry } from '@polkadot/types';
 import { getSpecTypes } from '@polkadot/types-known';
 import {

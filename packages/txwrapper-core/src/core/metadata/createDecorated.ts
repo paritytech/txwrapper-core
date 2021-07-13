@@ -1,9 +1,9 @@
+import { TypeRegistry } from '@polkadot/types';
 import {
 	decorateConstants,
 	decorateExtrinsics,
-} from '@polkadot/metadata/decorate';
-import { Constants, Extrinsics } from '@polkadot/metadata/decorate/types';
-import { TypeRegistry } from '@polkadot/types';
+} from '@polkadot/types/metadata/decorate';
+import { Constants, Extrinsics } from '@polkadot/types/metadata/decorate/types';
 
 import { createMetadata } from './createMetadata';
 
