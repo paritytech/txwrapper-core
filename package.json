@@ -15,7 +15,20 @@
     "test": "substrate-exec-jest",
     "docs": "typedoc"
   },
+  "resolutions": {
+    "@polkadot/api": "^5.0.1",
+    "@polkadot/api-contract": "^5.0.1",
+    "@polkadot/hw-ledger": "^7.0.1",
+    "@polkadot/keyring": "^7.0.1",
+    "@polkadot/networks": "^7.0.1",
+    "@polkadot/phishing": "^0.6.222",
+    "@polkadot/types": "^5.0.1",
+    "@polkadot/util": "^7.0.1",
+    "@polkadot/util-crypto": "^7.0.1",
+    "@polkadot/wasm-crypto": "^4.1.2"
+  },
   "devDependencies": {
+    "@polkadot/util-crypto": "^7.0.1",
     "@substrate/dev": "^0.5.4",
     "lerna": "^4.0.0",
     "rimraf": "^3.0.2",

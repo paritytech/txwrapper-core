@@ -1,8 +1,8 @@
 /**
  * @ignore
  */ /** */
-import { ModuleExtrinsics } from '@polkadot/metadata/decorate/types';
 import { EXTRINSIC_VERSION } from '@polkadot/types/extrinsic/v4/Extrinsic';
+import { ModuleExtrinsics } from '@polkadot/types/metadata/decorate/types';
 import { stringCamelCase } from '@polkadot/util';
 
 import { OptionsWithMeta, TxInfo, UnsignedTransaction } from '../../types/';
