@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "@polkadot/apps-config": "0.94.2-79",
-    "@polkadot/networks": "^7.0.2",
+    "@polkadot/networks": "^7.0.3",
     "@substrate/txwrapper-core": "^1.2.8"
   }
 }
