@@ -22,7 +22,7 @@ Here's a mini-tutorial on how `txwrapper-polkadot` can interact with a Polkadot 
     cd packages/txwrapper-examples
 
     # build the JS target
-    # NOTE: This does not need to be run unless you have made changes to the example as the package will already be built via the command thats ran from the root directory above.
+    # NOTE: This does not need to be run unless you have made changes to the example as the package will already be built via the command that ran from the root directory above.
     yarn run build
     ```
 
