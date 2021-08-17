@@ -7,7 +7,7 @@ import { Compact } from '@polkadot/types';
 import { AbstractInt } from '@polkadot/types/codec/AbstractInt';
 import { Call } from '@polkadot/types/interfaces';
 import { Codec } from '@polkadot/types/types';
-import { stringCamelCase } from '@polkadot/util';
+import { BN, stringCamelCase } from '@polkadot/util';
 
 import { Args, TxMethod } from '../../types/method';
 
@@ -24,7 +24,9 @@ export function toTxMethod(registry: TypeRegistry, method: Call): TxMethod {
 	const argsDef = JSON.parse(method.Type.args as unknown as string);
 	// Mapping of argName->argValue
 	const args = Object.keys(argsDef).reduce((accumulator, key, index) => {
-		let codec = createTypeUnsafe(registry, argsDef[key], [method.args[index]]);
+		let codec: unknown = createTypeUnsafe(registry, argsDef[key], [
+			method.args[index],
+		]);
 
 		if (codec instanceof Compact) {
 			// Unwrap the compact so we can check the interior type
@@ -33,7 +35,9 @@ export function toTxMethod(registry: TypeRegistry, method: Call): TxMethod {
 
 		// Forcibly serialize all integers to strings
 		const jsonArg =
-			codec instanceof AbstractInt ? codec.toString(10) : codec.toJSON();
+			codec instanceof AbstractInt
+				? codec.toString(10)
+				: (codec as BN).toJSON();
 
 		accumulator[stringCamelCase(key)] = jsonArg;
 		return accumulator;
