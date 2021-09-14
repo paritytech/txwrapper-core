@@ -1,6 +1,6 @@
 {
   "name": "@substrate/txwrapper-registry",
-  "version": "1.2.14",
+  "version": "1.2.15",
   "author": "Parity Technologies <admin@parity.io>",
   "description": "Polkadot-js type registry creation assistants for txwrapper libraries.",
   "files": [
