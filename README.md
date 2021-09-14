@@ -87,6 +87,7 @@ Note: what follows assumes `yarn` at version 2.4.2 or above.
 
     ```bash
     yarn up "@polkadot/*"
+    yarn up "@polkadot/apps-config@beta"
     ```
 2. Next make sure to update the resolutions inside of the `package.json` to match polkadot-js [here](https://github.com/polkadot-js/apps/blob/master/package.json).
 
