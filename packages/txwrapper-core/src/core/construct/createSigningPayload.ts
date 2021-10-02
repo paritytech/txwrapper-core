@@ -41,7 +41,7 @@ import { Options, UnsignedTransaction } from '../../types';
  *   ? registry.hash(extrinsicPayloadU8a)
  *   : extrinsicPayloadU8a;
  *
- * // You can now sign `actualPayload` with you private key.
+ * // You can now sign `actualPayload` with your private key.
  * // Note: you can use `u8ToHex` from @polkadot/util to convert `actualPayload`
  * // to a hex string.
  *
