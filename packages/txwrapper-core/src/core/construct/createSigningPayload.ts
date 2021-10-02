@@ -42,7 +42,7 @@ import { Options, UnsignedTransaction } from '../../types';
  *   : extrinsicPayloadU8a;
  *
  * // You can now sign `actualPayload` with you private key.
- * // Note: you can can use `u8ToHex` from @polkadot/util to convert `actualPayload`
+ * // Note: you can use `u8ToHex` from @polkadot/util to convert `actualPayload`
  * // to a hex string.
  *
  * // Alternatively, call the `.sign()` method directly on the
