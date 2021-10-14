@@ -35,7 +35,7 @@ import { Options, UnsignedTransaction } from '../../types';
  *
  * // With the `ExtrinsicPayload` class, construct the actual payload to sign.
  * // N.B. signing payloads > 256 bytes get hashed with blake2_256
- * // ref: https://substrate.dev/rustdocs/v3.0.0/src/sp_runtime/generic/unchecked_extrinsic.rs.html#201-209
+ * // ref: https://github.com/paritytech/substrate/blob/master/primitives/runtime/src/generic/unchecked_extrinsic.rs#L171-L220
  * extrinsicPayloadU8a = extrinsicPayload.toU8a({ method: true })
  * const actualPayload = extrinsicPayloadU8a.length > 256
  *   ? registry.hash(extrinsicPayloadU8a)
