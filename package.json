@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "@polkadot/util-crypto": "^7.4.1",
-    "@substrate/dev": "^0.5.4",
+    "@substrate/dev": "^0.5.6",
     "lerna": "^4.0.0",
     "rimraf": "^3.0.2",
     "ts-node": "^9.1.1",
