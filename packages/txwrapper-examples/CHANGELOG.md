@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.19](https://github.com/paritytech/txwrapper-core/compare/v1.2.18...v1.2.19) (2021-10-28)
+
+
+### Bug Fixes
+
+* **types:** bump deps ([#144](https://github.com/paritytech/txwrapper-core/issues/144)) ([c0f2db4](https://github.com/paritytech/txwrapper-core/commit/c0f2db48d68f1232edf5b070f76e45ca9e0e6290))
+
+
+
+
+
 ## [1.2.18](https://github.com/paritytech/txwrapper-core/compare/v1.2.17...v1.2.18) (2021-10-20)
 
 
