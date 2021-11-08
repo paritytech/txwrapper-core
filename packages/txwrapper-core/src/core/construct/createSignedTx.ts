@@ -13,7 +13,7 @@ import { createMetadata } from '..';
  */
 export function createSignedTx(
 	unsigned: UnsignedTransaction,
-	signature: string,
+	signature: `0x${string}`,
 	options: OptionsWithMeta
 ): string {
 	const { metadataRpc, registry } = options;
