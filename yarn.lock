@@ -10132,7 +10132,7 @@ fsevents@^2.3.2:
   version: 0.0.0-use.local
   resolution: "txwrapper-core@workspace:."
   dependencies:
-    "@polkadot/util-crypto": ^7.4.1
+    "@polkadot/util-crypto": ^7.8.2
     "@substrate/dev": ^0.5.6
     lerna: ^4.0.0
     rimraf: ^3.0.2
