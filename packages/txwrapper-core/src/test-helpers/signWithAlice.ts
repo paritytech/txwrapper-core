@@ -7,7 +7,9 @@ import { getRegistryPolkadot } from './getRegistryPolkadot';
 /**
  * Sign a payload with seed `//Alice`.
  */
-export async function signWithAlice(signingPayload: string): Promise<`0x${string}`> {
+export async function signWithAlice(
+	signingPayload: string
+): Promise<`0x${string}`> {
 	// We're creating an Alice account that will sign the payload
 	// Wait for the promise to resolve async WASM
 	await cryptoWaitReady();
