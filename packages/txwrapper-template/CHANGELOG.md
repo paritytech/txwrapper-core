@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.20](/compare/v1.2.19...v1.2.20) (2021-11-09)
+
+
+### Bug Fixes
+
+* bump deps (#146) ff645d8, closes #146
+
+
+
+
+
 ## [1.2.19](http://%3Clink%20to%20the%20github%20repo%20this%20package%20lives%20in%3E/compare/v1.2.18...v1.2.19) (2021-10-28)
 
 **Note:** Version bump only for package @substrate/txwrapper-template
