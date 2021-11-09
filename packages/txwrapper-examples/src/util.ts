@@ -49,6 +49,7 @@ export function rpcToLocalNode(
  *
  * @param pair - The signing pair.
  * @param signingPayload - Payload to sign.
+ * @returns A signed ExtrinsicPayload returns a signature with the type `0x${string}` via polkadot-js.
  */
 export function signWith(
 	pair: KeyringPair,
