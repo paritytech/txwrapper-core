@@ -49,12 +49,13 @@ export function rpcToLocalNode(
  *
  * @param pair - The signing pair.
  * @param signingPayload - Payload to sign.
+ * @returns A signed ExtrinsicPayload returns a signature with the type `0x${string}` via polkadot-js.
  */
 export function signWith(
 	pair: KeyringPair,
 	signingPayload: string,
 	options: OptionsWithMeta
-): string {
+): `0x${string}` {
 	const { registry, metadataRpc } = options;
 	// Important! The registry needs to be updated with latest metadata, so make
 	// sure to run `registry.setMetadata(metadata)` before signing.

@@ -8,12 +8,12 @@ import { createMetadata } from '..';
  *
  * @param unsigned - The JSON representing the unsigned transaction.
  * @param signature - Signature of the signing payload produced by the remote
- * signer.
+ * signer. A signed ExtrinsicPayload returns a signature with the type `0x${string}` via polkadot-js.
  * @param options - Registry and metadata used for constructing the method.
  */
 export function createSignedTx(
 	unsigned: UnsignedTransaction,
-	signature: string,
+	signature: `0x${string}`,
 	options: OptionsWithMeta
 ): string {
 	const { metadataRpc, registry } = options;
