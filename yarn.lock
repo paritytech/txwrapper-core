@@ -461,12 +461,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@bifrost-finance/type-definitions@npm:1.3.5":
-  version: 1.3.5
-  resolution: "@bifrost-finance/type-definitions@npm:1.3.5"
+"@bifrost-finance/type-definitions@npm:1.3.9":
+  version: 1.3.9
+  resolution: "@bifrost-finance/type-definitions@npm:1.3.9"
   dependencies:
     "@open-web3/orml-type-definitions": ^0.9.4-7
-  checksum: 2404b98a2d5811cddc9b317e315c47e9c7c9b871d0c8a670e99ee8c346451efc9f5ac816449a16fe04411bcb6ec848a9109c342857d8f2403a25c976abfa0189
+  checksum: 0541129b647e0f4e295867d759244405ac4d34c79f0f7b8836c8fd817099b1aec75c5ec8d10c203d02b207775fb98cb0854a899c79ea4a099fbae8420f8c98e8
   languageName: node
   linkType: hard
 
@@ -1924,13 +1924,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@polkadot/apps-config@npm:0.98.2-57":
-  version: 0.98.2-57
-  resolution: "@polkadot/apps-config@npm:0.98.2-57"
+"@polkadot/apps-config@npm:0.98.2-70":
+  version: 0.98.2-70
+  resolution: "@polkadot/apps-config@npm:0.98.2-70"
   dependencies:
     "@acala-network/type-definitions": ^3.0.2-4
     "@babel/runtime": ^7.16.0
-    "@bifrost-finance/type-definitions": 1.3.5
+    "@bifrost-finance/type-definitions": 1.3.9
     "@crustio/type-definitions": 1.2.0
     "@darwinia/types": 2.6.8-5
     "@digitalnative/type-definitions": 1.1.26
@@ -1954,7 +1954,7 @@ __metadata:
     moonbeam-types-bundle: 1.2.7
     pontem-types-bundle: 1.0.15
     rxjs: ^7.4.0
-  checksum: 5493715cc2b5454db228709aa72d668610c5c3dfbfb97e81947f48bcbd5436c2fc45aff4ef45941702622a312b2d31ec4420dc6ea57869b4fd908ba85f6466dd
+  checksum: 2becba29d06682cc7b2005c90d9d3a1bd9f8d22997dc76a56997f64dcf81d1576a523eec4d080e4f4513cb4badae1fa0bb4d9e1e2aacb8c3868b9693f8556d61
   languageName: node
   linkType: hard
 
@@ -2295,11 +2295,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@substrate/txwrapper-core@^1.2.19, @substrate/txwrapper-core@workspace:packages/txwrapper-core":
+"@substrate/txwrapper-core@^1.2.20, @substrate/txwrapper-core@workspace:packages/txwrapper-core":
   version: 0.0.0-use.local
   resolution: "@substrate/txwrapper-core@workspace:packages/txwrapper-core"
   dependencies:
-    "@polkadot/api": ^6.7.1
+    "@polkadot/api": ^6.8.1
     "@types/memoizee": ^0.4.3
     memoizee: 0.4.15
   languageName: unknown
@@ -2309,9 +2309,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@substrate/txwrapper-examples@workspace:packages/txwrapper-examples"
   dependencies:
-    "@polkadot/api": ^6.7.1
-    "@substrate/txwrapper-polkadot": ^1.2.19
-    "@substrate/txwrapper-registry": ^1.2.19
+    "@polkadot/api": ^6.8.1
+    "@substrate/txwrapper-polkadot": ^1.2.20
+    "@substrate/txwrapper-registry": ^1.2.20
   languageName: unknown
   linkType: soft
 
@@ -2320,34 +2320,34 @@ __metadata:
   resolution: "@substrate/txwrapper-orml@workspace:packages/txwrapper-orml"
   dependencies:
     "@acala-network/type-definitions": ^0.7.4-1
-    "@substrate/txwrapper-core": ^1.2.19
+    "@substrate/txwrapper-core": ^1.2.20
   languageName: unknown
   linkType: soft
 
-"@substrate/txwrapper-polkadot@^1.2.19, @substrate/txwrapper-polkadot@workspace:packages/txwrapper-polkadot":
+"@substrate/txwrapper-polkadot@^1.2.20, @substrate/txwrapper-polkadot@workspace:packages/txwrapper-polkadot":
   version: 0.0.0-use.local
   resolution: "@substrate/txwrapper-polkadot@workspace:packages/txwrapper-polkadot"
   dependencies:
-    "@substrate/txwrapper-core": ^1.2.19
-    "@substrate/txwrapper-substrate": ^1.2.19
+    "@substrate/txwrapper-core": ^1.2.20
+    "@substrate/txwrapper-substrate": ^1.2.20
   languageName: unknown
   linkType: soft
 
-"@substrate/txwrapper-registry@^1.2.19, @substrate/txwrapper-registry@workspace:packages/txwrapper-registry":
+"@substrate/txwrapper-registry@^1.2.20, @substrate/txwrapper-registry@workspace:packages/txwrapper-registry":
   version: 0.0.0-use.local
   resolution: "@substrate/txwrapper-registry@workspace:packages/txwrapper-registry"
   dependencies:
-    "@polkadot/apps-config": 0.98.2-57
+    "@polkadot/apps-config": 0.98.2-70
     "@polkadot/networks": ^7.8.2
-    "@substrate/txwrapper-core": ^1.2.19
+    "@substrate/txwrapper-core": ^1.2.20
   languageName: unknown
   linkType: soft
 
-"@substrate/txwrapper-substrate@^1.2.19, @substrate/txwrapper-substrate@workspace:packages/txwrapper-substrate":
+"@substrate/txwrapper-substrate@^1.2.20, @substrate/txwrapper-substrate@workspace:packages/txwrapper-substrate":
   version: 0.0.0-use.local
   resolution: "@substrate/txwrapper-substrate@workspace:packages/txwrapper-substrate"
   dependencies:
-    "@substrate/txwrapper-core": ^1.2.19
+    "@substrate/txwrapper-core": ^1.2.20
   languageName: unknown
   linkType: soft
 
@@ -2355,9 +2355,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@substrate/txwrapper-template@workspace:packages/txwrapper-template"
   dependencies:
-    "@substrate/txwrapper-core": ^1.2.19
-    "@substrate/txwrapper-registry": ^1.2.19
-    "@substrate/txwrapper-substrate": ^1.2.19
+    "@substrate/txwrapper-core": ^1.2.20
+    "@substrate/txwrapper-registry": ^1.2.20
+    "@substrate/txwrapper-substrate": ^1.2.20
     ts-node: 9.1.1
     typescript: 4.1.5
   languageName: unknown
