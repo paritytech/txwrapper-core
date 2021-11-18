@@ -15,7 +15,7 @@ export interface OptionsWithMeta extends Options {
 	 */
 	metadataRpc: string;
 	/**
-	 * When true sends back metadata as calls only.
+	 * Used to reduce the metadata size by only having the calls
 	 */
 	asCallsOnlyArg?: boolean;
 }
