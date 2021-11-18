@@ -1,6 +1,6 @@
 import { Metadata } from '@polkadot/types';
-import { MetadataVersioned } from '@polkadot/types/metadata/MetadataVersioned';
 import { TypeRegistry } from '@polkadot/types';
+import { MetadataVersioned } from '@polkadot/types/metadata/MetadataVersioned';
 import memoizee from 'memoizee';
 
 /**
@@ -15,7 +15,7 @@ import memoizee from 'memoizee';
 function createMetadataUnmemoized(
 	registry: TypeRegistry,
 	metadataRpc: string,
-	asCallsOnlyArg: boolean = false,
+	asCallsOnlyArg = false
 ): Metadata | MetadataVersioned {
 	const metadata = new Metadata(registry, metadataRpc);
 	return asCallsOnlyArg ? metadata.asCallsOnly : metadata;

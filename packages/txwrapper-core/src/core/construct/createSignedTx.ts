@@ -14,7 +14,7 @@ import { createMetadata } from '..';
 export function createSignedTx(
 	unsigned: UnsignedTransaction,
 	signature: `0x${string}`,
-	options: OptionsWithMeta,
+	options: OptionsWithMeta
 ): string {
 	const { metadataRpc, registry, asCallsOnlyArg } = options;
 	registry.setMetadata(createMetadata(registry, metadataRpc, asCallsOnlyArg));

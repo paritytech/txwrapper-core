@@ -18,7 +18,7 @@ import { createMetadata } from './createMetadata';
 export function createDecoratedTx(
 	registry: TypeRegistry,
 	metadataRpc: string,
-	asCallsOnly: boolean = false,
+	asCallsOnly = false
 ): Extrinsics {
 	const metadata = createMetadata(registry, metadataRpc, asCallsOnly);
 	return decorateExtrinsics(registry, metadata.asLatest, metadata.version);

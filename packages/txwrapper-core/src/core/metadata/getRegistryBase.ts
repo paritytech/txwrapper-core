@@ -20,7 +20,7 @@ export interface GetRegistryBaseArgs {
 	/**
 	 * Used to reduce the metadata size by only having the calls
 	 */
-	asCallsOnlyArg?: boolean
+	asCallsOnlyArg?: boolean;
 }
 
 /**
