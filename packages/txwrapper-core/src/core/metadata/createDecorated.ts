@@ -17,9 +17,10 @@ import { createMetadata } from './createMetadata';
  */
 export function createDecoratedTx(
 	registry: TypeRegistry,
-	metadataRpc: string
+	metadataRpc: string,
+	asCallsOnly: boolean = false,
 ): Extrinsics {
-	const metadata = createMetadata(registry, metadataRpc);
+	const metadata = createMetadata(registry, metadataRpc, asCallsOnly);
 	return decorateExtrinsics(registry, metadata.asLatest, metadata.version);
 }
 

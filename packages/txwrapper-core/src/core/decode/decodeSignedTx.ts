@@ -17,9 +17,9 @@ export function decodeSignedTx(
 	signedTx: string,
 	options: OptionsWithMeta
 ): DecodedSignedTx {
-	const { metadataRpc, registry } = options;
+	const { metadataRpc, registry, asCallsOnlyArg } = options;
 
-	registry.setMetadata(createMetadata(registry, metadataRpc));
+	registry.setMetadata(createMetadata(registry, metadataRpc, asCallsOnlyArg));
 
 	const tx = registry.createType('Extrinsic', hexToU8a(signedTx), {
 		isSigned: true,

@@ -14,6 +14,10 @@ export interface OptionsWithMeta extends Options {
 	 * The metadata of the runtime.
 	 */
 	metadataRpc: string;
+	/**
+	 * When true sends back metadata as calls only.
+	 */
+	asCallsOnlyArg?: boolean;
 }
 
 /**

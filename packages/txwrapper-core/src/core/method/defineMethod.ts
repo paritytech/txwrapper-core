@@ -32,10 +32,10 @@ export function defineMethod(
 	info: TxInfo,
 	options: OptionsWithMeta
 ): UnsignedTransaction {
-	const { metadataRpc, registry } = options;
-	registry.setMetadata(createMetadata(registry, metadataRpc));
+	const { metadataRpc, registry, asCallsOnlyArg } = options;
+	registry.setMetadata(createMetadata(registry, metadataRpc, asCallsOnlyArg));
 
-	const tx = createDecoratedTx(registry, metadataRpc);
+	const tx = createDecoratedTx(registry, metadataRpc, asCallsOnlyArg);
 
 	const methodFunction =
 		!!tx[info.method.pallet] &&

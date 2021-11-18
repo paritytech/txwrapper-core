@@ -18,9 +18,9 @@ export function decodeUnsignedTx(
 	unsigned: UnsignedTransaction,
 	options: OptionsWithMeta
 ): DecodedUnsignedTx {
-	const { metadataRpc, registry } = options;
+	const { metadataRpc, registry, asCallsOnlyArg } = options;
 
-	registry.setMetadata(createMetadata(registry, metadataRpc));
+	registry.setMetadata(createMetadata(registry, metadataRpc, asCallsOnlyArg));
 
 	const methodCall = registry.createType('Call', unsigned.method);
 	const method = toTxMethod(registry, methodCall);

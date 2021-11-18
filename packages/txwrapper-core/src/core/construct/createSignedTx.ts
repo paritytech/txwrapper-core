@@ -14,10 +14,10 @@ import { createMetadata } from '..';
 export function createSignedTx(
 	unsigned: UnsignedTransaction,
 	signature: `0x${string}`,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): string {
-	const { metadataRpc, registry } = options;
-	registry.setMetadata(createMetadata(registry, metadataRpc));
+	const { metadataRpc, registry, asCallsOnlyArg } = options;
+	registry.setMetadata(createMetadata(registry, metadataRpc, asCallsOnlyArg));
 
 	const extrinsic = registry.createType(
 		'Extrinsic',

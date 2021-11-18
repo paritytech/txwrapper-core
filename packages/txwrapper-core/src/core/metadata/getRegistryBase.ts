@@ -17,6 +17,10 @@ export interface GetRegistryBaseArgs {
 	 * Used to set the correct metadata for the registry
 	 */
 	metadataRpc: string;
+	/**
+	 * Used to reduce the metadata size by only having the calls
+	 */
+	asCallsOnlyArg?: boolean
 }
 
 /**
@@ -26,10 +30,11 @@ export function getRegistryBase({
 	chainProperties,
 	specTypes,
 	metadataRpc,
+	asCallsOnlyArg,
 }: GetRegistryBaseArgs): TypeRegistry {
 	const registry = new TypeRegistry();
 
-	const metadata = createMetadata(registry, metadataRpc);
+	const metadata = createMetadata(registry, metadataRpc, asCallsOnlyArg);
 
 	registry.register(specTypes);
 
