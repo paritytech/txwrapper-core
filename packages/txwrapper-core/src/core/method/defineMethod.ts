@@ -35,7 +35,7 @@ export function defineMethod(
 	const { metadataRpc, registry, asCallsOnlyArg } = options;
 	registry.setMetadata(createMetadata(registry, metadataRpc, asCallsOnlyArg));
 
-	const tx = createDecoratedTx(registry, metadataRpc, asCallsOnlyArg);
+	const tx = createDecoratedTx(registry, metadataRpc);
 
 	const methodFunction =
 		!!tx[info.method.pallet] &&
@@ -77,7 +77,7 @@ export function defineMethod(
 			})
 			.toHex(),
 		genesisHash: info.genesisHash,
-		metadataRpc,
+		metadataRpc: registry.metadata.toHex(),
 		method,
 		nonce: registry.createType('Compact<Index>', info.nonce).toHex(),
 		signedExtensions: registry.signedExtensions,
