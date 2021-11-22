@@ -12,7 +12,7 @@ import memoizee from 'memoizee';
  * @param registry - The registry of the metadata.
  * @param metadata - The metadata as hex string.
  */
-function createMetadataUnmemoized(
+export function createMetadataUnmemoized(
 	registry: TypeRegistry,
 	metadataRpc: string,
 	asCallsOnlyArg = false

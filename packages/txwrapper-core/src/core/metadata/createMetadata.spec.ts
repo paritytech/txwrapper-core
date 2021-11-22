@@ -16,7 +16,7 @@ describe('createMetadata', () => {
 		true
 	);
 
-	it('Metadata should decrease in byte size when `asCallsOnlyArg is true`', async () => {
+	it('Metadata should decrease in byte size when `asCallsOnlyArg is true`', () => {
 		const metadataBuffer = Buffer.from(metadata.toHex(), 'utf-8');
 		const metadataAsCallsBuffer = Buffer.from(metadataAsCalls.toHex(), 'utf-8');
 
