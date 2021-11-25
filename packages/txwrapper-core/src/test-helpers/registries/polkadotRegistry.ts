@@ -1,5 +1,5 @@
-import { polkadotV9122MetadataHex } from '../metadata/polkadotV9122MetadataHex';
 import { getRegistryPolkadot } from '../getRegistryPolkadot';
+import { polkadotV9122MetadataHex } from '../metadata/polkadotV9122MetadataHex';
 
 /**
  * Polkadot v9122 TypeRegistry
