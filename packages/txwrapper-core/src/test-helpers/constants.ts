@@ -61,7 +61,7 @@ export const POLKADOT_29_TEST_OPTIONS = {
  */
 export const POLKADOT_9122_TEST_OPTIONS = {
 	metadataRpc: polkadotV9122MetadataHex,
-	registry: getRegistryPolkadot(29, polkadotV9122MetadataHex),
+	registry: getRegistryPolkadot(9122, polkadotV9122MetadataHex),
 };
 
 /**
@@ -69,7 +69,7 @@ export const POLKADOT_9122_TEST_OPTIONS = {
  */
 export const POLKADOT_9122_TEST_OPTIONS_CALLS_ONLY = {
 	metadataRpc: polkadotV9122MetadataHex,
-	registry: getRegistryPolkadot(29, polkadotV9122MetadataHex),
+	registry: getRegistryPolkadot(9122, polkadotV9122MetadataHex),
 	asCallsOnlyArg: true,
 };
 
