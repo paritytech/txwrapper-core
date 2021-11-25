@@ -11,6 +11,7 @@ import memoizee from 'memoizee';
  * @ignore
  * @param registry - The registry of the metadata.
  * @param metadata - The metadata as hex string.
+ * @param asCallsOnlyArg - Option to decreases the metadata to calls only
  */
 export function createMetadataUnmemoized(
 	registry: TypeRegistry,
@@ -29,7 +30,8 @@ export function createMetadataUnmemoized(
  * @ignore
  * @param registry - The registry of the metadata.
  * @param metadata - The metadata as hex string.
+ * @param asCallsOnlyArg - Option to decreases the metadata to calls only
  */
 export const createMetadata = memoizee(createMetadataUnmemoized, {
-	length: 2,
+	length: 3,
 });

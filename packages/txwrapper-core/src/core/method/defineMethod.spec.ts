@@ -1,7 +1,11 @@
 import {
+	balancesTransfer,
 	POLKADOT_25_TEST_OPTIONS,
+	POLKADOT_9122_TEST_OPTIONS,
+	POLKADOT_9122_TEST_OPTIONS_CALLS_ONLY,
 	TEST_BASE_TX_INFO,
-} from '../../test-helpers/constants';
+	TEST_METHOD_ARGS,
+} from '../../test-helpers/';
 import { defineMethod } from './defineMethod';
 
 describe('defineMethod', () => {
@@ -56,5 +60,26 @@ describe('defineMethod', () => {
 		expect(unsigned.nonce).toBe('0x00000002');
 		expect(unsigned.address).toBe(TEST_BASE_TX_INFO.address);
 		expect(unsigned.blockNumber).toBe('0x0041a58e');
+	});
+
+	it('Should have a smaller unsigned tx size when using `asCallsOnlyArg` with V14 formatted metadata', () => {
+		// balancesTransfer is a test helper that uses defineMethod to construct a unsigned tx
+		const unsignedPayload = balancesTransfer(
+			TEST_METHOD_ARGS.balances.transfer,
+			TEST_BASE_TX_INFO,
+			POLKADOT_9122_TEST_OPTIONS
+		);
+
+		const unsignedPayloadCallsOnly = balancesTransfer(
+			TEST_METHOD_ARGS.balances.transfer,
+			TEST_BASE_TX_INFO,
+			POLKADOT_9122_TEST_OPTIONS_CALLS_ONLY
+		);
+
+		expect(
+			Buffer.from(JSON.stringify(unsignedPayloadCallsOnly), 'utf-8').length
+		).toBeLessThan(
+			Buffer.from(JSON.stringify(unsignedPayload), 'utf-8').length
+		);
 	});
 });
