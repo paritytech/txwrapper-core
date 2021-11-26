@@ -65,7 +65,7 @@ export const POLKADOT_9122_TEST_OPTIONS = {
 };
 
 /**
- * Test options for runtime v9122
+ * Test options for runtime v9122 with calls only metadata
  */
 export const POLKADOT_9122_TEST_OPTIONS_CALLS_ONLY = {
 	metadataRpc: polkadotV9122MetadataHex,
