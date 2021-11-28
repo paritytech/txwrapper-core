@@ -407,21 +407,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.15.4, @babel/runtime@npm:^7.16.3":
+"@babel/runtime@npm:^7.15.4, @babel/runtime@npm:^7.16.3, @babel/runtime@npm:^7.9.6":
   version: 7.16.3
   resolution: "@babel/runtime@npm:7.16.3"
   dependencies:
     regenerator-runtime: ^0.13.4
   checksum: ab8ac887096d76185ddbf291d28fb976cd32473696dc497ad4905b784acbd5aa462533ad83a5c5104e10ead28c2e0e119840ee28ed8eff90dcdde9d57f916eda
-  languageName: node
-  linkType: hard
-
-"@babel/runtime@npm:^7.9.6":
-  version: 7.16.0
-  resolution: "@babel/runtime@npm:7.16.0"
-  dependencies:
-    regenerator-runtime: ^0.13.4
-  checksum: bfbca3ec52c94de262a3932473bceeead1a088b50194108fa1ff6eda447333f0f7d43fa4e9c5937c6e5d45bf838da8480905d0a227589b257c51f954ea060bac
   languageName: node
   linkType: hard
 
@@ -3406,14 +3397,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"camelcase@npm:^6.2.0":
-  version: 6.2.0
-  resolution: "camelcase@npm:6.2.0"
-  checksum: 8335cfd0ecc472eae685896a42afd8c9dacd193a91f569120b931c87deb053a1ba82102031b9b48a4dbc1d18066caeacf2e4ace8c3c7f0d02936d348dc0b5a87
-  languageName: node
-  linkType: hard
-
-"camelcase@npm:^6.2.1":
+"camelcase@npm:^6.2.0, camelcase@npm:^6.2.1":
   version: 6.2.1
   resolution: "camelcase@npm:6.2.1"
   checksum: d876272ef76391ebf8442fb7ea1d77e80ae179ce1339e021a8731b4895fd190dc19e148e045469cff5825d4c089089f3fff34d804d3f49115d55af97dd6ac0af
@@ -10168,14 +10152,26 @@ fsevents@^2.3.2:
   version: 0.0.0-use.local
   resolution: "txwrapper-core@workspace:."
   dependencies:
+    "@babel/plugin-transform-modules-commonjs": ^7.15.4
     "@polkadot/util-crypto": ^7.8.2
     "@substrate/dev": ^0.5.6
+    "@types/jest": ^27.0.1
+    "@typescript-eslint/eslint-plugin": ^4.31.1
+    "@typescript-eslint/parser": ^4.31.1
+    eslint: ^7.32.0
+    eslint-config-prettier: ^8.3.0
+    eslint-plugin-prettier: ^3.4.1
+    eslint-plugin-simple-import-sort: ^7.0.0
+    jest: ^27.2.0
     lerna: ^4.0.0
+    prettier: ^2.4.1
     rimraf: ^3.0.2
+    ts-jest: ^27.0.5
     ts-node: ^9.1.1
     tsconfig-paths: ^3.9.0
     typedoc: ^0.20.35
     typedoc-plugin-markdown: ^3.7.1
+    typescript: ^4.4.3
   languageName: unknown
   linkType: soft
 
