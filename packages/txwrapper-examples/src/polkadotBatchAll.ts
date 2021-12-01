@@ -46,6 +46,26 @@ async function main(): Promise<void> {
 	);
 
 	// Create Polkadot's type registry.
+	/**
+	 * Create Polkadot's type registry.
+	 *
+	 * When creating a type registry, it accepts a `asCallsOnlyArg` option which
+	 * defaults to false. When true this will minimize the size of the metadata
+	 * to only include the calls. This removes storage, events, etc. This will
+	 * ultimately decrease the size of the unsigned transaction.
+	 *
+	 * Example:
+	 *
+	 * ```
+	 * const registry = getRegistry({
+	 *  chainName: 'Polkadot',
+	 *	specName,
+	 *	specVersion,
+	 *	metadataRpc,
+	 *  asCallsOnlyArg: true,
+	 * });
+	 * ```
+	 */
 	const registry = getRegistry({
 		chainName: 'Polkadot',
 		specName,
@@ -56,7 +76,7 @@ async function main(): Promise<void> {
 	// Metadata and type defintion registry used to create the calls
 	const optionsWithMeta = {
 		registry: registry,
-		metadataRpc: metadataRpc,
+		metadataRpc: registry.metadata.toHex(),
 	};
 
 	// Arguments for 12 balances transferKeepAlive

@@ -14,6 +14,10 @@ export interface OptionsWithMeta extends Options {
 	 * The metadata of the runtime.
 	 */
 	metadataRpc: string;
+	/**
+	 * Used to reduce the metadata size by only having the calls
+	 */
+	asCallsOnlyArg?: boolean;
 }
 
 /**

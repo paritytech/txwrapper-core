@@ -1,5 +1,6 @@
 import { Metadata } from '@polkadot/types';
 import { TypeRegistry } from '@polkadot/types';
+import { MetadataVersioned } from '@polkadot/types/metadata/MetadataVersioned';
 import memoizee from 'memoizee';
 
 /**
@@ -10,12 +11,15 @@ import memoizee from 'memoizee';
  * @ignore
  * @param registry - The registry of the metadata.
  * @param metadata - The metadata as hex string.
+ * @param asCallsOnlyArg - Option to decreases the metadata to calls only
  */
-function createMetadataUnmemoized(
+export function createMetadataUnmemoized(
 	registry: TypeRegistry,
-	metadataRpc: string
-): Metadata {
-	return new Metadata(registry, metadataRpc);
+	metadataRpc: string,
+	asCallsOnlyArg = false
+): Metadata | MetadataVersioned {
+	const metadata = new Metadata(registry, metadataRpc);
+	return asCallsOnlyArg ? metadata.asCallsOnly : metadata;
 }
 
 /**
@@ -26,7 +30,8 @@ function createMetadataUnmemoized(
  * @ignore
  * @param registry - The registry of the metadata.
  * @param metadata - The metadata as hex string.
+ * @param asCallsOnlyArg - Option to decreases the metadata to calls only
  */
 export const createMetadata = memoizee(createMetadataUnmemoized, {
-	length: 2,
+	length: 3,
 });

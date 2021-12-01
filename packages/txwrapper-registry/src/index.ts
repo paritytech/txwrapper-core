@@ -71,6 +71,7 @@ export function getRegistry({
 	specVersion,
 	metadataRpc,
 	properties,
+	asCallsOnlyArg,
 }: GetRegistryOpts): TypeRegistry {
 	// Polkadot, kusama, and westend have known types in the default polkadot-js registry. If we are
 	// dealing with another network, use the apps-config types to fill the registry.
@@ -83,5 +84,6 @@ export function getRegistry({
 		// `getSpecTypes` is used to extract the chain specific types from the registries `knownTypes`
 		specTypes: getSpecTypes(registry, chainName, specName, specVersion),
 		metadataRpc,
+		asCallsOnlyArg,
 	});
 }

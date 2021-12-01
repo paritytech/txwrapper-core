@@ -112,7 +112,10 @@ export interface GetRegistryOpts extends GetRegistryOptsCore {
 /**
  * Get a type registry for networks that txwrapper-foo supports.
  *
- * @param GetRegistryOptions specName, chainName, specVersion, and metadataRpc of the current runtime
+ * @param GetRegistryOptions specName, chainName, specVersion, and metadataRpc of the current runtime.
+ * It also allows you to pass in a `asCallsOnlyArg` boolean. This gives you the options to reduce
+ * the size of the metadata passed in to only include the calls. This will overall reduce the size of the
+ * unsigned transaction.
  */
 export function getRegistry({
   specName,
@@ -120,6 +123,7 @@ export function getRegistry({
   specVersion,
   metadataRpc,
   properties,
+  asCallsOnlyArg
 }: GetRegistryOpts): TypeRegistry {
   const registry = new TypeRegistry();
   registry.setKnownTypes({
@@ -133,6 +137,7 @@ export function getRegistry({
     chainProperties: properties || KNOWN_CHAIN_PROPERTIES[specName],
     specTypes: getSpecTypes(registry, chainName, specName, specVersion),
     metadataRpc,
+    asCallsOnlyArg
   });
 }
 ```

@@ -67,5 +67,5 @@ export function signWith(
 		})
 		.sign(pair);
 
-	return signature;
+	return signature as unknown as `0x${string}`;
 }

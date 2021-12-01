@@ -16,8 +16,8 @@ export function createSignedTx(
 	signature: `0x${string}`,
 	options: OptionsWithMeta
 ): string {
-	const { metadataRpc, registry } = options;
-	registry.setMetadata(createMetadata(registry, metadataRpc));
+	const { metadataRpc, registry, asCallsOnlyArg } = options;
+	registry.setMetadata(createMetadata(registry, metadataRpc, asCallsOnlyArg));
 
 	const extrinsic = registry.createType(
 		'Extrinsic',

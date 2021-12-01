@@ -1,4 +1,5 @@
 import { getRegistryPolkadot } from './getRegistryPolkadot';
+import { polkadotV9122MetadataHex } from './metadata/polkadotV9122MetadataHex';
 import metadataRpc from './staticV3-1-1';
 import metadataRpcV29 from './staticV4-3-1';
 export { metadataRpc };
@@ -53,6 +54,23 @@ export const POLKADOT_25_TEST_OPTIONS = {
 export const POLKADOT_29_TEST_OPTIONS = {
 	metadataRpc: metadataRpcV29,
 	registry: getRegistryPolkadot(29, metadataRpcV29),
+};
+
+/**
+ * Test options for runtime v9122
+ */
+export const POLKADOT_9122_TEST_OPTIONS = {
+	metadataRpc: polkadotV9122MetadataHex,
+	registry: getRegistryPolkadot(9122, polkadotV9122MetadataHex),
+};
+
+/**
+ * Test options for runtime v9122 with calls only metadata
+ */
+export const POLKADOT_9122_TEST_OPTIONS_CALLS_ONLY = {
+	metadataRpc: polkadotV9122MetadataHex,
+	registry: getRegistryPolkadot(9122, polkadotV9122MetadataHex),
+	asCallsOnlyArg: true,
 };
 
 /**

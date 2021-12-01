@@ -24,4 +24,8 @@ export interface GetRegistryOptsCore {
 	 * Chain ss58format, token decimals, and token ID
 	 */
 	properties?: ChainProperties;
+	/**
+	 * Used to reduce the metadata size by only having the calls
+	 */
+	asCallsOnlyArg?: boolean;
 }

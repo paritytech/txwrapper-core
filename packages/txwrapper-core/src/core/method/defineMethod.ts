@@ -32,8 +32,8 @@ export function defineMethod(
 	info: TxInfo,
 	options: OptionsWithMeta
 ): UnsignedTransaction {
-	const { metadataRpc, registry } = options;
-	registry.setMetadata(createMetadata(registry, metadataRpc));
+	const { metadataRpc, registry, asCallsOnlyArg } = options;
+	registry.setMetadata(createMetadata(registry, metadataRpc, asCallsOnlyArg));
 
 	const tx = createDecoratedTx(registry, metadataRpc);
 
@@ -77,7 +77,7 @@ export function defineMethod(
 			})
 			.toHex(),
 		genesisHash: info.genesisHash,
-		metadataRpc,
+		metadataRpc: registry.metadata.toHex(),
 		method,
 		nonce: registry.createType('Compact<Index>', info.nonce).toHex(),
 		signedExtensions: registry.signedExtensions,
