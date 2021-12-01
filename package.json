@@ -9,6 +9,7 @@
   ],
   "scripts": {
     "deploy": "yarn run build && lerna version --conventional-commits --create-release github && lerna publish from-package",
+    "version": "yarn install && git stage yarn.lock",
     "build": "lerna run build",
     "build:workspace": "cd $INIT_CWD && rimraf lib/ && substrate-exec-tsc -p tsconfig.build.json",
     "lint": "substrate-dev-run-lint",
