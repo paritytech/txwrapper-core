@@ -96,7 +96,7 @@ yarn run lint --fix
     yarn
     ```
 
-5. Ensure there are no issues by running the following commands. If any type errors occur due to the updated dependencies, you may file an issue [here](https://github.com/paritytech/txwrapper-core/issues).
+5. Ensure there are no issues by running the following commands. If any type errors occur due to the updated dependencies, please file an issue [here](https://github.com/paritytech/txwrapper-core/issues).
 
     ```bash
     yarn run build
