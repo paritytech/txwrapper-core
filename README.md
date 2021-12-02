@@ -82,16 +82,20 @@ yarn run lint --fix
 
 1. Ensure that your version of `npm` is 7 or above. Check with `npm --version` and, if needed, upgrade with `npm install -g npm` (which may need to be prefixed with `sudo` depending on the permissions set on your global `node_modules` folder). **If this is not true, an empty binary will be pushed on publish.**
 
-2. Checkout a branch `name-update-deps`, and ensure we have the latest polkadot-js dependencies by running the command below. If all packages are already up to date you may skip to the "Publishing" section below.
+2. Checkout a branch `name-update-deps`.
+
+3. Make sure to update the resolutions inside of the `package.json` to match polkadot-js [here](https://github.com/polkadot-js/apps/blob/master/package.json).
+
+4. Ensure we have the latest polkadot-js dependencies by running the command below. If all packages are already up to date you may skip to the "Publishing" section below.
 Note: what follows assumes `yarn` at version 2.4.2 or above.
 
     ```bash
     yarn up "@polkadot/*"
     yarn up "@polkadot/apps-config@beta"
+    yarn
     ```
-2. Next make sure to update the resolutions inside of the `package.json` to match polkadot-js [here](https://github.com/polkadot-js/apps/blob/master/package.json).
 
-3. Ensure there are no issues by running the following commands. If any type errors occur due to the updated dependencies, you may file an issue [here](https://github.com/paritytech/txwrapper-core/issues).
+5. Ensure there are no issues by running the following commands. If any type errors occur due to the updated dependencies, you may file an issue [here](https://github.com/paritytech/txwrapper-core/issues).
 
     ```bash
     yarn run build
@@ -108,7 +112,7 @@ Note: what follows assumes `yarn` at version 2.4.2 or above.
 
     These are expected, and can be ignored.
 
-4. If all tests pass and all packages build successfully, commit your changes with the following format `fix(types): Update polkadot-js deps to get the latest types`. Then push your branch up to Github for review, then merge. The release tooling takes care of bumping the version so no need for a manual update (see below).
+6. If all tests pass and all packages build successfully, commit your changes with the following format `fix(types): Update polkadot-js deps to get the latest types`. Then push your branch up to Github for review, then merge. The release tooling takes care of bumping the version so no need for a manual update (see below).
 
 #### Publishing
 
