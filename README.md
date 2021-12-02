@@ -85,9 +85,10 @@ yarn run lint --fix
 2. Checkout a branch `name-update-deps`.
 
 3. Make sure to update the resolutions inside of the `package.json` to match polkadot-js [here](https://github.com/polkadot-js/apps/blob/master/package.json).
+    **note**: Remove any carets ("^") from the resolution versions. This is just for extra safety, and removes any concern around SemVer issues.
 
 4. Ensure we have the latest polkadot-js dependencies by running the command below. If all packages are already up to date you may skip to the "Publishing" section below.
-Note: what follows assumes `yarn` at version 2.4.2 or above.
+    **Note:** what follows assumes `yarn` at version 2.4.2 or above.
 
     ```bash
     yarn up "@polkadot/*"
