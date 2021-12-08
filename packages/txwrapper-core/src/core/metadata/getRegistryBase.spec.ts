@@ -11,13 +11,13 @@ describe('getRegistryBase', () => {
 
 		const completeRegistry = getRegistryBase({
 			chainProperties: knownChainProperties['polkadot'],
-			specTypes: getSpecTypes(registry, 'Polkadot', 'polkadot', 9130),
+			specTypes: getSpecTypes(registry, 'Polkadot', 'polkadot', 9122),
 			metadataRpc: POLKADOT_9122_TEST_OPTIONS.metadataRpc,
 		});
 
 		const callsOnlyRegistry = getRegistryBase({
 			chainProperties: knownChainProperties['polkadot'],
-			specTypes: getSpecTypes(registry, 'Polkadot', 'polkadot', 9130),
+			specTypes: getSpecTypes(registry, 'Polkadot', 'polkadot', 9122),
 			metadataRpc: POLKADOT_9122_TEST_OPTIONS.metadataRpc,
 			asCallsOnlyArg: true,
 		});
