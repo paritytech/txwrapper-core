@@ -97,8 +97,8 @@ describe('defineMethod', () => {
 		 * can be reused in a new type registry without erroring.
 		 */
 		const registry = new TypeRegistry();
-		const metadata = new Metadata(registry, unsignedPayload.metadataRpc);
-
-		expect(metadata).toBeTruthy();
+		expect(
+			() => new Metadata(registry, unsignedPayload.metadataRpc)
+		).not.toThrow();
 	});
 });
