@@ -1,3 +1,5 @@
+import { Metadata, TypeRegistry } from '@polkadot/types';
+
 import {
 	balancesTransfer,
 	POLKADOT_25_TEST_OPTIONS,
@@ -81,5 +83,22 @@ describe('defineMethod', () => {
 		).toBeLessThan(
 			Buffer.from(JSON.stringify(unsignedPayload), 'utf-8').length
 		);
+	});
+
+	it('The integrity of the metadata in an unsigned transaction should be reuseable', () => {
+		const unsignedPayload = balancesTransfer(
+			TEST_METHOD_ARGS.balances.transfer,
+			TEST_BASE_TX_INFO,
+			POLKADOT_9122_TEST_OPTIONS
+		);
+
+		/**
+		 * This ensures that the metadata returned in the unsigned transaction
+		 * can be reused in a new type registry without erroring.
+		 */
+		const registry = new TypeRegistry();
+		expect(
+			() => new Metadata(registry, unsignedPayload.metadataRpc)
+		).not.toThrow();
 	});
 });

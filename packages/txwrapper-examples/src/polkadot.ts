@@ -50,8 +50,8 @@ async function main(): Promise<void> {
 	 *
 	 * When creating a type registry, it accepts a `asCallsOnlyArg` option which
 	 * defaults to false. When true this will minimize the size of the metadata
-	 * to only include the calls. This removes storage, events, etc. This will
-	 * ultimately decrease the size of the unsigned transaction.
+	 * to only include the calls. This removes storage, events, etc.
+	 * This will ultimately decrease the size of the metadata stored in the registry.
 	 *
 	 * Example:
 	 *
@@ -72,9 +72,20 @@ async function main(): Promise<void> {
 		metadataRpc,
 	});
 
-	// Now we can create our `balances.transferKeepAlive` unsigned tx. The following
-	// function takes the above data as arguments, so can be performed offline
-	// if desired.
+	/**
+	 * Now we can create our `balances.transferKeepAlive` unsigned tx. The following
+	 * function takes the above data as arguments, so it can be performed offline
+	 * if desired.
+	 *
+	 * In order to decrease the size of the metadata returned in the unsigned transaction,
+	 * be sure to include `asCallsOnlyArg` field in the options.
+	 * Ex:
+	 * {
+	 *   metadataRpc,
+	 *   registry,
+	 *   asCallsOnlyArg: true
+	 * }
+	 */
 	const unsigned = methods.balances.transferKeepAlive(
 		{
 			value: '90071992547409910',
