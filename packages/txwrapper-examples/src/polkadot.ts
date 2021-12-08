@@ -72,13 +72,12 @@ async function main(): Promise<void> {
 		metadataRpc,
 	});
 
-	
 	/**
 	 * Now we can create our `balances.transferKeepAlive` unsigned tx. The following
 	 * function takes the above data as arguments, so it can be performed offline
 	 * if desired.
 	 *
-	 * In order to decrease the size of the metadata returned in the unsigned transaction, 
+	 * In order to decrease the size of the metadata returned in the unsigned transaction,
 	 * be sure to include `asCallsOnlyArg` field in the options.
 	 * Ex:
 	 * {
