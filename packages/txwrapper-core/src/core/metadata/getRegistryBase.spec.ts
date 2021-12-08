@@ -25,11 +25,9 @@ describe('getRegistryBase', () => {
 		});
 
 		expect(
-			Buffer.from(JSON.stringify(completeRegistry.metadata.toHex()), 'utf-8')
-				.byteLength
+			Buffer.from(completeRegistry.metadata.toHex(), 'utf-8').byteLength
 		).toBeGreaterThan(
-			Buffer.from(JSON.stringify(callsOnlyRegistry.metadata.toHex()), 'utf-8')
-				.byteLength
+			Buffer.from(callsOnlyRegistry.metadata.toHex(), 'utf-8').byteLength
 		);
 	});
 });
