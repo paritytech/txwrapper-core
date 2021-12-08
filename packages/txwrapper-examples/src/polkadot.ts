@@ -50,7 +50,7 @@ async function main(): Promise<void> {
 	 *
 	 * When creating a type registry, it accepts a `asCallsOnlyArg` option which
 	 * defaults to false. When true this will minimize the size of the metadata
-	 * to only include the calls. This removes storage, events, etc. 
+	 * to only include the calls. This removes storage, events, etc.
 	 * This will ultimately decrease the size of the unsigned transaction.
 	 *
 	 * Example:
