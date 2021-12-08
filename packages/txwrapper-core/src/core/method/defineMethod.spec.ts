@@ -98,9 +98,7 @@ describe('defineMethod', () => {
 		 */
 		const registry = new TypeRegistry();
 		const metadata = new Metadata(registry, unsignedPayload.metadataRpc);
-		const newRegistry = new TypeRegistry();
-		newRegistry.setMetadata(metadata);
 
-		expect(newRegistry).toBeTruthy();
+		expect(metadata).toBeTruthy();
 	});
 });
