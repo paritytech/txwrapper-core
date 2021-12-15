@@ -26,13 +26,6 @@ export interface OptionsWithMeta extends Options {
 export type Args = Record<string, AnyJson>;
 
 /**
- * Complete information about a tx
- */
-export interface TxInfo extends BaseTxInfo {
-	method: TxMethod;
-}
-
-/**
  * Format used in txwrapper to represent a method.
  */
 export interface TxMethod {
