@@ -19,7 +19,7 @@ export interface GetRegistryOptsCore {
 	/**
 	 * SCALE encoded runtime metadata as a hex string
 	 */
-	metadataRpc: string;
+	metadataRpc: `0x${string}`;
 	/**
 	 * Chain ss58format, token decimals, and token ID
 	 */

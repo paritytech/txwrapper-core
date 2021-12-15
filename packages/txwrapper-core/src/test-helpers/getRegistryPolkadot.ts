@@ -14,7 +14,7 @@ import { getRegistryBase } from '../core';
  */
 export function getRegistryPolkadot(
 	specVersion: number,
-	metadataRpc: string
+	metadataRpc: `0x${string}`
 ): TypeRegistry {
 	return getRegistryBase({
 		chainProperties: {

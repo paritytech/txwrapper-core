@@ -15,7 +15,7 @@ import memoizee from 'memoizee';
  */
 export function createMetadataUnmemoized(
 	registry: TypeRegistry,
-	metadataRpc: string,
+	metadataRpc: `0x${string}`,
 	asCallsOnlyArg = false
 ): Metadata | MetadataVersioned {
 	const metadata = new Metadata(registry, metadataRpc);
