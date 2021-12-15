@@ -16,7 +16,7 @@ export interface GetRegistryBaseArgs {
 	/**
 	 * Used to set the correct metadata for the registry
 	 */
-	metadataRpc: string;
+	metadataRpc: `0x${string}`;
 	/**
 	 * Used to reduce the metadata size by only having the calls
 	 */

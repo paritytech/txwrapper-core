@@ -17,7 +17,7 @@ import { createMetadata } from './createMetadata';
  */
 export function createDecoratedTx(
 	registry: TypeRegistry,
-	metadataRpc: string
+	metadataRpc: `0x${string}`,
 ): Extrinsics {
 	const metadata = createMetadata(registry, metadataRpc);
 	return decorateExtrinsics(registry, metadata.asLatest, metadata.version);
@@ -32,7 +32,7 @@ export function createDecoratedTx(
  */
 export function createDecoratedConstants(
 	registry: TypeRegistry,
-	metadataRpc: string
+	metadataRpc: `0x${string}`
 ): Constants {
 	const metadata = createMetadata(registry, metadataRpc);
 	return decorateConstants(registry, metadata.asLatest, metadata.version);

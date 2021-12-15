@@ -1,7 +1,7 @@
 import { getRegistryPolkadot } from './getRegistryPolkadot';
 import { polkadotV9122MetadataHex } from './metadata/polkadotV9122MetadataHex';
-import metadataRpc from './staticV3-1-1';
-import metadataRpcV29 from './staticV4-3-1';
+import { metadataRpc } from './staticV3-1-1';
+import { metadataRpcV29 } from './staticV4-3-1';
 export { metadataRpc };
 
 /**
@@ -15,7 +15,7 @@ export const TEST_BASE_TX_INFO = {
 	eraPeriod: 2400,
 	genesisHash:
 		'0xe3777fa922cafbff200cadeaea1a76bd7898ad5b89f7848999058b50e715f636',
-	metadataRpc,
+	metadataRpc: metadataRpc,
 	nonce: 2,
 	specVersion: 1019,
 	tip: 0,

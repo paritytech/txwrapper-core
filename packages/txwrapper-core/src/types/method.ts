@@ -13,7 +13,7 @@ export interface OptionsWithMeta extends Options {
 	/**
 	 * The metadata of the runtime.
 	 */
-	metadataRpc: string;
+	metadataRpc: `0x${string}`;
 	/**
 	 * Used to reduce the metadata size by only having the calls
 	 */
@@ -49,7 +49,7 @@ export interface UnsignedTransaction extends SignerPayloadJSON {
 	 * The SCALE-encoded metadata, as a hex string. Can be retrieved via the RPC
 	 * call `state_getMetadata`.
 	 */
-	metadataRpc: string;
+	metadataRpc: `0x${string}`;
 }
 
 /**
@@ -83,7 +83,7 @@ export interface BaseTxInfo {
 	 * The SCALE-encoded metadata, as a hex string. Can be retrieved via the RPC
 	 * call `state_getMetadata`.
 	 */
-	metadataRpc: string;
+	metadataRpc: `0x${string}`;
 	/**
 	 * The nonce for this transaction.
 	 */
