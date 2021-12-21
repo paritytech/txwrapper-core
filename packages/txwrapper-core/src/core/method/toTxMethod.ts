@@ -4,9 +4,9 @@
  */ /** */
 import { createTypeUnsafe, TypeRegistry } from '@polkadot/types';
 import { Compact } from '@polkadot/types';
-import { AbstractInt } from '@polkadot/types/codec/AbstractInt';
 import { Call } from '@polkadot/types/interfaces';
 import { Codec } from '@polkadot/types/types';
+import { AbstractInt } from '@polkadot/types-codec/abstract/AbstractInt';
 import { BN, stringCamelCase } from '@polkadot/util';
 
 import { Args, TxMethod } from '../../types/method';
