@@ -29,7 +29,7 @@ export function decodeSignedTx(
 
 	return {
 		address: tx.signer.toString(),
-		eraPeriod: tx.era.asMortalEra.period.toNumber(),
+		eraPeriod: parseInt(tx.era.asMortalEra.period.toString()),
 		metadataRpc,
 		method,
 		nonce: tx.nonce.toNumber(),
