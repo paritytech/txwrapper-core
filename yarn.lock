@@ -1973,7 +1973,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@polkadot/apps-config@npm:beta":
+"@polkadot/apps-config@npm:^0.100.2-30":
   version: 0.100.2-30
   resolution: "@polkadot/apps-config@npm:0.100.2-30"
   dependencies:
@@ -2477,7 +2477,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@substrate/txwrapper-registry@workspace:packages/txwrapper-registry"
   dependencies:
-    "@polkadot/apps-config": beta
+    "@polkadot/apps-config": ^0.100.2-30
     "@polkadot/networks": ^8.2.2
     "@substrate/txwrapper-core": ^1.3.2
   languageName: unknown
