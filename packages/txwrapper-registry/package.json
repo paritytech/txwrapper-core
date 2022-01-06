@@ -21,7 +21,7 @@
     "build": "yarn build:workspace"
   },
   "dependencies": {
-    "@polkadot/apps-config": "0.99.1",
+    "@polkadot/apps-config": "beta",
     "@polkadot/networks": "^8.2.2",
     "@substrate/txwrapper-core": "^1.3.2"
   }
