@@ -1,6 +1,6 @@
 {
   "name": "@substrate/txwrapper-polkadot",
-  "version": "1.3.2",
+  "version": "1.4.0",
   "author": "Parity Technologies <admin@parity.io>",
   "description": "Helper functions for Polkadot, Kusama, Rococo and Westend offline transaction generation.",
   "files": [
@@ -21,7 +21,7 @@
     "build": "yarn build:workspace"
   },
   "dependencies": {
-    "@substrate/txwrapper-core": "^1.3.2",
-    "@substrate/txwrapper-substrate": "^1.3.2"
+    "@substrate/txwrapper-core": "^1.4.0",
+    "@substrate/txwrapper-substrate": "^1.4.0"
   }
 }

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/paritytech/txwrapper-core/compare/v1.3.2...v1.4.0) (2022-01-06)
+
+
+### Features
+
+* add proxy::killAnonymous method ([#164](https://github.com/paritytech/txwrapper-core/issues/164)) ([a6ea878](https://github.com/paritytech/txwrapper-core/commit/a6ea8783ca51f8bbd55b1697162c7ba6d14165e2))
+
+
+
+
+
 ## [1.3.2](https://github.com/paritytech/txwrapper-core/compare/v1.3.1...v1.3.2) (2021-12-08)
 
 **Note:** Version bump only for package @substrate/txwrapper-substrate
