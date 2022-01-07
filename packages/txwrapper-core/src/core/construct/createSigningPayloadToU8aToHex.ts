@@ -1,20 +1,17 @@
-import { u8aToHex } from '@polkadot/util';
-
 import { Options, UnsignedTransaction } from '../../types';
 
 /**
  * Create a signing payload with the method prefix removed.
- * If the length of the payload is about 256, then it will be hashed using
+ * If the length of the payload is above 256, then it will be hashed using
  * blake2_256.
  *
- * @param unsigned
- * @param options
- * @returns
+ * @param unsigned UnsignedTransaction to be passed in
+ * @param options Registry used for constructing the payload.
  */
-export function createSigningPayloadToU8aToHex(
+export function createSigningPayloadToU8a(
 	unsigned: UnsignedTransaction,
 	options: Options
-): `0x${string}` {
+): Uint8Array {
 	const { registry } = options;
 	const extrinsicPayload = registry.createType('ExtrinsicPayload', unsigned, {
 		version: unsigned.version,
@@ -26,10 +23,7 @@ export function createSigningPayloadToU8aToHex(
 	 */
 	const extrinsicPayloadU8a = extrinsicPayload.toU8a({ method: true });
 
-	const hashedPayload =
-		extrinsicPayloadU8a.length > 256
-			? registry.hash(extrinsicPayloadU8a)
-			: extrinsicPayloadU8a;
-
-	return u8aToHex(hashedPayload);
+	return extrinsicPayloadU8a.length > 256
+		? registry.hash(extrinsicPayloadU8a)
+		: extrinsicPayloadU8a;
 }
