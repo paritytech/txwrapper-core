@@ -32,14 +32,20 @@ export function defineMethod(
 	info: TxInfo,
 	options: OptionsWithMeta
 ): UnsignedTransaction {
-	const { metadataRpc, registry, asCallsOnlyArg } = options;
+	const {
+		metadataRpc,
+		registry,
+		asCallsOnlyArg,
+		signedExtensions,
+		userExtensions,
+	} = options;
 	const generatedMetadata = createMetadata(
 		registry,
 		metadataRpc,
 		asCallsOnlyArg
 	);
 
-	registry.setMetadata(generatedMetadata);
+	registry.setMetadata(generatedMetadata, signedExtensions, userExtensions);
 
 	const tx = createDecoratedTx(registry, metadataRpc);
 
