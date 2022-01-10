@@ -3,9 +3,6 @@
   "version": "1.4.0",
   "author": "Parity Technologies <admin@parity.io>",
   "description": "Core components for creating a txwrapper lib.",
-  "files": [
-    "lib"
-  ],
   "license": "Apache-2.0",
   "main": "lib/index.js",
   "publishConfig": {

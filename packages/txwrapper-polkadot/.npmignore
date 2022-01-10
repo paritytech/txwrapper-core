@@ -1,0 +1,11 @@
+# Ignore main src folder
+/src
+
+# Ignore test-helpers
+/lib/test-helpers
+
+# Ignore all tests
+/**/*.spec.*
+
+# Ignore tsconfig build
+/tsconfig.build.json

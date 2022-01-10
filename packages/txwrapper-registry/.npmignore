@@ -1,0 +1,5 @@
+# Ignore main src folder
+/src
+
+# Ignore the tsconfig build
+tsconfig.build.json
