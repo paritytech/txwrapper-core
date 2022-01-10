@@ -1,4 +1,5 @@
 import { TypeRegistry } from '@polkadot/types';
+import { ExtDef } from '@polkadot/types/extrinsic/signedExtensions/types';
 import { AnyJson } from '@polkadot/types/types';
 import { SignerPayloadJSON } from '@polkadot/types/types';
 
@@ -18,6 +19,14 @@ export interface OptionsWithMeta extends Options {
 	 * Used to reduce the metadata size by only having the calls
 	 */
 	asCallsOnlyArg?: boolean;
+	/**
+	 * Array of signedExtensions
+	 */
+	signedExtensions?: string[];
+	/**
+	 * User extensions used to inject into the type registry
+	 */
+	userExtensions?: ExtDef;
 }
 
 /**
