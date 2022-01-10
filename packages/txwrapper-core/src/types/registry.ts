@@ -1,3 +1,5 @@
+import { ExtDef } from '@polkadot/types/extrinsic/signedExtensions/types';
+
 import { ChainProperties } from './codec';
 
 /**
@@ -28,4 +30,12 @@ export interface GetRegistryOptsCore {
 	 * Used to reduce the metadata size by only having the calls
 	 */
 	asCallsOnlyArg?: boolean;
+	/**
+	 * Array of signedExtensions
+	 */
+	signedExtensions?: string[];
+	/**
+	 * User extensions used to inject into the type registry
+	 */
+	userExtensions?: ExtDef;
 }
