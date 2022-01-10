@@ -7,7 +7,7 @@ import { Options, UnsignedTransaction } from '../../types';
  *
  * Ref: https://github.com/paritytech/substrate/blob/master/primitives/runtime/src/generic/unchecked_extrinsic.rs#L171-L220
  *
- * This is specifically useful for external signers who will note be using
+ * This is specifically useful for external signers who will not be using
  * `ExtrinsicPayload.sign(<KeyPair>)`, but instead their own method.
  *
  * @param unsigned UnsignedTransaction to be passed in
