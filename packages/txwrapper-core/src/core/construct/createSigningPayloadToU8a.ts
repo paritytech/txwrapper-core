@@ -4,6 +4,9 @@ import { Options, UnsignedTransaction } from '../../types';
  * Create a signing payload with the method prefix removed.
  * If the length of the payload is above 256, then it will be hashed using
  * blake2_256.
+ * 
+ * This is specifically useful for external signers who will note be using 
+ * `ExtrinsicPayload.sign(<KeyPair>)`, but instead their own method.
  *
  * @param unsigned UnsignedTransaction to be passed in
  * @param options Registry used for constructing the payload.
