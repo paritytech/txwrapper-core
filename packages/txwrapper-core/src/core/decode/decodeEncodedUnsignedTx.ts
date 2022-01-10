@@ -1,19 +1,10 @@
 import { hexToU8a } from '@polkadot/util';
 
-import { OptionsWithMeta } from '../../types';
-
-export interface DecodedEncodedUnsignedTx {
-	method: IMethod;
-	version: number;
-}
-
-/**
- * Primitive version of `DecodeMethodInput` interface from polkadot-js.
- */
-interface IMethod {
-	args: unknown;
-	callIndex: string;
-}
+import {
+	DecodedEncodedUnsignedTx,
+	IMethod,
+	OptionsWithMeta,
+} from '../../types';
 
 /**
  * This should be used in conjunction with `encodeUnsignedTx` as the expected
