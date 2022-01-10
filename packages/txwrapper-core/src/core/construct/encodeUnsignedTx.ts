@@ -2,7 +2,7 @@ import { Options, UnsignedTransaction } from '../../types';
 
 /**
  * Encode an unsigned transaction to submit. This utility funciton is to be
- * used along side `decodeEncodedUnsignedTx`. 
+ * used along side `decodeEncodedUnsignedTx`.
  *
  * @param unsigned - An Unsigned Transaction that will be encoded.
  * @param options - Registry used for constructing the payload.
