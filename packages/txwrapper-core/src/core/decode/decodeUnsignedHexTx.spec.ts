@@ -5,9 +5,9 @@ import {
 	TEST_METHOD_ARGS,
 } from '../../test-helpers';
 import { encodeUnsignedTransaction } from '../construct/encodeUnsignedTx';
-import { decodeEncodedUnsignedTx } from './decodeEncodedUnsignedTx';
+import { decodeUnsignedHexTx } from './decodeUnsignedHexTx';
 
-describe('decodeEncodedUnsignedTx', () => {
+describe('decodeUnsignedHexTx', () => {
 	it('should return the correct output', () => {
 		const unsigned = balancesTransfer(
 			TEST_METHOD_ARGS.balances.transfer,
@@ -30,7 +30,7 @@ describe('decodeEncodedUnsignedTx', () => {
 			unsigned,
 			POLKADOT_25_TEST_OPTIONS
 		);
-		const decoded = decodeEncodedUnsignedTx(encoded, POLKADOT_25_TEST_OPTIONS);
+		const decoded = decodeUnsignedHexTx(encoded, POLKADOT_25_TEST_OPTIONS);
 
 		expect(decoded).toStrictEqual(expectedResponse);
 	});

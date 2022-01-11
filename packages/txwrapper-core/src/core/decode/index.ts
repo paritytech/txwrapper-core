@@ -1,2 +1,2 @@
 export * from './decode';
-export * from './decodeEncodedUnsignedTx';
+export * from './decodeUnsignedHexTx';

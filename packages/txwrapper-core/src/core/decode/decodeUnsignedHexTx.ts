@@ -14,7 +14,7 @@ import {
  * @param options Runtime-specific data used for decoding the transaction.
  * @returns
  */
-export function decodeEncodedUnsignedTx(
+export function decodeUnsignedHexTx(
 	encodedUnsignedTx: string,
 	options: OptionsWithMeta
 ): DecodedEncodedUnsignedTx {
