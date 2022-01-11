@@ -1,7 +1,7 @@
 import { Options, UnsignedTransaction } from '../../types';
 
 /**
- * Encode an unsigned transaction to submit. This utility funciton is to be
+ * Encode an unsigned transaction to submit. This utility function is to be
  * used along side `decodeEncodedUnsignedTx`.
  *
  * @param unsigned - An Unsigned Transaction that will be encoded.
