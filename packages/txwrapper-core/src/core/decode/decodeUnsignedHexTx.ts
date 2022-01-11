@@ -1,7 +1,7 @@
 import { hexToU8a } from '@polkadot/util';
 
 import {
-	DecodedEncodedUnsignedTx,
+	DecodedUnsignedHexTx,
 	IMethod,
 	OptionsWithMeta,
 } from '../../types';
@@ -16,7 +16,7 @@ import {
 export function decodeUnsignedHexTx(
 	encodedUnsignedTx: string,
 	options: OptionsWithMeta
-): DecodedEncodedUnsignedTx {
+): DecodedUnsignedHexTx {
 	const decodedTx = options.registry.createType(
 		'Extrinsic',
 		hexToU8a(encodedUnsignedTx)

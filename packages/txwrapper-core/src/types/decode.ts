@@ -16,10 +16,10 @@ export type DecodedSignedTx = Omit<
 
 /**
  * This Decode type is not included as a return type for the standard `txwrapper-core`
- * `decode` utility function. Instead this is specific to `decodeEncodedUnsignedTx`,
- * which is the counterpart to `encodeUnsignedTx`.
+ * `decode` utility function. Instead this is specific to `decodeUnsignedHexTx`,
+ * which is the counterpart to `encodeUnsignedTransaction`.
  */
-export interface DecodedEncodedUnsignedTx {
+export interface DecodedUnsignedHexTx {
 	method: IMethod;
 	version: number;
 }
