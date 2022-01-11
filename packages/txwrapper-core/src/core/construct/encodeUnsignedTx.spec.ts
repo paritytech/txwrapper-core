@@ -6,7 +6,7 @@ import {
 } from '../../test-helpers';
 import { encodeUnsignedTransaction } from './encodeUnsignedTx';
 
-describe('decodeEncodedUnsignedTx', () => {
+describe('encodeUnsignedTransaction', () => {
 	it('should return the correct output', () => {
 		const unsigned = balancesTransfer(
 			TEST_METHOD_ARGS.balances.transfer,
