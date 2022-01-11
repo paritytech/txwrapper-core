@@ -1,10 +1,6 @@
 import { hexToU8a } from '@polkadot/util';
 
-import {
-	DecodedUnsignedHexTx,
-	IMethod,
-	OptionsWithMeta,
-} from '../../types';
+import { DecodedUnsignedHexTx, IMethod, OptionsWithMeta } from '../../types';
 
 /**
  * This should be used in conjunction with `encodeUnsignedTx` as the expected
