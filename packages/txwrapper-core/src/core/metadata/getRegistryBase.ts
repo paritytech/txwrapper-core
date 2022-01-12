@@ -1,4 +1,5 @@
 import { TypeRegistry } from '@polkadot/types';
+import { ExtDef } from '@polkadot/types/extrinsic/signedExtensions/types';
 import { AnyJson, RegistryTypes } from '@polkadot/types/types';
 
 import { ChainProperties } from '../../types';
@@ -21,6 +22,14 @@ export interface GetRegistryBaseArgs {
 	 * Used to reduce the metadata size by only having the calls
 	 */
 	asCallsOnlyArg?: boolean;
+	/**
+	 * Array of signedExtensions
+	 */
+	signedExtensions?: string[];
+	/**
+	 * User extensions used to inject into the type registry
+	 */
+	userExtensions?: ExtDef;
 }
 
 /**
@@ -31,14 +40,20 @@ export function getRegistryBase({
 	specTypes,
 	metadataRpc,
 	asCallsOnlyArg,
+	signedExtensions,
+	userExtensions,
 }: GetRegistryBaseArgs): TypeRegistry {
 	const registry = new TypeRegistry();
 
-	const metadata = createMetadata(registry, metadataRpc, asCallsOnlyArg);
+	const generatedMetadata = createMetadata(
+		registry,
+		metadataRpc,
+		asCallsOnlyArg
+	);
 
 	registry.register(specTypes);
 
-	registry.setMetadata(metadata);
+	registry.setMetadata(generatedMetadata, signedExtensions, userExtensions);
 
 	// Register the chain properties for this registry
 	registry.setChainProperties(
