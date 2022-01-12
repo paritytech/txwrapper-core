@@ -8,6 +8,7 @@ import { mandala722MetadataRpc as metadataRpc } from './mandala722MetadataRpc';
 export const MANDALA_722_TEST_OPTIONS = {
 	metadataRpc,
 	registry: getRegistryMandala(602, metadataRpc),
+	userExtensions: { SetEvmOrigin: { payload: {}, extrinsic: {} } },
 };
 
 /**
