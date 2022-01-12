@@ -28,5 +28,6 @@ export function getRegistryMandala(
 		},
 		specTypes: getSpecTypes(registry, 'Mandala', 'mandala', specVersion),
 		metadataRpc,
+		userExtensions: { SetEvmOrigin: { payload: {}, extrinsic: {} } },
 	});
 }

@@ -105,14 +105,6 @@ yarn run lint --fix
     yarn run lint
     ```
 
-    Note: some tests in `txwrapper-orml/src/methods/currencies/transferNativeCurrency.spec.ts` and `txwrapper-orml/src/methods/currencies/transfer.spec.ts` emit warnings that look like:
-
-    ```
-    REGISTRY: Unknown signed extensions SetEvmOrigin found, treating them as no-effect
-    ```
-
-    These are expected, and can be ignored.
-
 6. If all tests pass and all packages build successfully, commit your changes with the following format `fix(types): Update polkadot-js deps to get the latest types`. Then push your branch up to Github for review, then merge. The release tooling takes care of bumping the version so no need for a manual update (see below).
 
 #### Publishing
