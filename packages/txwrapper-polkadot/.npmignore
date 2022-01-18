@@ -1,7 +1,7 @@
 # Ignore main src folder
 /src
 
-# Ignore test-helper folders 
+# Ignore test-helpers
 /lib/test-helpers
 
 # Ignore all tests
