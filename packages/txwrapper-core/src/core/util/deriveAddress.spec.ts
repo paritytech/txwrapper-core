@@ -1,4 +1,4 @@
-import { PolkadotSS58Format } from '../../test-helpers';
+import { PolkadotSS58Format } from '../util';
 import { deriveAddress } from './deriveAddress';
 
 describe('deriveAddress', () => {
