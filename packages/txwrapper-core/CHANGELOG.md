@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/paritytech/txwrapper-core/compare/v1.4.0...v1.5.0) (2022-01-18)
+
+
+### Bug Fixes
+
+* decrease npm build, bundle size ([#169](https://github.com/paritytech/txwrapper-core/issues/169)) ([1a16cfa](https://github.com/paritytech/txwrapper-core/commit/1a16cfa9292a06dffa88f8e3fdcea709428a5558))
+
+
+### Features
+
+* add createSigningPayloadToU8a ([#166](https://github.com/paritytech/txwrapper-core/issues/166)) ([a17241a](https://github.com/paritytech/txwrapper-core/commit/a17241a1b646c47a1dcb4f7a8bfc77bde2148375))
+* add decodeUnsignedHexTx ([#167](https://github.com/paritytech/txwrapper-core/issues/167)) ([8aff8a4](https://github.com/paritytech/txwrapper-core/commit/8aff8a43909652049b1b13d8f2b948296d01712a))
+* support for signedExtentions, and userExtensions ([#170](https://github.com/paritytech/txwrapper-core/issues/170)) ([121909b](https://github.com/paritytech/txwrapper-core/commit/121909bbcfe689808146dd00fa66ed70087d6892))
+
+
+
+
+
 # [1.4.0](https://github.com/paritytech/txwrapper-core/compare/v1.3.2...v1.4.0) (2022-01-06)
 
 
