@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.1](https://github.com/paritytech/txwrapper-core/compare/v1.5.0...v1.5.1) (2022-01-18)
+
+
+### Bug Fixes
+
+* patch for 1.5.1 ([#177](https://github.com/paritytech/txwrapper-core/issues/177)) ([6c35c5a](https://github.com/paritytech/txwrapper-core/commit/6c35c5a33c0025f8847eb5d5a39c1c830dfce01d))
+* **bug:** remove enum from test-helpers, and into util ([#175](https://github.com/paritytech/txwrapper-core/issues/175)) ([1a649fb](https://github.com/paritytech/txwrapper-core/commit/1a649fbc6926c4b38389833c8dbbfb939eacf8af))
+
+
+
+
+
 # [1.5.0](https://github.com/paritytech/txwrapper-core/compare/v1.4.0...v1.5.0) (2022-01-18)
 
 
