@@ -1,4 +1,4 @@
-import { PolkadotSS58Format } from '../util';
+import { PolkadotSS58Format } from '../../test-helpers';
 import { importPrivateKey } from './importPrivateKey';
 
 const PRIVATE_KEY =
