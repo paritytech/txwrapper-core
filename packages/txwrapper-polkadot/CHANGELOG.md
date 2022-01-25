@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.1](https://github.com/paritytech/txwrapper-core/compare/v1.5.0...v1.5.1) (2022-01-18)
+
+**Note:** Version bump only for package @substrate/txwrapper-polkadot
+
+
+
+
+
+# [1.5.0](https://github.com/paritytech/txwrapper-core/compare/v1.4.0...v1.5.0) (2022-01-18)
+
+
+### Bug Fixes
+
+* decrease npm build, bundle size ([#169](https://github.com/paritytech/txwrapper-core/issues/169)) ([1a16cfa](https://github.com/paritytech/txwrapper-core/commit/1a16cfa9292a06dffa88f8e3fdcea709428a5558))
+
+
+### Features
+
+* support for signedExtentions, and userExtensions ([#170](https://github.com/paritytech/txwrapper-core/issues/170)) ([121909b](https://github.com/paritytech/txwrapper-core/commit/121909bbcfe689808146dd00fa66ed70087d6892))
+
+
+
+
+
 # [1.4.0](https://github.com/paritytech/txwrapper-core/compare/v1.3.2...v1.4.0) (2022-01-06)
 
 
