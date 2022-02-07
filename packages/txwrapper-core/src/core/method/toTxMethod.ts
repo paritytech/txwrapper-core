@@ -34,10 +34,15 @@ export function toTxMethod(registry: TypeRegistry, method: Call): TxMethod {
 		}
 
 		// Forcibly serialize all integers to strings
-		const jsonArg =
+		let jsonArg =
 			codec instanceof AbstractInt
 				? codec.toString(10)
 				: (codec as BN).toJSON();
+
+		// Sanity check to ensure `jsonArg` is not a number
+		if (Number.isInteger(jsonArg)) {
+			jsonArg = (jsonArg as unknown as number).toString(10);
+		}
 
 		accumulator[stringCamelCase(key)] = jsonArg;
 		return accumulator;
