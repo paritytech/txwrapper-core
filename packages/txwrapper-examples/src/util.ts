@@ -11,7 +11,7 @@ import { createMetadata, OptionsWithMeta } from '@substrate/txwrapper-polkadot';
 import fetch from 'node-fetch';
 
 /**
- * Send a JSONRPC request to the node at http://127.0.0.1:9933.
+ * Send a JSONRPC request to the node at http://0.0.0.0:9933.
  *
  * @param method - The JSONRPC request method.
  * @param params - The JSONRPC request params.
