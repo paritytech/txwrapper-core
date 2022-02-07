@@ -40,7 +40,7 @@ export function toTxMethod(registry: TypeRegistry, method: Call): TxMethod {
 				: (codec as BN).toJSON();
 
 		// Sanity check to ensure `jsonArg` is not a number
-		if (Number.isInteger(jsonArg)) {
+		if (!Number.isNaN(jsonArg)) {
 			jsonArg = (jsonArg as unknown as number).toString(10);
 		}
 
