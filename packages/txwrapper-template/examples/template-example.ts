@@ -13,7 +13,7 @@ import { rpcToLocalNode, signWith } from './util';
 
 /**
  * Entry point of the script. This script assumes a [TODO CHAIN NAME] node is running
- * locally on `http://localhost:9933`.
+ * locally on `http://127.0.0.1:9933`.
  */
 async function main(): Promise<void> {
 	// Wait for the promise to resolve async WASM
