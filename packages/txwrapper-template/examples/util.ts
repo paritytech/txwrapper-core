@@ -11,7 +11,7 @@ import { createMetadata, OptionsWithMeta } from '@substrate/txwrapper-polkadot';
 import fetch from 'node-fetch';
 
 /**
- * Send a JSONRPC request to the node at http://localhost:9933.
+ * Send a JSONRPC request to the node at http://0.0.0.0:9933.
  *
  * @param method - The JSONRPC request method.
  * @param params - The JSONRPC request params.
@@ -20,7 +20,7 @@ export function rpcToLocalNode(
 	method: string,
 	params: any[] = []
 ): Promise<any> {
-	return fetch('http://localhost:9933', {
+	return fetch('http://0.0.0.0:9933', {
 		body: JSON.stringify({
 			id: 1,
 			jsonrpc: '2.0',
