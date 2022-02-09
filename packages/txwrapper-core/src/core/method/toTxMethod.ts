@@ -19,6 +19,8 @@ import { Args, TxMethod } from '../../types/method';
  * @param method - The method to serialize
  */
 export function toTxMethod(registry: TypeRegistry, method: Call): TxMethod {
+	// Used to ensure when using `toString` that the return value is in base10
+	const RADIX_PARAM = 10;
 	// Mapping of argName->argType
 	// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
 	const argsDef = JSON.parse(method.Type.args as unknown as string);
@@ -34,10 +36,16 @@ export function toTxMethod(registry: TypeRegistry, method: Call): TxMethod {
 		}
 
 		// Forcibly serialize all integers to strings
-		const jsonArg =
+		let jsonArg =
 			codec instanceof AbstractInt
-				? codec.toString(10)
+				? codec.toString(RADIX_PARAM)
 				: (codec as BN).toJSON();
+
+		// Sanity check to check that `jsonArg` is a number, and if it is
+		// to change it to a string
+		if (!Number.isNaN(jsonArg)) {
+			jsonArg = (jsonArg as unknown as number).toString(RADIX_PARAM);
+		}
 
 		accumulator[stringCamelCase(key)] = jsonArg;
 		return accumulator;
