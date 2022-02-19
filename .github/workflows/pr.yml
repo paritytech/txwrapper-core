@@ -18,10 +18,6 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: Install wasm-pack
-        uses: jetli/wasm-pack-action@v0.3.0
-        with:
-          version: v0.10.0
       - name: Checkout files
         uses: actions/checkout@v2
 
