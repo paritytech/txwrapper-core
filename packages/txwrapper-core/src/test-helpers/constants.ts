@@ -1,4 +1,6 @@
+import { getRegistryKusama } from './getRegistryKusama';
 import { getRegistryPolkadot } from './getRegistryPolkadot';
+import { kusamaV9160MetadataHex } from './metadata/kusamaV9160MetadataHex';
 import { polkadotV9122MetadataHex } from './metadata/polkadotV9122MetadataHex';
 import { metadataRpc } from './staticV3-1-1';
 import { metadataRpcV29 } from './staticV4-3-1';
@@ -71,6 +73,14 @@ export const POLKADOT_9122_TEST_OPTIONS_CALLS_ONLY = {
 	metadataRpc: polkadotV9122MetadataHex,
 	registry: getRegistryPolkadot(9122, polkadotV9122MetadataHex),
 	asCallsOnlyArg: true,
+};
+
+/**
+ * Test options for runtime v9160 Kusama
+ */
+export const KUSAMA_9160_TEST_OPTIONS = {
+	metadataRpc: kusamaV9160MetadataHex,
+	registry: getRegistryKusama(9160, kusamaV9160MetadataHex),
 };
 
 /**
