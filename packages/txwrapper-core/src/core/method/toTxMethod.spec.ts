@@ -26,11 +26,11 @@ describe('toTxMethod', () => {
 			pallet: 'balances',
 		};
 
-		const txMethodC = toTxMethod(
+		const txMethod = toTxMethod(
 			KUSAMA_9160_TEST_OPTIONS.registry,
 			txMethodCall
 		);
 
-		expect(txMethodC).toStrictEqual(expectedResponse);
+		expect(txMethod).toStrictEqual(expectedResponse);
 	});
 });
