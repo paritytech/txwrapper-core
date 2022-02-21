@@ -36,6 +36,10 @@ export function toTxMethod(registry: TypeRegistry, method: Call): TxMethod {
 			codec = codec.unwrap() as Codec;
 		}
 
+		/**
+		 * Forcibly serialize the codec value to an integer. If it is not a number
+		 * then it will return the codec type as it's toJSON value.
+		 */
 		let jsonArg;
 		if (codec instanceof AbstractInt || codec instanceof UInt) {
 			jsonArg = codec.toString(RADIX_PARAM);
