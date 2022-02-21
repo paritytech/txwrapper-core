@@ -20,7 +20,7 @@ describe('toTxMethod', () => {
 				dest: {
 					id: 'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP',
 				},
-				value: '0x0000000000000000013ffffffffffff6',
+				value: '90071992547409910',
 			},
 			name: 'transferKeepAlive',
 			pallet: 'balances',
