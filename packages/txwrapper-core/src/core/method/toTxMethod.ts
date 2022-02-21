@@ -43,7 +43,7 @@ export function toTxMethod(registry: TypeRegistry, method: Call): TxMethod {
 
 		// Sanity check to check that `jsonArg` is a number, and if it is
 		// to change it to a string
-		if (!Number.isNaN(jsonArg)) {
+		if (!Number.isNaN(jsonArg) && typeof jsonArg === 'number') {
 			jsonArg = (jsonArg as unknown as number).toString(RADIX_PARAM);
 		}
 
