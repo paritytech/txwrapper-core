@@ -6,8 +6,7 @@ import { createTypeUnsafe, TypeRegistry } from '@polkadot/types';
 import { Compact } from '@polkadot/types';
 import { Call } from '@polkadot/types/interfaces';
 import { Codec } from '@polkadot/types/types';
-import { UInt } from '@polkadot/types-codec';
-import { AbstractInt } from '@polkadot/types-codec/abstract/AbstractInt';
+import { AbstractInt, UInt } from '@polkadot/types-codec';
 import { stringCamelCase } from '@polkadot/util';
 
 import { Args, TxMethod } from '../../types/method';
@@ -41,7 +40,7 @@ export function toTxMethod(registry: TypeRegistry, method: Call): TxMethod {
 		 * then it will return the codec type as it's toJSON value.
 		 */
 		let jsonArg;
-		if (codec instanceof AbstractInt || codec instanceof UInt) {
+		if (codec instanceof UInt || codec instanceof AbstractInt) {
 			jsonArg = codec.toString(RADIX_PARAM);
 		} else {
 			jsonArg = (codec as Codec).toJSON();
