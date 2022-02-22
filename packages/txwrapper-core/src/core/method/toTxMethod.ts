@@ -6,8 +6,8 @@ import { createTypeUnsafe, TypeRegistry } from '@polkadot/types';
 import { Compact } from '@polkadot/types';
 import { Call } from '@polkadot/types/interfaces';
 import { Codec } from '@polkadot/types/types';
-import { AbstractInt } from '@polkadot/types-codec/abstract/AbstractInt';
-import { BN, stringCamelCase } from '@polkadot/util';
+import { AbstractInt, UInt } from '@polkadot/types-codec';
+import { stringCamelCase } from '@polkadot/util';
 
 import { Args, TxMethod } from '../../types/method';
 
@@ -35,16 +35,15 @@ export function toTxMethod(registry: TypeRegistry, method: Call): TxMethod {
 			codec = codec.unwrap() as Codec;
 		}
 
-		// Forcibly serialize all integers to strings
-		let jsonArg =
-			codec instanceof AbstractInt
-				? codec.toString(RADIX_PARAM)
-				: (codec as BN).toJSON();
-
-		// Sanity check to check that `jsonArg` is a number, and if it is
-		// to change it to a string
-		if (!Number.isNaN(jsonArg)) {
-			jsonArg = (jsonArg as unknown as number).toString(RADIX_PARAM);
+		/**
+		 * Forcibly serialize the codec value to an integer. If it is not a number
+		 * then it will return the codec type as its `toJSON` value.
+		 */
+		let jsonArg;
+		if (codec instanceof UInt || codec instanceof AbstractInt) {
+			jsonArg = codec.toString(RADIX_PARAM);
+		} else {
+			jsonArg = (codec as Codec).toJSON();
 		}
 
 		accumulator[stringCamelCase(key)] = jsonArg;
