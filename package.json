@@ -12,8 +12,11 @@
     "version": "yarn install && git stage yarn.lock",
     "build": "lerna run build",
     "build:workspace": "cd $INIT_CWD && rimraf lib/ && substrate-exec-tsc -p tsconfig.build.json",
-    "lint": "substrate-dev-run-lint",
+    "lint": "substrate-dev-run-lint --fix",
+    "lint:ci": "substrate-dev-run-lint",
     "test": "substrate-exec-jest",
+    "test:watch": "substrate-exec-jest --watch",
+    "test:cov": "substrate-exec-jest --coverage",
     "docs": "typedoc"
   },
   "resolutions": {
