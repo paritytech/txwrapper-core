@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.3](https://github.com/paritytech/txwrapper-core/compare/v1.5.2...v1.5.3) (2022-02-22)
+
+
+### Bug Fixes
+
+* **bug:** toTxMethod sanitizing ([#183](https://github.com/paritytech/txwrapper-core/issues/183)) ([c7f8e12](https://github.com/paritytech/txwrapper-core/commit/c7f8e12862686ae451a9a7e29e9e82385a2531b1))
+* **deps:** Update polkadotjs ([#181](https://github.com/paritytech/txwrapper-core/issues/181)) ([9adcea3](https://github.com/paritytech/txwrapper-core/commit/9adcea3c88f7cde6bd2a6e4c3bf97dca22d551ca))
+
+
+
+
+
 ## [1.5.2](https://github.com/paritytech/txwrapper-core/compare/v1.5.1...v1.5.2) (2022-02-10)
 
 
