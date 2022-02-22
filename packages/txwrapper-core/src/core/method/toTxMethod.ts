@@ -37,7 +37,7 @@ export function toTxMethod(registry: TypeRegistry, method: Call): TxMethod {
 
 		/**
 		 * Forcibly serialize the codec value to an integer. If it is not a number
-		 * then it will return the codec type as it's toJSON value.
+		 * then it will return the codec type as its `toJSON` value.
 		 */
 		let jsonArg;
 		if (codec instanceof UInt || codec instanceof AbstractInt) {
