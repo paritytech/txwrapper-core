@@ -2465,7 +2465,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@substrate/txwrapper-core@workspace:packages/txwrapper-core"
   dependencies:
-    "@polkadot/api": ^7.8.1
+    "@polkadot/api": ^7.9.1
     "@types/memoizee": ^0.4.3
     memoizee: 0.4.15
   languageName: unknown
@@ -2475,7 +2475,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@substrate/txwrapper-examples@workspace:packages/txwrapper-examples"
   dependencies:
-    "@polkadot/api": ^7.8.1
+    "@polkadot/api": ^7.9.1
     "@substrate/txwrapper-polkadot": ^1.5.3
     "@substrate/txwrapper-registry": ^1.5.3
   languageName: unknown
