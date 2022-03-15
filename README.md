@@ -76,6 +76,18 @@ yarn run lint
 yarn run lint --fix
 ```
 
+### Maintenence
+
+#### Yarn
+
+Txwrapper-core runs on yarn berry. It is a package manager local to the repo, and requires updating from time to time. The releases for yarn berry can be found [here](https://github.com/yarnpkg/berry/releases). Below are the steps to updating yarn. 
+
+```bash
+$ yarn set version <version>
+$ yarn
+$ yarn dedupe
+```
+
 ### Release & Publishing
 
 #### Preparation
