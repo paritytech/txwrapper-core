@@ -1,6 +1,6 @@
 {
   "name": "@substrate/txwrapper-core",
-  "version": "1.5.7",
+  "version": "1.5.8",
   "author": "Parity Technologies <admin@parity.io>",
   "description": "Core components for creating a txwrapper lib.",
   "license": "Apache-2.0",

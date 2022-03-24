@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.8](https://github.com/paritytech/txwrapper-core/compare/v1.5.7...v1.5.8) (2022-03-24)
+
+
+### Bug Fixes
+
+* **bug:** fix handling eraPeriod when it is equal to zero ([#195](https://github.com/paritytech/txwrapper-core/issues/195)) ([3cc7bf3](https://github.com/paritytech/txwrapper-core/commit/3cc7bf3e63f1e88d231454a98307afe4ab798b27))
+
+
+
+
+
 ## [1.5.7](https://github.com/paritytech/txwrapper-core/compare/v1.5.6...v1.5.7) (2022-03-15)
 
 **Note:** Version bump only for package @substrate/txwrapper-core
