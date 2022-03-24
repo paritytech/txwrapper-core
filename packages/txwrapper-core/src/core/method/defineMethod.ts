@@ -72,11 +72,14 @@ export function defineMethod(
 		})
 	).toHex();
 
+	/**
+	 * If the `info.eraPeriod` is set use it. (This also checks for the edgecase zero).
+	 * As a last resort, it will use the default value.
+	 */
 	const eraPeriod =
-		// If `info.eraPeriod` is set, use it.
-		info.eraPeriod ||
-		// As last resort, take the default value.
-		DEFAULTS.eraPeriod;
+		info.eraPeriod === 0 || info.eraPeriod
+			? info.eraPeriod
+			: DEFAULTS.eraPeriod;
 
 	return {
 		address: info.address,

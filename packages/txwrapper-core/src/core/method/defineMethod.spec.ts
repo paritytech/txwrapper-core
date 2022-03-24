@@ -31,6 +31,26 @@ describe('defineMethod', () => {
 		expect(unsigned.era).toBe('0xe500');
 	});
 
+	it('should handle `info.eraPeriod` correctly when 0', () => {
+		const txBaseInfo = {
+			...TEST_BASE_TX_INFO,
+			eraPeriod: 0,
+		};
+		const unsigned = defineMethod(
+			{
+				...txBaseInfo,
+				method: {
+					args: {},
+					name: 'chill',
+					pallet: 'staking',
+				},
+			},
+			POLKADOT_25_TEST_OPTIONS
+		);
+
+		expect(unsigned.era).toBe('0x2100');
+	});
+
 	it('should work', () => {
 		const txBaseInfo = {
 			...TEST_BASE_TX_INFO,
