@@ -356,7 +356,7 @@ async function main(): Promise<void> {
 			},
 			call: signingPayload1,
 			storeCall: false,
-			maxWeight: '900719925474',
+			maxWeight: '640000000',
 		},
 		{
 			address: deriveAddress(
