@@ -409,7 +409,6 @@ async function main(): Promise<void> {
 	const actualTxHash3 = await rpcToLocalNode('author_submitExtrinsic', [tx3]);
 	console.log(`Actual Tx Hash: ${actualTxHash3}`);
 
-	process.exit();
 }
 
 main().catch((err) => console.error(err)).finally(() => process.exit());
