@@ -22,10 +22,10 @@ const SS58Prefix = 0;
 
 // The number of accounts that must approve. Must be greater than 0 and less than
 // or equal to the total number of addresses.
-const threshold_multi = 2;
+const THRESHOLD_FOR_MULTISIG = 2;
 
 // The address (as index in `addresses`) that will submit a transaction.
-const index = 0;
+const DEFAULT_ADDR_IDX = 0;
 
 async function main(): Promise<void> {
 	/**
@@ -47,31 +47,27 @@ async function main(): Promise<void> {
 	const addressesDict: { [key: string]: string } = {};
 	const signatoriesDict: { [key: string]: KeyringPair } = {};
 
-	for (const [index, value] of signatories.entries()) {
-		signatoriesDict[signatories[index]] = keyring.addFromUri(
-			'//' + value,
-			{ name: value },
+  const addressesArray = signatories.map((val, idx) => {
+		signatoriesDict[signatories[idx]] = keyring.addFromUri(
+			'//' + val,
+			{ name: val },
 			'sr25519'
 		);
-		addressesDict[signatories[index]] = deriveAddress(
-			signatoriesDict[signatories[index]].publicKey,
+		addressesDict[signatories[idx]] = deriveAddress(
+			signatoriesDict[signatories[idx]].publicKey,
 			PolkadotSS58Format.polkadot
 		);
-	}
+
+		return addressesDict[signatories[idx]]
+	});
 
 	console.log(
 		'The accounts/addresses that compose the Multi Signature Account'
 	);
-	console.log(addressesDict);
-
-	// Here I create an array (`addressesArray`) with the generated addresses
-	// of the signatories.
-	// These addresses are stored as values in `addressesDict`
-	// Then I will use this array as input to create the multisig account.
-	const addressesArray = Object.values(addressesDict);
+  console.log(addressesArray);
 
 	// Address as a byte array.
-	const multiAddress = createKeyMulti(addressesArray, threshold_multi);
+	const multiAddress = createKeyMulti(addressesArray, THRESHOLD_FOR_MULTISIG);
 
 	// Convert byte array to SS58 encoding.
 	const Ss58MultiSigAddress = encodeAddress(multiAddress, SS58Prefix);
@@ -80,7 +76,7 @@ async function main(): Promise<void> {
 
 	// Take addresses and remove the sender.
 	const otherSignatories = addressesArray.filter(
-		(who) => who !== addressesArray[index]
+		(who) => who !== addressesArray[DEFAULT_ADDR_IDX]
 	);
 
 	// Sort them by public key.
@@ -263,7 +259,7 @@ async function main(): Promise<void> {
 
 	const txApproveAsMulti = substrateMethods.multisig.approveAsMulti(
 		{
-			threshold: threshold_multi,
+			threshold: THRESHOLD_FOR_MULTISIG,
 			otherSignatories: otherSignatoriesSorted,
 			maybeTimepoint: null,
 			callHash: expectedTxHash1,
@@ -348,14 +344,14 @@ async function main(): Promise<void> {
 	console.log(`\nCalling AsMulti`);
 	console.log(`=================`);
 
-  const height_a = parseInt(txApproveAsMulti.blockNumber, 10);
-
 	const txAsMulti = substrateMethods.multisig.asMulti(
 		{
-			threshold: threshold_multi,
+			threshold: THRESHOLD_FOR_MULTISIG,
 			otherSignatories: otherSignatoriesSorted,
 			maybeTimepoint: {
-				height: height_a,
+				height: registry
+				.createType('BlockNumber', block.header.number)
+				.toNumber(),
 				index: 1,
 			},
 			call: signingPayload1,
