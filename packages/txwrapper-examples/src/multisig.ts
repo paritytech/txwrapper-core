@@ -412,7 +412,4 @@ async function main(): Promise<void> {
 	process.exit();
 }
 
-main().catch((error) => {
-	console.error(error);
-	process.exit(1);
-});
+main().catch((err) => console.error(err)).finally(() => process.exit());
