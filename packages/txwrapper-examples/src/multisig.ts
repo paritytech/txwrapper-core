@@ -24,8 +24,20 @@ const SS58Prefix = 0;
 // or equal to the total number of addresses.
 const THRESHOLD_FOR_MULTISIG = 2;
 
-// The address (as index in `addresses`) that will submit a transaction.
-const DEFAULT_ADDR_IDX = 0;
+function createOtherSignatories(addressesArray: string[], senderIndex: number
+  ): string[] {
+    // Take addresses and remove the sender.
+    const otherSignatories = addressesArray.filter(
+      (who) => who !== addressesArray[senderIndex] 
+    );
+  
+    // Sort them by public key.
+    const otherSignatoriesSorted = sortAddresses(otherSignatories, SS58Prefix);
+  
+    console.log(`\nOther Signatories: ${otherSignatoriesSorted}\n`);
+  
+    return otherSignatoriesSorted;
+}
 
 async function main(): Promise<void> {
 	/**
@@ -74,15 +86,11 @@ async function main(): Promise<void> {
 
 	console.log(`\nMultisig Address: ${Ss58MultiSigAddress}`);
 
-	// Take addresses and remove the sender.
-	const otherSignatories = addressesArray.filter(
-		(who) => who !== addressesArray[DEFAULT_ADDR_IDX]
-	);
-
-	// Sort them by public key.
-	const otherSignatoriesSorted = sortAddresses(otherSignatories, SS58Prefix);
-
-	console.log(`\nOther Signatories: ${otherSignatoriesSorted}\n`);
+  // Create Signatories Sorted excluding the sender (Alice)
+  const otherSignatoriesSortedExAlice = createOtherSignatories(
+    addressesArray, 
+    signatories.indexOf('Alice')
+  );
 
 	// Construct a balance transfer transaction offline.
 	// To construct the tx, we need some up-to-date information from the node.
@@ -260,7 +268,7 @@ async function main(): Promise<void> {
 	const txApproveAsMulti = substrateMethods.multisig.approveAsMulti(
 		{
 			threshold: THRESHOLD_FOR_MULTISIG,
-			otherSignatories: otherSignatoriesSorted,
+			otherSignatories: otherSignatoriesSortedExAlice,
 			maybeTimepoint: null,
 			callHash: expectedTxHash1,
 			maxWeight: '900719925474',
@@ -341,13 +349,19 @@ async function main(): Promise<void> {
 			`  Threshold: ${txInfoMulti.method.args.threshold}`
 	);
 
+  // Create Signatories Sorted excluding the sender (Bob)
+  const otherSignatoriesSortedExBob = createOtherSignatories(
+    addressesArray, 
+    signatories.indexOf('Bob')
+  );
+
 	console.log(`\nCalling AsMulti`);
 	console.log(`=================`);
 
 	const txAsMulti = substrateMethods.multisig.asMulti(
 		{
 			threshold: THRESHOLD_FOR_MULTISIG,
-			otherSignatories: otherSignatoriesSorted,
+			otherSignatories: otherSignatoriesSortedExBob,
 			maybeTimepoint: {
 				height: registry
 				.createType('BlockNumber', block.header.number)
