@@ -20,19 +20,19 @@
     "docs": "typedoc"
   },
   "resolutions": {
-    "@polkadot/api": "7.13.1",
-    "@polkadot/keyring": "8.6.1",
-    "@polkadot/networks": "8.6.1",
-    "@polkadot/types": "7.13.1",
-    "@polkadot/types-known": "7.13.1",
-    "@polkadot/util": "8.6.1",
-    "@polkadot/util-crypto": "8.6.1",
-    "@polkadot/wasm-crypto": "5.0.1",
+    "@polkadot/api": "7.14.3",
+    "@polkadot/keyring": "8.7.1",
+    "@polkadot/networks": "8.7.1",
+    "@polkadot/types": "7.14.3",
+    "@polkadot/types-known": "7.14.3",
+    "@polkadot/util": "8.7.1",
+    "@polkadot/util-crypto": "8.7.1",
+    "@polkadot/wasm-crypto": "5.1.1",
     "@polkadot/apps-config": "0.110.1"
   },
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.15.4",
-    "@polkadot/util-crypto": "^8.6.1",
+    "@polkadot/util-crypto": "^8.7.1",
     "@substrate/dev": "^0.5.6",
     "@types/jest": "^27.0.1",
     "@typescript-eslint/eslint-plugin": "^4.31.1",
