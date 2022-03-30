@@ -34,6 +34,10 @@ export const TEST_METHOD_ARGS = {
 			dest: 'Fy2rsYCoowQBtuFXqLE65ehAY9T6KWcGiNCQAyPDCkfpm4s',
 			value: 12,
 		},
+		transferAll: {
+			dest: 'Fy2rsYCoowQBtuFXqLE65ehAY9T6KWcGiNCQAyPDCkfpm4s',
+			keepAlive: true,
+		},
 	},
 	democracy: {
 		vote: {
