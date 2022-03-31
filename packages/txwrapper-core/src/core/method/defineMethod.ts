@@ -38,6 +38,7 @@ export function defineMethod(
 		asCallsOnlyArg,
 		signedExtensions,
 		userExtensions,
+		isImmortalEra,
 	} = options;
 	const generatedMetadata = createMetadata(
 		registry,
@@ -74,23 +75,26 @@ export function defineMethod(
 
 	/**
 	 * If the `info.eraPeriod` is set use it. (This also checks for the edgecase zero).
-	 * As a last resort, it will use the default value.
+	 * As a last resort, it will use the default value. If the eraPeriod is less than 4, 
+	 * for a mortal era, it will default to 4. 
 	 */
 	const eraPeriod =
 		info.eraPeriod === 0 || info.eraPeriod
 			? info.eraPeriod
 			: DEFAULTS.eraPeriod;
 
+	const extrinsicEra = isImmortalEra
+		? registry.createType('ExtrinsicEra')
+		: registry.createType('ExtrinsicEra', {
+				current: info.blockNumber,
+				period: eraPeriod,
+		  });
+
 	return {
 		address: info.address,
 		blockHash: info.blockHash,
 		blockNumber: registry.createType('BlockNumber', info.blockNumber).toHex(),
-		era: registry
-			.createType('ExtrinsicEra', {
-				current: info.blockNumber,
-				period: eraPeriod,
-			})
-			.toHex(),
+		era: extrinsicEra.toHex(),
 		genesisHash: info.genesisHash,
 		metadataRpc: generatedMetadata.toHex(),
 		method,

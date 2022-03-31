@@ -122,4 +122,9 @@ export interface Options {
 	 * The type registry of the runtime.
 	 */
 	registry: TypeRegistry;
+	/**
+	 * Option to choose whether the constructed transaction will be immortal. By
+	 * default the number will be
+	 */
+	isImmortalEra?: boolean;
 }

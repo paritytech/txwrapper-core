@@ -31,7 +31,11 @@ describe('defineMethod', () => {
 		expect(unsigned.era).toBe('0xe500');
 	});
 
-	it('should handle `info.eraPeriod` correctly when 0', () => {
+	/**
+	 * Note: This is a mortal transaction so it will convert the info.eraPeriod
+	 * back to the value 4 as a MortalEra must be a minimum of 4.
+	 */
+	it('should handle `info.eraPeriod` correctly when 0 with a mortal tx', () => {
 		const txBaseInfo = {
 			...TEST_BASE_TX_INFO,
 			eraPeriod: 0,
@@ -49,6 +53,33 @@ describe('defineMethod', () => {
 		);
 
 		expect(unsigned.era).toBe('0x2100');
+	});
+
+	it('should handle `info.eraPeriod` when `isImmortalEra` is true', () => {
+		const txBaseInfo = {
+			...TEST_BASE_TX_INFO,
+			eraPeriod: 0,
+		};
+		/**
+		 * Adds isImmortalEra to the options.
+		 */
+		const adjustedOptions = Object.assign({},
+			POLKADOT_25_TEST_OPTIONS,
+			{ isImmortalEra: true },
+		);
+		const unsigned = defineMethod(
+			{
+				...txBaseInfo,
+				method: {
+					args: {},
+					name: 'chill',
+					pallet: 'staking',
+				},
+			},
+			adjustedOptions
+		);
+
+		expect(unsigned.era).toBe('0x00');
 	});
 
 	it('should work', () => {
