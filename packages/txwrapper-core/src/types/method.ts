@@ -123,8 +123,9 @@ export interface Options {
 	 */
 	registry: TypeRegistry;
 	/**
-	 * Option to choose whether the constructed transaction will be immortal. By
-	 * default the number will be
+	 * Option to choose whether the constructed transaction will be immortal. If
+	 * immortal the default value will be '0x00', and when decoded it will return 0.
+	 * This option is used exclusively for unsigned transactions.
 	 */
 	isImmortalEra?: boolean;
 }
