@@ -63,10 +63,9 @@ describe('defineMethod', () => {
 		/**
 		 * Adds isImmortalEra to the options.
 		 */
-		const adjustedOptions = Object.assign({},
-			POLKADOT_25_TEST_OPTIONS,
-			{ isImmortalEra: true },
-		);
+		const adjustedOptions = Object.assign({}, POLKADOT_25_TEST_OPTIONS, {
+			isImmortalEra: true,
+		});
 		const unsigned = defineMethod(
 			{
 				...txBaseInfo,
