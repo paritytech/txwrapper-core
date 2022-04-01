@@ -126,6 +126,8 @@ export interface Options {
 	 * Option to choose whether the constructed transaction will be immortal. If
 	 * immortal the default value will be '0x00', and when decoded it will return 0.
 	 * This option is used exclusively for unsigned transactions.
+	 *
+	 * Note: When creating an Immortal tx, the blockHash should be set as the genesis hash.
 	 */
 	isImmortalEra?: boolean;
 }

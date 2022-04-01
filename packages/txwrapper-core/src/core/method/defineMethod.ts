@@ -75,7 +75,7 @@ export function defineMethod(
 
 	/**
 	 * If the `info.eraPeriod` is set use it. (This also checks for the edgecase zero).
-	 * As a last resort, it will use the default value. If the eraPeriod is less than 4,
+	 * As a last resort, it will use the default value of 64. If the eraPeriod is less than 4,
 	 * for a mortal era, it will default to 4.
 	 */
 	const eraPeriod =
