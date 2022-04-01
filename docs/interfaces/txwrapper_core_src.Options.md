@@ -29,4 +29,4 @@ The type registry of the runtime.
 
 #### Defined in
 
-[txwrapper-core/src/types/method.ts:115](https://github.com/paritytech/txwrapper-core/blob/a0283d9/packages/txwrapper-core/src/types/method.ts#L115)
+[txwrapper-core/src/types/method.ts:124](https://github.com/paritytech/txwrapper-core/blob/f50cd9c/packages/txwrapper-core/src/types/method.ts#L124)

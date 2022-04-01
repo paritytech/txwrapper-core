@@ -26,4 +26,4 @@ The remark to set on chain, in hex or bytes.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/system/remark.ts:13](https://github.com/paritytech/txwrapper-core/blob/a0283d9/packages/txwrapper-substrate/src/methods/system/remark.ts#L13)
+[txwrapper-substrate/src/methods/system/remark.ts:13](https://github.com/paritytech/txwrapper-core/blob/f50cd9c/packages/txwrapper-substrate/src/methods/system/remark.ts#L13)

@@ -11,8 +11,10 @@
 - [ChainProperties](txwrapper_polkadot_src.md#chainproperties)
 - [DecodedSignedTx](txwrapper_polkadot_src.md#decodedsignedtx)
 - [DecodedSigningPayload](txwrapper_polkadot_src.md#decodedsigningpayload)
+- [DecodedUnsignedHexTx](txwrapper_polkadot_src.md#decodedunsignedhextx)
 - [DecodedUnsignedTx](txwrapper_polkadot_src.md#decodedunsignedtx)
 - [GetRegistryOptsCore](txwrapper_polkadot_src.md#getregistryoptscore)
+- [IMethod](txwrapper_polkadot_src.md#imethod)
 - [KeyringPair](txwrapper_polkadot_src.md#keyringpair)
 - [Options](txwrapper_polkadot_src.md#options)
 - [OptionsWithMeta](txwrapper_polkadot_src.md#optionswithmeta)
@@ -71,6 +73,12 @@ Re-exports [DecodedSigningPayload](txwrapper_core_src.md#decodedsigningpayload)
 
 ___
 
+### DecodedUnsignedHexTx
+
+Re-exports [DecodedUnsignedHexTx](../interfaces/txwrapper_core_src.DecodedUnsignedHexTx.md)
+
+___
+
 ### DecodedUnsignedTx
 
 Re-exports [DecodedUnsignedTx](txwrapper_core_src.md#decodedunsignedtx)
@@ -80,6 +88,12 @@ ___
 ### GetRegistryOptsCore
 
 Re-exports [GetRegistryOptsCore](../interfaces/txwrapper_core_src.GetRegistryOptsCore.md)
+
+___
+
+### IMethod
+
+Re-exports [IMethod](../interfaces/txwrapper_core_src.IMethod.md)
 
 ___
 
@@ -183,7 +197,7 @@ Re-exports [toTxMethod](txwrapper_core_src.md#totxmethod)
 
 #### Defined in
 
-[txwrapper-polkadot/src/index.ts:16](https://github.com/paritytech/txwrapper-core/blob/a0283d9/packages/txwrapper-polkadot/src/index.ts#L16)
+[txwrapper-polkadot/src/index.ts:16](https://github.com/paritytech/txwrapper-core/blob/f50cd9c/packages/txwrapper-polkadot/src/index.ts#L16)
 
 ## Functions
 
@@ -205,4 +219,4 @@ Get a type registry for networks that txwrapper-polkadot supports.
 
 #### Defined in
 
-[txwrapper-polkadot/src/index.ts:81](https://github.com/paritytech/txwrapper-core/blob/a0283d9/packages/txwrapper-polkadot/src/index.ts#L81)
+[txwrapper-polkadot/src/index.ts:81](https://github.com/paritytech/txwrapper-core/blob/f50cd9c/packages/txwrapper-polkadot/src/index.ts#L81)

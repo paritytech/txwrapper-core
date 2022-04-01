@@ -20,6 +20,8 @@ options to functions that require registry and metadata.
 - [asCallsOnlyArg](txwrapper_core_src.OptionsWithMeta.md#ascallsonlyarg)
 - [metadataRpc](txwrapper_core_src.OptionsWithMeta.md#metadatarpc)
 - [registry](txwrapper_core_src.OptionsWithMeta.md#registry)
+- [signedExtensions](txwrapper_core_src.OptionsWithMeta.md#signedextensions)
+- [userExtensions](txwrapper_core_src.OptionsWithMeta.md#userextensions)
 
 ## Properties
 
@@ -31,7 +33,7 @@ Used to reduce the metadata size by only having the calls
 
 #### Defined in
 
-[txwrapper-core/src/types/method.ts:20](https://github.com/paritytech/txwrapper-core/blob/a0283d9/packages/txwrapper-core/src/types/method.ts#L20)
+[txwrapper-core/src/types/method.ts:21](https://github.com/paritytech/txwrapper-core/blob/f50cd9c/packages/txwrapper-core/src/types/method.ts#L21)
 
 ___
 
@@ -43,7 +45,7 @@ The metadata of the runtime.
 
 #### Defined in
 
-[txwrapper-core/src/types/method.ts:16](https://github.com/paritytech/txwrapper-core/blob/a0283d9/packages/txwrapper-core/src/types/method.ts#L16)
+[txwrapper-core/src/types/method.ts:17](https://github.com/paritytech/txwrapper-core/blob/f50cd9c/packages/txwrapper-core/src/types/method.ts#L17)
 
 ___
 
@@ -59,4 +61,28 @@ The type registry of the runtime.
 
 #### Defined in
 
-[txwrapper-core/src/types/method.ts:115](https://github.com/paritytech/txwrapper-core/blob/a0283d9/packages/txwrapper-core/src/types/method.ts#L115)
+[txwrapper-core/src/types/method.ts:124](https://github.com/paritytech/txwrapper-core/blob/f50cd9c/packages/txwrapper-core/src/types/method.ts#L124)
+
+___
+
+### signedExtensions
+
+• `Optional` **signedExtensions**: `string`[]
+
+Array of signedExtensions
+
+#### Defined in
+
+[txwrapper-core/src/types/method.ts:25](https://github.com/paritytech/txwrapper-core/blob/f50cd9c/packages/txwrapper-core/src/types/method.ts#L25)
+
+___
+
+### userExtensions
+
+• `Optional` **userExtensions**: `ExtDef`
+
+User extensions used to inject into the type registry
+
+#### Defined in
+
+[txwrapper-core/src/types/method.ts:29](https://github.com/paritytech/txwrapper-core/blob/f50cd9c/packages/txwrapper-core/src/types/method.ts#L29)

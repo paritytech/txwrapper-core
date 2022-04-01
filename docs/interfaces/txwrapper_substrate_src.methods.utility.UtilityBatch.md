@@ -28,4 +28,4 @@ UnsignedTransaction.method.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/utility/batch.ts:15](https://github.com/paritytech/txwrapper-core/blob/a0283d9/packages/txwrapper-substrate/src/methods/utility/batch.ts#L15)
+[txwrapper-substrate/src/methods/utility/batch.ts:15](https://github.com/paritytech/txwrapper-core/blob/f50cd9c/packages/txwrapper-substrate/src/methods/utility/batch.ts#L15)

@@ -27,7 +27,7 @@
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/balances/transferKeepAlive.ts:10](https://github.com/paritytech/txwrapper-core/blob/a0283d9/packages/txwrapper-substrate/src/methods/balances/transferKeepAlive.ts#L10)
+[txwrapper-substrate/src/methods/balances/transferKeepAlive.ts:10](https://github.com/paritytech/txwrapper-core/blob/f50cd9c/packages/txwrapper-substrate/src/methods/balances/transferKeepAlive.ts#L10)
 
 ## Functions
 
@@ -51,7 +51,7 @@ Construct a balance transfer transaction offline.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/balances/transfer.ts:27](https://github.com/paritytech/txwrapper-core/blob/a0283d9/packages/txwrapper-substrate/src/methods/balances/transfer.ts#L27)
+[txwrapper-substrate/src/methods/balances/transfer.ts:27](https://github.com/paritytech/txwrapper-core/blob/f50cd9c/packages/txwrapper-substrate/src/methods/balances/transfer.ts#L27)
 
 ___
 
@@ -75,4 +75,4 @@ Construct a balance transfer transaction offline.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/balances/transferKeepAlive.ts:19](https://github.com/paritytech/txwrapper-core/blob/a0283d9/packages/txwrapper-substrate/src/methods/balances/transferKeepAlive.ts#L19)
+[txwrapper-substrate/src/methods/balances/transferKeepAlive.ts:19](https://github.com/paritytech/txwrapper-core/blob/f50cd9c/packages/txwrapper-substrate/src/methods/balances/transferKeepAlive.ts#L19)

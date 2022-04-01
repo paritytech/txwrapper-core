@@ -22,7 +22,7 @@ Format used in txwrapper to represent a method.
 
 #### Defined in
 
-[txwrapper-core/src/types/method.ts:32](https://github.com/paritytech/txwrapper-core/blob/a0283d9/packages/txwrapper-core/src/types/method.ts#L32)
+[txwrapper-core/src/types/method.ts:41](https://github.com/paritytech/txwrapper-core/blob/f50cd9c/packages/txwrapper-core/src/types/method.ts#L41)
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-[txwrapper-core/src/types/method.ts:33](https://github.com/paritytech/txwrapper-core/blob/a0283d9/packages/txwrapper-core/src/types/method.ts#L33)
+[txwrapper-core/src/types/method.ts:42](https://github.com/paritytech/txwrapper-core/blob/f50cd9c/packages/txwrapper-core/src/types/method.ts#L42)
 
 ___
 
@@ -42,4 +42,4 @@ ___
 
 #### Defined in
 
-[txwrapper-core/src/types/method.ts:34](https://github.com/paritytech/txwrapper-core/blob/a0283d9/packages/txwrapper-core/src/types/method.ts#L34)
+[txwrapper-core/src/types/method.ts:43](https://github.com/paritytech/txwrapper-core/blob/f50cd9c/packages/txwrapper-core/src/types/method.ts#L43)
