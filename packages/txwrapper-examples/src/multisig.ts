@@ -26,6 +26,10 @@ const THRESHOLD_FOR_MULTISIG = 2;
 
 const signatories = ['Alice', 'Bob', 'Charlie'];
 
+function delay(ms: number) {
+  return new Promise( resolve => setTimeout(resolve, ms) );
+}
+
 function createMultisigAccount(keyring: Keyring): [
   string[], 
   string, 
@@ -171,7 +175,7 @@ async function main(): Promise<void> {
 			eraPeriod: 64,
 			genesisHash,
 			metadataRpc,
-			nonce: 0, // Assuming this is Alice's first tx on the chain
+			nonce: 0, // Assuming this is the first tx that Alice will sign
 			specVersion,
 			tip: 0,
 			transactionVersion,
@@ -293,7 +297,7 @@ async function main(): Promise<void> {
 			otherSignatories: otherSignatoriesSortedExAlice,
 			maybeTimepoint: null,
 			callHash: expectedTxHash1,
-			maxWeight: '900719925474',
+			maxWeight: '640000000',
 		},
 		{
 			address: deriveAddress(
@@ -307,7 +311,7 @@ async function main(): Promise<void> {
 			eraPeriod: 64,
 			genesisHash,
 			metadataRpc,
-			nonce: 1, // Assuming this is the first tx from the MultiSig on the chain
+			nonce: 1, // Assuming this is the second tx that Alice will sign
 			specVersion,
 			tip: 0,
 			transactionVersion,
@@ -370,12 +374,20 @@ async function main(): Promise<void> {
 			`  Call Hash: ${txInfoMulti.method.args.callHash}\n` +
 			`  Threshold: ${txInfoMulti.method.args.threshold}`
 	);
-
+  
   // Create Signatories Sorted excluding the sender (Bob)
   const otherSignatoriesSortedExBob = createOtherSignatories(
     addressesArray, 
     signatories.indexOf('Bob')
   );
+  
+  // Added a delay as a hack so that the asMulti call 
+  // is included in next blocks
+  console.log(
+    `\nWaiting 15 seconds before calling the asMulti\n` +
+    ` so it is included in next blocks\n`
+  );
+  await delay(15000);
 
 	console.log(`\nCalling AsMulti`);
 	console.log(`=================`);
@@ -385,10 +397,8 @@ async function main(): Promise<void> {
 			threshold: THRESHOLD_FOR_MULTISIG,
 			otherSignatories: otherSignatoriesSortedExBob,
 			maybeTimepoint: {
-				height: registry
-				.createType('BlockNumber', block.header.number)
-				.toNumber(),
-				index: 1,
+				height: parseInt(txApproveAsMulti.blockNumber) + 1,
+				index: 3,
 			},
 			call: signingPayload1,
 			storeCall: false,
@@ -406,7 +416,7 @@ async function main(): Promise<void> {
 			eraPeriod: 64,
 			genesisHash,
 			metadataRpc,
-			nonce: 2, // Assuming this is the first tx from the MultiSig on the chain
+			nonce: 0, // Assuming this is the first tx that Bob will sign
 			specVersion,
 			tip: 0,
 			transactionVersion,
