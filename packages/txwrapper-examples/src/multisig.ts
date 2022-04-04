@@ -24,38 +24,20 @@ const SS58Prefix = 0;
 // or equal to the total number of addresses.
 const THRESHOLD_FOR_MULTISIG = 2;
 
-function createOtherSignatories(addressesArray: string[], senderIndex: number
-  ): string[] {
-    // Take addresses and remove the sender.
-    const otherSignatories = addressesArray.filter(
-      (who) => who !== addressesArray[senderIndex] 
-    );
-  
-    // Sort them by public key.
-    const otherSignatoriesSorted = sortAddresses(otherSignatories, SS58Prefix);
-  
-    console.log(`\nOther Signatories: ${otherSignatoriesSorted}\n`);
-  
-    return otherSignatoriesSorted;
-}
+const signatories = ['Alice', 'Bob', 'Charlie'];
 
-async function main(): Promise<void> {
-	/**
-	 * Entry point of the script. This script assumes a Polkadot node is running
-	 * locally on `http://localhost:9933`.
-	 */
-	await cryptoWaitReady();
+function createMultisigAccount(keyring: Keyring): [
+  string[], 
+  string, 
+  {[key:string]: KeyringPair; }
+] {
 
-	// Create a new keyring
-	const keyring = new Keyring();
-
-	console.log(`\nCreating a MultiSig Account`);
+  console.log(`\nCreating a MultiSig Account`);
 	console.log(`=============================\n`);
 
 	// For every signatory [Alice, Bob and Charlie]
 	// add its corresponding account in the newly created keyring
 	// and then save the derived address in the `addressesDict`
-	const signatories = ['Alice', 'Bob', 'Charlie'];
 	const addressesDict: { [key: string]: string } = {};
 	const signatoriesDict: { [key: string]: KeyringPair } = {};
 
@@ -85,6 +67,46 @@ async function main(): Promise<void> {
 	const Ss58MultiSigAddress = encodeAddress(multiAddress, SS58Prefix);
 
 	console.log(`\nMultisig Address: ${Ss58MultiSigAddress}`);
+
+  
+  return [addressesArray, Ss58MultiSigAddress, signatoriesDict];
+}
+
+function createOtherSignatories(addressesArray: string[], senderIndex: number
+  ): string[] {
+  // Take addresses and remove the sender.
+  const otherSignatories = addressesArray.filter(
+    (who) => who !== addressesArray[senderIndex] 
+  );
+
+  // Sort them by public key.
+  const otherSignatoriesSorted = sortAddresses(otherSignatories, SS58Prefix);
+
+  console.log(`\nOther Signatories: ${otherSignatoriesSorted}\n`);
+
+  return otherSignatoriesSorted;
+}
+
+async function main(): Promise<void> {
+	/**
+	 * Entry point of the script. This script assumes a Polkadot node is running
+	 * locally on `http://localhost:9933`.
+	 */
+	await cryptoWaitReady();
+
+  // Create a new keyring
+	const keyring = new Keyring()
+
+  // Create a multisig account from the accounts Alice, Bob and Charlie
+  // and return 
+  // 1. addressesArray = the addresses that are in the Multisig Account
+  // 2. Ss58MultiSigAddress = the address of the Multisig Account
+  // 3. signatoriesDict = all the KeyringPair info per signatory
+  const [
+    addressesArray, 
+    Ss58MultiSigAddress, 
+    signatoriesDict
+  ] = createMultisigAccount(keyring);
 
   // Create Signatories Sorted excluding the sender (Alice)
   const otherSignatoriesSortedExAlice = createOtherSignatories(
