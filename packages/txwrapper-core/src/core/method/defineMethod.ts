@@ -22,7 +22,7 @@ export enum MethodErrorMessages {
 	InvalidEraPeriodTooLow = 'lowest possible era period for a mortal tx is 4',
 	// An era period cannot be greater than 65536
 	InvalidEraPeriodTooHigh = 'largest possible era period for a mortal tx is 65536',
-	// Decorated tx doesnt have the inputted pallet or method
+	// Decorated tx doesn't have the inputted pallet or method
 	InvalidPalletOrMethod = 'pallet or method not found in metadata',
 }
 
