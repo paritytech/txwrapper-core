@@ -8,7 +8,7 @@ import {
 	TEST_BASE_TX_INFO,
 	TEST_METHOD_ARGS,
 } from '../../test-helpers/';
-import { checkEra, defineMethod, MethodErrorMessages } from './defineMethod';
+import { createEra, defineMethod, MethodErrorMessages } from './defineMethod';
 
 describe('defineMethod', () => {
 	const { InvalidEraPeriodTooLow, InvalidEraPeriodTooHigh } =
@@ -151,29 +151,29 @@ describe('defineMethod', () => {
 		).not.toThrow();
 	});
 
-	describe('checkEra', () => {
+	describe('createEra', () => {
 		const { registry } = POLKADOT_9122_TEST_OPTIONS;
 
 		it('Should handle values less than 4 correctly', () => {
 			expect(() => {
-				checkEra(registry, 10, 0);
+				createEra(registry, { kind: 'mortal', blockNumber: 10, period: 0 });
 			}).toThrowError(InvalidEraPeriodTooLow);
 			expect(() => {
-				checkEra(registry, 10, 3);
+				createEra(registry, { kind: 'mortal', blockNumber: 10, period: 3 });
 			}).toThrowError(InvalidEraPeriodTooLow);
 		});
 
 		it('Should handle values greater than 65536 correctly', () => {
 			expect(() => {
-				checkEra(registry, 10, 65537);
+				createEra(registry, { kind: 'mortal', blockNumber: 10, period: 65537 });
 			}).toThrowError(InvalidEraPeriodTooHigh);
 			expect(() => {
-				checkEra(registry, 10, 70000);
+				createEra(registry, { kind: 'mortal', blockNumber: 10, period: 70000 });
 			}).toThrowError(InvalidEraPeriodTooHigh);
 		});
 
 		it('Should handle immortal transactions correctly', () => {
-			const eraImmortal = checkEra(registry, 10, undefined, true);
+			const eraImmortal = createEra(registry, { kind: 'immortal' });
 
 			expect(eraImmortal.isImmortalEra).toBe(true);
 			expect(eraImmortal.toHex()).toBe('0x00');
