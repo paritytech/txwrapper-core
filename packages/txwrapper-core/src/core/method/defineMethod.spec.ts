@@ -8,9 +8,11 @@ import {
 	TEST_BASE_TX_INFO,
 	TEST_METHOD_ARGS,
 } from '../../test-helpers/';
-import { defineMethod } from './defineMethod';
+import { checkEra, defineMethod, MethodErrorMessages } from './defineMethod';
 
 describe('defineMethod', () => {
+	const { InvalidEraPeriodToLow, InvalidEraPeriodToHigh } = MethodErrorMessages;
+
 	it('should create correct default era', () => {
 		const txBaseInfo = {
 			...TEST_BASE_TX_INFO,
@@ -31,28 +33,24 @@ describe('defineMethod', () => {
 		expect(unsigned.era).toBe('0xe500');
 	});
 
-	/**
-	 * Note: This is a mortal transaction so it will convert the info.eraPeriod
-	 * back to the value 4 as a MortalEra must be a minimum of 4.
-	 */
-	it('should handle `info.eraPeriod` correctly when 0 with a mortal tx', () => {
+	it('should handle `info.eraPeriod` correctly when less than 4', () => {
 		const txBaseInfo = {
 			...TEST_BASE_TX_INFO,
 			eraPeriod: 0,
 		};
-		const unsigned = defineMethod(
-			{
-				...txBaseInfo,
-				method: {
-					args: {},
-					name: 'chill',
-					pallet: 'staking',
+		expect(() =>
+			defineMethod(
+				{
+					...txBaseInfo,
+					method: {
+						args: {},
+						name: 'chill',
+						pallet: 'staking',
+					},
 				},
-			},
-			POLKADOT_25_TEST_OPTIONS
-		);
-
-		expect(unsigned.era).toBe('0x2100');
+				POLKADOT_25_TEST_OPTIONS
+			)
+		).toThrow(InvalidEraPeriodToLow);
 	});
 
 	it('should handle `info.eraPeriod` when `isImmortalEra` is true', () => {
@@ -84,7 +82,7 @@ describe('defineMethod', () => {
 	it('should work', () => {
 		const txBaseInfo = {
 			...TEST_BASE_TX_INFO,
-			eraPeriod: 2,
+			eraPeriod: 4,
 		};
 		const unsigned = defineMethod(
 			{
@@ -150,5 +148,34 @@ describe('defineMethod', () => {
 		expect(
 			() => new Metadata(registry, unsignedPayload.metadataRpc)
 		).not.toThrow();
+	});
+
+	describe('checkEra', () => {
+		const { registry } = POLKADOT_9122_TEST_OPTIONS;
+
+		it('Should handle values less than 4 correctly', () => {
+			expect(() => {
+				checkEra(registry, 10, 0);
+			}).toThrowError(InvalidEraPeriodToLow);
+			expect(() => {
+				checkEra(registry, 10, 3);
+			}).toThrowError(InvalidEraPeriodToLow);
+		});
+
+		it('Should handle values greater than 65536 correctly', () => {
+			expect(() => {
+				checkEra(registry, 10, 65537);
+			}).toThrowError(InvalidEraPeriodToHigh);
+			expect(() => {
+				checkEra(registry, 10, 70000);
+			}).toThrowError(InvalidEraPeriodToHigh);
+		});
+
+		it('Should handle immortal transactions correctly', () => {
+			const eraImmortal = checkEra(registry, 10, undefined, true);
+
+			expect(eraImmortal.isImmortalEra).toBe(true);
+			expect(eraImmortal.toHex()).toBe('0x00');
+		});
 	});
 });

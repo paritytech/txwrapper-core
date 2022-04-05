@@ -2,11 +2,29 @@
  * @ignore
  */ /** */
 import { EXTRINSIC_VERSION } from '@polkadot/types/extrinsic/v4/Extrinsic';
+import { ExtrinsicEra } from '@polkadot/types/interfaces/extrinsics';
 import { ModuleExtrinsics } from '@polkadot/types/metadata/decorate/types';
 import { stringCamelCase } from '@polkadot/util';
 
-import { OptionsWithMeta, TxInfo, UnsignedTransaction } from '../../types/';
+import {
+	OptionsWithMeta,
+	TxInfo,
+	TypeRegistry,
+	UnsignedTransaction,
+} from '../../types/';
 import { createDecoratedTx, createMetadata } from '../metadata';
+
+/**
+ * Error messages for defineMethod
+ */
+export enum MethodErrorMessages {
+	// An era period cannot be less than 4
+	InvalidEraPeriodToLow = 'lowest possible era period for a mortal tx is 4',
+	// An era period cannot be greater than 65536
+	InvalidEraPeriodToHigh = 'largest possible era period for a mortal tx is 65536',
+	// Decorated tx doesnt have the inputted pallet or method
+	InvalidPalletOrMethod = 'pallet or method not found in metadata',
+}
 
 /**
  * Default values for tx info, if the user doesn't specify any
@@ -21,6 +39,50 @@ const DEFAULTS = {
 	 */
 	eraPeriod: 64,
 };
+
+/**
+ * Check the information relevant to an era period, and return the correct
+ * `ExtrinsicEra` as an Immortal or Mortal era.
+ *
+ * @param registry
+ * @param blockNumber
+ * @param eraPeriod
+ * @param isImmortalEra
+ * @returns
+ */
+export function checkEra(
+	registry: TypeRegistry,
+	blockNumber: number,
+	eraPeriod: number = DEFAULTS.eraPeriod,
+	isImmortalEra?: boolean
+): ExtrinsicEra {
+	const { InvalidEraPeriodToLow, InvalidEraPeriodToHigh } = MethodErrorMessages;
+	/**
+	 * Immortal transactions will be represented by the default value '0x00' for
+	 * an era.
+	 */
+	if (isImmortalEra) {
+		return registry.createType('ExtrinsicEra');
+	}
+
+	/**
+	 * An era period cannot be less than 4 or greater than 65536.
+	 * ie. (https://github.com/paritytech/substrate/blob/master/primitives/runtime/src/generic/era.rs#L58)
+	 *
+	 * It is encouraged to send mortal transactions, but in the use case for an immortal transaction
+	 * instead of passing in zero, you must use the `option`, `isImmortalEra`.
+	 */
+	if (eraPeriod < 4) {
+		throw Error(InvalidEraPeriodToLow);
+	} else if (eraPeriod > 65536) {
+		throw Error(InvalidEraPeriodToHigh);
+	}
+
+	return registry.createType('ExtrinsicEra', {
+		current: blockNumber,
+		period: eraPeriod,
+	});
+}
 
 /**
  * Helper function to construct an offline method.
@@ -40,6 +102,7 @@ export function defineMethod(
 		userExtensions,
 		isImmortalEra,
 	} = options;
+	const { InvalidPalletOrMethod } = MethodErrorMessages;
 	const generatedMetadata = createMetadata(
 		registry,
 		metadataRpc,
@@ -54,7 +117,7 @@ export function defineMethod(
 		!!tx[info.method.pallet] &&
 		(tx[info.method.pallet] as unknown as ModuleExtrinsics)[info.method.name];
 	if (!methodFunction) {
-		throw new Error('pallet or method not found in metadata');
+		throw new Error(InvalidPalletOrMethod);
 	}
 
 	const method = methodFunction(
@@ -73,22 +136,12 @@ export function defineMethod(
 		})
 	).toHex();
 
-	/**
-	 * If the `info.eraPeriod` is set use it. (This also checks for the edgecase zero).
-	 * As a last resort, it will use the default value of 64. If the eraPeriod is less than 4,
-	 * for a mortal era, it will default to 4.
-	 */
-	const eraPeriod =
-		info.eraPeriod === 0 || info.eraPeriod
-			? info.eraPeriod
-			: DEFAULTS.eraPeriod;
-
-	const extrinsicEra = isImmortalEra
-		? registry.createType('ExtrinsicEra')
-		: registry.createType('ExtrinsicEra', {
-				current: info.blockNumber,
-				period: eraPeriod,
-		  });
+	const extrinsicEra = checkEra(
+		registry,
+		info.blockNumber,
+		info.eraPeriod,
+		isImmortalEra
+	);
 
 	return {
 		address: info.address,
