@@ -19,9 +19,9 @@ import { createDecoratedTx, createMetadata } from '../metadata';
  */
 export enum MethodErrorMessages {
 	// An era period cannot be less than 4
-	InvalidEraPeriodToLow = 'lowest possible era period for a mortal tx is 4',
+	InvalidEraPeriodTooLow = 'lowest possible era period for a mortal tx is 4',
 	// An era period cannot be greater than 65536
-	InvalidEraPeriodToHigh = 'largest possible era period for a mortal tx is 65536',
+	InvalidEraPeriodTooHigh = 'largest possible era period for a mortal tx is 65536',
 	// Decorated tx doesnt have the inputted pallet or method
 	InvalidPalletOrMethod = 'pallet or method not found in metadata',
 }
@@ -56,7 +56,8 @@ export function checkEra(
 	eraPeriod: number = DEFAULTS.eraPeriod,
 	isImmortalEra?: boolean
 ): ExtrinsicEra {
-	const { InvalidEraPeriodToLow, InvalidEraPeriodToHigh } = MethodErrorMessages;
+	const { InvalidEraPeriodTooLow, InvalidEraPeriodTooHigh } =
+		MethodErrorMessages;
 	/**
 	 * Immortal transactions will be represented by the default value '0x00' for
 	 * an era.
@@ -67,15 +68,15 @@ export function checkEra(
 
 	/**
 	 * An era period cannot be less than 4 or greater than 65536.
-	 * ie. (https://github.com/paritytech/substrate/blob/master/primitives/runtime/src/generic/era.rs#L58)
+	 * ie. (https://github.com/paritytech/substrate/pull/758)
 	 *
 	 * It is encouraged to send mortal transactions, but in the use case for an immortal transaction
 	 * instead of passing in zero, you must use the `option`, `isImmortalEra`.
 	 */
 	if (eraPeriod < 4) {
-		throw Error(InvalidEraPeriodToLow);
+		throw Error(InvalidEraPeriodTooLow);
 	} else if (eraPeriod > 65536) {
-		throw Error(InvalidEraPeriodToHigh);
+		throw Error(InvalidEraPeriodTooHigh);
 	}
 
 	return registry.createType('ExtrinsicEra', {

@@ -11,7 +11,8 @@ import {
 import { checkEra, defineMethod, MethodErrorMessages } from './defineMethod';
 
 describe('defineMethod', () => {
-	const { InvalidEraPeriodToLow, InvalidEraPeriodToHigh } = MethodErrorMessages;
+	const { InvalidEraPeriodTooLow, InvalidEraPeriodTooHigh } =
+		MethodErrorMessages;
 
 	it('should create correct default era', () => {
 		const txBaseInfo = {
@@ -50,7 +51,7 @@ describe('defineMethod', () => {
 				},
 				POLKADOT_25_TEST_OPTIONS
 			)
-		).toThrow(InvalidEraPeriodToLow);
+		).toThrow(InvalidEraPeriodTooLow);
 	});
 
 	it('should handle `info.eraPeriod` when `isImmortalEra` is true', () => {
@@ -156,19 +157,19 @@ describe('defineMethod', () => {
 		it('Should handle values less than 4 correctly', () => {
 			expect(() => {
 				checkEra(registry, 10, 0);
-			}).toThrowError(InvalidEraPeriodToLow);
+			}).toThrowError(InvalidEraPeriodTooLow);
 			expect(() => {
 				checkEra(registry, 10, 3);
-			}).toThrowError(InvalidEraPeriodToLow);
+			}).toThrowError(InvalidEraPeriodTooLow);
 		});
 
 		it('Should handle values greater than 65536 correctly', () => {
 			expect(() => {
 				checkEra(registry, 10, 65537);
-			}).toThrowError(InvalidEraPeriodToHigh);
+			}).toThrowError(InvalidEraPeriodTooHigh);
 			expect(() => {
 				checkEra(registry, 10, 70000);
-			}).toThrowError(InvalidEraPeriodToHigh);
+			}).toThrowError(InvalidEraPeriodTooHigh);
 		});
 
 		it('Should handle immortal transactions correctly', () => {
