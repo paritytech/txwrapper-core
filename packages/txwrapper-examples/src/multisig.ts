@@ -27,16 +27,13 @@ const THRESHOLD_FOR_MULTISIG = 2;
 const signatories = ['Alice', 'Bob', 'Charlie'];
 
 function delay(ms: number) {
-  return new Promise( resolve => setTimeout(resolve, ms) );
+	return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-function createMultisigAccount(keyring: Keyring): [
-  string[], 
-  string, 
-  {[key:string]: KeyringPair; }
-] {
-
-  console.log(`\nCreating a MultiSig Account`);
+function createMultisigAccount(
+	keyring: Keyring
+): [string[], string, { [key: string]: KeyringPair }] {
+	console.log(`\nCreating a MultiSig Account`);
 	console.log(`=============================\n`);
 
 	// For every signatory [Alice, Bob and Charlie]
@@ -45,7 +42,7 @@ function createMultisigAccount(keyring: Keyring): [
 	const addressesDict: { [key: string]: string } = {};
 	const signatoriesDict: { [key: string]: KeyringPair } = {};
 
-  const addressesArray = signatories.map((val, idx) => {
+	const addressesArray = signatories.map((val, idx) => {
 		signatoriesDict[signatories[idx]] = keyring.addFromUri(
 			'//' + val,
 			{ name: val },
@@ -56,13 +53,13 @@ function createMultisigAccount(keyring: Keyring): [
 			PolkadotSS58Format.polkadot
 		);
 
-		return addressesDict[signatories[idx]]
+		return addressesDict[signatories[idx]];
 	});
 
 	console.log(
 		'The accounts/addresses that compose the Multi Signature Account'
 	);
-  console.log(addressesArray);
+	console.log(addressesArray);
 
 	// Address as a byte array.
 	const multiAddress = createKeyMulti(addressesArray, THRESHOLD_FOR_MULTISIG);
@@ -72,23 +69,24 @@ function createMultisigAccount(keyring: Keyring): [
 
 	console.log(`\nMultisig Address: ${Ss58MultiSigAddress}`);
 
-  
-  return [addressesArray, Ss58MultiSigAddress, signatoriesDict];
+	return [addressesArray, Ss58MultiSigAddress, signatoriesDict];
 }
 
-function createOtherSignatories(addressesArray: string[], senderIndex: number
-  ): string[] {
-  // Take addresses and remove the sender.
-  const otherSignatories = addressesArray.filter(
-    (who) => who !== addressesArray[senderIndex] 
-  );
+function createOtherSignatories(
+	addressesArray: string[],
+	senderIndex: number
+): string[] {
+	// Take addresses and remove the sender.
+	const otherSignatories = addressesArray.filter(
+		(who) => who !== addressesArray[senderIndex]
+	);
 
-  // Sort them by public key.
-  const otherSignatoriesSorted = sortAddresses(otherSignatories, SS58Prefix);
+	// Sort them by public key.
+	const otherSignatoriesSorted = sortAddresses(otherSignatories, SS58Prefix);
 
-  console.log(`\nOther Signatories: ${otherSignatoriesSorted}\n`);
+	console.log(`\nOther Signatories: ${otherSignatoriesSorted}\n`);
 
-  return otherSignatoriesSorted;
+	return otherSignatoriesSorted;
 }
 
 async function main(): Promise<void> {
@@ -98,25 +96,22 @@ async function main(): Promise<void> {
 	 */
 	await cryptoWaitReady();
 
-  // Create a new keyring
-	const keyring = new Keyring()
+	// Create a new keyring
+	const keyring = new Keyring();
 
-  // Create a multisig account from the accounts Alice, Bob and Charlie
-  // and return 
-  // 1. addressesArray = the addresses that are in the Multisig Account
-  // 2. Ss58MultiSigAddress = the address of the Multisig Account
-  // 3. signatoriesDict = all the KeyringPair info per signatory
-  const [
-    addressesArray, 
-    Ss58MultiSigAddress, 
-    signatoriesDict
-  ] = createMultisigAccount(keyring);
+	// Create a multisig account from the accounts Alice, Bob and Charlie
+	// and return
+	// 1. addressesArray = the addresses that are in the Multisig Account
+	// 2. Ss58MultiSigAddress = the address of the Multisig Account
+	// 3. signatoriesDict = all the KeyringPair info per signatory
+	const [addressesArray, Ss58MultiSigAddress, signatoriesDict] =
+		createMultisigAccount(keyring);
 
-  // Create Signatories Sorted excluding the sender (Alice)
-  const otherSignatoriesSortedExAlice = createOtherSignatories(
-    addressesArray, 
-    signatories.indexOf('Alice')
-  );
+	// Create Signatories Sorted excluding the sender (Alice)
+	const otherSignatoriesSortedExAlice = createOtherSignatories(
+		addressesArray,
+		signatories.indexOf('Alice')
+	);
 
 	// Construct a balance transfer transaction offline.
 	// To construct the tx, we need some up-to-date information from the node.
@@ -374,20 +369,20 @@ async function main(): Promise<void> {
 			`  Call Hash: ${txInfoMulti.method.args.callHash}\n` +
 			`  Threshold: ${txInfoMulti.method.args.threshold}`
 	);
-  
-  // Create Signatories Sorted excluding the sender (Bob)
-  const otherSignatoriesSortedExBob = createOtherSignatories(
-    addressesArray, 
-    signatories.indexOf('Bob')
-  );
-  
-  // Added a delay as a hack so that the asMulti call 
-  // is included in next blocks
-  console.log(
-    `\nWaiting 15 seconds before calling the asMulti\n` +
-    ` so it is included in next blocks\n`
-  );
-  await delay(15000);
+
+	// Create Signatories Sorted excluding the sender (Bob)
+	const otherSignatoriesSortedExBob = createOtherSignatories(
+		addressesArray,
+		signatories.indexOf('Bob')
+	);
+
+	// Added a delay as a hack so that the asMulti call
+	// is included in next blocks
+	console.log(
+		`\nWaiting 15 seconds before calling the asMulti\n` +
+			` so it is included in next blocks\n`
+	);
+	await delay(15000);
 
 	console.log(`\nCalling AsMulti`);
 	console.log(`=================`);
@@ -454,7 +449,8 @@ async function main(): Promise<void> {
 	// request directly to the node.
 	const actualTxHash3 = await rpcToLocalNode('author_submitExtrinsic', [tx3]);
 	console.log(`Actual Tx Hash: ${actualTxHash3}`);
-
 }
 
-main().catch((err) => console.error(err)).finally(() => process.exit());
+main()
+	.catch((err) => console.error(err))
+	.finally(() => process.exit());
