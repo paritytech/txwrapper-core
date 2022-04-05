@@ -256,28 +256,28 @@ async function main(): Promise<void> {
 	);
 
 	// Decode an unsigned transaction.
-	const decodedUnsigned1 = decode(unsignedTXMulti, {
+	const decodedUnsignedTXMulti = decode(unsignedTXMulti, {
 		metadataRpc,
 		registry,
 	});
 	console.log(
 		`\nDecoded Transaction\n  To: ${
-			(decodedUnsigned1.method.args.dest as { id: string })?.id
+			(decodedUnsignedTXMulti.method.args.dest as { id: string })?.id
 		}\n` +
-			`  Amount: ${decodedUnsigned1.method.args.value}` +
+			`  Amount: ${decodedUnsignedTXMulti.method.args.value}` +
 			`\n` +
-			`  From: ${decodedUnsigned1.address}`
+			`  From: ${decodedUnsignedTXMulti.address}`
 	);
 
 	// Construct the signing payload from an unsigned transaction.
-	const signingPayload1 = construct.signingPayload(unsignedTXMulti, {
+	const signingPayloadTXMulti = construct.signingPayload(unsignedTXMulti, {
 		registry,
 	});
-	console.log(`\nPayload to Sign: ${signingPayload1}`);
+	console.log(`\nPayload to Sign: ${signingPayloadTXMulti}`);
 
 	// Derive the tx hash of an unsigned payload.
-	const expectedTxHash1 = construct.txHash(signingPayload1);
-	console.log(`\nExpected Tx Hash: ${expectedTxHash1}`);
+	const expectedTxHashMulti = construct.txHash(signingPayloadTXMulti);
+	console.log(`\nExpected Tx Hash: ${expectedTxHashMulti}`);
 
 	// The next steps include the calls `approveAsMulti` and `asMulti`
 	// in order to send funds from the MultiSig account to another address,
@@ -286,12 +286,12 @@ async function main(): Promise<void> {
 	console.log(`\nCalling ApproveAsMulti`);
 	console.log(`========================`);
 
-	const txApproveAsMulti = substrateMethods.multisig.approveAsMulti(
+	const unsignedTxApproveAsMulti = substrateMethods.multisig.approveAsMulti(
 		{
 			threshold: THRESHOLD_FOR_MULTISIG,
 			otherSignatories: otherSignatoriesSortedExAlice,
 			maybeTimepoint: null,
-			callHash: expectedTxHash1,
+			callHash: expectedTxHashMulti,
 			maxWeight: '640000000',
 		},
 		{
@@ -318,56 +318,70 @@ async function main(): Promise<void> {
 	);
 
 	// Decode an unsigned transaction.
-	const decodedUnsigned2 = decode(txApproveAsMulti, {
+	const decodedUnsignedApproveAsMulti = decode(unsignedTxApproveAsMulti, {
 		metadataRpc,
 		registry,
 	});
 	console.log(
 		`\nDecoded Transaction\n` +
-			`  Threshold: ${decodedUnsigned2.method.args.threshold}` +
+			`  Threshold: ${decodedUnsignedApproveAsMulti.method.args.threshold}` +
 			`\n` +
-			`  Approve From: ${decodedUnsigned2.address}`
+			`  Approve From: ${decodedUnsignedApproveAsMulti.address}`
 	);
 
 	// Construct the signing payload from an unsigned transaction.
-	const signingPayload2 = construct.signingPayload(txApproveAsMulti, {
-		registry,
-	});
-	console.log(`\nPayload to Sign: ${signingPayload2}`);
+	const signingPayloadApproveAsMulti = construct.signingPayload(
+		unsignedTxApproveAsMulti,
+		{
+			registry,
+		}
+	);
+	console.log(`\nPayload to Sign: ${signingPayloadApproveAsMulti}`);
 
 	// Sign a payload. This operation should be performed on an offline device.
-	const signature2 = signWith(signatoriesDict['Alice'], signingPayload2, {
-		metadataRpc,
-		registry,
-	});
-	console.log(`\nSignature: ${signature2}`);
+	const signatureApproveAsMulti = signWith(
+		signatoriesDict['Alice'],
+		signingPayloadApproveAsMulti,
+		{
+			metadataRpc,
+			registry,
+		}
+	);
+	console.log(`\nSignature: ${signatureApproveAsMulti}`);
 
 	// Serialize a signed transaction.
-	const tx2 = construct.signedTx(txApproveAsMulti, signature2, {
-		metadataRpc,
-		registry,
-	});
-	console.log(`\nTransaction to Submit: ${tx2}`);
+	const txApproveAsMulti = construct.signedTx(
+		unsignedTxApproveAsMulti,
+		signatureApproveAsMulti,
+		{
+			metadataRpc,
+			registry,
+		}
+	);
+	console.log(`\nTransaction to Submit: ${txApproveAsMulti}`);
 
 	// Derive the tx hash of a signed transaction offline.
-	const expectedTxHash2 = construct.txHash(tx2);
-	console.log(`\nExpected Tx Hash: ${expectedTxHash2}`);
+	const expectedTxHashApproveAsMulti = construct.txHash(txApproveAsMulti);
+	console.log(`\nExpected Tx Hash: ${expectedTxHashApproveAsMulti}`);
 
 	// Send the tx to the node. Again, since `txwrapper` is offline-only, this
 	// operation should be handled externally. Here, we just send a JSONRPC
 	// request directly to the node.
-	const actualTxHash2 = await rpcToLocalNode('author_submitExtrinsic', [tx2]);
-	console.log(`Actual Tx Hash: ${actualTxHash2}`);
+	const actualTxHashApproveAsMulti = await rpcToLocalNode(
+		'author_submitExtrinsic',
+		[txApproveAsMulti]
+	);
+	console.log(`Actual Tx Hash: ${actualTxHashApproveAsMulti}`);
 
 	// Decode a signed payload.
-	const txInfoMulti = decode(tx2, {
+	const txInfoApproveAsMulti = decode(txApproveAsMulti, {
 		metadataRpc,
 		registry,
 	});
 	console.log(
 		`\nDecoded Transaction ApproveAsmulti\n` +
-			`  Call Hash: ${txInfoMulti.method.args.callHash}\n` +
-			`  Threshold: ${txInfoMulti.method.args.threshold}`
+			`  Call Hash: ${txInfoApproveAsMulti.method.args.callHash}\n` +
+			`  Threshold: ${txInfoApproveAsMulti.method.args.threshold}`
 	);
 
 	// Create Signatories Sorted excluding the sender (Bob)
@@ -387,15 +401,15 @@ async function main(): Promise<void> {
 	console.log(`\nCalling AsMulti`);
 	console.log(`=================`);
 
-	const txAsMulti = substrateMethods.multisig.asMulti(
+	const unsignedTxAsMulti = substrateMethods.multisig.asMulti(
 		{
 			threshold: THRESHOLD_FOR_MULTISIG,
 			otherSignatories: otherSignatoriesSortedExBob,
 			maybeTimepoint: {
-				height: parseInt(txApproveAsMulti.blockNumber) + 1,
+				height: parseInt(unsignedTxApproveAsMulti.blockNumber) + 1,
 				index: 3,
 			},
-			call: signingPayload1,
+			call: signingPayloadTXMulti,
 			storeCall: false,
 			maxWeight: '640000000',
 		},
@@ -423,32 +437,40 @@ async function main(): Promise<void> {
 	);
 
 	// Construct the signing payload from an unsigned transaction.
-	const signingPayload3 = construct.signingPayload(txAsMulti, { registry });
-	console.log(`\nPayload to Sign: ${signingPayload3}`);
+	const signingPayloadAsMulti = construct.signingPayload(unsignedTxAsMulti, {
+		registry,
+	});
+	console.log(`\nPayload to Sign: ${signingPayloadAsMulti}`);
 
 	// Sign a payload. This operation should be performed on an offline device.
-	const signature3 = signWith(signatoriesDict['Bob'], signingPayload3, {
-		metadataRpc,
-		registry,
-	});
-	console.log(`\nSignature: ${signature3}`);
+	const signatureAsMulti = signWith(
+		signatoriesDict['Bob'],
+		signingPayloadAsMulti,
+		{
+			metadataRpc,
+			registry,
+		}
+	);
+	console.log(`\nSignature: ${signatureAsMulti}`);
 
 	// Serialize a signed transaction.
-	const tx3 = construct.signedTx(txAsMulti, signature3, {
+	const txAsMulti = construct.signedTx(unsignedTxAsMulti, signatureAsMulti, {
 		metadataRpc,
 		registry,
 	});
-	console.log(`\nTransaction to Submit: ${tx3}`);
+	console.log(`\nTransaction to Submit: ${txAsMulti}`);
 
 	// Derive the tx hash of a signed transaction offline.
-	const expectedTxHash3 = construct.txHash(tx3);
-	console.log(`\nExpected Tx Hash: ${expectedTxHash3}`);
+	const expectedTxHashAsMulti = construct.txHash(txAsMulti);
+	console.log(`\nExpected Tx Hash: ${expectedTxHashAsMulti}`);
 
 	// Send the tx to the node. Again, since `txwrapper` is offline-only, this
 	// operation should be handled externally. Here, we just send a JSONRPC
 	// request directly to the node.
-	const actualTxHash3 = await rpcToLocalNode('author_submitExtrinsic', [tx3]);
-	console.log(`Actual Tx Hash: ${actualTxHash3}`);
+	const actualTxHashAsMulti = await rpcToLocalNode('author_submitExtrinsic', [
+		txAsMulti,
+	]);
+	console.log(`Actual Tx Hash: ${actualTxHashAsMulti}`);
 }
 
 main()
