@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.6.0](https://github.com/paritytech/txwrapper-core/compare/v1.5.9...v1.6.0) (2022-04-06)
+
+**Note:** Version bump only for package @substrate/txwrapper-orml
+
+
+
+
+
 ## [1.5.9](https://github.com/paritytech/txwrapper-core/compare/v1.5.8...v1.5.9) (2022-03-30)
 
 **Note:** Version bump only for package @substrate/txwrapper-orml
