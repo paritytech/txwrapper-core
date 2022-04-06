@@ -42,9 +42,10 @@ describe('decodeUnsignedTx', () => {
 	});
 
 	it('Should decode balances::transfer for an immortal era', () => {
-		const adjustedOptions = Object.assign({}, POLKADOT_25_TEST_OPTIONS, {
+		const adjustedOptions = {
+			...POLKADOT_25_TEST_OPTIONS,
 			isImmortalEra: true,
-		});
+		};
 		const unsigned = balancesTransfer(
 			TEST_METHOD_ARGS.balances.transfer,
 			TEST_BASE_TX_INFO,
