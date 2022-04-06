@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/paritytech/txwrapper-core/compare/v1.7.0...v2.0.0) (2022-04-06)
+
+
+### Bug Fixes
+
+* **changelog:** deprecate 1.7.0, and remove 1.6.0 ([#205](https://github.com/paritytech/txwrapper-core/issues/205)) ([cec26b1](https://github.com/paritytech/txwrapper-core/commit/cec26b12e56a07d37c0e7213d07c4a411264c269))
+
+
+
+
+
 # [1.7.0](https://github.com/paritytech/txwrapper-core/compare/v1.5.9...v1.7.0) (2022-04-06)
 
 ## !Warning Deprecated: Please refer to v2.0.0 for this release
