@@ -5,13 +5,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.7.0](https://github.com/paritytech/txwrapper-core/compare/v1.5.9...v1.7.0) (2022-04-06)
 
-**Note:** Version bump only for package @substrate/txwrapper-polkadot
-
-
-
-
-
-# [1.6.0](https://github.com/paritytech/txwrapper-core/compare/v1.5.9...v1.6.0) (2022-04-06)
+## !Warning Deprecated: Please refer to v2.0.0 for this release
 
 **Note:** Version bump only for package @substrate/txwrapper-polkadot
 

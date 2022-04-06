@@ -5,17 +5,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.7.0](https://github.com/paritytech/txwrapper-core/compare/v1.5.9...v1.7.0) (2022-04-06)
 
-
-### Features
-
-* add balances::transferAll ([#200](https://github.com/paritytech/txwrapper-core/issues/200)) ([f50cd9c](https://github.com/paritytech/txwrapper-core/commit/f50cd9cacd1598b26d7aa9c404babf97cfe81ff7))
-
-
-
-
-
-# [1.6.0](https://github.com/paritytech/txwrapper-core/compare/v1.5.9...v1.6.0) (2022-04-06)
-
+## !Warning Deprecated: Please refer to v2.0.0 for this release
 
 ### Features
 
