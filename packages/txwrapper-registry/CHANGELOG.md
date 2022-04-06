@@ -5,17 +5,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.7.0](https://github.com/paritytech/txwrapper-core/compare/v1.5.9...v1.7.0) (2022-04-06)
 
-
-### Bug Fixes
-
-* **deps:** update polkadot-js api, apps-config, networks ([#203](https://github.com/paritytech/txwrapper-core/issues/203)) ([088c6ca](https://github.com/paritytech/txwrapper-core/commit/088c6caaf31aee7261c0cc71f5afb639d2b80286))
-
-
-
-
-
-# [1.6.0](https://github.com/paritytech/txwrapper-core/compare/v1.5.9...v1.6.0) (2022-04-06)
-
+## !Warning Deprecated: Please refer to v2.0.0 for this release
 
 ### Bug Fixes
 
