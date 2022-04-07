@@ -269,15 +269,18 @@ async function main(): Promise<void> {
 			`  From: ${decodedUnsignedTXMulti.address}`
 	);
 
-	// Construct the signing payload from an unsigned transaction.
-	const signingPayloadTXMulti = construct.signingPayload(unsignedTXMulti, {
-		registry,
-	});
-	console.log(`\nPayload to Sign: ${signingPayloadTXMulti}`);
+	// Encode the unsigned multisig tx
+	const unsignedTXMultiEncoded = construct.encodeUnsignedTransaction(
+		unsignedTXMulti,
+		{
+			registry,
+		}
+	);
+	console.log(`\nUnsigned Tx Multi Encoded: ${unsignedTXMultiEncoded}`);
 
-	// Derive the tx hash of an unsigned payload.
-	const expectedTxHashMulti = construct.txHash(signingPayloadTXMulti);
-	console.log(`\nExpected Tx Hash: ${expectedTxHashMulti}`);
+	// Derive the tx hash of an unsigned multisig transaction.
+	const callTxHashMulti = construct.txHash(unsignedTXMultiEncoded);
+	console.log(`\nCall Hash of unsignedTXMulti: ${callTxHashMulti}`);
 
 	// The next steps include the calls `approveAsMulti` and `asMulti`
 	// in order to send funds from the MultiSig account to another address,
@@ -291,7 +294,7 @@ async function main(): Promise<void> {
 			threshold: THRESHOLD_FOR_MULTISIG,
 			otherSignatories: otherSignatoriesSortedExAlice,
 			maybeTimepoint: null,
-			callHash: expectedTxHashMulti,
+			callHash: callTxHashMulti,
 			maxWeight: '640000000',
 		},
 		{
@@ -362,7 +365,9 @@ async function main(): Promise<void> {
 
 	// Derive the tx hash of a signed transaction offline.
 	const expectedTxHashApproveAsMulti = construct.txHash(txApproveAsMulti);
-	console.log(`\nExpected Tx Hash: ${expectedTxHashApproveAsMulti}`);
+	console.log(
+		`\nExpected Tx Hash of approveAsMulti: ${expectedTxHashApproveAsMulti}`
+	);
 
 	// Send the tx to the node. Again, since `txwrapper` is offline-only, this
 	// operation should be handled externally. Here, we just send a JSONRPC
@@ -371,7 +376,9 @@ async function main(): Promise<void> {
 		'author_submitExtrinsic',
 		[txApproveAsMulti]
 	);
-	console.log(`Actual Tx Hash: ${actualTxHashApproveAsMulti}`);
+	console.log(
+		`Actual Tx Hash of approveAsMulti: ${actualTxHashApproveAsMulti}`
+	);
 
 	// Decode a signed payload.
 	const txInfoApproveAsMulti = decode(txApproveAsMulti, {
@@ -379,9 +386,9 @@ async function main(): Promise<void> {
 		registry,
 	});
 	console.log(
-		`\nDecoded Transaction ApproveAsmulti\n` +
-			`  Call Hash: ${txInfoApproveAsMulti.method.args.callHash}\n` +
-			`  Threshold: ${txInfoApproveAsMulti.method.args.threshold}`
+		`\nDecoded Transaction approveAsMulti\n` +
+			`  Call Hash of unsignedTXMulti: ${txInfoApproveAsMulti.method.args.callHash}\n` +
+			`  Threshold of unsignedTXMulti: ${txInfoApproveAsMulti.method.args.threshold}`
 	);
 
 	// Create Signatories Sorted excluding the sender (Bob)
@@ -393,8 +400,8 @@ async function main(): Promise<void> {
 	// Added a delay as a hack so that the asMulti call
 	// is included in next blocks
 	console.log(
-		`\nWaiting 15 seconds before calling the asMulti\n` +
-			` so it is included in next blocks\n`
+		`\nWaiting 15 seconds before calling the asMulti ` +
+			`so it is included in next blocks\n`
 	);
 	await delay(15000);
 
@@ -409,7 +416,7 @@ async function main(): Promise<void> {
 				height: parseInt(unsignedTxApproveAsMulti.blockNumber) + 1,
 				index: 3,
 			},
-			call: signingPayloadTXMulti,
+			call: unsignedTXMultiEncoded,
 			storeCall: false,
 			maxWeight: '640000000',
 		},
@@ -462,7 +469,7 @@ async function main(): Promise<void> {
 
 	// Derive the tx hash of a signed transaction offline.
 	const expectedTxHashAsMulti = construct.txHash(txAsMulti);
-	console.log(`\nExpected Tx Hash: ${expectedTxHashAsMulti}`);
+	console.log(`\nExpected Tx Hash of asMulti: ${expectedTxHashAsMulti}`);
 
 	// Send the tx to the node. Again, since `txwrapper` is offline-only, this
 	// operation should be handled externally. Here, we just send a JSONRPC
@@ -470,7 +477,18 @@ async function main(): Promise<void> {
 	const actualTxHashAsMulti = await rpcToLocalNode('author_submitExtrinsic', [
 		txAsMulti,
 	]);
-	console.log(`Actual Tx Hash: ${actualTxHashAsMulti}`);
+	console.log(`Actual Tx Hash of asMulti: ${actualTxHashAsMulti}`);
+
+	// Decode a signed payload.
+	const txInfoAsMulti = decode(unsignedTxAsMulti, {
+		metadataRpc,
+		registry,
+	});
+	console.log(
+		`\nDecoded Transaction asMulti\n` +
+			`  Call of unsignedTXMulti: ${txInfoAsMulti.method.args.call}\n` +
+			`  Threshold of unsignedTXMulti: ${txInfoAsMulti.method.args.threshold}\n`
+	);
 }
 
 main()
