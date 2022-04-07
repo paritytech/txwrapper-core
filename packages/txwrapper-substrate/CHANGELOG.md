@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.1](https://github.com/paritytech/txwrapper-core/compare/v2.0.0...v2.0.1) (2022-04-07)
+
+
+### Bug Fixes
+
+* export for transferAll ([#207](https://github.com/paritytech/txwrapper-core/issues/207)) ([fb8ccf1](https://github.com/paritytech/txwrapper-core/commit/fb8ccf1680924234d627e078ee9cd0768df8f20e))
+
+
+
+
+
 # [2.0.0](https://github.com/paritytech/txwrapper-core/compare/v1.7.0...v2.0.0) (2022-04-06)
 
 

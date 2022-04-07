@@ -2511,7 +2511,7 @@ __metadata:
   resolution: "@substrate/txwrapper-examples@workspace:packages/txwrapper-examples"
   dependencies:
     "@polkadot/api": ^7.15.1
-    "@substrate/txwrapper-polkadot": ^2.0.0
+    "@substrate/txwrapper-polkadot": ^2.0.1
     "@substrate/txwrapper-registry": ^2.0.0
   languageName: unknown
   linkType: soft
@@ -2525,12 +2525,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@substrate/txwrapper-polkadot@^2.0.0, @substrate/txwrapper-polkadot@workspace:packages/txwrapper-polkadot":
+"@substrate/txwrapper-polkadot@^2.0.1, @substrate/txwrapper-polkadot@workspace:packages/txwrapper-polkadot":
   version: 0.0.0-use.local
   resolution: "@substrate/txwrapper-polkadot@workspace:packages/txwrapper-polkadot"
   dependencies:
     "@substrate/txwrapper-core": ^2.0.0
-    "@substrate/txwrapper-substrate": ^2.0.0
+    "@substrate/txwrapper-substrate": ^2.0.1
   languageName: unknown
   linkType: soft
 
@@ -2544,7 +2544,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@substrate/txwrapper-substrate@^2.0.0, @substrate/txwrapper-substrate@workspace:packages/txwrapper-substrate":
+"@substrate/txwrapper-substrate@^2.0.1, @substrate/txwrapper-substrate@workspace:packages/txwrapper-substrate":
   version: 0.0.0-use.local
   resolution: "@substrate/txwrapper-substrate@workspace:packages/txwrapper-substrate"
   dependencies:
@@ -2558,7 +2558,7 @@ __metadata:
   dependencies:
     "@substrate/txwrapper-core": ^2.0.0
     "@substrate/txwrapper-registry": ^2.0.0
-    "@substrate/txwrapper-substrate": ^2.0.0
+    "@substrate/txwrapper-substrate": ^2.0.1
     ts-node: 9.1.1
     typescript: 4.1.5
   languageName: unknown
