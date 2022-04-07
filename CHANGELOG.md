@@ -3,6 +3,65 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.1](https://github.com/paritytech/txwrapper-core/compare/v2.0.0...v2.0.1) (2022-04-07)
+
+
+### Bug Fixes
+
+* export for transferAll ([#207](https://github.com/paritytech/txwrapper-core/issues/207)) ([fb8ccf1](https://github.com/paritytech/txwrapper-core/commit/fb8ccf1680924234d627e078ee9cd0768df8f20e))
+* **readme-changelog:** update correct 2.0.0 release notes, and instructions in the readme ([#206](https://github.com/paritytech/txwrapper-core/issues/206)) ([d3d0df0](https://github.com/paritytech/txwrapper-core/commit/d3d0df0dfa270d7fdf9feed9c9c11ec4022184f8))
+
+
+
+
+
+# [2.0.0](https://github.com/paritytech/txwrapper-core/compare/v1.7.0...v2.0.0) (2022-04-06)
+
+
+### BREAKING CHANGES
+
+* feat!: add isImmortalEra option for decoding and encoding era periods ([#201](https://github.com/paritytech/txwrapper-core/pull/201)) ([ab5873f](https://github.com/paritytech/txwrapper-core/commit/ab5873f54ca93f847f1ead95939b018376e4c904))
+    - When creating unsigned transactions, execution will fail when the `eraPeriod` passed in is less than 4 or greater than 65536. If you dont pass anything in it will default to 64. For those who would like to create immortal transactions, use the option in `OptionsWithMeta` called `isImmortalTx`.
+
+### Bug Fixes
+
+* **changelog:** deprecate 1.7.0, and remove 1.6.0 ([#205](https://github.com/paritytech/txwrapper-core/issues/205)) ([cec26b1](https://github.com/paritytech/txwrapper-core/commit/cec26b12e56a07d37c0e7213d07c4a411264c269))
+* **deps:** update polkadot-js api, apps-config, networks ([#203](https://github.com/paritytech/txwrapper-core/issues/203)) ([088c6ca](https://github.com/paritytech/txwrapper-core/commit/088c6caaf31aee7261c0cc71f5afb639d2b80286))
+    "@polkadot/api": "7.15.1",
+    "@polkadot/keyring": "8.7.1",
+    "@polkadot/networks": "8.7.1",
+    "@polkadot/types": "7.15.1",
+    "@polkadot/types-known": "7.15.1",
+    "@polkadot/util": "8.7.1",
+    "@polkadot/util-crypto": "8.7.1",
+    "@polkadot/wasm-crypto": "5.1.1",
+    "@polkadot/apps-config": "0.111.1"
+
+### Features
+
+* add balances::transferAll ([#200](https://github.com/paritytech/txwrapper-core/issues/200)) ([f50cd9c](https://github.com/paritytech/txwrapper-core/commit/f50cd9cacd1598b26d7aa9c404babf97cfe81ff7))
+
+
+
+
+
+# [1.7.0](https://github.com/paritytech/txwrapper-core/compare/v1.5.9...v1.7.0) (2022-04-06)
+
+## !Warning Deprecated: Please refer to v2.0.0 for this release
+
+### Bug Fixes
+
+* **deps:** update polkadot-js api, apps-config, networks ([#203](https://github.com/paritytech/txwrapper-core/issues/203)) ([088c6ca](https://github.com/paritytech/txwrapper-core/commit/088c6caaf31aee7261c0cc71f5afb639d2b80286))
+
+
+### Features
+
+* add balances::transferAll ([#200](https://github.com/paritytech/txwrapper-core/issues/200)) ([f50cd9c](https://github.com/paritytech/txwrapper-core/commit/f50cd9cacd1598b26d7aa9c404babf97cfe81ff7))
+
+
+
+
+
 ## [1.5.9](https://github.com/paritytech/txwrapper-core/compare/v1.5.8...v1.5.9) (2022-03-30)
 
 
