@@ -37,7 +37,7 @@ Unlock any vested funds of the sender account.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/vesting/vest.ts:15](https://github.com/paritytech/txwrapper-core/blob/a0283d9/packages/txwrapper-substrate/src/methods/vesting/vest.ts#L15)
+[txwrapper-substrate/src/methods/vesting/vest.ts:15](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-substrate/src/methods/vesting/vest.ts#L15)
 
 ___
 
@@ -61,4 +61,4 @@ Unlock any vested funds of a `target` account.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/vesting/vestOther.ts:24](https://github.com/paritytech/txwrapper-core/blob/a0283d9/packages/txwrapper-substrate/src/methods/vesting/vestOther.ts#L24)
+[txwrapper-substrate/src/methods/vesting/vestOther.ts:24](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-substrate/src/methods/vesting/vestOther.ts#L24)

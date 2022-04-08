@@ -29,7 +29,7 @@ To take advantage of txwrapper methods, this could be UnsignedTransaction.method
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/proxy/proxy.ts:23](https://github.com/paritytech/txwrapper-core/blob/a0283d9/packages/txwrapper-substrate/src/methods/proxy/proxy.ts#L23)
+[txwrapper-substrate/src/methods/proxy/proxy.ts:23](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-substrate/src/methods/proxy/proxy.ts#L23)
 
 ___
 
@@ -41,7 +41,7 @@ Specify the exact proxy type to be used and checked for this call.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/proxy/proxy.ts:18](https://github.com/paritytech/txwrapper-core/blob/a0283d9/packages/txwrapper-substrate/src/methods/proxy/proxy.ts#L18)
+[txwrapper-substrate/src/methods/proxy/proxy.ts:18](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-substrate/src/methods/proxy/proxy.ts#L18)
 
 ___
 
@@ -54,4 +54,4 @@ through, `add_proxy`.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/proxy/proxy.ts:14](https://github.com/paritytech/txwrapper-core/blob/a0283d9/packages/txwrapper-substrate/src/methods/proxy/proxy.ts#L14)
+[txwrapper-substrate/src/methods/proxy/proxy.ts:14](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-substrate/src/methods/proxy/proxy.ts#L14)

@@ -10252,6 +10252,7 @@ fsevents@^2.3.2:
     tsconfig-paths: ^3.9.0
     typedoc: ^0.22.10
     typedoc-plugin-markdown: ^3.11.8
+    typedoc-plugin-missing-exports: ^0.22.6
     typescript: ^4.4.3
   languageName: unknown
   linkType: soft
@@ -10361,6 +10362,15 @@ fsevents@^2.3.2:
   peerDependencies:
     typedoc: ">=0.22.0"
   checksum: 8cd28b8d4e27890df5696c51ad9ca7f2987938aecbaf6f5f580784cf2bfdbbf44c1ff6509f6adc8f0854f325a5ff63289e7c6af988216ca1529cd8f0004d4d02
+  languageName: node
+  linkType: hard
+
+"typedoc-plugin-missing-exports@npm:^0.22.6":
+  version: 0.22.6
+  resolution: "typedoc-plugin-missing-exports@npm:0.22.6"
+  peerDependencies:
+    typedoc: 0.22.x
+  checksum: 012f44beaac05731b4d37c26bfba2d972ac48344eab6be793a95982712a207416e7dc3451279be4e4cebc8b6b99a16764d2d4aaa06e041fac60ce21cc22cf796
   languageName: node
   linkType: hard
 
