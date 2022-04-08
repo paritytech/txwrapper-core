@@ -27,7 +27,7 @@ The hash of the call that the proxy wants to execute.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/proxy/rejectAnnouncement.ts:17](https://github.com/paritytech/txwrapper-core/blob/f50cd9c/packages/txwrapper-substrate/src/methods/proxy/rejectAnnouncement.ts#L17)
+[txwrapper-substrate/src/methods/proxy/rejectAnnouncement.ts:17](https://github.com/paritytech/txwrapper-core/blob/d3e4018/packages/txwrapper-substrate/src/methods/proxy/rejectAnnouncement.ts#L17)
 
 ___
 
@@ -39,4 +39,4 @@ The account that previously announced the call.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/proxy/rejectAnnouncement.ts:13](https://github.com/paritytech/txwrapper-core/blob/f50cd9c/packages/txwrapper-substrate/src/methods/proxy/rejectAnnouncement.ts#L13)
+[txwrapper-substrate/src/methods/proxy/rejectAnnouncement.ts:13](https://github.com/paritytech/txwrapper-core/blob/d3e4018/packages/txwrapper-substrate/src/methods/proxy/rejectAnnouncement.ts#L13)

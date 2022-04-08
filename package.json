@@ -17,7 +17,7 @@
     "test": "substrate-exec-jest",
     "test:watch": "substrate-exec-jest --watch",
     "test:cov": "substrate-exec-jest --coverage",
-    "docs": "typedoc"
+    "docs": "typedoc --gitRemote origin"
   },
   "resolutions": {
     "@polkadot/api": "7.15.1",

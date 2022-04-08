@@ -140,7 +140,7 @@ This libraries release process uses Lerna, and the following below is required t
     yarn run test
     ```
 
-4. Deploy the new release.
+4. Deploy the new release. It is important to note there will be a step that asks you to confirm whether or not the version bump is correct. Please confirm with the maintainers the suggested versions are correct.
 
     ```bash
     yarn run deploy

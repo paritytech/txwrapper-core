@@ -27,7 +27,7 @@ The account delegated permission to transfer asset.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/assets/cancelApproval.ts:17](https://github.com/paritytech/txwrapper-core/blob/f50cd9c/packages/txwrapper-substrate/src/methods/assets/cancelApproval.ts#L17)
+[txwrapper-substrate/src/methods/assets/cancelApproval.ts:17](https://github.com/paritytech/txwrapper-core/blob/d3e4018/packages/txwrapper-substrate/src/methods/assets/cancelApproval.ts#L17)
 
 ___
 
@@ -39,4 +39,4 @@ The identifier of the asset.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/assets/cancelApproval.ts:13](https://github.com/paritytech/txwrapper-core/blob/f50cd9c/packages/txwrapper-substrate/src/methods/assets/cancelApproval.ts#L13)
+[txwrapper-substrate/src/methods/assets/cancelApproval.ts:13](https://github.com/paritytech/txwrapper-core/blob/d3e4018/packages/txwrapper-substrate/src/methods/assets/cancelApproval.ts#L13)

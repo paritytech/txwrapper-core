@@ -26,4 +26,4 @@ The SS-58 encoded controller address.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/staking/setController.ts:13](https://github.com/paritytech/txwrapper-core/blob/f50cd9c/packages/txwrapper-substrate/src/methods/staking/setController.ts#L13)
+[txwrapper-substrate/src/methods/staking/setController.ts:13](https://github.com/paritytech/txwrapper-core/blob/d3e4018/packages/txwrapper-substrate/src/methods/staking/setController.ts#L13)

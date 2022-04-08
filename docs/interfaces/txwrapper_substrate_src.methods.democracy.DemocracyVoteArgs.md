@@ -25,7 +25,7 @@
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/democracy/vote.ts:15](https://github.com/paritytech/txwrapper-core/blob/f50cd9c/packages/txwrapper-substrate/src/methods/democracy/vote.ts#L15)
+[txwrapper-substrate/src/methods/democracy/vote.ts:15](https://github.com/paritytech/txwrapper-core/blob/d3e4018/packages/txwrapper-substrate/src/methods/democracy/vote.ts#L15)
 
 ___
 
@@ -37,4 +37,4 @@ Vote.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/democracy/vote.ts:19](https://github.com/paritytech/txwrapper-core/blob/f50cd9c/packages/txwrapper-substrate/src/methods/democracy/vote.ts#L19)
+[txwrapper-substrate/src/methods/democracy/vote.ts:19](https://github.com/paritytech/txwrapper-core/blob/d3e4018/packages/txwrapper-substrate/src/methods/democracy/vote.ts#L19)

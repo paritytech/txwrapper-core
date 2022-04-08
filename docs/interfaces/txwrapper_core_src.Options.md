@@ -17,9 +17,26 @@ functions that only require registry.
 
 ### Properties
 
+- [isImmortalEra](txwrapper_core_src.Options.md#isimmortalera)
 - [registry](txwrapper_core_src.Options.md#registry)
 
 ## Properties
+
+### isImmortalEra
+
+• `Optional` **isImmortalEra**: `boolean`
+
+Option to choose whether the constructed transaction will be immortal. If
+immortal the default value will be '0x00', and when decoded it will return 0.
+This option is used exclusively for unsigned transactions.
+
+Note: When creating an Immortal tx, the blockHash should be set as the genesis hash.
+
+#### Defined in
+
+[txwrapper-core/src/types/method.ts:132](https://github.com/paritytech/txwrapper-core/blob/d3e4018/packages/txwrapper-core/src/types/method.ts#L132)
+
+___
 
 ### registry
 
@@ -29,4 +46,4 @@ The type registry of the runtime.
 
 #### Defined in
 
-[txwrapper-core/src/types/method.ts:124](https://github.com/paritytech/txwrapper-core/blob/f50cd9c/packages/txwrapper-core/src/types/method.ts#L124)
+[txwrapper-core/src/types/method.ts:124](https://github.com/paritytech/txwrapper-core/blob/d3e4018/packages/txwrapper-core/src/types/method.ts#L124)

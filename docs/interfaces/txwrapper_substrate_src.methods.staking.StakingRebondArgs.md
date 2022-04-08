@@ -26,4 +26,4 @@ The number of tokens to rebond.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/staking/rebond.ts:13](https://github.com/paritytech/txwrapper-core/blob/f50cd9c/packages/txwrapper-substrate/src/methods/staking/rebond.ts#L13)
+[txwrapper-substrate/src/methods/staking/rebond.ts:13](https://github.com/paritytech/txwrapper-core/blob/d3e4018/packages/txwrapper-substrate/src/methods/staking/rebond.ts#L13)

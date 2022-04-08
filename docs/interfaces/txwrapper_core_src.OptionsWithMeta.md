@@ -18,6 +18,7 @@ options to functions that require registry and metadata.
 ### Properties
 
 - [asCallsOnlyArg](txwrapper_core_src.OptionsWithMeta.md#ascallsonlyarg)
+- [isImmortalEra](txwrapper_core_src.OptionsWithMeta.md#isimmortalera)
 - [metadataRpc](txwrapper_core_src.OptionsWithMeta.md#metadatarpc)
 - [registry](txwrapper_core_src.OptionsWithMeta.md#registry)
 - [signedExtensions](txwrapper_core_src.OptionsWithMeta.md#signedextensions)
@@ -33,7 +34,27 @@ Used to reduce the metadata size by only having the calls
 
 #### Defined in
 
-[txwrapper-core/src/types/method.ts:21](https://github.com/paritytech/txwrapper-core/blob/f50cd9c/packages/txwrapper-core/src/types/method.ts#L21)
+[txwrapper-core/src/types/method.ts:21](https://github.com/paritytech/txwrapper-core/blob/d3e4018/packages/txwrapper-core/src/types/method.ts#L21)
+
+___
+
+### isImmortalEra
+
+• `Optional` **isImmortalEra**: `boolean`
+
+Option to choose whether the constructed transaction will be immortal. If
+immortal the default value will be '0x00', and when decoded it will return 0.
+This option is used exclusively for unsigned transactions.
+
+Note: When creating an Immortal tx, the blockHash should be set as the genesis hash.
+
+#### Inherited from
+
+[Options](txwrapper_core_src.Options.md).[isImmortalEra](txwrapper_core_src.Options.md#isimmortalera)
+
+#### Defined in
+
+[txwrapper-core/src/types/method.ts:132](https://github.com/paritytech/txwrapper-core/blob/d3e4018/packages/txwrapper-core/src/types/method.ts#L132)
 
 ___
 
@@ -45,7 +66,7 @@ The metadata of the runtime.
 
 #### Defined in
 
-[txwrapper-core/src/types/method.ts:17](https://github.com/paritytech/txwrapper-core/blob/f50cd9c/packages/txwrapper-core/src/types/method.ts#L17)
+[txwrapper-core/src/types/method.ts:17](https://github.com/paritytech/txwrapper-core/blob/d3e4018/packages/txwrapper-core/src/types/method.ts#L17)
 
 ___
 
@@ -61,7 +82,7 @@ The type registry of the runtime.
 
 #### Defined in
 
-[txwrapper-core/src/types/method.ts:124](https://github.com/paritytech/txwrapper-core/blob/f50cd9c/packages/txwrapper-core/src/types/method.ts#L124)
+[txwrapper-core/src/types/method.ts:124](https://github.com/paritytech/txwrapper-core/blob/d3e4018/packages/txwrapper-core/src/types/method.ts#L124)
 
 ___
 
@@ -73,7 +94,7 @@ Array of signedExtensions
 
 #### Defined in
 
-[txwrapper-core/src/types/method.ts:25](https://github.com/paritytech/txwrapper-core/blob/f50cd9c/packages/txwrapper-core/src/types/method.ts#L25)
+[txwrapper-core/src/types/method.ts:25](https://github.com/paritytech/txwrapper-core/blob/d3e4018/packages/txwrapper-core/src/types/method.ts#L25)
 
 ___
 
@@ -85,4 +106,4 @@ User extensions used to inject into the type registry
 
 #### Defined in
 
-[txwrapper-core/src/types/method.ts:29](https://github.com/paritytech/txwrapper-core/blob/f50cd9c/packages/txwrapper-core/src/types/method.ts#L29)
+[txwrapper-core/src/types/method.ts:29](https://github.com/paritytech/txwrapper-core/blob/d3e4018/packages/txwrapper-core/src/types/method.ts#L29)

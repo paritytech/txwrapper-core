@@ -28,7 +28,7 @@ The SS-58 encoded address of the Controller account.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/staking/bond.ts:14](https://github.com/paritytech/txwrapper-core/blob/f50cd9c/packages/txwrapper-substrate/src/methods/staking/bond.ts#L14)
+[txwrapper-substrate/src/methods/staking/bond.ts:14](https://github.com/paritytech/txwrapper-core/blob/d3e4018/packages/txwrapper-substrate/src/methods/staking/bond.ts#L14)
 
 ___
 
@@ -44,7 +44,7 @@ The rewards destination. Can be "Stash", "Staked", "Controller" or "{ Account: a
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/staking/setPayee.ts:13](https://github.com/paritytech/txwrapper-core/blob/f50cd9c/packages/txwrapper-substrate/src/methods/staking/setPayee.ts#L13)
+[txwrapper-substrate/src/methods/staking/setPayee.ts:13](https://github.com/paritytech/txwrapper-core/blob/d3e4018/packages/txwrapper-substrate/src/methods/staking/setPayee.ts#L13)
 
 ___
 
@@ -56,4 +56,4 @@ The number of tokens to bond.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/staking/bond.ts:18](https://github.com/paritytech/txwrapper-core/blob/f50cd9c/packages/txwrapper-substrate/src/methods/staking/bond.ts#L18)
+[txwrapper-substrate/src/methods/staking/bond.ts:18](https://github.com/paritytech/txwrapper-core/blob/d3e4018/packages/txwrapper-substrate/src/methods/staking/bond.ts#L18)
