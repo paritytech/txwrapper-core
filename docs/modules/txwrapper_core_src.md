@@ -4,6 +4,10 @@
 
 ## Table of contents
 
+### Namespaces
+
+- [&lt;internal\&gt;](txwrapper_core_src._internal_.md)
+
 ### Interfaces
 
 - [BaseTxInfo](../interfaces/txwrapper_core_src.BaseTxInfo.md)
@@ -48,7 +52,7 @@ Base Argument object for methods.
 
 #### Defined in
 
-[txwrapper-core/src/types/method.ts:35](https://github.com/paritytech/txwrapper-core/blob/d3e4018/packages/txwrapper-core/src/types/method.ts#L35)
+[txwrapper-core/src/types/method.ts:35](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-core/src/types/method.ts#L35)
 
 ___
 
@@ -58,7 +62,7 @@ ___
 
 #### Defined in
 
-[txwrapper-core/src/types/decode.ts:7](https://github.com/paritytech/txwrapper-core/blob/d3e4018/packages/txwrapper-core/src/types/decode.ts#L7)
+[txwrapper-core/src/types/decode.ts:7](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-core/src/types/decode.ts#L7)
 
 ___
 
@@ -68,7 +72,7 @@ ___
 
 #### Defined in
 
-[txwrapper-core/src/types/decode.ts:5](https://github.com/paritytech/txwrapper-core/blob/d3e4018/packages/txwrapper-core/src/types/decode.ts#L5)
+[txwrapper-core/src/types/decode.ts:5](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-core/src/types/decode.ts#L5)
 
 ___
 
@@ -78,7 +82,7 @@ ___
 
 #### Defined in
 
-[txwrapper-core/src/types/decode.ts:3](https://github.com/paritytech/txwrapper-core/blob/d3e4018/packages/txwrapper-core/src/types/decode.ts#L3)
+[txwrapper-core/src/types/decode.ts:3](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-core/src/types/decode.ts#L3)
 
 ___
 
@@ -90,7 +94,7 @@ A keyring pair
 
 #### Defined in
 
-[txwrapper-core/src/core/util/importPrivateKey.ts:8](https://github.com/paritytech/txwrapper-core/blob/d3e4018/packages/txwrapper-core/src/core/util/importPrivateKey.ts#L8)
+[txwrapper-core/src/core/util/importPrivateKey.ts:8](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-core/src/core/util/importPrivateKey.ts#L8)
 
 ## Variables
 
@@ -112,7 +116,7 @@ Functions for each step of the transaction construction process.
 
 #### Defined in
 
-[txwrapper-core/src/core/index.ts:18](https://github.com/paritytech/txwrapper-core/blob/d3e4018/packages/txwrapper-core/src/core/index.ts#L18)
+[txwrapper-core/src/core/index.ts:18](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-core/src/core/index.ts#L18)
 
 ## Functions
 
@@ -136,7 +140,7 @@ All integers are serialized to a base-10 string.
 
 #### Defined in
 
-[txwrapper-core/src/core/decode/decode.ts:19](https://github.com/paritytech/txwrapper-core/blob/d3e4018/packages/txwrapper-core/src/core/decode/decode.ts#L19)
+[txwrapper-core/src/core/decode/decode.ts:19](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-core/src/core/decode/decode.ts#L19)
 
 ▸ **decode**(`signedTx`, `options`): [`DecodedSignedTx`](txwrapper_core_src.md#decodedsignedtx)
 
@@ -156,7 +160,7 @@ All integers are serialized to a base-10 string.
 
 #### Defined in
 
-[txwrapper-core/src/core/decode/decode.ts:31](https://github.com/paritytech/txwrapper-core/blob/d3e4018/packages/txwrapper-core/src/core/decode/decode.ts#L31)
+[txwrapper-core/src/core/decode/decode.ts:31](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-core/src/core/decode/decode.ts#L31)
 
 ▸ **decode**(`signingPayload`, `options`): [`DecodedSigningPayload`](txwrapper_core_src.md#decodedsigningpayload)
 
@@ -176,7 +180,7 @@ All integers are serialized to a base-10 string.
 
 #### Defined in
 
-[txwrapper-core/src/core/decode/decode.ts:43](https://github.com/paritytech/txwrapper-core/blob/d3e4018/packages/txwrapper-core/src/core/decode/decode.ts#L43)
+[txwrapper-core/src/core/decode/decode.ts:43](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-core/src/core/decode/decode.ts#L43)
 
 ___
 
@@ -199,7 +203,7 @@ Helper function to construct an offline method.
 
 #### Defined in
 
-[txwrapper-core/src/core/method/defineMethod.ts:100](https://github.com/paritytech/txwrapper-core/blob/d3e4018/packages/txwrapper-core/src/core/method/defineMethod.ts#L100)
+[txwrapper-core/src/core/method/defineMethod.ts:100](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-core/src/core/method/defineMethod.ts#L100)
 
 ___
 
@@ -222,7 +226,7 @@ Derive an address from a cryptographic public key offline.
 
 #### Defined in
 
-[txwrapper-core/src/core/util/deriveAddress.ts:9](https://github.com/paritytech/txwrapper-core/blob/d3e4018/packages/txwrapper-core/src/core/util/deriveAddress.ts#L9)
+[txwrapper-core/src/core/util/deriveAddress.ts:9](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-core/src/core/util/deriveAddress.ts#L9)
 
 ___
 
@@ -236,7 +240,7 @@ Create a type registry given chainProperties, specTypes, and metadataRpc.
 
 | Name | Type |
 | :------ | :------ |
-| `__namedParameters` | `GetRegistryBaseArgs` |
+| `__namedParameters` | [`GetRegistryBaseArgs`](../interfaces/txwrapper_core_src._internal_.GetRegistryBaseArgs.md) |
 
 #### Returns
 
@@ -244,7 +248,7 @@ Create a type registry given chainProperties, specTypes, and metadataRpc.
 
 #### Defined in
 
-[txwrapper-core/src/core/metadata/getRegistryBase.ts:38](https://github.com/paritytech/txwrapper-core/blob/d3e4018/packages/txwrapper-core/src/core/metadata/getRegistryBase.ts#L38)
+[txwrapper-core/src/core/metadata/getRegistryBase.ts:38](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-core/src/core/metadata/getRegistryBase.ts#L38)
 
 ___
 
@@ -267,7 +271,7 @@ Import a private key and create a KeyringPair.
 
 #### Defined in
 
-[txwrapper-core/src/core/util/importPrivateKey.ts:16](https://github.com/paritytech/txwrapper-core/blob/d3e4018/packages/txwrapper-core/src/core/util/importPrivateKey.ts#L16)
+[txwrapper-core/src/core/util/importPrivateKey.ts:16](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-core/src/core/util/importPrivateKey.ts#L16)
 
 ___
 
@@ -291,4 +295,4 @@ call. All integers are serialized to base 10 strings in order to be safe.
 
 #### Defined in
 
-[txwrapper-core/src/core/method/toTxMethod.ts:21](https://github.com/paritytech/txwrapper-core/blob/d3e4018/packages/txwrapper-core/src/core/method/toTxMethod.ts#L21)
+[txwrapper-core/src/core/method/toTxMethod.ts:21](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-core/src/core/method/toTxMethod.ts#L21)

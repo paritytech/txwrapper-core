@@ -47,7 +47,7 @@ making this call.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/assets/approveTransfer.ts:35](https://github.com/paritytech/txwrapper-core/blob/d3e4018/packages/txwrapper-substrate/src/methods/assets/approveTransfer.ts#L35)
+[txwrapper-substrate/src/methods/assets/approveTransfer.ts:35](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-substrate/src/methods/assets/approveTransfer.ts#L35)
 
 ___
 
@@ -71,7 +71,7 @@ Cancel all of some asset approved for delegated transfer by a third-party accoun
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/assets/cancelApproval.ts:27](https://github.com/paritytech/txwrapper-core/blob/d3e4018/packages/txwrapper-substrate/src/methods/assets/cancelApproval.ts#L27)
+[txwrapper-substrate/src/methods/assets/cancelApproval.ts:27](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-substrate/src/methods/assets/cancelApproval.ts#L27)
 
 ___
 
@@ -95,7 +95,7 @@ Move some assets from the sender account to another.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/assets/transfer.ts:34](https://github.com/paritytech/txwrapper-core/blob/d3e4018/packages/txwrapper-substrate/src/methods/assets/transfer.ts#L34)
+[txwrapper-substrate/src/methods/assets/transfer.ts:34](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-substrate/src/methods/assets/transfer.ts#L34)
 
 ___
 
@@ -120,7 +120,7 @@ account.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/assets/transferApproved.ts:37](https://github.com/paritytech/txwrapper-core/blob/d3e4018/packages/txwrapper-substrate/src/methods/assets/transferApproved.ts#L37)
+[txwrapper-substrate/src/methods/assets/transferApproved.ts:37](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-substrate/src/methods/assets/transferApproved.ts#L37)
 
 ___
 
@@ -144,4 +144,4 @@ Move some assets from the sender account to another, keeping the sender account 
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/assets/transferKeepAlive.ts:34](https://github.com/paritytech/txwrapper-core/blob/d3e4018/packages/txwrapper-substrate/src/methods/assets/transferKeepAlive.ts#L34)
+[txwrapper-substrate/src/methods/assets/transferKeepAlive.ts:34](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-substrate/src/methods/assets/transferKeepAlive.ts#L34)

@@ -36,4 +36,4 @@ Sets the session key(s) of the function caller to `key`.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/session/setKeys.ts:27](https://github.com/paritytech/txwrapper-core/blob/d3e4018/packages/txwrapper-substrate/src/methods/session/setKeys.ts#L27)
+[txwrapper-substrate/src/methods/session/setKeys.ts:27](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-substrate/src/methods/session/setKeys.ts#L27)

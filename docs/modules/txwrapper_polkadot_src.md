@@ -29,6 +29,10 @@
 - [importPrivateKey](txwrapper_polkadot_src.md#importprivatekey)
 - [toTxMethod](txwrapper_polkadot_src.md#totxmethod)
 
+### Namespaces
+
+- [&lt;internal\&gt;](txwrapper_polkadot_src._internal_.md)
+
 ### Interfaces
 
 - [GetRegistryOpts](../interfaces/txwrapper_polkadot_src.GetRegistryOpts.md)
@@ -185,7 +189,7 @@ Re-exports [toTxMethod](txwrapper_core_src.md#totxmethod)
 | :------ | :------ |
 | `assets` | [`assets`](txwrapper_substrate_src.methods.assets.md) |
 | `balances` | [`balances`](txwrapper_substrate_src.methods.balances.md) |
-| `crowdloan` | `__module` |
+| `crowdloan` | [`"/Users/tarik/Desktop/parity/txwrapper-core/packages/txwrapper-polkadot/src/methods/crowdloan/index"`](txwrapper_polkadot_src._internal_.__Users_tarik_Desktop_parity_txwrapper_core_packages_txwrapper_polkadot_src_methods_crowdloan_index_.md) |
 | `democracy` | [`democracy`](txwrapper_substrate_src.methods.democracy.md) |
 | `multisig` | [`multisig`](txwrapper_substrate_src.methods.multisig.md) |
 | `proxy` | [`proxy`](txwrapper_substrate_src.methods.proxy.md) |
@@ -197,7 +201,7 @@ Re-exports [toTxMethod](txwrapper_core_src.md#totxmethod)
 
 #### Defined in
 
-[txwrapper-polkadot/src/index.ts:16](https://github.com/paritytech/txwrapper-core/blob/d3e4018/packages/txwrapper-polkadot/src/index.ts#L16)
+[txwrapper-polkadot/src/index.ts:16](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-polkadot/src/index.ts#L16)
 
 ## Functions
 
@@ -219,4 +223,4 @@ Get a type registry for networks that txwrapper-polkadot supports.
 
 #### Defined in
 
-[txwrapper-polkadot/src/index.ts:81](https://github.com/paritytech/txwrapper-core/blob/d3e4018/packages/txwrapper-polkadot/src/index.ts#L81)
+[txwrapper-polkadot/src/index.ts:81](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-polkadot/src/index.ts#L81)

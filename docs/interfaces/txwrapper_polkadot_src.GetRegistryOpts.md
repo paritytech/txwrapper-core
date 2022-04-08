@@ -39,7 +39,7 @@ Used to reduce the metadata size by only having the calls
 
 #### Defined in
 
-[txwrapper-core/src/types/registry.ts:32](https://github.com/paritytech/txwrapper-core/blob/d3e4018/packages/txwrapper-core/src/types/registry.ts#L32)
+[txwrapper-core/src/types/registry.ts:32](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-core/src/types/registry.ts#L32)
 
 ___
 
@@ -55,7 +55,7 @@ chainName
 
 #### Defined in
 
-[txwrapper-core/src/types/registry.ts:16](https://github.com/paritytech/txwrapper-core/blob/d3e4018/packages/txwrapper-core/src/types/registry.ts#L16)
+[txwrapper-core/src/types/registry.ts:16](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-core/src/types/registry.ts#L16)
 
 ___
 
@@ -71,7 +71,7 @@ SCALE encoded runtime metadata as a hex string
 
 #### Defined in
 
-[txwrapper-core/src/types/registry.ts:24](https://github.com/paritytech/txwrapper-core/blob/d3e4018/packages/txwrapper-core/src/types/registry.ts#L24)
+[txwrapper-core/src/types/registry.ts:24](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-core/src/types/registry.ts#L24)
 
 ___
 
@@ -87,7 +87,7 @@ Chain ss58format, token decimals, and token ID
 
 #### Defined in
 
-[txwrapper-core/src/types/registry.ts:28](https://github.com/paritytech/txwrapper-core/blob/d3e4018/packages/txwrapper-core/src/types/registry.ts#L28)
+[txwrapper-core/src/types/registry.ts:28](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-core/src/types/registry.ts#L28)
 
 ___
 
@@ -103,7 +103,7 @@ Array of signedExtensions
 
 #### Defined in
 
-[txwrapper-core/src/types/registry.ts:36](https://github.com/paritytech/txwrapper-core/blob/d3e4018/packages/txwrapper-core/src/types/registry.ts#L36)
+[txwrapper-core/src/types/registry.ts:36](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-core/src/types/registry.ts#L36)
 
 ___
 
@@ -119,7 +119,7 @@ Runtime specName
 
 #### Defined in
 
-[txwrapper-polkadot/src/index.ts:73](https://github.com/paritytech/txwrapper-core/blob/d3e4018/packages/txwrapper-polkadot/src/index.ts#L73)
+[txwrapper-polkadot/src/index.ts:73](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-polkadot/src/index.ts#L73)
 
 ___
 
@@ -135,7 +135,7 @@ Runtime specVersion
 
 #### Defined in
 
-[txwrapper-core/src/types/registry.ts:20](https://github.com/paritytech/txwrapper-core/blob/d3e4018/packages/txwrapper-core/src/types/registry.ts#L20)
+[txwrapper-core/src/types/registry.ts:20](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-core/src/types/registry.ts#L20)
 
 ___
 
@@ -151,4 +151,4 @@ User extensions used to inject into the type registry
 
 #### Defined in
 
-[txwrapper-core/src/types/registry.ts:40](https://github.com/paritytech/txwrapper-core/blob/d3e4018/packages/txwrapper-core/src/types/registry.ts#L40)
+[txwrapper-core/src/types/registry.ts:40](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-core/src/types/registry.ts#L40)
