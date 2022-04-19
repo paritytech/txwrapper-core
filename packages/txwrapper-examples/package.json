@@ -20,8 +20,8 @@
     "multisig": "node lib/multisig"
   },
   "dependencies": {
-    "@polkadot/api": "^7.15.1",
-    "@substrate/txwrapper-polkadot": "^1.5.9",
-    "@substrate/txwrapper-registry": "^1.5.9"
+    "@polkadot/api": "^8.0.2",
+    "@substrate/txwrapper-polkadot": "^2.0.2",
+    "@substrate/txwrapper-registry": "^2.0.2"
   }
 }
