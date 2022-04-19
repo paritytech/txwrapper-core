@@ -269,17 +269,14 @@ async function main(): Promise<void> {
 			`  From: ${decodedUnsignedTXMulti.address}`
 	);
 
-	// Encode the unsigned multisig tx
-	const unsignedTXMultiEncoded = construct.encodeUnsignedTransaction(
-		unsignedTXMulti,
-		{
-			registry,
-		}
+	// Encoded method of the unsigned multisig tx
+	const unsignedTXMultiEncodedMethod = unsignedTXMulti.method;
+	console.log(
+		`\nUnsigned Tx Multi Encoded Method: ${unsignedTXMultiEncodedMethod}`
 	);
-	console.log(`\nUnsigned Tx Multi Encoded: ${unsignedTXMultiEncoded}`);
 
 	// Derive the tx hash of an unsigned multisig transaction.
-	const callTxHashMulti = construct.txHash(unsignedTXMultiEncoded);
+	const callTxHashMulti = construct.txHash(unsignedTXMultiEncodedMethod);
 	console.log(`\nCall Hash of unsignedTXMulti: ${callTxHashMulti}`);
 
 	// The next steps include the calls `approveAsMulti` and `asMulti`
@@ -407,7 +404,14 @@ async function main(): Promise<void> {
 
 	console.log(`\nCalling AsMulti`);
 	console.log(`=================`);
-
+	// Calling the `asMulti` function by passing a "hardcoded" value in the
+	// index of the `maybeTimepoint` argument.
+	// Since this example is run in a controlled environment, we already
+	// know the index of the multisig transaction (index = 3) so we can pass it
+	// directly in the corresponding parameter.
+	// In normal situations, the timepoint of the multisig transaction should be
+	// dynamically retrieved and then passed as a variable in the `asMulti`
+	// function.
 	const unsignedTxAsMulti = substrateMethods.multisig.asMulti(
 		{
 			threshold: THRESHOLD_FOR_MULTISIG,
@@ -416,7 +420,7 @@ async function main(): Promise<void> {
 				height: parseInt(unsignedTxApproveAsMulti.blockNumber) + 1,
 				index: 3,
 			},
-			call: unsignedTXMultiEncoded,
+			call: unsignedTXMultiEncodedMethod,
 			storeCall: false,
 			maxWeight: '640000000',
 		},
