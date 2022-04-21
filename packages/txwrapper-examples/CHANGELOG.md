@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.3](https://github.com/paritytech/txwrapper-core/compare/v2.0.2...v2.0.3) (2022-04-21)
+
+
+### Bug Fixes
+
+* **deps:** update pjs api ([#210](https://github.com/paritytech/txwrapper-core/issues/210)) ([3e4c3ee](https://github.com/paritytech/txwrapper-core/commit/3e4c3eef4a0e385efed98c1c8774f50175f3d9f4))
+
+
+
+
+
 ## [2.0.2](https://github.com/paritytech/txwrapper-core/compare/v2.0.1...v2.0.2) (2022-04-13)
 
 
