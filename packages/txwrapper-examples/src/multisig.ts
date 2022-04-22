@@ -99,7 +99,7 @@ function createOtherSignatories(
 
 async function main(): Promise<void> {
 	/**
-	 * Entry point of the script. This script assumes a Polkadot node is running
+	 * This script assumes a Polkadot node is running
 	 * locally on `http://localhost:9933`.
 	 */
 	await cryptoWaitReady();
