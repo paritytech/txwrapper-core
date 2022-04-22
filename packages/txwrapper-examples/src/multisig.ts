@@ -1,3 +1,10 @@
+/* eslint-disable @typescript-eslint/restrict-template-expressions */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/**
+ * @ignore Don't show this file in documentation.
+ */
+
 import { Keyring } from '@polkadot/api';
 import { KeyringPair } from '@polkadot/keyring/types';
 import {
@@ -280,7 +287,7 @@ async function main(): Promise<void> {
 	const callTxHashMulti = construct.txHash(unsignedTXMultiEncodedMethod);
 	console.log(`\nCall Hash of unsignedTXMulti: ${callTxHashMulti}`);
 
-	// The next steps include the calls `approveAsMulti` and `asMulti`
+	// The next steps include the calls `approveAsMulti` and `asMulti`
 	// in order to send funds from the MultiSig account to another address,
 	// in this case to Eve.
 
@@ -413,6 +420,11 @@ async function main(): Promise<void> {
 	// In normal situations, the timepoint of the multisig transaction should be
 	// dynamically retrieved and then passed as a variable in the `asMulti`
 	// function.
+	// The timepoint can be dynamically retrieved from the Multisigs storage item
+	// (`pub type Multisigs<T: Config>`) found in the Multisig pallet.
+	// The Multisigs storage item is keyed by the multisig AccountId and
+	// call hash and its value (`pub struct Multisig`)
+	// contains the timepoint (`when: Timepoint<BlockNumber>,`).
 	const unsignedTxAsMulti = substrateMethods.multisig.asMulti(
 		{
 			threshold: THRESHOLD_FOR_MULTISIG,
