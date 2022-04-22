@@ -26,6 +26,7 @@ const THRESHOLD_FOR_MULTISIG = 2;
 
 const signatories = ['Alice', 'Bob', 'Charlie'];
 
+// The `delay` function that will be used before the `asMulti` call.
 function delay(ms: number) {
 	return new Promise((resolve) => setTimeout(resolve, ms));
 }
@@ -394,7 +395,7 @@ async function main(): Promise<void> {
 		signatories.indexOf('Bob')
 	);
 
-	// Added a delay as a hack so that the asMulti call
+	// Added a delay of 15 seconds so that the asMulti call
 	// is included in next blocks
 	console.log(
 		`\nWaiting 15 seconds before calling the asMulti ` +
