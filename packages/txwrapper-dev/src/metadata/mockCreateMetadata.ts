@@ -14,12 +14,12 @@ import memoizee from 'memoizee';
  * @param asCallsOnlyArg - Option to decreases the metadata to calls only
  */
 export function mockCreateMetadataUnmemoized(
-    registry: TypeRegistry,
-    metadataRpc: `0x${string}`,
-    asCallsOnlyArg = false
+	registry: TypeRegistry,
+	metadataRpc: `0x${string}`,
+	asCallsOnlyArg = false
 ): Metadata | MetadataVersioned {
-    const metadata = new Metadata(registry, metadataRpc);
-    return asCallsOnlyArg ? metadata.asCallsOnly : metadata;
+	const metadata = new Metadata(registry, metadataRpc);
+	return asCallsOnlyArg ? metadata.asCallsOnly : metadata;
 }
 
 /**
@@ -33,5 +33,5 @@ export function mockCreateMetadataUnmemoized(
  * @param asCallsOnlyArg - Option to decreases the metadata to calls only
  */
 export const mockCreateMetadata = memoizee(mockCreateMetadataUnmemoized, {
-    length: 3,
+	length: 3,
 });

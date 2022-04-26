@@ -2,42 +2,42 @@ import { TypeRegistry } from '@polkadot/types';
 import { ExtDef } from '@polkadot/types/extrinsic/signedExtensions/types';
 import { AnyJson, RegistryTypes } from '@polkadot/types/types';
 
+import { mockCreateMetadata } from '../metadata';
 import { ChainProperties } from '../mock-types';
-import { mockCreateMetadata } from '../metadata'
 
 export interface MockGetRegistryBaseArgs {
-    chainProperties: ChainProperties | AnyJson;
-    specTypes: RegistryTypes;
-    metadataRpc: `0x${string}`;
-    asCallsOnlyArg?: boolean;
-    signedExtensions?: string[];
-    userExtensions?: ExtDef;
+	chainProperties: ChainProperties | AnyJson;
+	specTypes: RegistryTypes;
+	metadataRpc: `0x${string}`;
+	asCallsOnlyArg?: boolean;
+	signedExtensions?: string[];
+	userExtensions?: ExtDef;
 }
 
 export function mockGetRegistryBase({
-    chainProperties,
-    specTypes,
-    metadataRpc,
-    asCallsOnlyArg,
-    signedExtensions,
-    userExtensions,
+	chainProperties,
+	specTypes,
+	metadataRpc,
+	asCallsOnlyArg,
+	signedExtensions,
+	userExtensions,
 }: MockGetRegistryBaseArgs): TypeRegistry {
-    const registry = new TypeRegistry();
+	const registry = new TypeRegistry();
 
-    const generatedMetadata = mockCreateMetadata(
-        registry,
-        metadataRpc,
-        asCallsOnlyArg
-    );
+	const generatedMetadata = mockCreateMetadata(
+		registry,
+		metadataRpc,
+		asCallsOnlyArg
+	);
 
-    registry.register(specTypes);
+	registry.register(specTypes);
 
-    registry.setMetadata(generatedMetadata, signedExtensions, userExtensions);
+	registry.setMetadata(generatedMetadata, signedExtensions, userExtensions);
 
-    // Register the chain properties for this registry
-    registry.setChainProperties(
-        registry.createType('ChainProperties', chainProperties)
-    );
+	// Register the chain properties for this registry
+	registry.setChainProperties(
+		registry.createType('ChainProperties', chainProperties)
+	);
 
-    return registry;
+	return registry;
 }

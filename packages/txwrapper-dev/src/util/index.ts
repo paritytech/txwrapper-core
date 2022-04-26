@@ -1,2 +1,2 @@
-export * from './signWithAlice';
 export * from './knownChainProperties';
+export * from './signWithAlice';

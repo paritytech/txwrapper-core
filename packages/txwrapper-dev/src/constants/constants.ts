@@ -1,8 +1,8 @@
-import { getRegistryKusama, getRegistryPolkadot } from '../registries';
 import { kusamaV9160MetadataHex } from '../metadata/kusama/kusamaV9160MetadataHex';
 import { polkadotV9122MetadataHex } from '../metadata/polkadot/polkadotV9122MetadataHex';
 import { metadataRpc } from '../metadata/static/staticV3-1-1';
 import { metadataRpcV29 } from '../metadata/static/staticV4-3-1';
+import { getRegistryKusama, getRegistryPolkadot } from '../registries';
 export { metadataRpc };
 
 /**

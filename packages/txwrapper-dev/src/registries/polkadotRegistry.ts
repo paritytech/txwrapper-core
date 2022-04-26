@@ -1,7 +1,7 @@
 import { TypeRegistry } from '@polkadot/types';
 import { getSpecTypes } from '@polkadot/types-known';
-import { polkadotV9122MetadataHex } from '../metadata/polkadot/polkadotV9122MetadataHex';
 
+import { polkadotV9122MetadataHex } from '../metadata/polkadot/polkadotV9122MetadataHex';
 import { mockGetRegistryBase } from './mockGetRegistry';
 
 /**
