@@ -5,9 +5,9 @@ import {
 } from '@substrate/txwrapper-dev';
 
 import { balancesTransfer } from '../../test-helpers';
+import { itDecodesBalancesTransferCommon } from '../../test-helpers';
 import { DecodedUnsignedTx } from '../../types';
 import { decodeUnsignedTx } from './decodeUnsignedTx';
-import { itDecodesBalancesTransferCommon } from './test-helpers';
 
 export function itDecodesUnsignedBalanceTransferTx(
 	decoded: DecodedUnsignedTx

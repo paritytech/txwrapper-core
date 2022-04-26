@@ -5,10 +5,10 @@ import {
 } from '@substrate/txwrapper-dev/constants';
 
 import { balancesTransfer } from '../../test-helpers';
+import { itDecodesBalancesTransferCommon } from '../../test-helpers';
 import { DecodedSigningPayload } from '../../types';
 import { construct } from '..';
 import { decodeSigningPayload } from './decodeSigningPayload';
-import { itDecodesBalancesTransferCommon } from './test-helpers';
 
 export function itDecodesSigningPayloadBalancesTransfer(
 	decoded: DecodedSigningPayload

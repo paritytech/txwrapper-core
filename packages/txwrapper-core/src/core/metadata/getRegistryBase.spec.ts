@@ -1,10 +1,10 @@
 import { TypeRegistry } from '@polkadot/types';
 import { getSpecTypes } from '@polkadot/types-known';
-
 import {
 	knownChainProperties,
 	POLKADOT_9122_TEST_OPTIONS,
 } from '@substrate/txwrapper-dev';
+
 import { getRegistryBase } from './getRegistryBase';
 
 describe('getRegistryBase', () => {

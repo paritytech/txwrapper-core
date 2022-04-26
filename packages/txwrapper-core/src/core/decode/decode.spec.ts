@@ -6,13 +6,13 @@ import {
 } from '@substrate/txwrapper-dev';
 
 import { balancesTransfer } from '../../test-helpers';
+import { itDecodesBalancesTransferCommon } from '../../test-helpers';
 import { DecodedSigningPayload } from '../../types';
 import { construct } from '..';
 import { decode } from './decode';
 import { itDecodesSignedBalancesTransferTx } from './decodeSignedTx.spec';
 import { itDecodesSigningPayloadBalancesTransfer } from './decodeSigningPayload.spec';
 import { itDecodesUnsignedBalanceTransferTx } from './decodeUnsignedTx.spec';
-import { itDecodesBalancesTransferCommon } from './test-helpers';
 
 describe('decode', () => {
 	it('should decode signedTx', async () => {

@@ -4,11 +4,12 @@ import {
 	TEST_BASE_TX_INFO,
 	TEST_METHOD_ARGS,
 } from '@substrate/txwrapper-dev';
+
 import { balancesTransfer } from '../../test-helpers';
+import { itDecodesBalancesTransferCommon } from '../../test-helpers';
 import { DecodedSignedTx } from '../../types';
 import { construct } from '..';
 import { decodeSignedTx } from './decodeSignedTx';
-import { itDecodesBalancesTransferCommon } from './test-helpers';
 
 export function itDecodesSignedBalancesTransferTx(
 	decoded: DecodedSignedTx
