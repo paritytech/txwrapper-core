@@ -25,16 +25,16 @@
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/democracy/vote.ts:15](https://github.com/paritytech/txwrapper-core/blob/a0283d9/packages/txwrapper-substrate/src/methods/democracy/vote.ts#L15)
+[txwrapper-substrate/src/methods/democracy/vote.ts:15](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-substrate/src/methods/democracy/vote.ts#L15)
 
 ___
 
 ### vote
 
-• **vote**: `AccountVote`
+• **vote**: [`AccountVote`](../modules/txwrapper_substrate_src._internal_.md#accountvote)
 
 Vote.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/democracy/vote.ts:19](https://github.com/paritytech/txwrapper-core/blob/a0283d9/packages/txwrapper-substrate/src/methods/democracy/vote.ts#L19)
+[txwrapper-substrate/src/methods/democracy/vote.ts:19](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-substrate/src/methods/democracy/vote.ts#L19)

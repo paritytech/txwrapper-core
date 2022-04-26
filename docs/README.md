@@ -78,6 +78,18 @@ yarn run lint
 yarn run lint --fix
 ```
 
+### Maintenence
+
+#### Yarn
+
+Txwrapper-core runs on yarn berry. It is a package manager local to the repo, and requires updating from time to time. The releases for yarn berry can be found [here](https://github.com/yarnpkg/berry/releases). Below are the steps to updating yarn. 
+
+```bash
+$ yarn set version <version>
+$ yarn
+$ yarn dedupe
+```
+
 ### Release & Publishing
 
 #### Preparation
@@ -107,14 +119,6 @@ yarn run lint --fix
     yarn run lint
     ```
 
-    Note: some tests in `txwrapper-orml/src/methods/currencies/transferNativeCurrency.spec.ts` and `txwrapper-orml/src/methods/currencies/transfer.spec.ts` emit warnings that look like:
-
-    ```
-    REGISTRY: Unknown signed extensions SetEvmOrigin found, treating them as no-effect
-    ```
-
-    These are expected, and can be ignored.
-
 6. If all tests pass and all packages build successfully, commit your changes with the following format `fix(types): Update polkadot-js deps to get the latest types`. Then push your branch up to Github for review, then merge. The release tooling takes care of bumping the version so no need for a manual update (see below).
 
 #### Publishing
@@ -136,7 +140,7 @@ This libraries release process uses Lerna, and the following below is required t
     yarn run test
     ```
 
-4. Deploy the new release.
+4. Deploy the new release. It is important to note there will be a step that asks you to confirm whether or not the version bump is correct. Please confirm with the maintainers the suggested versions are correct.
 
     ```bash
     yarn run deploy

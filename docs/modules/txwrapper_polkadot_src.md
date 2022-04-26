@@ -11,8 +11,10 @@
 - [ChainProperties](txwrapper_polkadot_src.md#chainproperties)
 - [DecodedSignedTx](txwrapper_polkadot_src.md#decodedsignedtx)
 - [DecodedSigningPayload](txwrapper_polkadot_src.md#decodedsigningpayload)
+- [DecodedUnsignedHexTx](txwrapper_polkadot_src.md#decodedunsignedhextx)
 - [DecodedUnsignedTx](txwrapper_polkadot_src.md#decodedunsignedtx)
 - [GetRegistryOptsCore](txwrapper_polkadot_src.md#getregistryoptscore)
+- [IMethod](txwrapper_polkadot_src.md#imethod)
 - [KeyringPair](txwrapper_polkadot_src.md#keyringpair)
 - [Options](txwrapper_polkadot_src.md#options)
 - [OptionsWithMeta](txwrapper_polkadot_src.md#optionswithmeta)
@@ -26,6 +28,10 @@
 - [getRegistryBase](txwrapper_polkadot_src.md#getregistrybase)
 - [importPrivateKey](txwrapper_polkadot_src.md#importprivatekey)
 - [toTxMethod](txwrapper_polkadot_src.md#totxmethod)
+
+### Namespaces
+
+- [&lt;internal\&gt;](txwrapper_polkadot_src._internal_.md)
 
 ### Interfaces
 
@@ -71,6 +77,12 @@ Re-exports [DecodedSigningPayload](txwrapper_core_src.md#decodedsigningpayload)
 
 ___
 
+### DecodedUnsignedHexTx
+
+Re-exports [DecodedUnsignedHexTx](../interfaces/txwrapper_core_src.DecodedUnsignedHexTx.md)
+
+___
+
 ### DecodedUnsignedTx
 
 Re-exports [DecodedUnsignedTx](txwrapper_core_src.md#decodedunsignedtx)
@@ -80,6 +92,12 @@ ___
 ### GetRegistryOptsCore
 
 Re-exports [GetRegistryOptsCore](../interfaces/txwrapper_core_src.GetRegistryOptsCore.md)
+
+___
+
+### IMethod
+
+Re-exports [IMethod](../interfaces/txwrapper_core_src.IMethod.md)
 
 ___
 
@@ -171,7 +189,7 @@ Re-exports [toTxMethod](txwrapper_core_src.md#totxmethod)
 | :------ | :------ |
 | `assets` | [`assets`](txwrapper_substrate_src.methods.assets.md) |
 | `balances` | [`balances`](txwrapper_substrate_src.methods.balances.md) |
-| `crowdloan` | `__module` |
+| `crowdloan` | [`"/Users/tarik/Desktop/parity/txwrapper-core/packages/txwrapper-polkadot/src/methods/crowdloan/index"`](txwrapper_polkadot_src._internal_.__Users_tarik_Desktop_parity_txwrapper_core_packages_txwrapper_polkadot_src_methods_crowdloan_index_.md) |
 | `democracy` | [`democracy`](txwrapper_substrate_src.methods.democracy.md) |
 | `multisig` | [`multisig`](txwrapper_substrate_src.methods.multisig.md) |
 | `proxy` | [`proxy`](txwrapper_substrate_src.methods.proxy.md) |
@@ -183,7 +201,7 @@ Re-exports [toTxMethod](txwrapper_core_src.md#totxmethod)
 
 #### Defined in
 
-[txwrapper-polkadot/src/index.ts:16](https://github.com/paritytech/txwrapper-core/blob/a0283d9/packages/txwrapper-polkadot/src/index.ts#L16)
+[txwrapper-polkadot/src/index.ts:16](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-polkadot/src/index.ts#L16)
 
 ## Functions
 
@@ -205,4 +223,4 @@ Get a type registry for networks that txwrapper-polkadot supports.
 
 #### Defined in
 
-[txwrapper-polkadot/src/index.ts:81](https://github.com/paritytech/txwrapper-core/blob/a0283d9/packages/txwrapper-polkadot/src/index.ts#L81)
+[txwrapper-polkadot/src/index.ts:81](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-polkadot/src/index.ts#L81)

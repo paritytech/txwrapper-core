@@ -29,7 +29,7 @@ UnsignedTransaction.method.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/utility/asDerivative.ts:19](https://github.com/paritytech/txwrapper-core/blob/a0283d9/packages/txwrapper-substrate/src/methods/utility/asDerivative.ts#L19)
+[txwrapper-substrate/src/methods/utility/asDerivative.ts:19](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-substrate/src/methods/utility/asDerivative.ts#L19)
 
 ___
 
@@ -41,4 +41,4 @@ The sub-account index of the origin.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/utility/asDerivative.ts:13](https://github.com/paritytech/txwrapper-core/blob/a0283d9/packages/txwrapper-substrate/src/methods/utility/asDerivative.ts#L13)
+[txwrapper-substrate/src/methods/utility/asDerivative.ts:13](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-substrate/src/methods/utility/asDerivative.ts#L13)
