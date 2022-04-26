@@ -1,4 +1,4 @@
-import { PolkadotSS58Format } from '../../test-helpers';
+import { PolkadotSS58Format } from '@substrate/txwrapper-dev/constants';
 import { importPrivateKey } from './importPrivateKey';
 
 const PRIVATE_KEY =

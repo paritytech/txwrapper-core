@@ -1,9 +1,9 @@
+import { balancesTransfer } from '../../test-helpers';
 import {
-	balancesTransfer,
 	POLKADOT_25_TEST_OPTIONS,
 	TEST_BASE_TX_INFO,
 	TEST_METHOD_ARGS,
-} from '../../test-helpers';
+} from '@substrate/txwrapper-dev';
 import { createSigningPayload } from './createSigningPayload';
 
 describe('createSigningPayload', () => {

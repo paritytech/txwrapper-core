@@ -1,10 +1,11 @@
 import {
-	balancesTransfer,
 	POLKADOT_25_TEST_OPTIONS,
 	signWithAlice,
 	TEST_BASE_TX_INFO,
 	TEST_METHOD_ARGS,
-} from '../../test-helpers';
+} from '@substrate/txwrapper-dev';
+
+import { balancesTransfer } from '../../test-helpers';
 import { DecodedSigningPayload } from '../../types';
 import { construct } from '..';
 import { decode } from './decode';
