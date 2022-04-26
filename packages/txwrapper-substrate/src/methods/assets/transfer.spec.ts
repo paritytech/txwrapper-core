@@ -2,7 +2,7 @@ import {
 	itHasCorrectBaseTxInfo,
 	POLKADOT_29_TEST_OPTIONS,
 	TEST_BASE_TX_INFO_V29,
-} from '@substrate/txwrapper-core';
+} from '@substrate/txwrapper-dev';
 
 import { TEST_METHOD_ARGS } from '../../test-helpers';
 import { transfer } from './transfer';
