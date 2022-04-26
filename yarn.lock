@@ -2501,12 +2501,13 @@ __metadata:
   resolution: "@substrate/txwrapper-core@workspace:packages/txwrapper-core"
   dependencies:
     "@polkadot/api": ^7.15.1
+    "@substrate/txwrapper-dev": 0.1.0
     "@types/memoizee": ^0.4.3
     memoizee: 0.4.15
   languageName: unknown
   linkType: soft
 
-"@substrate/txwrapper-dev@workspace:packages/txwrapper-dev":
+"@substrate/txwrapper-dev@0.1.0, @substrate/txwrapper-dev@workspace:packages/txwrapper-dev":
   version: 0.0.0-use.local
   resolution: "@substrate/txwrapper-dev@workspace:packages/txwrapper-dev"
   languageName: unknown
