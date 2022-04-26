@@ -1,6 +1,9 @@
 import { Metadata } from '@polkadot/types';
 import { MetadataVersioned } from '@polkadot/types/metadata/MetadataVersioned';
-import { polkadotV9122MetadataHex, polkadotRegistryV9122 } from '@substrate/txwrapper-dev';
+import {
+	polkadotRegistryV9122,
+	polkadotV9122MetadataHex,
+} from '@substrate/txwrapper-dev';
 
 import { createMetadata, createMetadataUnmemoized } from './createMetadata';
 
