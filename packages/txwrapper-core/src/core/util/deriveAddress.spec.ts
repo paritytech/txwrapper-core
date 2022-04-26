@@ -1,4 +1,4 @@
-import { PolkadotSS58Format } from '@substrate/txwrapper-dev/constants';
+import { PolkadotSS58Format } from '@substrate/txwrapper-dev';
 
 import { deriveAddress } from './deriveAddress';
 

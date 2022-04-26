@@ -5,7 +5,7 @@ import {
 	POLKADOT_9122_TEST_OPTIONS_CALLS_ONLY,
 	TEST_BASE_TX_INFO,
 	TEST_METHOD_ARGS,
-} from '@substrate/txwrapper-dev/constants';
+} from '@substrate/txwrapper-dev';
 
 import { balancesTransfer } from '../../test-helpers';
 import { createEra, defineMethod, MethodErrorMessages } from './defineMethod';

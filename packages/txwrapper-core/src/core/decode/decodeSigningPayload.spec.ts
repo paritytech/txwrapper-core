@@ -2,7 +2,7 @@ import {
 	POLKADOT_25_TEST_OPTIONS,
 	TEST_BASE_TX_INFO,
 	TEST_METHOD_ARGS,
-} from '@substrate/txwrapper-dev/constants';
+} from '@substrate/txwrapper-dev';
 
 import { balancesTransfer } from '../../test-helpers';
 import { itDecodesBalancesTransferCommon } from '../../test-helpers';

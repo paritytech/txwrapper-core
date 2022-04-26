@@ -1,5 +1,5 @@
 import { hexToU8a } from '@polkadot/util';
-import { KUSAMA_9160_TEST_OPTIONS } from '@substrate/txwrapper-dev/constants';
+import { KUSAMA_9160_TEST_OPTIONS } from '@substrate/txwrapper-dev';
 
 import { toTxMethod } from './toTxMethod';
 

@@ -1,7 +1,7 @@
 import {
 	TEST_BASE_TX_INFO,
 	TEST_METHOD_ARGS,
-} from '@substrate/txwrapper-dev/constants';
+} from '@substrate/txwrapper-dev';
 
 import {
 	DecodedSignedTx,
