@@ -16,5 +16,8 @@
     },
     "scripts": {
         "build": "yarn build:workspace"
+    },
+    "dependencies": {
+        "memoizee": "0.4.15" 
     }
 }
