@@ -16,6 +16,5 @@
     },
     "scripts": {
         "build": "yarn build:workspace"
-    },
-    "dependencies": {}
+    }
 }
