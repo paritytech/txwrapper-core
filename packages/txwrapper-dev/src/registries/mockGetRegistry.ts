@@ -1,4 +1,4 @@
-import { TypeRegistry } from '@polkadot/types';
+import { TypeRegistry, GenericChainProperties } from '@polkadot/types';
 import { ExtDef } from '@polkadot/types/extrinsic/signedExtensions/types';
 import { AnyJson, RegistryTypes } from '@polkadot/types/types';
 
@@ -36,7 +36,7 @@ export function mockGetRegistryBase({
 
 	// Register the chain properties for this registry
 	registry.setChainProperties(
-		registry.createType('ChainProperties', chainProperties)
+        registry.createType('ChainProperties', chainProperties) as GenericChainProperties
 	);
 
 	return registry;

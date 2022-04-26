@@ -2500,7 +2500,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@substrate/txwrapper-dev@0.1.0, @substrate/txwrapper-dev@workspace:packages/txwrapper-dev":
+"@substrate/txwrapper-dev@0.1.0, @substrate/txwrapper-dev@^0.1.0, @substrate/txwrapper-dev@workspace:packages/txwrapper-dev":
   version: 0.0.0-use.local
   resolution: "@substrate/txwrapper-dev@workspace:packages/txwrapper-dev"
   dependencies:
@@ -2524,6 +2524,7 @@ __metadata:
   dependencies:
     "@acala-network/type-definitions": ^0.7.4-1
     "@substrate/txwrapper-core": ^2.0.3
+    "@substrate/txwrapper-dev": ^0.1.0
   languageName: unknown
   linkType: soft
 
@@ -2532,6 +2533,7 @@ __metadata:
   resolution: "@substrate/txwrapper-polkadot@workspace:packages/txwrapper-polkadot"
   dependencies:
     "@substrate/txwrapper-core": ^2.0.3
+    "@substrate/txwrapper-dev": ^0.1.0
     "@substrate/txwrapper-substrate": ^2.0.3
   languageName: unknown
   linkType: soft
@@ -2551,6 +2553,7 @@ __metadata:
   resolution: "@substrate/txwrapper-substrate@workspace:packages/txwrapper-substrate"
   dependencies:
     "@substrate/txwrapper-core": ^2.0.3
+    "@substrate/txwrapper-dev": ^0.1.0
   languageName: unknown
   linkType: soft
 
