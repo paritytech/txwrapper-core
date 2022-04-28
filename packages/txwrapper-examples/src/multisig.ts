@@ -12,7 +12,7 @@ import {
 	encodeAddress,
 	sortAddresses,
 } from '@polkadot/util-crypto';
-import { cryptoWaitReady } from '@polkadot/util-crypto';
+import { cryptoWaitReady, xxhashAsHex, blake2AsHex } from '@polkadot/util-crypto';
 import {
 	construct,
 	decode,
@@ -40,7 +40,7 @@ function delay(ms: number) {
 
 function createMultisigAccount(
 	keyring: Keyring
-): [string[], string, { [key: string]: KeyringPair }] {
+): [string[], string, { [key: string]: KeyringPair }, string] {
 	console.log(`\nCreating a MultiSig Account`);
 	console.log(`=============================\n`);
 
@@ -75,9 +75,12 @@ function createMultisigAccount(
 	// Convert byte array to SS58 encoding.
 	const Ss58MultiSigAddress = encodeAddress(multiAddress, SS58Prefix);
 
+  // Encode the multisig address in hexadecimal
+  const multisigAddressInHex = Buffer.from(multiAddress).toString('hex');
+
 	console.log(`\nMultisig Address: ${Ss58MultiSigAddress}`);
 
-	return [addressesArray, Ss58MultiSigAddress, signatoriesDict];
+	return [addressesArray, Ss58MultiSigAddress, signatoriesDict, multisigAddressInHex];
 }
 
 function createOtherSignatories(
@@ -112,7 +115,7 @@ async function main(): Promise<void> {
 	// 1. addressesArray = the addresses that are in the Multisig Account
 	// 2. Ss58MultiSigAddress = the address of the Multisig Account
 	// 3. signatoriesDict = all the KeyringPair info per signatory
-	const [addressesArray, Ss58MultiSigAddress, signatoriesDict] =
+	const [addressesArray, Ss58MultiSigAddress, signatoriesDict, multisigAddressInHex] =
 		createMultisigAccount(keyring);
 
 	// Create Signatories Sorted excluding the sender (Alice)
@@ -402,6 +405,48 @@ async function main(): Promise<void> {
 		signatories.indexOf('Bob')
 	);
 
+  // In the following lines we dynamically retrieve the timepoint of the
+  // Multisig call. To achieve that we do the following steps :
+  // 1. Create the Storage key of our Multisig Storage item
+  // 2. Make an RPC request to call the `state_getStorage` endpoint (using the Storage key from step 1)
+  // 3. Create the Multisig type by using the result from the RPC call and the registry
+  // 4. Get the `height` and `index` of our Multisig call from the Multisig type
+
+  // 1. Creating the Storage key of our Multisig Storage item following
+  // the schema below :
+  // Twox128("Multisig") + Twox128("Multisigs") + Twox64(multisigAddress) + multisigAddress + Blake256(multisigCallHash)
+  const multisigModuleHash = xxhashAsHex("Multisig", 128);
+  const multisigStorageHash = xxhashAsHex("Multisigs", 128);
+  const multisigAddressHash = xxhashAsHex(keyring.decodeAddress(Ss58MultiSigAddress), 64);
+  const multisigCallHash = blake2AsHex(callTxHashMulti, 128);
+  const multisigStorageKey = multisigModuleHash +
+                            multisigStorageHash.substring(2) +
+                            multisigAddressHash.substring(2) +
+                            multisigAddressInHex +
+                            multisigCallHash.substring(2) +
+                            callTxHashMulti.substring(2);
+
+  // Adding a delay so that the storage is updated with the Multisig info
+  console.log(
+		`\nWaiting 10 seconds before making the RPC request ` +
+			`so that the storage is updated with the Multisig info\n`
+	);
+  await delay(10000);
+  
+  // 2. Make an RPC request to call the `state_getStorage` endpoint
+  const multisigStorage = await rpcToLocalNode('state_getStorage', [multisigStorageKey]);
+
+  console.log("\nMultisig Storage result: \n", multisigStorage);
+
+  // 3. Create the Multisig type using the registry and the result from our RPC call to `state_getStorage`
+  const multisigType = registry.createType("PalletMultisigMultisig", multisigStorage);
+
+  // Retrieving the Multisig's index
+  const multisigCallIndex = multisigType.when.index.toNumber();
+
+  // Retrieving the Multisig's height
+  const multisigCallHeight = multisigType.when.height.toNumber();
+
 	// Added a delay of 15 seconds so that the asMulti call
 	// is included in next blocks
 	console.log(
@@ -430,8 +475,8 @@ async function main(): Promise<void> {
 			threshold: THRESHOLD_FOR_MULTISIG,
 			otherSignatories: otherSignatoriesSortedExBob,
 			maybeTimepoint: {
-				height: parseInt(unsignedTxApproveAsMulti.blockNumber) + 1,
-				index: 3,
+				height: multisigCallHeight,
+				index: multisigCallIndex,
 			},
 			call: unsignedTXMultiEncodedMethod,
 			storeCall: false,
