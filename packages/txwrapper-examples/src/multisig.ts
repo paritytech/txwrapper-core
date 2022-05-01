@@ -440,14 +440,14 @@ async function main(): Promise<void> {
 	);
 
 	// In the following lines we dynamically retrieve the timepoint of the
-	// Multisig call. To achieve that we do the following steps :
+	// Multisig call so we can later pass it as an argument in the `asMulti` call.
+  // To retrieve the timepoint we need to do the following steps :
 	// 1. Create the Storage key of our Multisig Storage item
 	// 2. Make an RPC request to call the `state_getStorage` endpoint (using the Storage key from step 1)
 	// 3. Create the Multisig type by using the result from the RPC call and the registry
-	// 4. Get the `height` and `index` of our Multisig call from the Multisig type
+	// 4. Get the `height` and `index` of the timepoint of our Multisig call from the Multisig type
 
-	// 1. Creating the Storage key of our Multisig Storage item following
-	// the schema below :
+	// 1. Creating the Storage key of our Multisig Storage item following the schema below :
 	// Twox128("Multisig") + Twox128("Multisigs") + Twox64(multisigAddress) + multisigAddress + Blake256(multisigCallHash)
 	const multisigModuleHash = xxhashAsHex('Multisig', 128);
 	const multisigStorageHash = xxhashAsHex('Multisigs', 128);
@@ -471,14 +471,14 @@ async function main(): Promise<void> {
 	);
 	await delay(10000);
 
-	// 2. Make an RPC request to call the `state_getStorage` endpoint
+	// 2. Making an RPC request to call the `state_getStorage` endpoint
 	const multisigStorage = await rpcToLocalNode('state_getStorage', [
 		multisigStorageKey,
 	]);
 
 	console.log('\nMultisig Storage result: \n', multisigStorage);
 
-	// 3. Create the Multisig type using the registry and the result from our RPC call to `state_getStorage`
+	// 3. Creating the Multisig type using the registry and the result from our RPC call to `state_getStorage`
 	const multisigType = registry.createType(
 		'PalletMultisigMultisig',
 		multisigStorage
@@ -491,7 +491,8 @@ async function main(): Promise<void> {
 	const multisigCallHeight = multisigType.when.height.toNumber();
 
 	// Added a delay of 15 seconds so that the `asMulti` call
-	// is included in a future block.
+	// is included in a future block since the `approveAsMulti`
+  // and the `asMulti` calls cannot be in the same block.
 	console.log(
 		`\n${PURPLE}Waiting 15 seconds ${RESET}before submitting the \`asMulti\` ` +
 			`transaction so that it is included in a future block.`
@@ -500,19 +501,8 @@ async function main(): Promise<void> {
 
 	console.log(`\n${CYAN}Calling asMulti`);
 	console.log(`===============${RESET}`);
-	// Calling the `asMulti` function by passing a "hardcoded" value in the
-	// index of the `maybeTimepoint` argument.
-	// Since this example is run in a controlled environment, we already
-	// know the index of the multisig transaction (index = 3) so we can pass it
-	// directly in the corresponding parameter.
-	// In normal situations, the timepoint of the multisig transaction should be
-	// dynamically retrieved and then passed as a variable in the `asMulti`
-	// function.
-	// The timepoint can be dynamically retrieved from the Multisigs storage item
-	// (`pub type Multisigs<T: Config>`) found in the Multisig pallet.
-	// The Multisigs storage item is keyed by the multisig AccountId and
-	// call hash and its value (`pub struct Multisig`)
-	// contains the timepoint (`when: Timepoint<BlockNumber>,`).
+	// Calling the `asMulti` function by passing the dynamically retrieved
+  // timepoint (from Storage) in the `maybeTimepoint` argument.
 	const unsignedTxAsMulti = substrateMethods.multisig.asMulti(
 		{
 			threshold: THRESHOLD_FOR_MULTISIG,
