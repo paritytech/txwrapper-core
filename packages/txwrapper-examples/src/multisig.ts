@@ -12,7 +12,11 @@ import {
 	encodeAddress,
 	sortAddresses,
 } from '@polkadot/util-crypto';
-import { cryptoWaitReady, xxhashAsHex, blake2AsHex } from '@polkadot/util-crypto';
+import {
+	blake2AsHex,
+	cryptoWaitReady,
+	xxhashAsHex,
+} from '@polkadot/util-crypto';
 import {
 	construct,
 	decode,
@@ -24,6 +28,12 @@ import {
 import { methods as substrateMethods } from '@substrate/txwrapper-substrate';
 
 import { rpcToLocalNode, signWith } from './util';
+
+// Adding colors to the output in the terminal (using ANSI escape codes)
+const GREEN = '\u001b[32m';
+const CYAN = '\u001b[36m';
+const PURPLE = '\u001b[35m';
+const RESET = '\u001b[0m';
 
 const SS58Prefix = 0;
 
@@ -41,14 +51,18 @@ function delay(ms: number) {
 function createMultisigAccount(
 	keyring: Keyring
 ): [string[], string, { [key: string]: KeyringPair }, string] {
-	console.log(`\nCreating a MultiSig Account`);
-	console.log(`=============================\n`);
+	console.log(`\n${CYAN}Creating a MultiSig account`);
+	console.log(`===========================${RESET}\n`);
 
 	// For every signatory [Alice, Bob and Charlie]
 	// add its corresponding account in the newly created keyring
 	// and then save the derived address in the `addressesDict`
 	const addressesDict: { [key: string]: string } = {};
 	const signatoriesDict: { [key: string]: KeyringPair } = {};
+
+	console.log(
+		'The accounts/addresses that compose the Multi Signature Account'
+	);
 
 	const addressesArray = signatories.map((val, idx) => {
 		signatoriesDict[signatories[idx]] = keyring.addFromUri(
@@ -61,13 +75,13 @@ function createMultisigAccount(
 			PolkadotSS58Format.polkadot
 		);
 
+		console.log(
+			`${signatories[idx]}\t: ` +
+				`${GREEN} ${addressesDict[signatories[idx]]} ${RESET}`
+		);
+
 		return addressesDict[signatories[idx]];
 	});
-
-	console.log(
-		'The accounts/addresses that compose the Multi Signature Account'
-	);
-	console.log(addressesArray);
 
 	// Address as a byte array.
 	const multiAddress = createKeyMulti(addressesArray, THRESHOLD_FOR_MULTISIG);
@@ -75,12 +89,17 @@ function createMultisigAccount(
 	// Convert byte array to SS58 encoding.
 	const Ss58MultiSigAddress = encodeAddress(multiAddress, SS58Prefix);
 
-  // Encode the multisig address in hexadecimal
-  const multisigAddressInHex = Buffer.from(multiAddress).toString('hex');
+	// Encode the multisig address in hexadecimal
+	const multisigAddressInHex = Buffer.from(multiAddress).toString('hex');
 
-	console.log(`\nMultisig Address: ${Ss58MultiSigAddress}`);
+	console.log(`\nMultisig Address: ${GREEN} ${Ss58MultiSigAddress} ${RESET}`);
 
-	return [addressesArray, Ss58MultiSigAddress, signatoriesDict, multisigAddressInHex];
+	return [
+		addressesArray,
+		Ss58MultiSigAddress,
+		signatoriesDict,
+		multisigAddressInHex,
+	];
 }
 
 function createOtherSignatories(
@@ -115,8 +134,12 @@ async function main(): Promise<void> {
 	// 1. addressesArray = the addresses that are in the Multisig Account
 	// 2. Ss58MultiSigAddress = the address of the Multisig Account
 	// 3. signatoriesDict = all the KeyringPair info per signatory
-	const [addressesArray, Ss58MultiSigAddress, signatoriesDict, multisigAddressInHex] =
-		createMultisigAccount(keyring);
+	const [
+		addressesArray,
+		Ss58MultiSigAddress,
+		signatoriesDict,
+		multisigAddressInHex,
+	] = createMultisigAccount(keyring);
 
 	// Create Signatories Sorted excluding the sender (Alice)
 	const otherSignatoriesSortedExAlice = createOtherSignatories(
@@ -152,8 +175,12 @@ async function main(): Promise<void> {
 		metadataRpc,
 	});
 
-	console.log(`\nSending funds from Alice Account to MultiSig`);
-	console.log(`==============================================`);
+	console.log(
+		`${CYAN}Sending funds from Alice's account to the MultiSig account`
+	);
+	console.log(
+		`==========================================================${RESET}`
+	);
 
 	/**
 	 * Now we can create our `balances.transferKeepAlive` unsigned tx to send
@@ -198,7 +225,7 @@ async function main(): Promise<void> {
 		registry,
 	});
 	console.log(
-		`\nDecoded Transaction\n  To: ${
+		`\nDecoded Transaction\n  To\t: ${
 			(decodedUnsigned.method.args.dest as { id: string })?.id
 		}\n` + `  Amount: ${decodedUnsigned.method.args.value}`
 	);
@@ -223,16 +250,20 @@ async function main(): Promise<void> {
 
 	// Derive the tx hash of a signed transaction offline.
 	const expectedTxHash = construct.txHash(tx);
-	console.log(`\nExpected Tx Hash: ${expectedTxHash}`);
+	console.log(`\nExpected Tx Hash : ${expectedTxHash}`);
 
 	// Send the tx to the node. Again, since `txwrapper` is offline-only, this
 	// operation should be handled externally. Here, we just send a JSONRPC
 	// request directly to the node.
 	const actualTxHash = await rpcToLocalNode('author_submitExtrinsic', [tx]);
-	console.log(`Actual Tx Hash: ${actualTxHash}`);
+	console.log(`Actual Tx Hash\t : ${actualTxHash}`);
 
-	console.log(`\nSending funds from the MultiSig Account to Eve`);
-	console.log(`==============================================\n`);
+	console.log(
+		`\n${CYAN}Sending funds from the MultiSig account to Eve's account`
+	);
+	console.log(
+		`========================================================${RESET}\n`
+	);
 
 	const eve = keyring.addFromUri('//Eve', { name: 'Eve' }, 'sr25519');
 	const eveSs58Address = deriveAddress(
@@ -272,12 +303,12 @@ async function main(): Promise<void> {
 		registry,
 	});
 	console.log(
-		`\nDecoded Transaction\n  To: ${
+		`\nDecoded Transaction\n  To\t: ${
 			(decodedUnsignedTXMulti.method.args.dest as { id: string })?.id
 		}\n` +
 			`  Amount: ${decodedUnsignedTXMulti.method.args.value}` +
 			`\n` +
-			`  From: ${decodedUnsignedTXMulti.address}`
+			`  From\t: ${decodedUnsignedTXMulti.address}`
 	);
 
 	// Encoded method of the unsigned multisig tx
@@ -288,14 +319,16 @@ async function main(): Promise<void> {
 
 	// Derive the tx hash of an unsigned multisig transaction.
 	const callTxHashMulti = construct.txHash(unsignedTXMultiEncodedMethod);
-	console.log(`\nCall Hash of unsignedTXMulti: ${callTxHashMulti}`);
+	console.log(
+		`\nCall Hash of the ${GREEN}\`unsignedTXMulti\`${RESET} call : ${GREEN}${callTxHashMulti}${RESET}`
+	);
 
 	// The next steps include the calls `approveAsMulti` and `asMulti`
 	// in order to send funds from the MultiSig account to another address,
 	// in this case to Eve.
 
-	console.log(`\nCalling ApproveAsMulti`);
-	console.log(`========================`);
+	console.log(`\n${CYAN}Calling approveAsMulti`);
+	console.log(`======================${RESET}`);
 
 	const unsignedTxApproveAsMulti = substrateMethods.multisig.approveAsMulti(
 		{
@@ -374,7 +407,7 @@ async function main(): Promise<void> {
 	// Derive the tx hash of a signed transaction offline.
 	const expectedTxHashApproveAsMulti = construct.txHash(txApproveAsMulti);
 	console.log(
-		`\nExpected Tx Hash of approveAsMulti: ${expectedTxHashApproveAsMulti}`
+		`\nExpected Tx Hash of the \`approveAsMulti\` call \t: ${expectedTxHashApproveAsMulti}`
 	);
 
 	// Send the tx to the node. Again, since `txwrapper` is offline-only, this
@@ -385,7 +418,8 @@ async function main(): Promise<void> {
 		[txApproveAsMulti]
 	);
 	console.log(
-		`Actual Tx Hash of approveAsMulti: ${actualTxHashApproveAsMulti}`
+		`Actual Tx Hash of the ${GREEN}\`approveAsMulti\`${RESET} call \t: ` +
+			`${GREEN}${actualTxHashApproveAsMulti}${RESET}`
 	);
 
 	// Decode a signed payload.
@@ -394,7 +428,7 @@ async function main(): Promise<void> {
 		registry,
 	});
 	console.log(
-		`\nDecoded Transaction approveAsMulti\n` +
+		`\nDecoded Transaction of \`approveAsMulti\`\n` +
 			`  Call Hash of unsignedTXMulti: ${txInfoApproveAsMulti.method.args.callHash}\n` +
 			`  Threshold of unsignedTXMulti: ${txInfoApproveAsMulti.method.args.threshold}`
 	);
@@ -405,58 +439,67 @@ async function main(): Promise<void> {
 		signatories.indexOf('Bob')
 	);
 
-  // In the following lines we dynamically retrieve the timepoint of the
-  // Multisig call. To achieve that we do the following steps :
-  // 1. Create the Storage key of our Multisig Storage item
-  // 2. Make an RPC request to call the `state_getStorage` endpoint (using the Storage key from step 1)
-  // 3. Create the Multisig type by using the result from the RPC call and the registry
-  // 4. Get the `height` and `index` of our Multisig call from the Multisig type
+	// In the following lines we dynamically retrieve the timepoint of the
+	// Multisig call. To achieve that we do the following steps :
+	// 1. Create the Storage key of our Multisig Storage item
+	// 2. Make an RPC request to call the `state_getStorage` endpoint (using the Storage key from step 1)
+	// 3. Create the Multisig type by using the result from the RPC call and the registry
+	// 4. Get the `height` and `index` of our Multisig call from the Multisig type
 
-  // 1. Creating the Storage key of our Multisig Storage item following
-  // the schema below :
-  // Twox128("Multisig") + Twox128("Multisigs") + Twox64(multisigAddress) + multisigAddress + Blake256(multisigCallHash)
-  const multisigModuleHash = xxhashAsHex("Multisig", 128);
-  const multisigStorageHash = xxhashAsHex("Multisigs", 128);
-  const multisigAddressHash = xxhashAsHex(keyring.decodeAddress(Ss58MultiSigAddress), 64);
-  const multisigCallHash = blake2AsHex(callTxHashMulti, 128);
-  const multisigStorageKey = multisigModuleHash +
-                            multisigStorageHash.substring(2) +
-                            multisigAddressHash.substring(2) +
-                            multisigAddressInHex +
-                            multisigCallHash.substring(2) +
-                            callTxHashMulti.substring(2);
-
-  // Adding a delay so that the storage is updated with the Multisig info
-  console.log(
-		`\nWaiting 10 seconds before making the RPC request ` +
-			`so that the storage is updated with the Multisig info\n`
+	// 1. Creating the Storage key of our Multisig Storage item following
+	// the schema below :
+	// Twox128("Multisig") + Twox128("Multisigs") + Twox64(multisigAddress) + multisigAddress + Blake256(multisigCallHash)
+	const multisigModuleHash = xxhashAsHex('Multisig', 128);
+	const multisigStorageHash = xxhashAsHex('Multisigs', 128);
+	const multisigAddressHash = xxhashAsHex(
+		keyring.decodeAddress(Ss58MultiSigAddress),
+		64
 	);
-  await delay(10000);
-  
-  // 2. Make an RPC request to call the `state_getStorage` endpoint
-  const multisigStorage = await rpcToLocalNode('state_getStorage', [multisigStorageKey]);
+	const multisigCallHash = blake2AsHex(callTxHashMulti, 128);
+	const multisigStorageKey =
+		multisigModuleHash +
+		multisigStorageHash.substring(2) +
+		multisigAddressHash.substring(2) +
+		multisigAddressInHex +
+		multisigCallHash.substring(2) +
+		callTxHashMulti.substring(2);
 
-  console.log("\nMultisig Storage result: \n", multisigStorage);
-
-  // 3. Create the Multisig type using the registry and the result from our RPC call to `state_getStorage`
-  const multisigType = registry.createType("PalletMultisigMultisig", multisigStorage);
-
-  // Retrieving the Multisig's index
-  const multisigCallIndex = multisigType.when.index.toNumber();
-
-  // Retrieving the Multisig's height
-  const multisigCallHeight = multisigType.when.height.toNumber();
-
-	// Added a delay of 15 seconds so that the asMulti call
-	// is included in next blocks
+	// Adding a delay so that the storage is updated with the Multisig info
 	console.log(
-		`\nWaiting 15 seconds before calling the asMulti ` +
-			`so it is included in next blocks\n`
+		`${PURPLE}Waiting 10 seconds ${RESET}before making the RPC request ` +
+			`so that the Storage is updated with the Multisig info.`
+	);
+	await delay(10000);
+
+	// 2. Make an RPC request to call the `state_getStorage` endpoint
+	const multisigStorage = await rpcToLocalNode('state_getStorage', [
+		multisigStorageKey,
+	]);
+
+	console.log('\nMultisig Storage result: \n', multisigStorage);
+
+	// 3. Create the Multisig type using the registry and the result from our RPC call to `state_getStorage`
+	const multisigType = registry.createType(
+		'PalletMultisigMultisig',
+		multisigStorage
+	);
+
+	// Retrieving the Multisig's index
+	const multisigCallIndex = multisigType.when.index.toNumber();
+
+	// Retrieving the Multisig's height
+	const multisigCallHeight = multisigType.when.height.toNumber();
+
+	// Added a delay of 15 seconds so that the `asMulti` call
+	// is included in a future block.
+	console.log(
+		`\n${PURPLE}Waiting 15 seconds ${RESET}before submitting the \`asMulti\` ` +
+			`transaction so that it is included in a future block.`
 	);
 	await delay(15000);
 
-	console.log(`\nCalling AsMulti`);
-	console.log(`=================`);
+	console.log(`\n${CYAN}Calling asMulti`);
+	console.log(`===============${RESET}`);
 	// Calling the `asMulti` function by passing a "hardcoded" value in the
 	// index of the `maybeTimepoint` argument.
 	// Since this example is run in a controlled environment, we already
@@ -531,7 +574,9 @@ async function main(): Promise<void> {
 
 	// Derive the tx hash of a signed transaction offline.
 	const expectedTxHashAsMulti = construct.txHash(txAsMulti);
-	console.log(`\nExpected Tx Hash of asMulti: ${expectedTxHashAsMulti}`);
+	console.log(
+		`\nExpected Tx Hash of the \`asMulti\` call \t: ${expectedTxHashAsMulti}`
+	);
 
 	// Send the tx to the node. Again, since `txwrapper` is offline-only, this
 	// operation should be handled externally. Here, we just send a JSONRPC
@@ -539,7 +584,10 @@ async function main(): Promise<void> {
 	const actualTxHashAsMulti = await rpcToLocalNode('author_submitExtrinsic', [
 		txAsMulti,
 	]);
-	console.log(`Actual Tx Hash of asMulti: ${actualTxHashAsMulti}`);
+	console.log(
+		`Actual Tx Hash of the ${GREEN}\`asMulti\`${RESET} call \t: ` +
+			`${GREEN}${actualTxHashAsMulti}${RESET}`
+	);
 
 	// Decode a signed payload.
 	const txInfoAsMulti = decode(unsignedTxAsMulti, {
@@ -547,7 +595,7 @@ async function main(): Promise<void> {
 		registry,
 	});
 	console.log(
-		`\nDecoded Transaction asMulti\n` +
+		`\nDecoded Transaction of \`asMulti\`\n` +
 			`  Call of unsignedTXMulti: ${txInfoAsMulti.method.args.call}\n` +
 			`  Threshold of unsignedTXMulti: ${txInfoAsMulti.method.args.threshold}\n`
 	);
