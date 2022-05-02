@@ -43,7 +43,7 @@ const THRESHOLD_FOR_MULTISIG = 2;
 
 const signatories = ['Alice', 'Bob', 'Charlie'];
 
-// The `delay` function that will be used before the `asMulti` call.
+// The `delay` function that will be called before making the RPC request.
 function delay(ms: number) {
 	return new Promise((resolve) => setTimeout(resolve, ms));
 }
@@ -441,7 +441,7 @@ async function main(): Promise<void> {
 
 	// In the following lines we dynamically retrieve the timepoint of the
 	// `approveAsMulti` call from the Multisig storage so we can later pass it as an argument in the `asMulti` call.
-  // To retrieve the timepoint we need to do the following steps :
+	// To retrieve the timepoint we need to do the following steps :
 	// 1. Create the Storage key of our Multisig Storage item
 	// 2. Make an RPC request with the `state_getStorage` endpoint (using the Storage key from step 1) to retrieve the Multisig storage data from the chain. This data is retrieved as a SCALE-encoded byte array.
 	// 3. Create the Multisig type by using the result from the RPC call and the registry
@@ -464,12 +464,12 @@ async function main(): Promise<void> {
 		multisigCallHash.substring(2) +
 		callTxHashMulti.substring(2);
 
-	// Adding a delay so that the storage is updated with the Multisig info
+	// Adding a delay before making the RPC request
 	console.log(
-    `${PURPLE}Waiting 10 seconds ${RESET}before making the RPC request` +
-    ` so that we are sure that the Multisig storage has been updated` +
-    ` with the info from the \`approveAsMulti\` transaction.`
-);
+		`${PURPLE}Waiting 10 seconds ${RESET}before making the RPC request` +
+			` so that we are sure that the Multisig storage has been updated` +
+			` with the info from the \`approveAsMulti\` transaction.`
+	);
 	await delay(10000);
 
 	// 2. Making an RPC request with the `state_getStorage` endpoint to retrieve the SCALE-encoded Multisig storage data from the chain under the key `multisigStorageKey`.
@@ -494,7 +494,7 @@ async function main(): Promise<void> {
 	console.log(`\n${CYAN}Calling asMulti`);
 	console.log(`===============${RESET}`);
 	// Calling the `asMulti` function by passing the dynamically retrieved
-  // timepoint (from Storage) in the `maybeTimepoint` argument.
+	// timepoint (from Storage) in the `maybeTimepoint` argument.
 	const unsignedTxAsMulti = substrateMethods.multisig.asMulti(
 		{
 			threshold: THRESHOLD_FOR_MULTISIG,
