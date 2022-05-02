@@ -448,7 +448,7 @@ async function main(): Promise<void> {
 	// 4. Get the `height` and `index` of the timepoint by decoding the retrieved data using the Multisig type
 
 	// 1. Creating the Storage key of our Multisig Storage item following the schema below :
-	// Twox128("Multisig") + Twox128("Multisigs") + Twox64(multisigAddress) + multisigAddress + Blake256(multisigCallHash)
+	// Twox128("Multisig") + Twox128("Multisigs") + Twox64(multisigAddress) + multisigAddress + Blake128(multisigCallHash) + multisigCallHash
 	const multisigModuleHash = xxhashAsHex('Multisig', 128);
 	const multisigStorageHash = xxhashAsHex('Multisigs', 128);
 	const multisigAddressHash = xxhashAsHex(
@@ -466,9 +466,10 @@ async function main(): Promise<void> {
 
 	// Adding a delay so that the storage is updated with the Multisig info
 	console.log(
-		`${PURPLE}Waiting 10 seconds ${RESET}before making the RPC request ` +
-			`so that the Storage is updated with the Multisig info.`
-	);
+    `${PURPLE}Waiting 10 seconds ${RESET}before making the RPC request` +
+    ` so that we are sure that the Multisig storage has been updated` +
+    ` with the info from the \`approveAsMulti\` transaction.`
+);
 	await delay(10000);
 
 	// 2. Making an RPC request with the `state_getStorage` endpoint to retrieve the SCALE-encoded Multisig storage data from the chain under the key `multisigStorageKey`.
@@ -478,7 +479,7 @@ async function main(): Promise<void> {
 
 	console.log('\nMultisig Storage result: \n', multisigStorage);
 
-	// 3. Creating the Multisig type using the registry and the result from our RPC call`
+	// 3. Creating the Multisig type using the registry and the result from our RPC call
 	const multisigType = registry.createType(
 		'PalletMultisigMultisig',
 		multisigStorage
@@ -489,15 +490,6 @@ async function main(): Promise<void> {
 
 	// Parsing the Multisig's height
 	const multisigCallHeight = multisigType.when.height.toNumber();
-
-	// Added a delay of 15 seconds so that the `asMulti` call
-	// is included in a future block since the `approveAsMulti`
-  // and the `asMulti` calls cannot be in the same block.
-	console.log(
-		`\n${PURPLE}Waiting 15 seconds ${RESET}before submitting the \`asMulti\` ` +
-			`transaction so that it is included in a future block.`
-	);
-	await delay(15000);
 
 	console.log(`\n${CYAN}Calling asMulti`);
 	console.log(`===============${RESET}`);
