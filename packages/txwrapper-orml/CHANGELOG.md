@@ -3,6 +3,59 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.3](https://github.com/paritytech/txwrapper-core/compare/v2.0.2...v2.0.3) (2022-04-21)
+
+**Note:** Version bump only for package @substrate/txwrapper-orml
+
+
+
+
+
+## [2.0.2](https://github.com/paritytech/txwrapper-core/compare/v2.0.1...v2.0.2) (2022-04-13)
+
+**Note:** Version bump only for package @substrate/txwrapper-orml
+
+
+
+
+
+# [2.0.0](https://github.com/paritytech/txwrapper-core/compare/v1.7.0...v2.0.0) (2022-04-06)
+
+
+### Bug Fixes
+
+* **changelog:** deprecate 1.7.0, and remove 1.6.0 ([#205](https://github.com/paritytech/txwrapper-core/issues/205)) ([cec26b1](https://github.com/paritytech/txwrapper-core/commit/cec26b12e56a07d37c0e7213d07c4a411264c269))
+
+
+
+
+
+# [1.7.0](https://github.com/paritytech/txwrapper-core/compare/v1.5.9...v1.7.0) (2022-04-06)
+
+## !Warning Deprecated: Please refer to v2.0.0 for this release
+
+**Note:** Version bump only for package @substrate/txwrapper-orml
+
+
+
+
+
+## [1.5.9](https://github.com/paritytech/txwrapper-core/compare/v1.5.8...v1.5.9) (2022-03-30)
+
+**Note:** Version bump only for package @substrate/txwrapper-orml
+
+
+
+
+
+## [1.5.8](https://github.com/paritytech/txwrapper-core/compare/v1.5.7...v1.5.8) (2022-03-24)
+
+**Note:** Version bump only for package @substrate/txwrapper-orml
+
+
+
+
+
 ## [1.5.7](https://github.com/paritytech/txwrapper-core/compare/v1.5.6...v1.5.7) (2022-03-15)
 
 **Note:** Version bump only for package @substrate/txwrapper-orml

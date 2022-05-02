@@ -3,6 +3,73 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.3](https://github.com/paritytech/txwrapper-core/compare/v2.0.2...v2.0.3) (2022-04-21)
+
+
+### Bug Fixes
+
+* **deps:** update pjs api ([#210](https://github.com/paritytech/txwrapper-core/issues/210)) ([3e4c3ee](https://github.com/paritytech/txwrapper-core/commit/3e4c3eef4a0e385efed98c1c8774f50175f3d9f4))
+
+
+
+
+
+## [2.0.2](https://github.com/paritytech/txwrapper-core/compare/v2.0.1...v2.0.2) (2022-04-13)
+
+
+### Bug Fixes
+
+* **deps:** update pjs common, api, expand resolutions, adjust polkadot js example value ([#209](https://github.com/paritytech/txwrapper-core/issues/209)) ([9f57e18](https://github.com/paritytech/txwrapper-core/commit/9f57e1855ac5205b31da2a9fe67f24f0560d03a0))
+
+
+
+
+
+# [2.0.0](https://github.com/paritytech/txwrapper-core/compare/v1.7.0...v2.0.0) (2022-04-06)
+
+
+### Bug Fixes
+
+* **changelog:** deprecate 1.7.0, and remove 1.6.0 ([#205](https://github.com/paritytech/txwrapper-core/issues/205)) ([cec26b1](https://github.com/paritytech/txwrapper-core/commit/cec26b12e56a07d37c0e7213d07c4a411264c269))
+
+
+
+
+
+# [1.7.0](https://github.com/paritytech/txwrapper-core/compare/v1.5.9...v1.7.0) (2022-04-06)
+
+## !Warning Deprecated: Please refer to v2.0.0 for this release
+
+### Bug Fixes
+
+* **deps:** update polkadot-js api, apps-config, networks ([#203](https://github.com/paritytech/txwrapper-core/issues/203)) ([088c6ca](https://github.com/paritytech/txwrapper-core/commit/088c6caaf31aee7261c0cc71f5afb639d2b80286))
+
+
+
+
+
+## [1.5.9](https://github.com/paritytech/txwrapper-core/compare/v1.5.8...v1.5.9) (2022-03-30)
+
+
+### Bug Fixes
+
+* **deps:** update polkadot-js deps ([#199](https://github.com/paritytech/txwrapper-core/issues/199)) ([14c4cc8](https://github.com/paritytech/txwrapper-core/commit/14c4cc87673ecb0735e17f3e7fd21fe90bae321b))
+
+
+
+
+
+## [1.5.8](https://github.com/paritytech/txwrapper-core/compare/v1.5.7...v1.5.8) (2022-03-24)
+
+
+### Bug Fixes
+
+* **bug:** fix handling eraPeriod when it is equal to zero ([#195](https://github.com/paritytech/txwrapper-core/issues/195)) ([3cc7bf3](https://github.com/paritytech/txwrapper-core/commit/3cc7bf3e63f1e88d231454a98307afe4ab798b27))
+
+
+
+
+
 ## [1.5.7](https://github.com/paritytech/txwrapper-core/compare/v1.5.6...v1.5.7) (2022-03-15)
 
 **Note:** Version bump only for package @substrate/txwrapper-core

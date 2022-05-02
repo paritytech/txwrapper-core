@@ -88,7 +88,7 @@ async function main(): Promise<void> {
 	 */
 	const unsigned = methods.balances.transferKeepAlive(
 		{
-			value: '90071992547409910',
+			value: '10000000000',
 			dest: '14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3', // Bob
 		},
 		{

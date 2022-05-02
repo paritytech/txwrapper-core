@@ -96,17 +96,7 @@ $ yarn dedupe
 
 2. Checkout a branch `name-update-deps`.
 
-3. Make sure to update the resolutions inside of the `package.json` to match polkadot-js [here](https://github.com/polkadot-js/apps/blob/master/package.json).
-    **note**: Remove any carets ("^") from the versions of packages in the `"resolutions"` section of the `package.json` file. This is just for extra safety, and removes any concern around SemVer issues.
-
-4. Ensure we have the latest polkadot-js dependencies by running the command below. If all packages are already up to date you may skip to the "Publishing" section below.
-    **Note:** what follows assumes `yarn` at version 2.4.2 or above.
-
-    ```bash
-    yarn up "@polkadot/*"
-    yarn up "@polkadot/apps-config@beta"
-    yarn
-    ```
+3. In order to update all the polkadot-js dependencies and resolutions, run `yarn update-pjs-deps && yarn`.
 
 5. Ensure there are no issues by running the following commands. If any type errors occur due to the updated dependencies, please file an issue [here](https://github.com/paritytech/txwrapper-core/issues).
 
@@ -138,7 +128,7 @@ This libraries release process uses Lerna, and the following below is required t
     yarn run test
     ```
 
-4. Deploy the new release.
+4. Deploy the new release. It is important to note there will be a step that asks you to confirm whether or not the version bump is correct. Please confirm with the maintainers the suggested versions are correct.
 
     ```bash
     yarn run deploy

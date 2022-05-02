@@ -28,7 +28,7 @@ retains up to `history_depth` eras of reward information.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/staking/payoutStakers.ts:19](https://github.com/paritytech/txwrapper-core/blob/a0283d9/packages/txwrapper-substrate/src/methods/staking/payoutStakers.ts#L19)
+[txwrapper-substrate/src/methods/staking/payoutStakers.ts:19](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-substrate/src/methods/staking/payoutStakers.ts#L19)
 
 ___
 
@@ -41,4 +41,4 @@ The Stash account of a _validator._ Their nominators, up to, the maximum
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/staking/payoutStakers.ts:14](https://github.com/paritytech/txwrapper-core/blob/a0283d9/packages/txwrapper-substrate/src/methods/staking/payoutStakers.ts#L14)
+[txwrapper-substrate/src/methods/staking/payoutStakers.ts:14](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-substrate/src/methods/staking/payoutStakers.ts#L14)

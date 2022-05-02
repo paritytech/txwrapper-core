@@ -1,6 +1,8 @@
 /**
  * @ignore
  */ /** */
+import { hexToNumber } from '@polkadot/util';
+
 import {
 	DecodedUnsignedTx,
 	OptionsWithMeta,
@@ -18,12 +20,16 @@ export function decodeUnsignedTx(
 	unsigned: UnsignedTransaction,
 	options: OptionsWithMeta
 ): DecodedUnsignedTx {
-	const { metadataRpc, registry, asCallsOnlyArg } = options;
+	const { metadataRpc, registry, asCallsOnlyArg, isImmortalEra } = options;
 
 	registry.setMetadata(createMetadata(registry, metadataRpc, asCallsOnlyArg));
 
 	const methodCall = registry.createType('Call', unsigned.method);
 	const method = toTxMethod(registry, methodCall);
+
+	const eraPeriod = isImmortalEra
+		? hexToNumber(registry.createType('ImmortalEra', unsigned.era).toHex())
+		: registry.createType('MortalEra', unsigned.era).period.toNumber();
 
 	return {
 		address: unsigned.address,
@@ -31,7 +37,7 @@ export function decodeUnsignedTx(
 		blockNumber: registry
 			.createType('BlockNumber', unsigned.blockNumber)
 			.toNumber(),
-		eraPeriod: registry.createType('MortalEra', unsigned.era).period.toNumber(),
+		eraPeriod,
 		genesisHash: unsigned.genesisHash,
 		metadataRpc,
 		method,

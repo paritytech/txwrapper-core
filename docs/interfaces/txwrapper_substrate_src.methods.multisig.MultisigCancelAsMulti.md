@@ -27,17 +27,17 @@ The hash of the call to be executed.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/multisig/cancelAsMulti.ts:21](https://github.com/paritytech/txwrapper-core/blob/a0283d9/packages/txwrapper-substrate/src/methods/multisig/cancelAsMulti.ts#L21)
+[txwrapper-substrate/src/methods/multisig/cancelAsMulti.ts:21](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-substrate/src/methods/multisig/cancelAsMulti.ts#L21)
 
 ___
 
 ### timepoint
 
-• **timepoint**: `Timepoint`
+• **timepoint**: [`Timepoint`](../modules/txwrapper_substrate_src._internal_.md#timepoint)
 
 The timepoint (block number and transaction index) of the first approval
 transaction for this dispatch.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/multisig/cancelAsMulti.ts:17](https://github.com/paritytech/txwrapper-core/blob/a0283d9/packages/txwrapper-substrate/src/methods/multisig/cancelAsMulti.ts#L17)
+[txwrapper-substrate/src/methods/multisig/cancelAsMulti.ts:17](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-substrate/src/methods/multisig/cancelAsMulti.ts#L17)
