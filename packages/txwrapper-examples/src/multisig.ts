@@ -471,7 +471,7 @@ async function main(): Promise<void> {
 	);
 	await delay(10000);
 
-	// 2. Making an RPC request to call the `state_getStorage` endpoint
+	// 2. Making an RPC request with the `state_getStorage` endpoint to retrieve the SCALE-encoded Multisig storage data from the chain under the key `multisigStorageKey`.
 	const multisigStorage = await rpcToLocalNode('state_getStorage', [
 		multisigStorageKey,
 	]);
