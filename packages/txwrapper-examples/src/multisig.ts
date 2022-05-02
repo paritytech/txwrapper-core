@@ -478,7 +478,7 @@ async function main(): Promise<void> {
 
 	console.log('\nMultisig Storage result: \n', multisigStorage);
 
-	// 3. Creating the Multisig type using the registry and the result from our RPC call to `state_getStorage`
+	// 3. Creating the Multisig type using the registry and the result from our RPC call`
 	const multisigType = registry.createType(
 		'PalletMultisigMultisig',
 		multisigStorage
