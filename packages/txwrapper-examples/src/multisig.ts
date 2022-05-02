@@ -487,7 +487,7 @@ async function main(): Promise<void> {
 	// Retrieving the Multisig's index
 	const multisigCallIndex = multisigType.when.index.toNumber();
 
-	// Retrieving the Multisig's height
+	// Parsing the Multisig's height
 	const multisigCallHeight = multisigType.when.height.toNumber();
 
 	// Added a delay of 15 seconds so that the `asMulti` call
