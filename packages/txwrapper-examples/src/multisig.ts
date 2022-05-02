@@ -485,7 +485,7 @@ async function main(): Promise<void> {
 		multisigStorage
 	);
 
-	// Retrieving the Multisig's index
+	// Parsing the Multisig's index
 	const multisigCallIndex = multisigType.when.index.toNumber();
 
 	// Parsing the Multisig's height
