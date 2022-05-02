@@ -16,7 +16,8 @@
     "build": "yarn build:workspace",
     "polkadot": "node lib/polkadot",
     "polkadotBatchAll": "node lib/polkadotBatchAll",
-    "mandala": "node lib/mandala"
+    "mandala": "node lib/mandala",
+    "multisig": "node lib/multisig"
   },
   "dependencies": {
     "@polkadot/api": "8.2.1",
