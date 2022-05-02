@@ -443,7 +443,7 @@ async function main(): Promise<void> {
 	// Multisig call so we can later pass it as an argument in the `asMulti` call.
   // To retrieve the timepoint we need to do the following steps :
 	// 1. Create the Storage key of our Multisig Storage item
-	// 2. Make an RPC request to call the `state_getStorage` endpoint (using the Storage key from step 1)
+	// 2. Make an RPC request with the `state_getStorage` endpoint (using the Storage key from step 1) to retrieve the Multisig storage data from the chain. This data is retrieved as a SCALE-encoded byte array.
 	// 3. Create the Multisig type by using the result from the RPC call and the registry
 	// 4. Get the `height` and `index` of the timepoint of our Multisig call from the Multisig type
 
