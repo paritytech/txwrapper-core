@@ -445,7 +445,7 @@ async function main(): Promise<void> {
 	// 1. Create the Storage key of our Multisig Storage item
 	// 2. Make an RPC request with the `state_getStorage` endpoint (using the Storage key from step 1) to retrieve the Multisig storage data from the chain. This data is retrieved as a SCALE-encoded byte array.
 	// 3. Create the Multisig type by using the result from the RPC call and the registry
-	// 4. Get the `height` and `index` of the timepoint of our Multisig call from the Multisig type
+	// 4. Get the `height` and `index` of the timepoint by decoding the retrieved data using the Multisig type
 
 	// 1. Creating the Storage key of our Multisig Storage item following the schema below :
 	// Twox128("Multisig") + Twox128("Multisigs") + Twox64(multisigAddress) + multisigAddress + Blake256(multisigCallHash)
