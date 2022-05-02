@@ -440,7 +440,7 @@ async function main(): Promise<void> {
 	);
 
 	// In the following lines we dynamically retrieve the timepoint of the
-	// Multisig call so we can later pass it as an argument in the `asMulti` call.
+	// `approveAsMulti` call from the Multisig storage so we can later pass it as an argument in the `asMulti` call.
   // To retrieve the timepoint we need to do the following steps :
 	// 1. Create the Storage key of our Multisig Storage item
 	// 2. Make an RPC request with the `state_getStorage` endpoint (using the Storage key from step 1) to retrieve the Multisig storage data from the chain. This data is retrieved as a SCALE-encoded byte array.
