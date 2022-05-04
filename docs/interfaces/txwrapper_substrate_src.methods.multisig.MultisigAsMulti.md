@@ -27,7 +27,7 @@ The call to be executed as a SCALE encoded hex string.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/multisig/asMulti.ts:15](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-substrate/src/methods/multisig/asMulti.ts#L15)
+[txwrapper-substrate/src/methods/multisig/asMulti.ts:15](https://github.com/paritytech/txwrapper-core/blob/54903b8/packages/txwrapper-substrate/src/methods/multisig/asMulti.ts#L15)
 
 ___
 
@@ -42,4 +42,4 @@ removed from storage once the call is executed.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/multisig/asMulti.ts:22](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-substrate/src/methods/multisig/asMulti.ts#L22)
+[txwrapper-substrate/src/methods/multisig/asMulti.ts:22](https://github.com/paritytech/txwrapper-core/blob/54903b8/packages/txwrapper-substrate/src/methods/multisig/asMulti.ts#L22)

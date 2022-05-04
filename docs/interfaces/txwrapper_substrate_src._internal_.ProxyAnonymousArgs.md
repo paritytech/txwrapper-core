@@ -29,7 +29,7 @@ Will generally be zero.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/proxy/anonymous.ts:20](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-substrate/src/methods/proxy/anonymous.ts#L20)
+[txwrapper-substrate/src/methods/proxy/anonymous.ts:20](https://github.com/paritytech/txwrapper-core/blob/54903b8/packages/txwrapper-substrate/src/methods/proxy/anonymous.ts#L20)
 
 ___
 
@@ -43,7 +43,7 @@ want to use `0`.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/proxy/anonymous.ts:26](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-substrate/src/methods/proxy/anonymous.ts#L26)
+[txwrapper-substrate/src/methods/proxy/anonymous.ts:26](https://github.com/paritytech/txwrapper-core/blob/54903b8/packages/txwrapper-substrate/src/methods/proxy/anonymous.ts#L26)
 
 ___
 
@@ -57,4 +57,4 @@ allow for maximum flexibility. (`ProxyType` variants vary by runtime.)
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/proxy/anonymous.ts:15](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-substrate/src/methods/proxy/anonymous.ts#L15)
+[txwrapper-substrate/src/methods/proxy/anonymous.ts:15](https://github.com/paritytech/txwrapper-core/blob/54903b8/packages/txwrapper-substrate/src/methods/proxy/anonymous.ts#L15)

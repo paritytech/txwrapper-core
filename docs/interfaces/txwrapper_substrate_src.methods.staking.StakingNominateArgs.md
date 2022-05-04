@@ -29,4 +29,4 @@ Warning: This provides no checks as to whether these targets are actual validato
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/staking/nominate.ts:16](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-substrate/src/methods/staking/nominate.ts#L16)
+[txwrapper-substrate/src/methods/staking/nominate.ts:16](https://github.com/paritytech/txwrapper-core/blob/54903b8/packages/txwrapper-substrate/src/methods/staking/nominate.ts#L16)

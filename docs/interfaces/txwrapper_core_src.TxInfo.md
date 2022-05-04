@@ -42,7 +42,7 @@ The ss-58 encoded address of the sending account.
 
 #### Defined in
 
-[txwrapper-core/src/types/method.ts:71](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-core/src/types/method.ts#L71)
+[txwrapper-core/src/types/method.ts:71](https://github.com/paritytech/txwrapper-core/blob/54903b8/packages/txwrapper-core/src/types/method.ts#L71)
 
 ___
 
@@ -58,7 +58,7 @@ The checkpoint hash of the block, in hex.
 
 #### Defined in
 
-[txwrapper-core/src/types/method.ts:75](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-core/src/types/method.ts#L75)
+[txwrapper-core/src/types/method.ts:75](https://github.com/paritytech/txwrapper-core/blob/54903b8/packages/txwrapper-core/src/types/method.ts#L75)
 
 ___
 
@@ -74,7 +74,7 @@ The checkpoint block number (u32), in hex.
 
 #### Defined in
 
-[txwrapper-core/src/types/method.ts:79](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-core/src/types/method.ts#L79)
+[txwrapper-core/src/types/method.ts:79](https://github.com/paritytech/txwrapper-core/blob/54903b8/packages/txwrapper-core/src/types/method.ts#L79)
 
 ___
 
@@ -93,7 +93,7 @@ the `blockHash` field, in number of blocks. Defaults to 64 blocks.
 
 #### Defined in
 
-[txwrapper-core/src/types/method.ts:86](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-core/src/types/method.ts#L86)
+[txwrapper-core/src/types/method.ts:86](https://github.com/paritytech/txwrapper-core/blob/54903b8/packages/txwrapper-core/src/types/method.ts#L86)
 
 ___
 
@@ -109,7 +109,7 @@ The genesis hash of the chain, in hex.
 
 #### Defined in
 
-[txwrapper-core/src/types/method.ts:90](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-core/src/types/method.ts#L90)
+[txwrapper-core/src/types/method.ts:90](https://github.com/paritytech/txwrapper-core/blob/54903b8/packages/txwrapper-core/src/types/method.ts#L90)
 
 ___
 
@@ -126,7 +126,7 @@ call `state_getMetadata`.
 
 #### Defined in
 
-[txwrapper-core/src/types/method.ts:95](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-core/src/types/method.ts#L95)
+[txwrapper-core/src/types/method.ts:95](https://github.com/paritytech/txwrapper-core/blob/54903b8/packages/txwrapper-core/src/types/method.ts#L95)
 
 ___
 
@@ -136,7 +136,7 @@ ___
 
 #### Defined in
 
-[txwrapper-core/src/types/method.ts:50](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-core/src/types/method.ts#L50)
+[txwrapper-core/src/types/method.ts:50](https://github.com/paritytech/txwrapper-core/blob/54903b8/packages/txwrapper-core/src/types/method.ts#L50)
 
 ___
 
@@ -152,7 +152,7 @@ The nonce for this transaction.
 
 #### Defined in
 
-[txwrapper-core/src/types/method.ts:99](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-core/src/types/method.ts#L99)
+[txwrapper-core/src/types/method.ts:99](https://github.com/paritytech/txwrapper-core/blob/54903b8/packages/txwrapper-core/src/types/method.ts#L99)
 
 ___
 
@@ -168,7 +168,7 @@ The current spec version of the runtime.
 
 #### Defined in
 
-[txwrapper-core/src/types/method.ts:103](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-core/src/types/method.ts#L103)
+[txwrapper-core/src/types/method.ts:103](https://github.com/paritytech/txwrapper-core/blob/54903b8/packages/txwrapper-core/src/types/method.ts#L103)
 
 ___
 
@@ -186,7 +186,7 @@ The tip for this transaction, in hex.
 
 #### Defined in
 
-[txwrapper-core/src/types/method.ts:109](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-core/src/types/method.ts#L109)
+[txwrapper-core/src/types/method.ts:109](https://github.com/paritytech/txwrapper-core/blob/54903b8/packages/txwrapper-core/src/types/method.ts#L109)
 
 ___
 
@@ -202,4 +202,4 @@ The current transaction version for the runtime.
 
 #### Defined in
 
-[txwrapper-core/src/types/method.ts:113](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-core/src/types/method.ts#L113)
+[txwrapper-core/src/types/method.ts:113](https://github.com/paritytech/txwrapper-core/blob/54903b8/packages/txwrapper-core/src/types/method.ts#L113)

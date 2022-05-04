@@ -5,6 +5,7 @@ Tools for FRAME chain builders to publish chain specific offline transaction gen
 ## Table of contents
 
 - [Overview](#overview)
+- [Modules](#modules)
 - [End user examples](packages/txwrapper-examples/README.md)
 - [Chain builder guide](CHAIN_BUILDER.md)
 - [Develop, contribute, and maintain](#develop-contribute-and-maintain)
@@ -29,6 +30,12 @@ For example, those looking to construct a transaction offline on Polkadot would 
 
 - [@substrate/txwrapper-example](/packages/txwrapper-examples/README.md) Usage examples including how to construct, sign, and decode an extrinsic with @substrate/txwrapper-polkadot.
 - [@substrate/txwrapper-template](/packages/txwrapper-template/README.md) Template package for chain builders.
+
+## Modules
+
+- [txwrapper-core/src](modules/txwrapper_core_src.md)
+- [txwrapper-polkadot/src](modules/txwrapper_polkadot_src.md)
+- [txwrapper-substrate/src](modules/txwrapper_substrate_src.md)
 
 ## End user examples
 
