@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/paritytech/txwrapper-core/compare/v2.0.3...v3.0.0) (2022-05-04)
+
+
+### Bug Fixes
+
+* **deps:** update pjs api ([#212](https://github.com/paritytech/txwrapper-core/issues/212)) ([e876a42](https://github.com/paritytech/txwrapper-core/commit/e876a42af8041b006fb43c30f6ecd03e9aac164a))
+* **deps:** update pjs deps ([#214](https://github.com/paritytech/txwrapper-core/issues/214)) ([43753e6](https://github.com/paritytech/txwrapper-core/commit/43753e699e3d98d5f20bbb68e32e6d98181aa5a5))
+* **example:** add a multisig example ([#196](https://github.com/paritytech/txwrapper-core/issues/196)) ([17f766f](https://github.com/paritytech/txwrapper-core/commit/17f766f4419eb3801ce9ece6c6b9784b169be89c))
+* update substrate-js-dev, add update-pjs-script ([#211](https://github.com/paritytech/txwrapper-core/issues/211)) ([0fe1ed4](https://github.com/paritytech/txwrapper-core/commit/0fe1ed463f641762372cea0a8b02a16f7feea348))
+
+
+
+
+
 ## [2.0.3](https://github.com/paritytech/txwrapper-core/compare/v2.0.2...v2.0.3) (2022-04-21)
 
 
