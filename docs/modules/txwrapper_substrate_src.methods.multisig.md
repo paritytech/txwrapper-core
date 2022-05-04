@@ -47,7 +47,7 @@ NOTE: If this is the final approval, you must use `as_multi` instead.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/multisig/approveAsMulti.ts:51](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-substrate/src/methods/multisig/approveAsMulti.ts#L51)
+[txwrapper-substrate/src/methods/multisig/approveAsMulti.ts:51](https://github.com/paritytech/txwrapper-core/blob/54903b8/packages/txwrapper-substrate/src/methods/multisig/approveAsMulti.ts#L51)
 
 ___
 
@@ -85,7 +85,7 @@ may be found in the deposited `MultisigExecuted` event.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/multisig/asMulti.ts:46](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-substrate/src/methods/multisig/asMulti.ts#L46)
+[txwrapper-substrate/src/methods/multisig/asMulti.ts:46](https://github.com/paritytech/txwrapper-core/blob/54903b8/packages/txwrapper-substrate/src/methods/multisig/asMulti.ts#L46)
 
 ___
 
@@ -110,4 +110,4 @@ for this operation will be unreserved on success.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/multisig/cancelAsMulti.ts:32](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-substrate/src/methods/multisig/cancelAsMulti.ts#L32)
+[txwrapper-substrate/src/methods/multisig/cancelAsMulti.ts:32](https://github.com/paritytech/txwrapper-core/blob/54903b8/packages/txwrapper-substrate/src/methods/multisig/cancelAsMulti.ts#L32)

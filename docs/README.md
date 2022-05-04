@@ -7,6 +7,7 @@ Tools for FRAME chain builders to publish chain specific offline transaction gen
 ## Table of contents
 
 - [Overview](#overview)
+- [Modules](#modules)
 - [End user examples](packages/txwrapper-examples/README.md)
 - [Chain builder guide](CHAIN_BUILDER.md)
 - [Develop, contribute, and maintain](#develop-contribute-and-maintain)
@@ -31,6 +32,12 @@ For example, those looking to construct a transaction offline on Polkadot would 
 
 - [@substrate/txwrapper-example](/packages/txwrapper-examples/README.md) Usage examples including how to construct, sign, and decode an extrinsic with @substrate/txwrapper-polkadot.
 - [@substrate/txwrapper-template](/packages/txwrapper-template/README.md) Template package for chain builders.
+
+## Modules
+
+- [txwrapper-core/src](modules/txwrapper_core_src.md)
+- [txwrapper-polkadot/src](modules/txwrapper_polkadot_src.md)
+- [txwrapper-substrate/src](modules/txwrapper_substrate_src.md)
 
 ## End user examples
 
@@ -98,17 +105,7 @@ $ yarn dedupe
 
 2. Checkout a branch `name-update-deps`.
 
-3. Make sure to update the resolutions inside of the `package.json` to match polkadot-js [here](https://github.com/polkadot-js/apps/blob/master/package.json).
-    **note**: Remove any carets ("^") from the versions of packages in the `"resolutions"` section of the `package.json` file. This is just for extra safety, and removes any concern around SemVer issues.
-
-4. Ensure we have the latest polkadot-js dependencies by running the command below. If all packages are already up to date you may skip to the "Publishing" section below.
-    **Note:** what follows assumes `yarn` at version 2.4.2 or above.
-
-    ```bash
-    yarn up "@polkadot/*"
-    yarn up "@polkadot/apps-config@beta"
-    yarn
-    ```
+3. In order to update all the polkadot-js dependencies and resolutions, run `yarn update-pjs-deps && yarn`.
 
 5. Ensure there are no issues by running the following commands. If any type errors occur due to the updated dependencies, please file an issue [here](https://github.com/paritytech/txwrapper-core/issues).
 

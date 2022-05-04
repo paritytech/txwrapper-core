@@ -34,7 +34,7 @@ Note: When creating an Immortal tx, the blockHash should be set as the genesis h
 
 #### Defined in
 
-[txwrapper-core/src/types/method.ts:132](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-core/src/types/method.ts#L132)
+[txwrapper-core/src/types/method.ts:132](https://github.com/paritytech/txwrapper-core/blob/54903b8/packages/txwrapper-core/src/types/method.ts#L132)
 
 ___
 
@@ -46,4 +46,4 @@ The type registry of the runtime.
 
 #### Defined in
 
-[txwrapper-core/src/types/method.ts:124](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-core/src/types/method.ts#L124)
+[txwrapper-core/src/types/method.ts:124](https://github.com/paritytech/txwrapper-core/blob/54903b8/packages/txwrapper-core/src/types/method.ts#L124)

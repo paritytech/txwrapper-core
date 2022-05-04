@@ -27,7 +27,7 @@ The recipient of the transfer.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/balances/transferAll.ts:13](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-substrate/src/methods/balances/transferAll.ts#L13)
+[txwrapper-substrate/src/methods/balances/transferAll.ts:13](https://github.com/paritytech/txwrapper-core/blob/54903b8/packages/txwrapper-substrate/src/methods/balances/transferAll.ts#L13)
 
 ___
 
@@ -42,4 +42,4 @@ keep the sender account alive (true).
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/balances/transferAll.ts:21](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-substrate/src/methods/balances/transferAll.ts#L21)
+[txwrapper-substrate/src/methods/balances/transferAll.ts:21](https://github.com/paritytech/txwrapper-core/blob/54903b8/packages/txwrapper-substrate/src/methods/balances/transferAll.ts#L21)

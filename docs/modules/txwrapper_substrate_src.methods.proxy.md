@@ -47,7 +47,7 @@ Register a proxy account for the sender that is able to make calls on its behalf
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/proxy/addProxy.ts:32](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-substrate/src/methods/proxy/addProxy.ts#L32)
+[txwrapper-substrate/src/methods/proxy/addProxy.ts:32](https://github.com/paritytech/txwrapper-core/blob/54903b8/packages/txwrapper-substrate/src/methods/proxy/addProxy.ts#L32)
 
 ___
 
@@ -84,7 +84,7 @@ The dispatch origin for this call must be _Signed_ and a proxy of `real`.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/proxy/announce.ts:40](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-substrate/src/methods/proxy/announce.ts#L40)
+[txwrapper-substrate/src/methods/proxy/announce.ts:40](https://github.com/paritytech/txwrapper-core/blob/54903b8/packages/txwrapper-substrate/src/methods/proxy/announce.ts#L40)
 
 ___
 
@@ -116,7 +116,7 @@ Fails if there are insufficient funds to pay for deposit.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/proxy/anonymous.ts:44](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-substrate/src/methods/proxy/anonymous.ts#L44)
+[txwrapper-substrate/src/methods/proxy/anonymous.ts:44](https://github.com/paritytech/txwrapper-core/blob/54903b8/packages/txwrapper-substrate/src/methods/proxy/anonymous.ts#L44)
 
 ___
 
@@ -149,7 +149,7 @@ account whose `anonymous` call has corresponding parameters.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/proxy/killAnonymous.ts:49](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-substrate/src/methods/proxy/killAnonymous.ts#L49)
+[txwrapper-substrate/src/methods/proxy/killAnonymous.ts:49](https://github.com/paritytech/txwrapper-core/blob/54903b8/packages/txwrapper-substrate/src/methods/proxy/killAnonymous.ts#L49)
 
 ___
 
@@ -173,7 +173,7 @@ Dispatch the given `call` from an account for which the sender is authorized.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/proxy/proxy.ts:33](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-substrate/src/methods/proxy/proxy.ts#L33)
+[txwrapper-substrate/src/methods/proxy/proxy.ts:33](https://github.com/paritytech/txwrapper-core/blob/54903b8/packages/txwrapper-substrate/src/methods/proxy/proxy.ts#L33)
 
 ___
 
@@ -202,7 +202,7 @@ The dispatch origin for this call must be _Signed_.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/proxy/proxyAnnounced.ts:41](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-substrate/src/methods/proxy/proxyAnnounced.ts#L41)
+[txwrapper-substrate/src/methods/proxy/proxyAnnounced.ts:41](https://github.com/paritytech/txwrapper-core/blob/54903b8/packages/txwrapper-substrate/src/methods/proxy/proxyAnnounced.ts#L41)
 
 ___
 
@@ -226,7 +226,7 @@ Remove the given announcement of a delegate and return the deposit. Made by the 
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/proxy/rejectAnnouncement.ts:27](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-substrate/src/methods/proxy/rejectAnnouncement.ts#L27)
+[txwrapper-substrate/src/methods/proxy/rejectAnnouncement.ts:27](https://github.com/paritytech/txwrapper-core/blob/54903b8/packages/txwrapper-substrate/src/methods/proxy/rejectAnnouncement.ts#L27)
 
 ___
 
@@ -250,7 +250,7 @@ Unregister all proxy accounts for the sender.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/proxy/removeProxies.ts:15](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-substrate/src/methods/proxy/removeProxies.ts#L15)
+[txwrapper-substrate/src/methods/proxy/removeProxies.ts:15](https://github.com/paritytech/txwrapper-core/blob/54903b8/packages/txwrapper-substrate/src/methods/proxy/removeProxies.ts#L15)
 
 ___
 
@@ -274,4 +274,4 @@ Unregister a proxy account for the sender.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/proxy/removeProxy.ts:17](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-substrate/src/methods/proxy/removeProxy.ts#L17)
+[txwrapper-substrate/src/methods/proxy/removeProxy.ts:17](https://github.com/paritytech/txwrapper-core/blob/54903b8/packages/txwrapper-substrate/src/methods/proxy/removeProxy.ts#L17)

@@ -29,4 +29,4 @@ call `state_getMetadata`.
 
 #### Defined in
 
-[txwrapper-core/src/types/method.ts:61](https://github.com/paritytech/txwrapper-core/blob/9387f90/packages/txwrapper-core/src/types/method.ts#L61)
+[txwrapper-core/src/types/method.ts:61](https://github.com/paritytech/txwrapper-core/blob/54903b8/packages/txwrapper-core/src/types/method.ts#L61)
