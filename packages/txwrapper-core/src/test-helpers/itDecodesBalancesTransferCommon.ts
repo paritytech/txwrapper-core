@@ -1,9 +1,10 @@
-import { TEST_BASE_TX_INFO, TEST_METHOD_ARGS } from '../../../test-helpers';
+import { TEST_BASE_TX_INFO, TEST_METHOD_ARGS } from '@substrate/txwrapper-dev';
+
 import {
 	DecodedSignedTx,
 	DecodedSigningPayload,
 	DecodedUnsignedTx,
-} from '../../../types';
+} from '../types';
 
 /**
  * Information common to all decoded balances transfers used for testing.

@@ -1,10 +1,8 @@
-// Various metadata related constants and registry creator used for testing and
-// and also for consumption.
-
 import { TypeRegistry } from '@polkadot/types';
 import { getSpecTypes } from '@polkadot/types-known';
 
-import { getRegistryBase } from '../core';
+import { polkadotV9122MetadataHex } from '../metadata/polkadot/polkadotV9122MetadataHex';
+import { mockGetRegistryBase } from './mockGetRegistry';
 
 /**
  * Get the Polkadot type registry for a given spec version for testing purposes
@@ -16,7 +14,7 @@ export function getRegistryPolkadot(
 	specVersion: number,
 	metadataRpc: `0x${string}`
 ): TypeRegistry {
-	return getRegistryBase({
+	return mockGetRegistryBase({
 		chainProperties: {
 			ss58Format: 0,
 			tokenDecimals: 10,
@@ -31,3 +29,11 @@ export function getRegistryPolkadot(
 		metadataRpc,
 	});
 }
+
+/**
+ * Polkadot v9122 TypeRegistry
+ */
+export const polkadotRegistryV9122 = getRegistryPolkadot(
+	9122,
+	polkadotV9122MetadataHex
+);

@@ -9,6 +9,12 @@
       "@substrate/txwrapper-core/*": [
         "txwrapper-core/src/*"
       ],
+      "@substrate/txwrapper-dev": [
+        "txwrapper-dev/src"
+      ],
+      "@substrate/txwrapper-dev/*": [
+        "txwrapper-dev/src/*"
+      ],
       "@substrate/txwrapper-examples": [
         "txwrapper-examples/src"
       ],

@@ -1,6 +1,6 @@
 import { allNetworks as substrateSS58Registry } from '@polkadot/networks';
 
-import { ChainProperties } from '../types';
+import { ChainProperties } from '../mock-types';
 
 /**
  * This similar method to txwrapper-registry is used here to

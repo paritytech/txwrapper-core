@@ -1,7 +1,7 @@
 import {
 	itHasCorrectBaseTxInfo,
 	TEST_BASE_TX_INFO,
-} from '@substrate/txwrapper-core';
+} from '@substrate/txwrapper-dev';
 
 import { MANDALA_722_TEST_OPTIONS, TEST_METHOD_ARGS } from '../../test-helpers';
 import { transfer } from './transfer';

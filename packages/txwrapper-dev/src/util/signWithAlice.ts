@@ -1,8 +1,8 @@
 import { Keyring } from '@polkadot/api';
 import { cryptoWaitReady } from '@polkadot/util-crypto';
 
-import { metadataRpc } from './constants';
-import { getRegistryPolkadot } from './getRegistryPolkadot';
+import { metadataRpc } from '../metadata/static/staticV3-1-1';
+import { getRegistryPolkadot } from '../registries';
 
 /**
  * Sign a payload with seed `//Alice`.

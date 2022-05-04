@@ -1,13 +1,14 @@
 import {
-	balancesTransfer,
 	POLKADOT_25_TEST_OPTIONS,
 	TEST_BASE_TX_INFO,
 	TEST_METHOD_ARGS,
-} from '../../test-helpers';
+} from '@substrate/txwrapper-dev';
+
+import { balancesTransfer } from '../../test-helpers';
+import { itDecodesBalancesTransferCommon } from '../../test-helpers';
 import { DecodedSigningPayload } from '../../types';
 import { construct } from '..';
 import { decodeSigningPayload } from './decodeSigningPayload';
-import { itDecodesBalancesTransferCommon } from './test-helpers';
 
 export function itDecodesSigningPayloadBalancesTransfer(
 	decoded: DecodedSigningPayload

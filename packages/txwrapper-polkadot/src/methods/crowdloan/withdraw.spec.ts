@@ -1,7 +1,7 @@
 import {
 	itHasCorrectBaseTxInfo,
 	TEST_BASE_TX_INFO,
-} from '@substrate/txwrapper-core';
+} from '@substrate/txwrapper-dev';
 
 import {
 	TEST_METHOD_ARGS,

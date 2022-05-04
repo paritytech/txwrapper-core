@@ -1,13 +1,13 @@
 import { Metadata, TypeRegistry } from '@polkadot/types';
-
 import {
-	balancesTransfer,
 	POLKADOT_25_TEST_OPTIONS,
 	POLKADOT_9122_TEST_OPTIONS,
 	POLKADOT_9122_TEST_OPTIONS_CALLS_ONLY,
 	TEST_BASE_TX_INFO,
 	TEST_METHOD_ARGS,
-} from '../../test-helpers/';
+} from '@substrate/txwrapper-dev';
+
+import { balancesTransfer } from '../../test-helpers';
 import { createEra, defineMethod, MethodErrorMessages } from './defineMethod';
 
 describe('defineMethod', () => {

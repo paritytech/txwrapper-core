@@ -1,8 +1,10 @@
 import { Metadata } from '@polkadot/types';
 import { MetadataVersioned } from '@polkadot/types/metadata/MetadataVersioned';
+import {
+	polkadotRegistryV9122,
+	polkadotV9122MetadataHex,
+} from '@substrate/txwrapper-dev';
 
-import { polkadotV9122MetadataHex } from '../../test-helpers/metadata/polkadotV9122MetadataHex';
-import { polkadotRegistryV9122 } from '../../test-helpers/registries';
 import { createMetadata, createMetadataUnmemoized } from './createMetadata';
 
 describe('createMetadata', () => {

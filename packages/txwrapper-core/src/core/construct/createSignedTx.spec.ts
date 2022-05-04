@@ -3,7 +3,8 @@ import {
 	signWithAlice,
 	TEST_BASE_TX_INFO,
 	TEST_METHOD_ARGS,
-} from '../../test-helpers';
+} from '@substrate/txwrapper-dev';
+
 import { balancesTransfer } from '../../test-helpers';
 import { createSignedTx } from './createSignedTx';
 import { createSigningPayload } from './createSigningPayload';

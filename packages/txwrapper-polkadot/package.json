@@ -20,5 +20,8 @@
   "dependencies": {
     "@substrate/txwrapper-core": "^2.0.3",
     "@substrate/txwrapper-substrate": "^2.0.3"
+  },
+  "devDependencies": {
+    "@substrate/txwrapper-dev": "^0.1.0"
   }
 }

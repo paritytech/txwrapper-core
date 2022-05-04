@@ -1,4 +1,5 @@
-import { PolkadotSS58Format } from '../../test-helpers';
+import { PolkadotSS58Format } from '@substrate/txwrapper-dev';
+
 import { deriveAddress } from './deriveAddress';
 
 describe('deriveAddress', () => {

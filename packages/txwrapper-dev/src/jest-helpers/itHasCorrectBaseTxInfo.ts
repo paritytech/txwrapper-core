@@ -1,5 +1,5 @@
-import { UnsignedTransaction } from '../types';
-import { TEST_BASE_TX_INFO } from './constants';
+import { TEST_BASE_TX_INFO } from '../constants';
+import { UnsignedTransaction } from '../mock-types';
 
 /**
  * Test helper to test that all base tx information is correctly populated.
