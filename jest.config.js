@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-const { pathsToModuleNameMapper } = require('ts-jest/utils');
+const { pathsToModuleNameMapper } = require('ts-jest');
 // Path aliases from tsconfig.json
 const {
 	compilerOptions: { paths },
