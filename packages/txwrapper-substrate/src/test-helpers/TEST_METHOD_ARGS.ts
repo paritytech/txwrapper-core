@@ -160,7 +160,8 @@ export const TEST_METHOD_ARGS = {
 				height: 123,
 				index: 3,
 			},
-			callHash: '0x0500306721211d5404bd9da88e02043',
+			callHash:
+				'0x804b66bc425a85fecc2a575b797dc043618ff5b8fb189a2ccc9d04148024742a',
 		},
 		approveAsMulti: {
 			threshold: 2,
@@ -173,7 +174,8 @@ export const TEST_METHOD_ARGS = {
 				height: 123,
 				index: 3,
 			},
-			callHash: '0x0500306721211d5404bd9da88e02043',
+			callHash:
+				'0xd4e2732526969517357298ac70357e6cfa78b6ce2282b55de4143168667f4f49',
 			maxWeight: '90071992547409910',
 		},
 		asMulti: {
