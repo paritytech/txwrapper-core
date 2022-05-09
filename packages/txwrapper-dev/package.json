@@ -1,23 +1,23 @@
 {
-    "name": "@substrate/txwrapper-dev",
-    "version": "3.0.0",
-    "author": "Parity Technologies <admin@parity.io>",
-    "description": "Core components for creating a txwrapper lib.",
-    "license": "Apache-2.0",
-    "main": "lib/index.js",
-    "publishConfig": {
-        "access": "public"
-    },
-    "repository": "https://github.com/paritytech/txwrapper-core",
-    "bugs": "https://github.com/paritytech/txwrapper-core/issues",
-    "homepage": "https://github.com/paritytech/txwrapper-core/tree/master/packages/txwrapper-dev#readme",
-    "engine": {
-        "node": ">=14"
-    },
-    "scripts": {
-        "build": "yarn build:workspace"
-    },
-    "dependencies": {
-        "memoizee": "0.4.15"
-    }
+  "name": "@substrate/txwrapper-dev",
+  "version": "3.0.0",
+  "author": "Parity Technologies <admin@parity.io>",
+  "description": "Core components for creating a txwrapper lib.",
+  "license": "Apache-2.0",
+  "main": "lib/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": "https://github.com/paritytech/txwrapper-core",
+  "bugs": "https://github.com/paritytech/txwrapper-core/issues",
+  "homepage": "https://github.com/paritytech/txwrapper-core/tree/master/packages/txwrapper-dev#readme",
+  "engine": {
+    "node": ">=14"
+  },
+  "scripts": {
+    "build": "yarn build:workspace"
+  },
+  "dependencies": {
+    "memoizee": "0.4.15"
+  }
 }
