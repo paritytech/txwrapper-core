@@ -1,0 +1,13 @@
+version: 2
+
+updates:
+  - package-ecosystem: github-actions
+    directory: '/'
+    schedule:
+      interval: daily
+      time: '03:00'
+      timezone: Europe/Berlin
+  - package-ecosystem: npm
+    directory: '/'
+    schedule:
+      interval: 'daily'
