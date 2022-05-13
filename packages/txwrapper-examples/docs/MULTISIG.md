@@ -1,7 +1,7 @@
 # Multisig example
 
 ## Description
-The multisig example code shows how to create a Multisig account and execute a transaction from this newly created account to send some funds to another address.
+The multisig example code shows how to create a Multisig account, fund it and execute a transaction from this newly created account to send some funds to another address.
 
 ### Steps
 More specifically the code implements the following steps :
