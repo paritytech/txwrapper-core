@@ -72,6 +72,7 @@ export function getRegistry({
 	metadataRpc,
 	properties,
 	asCallsOnlyArg,
+	asSpecifiedCallsOnlyV14,
 }: GetRegistryOpts): TypeRegistry {
 	// Polkadot, kusama, and westend have known types in the default polkadot-js registry. If we are
 	// dealing with another network, use the apps-config types to fill the registry.
@@ -85,5 +86,6 @@ export function getRegistry({
 		specTypes: getSpecTypes(registry, chainName, specName, specVersion),
 		metadataRpc,
 		asCallsOnlyArg,
+		asSpecifiedCallsOnlyV14,
 	});
 }
