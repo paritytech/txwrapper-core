@@ -1,4 +1,4 @@
-# Examples for end users of txwrapper-* libraries
+# Polkadot example
 
 ## How to use `txwrapper-polkadot`
 
