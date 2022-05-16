@@ -43,7 +43,7 @@ const findLookupIdsInTypeDef = (
 	if (def.isComposite) {
 		def.asComposite.fields.forEach((f) => {
 			const lookupId = f.type.toString();
-			if (!set.has(lookupId)) set.add(lookupId);
+			set.add(lookupId);
 		});
 	}
 
@@ -53,7 +53,7 @@ const findLookupIdsInTypeDef = (
 		def.asVariant.variants.forEach((v) => {
 			v.fields.forEach((f) => {
 				const lookupId = f.type.toString();
-				if (!set.has(lookupId)) set.add(lookupId);
+				set.add(lookupId);
 			});
 		});
 	}
@@ -61,20 +61,20 @@ const findLookupIdsInTypeDef = (
 	// Sequence types
 	if (def.isSequence) {
 		const lookupId = def.asSequence.type.toString();
-		if (!set.has(lookupId)) set.add(lookupId);
+		set.add(lookupId);
 	}
 
 	// Array types
 	if (def.isArray) {
 		const lookupId = def.asArray.type.toString();
-		if (!set.has(lookupId)) set.add(lookupId);
+		set.add(lookupId);
 	}
 
 	// Tuple types
 	if (def.isTuple) {
 		def.asTuple.forEach((id) => {
 			const lookupId = id.toString();
-			if (!set.has(lookupId)) set.add(lookupId);
+			set.add(lookupId);
 		});
 	}
 
@@ -83,20 +83,20 @@ const findLookupIdsInTypeDef = (
 	if (def.isPrimitive) {
 		// for primitive types, we only need the root id. If this isnt necessary
 		// we can take the id out of the params too.
-		if (!set.has(id.toString())) set.add(id.toString());
+		set.add(id.toString());
 	}
 
 	// Compact types
 	if (def.isCompact) {
 		const lookupId = def.asCompact.type.toString();
-		if (!set.has(lookupId)) set.add(lookupId);
+		set.add(lookupId);
 	}
 
 	if (def.isBitSequence) {
 		const bitStoreLookupId = def.asBitSequence.bitStoreType.toString();
 		const bitOrderLookupId = def.asBitSequence.bitOrderType.toString();
-		if (!set.has(bitStoreLookupId)) set.add(bitStoreLookupId);
-		if (!set.has(bitOrderLookupId)) set.add(bitOrderLookupId);
+		set.add(bitStoreLookupId);
+		set.add(bitOrderLookupId);
 	}
 };
 
@@ -116,14 +116,14 @@ const findLookupIdsInPallet = (
 		storageVec.forEach((item) => {
 			if (item.type.isPlain) {
 				const lookupId = item.type.asPlain.toString();
-				if (!set.has(lookupId)) set.add(lookupId);
+				set.add(lookupId);
 			}
 
 			if (item.type.isMap) {
 				// Each key and value is represented as a lookupId
 				const { key, value } = item.type.asMap;
-				if (!set.has(key.toString())) set.add(key.toString());
-				if (!set.has(value.toString())) set.add(value.toString());
+				set.add(key.toString());
+				set.add(value.toString());
 			}
 		});
 	}
@@ -131,27 +131,27 @@ const findLookupIdsInPallet = (
 	// Call type
 	if (pallet.calls.isSome) {
 		const lookupId = pallet.calls.unwrap().type.toString();
-		if (!set.has(lookupId)) set.add(lookupId);
+		set.add(lookupId);
 	}
 
 	// Event type
 	if (pallet.events.isSome) {
 		const lookupId = pallet.events.unwrap();
-		if (!set.has(lookupId)) set.add(lookupId.toString());
+		set.add(lookupId.toString());
 	}
 
 	// Constant type
 	if (pallet.constants) {
 		pallet.constants.forEach((c) => {
 			const lookupId = c.type.toString();
-			if (!set.has(lookupId)) set.add(lookupId);
+			set.add(lookupId);
 		});
 	}
 
 	// Error type
 	if (pallet.errors.isSome) {
 		const lookupId = pallet.errors.unwrap().type.toString();
-		if (!set.has(lookupId)) set.add(lookupId);
+		set.add(lookupId);
 	}
 };
 
@@ -190,9 +190,7 @@ export const toSpecifiedCallsOnlyV14 = (
 	// Find all types needed for the extrinsics
 	typeHashMap.add(latestMetadata.extrinsic.type.toString());
 	latestMetadata.extrinsic.signedExtensions.forEach((val) => {
-		if (!typeHashMap.has(val.type.toString())) {
-			typeHashMap.add(val.type.toString());
-		}
+		typeHashMap.add(val.type.toString());
 	});
 
 	// Add all necessary type id's to the set from each type definition
