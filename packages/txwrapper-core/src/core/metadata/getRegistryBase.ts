@@ -25,7 +25,7 @@ export interface GetRegistryBaseArgs {
 	/**
 	 * Used to reduce the metadata size by only having specific inputted calls,
 	 * and reducing the types to only whats needed to construct the transaction.
-	 * 
+	 *
 	 * An Array which contains all the pallets that should be included in the metadata
 	 */
 	asSpecifiedCallsOnlyV14?: string[];
