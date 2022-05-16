@@ -2,6 +2,6 @@
   "extends": "../../tsconfig.build.json",
   "compilerOptions": {
     "outDir": "./lib",
-    "rootDir": "./src",
+    "rootDirs": ["./multisig/src", "./polkadot/src", "./polkadotBatchAll/src"],
   }
 }

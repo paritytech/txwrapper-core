@@ -16,7 +16,7 @@ import {
 	PolkadotSS58Format,
 } from '@substrate/txwrapper-polkadot';
 
-import { rpcToLocalNode, signWith } from './util';
+import { rpcToLocalNode, signWith } from '../../common/util';
 
 /**
  * Entry point of the script. This script assumes a Polkadot node is running
@@ -45,14 +45,13 @@ async function main(): Promise<void> {
 		'state_getRuntimeVersion'
 	);
 
-	// Create Polkadot's type registry.
 	/**
 	 * Create Polkadot's type registry.
 	 *
 	 * When creating a type registry, it accepts a `asCallsOnlyArg` option which
 	 * defaults to false. When true this will minimize the size of the metadata
-	 * to only include the calls. This removes storage, events, etc. This will
-	 * ultimately decrease the size of the unsigned transaction.
+	 * to only include the calls. This removes storage, events, etc.
+	 * This will ultimately decrease the size of the metadata stored in the registry.
 	 *
 	 * Example:
 	 *
@@ -73,105 +72,43 @@ async function main(): Promise<void> {
 		metadataRpc,
 	});
 
-	// Metadata and type defintion registry used to create the calls
-	const optionsWithMeta = {
-		registry: registry,
-		metadataRpc: registry.metadata.toHex(),
-	};
-
-	// Arguments for 12 balances transferKeepAlive
-	const transferArgs = [
+	/**
+	 * Now we can create our `balances.transferKeepAlive` unsigned tx. The following
+	 * function takes the above data as arguments, so it can be performed offline
+	 * if desired.
+	 *
+	 * In order to decrease the size of the metadata returned in the unsigned transaction,
+	 * be sure to include `asCallsOnlyArg` field in the options.
+	 * Ex:
+	 * {
+	 *   metadataRpc,
+	 *   registry,
+	 *   asCallsOnlyArg: true
+	 * }
+	 */
+	const unsigned = methods.balances.transferKeepAlive(
 		{
-			dest: '5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty',
-			value: '1000000000',
-		},
-		{
-			dest: '5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty',
-			value: '2000000000',
-		},
-		{
-			dest: '5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty',
-			value: '3000000000',
-		},
-		{
-			dest: '5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty',
-			value: '4000000000',
-		},
-		{
-			dest: '5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty',
-			value: '5000000000',
-		},
-		{
-			dest: '5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty',
-			value: '6000000000',
-		},
-		{
-			dest: '5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty',
-			value: '7000000000',
-		},
-		{
-			dest: '5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty',
-			value: '8000000000',
-		},
-		{
-			dest: '5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty',
-			value: '9000000000',
-		},
-		{
-			dest: '5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty',
 			value: '10000000000',
+			dest: '14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3', // Bob
 		},
 		{
-			dest: '5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty',
-			value: '11000000000',
-		},
-		{
-			dest: '5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty',
-			value: '12000000000',
-		},
-	];
-
-	// Create an array of `balances.transferKeepAlive().method`s. We just need the
-	// `method` from the `UnsignedTransaction` that txwrapper methods returns.
-	const txMethods = transferArgs.map((args) => {
-		const txInfo = methods.balances.transferKeepAlive(
-			args,
-			{
-				address: alice.address,
-				blockHash: blockHash,
-				blockNumber: block.header.number,
-				genesisHash,
-				metadataRpc,
-				nonce: 0,
-				specVersion: specVersion,
-				transactionVersion,
-			},
-			optionsWithMeta
-		);
-
-		return txInfo.method;
-	});
-
-	// Create a `utility.batchAll` unsigned tx. Based on the above code the
-	// `calls` argument for `batchAll` (`txMethods`)  is of type
-	// `Array<UnsignedTransaction.method>`
-	const unsigned = methods.utility.batchAll(
-		{
-			calls: txMethods,
-		},
-		{
-			address: alice.address,
-			blockHash: blockHash,
-			blockNumber: block.header.number,
+			address: deriveAddress(alice.publicKey, PolkadotSS58Format.polkadot),
+			blockHash,
+			blockNumber: registry
+				.createType('BlockNumber', block.header.number)
+				.toNumber(),
+			eraPeriod: 64,
 			genesisHash,
 			metadataRpc,
-			nonce: 0,
-			specVersion: specVersion,
+			nonce: 0, // Assuming this is Alice's first tx on the chain
+			specVersion,
 			tip: 0,
-			eraPeriod: 64,
 			transactionVersion,
 		},
-		optionsWithMeta
+		{
+			metadataRpc,
+			registry,
+		}
 	);
 
 	// Decode an unsigned transaction.
@@ -180,9 +117,9 @@ async function main(): Promise<void> {
 		registry,
 	});
 	console.log(
-		`\nDecoded Transaction\n  calls: ${JSON.stringify(
-			decodedUnsigned.method.args.calls
-		)}\n`
+		`\nDecoded Transaction\n  To: ${
+			(decodedUnsigned.method.args.dest as { id: string })?.id
+		}\n` + `  Amount: ${decodedUnsigned.method.args.value}`
 	);
 
 	// Construct the signing payload from an unsigned transaction.
@@ -195,9 +132,9 @@ async function main(): Promise<void> {
 		registry,
 	});
 	console.log(
-		`\nDecoded Transaction\n  calls: ${JSON.stringify(
-			payloadInfo.method.args.calls
-		)}\n`
+		`\nDecoded Transaction\n  To: ${
+			(payloadInfo.method.args.dest as { id: string })?.id
+		}\n` + `  Amount: ${payloadInfo.method.args.value}`
 	);
 
 	// Sign a payload. This operation should be performed on an offline device.
@@ -230,9 +167,9 @@ async function main(): Promise<void> {
 		registry,
 	});
 	console.log(
-		`\nDecoded Transaction\n  calls: ${JSON.stringify(
-			txInfo.method.args.calls
-		)}\n`
+		`\nDecoded Transaction\n  To: ${
+			(txInfo.method.args.dest as { id: string })?.id
+		}\n` + `  Amount: ${txInfo.method.args.value}\n`
 	);
 }
 
