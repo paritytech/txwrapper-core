@@ -220,7 +220,6 @@ export const toSpecifiedCallsOnlyV14 = (
 			])
 		);
 
-	// If we want to minimize the types as well, we need to make sure we take into account the types needed for extrinsics
 	return registry
 		.createTypeUnsafe('MetadataLatest', [
 			{
