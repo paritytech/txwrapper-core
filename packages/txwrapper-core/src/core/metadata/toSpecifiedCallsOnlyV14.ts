@@ -4,7 +4,7 @@ import type {
 	PalletMetadataV14,
 	PortableType,
 } from '@polkadot/types/interfaces/metadata';
-import { Si1LookupTypeId, Si1Type } from '@polkadot/types/interfaces/scaleInfo';
+import { Si1Type } from '@polkadot/types/interfaces/scaleInfo';
 import { Option, Text, u8 } from '@polkadot/types-codec';
 import type { AnyJson, Registry } from '@polkadot/types-codec/types';
 
@@ -32,11 +32,7 @@ const trimDocs = (docs: Text[]): string[] => {
  * @param id
  * @param set
  */
-const findLookupIdsInTypeDef = (
-	type: Si1Type,
-	id: Si1LookupTypeId,
-	set: Set<unknown>
-): void => {
+const findLookupIdsInTypeDef = (type: Si1Type, set: Set<unknown>): void => {
 	const { def } = type;
 
 	// Composite types
@@ -49,7 +45,6 @@ const findLookupIdsInTypeDef = (
 
 	// Variant types
 	if (def.isVariant) {
-		// Can this be more efficient
 		def.asVariant.variants.forEach((v) => {
 			v.fields.forEach((f) => {
 				const lookupId = f.type.toString();
@@ -76,14 +71,6 @@ const findLookupIdsInTypeDef = (
 			const lookupId = id.toString();
 			set.add(lookupId);
 		});
-	}
-
-	// Primitive types
-	// NOTE: This check might not be necessary
-	if (def.isPrimitive) {
-		// for primitive types, we only need the root id. If this isnt necessary
-		// we can take the id out of the params too.
-		set.add(id.toString());
 	}
 
 	// Compact types
@@ -199,7 +186,7 @@ export const toSpecifiedCallsOnlyV14 = (
 	latestMetadata.lookup.types.reverse().forEach(({ id, type }) => {
 		if (typeHashMap.has(id.toString())) {
 			// Traverse the typedef for its required sub types
-			findLookupIdsInTypeDef(type, id, typeHashMap);
+			findLookupIdsInTypeDef(type, typeHashMap);
 		}
 	});
 
