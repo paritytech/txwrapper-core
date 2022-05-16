@@ -196,7 +196,7 @@ export const toSpecifiedCallsOnlyV14 = (
 	});
 
 	// Add all necessary type id's to the set from each type definition
-	// It reverses the array so correctly traverse the types, making sure primitive
+	// It reverses the array too correctly traverse the types, making sure primitive
 	// types are last.
 	latestMetadata.lookup.types.reverse().forEach(({ id, type }) => {
 		if (typeHashMap.has(id.toString())) {
