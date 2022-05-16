@@ -85,6 +85,7 @@ export function getRegistry({
 	metadataRpc,
 	properties,
 	asCallsOnlyArg,
+	asSpecifiedCallsOnlyV14,
 	signedExtensions,
 	userExtensions,
 }: GetRegistryOpts): TypeRegistry {
@@ -105,6 +106,7 @@ export function getRegistry({
 		),
 		metadataRpc,
 		asCallsOnlyArg,
+		asSpecifiedCallsOnlyV14,
 		signedExtensions,
 		userExtensions,
 	});
