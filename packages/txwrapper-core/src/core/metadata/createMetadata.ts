@@ -19,11 +19,11 @@ export function createMetadataUnmemoized(
 	registry: TypeRegistry,
 	metadataRpc: `0x${string}`,
 	asCallsOnlyArg = false,
-	asSpecifiedCallsOnlyV14 = []
+	asSpecifiedCallsOnlyV14?: string[]
 ): Metadata | MetadataVersioned {
 	const metadata = new Metadata(registry, metadataRpc);
 
-	if (asSpecifiedCallsOnlyV14.length) {
+	if (asSpecifiedCallsOnlyV14) {
 		return new MetadataVersioned(registry, {
 			magicNumber: metadata.magicNumber,
 			metadata: registry.createTypeUnsafe('MetadataAll', [
