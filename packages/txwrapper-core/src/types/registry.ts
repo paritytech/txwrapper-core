@@ -31,6 +31,11 @@ export interface GetRegistryOptsCore {
 	 */
 	asCallsOnlyArg?: boolean;
 	/**
+	 * Used to reduce the metadata size by only having specific inputted calls,
+	 * and reducing the types to only whats needed to construct the transaction
+	 */
+	asSpecifiedCallsOnlyV14?: string[];
+	/**
 	 * Array of signedExtensions
 	 */
 	signedExtensions?: string[];
