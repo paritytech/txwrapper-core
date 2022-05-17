@@ -15,8 +15,8 @@ interface ModuleMetadataTrimmed {
 }
 
 /**
- * Trim the docs for a given lookup type.  
- * 
+ * Trim the docs for a given lookup type.
+ *
  * @param docs
  */
 const trimDocs = (docs: Text[]): string[] => {
