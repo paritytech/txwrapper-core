@@ -2,25 +2,21 @@
     "lookup": {
         "types": [
             {
-                "id": 731,
+                "id": 0,
                 "type": {
                     "path": [
-                        "pallet_transaction_payment",
-                        "ChargeTransactionPayment"
+                        "sp_core",
+                        "crypto",
+                        "AccountId32"
                     ],
-                    "params": [
-                        {
-                            "name": "T",
-                            "type": null
-                        }
-                    ],
+                    "params": [],
                     "def": {
                         "composite": {
                             "fields": [
                                 {
                                     "name": null,
-                                    "type": 43,
-                                    "typeName": "BalanceOf<T>",
+                                    "type": 1,
+                                    "typeName": "[u8; 32]",
                                     "docs": []
                                 }
                             ]
@@ -30,13 +26,682 @@
                 }
             },
             {
-                "id": 730,
+                "id": 1,
+                "type": {
+                    "path": [],
+                    "params": [],
+                    "def": {
+                        "array": {
+                            "len": 32,
+                            "type": 2
+                        }
+                    },
+                    "docs": []
+                }
+            },
+            {
+                "id": 2,
+                "type": {
+                    "path": [],
+                    "params": [],
+                    "def": {
+                        "primitive": "U8"
+                    },
+                    "docs": []
+                }
+            },
+            {
+                "id": 4,
+                "type": {
+                    "path": [],
+                    "params": [],
+                    "def": {
+                        "primitive": "U32"
+                    },
+                    "docs": []
+                }
+            },
+            {
+                "id": 6,
+                "type": {
+                    "path": [],
+                    "params": [],
+                    "def": {
+                        "primitive": "U128"
+                    },
+                    "docs": []
+                }
+            },
+            {
+                "id": 10,
+                "type": {
+                    "path": [],
+                    "params": [],
+                    "def": {
+                        "sequence": {
+                            "type": 2
+                        }
+                    },
+                    "docs": []
+                }
+            },
+            {
+                "id": 43,
+                "type": {
+                    "path": [],
+                    "params": [],
+                    "def": {
+                        "compact": {
+                            "type": 6
+                        }
+                    },
+                    "docs": []
+                }
+            },
+            {
+                "id": 70,
+                "type": {
+                    "path": [],
+                    "params": [],
+                    "def": {
+                        "tuple": [
+                            4,
+                            4
+                        ]
+                    },
+                    "docs": []
+                }
+            },
+            {
+                "id": 89,
+                "type": {
+                    "path": [
+                        "polkadot_parachain",
+                        "primitives",
+                        "Id"
+                    ],
+                    "params": [],
+                    "def": {
+                        "composite": {
+                            "fields": [
+                                {
+                                    "name": null,
+                                    "type": 4,
+                                    "typeName": "u32",
+                                    "docs": []
+                                }
+                            ]
+                        }
+                    },
+                    "docs": []
+                }
+            },
+            {
+                "id": 110,
+                "type": {
+                    "path": [
+                        "polkadot_runtime_common",
+                        "auctions",
+                        "pallet",
+                        "Event"
+                    ],
+                    "params": [
+                        {
+                            "name": "T",
+                            "type": null
+                        }
+                    ],
+                    "def": {
+                        "variant": {
+                            "variants": [
+                                {
+                                    "name": "AuctionStarted",
+                                    "fields": [
+                                        {
+                                            "name": null,
+                                            "type": 4,
+                                            "typeName": "AuctionIndex",
+                                            "docs": []
+                                        },
+                                        {
+                                            "name": null,
+                                            "type": 4,
+                                            "typeName": "LeasePeriodOf<T>",
+                                            "docs": []
+                                        },
+                                        {
+                                            "name": null,
+                                            "type": 4,
+                                            "typeName": "T::BlockNumber",
+                                            "docs": []
+                                        }
+                                    ],
+                                    "index": 0,
+                                    "docs": [
+                                        "An auction started. Provides its index and the block number where it will begin to",
+                                        "close and the first lease period of the quadruplet that is auctioned.",
+                                        "`[auction_index, lease_period, ending]`"
+                                    ]
+                                },
+                                {
+                                    "name": "AuctionClosed",
+                                    "fields": [
+                                        {
+                                            "name": null,
+                                            "type": 4,
+                                            "typeName": "AuctionIndex",
+                                            "docs": []
+                                        }
+                                    ],
+                                    "index": 1,
+                                    "docs": [
+                                        "An auction ended. All funds become unreserved. `[auction_index]`"
+                                    ]
+                                },
+                                {
+                                    "name": "Reserved",
+                                    "fields": [
+                                        {
+                                            "name": null,
+                                            "type": 0,
+                                            "typeName": "T::AccountId",
+                                            "docs": []
+                                        },
+                                        {
+                                            "name": null,
+                                            "type": 6,
+                                            "typeName": "BalanceOf<T>",
+                                            "docs": []
+                                        },
+                                        {
+                                            "name": null,
+                                            "type": 6,
+                                            "typeName": "BalanceOf<T>",
+                                            "docs": []
+                                        }
+                                    ],
+                                    "index": 2,
+                                    "docs": [
+                                        "Funds were reserved for a winning bid. First balance is the extra amount reserved.",
+                                        "Second is the total. `[bidder, extra_reserved, total_amount]`"
+                                    ]
+                                },
+                                {
+                                    "name": "Unreserved",
+                                    "fields": [
+                                        {
+                                            "name": null,
+                                            "type": 0,
+                                            "typeName": "T::AccountId",
+                                            "docs": []
+                                        },
+                                        {
+                                            "name": null,
+                                            "type": 6,
+                                            "typeName": "BalanceOf<T>",
+                                            "docs": []
+                                        }
+                                    ],
+                                    "index": 3,
+                                    "docs": [
+                                        "Funds were unreserved since bidder is no longer active. `[bidder, amount]`"
+                                    ]
+                                },
+                                {
+                                    "name": "ReserveConfiscated",
+                                    "fields": [
+                                        {
+                                            "name": null,
+                                            "type": 89,
+                                            "typeName": "ParaId",
+                                            "docs": []
+                                        },
+                                        {
+                                            "name": null,
+                                            "type": 0,
+                                            "typeName": "T::AccountId",
+                                            "docs": []
+                                        },
+                                        {
+                                            "name": null,
+                                            "type": 6,
+                                            "typeName": "BalanceOf<T>",
+                                            "docs": []
+                                        }
+                                    ],
+                                    "index": 4,
+                                    "docs": [
+                                        "Someone attempted to lease the same slot twice for a parachain. The amount is held in reserve",
+                                        "but no parachain slot has been leased.",
+                                        "`[parachain_id, leaser, amount]`"
+                                    ]
+                                },
+                                {
+                                    "name": "BidAccepted",
+                                    "fields": [
+                                        {
+                                            "name": null,
+                                            "type": 0,
+                                            "typeName": "T::AccountId",
+                                            "docs": []
+                                        },
+                                        {
+                                            "name": null,
+                                            "type": 89,
+                                            "typeName": "ParaId",
+                                            "docs": []
+                                        },
+                                        {
+                                            "name": null,
+                                            "type": 6,
+                                            "typeName": "BalanceOf<T>",
+                                            "docs": []
+                                        },
+                                        {
+                                            "name": null,
+                                            "type": 4,
+                                            "typeName": "LeasePeriodOf<T>",
+                                            "docs": []
+                                        },
+                                        {
+                                            "name": null,
+                                            "type": 4,
+                                            "typeName": "LeasePeriodOf<T>",
+                                            "docs": []
+                                        }
+                                    ],
+                                    "index": 5,
+                                    "docs": [
+                                        "A new bid has been accepted as the current winner.",
+                                        "`[who, para_id, amount, first_slot, last_slot]`"
+                                    ]
+                                },
+                                {
+                                    "name": "WinningOffset",
+                                    "fields": [
+                                        {
+                                            "name": null,
+                                            "type": 4,
+                                            "typeName": "AuctionIndex",
+                                            "docs": []
+                                        },
+                                        {
+                                            "name": null,
+                                            "type": 4,
+                                            "typeName": "T::BlockNumber",
+                                            "docs": []
+                                        }
+                                    ],
+                                    "index": 6,
+                                    "docs": [
+                                        "The winning offset was chosen for an auction. This will map into the `Winning` storage map.",
+                                        "`[auction_index, block_number]`"
+                                    ]
+                                }
+                            ]
+                        }
+                    },
+                    "docs": [
+                        "The [event](https://docs.substrate.io/v3/runtime/events-and-errors) emitted\n\t\t\tby this pallet."
+                    ]
+                }
+            },
+            {
+                "id": 116,
+                "type": {
+                    "path": [],
+                    "params": [],
+                    "def": {
+                        "compact": {
+                            "type": 4
+                        }
+                    },
+                    "docs": []
+                }
+            },
+            {
+                "id": 507,
+                "type": {
+                    "path": [
+                        "polkadot_runtime_common",
+                        "auctions",
+                        "pallet",
+                        "Call"
+                    ],
+                    "params": [
+                        {
+                            "name": "T",
+                            "type": null
+                        }
+                    ],
+                    "def": {
+                        "variant": {
+                            "variants": [
+                                {
+                                    "name": "new_auction",
+                                    "fields": [
+                                        {
+                                            "name": "duration",
+                                            "type": 116,
+                                            "typeName": "T::BlockNumber",
+                                            "docs": []
+                                        },
+                                        {
+                                            "name": "lease_period_index",
+                                            "type": 116,
+                                            "typeName": "LeasePeriodOf<T>",
+                                            "docs": []
+                                        }
+                                    ],
+                                    "index": 0,
+                                    "docs": [
+                                        "Create a new auction.",
+                                        "",
+                                        "This can only happen when there isn't already an auction in progress and may only be",
+                                        "called by the root origin. Accepts the `duration` of this auction and the",
+                                        "`lease_period_index` of the initial lease period of the four that are to be auctioned."
+                                    ]
+                                },
+                                {
+                                    "name": "bid",
+                                    "fields": [
+                                        {
+                                            "name": "para",
+                                            "type": 508,
+                                            "typeName": "ParaId",
+                                            "docs": []
+                                        },
+                                        {
+                                            "name": "auction_index",
+                                            "type": 116,
+                                            "typeName": "AuctionIndex",
+                                            "docs": []
+                                        },
+                                        {
+                                            "name": "first_slot",
+                                            "type": 116,
+                                            "typeName": "LeasePeriodOf<T>",
+                                            "docs": []
+                                        },
+                                        {
+                                            "name": "last_slot",
+                                            "type": 116,
+                                            "typeName": "LeasePeriodOf<T>",
+                                            "docs": []
+                                        },
+                                        {
+                                            "name": "amount",
+                                            "type": 43,
+                                            "typeName": "BalanceOf<T>",
+                                            "docs": []
+                                        }
+                                    ],
+                                    "index": 1,
+                                    "docs": [
+                                        "Make a new bid from an account (including a parachain account) for deploying a new",
+                                        "parachain.",
+                                        "",
+                                        "Multiple simultaneous bids from the same bidder are allowed only as long as all active",
+                                        "bids overlap each other (i.e. are mutually exclusive). Bids cannot be redacted.",
+                                        "",
+                                        "- `sub` is the sub-bidder ID, allowing for multiple competing bids to be made by (and",
+                                        "funded by) the same account.",
+                                        "- `auction_index` is the index of the auction to bid on. Should just be the present",
+                                        "value of `AuctionCounter`.",
+                                        "- `first_slot` is the first lease period index of the range to bid on. This is the",
+                                        "absolute lease period index value, not an auction-specific offset.",
+                                        "- `last_slot` is the last lease period index of the range to bid on. This is the",
+                                        "absolute lease period index value, not an auction-specific offset.",
+                                        "- `amount` is the amount to bid to be held as deposit for the parachain should the",
+                                        "bid win. This amount is held throughout the range."
+                                    ]
+                                },
+                                {
+                                    "name": "cancel_auction",
+                                    "fields": [],
+                                    "index": 2,
+                                    "docs": [
+                                        "Cancel an in-progress auction.",
+                                        "",
+                                        "Can only be called by Root origin."
+                                    ]
+                                }
+                            ]
+                        }
+                    },
+                    "docs": [
+                        "Contains one variant per dispatchable that can be called by an extrinsic."
+                    ]
+                }
+            },
+            {
+                "id": 508,
+                "type": {
+                    "path": [],
+                    "params": [],
+                    "def": {
+                        "compact": {
+                            "type": 89
+                        }
+                    },
+                    "docs": []
+                }
+            },
+            {
+                "id": 702,
+                "type": {
+                    "path": [],
+                    "params": [],
+                    "def": {
+                        "tuple": [
+                            0,
+                            89
+                        ]
+                    },
+                    "docs": []
+                }
+            },
+            {
+                "id": 703,
+                "type": {
+                    "path": [],
+                    "params": [],
+                    "def": {
+                        "array": {
+                            "len": 36,
+                            "type": 704
+                        }
+                    },
+                    "docs": []
+                }
+            },
+            {
+                "id": 704,
+                "type": {
+                    "path": [
+                        "Option"
+                    ],
+                    "params": [
+                        {
+                            "name": "T",
+                            "type": 705
+                        }
+                    ],
+                    "def": {
+                        "variant": {
+                            "variants": [
+                                {
+                                    "name": "None",
+                                    "fields": [],
+                                    "index": 0,
+                                    "docs": []
+                                },
+                                {
+                                    "name": "Some",
+                                    "fields": [
+                                        {
+                                            "name": null,
+                                            "type": 705,
+                                            "typeName": null,
+                                            "docs": []
+                                        }
+                                    ],
+                                    "index": 1,
+                                    "docs": []
+                                }
+                            ]
+                        }
+                    },
+                    "docs": []
+                }
+            },
+            {
+                "id": 705,
+                "type": {
+                    "path": [],
+                    "params": [],
+                    "def": {
+                        "tuple": [
+                            0,
+                            89,
+                            6
+                        ]
+                    },
+                    "docs": []
+                }
+            },
+            {
+                "id": 706,
+                "type": {
+                    "path": [
+                        "polkadot_runtime_common",
+                        "auctions",
+                        "pallet",
+                        "Error"
+                    ],
+                    "params": [
+                        {
+                            "name": "T",
+                            "type": null
+                        }
+                    ],
+                    "def": {
+                        "variant": {
+                            "variants": [
+                                {
+                                    "name": "AuctionInProgress",
+                                    "fields": [],
+                                    "index": 0,
+                                    "docs": [
+                                        "This auction is already in progress."
+                                    ]
+                                },
+                                {
+                                    "name": "LeasePeriodInPast",
+                                    "fields": [],
+                                    "index": 1,
+                                    "docs": [
+                                        "The lease period is in the past."
+                                    ]
+                                },
+                                {
+                                    "name": "ParaNotRegistered",
+                                    "fields": [],
+                                    "index": 2,
+                                    "docs": [
+                                        "Para is not registered"
+                                    ]
+                                },
+                                {
+                                    "name": "NotCurrentAuction",
+                                    "fields": [],
+                                    "index": 3,
+                                    "docs": [
+                                        "Not a current auction."
+                                    ]
+                                },
+                                {
+                                    "name": "NotAuction",
+                                    "fields": [],
+                                    "index": 4,
+                                    "docs": [
+                                        "Not an auction."
+                                    ]
+                                },
+                                {
+                                    "name": "AuctionEnded",
+                                    "fields": [],
+                                    "index": 5,
+                                    "docs": [
+                                        "Auction has already ended."
+                                    ]
+                                },
+                                {
+                                    "name": "AlreadyLeasedOut",
+                                    "fields": [],
+                                    "index": 6,
+                                    "docs": [
+                                        "The para is already leased out for part of this range."
+                                    ]
+                                }
+                            ]
+                        }
+                    },
+                    "docs": [
+                        "Custom [dispatch errors](https://docs.substrate.io/v3/runtime/events-and-errors)\n\t\t\tof this pallet."
+                    ]
+                }
+            },
+            {
+                "id": 721,
+                "type": {
+                    "path": [
+                        "sp_runtime",
+                        "generic",
+                        "unchecked_extrinsic",
+                        "UncheckedExtrinsic"
+                    ],
+                    "params": [
+                        {
+                            "name": "Address",
+                            "type": 200
+                        },
+                        {
+                            "name": "Call",
+                            "type": 303
+                        },
+                        {
+                            "name": "Signature",
+                            "type": 515
+                        },
+                        {
+                            "name": "Extra",
+                            "type": 722
+                        }
+                    ],
+                    "def": {
+                        "composite": {
+                            "fields": [
+                                {
+                                    "name": null,
+                                    "type": 10,
+                                    "typeName": null,
+                                    "docs": []
+                                }
+                            ]
+                        }
+                    },
+                    "docs": []
+                }
+            },
+            {
+                "id": 723,
                 "type": {
                     "path": [
                         "frame_system",
                         "extensions",
-                        "check_weight",
-                        "CheckWeight"
+                        "check_non_zero_sender",
+                        "CheckNonZeroSender"
                     ],
                     "params": [
                         {
@@ -53,13 +718,82 @@
                 }
             },
             {
-                "id": 729,
+                "id": 724,
                 "type": {
                     "path": [
                         "frame_system",
                         "extensions",
-                        "check_nonce",
-                        "CheckNonce"
+                        "check_spec_version",
+                        "CheckSpecVersion"
+                    ],
+                    "params": [
+                        {
+                            "name": "T",
+                            "type": null
+                        }
+                    ],
+                    "def": {
+                        "composite": {
+                            "fields": []
+                        }
+                    },
+                    "docs": []
+                }
+            },
+            {
+                "id": 725,
+                "type": {
+                    "path": [
+                        "frame_system",
+                        "extensions",
+                        "check_tx_version",
+                        "CheckTxVersion"
+                    ],
+                    "params": [
+                        {
+                            "name": "T",
+                            "type": null
+                        }
+                    ],
+                    "def": {
+                        "composite": {
+                            "fields": []
+                        }
+                    },
+                    "docs": []
+                }
+            },
+            {
+                "id": 726,
+                "type": {
+                    "path": [
+                        "frame_system",
+                        "extensions",
+                        "check_genesis",
+                        "CheckGenesis"
+                    ],
+                    "params": [
+                        {
+                            "name": "T",
+                            "type": null
+                        }
+                    ],
+                    "def": {
+                        "composite": {
+                            "fields": []
+                        }
+                    },
+                    "docs": []
+                }
+            },
+            {
+                "id": 727,
+                "type": {
+                    "path": [
+                        "frame_system",
+                        "extensions",
+                        "check_mortality",
+                        "CheckMortality"
                     ],
                     "params": [
                         {
@@ -72,8 +806,8 @@
                             "fields": [
                                 {
                                     "name": null,
-                                    "type": 116,
-                                    "typeName": "T::Index",
+                                    "type": 728,
+                                    "typeName": "Era",
                                     "docs": []
                                 }
                             ]
@@ -3423,13 +4157,13 @@
                 }
             },
             {
-                "id": 727,
+                "id": 729,
                 "type": {
                     "path": [
                         "frame_system",
                         "extensions",
-                        "check_mortality",
-                        "CheckMortality"
+                        "check_nonce",
+                        "CheckNonce"
                     ],
                     "params": [
                         {
@@ -3442,8 +4176,8 @@
                             "fields": [
                                 {
                                     "name": null,
-                                    "type": 728,
-                                    "typeName": "Era",
+                                    "type": 116,
+                                    "typeName": "T::Index",
                                     "docs": []
                                 }
                             ]
@@ -3453,13 +4187,13 @@
                 }
             },
             {
-                "id": 726,
+                "id": 730,
                 "type": {
                     "path": [
                         "frame_system",
                         "extensions",
-                        "check_genesis",
-                        "CheckGenesis"
+                        "check_weight",
+                        "CheckWeight"
                     ],
                     "params": [
                         {
@@ -3476,99 +4210,16 @@
                 }
             },
             {
-                "id": 725,
+                "id": 731,
                 "type": {
                     "path": [
-                        "frame_system",
-                        "extensions",
-                        "check_tx_version",
-                        "CheckTxVersion"
+                        "pallet_transaction_payment",
+                        "ChargeTransactionPayment"
                     ],
                     "params": [
                         {
                             "name": "T",
                             "type": null
-                        }
-                    ],
-                    "def": {
-                        "composite": {
-                            "fields": []
-                        }
-                    },
-                    "docs": []
-                }
-            },
-            {
-                "id": 724,
-                "type": {
-                    "path": [
-                        "frame_system",
-                        "extensions",
-                        "check_spec_version",
-                        "CheckSpecVersion"
-                    ],
-                    "params": [
-                        {
-                            "name": "T",
-                            "type": null
-                        }
-                    ],
-                    "def": {
-                        "composite": {
-                            "fields": []
-                        }
-                    },
-                    "docs": []
-                }
-            },
-            {
-                "id": 723,
-                "type": {
-                    "path": [
-                        "frame_system",
-                        "extensions",
-                        "check_non_zero_sender",
-                        "CheckNonZeroSender"
-                    ],
-                    "params": [
-                        {
-                            "name": "T",
-                            "type": null
-                        }
-                    ],
-                    "def": {
-                        "composite": {
-                            "fields": []
-                        }
-                    },
-                    "docs": []
-                }
-            },
-            {
-                "id": 721,
-                "type": {
-                    "path": [
-                        "sp_runtime",
-                        "generic",
-                        "unchecked_extrinsic",
-                        "UncheckedExtrinsic"
-                    ],
-                    "params": [
-                        {
-                            "name": "Address",
-                            "type": 200
-                        },
-                        {
-                            "name": "Call",
-                            "type": 303
-                        },
-                        {
-                            "name": "Signature",
-                            "type": 515
-                        },
-                        {
-                            "name": "Extra",
-                            "type": 722
                         }
                     ],
                     "def": {
@@ -3576,434 +4227,8 @@
                             "fields": [
                                 {
                                     "name": null,
-                                    "type": 10,
-                                    "typeName": null,
-                                    "docs": []
-                                }
-                            ]
-                        }
-                    },
-                    "docs": []
-                }
-            },
-            {
-                "id": 706,
-                "type": {
-                    "path": [
-                        "polkadot_runtime_common",
-                        "auctions",
-                        "pallet",
-                        "Error"
-                    ],
-                    "params": [
-                        {
-                            "name": "T",
-                            "type": null
-                        }
-                    ],
-                    "def": {
-                        "variant": {
-                            "variants": [
-                                {
-                                    "name": "AuctionInProgress",
-                                    "fields": [],
-                                    "index": 0,
-                                    "docs": [
-                                        "This auction is already in progress."
-                                    ]
-                                },
-                                {
-                                    "name": "LeasePeriodInPast",
-                                    "fields": [],
-                                    "index": 1,
-                                    "docs": [
-                                        "The lease period is in the past."
-                                    ]
-                                },
-                                {
-                                    "name": "ParaNotRegistered",
-                                    "fields": [],
-                                    "index": 2,
-                                    "docs": [
-                                        "Para is not registered"
-                                    ]
-                                },
-                                {
-                                    "name": "NotCurrentAuction",
-                                    "fields": [],
-                                    "index": 3,
-                                    "docs": [
-                                        "Not a current auction."
-                                    ]
-                                },
-                                {
-                                    "name": "NotAuction",
-                                    "fields": [],
-                                    "index": 4,
-                                    "docs": [
-                                        "Not an auction."
-                                    ]
-                                },
-                                {
-                                    "name": "AuctionEnded",
-                                    "fields": [],
-                                    "index": 5,
-                                    "docs": [
-                                        "Auction has already ended."
-                                    ]
-                                },
-                                {
-                                    "name": "AlreadyLeasedOut",
-                                    "fields": [],
-                                    "index": 6,
-                                    "docs": [
-                                        "The para is already leased out for part of this range."
-                                    ]
-                                }
-                            ]
-                        }
-                    },
-                    "docs": [
-                        "Custom [dispatch errors](https://docs.substrate.io/v3/runtime/events-and-errors)\n\t\t\tof this pallet."
-                    ]
-                }
-            },
-            {
-                "id": 704,
-                "type": {
-                    "path": [
-                        "Option"
-                    ],
-                    "params": [
-                        {
-                            "name": "T",
-                            "type": 705
-                        }
-                    ],
-                    "def": {
-                        "variant": {
-                            "variants": [
-                                {
-                                    "name": "None",
-                                    "fields": [],
-                                    "index": 0,
-                                    "docs": []
-                                },
-                                {
-                                    "name": "Some",
-                                    "fields": [
-                                        {
-                                            "name": null,
-                                            "type": 705,
-                                            "typeName": null,
-                                            "docs": []
-                                        }
-                                    ],
-                                    "index": 1,
-                                    "docs": []
-                                }
-                            ]
-                        }
-                    },
-                    "docs": []
-                }
-            },
-            {
-                "id": 703,
-                "type": {
-                    "path": [],
-                    "params": [],
-                    "def": {
-                        "array": {
-                            "len": 36,
-                            "type": 704
-                        }
-                    },
-                    "docs": []
-                }
-            },
-            {
-                "id": 702,
-                "type": {
-                    "path": [],
-                    "params": [],
-                    "def": {
-                        "tuple": [
-                            0,
-                            89
-                        ]
-                    },
-                    "docs": []
-                }
-            },
-            {
-                "id": 508,
-                "type": {
-                    "path": [],
-                    "params": [],
-                    "def": {
-                        "compact": {
-                            "type": 89
-                        }
-                    },
-                    "docs": []
-                }
-            },
-            {
-                "id": 507,
-                "type": {
-                    "path": [
-                        "polkadot_runtime_common",
-                        "auctions",
-                        "pallet",
-                        "Call"
-                    ],
-                    "params": [
-                        {
-                            "name": "T",
-                            "type": null
-                        }
-                    ],
-                    "def": {
-                        "variant": {
-                            "variants": [
-                                {
-                                    "name": "new_auction",
-                                    "fields": [
-                                        {
-                                            "name": "duration",
-                                            "type": 116,
-                                            "typeName": "T::BlockNumber",
-                                            "docs": []
-                                        },
-                                        {
-                                            "name": "lease_period_index",
-                                            "type": 116,
-                                            "typeName": "LeasePeriodOf<T>",
-                                            "docs": []
-                                        }
-                                    ],
-                                    "index": 0,
-                                    "docs": [
-                                        "Create a new auction.",
-                                        "",
-                                        "This can only happen when there isn't already an auction in progress and may only be",
-                                        "called by the root origin. Accepts the `duration` of this auction and the",
-                                        "`lease_period_index` of the initial lease period of the four that are to be auctioned."
-                                    ]
-                                },
-                                {
-                                    "name": "bid",
-                                    "fields": [
-                                        {
-                                            "name": "para",
-                                            "type": 508,
-                                            "typeName": "ParaId",
-                                            "docs": []
-                                        },
-                                        {
-                                            "name": "auction_index",
-                                            "type": 116,
-                                            "typeName": "AuctionIndex",
-                                            "docs": []
-                                        },
-                                        {
-                                            "name": "first_slot",
-                                            "type": 116,
-                                            "typeName": "LeasePeriodOf<T>",
-                                            "docs": []
-                                        },
-                                        {
-                                            "name": "last_slot",
-                                            "type": 116,
-                                            "typeName": "LeasePeriodOf<T>",
-                                            "docs": []
-                                        },
-                                        {
-                                            "name": "amount",
-                                            "type": 43,
-                                            "typeName": "BalanceOf<T>",
-                                            "docs": []
-                                        }
-                                    ],
-                                    "index": 1,
-                                    "docs": [
-                                        "Make a new bid from an account (including a parachain account) for deploying a new",
-                                        "parachain.",
-                                        "",
-                                        "Multiple simultaneous bids from the same bidder are allowed only as long as all active",
-                                        "bids overlap each other (i.e. are mutually exclusive). Bids cannot be redacted.",
-                                        "",
-                                        "- `sub` is the sub-bidder ID, allowing for multiple competing bids to be made by (and",
-                                        "funded by) the same account.",
-                                        "- `auction_index` is the index of the auction to bid on. Should just be the present",
-                                        "value of `AuctionCounter`.",
-                                        "- `first_slot` is the first lease period index of the range to bid on. This is the",
-                                        "absolute lease period index value, not an auction-specific offset.",
-                                        "- `last_slot` is the last lease period index of the range to bid on. This is the",
-                                        "absolute lease period index value, not an auction-specific offset.",
-                                        "- `amount` is the amount to bid to be held as deposit for the parachain should the",
-                                        "bid win. This amount is held throughout the range."
-                                    ]
-                                },
-                                {
-                                    "name": "cancel_auction",
-                                    "fields": [],
-                                    "index": 2,
-                                    "docs": [
-                                        "Cancel an in-progress auction.",
-                                        "",
-                                        "Can only be called by Root origin."
-                                    ]
-                                }
-                            ]
-                        }
-                    },
-                    "docs": [
-                        "Contains one variant per dispatchable that can be called by an extrinsic."
-                    ]
-                }
-            },
-            {
-                "id": 116,
-                "type": {
-                    "path": [],
-                    "params": [],
-                    "def": {
-                        "compact": {
-                            "type": 4
-                        }
-                    },
-                    "docs": []
-                }
-            },
-            {
-                "id": 89,
-                "type": {
-                    "path": [
-                        "polkadot_parachain",
-                        "primitives",
-                        "Id"
-                    ],
-                    "params": [],
-                    "def": {
-                        "composite": {
-                            "fields": [
-                                {
-                                    "name": null,
-                                    "type": 4,
-                                    "typeName": "u32",
-                                    "docs": []
-                                }
-                            ]
-                        }
-                    },
-                    "docs": []
-                }
-            },
-            {
-                "id": 70,
-                "type": {
-                    "path": [],
-                    "params": [],
-                    "def": {
-                        "tuple": [
-                            4,
-                            4
-                        ]
-                    },
-                    "docs": []
-                }
-            },
-            {
-                "id": 43,
-                "type": {
-                    "path": [],
-                    "params": [],
-                    "def": {
-                        "compact": {
-                            "type": 6
-                        }
-                    },
-                    "docs": []
-                }
-            },
-            {
-                "id": 10,
-                "type": {
-                    "path": [],
-                    "params": [],
-                    "def": {
-                        "sequence": {
-                            "type": 2
-                        }
-                    },
-                    "docs": []
-                }
-            },
-            {
-                "id": 6,
-                "type": {
-                    "path": [],
-                    "params": [],
-                    "def": {
-                        "primitive": "U128"
-                    },
-                    "docs": []
-                }
-            },
-            {
-                "id": 4,
-                "type": {
-                    "path": [],
-                    "params": [],
-                    "def": {
-                        "primitive": "U32"
-                    },
-                    "docs": []
-                }
-            },
-            {
-                "id": 2,
-                "type": {
-                    "path": [],
-                    "params": [],
-                    "def": {
-                        "primitive": "U8"
-                    },
-                    "docs": []
-                }
-            },
-            {
-                "id": 1,
-                "type": {
-                    "path": [],
-                    "params": [],
-                    "def": {
-                        "array": {
-                            "len": 32,
-                            "type": 2
-                        }
-                    },
-                    "docs": []
-                }
-            },
-            {
-                "id": 0,
-                "type": {
-                    "path": [
-                        "sp_core",
-                        "crypto",
-                        "AccountId32"
-                    ],
-                    "params": [],
-                    "def": {
-                        "composite": {
-                            "fields": [
-                                {
-                                    "name": null,
-                                    "type": 1,
-                                    "typeName": "[u8; 32]",
+                                    "type": 43,
+                                    "typeName": "BalanceOf<T>",
                                     "docs": []
                                 }
                             ]
