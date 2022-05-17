@@ -1,6 +1,6 @@
 {
   "name": "@substrate/txwrapper-registry",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "author": "Parity Technologies <admin@parity.io>",
   "description": "Polkadot-js type registry creation assistants for txwrapper libraries.",
   "license": "Apache-2.0",
@@ -20,6 +20,6 @@
   "dependencies": {
     "@polkadot/apps-config": "0.115.1",
     "@polkadot/networks": "9.2.1",
-    "@substrate/txwrapper-core": "^3.0.2"
+    "@substrate/txwrapper-core": "^3.0.3"
   }
 }
