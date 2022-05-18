@@ -1,3 +1,11 @@
+// Copyright 2022 via polkadot-js/api/packages/types/src/metadata/util/toCallsOnly.js
+//
+// The below functionality that has been converted from polkadot-js are:
+// trimDocs, and ModuleMetadataTrimmed, as well as some of the logic concerning PortableType, and
+// Option<PalletCallMetadataLatest> generation.
+//
+// Source: https://github.com/polkadot-js/api/blob/master/packages/types/src/metadata/util/toCallsOnly.ts
+
 import type {
 	MetadataLatest,
 	PalletCallMetadataLatest,
