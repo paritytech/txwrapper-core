@@ -34,6 +34,14 @@ const trimDocs = (docs: Text[]): string[] => {
 	return firstEmpty === -1 ? strings : strings.slice(0, firstEmpty);
 };
 
+/**
+ * Given a lookupId, see if it exists within the cache, and if it doesn't, add
+ * it to both the cache and stack.
+ *
+ * @param lookupId
+ * @param cache
+ * @param stack
+ */
 const tryAddType = (
 	lookupId: Si1LookupTypeId,
 	cache: Set<unknown>,
