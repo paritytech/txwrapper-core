@@ -251,8 +251,8 @@ export const toSpecifiedCallsOnlyV14 = (
 	 * yet to be found that are necessary.
 	 */
 	while (stack.length > 0) {
-		// Typecast is fine here since the array will never be empty if we are here
-		const item = stack.pop() as string;
+		// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+		const item = stack.pop()!;
 		const idx = parseFloat(item);
 		// A lookup types index in the lookup.types array is the same as their lookup index.
 		const { type } = latestMetadata.lookup.types[idx];
