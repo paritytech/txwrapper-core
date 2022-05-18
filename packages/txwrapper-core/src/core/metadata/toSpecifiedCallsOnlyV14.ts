@@ -12,7 +12,7 @@ import type {
 	PalletMetadataV14,
 	PortableType,
 } from '@polkadot/types/interfaces/metadata';
-import { Si1Type } from '@polkadot/types/interfaces/scaleInfo';
+import { Si1LookupTypeId, Si1Type } from '@polkadot/types/interfaces/scaleInfo';
 import { Option, Text, u8 } from '@polkadot/types-codec';
 import type { AnyJson, Registry } from '@polkadot/types-codec/types';
 
@@ -34,6 +34,18 @@ const trimDocs = (docs: Text[]): string[] => {
 	return firstEmpty === -1 ? strings : strings.slice(0, firstEmpty);
 };
 
+const tryAddType = (
+	lookupId: Si1LookupTypeId,
+	cache: Set<unknown>,
+	stack: string[]
+) => {
+	const lookupStr = lookupId.toString();
+	if (!cache.has(lookupStr)) {
+		cache.add(lookupStr);
+		stack.push(lookupStr);
+	}
+};
+
 /**
  * Given a type definition, a type cache, and a stack, add type id's to each datastructure
  * as necessary.
@@ -52,11 +64,7 @@ const findLookupIdsInTypeDef = (
 	// Composite types
 	if (def.isComposite) {
 		def.asComposite.fields.forEach((f) => {
-			const lookupId = f.type.toString();
-			if (!cache.has(lookupId)) {
-				cache.add(lookupId);
-				stack.push(lookupId);
-			}
+			tryAddType(f.type, cache, stack);
 		});
 	}
 
@@ -64,79 +72,49 @@ const findLookupIdsInTypeDef = (
 	if (def.isVariant) {
 		def.asVariant.variants.forEach((v) => {
 			v.fields.forEach((f) => {
-				const lookupId = f.type.toString();
-				if (!cache.has(lookupId)) {
-					cache.add(lookupId);
-					stack.push(lookupId);
-				}
+				tryAddType(f.type, cache, stack);
 			});
 		});
 	}
 
 	// Sequence types
 	if (def.isSequence) {
-		const lookupId = def.asSequence.type.toString();
-		if (!cache.has(lookupId)) {
-			cache.add(lookupId);
-			stack.push(lookupId);
-		}
+		tryAddType(def.asSequence.type, cache, stack);
 	}
 
 	// Array types
 	if (def.isArray) {
-		const lookupId = def.asArray.type.toString();
-		if (!cache.has(lookupId)) {
-			cache.add(lookupId);
-			stack.push(lookupId);
-		}
+		tryAddType(def.asArray.type, cache, stack);
 	}
 
 	// Tuple types
 	if (def.isTuple) {
 		def.asTuple.forEach((id) => {
-			const lookupId = id.toString();
-			if (!cache.has(lookupId)) {
-				cache.add(lookupId);
-				stack.push(lookupId);
-			}
+			tryAddType(id, cache, stack);
 		});
 	}
 
 	// Compact types
 	if (def.isCompact) {
-		const lookupId = def.asCompact.type.toString();
-		if (!cache.has(lookupId)) {
-			cache.add(lookupId);
-			stack.push(lookupId);
-		}
+		tryAddType(def.asCompact.type, cache, stack);
 	}
 
 	if (def.isBitSequence) {
-		const bitStoreLookupId = def.asBitSequence.bitStoreType.toString();
-		const bitOrderLookupId = def.asBitSequence.bitOrderType.toString();
-		if (!cache.has(bitStoreLookupId)) {
-			cache.add(bitStoreLookupId);
-			stack.push(bitStoreLookupId);
-		}
-		if (!cache.has(bitOrderLookupId)) {
-			cache.add(bitOrderLookupId);
-			stack.push(bitOrderLookupId);
-		}
+		tryAddType(def.asBitSequence.bitStoreType, cache, stack);
+		tryAddType(def.asBitSequence.bitOrderType, cache, stack);
 	}
 };
 
 /**
- * Given a pallet, a type cache, and a stack, add type id's to each datastructure
+ * Given a pallet, store all its type id's in a cache
  * as necessary.
  *
  * @param pallet
  * @param cache
- * @param stack
  */
 const findLookupIdsInPallet = (
 	pallet: PalletMetadataV14,
-	cache: Set<unknown>,
-	stack: string[]
+	cache: Set<unknown>
 ): void => {
 	// Storage types
 	if (pallet.storage.isSome) {
@@ -144,23 +122,14 @@ const findLookupIdsInPallet = (
 		storageVec.forEach((item) => {
 			if (item.type.isPlain) {
 				const lookupId = item.type.asPlain.toString();
-				if (!cache.has(lookupId)) {
-					cache.add(lookupId);
-					stack.push(lookupId);
-				}
+				cache.add(lookupId);
 			}
 
 			if (item.type.isMap) {
 				// Each key and value is represented as a lookupId
 				const { key, value } = item.type.asMap;
-				if (!cache.has(key.toString())) {
-					cache.add(key.toString());
-					stack.push(key.toString());
-				}
-				if (!cache.has(value.toString())) {
-					cache.add(value.toString());
-					stack.push(value.toString());
-				}
+				cache.add(key.toString());
+				cache.add(value.toString());
 			}
 		});
 	}
@@ -168,39 +137,27 @@ const findLookupIdsInPallet = (
 	// Call type
 	if (pallet.calls.isSome) {
 		const lookupId = pallet.calls.unwrap().type.toString();
-		if (!cache.has(lookupId)) {
-			cache.add(lookupId);
-			stack.push(lookupId);
-		}
+		cache.add(lookupId);
 	}
 
 	// Event type
 	if (pallet.events.isSome) {
 		const lookupId = pallet.events.unwrap().type.toString();
-		if (!cache.has(lookupId)) {
-			cache.add(lookupId);
-			stack.push(lookupId);
-		}
+		cache.add(lookupId);
 	}
 
 	// Constant type
 	if (pallet.constants) {
 		pallet.constants.forEach((c) => {
 			const lookupId = c.type.toString();
-			if (!cache.has(lookupId)) {
-				cache.add(lookupId);
-				stack.push(lookupId);
-			}
+			cache.add(lookupId);
 		});
 	}
 
 	// Error type
 	if (pallet.errors.isSome) {
 		const lookupId = pallet.errors.unwrap().type.toString();
-		if (!cache.has(lookupId)) {
-			cache.add(lookupId);
-			stack.push(lookupId);
-		}
+		cache.add(lookupId);
 	}
 };
 
@@ -219,15 +176,13 @@ export const toSpecifiedCallsOnlyV14 = (
 ): AnyJson => {
 	// Stores typeId's as strings
 	const typeCache = new Set();
-	// Stack used to store lookup type ids to iterate over
-	const stack: string[] = [];
 
 	// Strip the calls to only the pallets we want to include, and the initial type index's we want
 	const pallets = latestMetadata.pallets
 		.filter((p) => includePallets.includes(p.name.toString().toLowerCase()))
 		.map((p): ModuleMetadataTrimmed => {
 			const { calls, index, name } = p;
-			findLookupIdsInPallet(p, typeCache, stack);
+			findLookupIdsInPallet(p, typeCache);
 
 			return {
 				calls: registry.createTypeUnsafe('Option<PalletCallMetadataLatest>', [
@@ -240,19 +195,16 @@ export const toSpecifiedCallsOnlyV14 = (
 
 	// Store the extrinsic types
 	const extrinsicTypeId = latestMetadata.extrinsic.type.toString();
-	if (!typeCache.has(extrinsicTypeId)) {
-		typeCache.add(extrinsicTypeId);
-		stack.push(extrinsicTypeId);
-	}
+	typeCache.add(extrinsicTypeId);
 	// Store extrinsic signed extension types
 	latestMetadata.extrinsic.signedExtensions.forEach((val) => {
 		const lookupId = val.type.toString();
-		if (!typeCache.has(lookupId)) {
-			typeCache.add(lookupId);
-			stack.push(lookupId);
-		}
+		typeCache.add(lookupId);
 	});
 
+	// Stack used to store lookup type ids to iterate over
+	const stack: string[] = [];
+	typeCache.forEach((str) => stack.push(str as string));
 	/**
 	 * Continue to pop values from the stack and add type id's to the cache
 	 * if they dont exist. It will continue to increase the stack if there are types
