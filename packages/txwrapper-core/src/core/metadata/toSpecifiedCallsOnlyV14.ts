@@ -4,7 +4,7 @@
 // trimDocs, and ModuleMetadataTrimmed, as well as some of the logic concerning PortableType, and
 // Option<PalletCallMetadataLatest> generation.
 //
-// Source: https://github.com/polkadot-js/api/blob/master/packages/types/src/metadata/util/toCallsOnly.ts
+// Source: https://github.com/polkadot-js/api/blob/9b794e963df5d3cb4aa3ff122a9a9eb94f51ab81/packages/types/src/metadata/util/toCallsOnly.ts
 
 import type {
 	MetadataLatest,
