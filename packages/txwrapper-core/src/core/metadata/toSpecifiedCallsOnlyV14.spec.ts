@@ -16,7 +16,7 @@ describe('toSpecifiedCallsOnly', () => {
 		const callsOnly = toSpecifiedCallsOnlyV14(
 			kusamaRegistryV9160,
 			metadata.asLatest,
-			['auctions']
+			['balances']
 		);
 
 		expect(callsOnly).toStrictEqual(mockToSpecifiedCallsV14);
