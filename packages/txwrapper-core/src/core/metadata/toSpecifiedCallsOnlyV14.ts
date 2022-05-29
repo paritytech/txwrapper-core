@@ -170,6 +170,30 @@ const findLookupIdsInPallet = (
 };
 
 /**
+ * Given a type, find all sub typeIds within it's params.
+ *
+ * @param type
+ * @param cache
+ * @param stack
+ */
+const findLookupIdsInParams = (
+	type: Si1Type,
+	cache: Set<unknown>,
+	stack: string[]
+) => {
+	const { params } = type;
+
+	// Check for params
+	if (params.length > 0) {
+		params.forEach((p) => {
+			if (p.type.isSome) {
+				tryAddType(p.type.unwrap(), cache, stack);
+			}
+		});
+	}
+};
+
+/**
  * Strip any given V14 metadata to only the calls inputted, its corresponding types,
  * any extrinsics and their corresponding types.
  *
@@ -225,6 +249,8 @@ export const toSpecifiedCallsOnlyV14 = (
 		const { type } = latestMetadata.lookup.types[idx];
 		// Traverse the typedef for its required sub types
 		findLookupIdsInTypeDef(type, typeCache, stack);
+		// Traverse the params for its required sub types
+		findLookupIdsInParams(type, typeCache, stack);
 	}
 
 	// Filter out all necessary types, then return them as its correct PortableType
