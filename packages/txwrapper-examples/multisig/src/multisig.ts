@@ -27,7 +27,7 @@ import {
 } from '@substrate/txwrapper-polkadot';
 import { methods as substrateMethods } from '@substrate/txwrapper-substrate';
 
-import { rpcToLocalNode, signWith } from './util';
+import { rpcToLocalNode, signWith } from '../../common/util';
 
 // Adding colors to the output in the terminal (using ANSI escape codes)
 const GREEN = '\u001b[32m';
@@ -464,13 +464,19 @@ async function main(): Promise<void> {
 		multisigCallHash.substring(2) +
 		callTxHashMulti.substring(2);
 
+	console.log('multi key1', multisigAddressHash.substring(2));
+	console.log('key 1.1', multisigAddressInHex);
+	console.log('key 2', multisigCallHash.substring(2));
+	console.log('key 2.2', callTxHashMulti.substring(2));
+	console.log('storage item ?', multisigStorageKey);
+
 	// Adding a delay before making the RPC request
 	console.log(
 		`${PURPLE}Waiting 10 seconds ${RESET}before making the RPC request` +
 			` so that we are sure that the Multisig storage has been updated` +
 			` with the info from the \`approveAsMulti\` transaction.`
 	);
-	await delay(10000);
+	await delay(50000);
 
 	// 2. Making an RPC request with the `state_getStorage` endpoint to retrieve the SCALE-encoded Multisig storage data from the chain under the key `multisigStorageKey`.
 	const multisigStorage = await rpcToLocalNode('state_getStorage', [
