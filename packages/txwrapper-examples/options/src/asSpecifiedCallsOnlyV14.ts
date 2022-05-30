@@ -9,6 +9,8 @@ async function main(): Promise<void> {
 		'state_getRuntimeVersion'
 	);
 
+	const asSpecifiedCallsOnlyV14 = ['balances', 'system'];
+
 	/**
 	 * Create the type registry.
 	 *
@@ -22,14 +24,19 @@ async function main(): Promise<void> {
 		specName,
 		specVersion,
 		metadataRpc,
-		asSpecifiedCallsOnlyV14: ['balances'],
+		asSpecifiedCallsOnlyV14,
 	});
 
 	/**
 	 * Use `createMetadata` to create a new `MetadataVersioned` type that can be transformed to
 	 * a hex value using `.toHex()`. You may then use this metadata to decode and encode all transactions.
 	 */
-	const metadata = createMetadata(registry, metadataRpc, false, ['balances']);
+	const metadata = createMetadata(
+		registry,
+		metadataRpc,
+		false,
+		asSpecifiedCallsOnlyV14
+	);
 
 	const oldMetadataByteSize = Buffer.from(metadataRpc, 'utf-8').byteLength;
 	const newMetadataByteSize = Buffer.from(metadata.toHex(), 'utf-8').byteLength;
