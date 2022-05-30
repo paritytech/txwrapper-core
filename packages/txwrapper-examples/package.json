@@ -17,7 +17,8 @@
     "polkadot": "node lib/polkadot/src/polkadot",
     "polkadotBatchAll": "node lib/polkadotBatchAll/src/polkadotBatchAll",
     "mandala": "node lib/mandala",
-    "multisig": "node lib/multisig/src/multisig"
+    "multisig": "node lib/multisig/src/multisig",
+    "asSpecifiedCallsOnlyV14": "node lib/options/src/asSpecifiedCallsOnlyV14"
   },
   "dependencies": {
     "@polkadot/api": "8.5.1",
