@@ -20,10 +20,16 @@ export function createSignedTx(
 		metadataRpc,
 		registry,
 		asCallsOnlyArg,
+		asSpecifiedCallsOnlyV14,
 		signedExtensions,
 		userExtensions,
 	} = options;
-	const metadata = createMetadata(registry, metadataRpc, asCallsOnlyArg);
+	const metadata = createMetadata(
+		registry,
+		metadataRpc,
+		asCallsOnlyArg,
+		asSpecifiedCallsOnlyV14
+	);
 
 	registry.setMetadata(metadata, signedExtensions, userExtensions);
 

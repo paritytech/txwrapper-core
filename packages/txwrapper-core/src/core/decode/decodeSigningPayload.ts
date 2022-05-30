@@ -18,9 +18,17 @@ export function decodeSigningPayload(
 	signingPayload: string,
 	options: OptionsWithMeta
 ): DecodedSigningPayload {
-	const { metadataRpc, registry, asCallsOnlyArg } = options;
+	const { metadataRpc, registry, asCallsOnlyArg, asSpecifiedCallsOnlyV14 } =
+		options;
 
-	registry.setMetadata(createMetadata(registry, metadataRpc, asCallsOnlyArg));
+	registry.setMetadata(
+		createMetadata(
+			registry,
+			metadataRpc,
+			asCallsOnlyArg,
+			asSpecifiedCallsOnlyV14
+		)
+	);
 
 	// We use `createTypeUnsafe` here because it allows us to specify `withoutLog: true`,
 	// which silences an internal error message from polkadot-js. This is helpful in `decode`
