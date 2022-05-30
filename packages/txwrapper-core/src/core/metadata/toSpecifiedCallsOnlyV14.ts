@@ -28,6 +28,9 @@ interface ModuleMetadataTrimmed {
 
 /**
  * Remove docs from variant, and composite types
+ *
+ * @param type Si1Type that will be stripped of its docs
+ * @param registry Registry used to recreate Si Types
  */
 const removeDocs = (type: Si1Type, registry: Registry): Si1Type => {
 	// Remove docs from variants
@@ -38,7 +41,7 @@ const removeDocs = (type: Si1Type, registry: Registry): Si1Type => {
 					name,
 					index,
 					fields: removeDocsFromFields(registry, fields),
-					docs: registry.createType('Vec<Text>', []),
+					docs: [],
 				})
 		);
 
@@ -88,7 +91,7 @@ const removeDocsFromFields = (
 			name,
 			type,
 			typeName,
-			docs: registry.createType('Vec<Text>', []),
+			docs: [],
 		})
 	);
 };
