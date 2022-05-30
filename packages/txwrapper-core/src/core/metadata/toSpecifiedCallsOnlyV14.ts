@@ -1,7 +1,7 @@
 // Copyright 2022 via polkadot-js/api/packages/types/src/metadata/util/toCallsOnly.js
 //
 // The below functionality that has been converted from polkadot-js are:
-// trimDocs, and ModuleMetadataTrimmed, as well as some of the logic concerning PortableType, and
+// ModuleMetadataTrimmed, as well as some of the logic concerning PortableType, and
 // Option<PalletCallMetadataLatest> generation.
 //
 // Source: https://github.com/polkadot-js/api/blob/9b794e963df5d3cb4aa3ff122a9a9eb94f51ab81/packages/types/src/metadata/util/toCallsOnly.ts
@@ -12,8 +12,12 @@ import type {
 	PalletMetadataV14,
 	PortableType,
 } from '@polkadot/types/interfaces/metadata';
-import { Si1LookupTypeId, Si1Type } from '@polkadot/types/interfaces/scaleInfo';
-import { Option, Text, u8 } from '@polkadot/types-codec';
+import {
+	Si1Field,
+	Si1LookupTypeId,
+	Si1Type,
+} from '@polkadot/types/interfaces/scaleInfo';
+import { Option, Text, u8, Vec } from '@polkadot/types-codec';
 import type { AnyJson, Registry } from '@polkadot/types-codec/types';
 
 interface ModuleMetadataTrimmed {
@@ -23,15 +27,70 @@ interface ModuleMetadataTrimmed {
 }
 
 /**
- * Trim the docs for a given lookup type.
- *
- * @param docs
+ * Remove docs from variant, and composite types
  */
-const trimDocs = (docs: Text[]): string[] => {
-	const strings = docs.map((d) => d.toString().trim());
-	const firstEmpty = strings.findIndex((d) => !d.length);
+const removeDocs = (type: Si1Type, registry: Registry): Si1Type => {
+	// Remove docs from variants
+	if (type.def.isVariant) {
+		const mapVariant = type.def.asVariant.variants.map(
+			({ name, fields, index }) =>
+				registry.createType('Si1Variant', {
+					name,
+					index,
+					fields: removeDocsFromFields(registry, fields),
+					docs: registry.createType('Vec<Text>', []),
+				})
+		);
 
-	return firstEmpty === -1 ? strings : strings.slice(0, firstEmpty);
+		const typeDef = registry.createType('Si1TypeDef', {
+			Variant: {
+				variants: mapVariant,
+			},
+		});
+
+		return registry.createType('Si1Type', {
+			...type,
+			def: typeDef,
+			docs: [],
+		});
+	}
+
+	// Remove docs from composite
+	if (type.def.isComposite) {
+		const typeDef = registry.createType('Si1TypeDef', {
+			Composite: {
+				fields: removeDocsFromFields(registry, type.def.asComposite.fields),
+			},
+		});
+
+		return registry.createType('Si1Type', {
+			...type,
+			def: typeDef,
+			docs: [],
+		});
+	}
+
+	return type;
+};
+
+/**
+ * Removes the docs from fields
+ *
+ * @param registry
+ * @param fields
+ */
+const removeDocsFromFields = (
+	registry: Registry,
+	fields: Vec<Si1Field>
+): Si1Field[] => {
+	return fields.map(({ name, type, typeName }) =>
+		registry.createType('Si1Field', {
+			name,
+			type,
+			typeName,
+			docs: registry.createType('Vec<Text>', []),
+		})
+	);
 };
 
 /**
@@ -261,8 +320,8 @@ export const toSpecifiedCallsOnlyV14 = (
 				{
 					id,
 					type: {
-						...type,
-						docs: trimDocs(type.docs),
+						...removeDocs(type, registry),
+						docs: [],
 					},
 				},
 			])
