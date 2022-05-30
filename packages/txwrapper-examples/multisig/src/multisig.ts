@@ -19,6 +19,7 @@ import {
 } from '@polkadot/util-crypto';
 import {
 	construct,
+	createMetadata,
 	decode,
 	deriveAddress,
 	getRegistry,
@@ -173,7 +174,10 @@ async function main(): Promise<void> {
 		specName,
 		specVersion,
 		metadataRpc,
+		asSpecifiedCallsOnlyV14: ['multisig', 'balances']
 	});
+
+	const m = createMetadata(registry, metadataRpc, false, ['multisig', 'balances']);
 
 	console.log(
 		`${CYAN}Sending funds from Alice's account to the MultiSig account`
@@ -207,21 +211,21 @@ async function main(): Promise<void> {
 				.toNumber(),
 			eraPeriod: 64,
 			genesisHash,
-			metadataRpc,
+			metadataRpc: m.toHex(),
 			nonce: 0, // Assuming this is the first tx that Alice will sign
 			specVersion,
 			tip: 0,
 			transactionVersion,
 		},
 		{
-			metadataRpc,
+			metadataRpc: m.toHex(),
 			registry,
 		}
 	);
 
 	// Decode an unsigned transaction.
 	const decodedUnsigned = decode(unsigned, {
-		metadataRpc,
+		metadataRpc: m.toHex(),
 		registry,
 	});
 	console.log(
@@ -236,14 +240,14 @@ async function main(): Promise<void> {
 
 	// Sign a payload. This operation should be performed on an offline device.
 	const signature = signWith(signatoriesDict['Alice'], signingPayload, {
-		metadataRpc,
+		metadataRpc: m.toHex(),
 		registry,
 	});
 	console.log(`\nSignature: ${signature}`);
 
 	// Serialize a signed transaction.
 	const tx = construct.signedTx(unsigned, signature, {
-		metadataRpc,
+		metadataRpc: m.toHex(),
 		registry,
 	});
 	console.log(`\nTransaction to Submit: ${tx}`);
@@ -285,21 +289,21 @@ async function main(): Promise<void> {
 				.toNumber(),
 			eraPeriod: 64,
 			genesisHash,
-			metadataRpc,
+			metadataRpc: m.toHex(),
 			nonce: 0, // Assuming this is the first tx from the MultiSig on the chain
 			specVersion,
 			tip: 0,
 			transactionVersion,
 		},
 		{
-			metadataRpc,
+			metadataRpc: m.toHex(),
 			registry,
 		}
 	);
 
 	// Decode an unsigned transaction.
 	const decodedUnsignedTXMulti = decode(unsignedTXMulti, {
-		metadataRpc,
+		metadataRpc: m.toHex(),
 		registry,
 	});
 	console.log(
@@ -349,21 +353,21 @@ async function main(): Promise<void> {
 				.toNumber(),
 			eraPeriod: 64,
 			genesisHash,
-			metadataRpc,
+			metadataRpc: m.toHex(),
 			nonce: 1, // Assuming this is the second tx that Alice will sign
 			specVersion,
 			tip: 0,
 			transactionVersion,
 		},
 		{
-			metadataRpc,
+			metadataRpc: m.toHex(),
 			registry,
 		}
 	);
 
 	// Decode an unsigned transaction.
 	const decodedUnsignedApproveAsMulti = decode(unsignedTxApproveAsMulti, {
-		metadataRpc,
+		metadataRpc: m.toHex(),
 		registry,
 	});
 	console.log(
@@ -387,7 +391,7 @@ async function main(): Promise<void> {
 		signatoriesDict['Alice'],
 		signingPayloadApproveAsMulti,
 		{
-			metadataRpc,
+			metadataRpc: m.toHex(),
 			registry,
 		}
 	);
@@ -398,7 +402,7 @@ async function main(): Promise<void> {
 		unsignedTxApproveAsMulti,
 		signatureApproveAsMulti,
 		{
-			metadataRpc,
+			metadataRpc: m.toHex(),
 			registry,
 		}
 	);
@@ -424,7 +428,7 @@ async function main(): Promise<void> {
 
 	// Decode a signed payload.
 	const txInfoApproveAsMulti = decode(txApproveAsMulti, {
-		metadataRpc,
+		metadataRpc: m.toHex(),
 		registry,
 	});
 	console.log(
@@ -524,14 +528,14 @@ async function main(): Promise<void> {
 				.toNumber(),
 			eraPeriod: 64,
 			genesisHash,
-			metadataRpc,
+			metadataRpc: m.toHex(),
 			nonce: 0, // Assuming this is the first tx that Bob will sign
 			specVersion,
 			tip: 0,
 			transactionVersion,
 		},
 		{
-			metadataRpc,
+			metadataRpc: m.toHex(),
 			registry,
 		}
 	);
@@ -547,7 +551,7 @@ async function main(): Promise<void> {
 		signatoriesDict['Bob'],
 		signingPayloadAsMulti,
 		{
-			metadataRpc,
+			metadataRpc: m.toHex(),
 			registry,
 		}
 	);
@@ -555,7 +559,7 @@ async function main(): Promise<void> {
 
 	// Serialize a signed transaction.
 	const txAsMulti = construct.signedTx(unsignedTxAsMulti, signatureAsMulti, {
-		metadataRpc,
+		metadataRpc: m.toHex(),
 		registry,
 	});
 	console.log(`\nTransaction to Submit: ${txAsMulti}`);
@@ -579,7 +583,7 @@ async function main(): Promise<void> {
 
 	// Decode a signed payload.
 	const txInfoAsMulti = decode(unsignedTxAsMulti, {
-		metadataRpc,
+		metadataRpc: m.toHex(),
 		registry,
 	});
 	console.log(
