@@ -23,6 +23,13 @@ export interface GetRegistryBaseArgs {
 	 */
 	asCallsOnlyArg?: boolean;
 	/**
+	 * Used to reduce the metadata size by only having specific inputted calls,
+	 * and reducing the types to only whats needed to construct the transaction.
+	 *
+	 * An Array which contains all the pallets that should be included in the metadata
+	 */
+	asSpecifiedCallsOnlyV14?: string[];
+	/**
 	 * Array of signedExtensions
 	 */
 	signedExtensions?: string[];
@@ -40,6 +47,7 @@ export function getRegistryBase({
 	specTypes,
 	metadataRpc,
 	asCallsOnlyArg,
+	asSpecifiedCallsOnlyV14,
 	signedExtensions,
 	userExtensions,
 }: GetRegistryBaseArgs): TypeRegistry {
@@ -48,7 +56,8 @@ export function getRegistryBase({
 	const generatedMetadata = createMetadata(
 		registry,
 		metadataRpc,
-		asCallsOnlyArg
+		asCallsOnlyArg,
+		asSpecifiedCallsOnlyV14
 	);
 
 	registry.register(specTypes);

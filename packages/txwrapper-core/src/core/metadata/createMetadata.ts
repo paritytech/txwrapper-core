@@ -3,6 +3,8 @@ import { TypeRegistry } from '@polkadot/types';
 import { MetadataVersioned } from '@polkadot/types/metadata/MetadataVersioned';
 import memoizee from 'memoizee';
 
+import { toSpecifiedCallsOnlyV14 } from './toSpecifiedCallsOnlyV14';
+
 /**
  * From a metadata hex string (for example returned by RPC), create a Metadata
  * class instance. Metadata decoding is expensive, so this function is
@@ -16,9 +18,25 @@ import memoizee from 'memoizee';
 export function createMetadataUnmemoized(
 	registry: TypeRegistry,
 	metadataRpc: `0x${string}`,
-	asCallsOnlyArg = false
+	asCallsOnlyArg = false,
+	asSpecifiedCallsOnlyV14?: string[]
 ): Metadata | MetadataVersioned {
 	const metadata = new Metadata(registry, metadataRpc);
+
+	if (asSpecifiedCallsOnlyV14 && asSpecifiedCallsOnlyV14.length > 0) {
+		return new MetadataVersioned(registry, {
+			magicNumber: metadata.magicNumber,
+			metadata: registry.createTypeUnsafe('MetadataAll', [
+				toSpecifiedCallsOnlyV14(
+					registry,
+					metadata.asLatest,
+					asSpecifiedCallsOnlyV14
+				),
+				14,
+			]),
+		});
+	}
+
 	return asCallsOnlyArg ? metadata.asCallsOnly : metadata;
 }
 

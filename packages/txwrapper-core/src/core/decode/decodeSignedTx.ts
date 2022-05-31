@@ -17,9 +17,17 @@ export function decodeSignedTx(
 	signedTx: string,
 	options: OptionsWithMeta
 ): DecodedSignedTx {
-	const { metadataRpc, registry, asCallsOnlyArg } = options;
+	const { metadataRpc, registry, asCallsOnlyArg, asSpecifiedCallsOnlyV14 } =
+		options;
 
-	registry.setMetadata(createMetadata(registry, metadataRpc, asCallsOnlyArg));
+	registry.setMetadata(
+		createMetadata(
+			registry,
+			metadataRpc,
+			asCallsOnlyArg,
+			asSpecifiedCallsOnlyV14
+		)
+	);
 
 	const tx = registry.createType('Extrinsic', hexToU8a(signedTx), {
 		isSigned: true,

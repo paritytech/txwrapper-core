@@ -2,6 +2,7 @@
   "extends": "./tsconfig.build.json",
   "compilerOptions": {
     "baseUrl": "./packages",
+    "resolveJsonModule": true,
     "paths": {
       "@substrate/txwrapper-core": [
         "txwrapper-core/src"

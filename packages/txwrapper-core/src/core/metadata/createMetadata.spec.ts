@@ -26,6 +26,12 @@ describe('createMetadata', () => {
 		polkadotV9122MetadataHex,
 		true
 	);
+	const memoizedMetadataAsSpecifiedCalls: MetadataVersioned = createMetadata(
+		polkadotRegistryV9122,
+		polkadotV9122MetadataHex,
+		false,
+		['balances', 'system']
+	);
 
 	it('Metadata should decrease in byte size when `asCallsOnlyArg` is true with `createMetadataUnmemoized`', () => {
 		const metadataBuffer = Buffer.from(unmemoizedMetadata.toHex(), 'utf-8');
@@ -49,6 +55,22 @@ describe('createMetadata', () => {
 
 		expect(metadataAsCallsBuffer.byteLength).toBeGreaterThan(0);
 		expect(metadataBuffer.byteLength).toBeGreaterThan(
+			metadataAsCallsBuffer.byteLength
+		);
+	});
+
+	it('Metadata should decrease in byte size when `asSpecifiedCallsOnlyV14` is used', () => {
+		const metadataAsSpecifiedCallsBuffer = Buffer.from(
+			memoizedMetadataAsSpecifiedCalls.toHex(),
+			'utf-8'
+		);
+		const metadataAsCallsBuffer = Buffer.from(
+			memoizedMetadataAsCalls.toHex(),
+			'utf-8'
+		);
+
+		expect(metadataAsCallsBuffer.byteLength).toBeGreaterThan(0);
+		expect(metadataAsSpecifiedCallsBuffer.byteLength).toBeLessThan(
 			metadataAsCallsBuffer.byteLength
 		);
 	});

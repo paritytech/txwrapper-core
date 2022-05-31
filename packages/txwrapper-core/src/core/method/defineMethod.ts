@@ -105,6 +105,7 @@ export function defineMethod(
 		metadataRpc,
 		registry,
 		asCallsOnlyArg,
+		asSpecifiedCallsOnlyV14,
 		signedExtensions,
 		userExtensions,
 		isImmortalEra,
@@ -113,7 +114,8 @@ export function defineMethod(
 	const generatedMetadata = createMetadata(
 		registry,
 		metadataRpc,
-		asCallsOnlyArg
+		asCallsOnlyArg,
+		asSpecifiedCallsOnlyV14
 	);
 
 	registry.setMetadata(generatedMetadata, signedExtensions, userExtensions);
