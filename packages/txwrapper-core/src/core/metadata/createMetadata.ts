@@ -23,7 +23,7 @@ export function createMetadataUnmemoized(
 ): Metadata | MetadataVersioned {
 	const metadata = new Metadata(registry, metadataRpc);
 
-	if (asSpecifiedCallsOnlyV14) {
+	if (asSpecifiedCallsOnlyV14 && asSpecifiedCallsOnlyV14.length > 0) {
 		return new MetadataVersioned(registry, {
 			magicNumber: metadata.magicNumber,
 			metadata: registry.createTypeUnsafe('MetadataAll', [
