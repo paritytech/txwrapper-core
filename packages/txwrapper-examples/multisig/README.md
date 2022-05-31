@@ -18,7 +18,7 @@ More specifically the code implements the following steps :
 
 ## Setup environment
 
-1) Fetch the latest Substrate or Polkadot/Kusama node from the above link. Follow instructions to build it, and start a dev chain :
+1) Fetch the latest Substrate or Polkadot/Kusama node from the following link https://github.com/paritytech/polkadot/. Follow the instructions to build it, and start a dev chain :
 
     ```bash
     target/release/polkadot --dev

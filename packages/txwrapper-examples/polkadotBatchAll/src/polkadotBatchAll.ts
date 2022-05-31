@@ -76,7 +76,7 @@ async function main(): Promise<void> {
 	// Metadata and type defintion registry used to create the calls
 	const optionsWithMeta = {
 		registry: registry,
-		metadataRpc: registry.metadata.toHex(),
+		metadataRpc,
 	};
 
 	// Arguments for 12 balances transferKeepAlive

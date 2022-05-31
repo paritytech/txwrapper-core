@@ -1,11 +1,11 @@
 # Polkadot Batch All example
 
 ## Description
-Example that shows how to use the `batchAll` method to send a number of transactions at once.
+Example that shows how to use the `batchAll` method to send a number of transactions at once. We are using a Polkadot/Kusama dev chain (https://github.com/paritytech/polkadot/).
 
 ## Get Started
 
-1) Fetch the latest Substrate or Polkadot/Kusama node from the above link. Follow instructions to build it, and start a dev chain.
+1) Fetch the latest Substrate or Polkadot/Kusama node from the above link. Follow the instructions to build it, and start a dev chain.
 
     ```bash
     target/release/polkadot --dev
