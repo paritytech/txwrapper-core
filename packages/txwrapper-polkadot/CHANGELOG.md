@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.1.0](https://github.com/paritytech/txwrapper-core/compare/v3.0.4...v3.1.0) (2022-05-31)
+
+
+### Features
+
+* `asSpecifiedCallsOnlyV14` option ([#224](https://github.com/paritytech/txwrapper-core/issues/224)) ([8b30028](https://github.com/paritytech/txwrapper-core/commit/8b3002843a0831652a6fb74f66d352bc9cb9bb17))
+
+
+
+
+
 ## [3.0.4](https://github.com/paritytech/txwrapper-core/compare/v3.0.3...v3.0.4) (2022-05-24)
 
 **Note:** Version bump only for package @substrate/txwrapper-polkadot
