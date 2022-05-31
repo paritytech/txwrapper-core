@@ -30,7 +30,7 @@ describe('createMetadata', () => {
 		polkadotRegistryV9122,
 		polkadotV9122MetadataHex,
 		false,
-		['auctions']
+		['balances', 'system']
 	);
 
 	it('Metadata should decrease in byte size when `asCallsOnlyArg` is true with `createMetadataUnmemoized`', () => {
