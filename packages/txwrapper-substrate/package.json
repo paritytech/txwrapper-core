@@ -1,6 +1,6 @@
 {
   "name": "@substrate/txwrapper-substrate",
-  "version": "3.1.1",
+  "version": "3.1.2",
   "author": "Parity Technologies <admin@parity.io>",
   "description": "Selected dispatchables of Substrate pallets, to be re-exported by txwrappers.",
   "license": "Apache-2.0",
@@ -18,7 +18,7 @@
     "build": "yarn build:workspace"
   },
   "dependencies": {
-    "@substrate/txwrapper-core": "^3.1.1"
+    "@substrate/txwrapper-core": "^3.1.2"
   },
   "devDependencies": {
     "@substrate/txwrapper-dev": "^3.0.2"
