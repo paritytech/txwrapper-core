@@ -33,11 +33,13 @@ async function main(): Promise<void> {
 	 */
 	const metadata = createMetadata(
 		registry,
+		// eslint-disable-next-line @typescript-eslint/no-unsafe-argument
 		metadataRpc,
 		false,
 		asSpecifiedCallsOnlyV14
 	);
 
+	// eslint-disable-next-line @typescript-eslint/no-unsafe-argument
 	const oldMetadataByteSize = Buffer.from(metadataRpc, 'utf-8').byteLength;
 	const newMetadataByteSize = Buffer.from(metadata.toHex(), 'utf-8').byteLength;
 

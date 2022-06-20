@@ -25,6 +25,7 @@ export function toTxMethod(registry: TypeRegistry, method: Call): TxMethod {
 	// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
 	const argsDef = JSON.parse(method.Type.args as unknown as string);
 	// Mapping of argName->argValue
+	// eslint-disable-next-line @typescript-eslint/no-unsafe-argument
 	const args = Object.keys(argsDef).reduce((accumulator, key, index) => {
 		let codec: unknown = createTypeUnsafe(registry, argsDef[key], [
 			method.args[index],
