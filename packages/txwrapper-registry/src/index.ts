@@ -1,4 +1,3 @@
-import { typesBundle, typesChain } from '@polkadot/apps-config/api';
 import { allNetworks as substrateSS58Registry } from '@polkadot/networks';
 import { TypeRegistry } from '@polkadot/types';
 import { getSpecTypes } from '@polkadot/types-known';
@@ -7,6 +6,11 @@ import {
 	getRegistryBase,
 	GetRegistryOptsCore,
 } from '@substrate/txwrapper-core';
+import { ConfigManager } from 'confmgr';
+
+import { CONFIG, MODULES, Specs } from './Specs';
+
+const config = ConfigManager.getInstance(Specs.specs).getConfig();
 
 /**
  * Known chain properties based on the substrate ss58 registry.
@@ -46,14 +50,18 @@ export interface GetRegistryOpts extends GetRegistryOptsCore {
 	properties?: ChainProperties;
 }
 
+const getTypesBundle = config.Get(MODULES.SUBSTRATE, CONFIG.TYPES_BUNDLE);
+const getTypesChain = config.Get(MODULES.SUBSTRATE, CONFIG.TYPES_CHAIN);
+
 /**
- * Create a registry with `knownTypes` set with types from @polkadot/apps-config.
+ * Create a registry with `knownTypes` via env variables.
+ * ie: STX_TYPES_BUNDLE; STX_TYPES_CHAIN
  */
-function getAppsConfigRegistry(): TypeRegistry {
+export function createRegistry(): TypeRegistry {
 	const registry = new TypeRegistry();
 	registry.setKnownTypes({
-		typesBundle,
-		typesChain,
+		typesBundle: getTypesBundle ? require(getTypesBundle) : undefined,
+		typesChain: getTypesChain ? require(getTypesChain) : undefined,
 	});
 
 	return registry;
@@ -76,9 +84,7 @@ export function getRegistry({
 }: GetRegistryOpts): TypeRegistry {
 	// Polkadot, kusama, and westend have known types in the default polkadot-js registry. If we are
 	// dealing with another network, use the apps-config types to fill the registry.
-	const registry = ['polkadot', 'kusama', 'westend'].includes(specName)
-		? new TypeRegistry()
-		: getAppsConfigRegistry();
+	const registry = createRegistry();
 
 	return getRegistryBase({
 		chainProperties: properties || knownChainProperties[specName],
