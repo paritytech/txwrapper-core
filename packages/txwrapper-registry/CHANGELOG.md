@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.3](https://github.com/paritytech/txwrapper-core/compare/v3.1.2...v3.1.3) (2022-06-20)
+
+
+### Bug Fixes
+
+* **types:** Update polkadot-js deps to get the latest types ([#233](https://github.com/paritytech/txwrapper-core/issues/233)) ([5c55722](https://github.com/paritytech/txwrapper-core/commit/5c5572215c0f811f450b10c25e0ab9ccdf1a60de))
+
+
+
+
+
 ## [3.1.2](https://github.com/paritytech/txwrapper-core/compare/v3.1.1...v3.1.2) (2022-06-15)
 
 **Note:** Version bump only for package @substrate/txwrapper-registry
