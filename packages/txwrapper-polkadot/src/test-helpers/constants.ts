@@ -33,4 +33,30 @@ export const TEST_METHOD_ARGS = {
 			memo: '0xFFFFFFFFFFFFFFFF',
 		},
 	},
+	xcmPallet: {
+		v0: {
+			teleportAssets: {
+
+			},
+			reserveTransferAssets: {
+
+			},
+		},
+		v1: {
+			teleportAssets: {
+
+			},
+			reserveTransferAssets: {
+
+			}
+		},
+		v2: {
+			teleportAssets: {
+
+			},
+			reserveTransferAssets: {
+
+			}
+		},
+	}
 };

@@ -40,7 +40,7 @@ export interface XcmTeleportAssets extends Args {
  * @param info - Information required to construct the transaction.
  * @param options - Registry and metadata used for constructing the method.
  */
-export function TeleportAssets(
+export function teleportAssets(
 	args: XcmTeleportAssets,
 	info: BaseTxInfo,
 	options: OptionsWithMeta
