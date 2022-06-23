@@ -7,18 +7,12 @@
 // 	TEST_METHOD_ARGS,
 // 	WESTEND_9030_TEST_OPTIONS,
 // } from '../../test-helpers';
-import { teleportAssets } from './teleportAssets';
+// import { teleportAssets } from './teleportAssets';
 
-describe('xcmPallet::teleportAssets', () => {
-    it('Should work for xcm v0', () => {
+// describe('xcmPallet::teleportAssets', () => {
+// 	it('Should work for xcm v0', () => {});
 
-    });
+// 	it('Should work for xcm v1', () => {});
 
-    it('Should work for xcm v1', () => {
-
-    });
-
-    it('Should work for xcm v2', () => {
-
-    });
-});
+// 	it('Should work for xcm v2', () => {});
+// });

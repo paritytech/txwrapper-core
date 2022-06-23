@@ -8,13 +8,13 @@ import {
 
 /**
  * TODO: Confirm the 'type' enum field for each enum
- *       Translate these types to TS primitives, and expose them within the args types. 
+ *       Translate these types to TS primitives, and expose them within the args types.
  * 		 This is also the same as teleport Assets so these types should be within a types file within
- * 		 this directory and exported and extended as such. 
+ * 		 this directory and exported and extended as such.
  * dest -> XcmVersionedMultiLocation
  * 			-> XcmV0MultiLocation
  * 				-> XcmV0Junction | XcmV0Junction[]
- * 					-> Parachain:      Compact<u32> | 
+ * 					-> Parachain:      Compact<u32> |
  * 					   AccountId32:    { network: XcmV0JunctionNetworkId, id: u8aFixed } |
  * 					   AccountIndex64: { network: XcmV0JunctionNetworkId, index: Compact<u64> } |
  * 					   AccountKey20:   { network: XcmV0JunctionNetworkId, key: U8aFixed } |
@@ -37,10 +37,10 @@ import {
  * 				-> XcmV1MultilocationJunctions
  * 					-> XcmV1Junction | XcmV1Junction[]
  * 						SAME AS XcmV0Junction!
- * 
+ *
  * beneficiary -> XcmVersionedMultiLocation
  * 					-> The rest is the same as the above.
- * 
+ *
  * assets -> XcmVersionedMultiAssets
  * 		  		-> Vec<XcmV0MultiAsset>
  * 					-> XcmV0MultiAsset
@@ -74,7 +74,7 @@ import {
  * 								   NonFungible: XcmV1MultiassetAssetInstance
  * 								   		-> XcmV1MultiassetAssetInstance
  * 											-> SAME AS ABOVE
- * 
+ *
  * feeAssetsItem -> u32interface XcmVersionedMultiAssets
  */
 

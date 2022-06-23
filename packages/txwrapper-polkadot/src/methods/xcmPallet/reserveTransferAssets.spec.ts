@@ -9,16 +9,10 @@
 // } from '../../test-helpers';
 // import { reserveTransferAssets } from './reserveTransferAssets';
 
-describe('xcmPallet::reserveTransferAssets', () => {
-    it('Should work for xcm v0', () => {
+// describe('xcmPallet::reserveTransferAssets', () => {
+// 	it('Should work for xcm v0', () => {});
 
-    });
+// 	it('Should work for xcm v1', () => {});
 
-    it('Should work for xcm v1', () => {
-
-    });
-
-    it('Should work for xcm v2', () => {
-
-    });
-});
+// 	it('Should work for xcm v2', () => {});
+// });

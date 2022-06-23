@@ -35,28 +35,16 @@ export const TEST_METHOD_ARGS = {
 	},
 	xcmPallet: {
 		v0: {
-			teleportAssets: {
-
-			},
-			reserveTransferAssets: {
-
-			},
+			teleportAssets: {},
+			reserveTransferAssets: {},
 		},
 		v1: {
-			teleportAssets: {
-
-			},
-			reserveTransferAssets: {
-
-			}
+			teleportAssets: {},
+			reserveTransferAssets: {},
 		},
 		v2: {
-			teleportAssets: {
-
-			},
-			reserveTransferAssets: {
-
-			}
+			teleportAssets: {},
+			reserveTransferAssets: {},
 		},
-	}
+	},
 };
