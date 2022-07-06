@@ -1,3 +1,4 @@
+import { AnyJson } from '@polkadot/types/types';
 import {
 	Args,
 	BaseTxInfo,
@@ -11,22 +12,22 @@ export interface XcmTeleportAssets extends Args {
 	 * Destination context for the assets. Will typically be `X2(Parent, Parachain(..))` to send
 	 * from parachain to parachain, or `X1(Parachain(..))` to send from relay to parachain.
 	 */
-	dest: string;
+	dest: AnyJson;
 	/**
 	 * A beneficiary location for the assets in the context of `dest`. Will generally be
 	 * an `AccountId32` value.
 	 */
-	beneficiary: string;
+	beneficiary: AnyJson;
 	/**
 	 * The assets to be withdrawn. This should include the assets used to pay the fee on the
 	 * `dest` side.
 	 */
-	assets: string[];
+	assets: AnyJson;
 	/**
 	 * The index into `assets` of the item which should be used to pay
 	 * fees.
 	 */
-	feeAssetsItem: number;
+	feeAssetItem: number;
 }
 
 /**
@@ -49,8 +50,8 @@ export function teleportAssets(
 		{
 			method: {
 				args,
-				name: 'reserveTransferAssets',
-				pallet: 'xcm-pallet',
+				name: 'teleportAssets',
+				pallet: 'xcmPallet',
 			},
 			...info,
 		},
