@@ -41,7 +41,7 @@
     "@polkadot/x-fetch": "10.0.2",
     "@polkadot/x-global": "10.0.2",
     "@polkadot/wasm-crypto": "6.2.3",
-    "@polkadot/apps-config": "0.116.1"
+    "@polkadot/apps-config": "0.116.2-64"
   },
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.15.4",
