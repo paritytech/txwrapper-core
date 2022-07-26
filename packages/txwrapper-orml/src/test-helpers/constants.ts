@@ -1,8 +1,8 @@
-import { getRegistryMandala } from './getRegistryMandala';
 import { getRegistryInterlay } from './getRegistryInterlay';
+import { getRegistryMandala } from './getRegistryMandala';
+import { interlay4Metadata } from './interlay4Metadata';
 // Static metadata from mandala, an acala test network that uses ORML pallets
 import { mandala722MetadataRpc } from './mandala2082MetadataRpc';
-import { interlay4Metadata } from './interlay4Metadata'
 
 /**
  * Test options for the mandala v602 runtime.
@@ -16,7 +16,7 @@ export const MANDALA_2082_TEST_OPTIONS = {
 export const INTERLAY_4_TEST_OPTIONS = {
 	metadataRpc: interlay4Metadata,
 	registry: getRegistryInterlay(4, interlay4Metadata),
-}
+};
 
 /**
  * Centralized source for all arguments used in specs for methods.
@@ -44,5 +44,5 @@ export const TEST_METHOD_ARGS = {
 			currencyId: { Token: 'INTR' },
 			keepAlive: true,
 		},
-	}
+	},
 };

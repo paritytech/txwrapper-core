@@ -17,10 +17,15 @@ export function getRegistryInterlay(
 	return getRegistryBase({
 		chainProperties: {
 			tokenDecimals: [10, 8, 12],
-			tokenSymbol: ["INTR", "IBTC", "DOT", "KINT", "KBTC", "KSM"],
+			tokenSymbol: ['INTR', 'IBTC', 'DOT', 'KINT', 'KBTC', 'KSM'],
 			ss58Format: 2032,
 		},
-		specTypes: getSpecTypes(registry, 'Interlay', 'interlay-parachain', specVersion),
+		specTypes: getSpecTypes(
+			registry,
+			'Interlay',
+			'interlay-parachain',
+			specVersion
+		),
 		metadataRpc,
 	});
 }

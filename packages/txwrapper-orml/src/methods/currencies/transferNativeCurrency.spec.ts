@@ -3,7 +3,10 @@ import {
 	TEST_BASE_TX_INFO,
 } from '@substrate/txwrapper-dev';
 
-import { MANDALA_2082_TEST_OPTIONS, TEST_METHOD_ARGS } from '../../test-helpers';
+import {
+	MANDALA_2082_TEST_OPTIONS,
+	TEST_METHOD_ARGS,
+} from '../../test-helpers';
 import { transferNativeCurrency } from './transferNativeCurrency';
 
 describe('currencies::transferNativeCurrency', () => {
