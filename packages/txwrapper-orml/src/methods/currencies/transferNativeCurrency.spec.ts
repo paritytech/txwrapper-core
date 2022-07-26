@@ -3,7 +3,7 @@ import {
 	TEST_BASE_TX_INFO,
 } from '@substrate/txwrapper-dev';
 
-import { MANDALA_722_TEST_OPTIONS, TEST_METHOD_ARGS } from '../../test-helpers';
+import { MANDALA_2082_TEST_OPTIONS, TEST_METHOD_ARGS } from '../../test-helpers';
 import { transferNativeCurrency } from './transferNativeCurrency';
 
 describe('currencies::transferNativeCurrency', () => {
@@ -11,13 +11,13 @@ describe('currencies::transferNativeCurrency', () => {
 		const unsigned = transferNativeCurrency(
 			TEST_METHOD_ARGS.currencies.transferNativeCurrency,
 			TEST_BASE_TX_INFO,
-			MANDALA_722_TEST_OPTIONS
+			MANDALA_2082_TEST_OPTIONS
 		);
 
 		itHasCorrectBaseTxInfo(unsigned);
 
 		expect(unsigned.method).toBe(
-			'0x0701ff8eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a4830'
+			'0x0c01008eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a4830'
 		);
 	});
 
@@ -28,13 +28,13 @@ describe('currencies::transferNativeCurrency', () => {
 				amount: '9007199254740996', // MAX_SAFE_INTEGER + 5
 			},
 			TEST_BASE_TX_INFO,
-			MANDALA_722_TEST_OPTIONS
+			MANDALA_2082_TEST_OPTIONS
 		);
 
 		itHasCorrectBaseTxInfo(unsigned);
 
 		expect(unsigned.method).toBe(
-			'0x0701ff8eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a480f04000000000020'
+			'0x0c01008eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a480f04000000000020'
 		);
 	});
 });
