@@ -1,6 +1,6 @@
 {
   "name": "@substrate/txwrapper-examples",
-  "version": "3.1.6",
+  "version": "3.1.7",
   "author": "Parity Technologies <admin@parity.io>",
   "description": "Examples for txwrapper-* usage.",
   "license": "Apache-2.0",
@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "@polkadot/api": "8.14.1",
-    "@substrate/txwrapper-polkadot": "^3.1.6",
-    "@substrate/txwrapper-registry": "^3.1.6"
+    "@substrate/txwrapper-polkadot": "^3.1.7",
+    "@substrate/txwrapper-registry": "^3.1.7"
   }
 }
