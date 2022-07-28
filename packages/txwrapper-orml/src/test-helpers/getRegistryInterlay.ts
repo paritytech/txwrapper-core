@@ -16,7 +16,7 @@ export function getRegistryInterlay(
 
 	return getRegistryBase({
 		chainProperties: {
-			tokenDecimals: [10, 8, 12],
+			tokenDecimals: [10, 8, 10, 12, 8, 12],
 			tokenSymbol: ['INTR', 'IBTC', 'DOT', 'KINT', 'KBTC', 'KSM'],
 			ss58Format: 2032,
 		},
