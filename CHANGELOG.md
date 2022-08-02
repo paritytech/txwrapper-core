@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.2.0](https://github.com/paritytech/txwrapper-core/compare/v3.1.7...v3.2.0) (2022-08-02)
+
+
+### Features
+
+* **txwrapper-orml:** add tokens methods ([#241](https://github.com/paritytech/txwrapper-core/issues/241)) ([9250a90](https://github.com/paritytech/txwrapper-core/commit/9250a90bd0431e09d91871fecc6ac041031603e6))
+
+
+
+
+
 ## [3.1.7](https://github.com/paritytech/txwrapper-core/compare/v3.1.6...v3.1.7) (2022-07-26)
 
 
