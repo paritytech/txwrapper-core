@@ -18,10 +18,10 @@
     "build": "yarn build:workspace"
   },
   "dependencies": {
-    "@substrate/txwrapper-core": "^3.1.7"
+    "@substrate/txwrapper-core": "^3.2.0"
   },
   "devDependencies": {
     "@acala-network/type-definitions": "^0.7.4-1",
-    "@substrate/txwrapper-dev": "^3.0.2"
+    "@substrate/txwrapper-dev": "^3.2.0"
   }
 }
