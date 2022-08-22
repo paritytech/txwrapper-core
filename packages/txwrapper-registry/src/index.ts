@@ -1,4 +1,4 @@
-import { typesBundle, typesChain } from '@polkadot/apps-config/api';
+import { typesBundle } from '@polkadot/apps-config/api';
 import { allNetworks as substrateSS58Registry } from '@polkadot/networks';
 import { TypeRegistry } from '@polkadot/types';
 import { getSpecTypes } from '@polkadot/types-known';
@@ -53,7 +53,6 @@ function getAppsConfigRegistry(): TypeRegistry {
 	const registry = new TypeRegistry();
 	registry.setKnownTypes({
 		typesBundle,
-		typesChain,
 	});
 
 	return registry;
