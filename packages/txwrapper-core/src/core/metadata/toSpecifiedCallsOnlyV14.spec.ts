@@ -5,7 +5,7 @@ import {
 } from '@substrate/txwrapper-dev';
 
 import mockToSpecifiedCallsV14 from '../../test-helpers/mock/toSpecifiedCallsOnlyV14.json';
-import { toSpecifiedCallsOnlyV14 } from './toSpecifiedCallsOnlyV14';
+import { toSpecifiedCallsOnlyV14 } from './';
 
 describe('toSpecifiedCallsOnly', () => {
 	it('Should correctly parse the metadata', () => {
