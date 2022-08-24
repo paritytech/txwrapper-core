@@ -45,4 +45,22 @@ describe('decodeSigningPayload', () => {
 
 		itDecodesBalancesTransferCommon(decoded);
 	});
+
+	it('Should decode balances::transfer with a immortal era', () => {
+		const signingPayload = construct.signingPayload(
+			balancesTransfer(
+				TEST_METHOD_ARGS.balances.transfer,
+				TEST_BASE_TX_INFO,
+				Object.assign({}, POLKADOT_25_TEST_OPTIONS, { isImmortalEra: true })
+			),
+			POLKADOT_25_TEST_OPTIONS
+		);
+
+		const decoded = decodeSigningPayload(
+			signingPayload,
+			POLKADOT_25_TEST_OPTIONS
+		);
+
+		expect(decoded.eraPeriod).toBe(0);
+	});
 });
