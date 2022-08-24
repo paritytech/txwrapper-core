@@ -46,7 +46,7 @@ describe('decodeSigningPayload', () => {
 		itDecodesBalancesTransferCommon(decoded);
 	});
 
-	it('Should decode balances::transfer with a immortal era', () => {
+	it('should decode balances::transfer with an immortal era', () => {
 		const signingPayload = construct.signingPayload(
 			balancesTransfer(
 				TEST_METHOD_ARGS.balances.transfer,
