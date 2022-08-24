@@ -50,9 +50,14 @@ export function decodeSigningPayload(
 	const methodCall: Call = createTypeUnsafe(registry, 'Call', [payload.method]);
 	const method = toTxMethod(registry, methodCall);
 
+	// Immortal eras should return a period of 0
+	const eraPeriod = payload.era.isMortalEra
+		? payload.era.asMortalEra.period.toNumber()
+		: 0;
+
 	return {
 		blockHash: payload.blockHash.toHex(),
-		eraPeriod: payload.era.asMortalEra.period.toNumber(),
+		eraPeriod,
 		genesisHash: payload.genesisHash.toHex(),
 		metadataRpc,
 		method,
