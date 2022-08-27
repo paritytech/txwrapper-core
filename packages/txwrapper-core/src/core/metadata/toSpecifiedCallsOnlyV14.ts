@@ -19,6 +19,7 @@ import {
 } from '@polkadot/types/interfaces/scaleInfo';
 import { Option, Text, u8, Vec } from '@polkadot/types-codec';
 import type { AnyJson, Registry } from '@polkadot/types-codec/types';
+import { objectSpread } from '@polkadot/util';
 
 interface ModuleMetadataTrimmed {
 	calls: Option<PalletCallMetadataLatest>;
@@ -51,11 +52,10 @@ const removeDocs = (type: Si1Type, registry: Registry): Si1Type => {
 			},
 		});
 
-		return registry.createType('Si1Type', {
-			...type,
-			def: typeDef,
-			docs: [],
-		});
+		return registry.createType(
+			'Si1Type',
+			objectSpread({}, type, { def: typeDef, docs: [] })
+		);
 	}
 
 	// Remove docs from composite
@@ -66,11 +66,10 @@ const removeDocs = (type: Si1Type, registry: Registry): Si1Type => {
 			},
 		});
 
-		return registry.createType('Si1Type', {
-			...type,
-			def: typeDef,
-			docs: [],
-		});
+		return registry.createType(
+			'Si1Type',
+			objectSpread({}, type, { def: typeDef, docs: [] })
+		);
 	}
 
 	return type;
@@ -322,10 +321,7 @@ export const toSpecifiedCallsOnlyV14 = (
 			registry.createTypeUnsafe('PortableType', [
 				{
 					id,
-					type: {
-						...removeDocs(type, registry),
-						docs: [],
-					},
+					type: objectSpread({}, removeDocs(type, registry), { docs: [] }),
 				},
 			])
 		);

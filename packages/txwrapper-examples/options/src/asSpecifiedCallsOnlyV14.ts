@@ -24,7 +24,6 @@ async function main(): Promise<void> {
 		specName,
 		specVersion,
 		metadataRpc,
-		asSpecifiedCallsOnlyV14,
 	});
 
 	/**
