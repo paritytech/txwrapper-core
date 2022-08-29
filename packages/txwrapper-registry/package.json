@@ -18,8 +18,8 @@
     "build": "yarn build:workspace"
   },
   "dependencies": {
-    "@polkadot/apps-config": "0.120.1",
-    "@polkadot/networks": "10.1.5",
+    "@polkadot/apps-config": "0.121.1",
+    "@polkadot/networks": "10.1.6",
     "@substrate/txwrapper-core": "^3.2.0"
   }
 }
