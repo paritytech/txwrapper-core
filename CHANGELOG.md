@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.1](https://github.com/paritytech/txwrapper-core/compare/v3.2.0...v3.2.1) (2022-08-30)
+
+
+### Bug Fixes
+
+* **deps:** correctly fix asSpecifiedCallsOnlyV14 with the polkadot-js update ([#246](https://github.com/paritytech/txwrapper-core/issues/246)) ([12431c1](https://github.com/paritytech/txwrapper-core/commit/12431c19017c266866de4d9c68692487733e3a3c))
+* **types:** Update polkadot-js deps to get the latest types ([#250](https://github.com/paritytech/txwrapper-core/issues/250)) ([76be717](https://github.com/paritytech/txwrapper-core/commit/76be7176306caee35b34c323585e77fdda6c6890))
+
+
+
+
+
 # [3.2.0](https://github.com/paritytech/txwrapper-core/compare/v3.1.7...v3.2.0) (2022-08-16)
 
 
