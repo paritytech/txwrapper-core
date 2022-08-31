@@ -1838,7 +1838,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@polkadot/api@npm:9.2.4, @polkadot/api@npm:^9.2.4":
+"@polkadot/api@npm:9.2.4":
   version: 9.2.4
   resolution: "@polkadot/api@npm:9.2.4"
   dependencies:
@@ -1863,7 +1863,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@polkadot/keyring@npm:^10.1.6":
+"@polkadot/keyring@npm:10.1.6, @polkadot/keyring@npm:^10.1.6":
   version: 10.1.6
   resolution: "@polkadot/keyring@npm:10.1.6"
   dependencies:
@@ -2290,8 +2290,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@substrate/txwrapper-core@workspace:packages/txwrapper-core"
   dependencies:
-    "@polkadot/api": ^9.2.4
-    "@polkadot/keyring": ^10.1.6
+    "@polkadot/api": 9.2.4
+    "@polkadot/keyring": 10.1.6
     "@substrate/txwrapper-dev": ^3.2.0
     "@types/memoizee": ^0.4.3
     memoizee: 0.4.15
@@ -2310,7 +2310,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@substrate/txwrapper-examples@workspace:packages/txwrapper-examples"
   dependencies:
-    "@polkadot/api": ^9.2.4
+    "@polkadot/api": 9.2.4
     "@substrate/txwrapper-polkadot": ^3.2.1
     "@substrate/txwrapper-registry": ^3.2.1
   languageName: unknown
@@ -2340,7 +2340,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@substrate/txwrapper-registry@workspace:packages/txwrapper-registry"
   dependencies:
-    "@polkadot/networks": ^10.1.6
+    "@polkadot/networks": 10.1.6
     "@substrate/txwrapper-core": ^3.2.1
   languageName: unknown
   linkType: soft
