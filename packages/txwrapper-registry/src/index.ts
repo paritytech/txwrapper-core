@@ -48,8 +48,8 @@ export interface GetRegistryOpts extends GetRegistryOptsCore {
 	properties?: ChainProperties;
 }
 
-const typesBundle: OverrideBundleType = process.env.SUBSTRATE_TYPES_BUNDLE
-	? require(process.env.SUBSTRATE_TYPES_BUNDLE)
+const typesBundle: OverrideBundleType = process.env.TX_TYPES_BUNDLE
+	? require(process.env.TX_TYPES_BUNDLE)
 	: undefined;
 
 /**
