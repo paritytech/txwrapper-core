@@ -53,7 +53,6 @@ export interface GetRegistryOpts extends GetRegistryOptsCore {
 }
 
 const getTypesBundle = config.Get(MODULES.SUBSTRATE, CONFIG.TYPES_BUNDLE);
-const getTypesChain = config.Get(MODULES.SUBSTRATE, CONFIG.TYPES_CHAIN);
 
 /**
  * Create a registry with `knownTypes` via env variables.
@@ -63,7 +62,6 @@ export function createRegistry(): TypeRegistry {
 	const registry = new TypeRegistry();
 	registry.setKnownTypes({
 		typesBundle: getTypesBundle ? require(getTypesBundle) : undefined,
-		typesChain: getTypesChain ? require(getTypesChain) : undefined,
 	});
 
 	return registry;

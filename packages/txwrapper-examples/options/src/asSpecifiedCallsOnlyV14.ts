@@ -4,7 +4,7 @@ import { createMetadata, getRegistry } from '@substrate/txwrapper-polkadot';
 import { rpcToLocalNode } from '../../common/util';
 
 async function main(): Promise<void> {
-	const metadataRpc = await rpcToLocalNode('state_getMetadata');
+	const metadataRpc: `0x${string}` = await rpcToLocalNode('state_getMetadata');
 	const { specVersion, specName } = await rpcToLocalNode(
 		'state_getRuntimeVersion'
 	);
@@ -24,7 +24,6 @@ async function main(): Promise<void> {
 		specName,
 		specVersion,
 		metadataRpc,
-		asSpecifiedCallsOnlyV14,
 	});
 
 	/**

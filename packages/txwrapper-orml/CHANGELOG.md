@@ -3,6 +3,76 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.1](https://github.com/paritytech/txwrapper-core/compare/v3.2.0...v3.2.1) (2022-08-30)
+
+**Note:** Version bump only for package @substrate/txwrapper-orml
+
+
+
+
+
+# [3.2.0](https://github.com/paritytech/txwrapper-core/compare/v3.1.7...v3.2.0) (2022-08-16)
+
+
+### Features
+
+* **txwrapper-orml:** add tokens methods ([#241](https://github.com/paritytech/txwrapper-core/issues/241)) ([9250a90](https://github.com/paritytech/txwrapper-core/commit/9250a90bd0431e09d91871fecc6ac041031603e6))
+
+
+
+
+
+# [3.2.0](https://github.com/paritytech/txwrapper-core/compare/v3.1.7...v3.2.0) (2022-08-02)
+
+
+### Features
+
+* **txwrapper-orml:** add tokens methods ([#241](https://github.com/paritytech/txwrapper-core/issues/241)) ([9250a90](https://github.com/paritytech/txwrapper-core/commit/9250a90bd0431e09d91871fecc6ac041031603e6))
+
+
+
+
+
+## [3.1.7](https://github.com/paritytech/txwrapper-core/compare/v3.1.6...v3.1.7) (2022-07-26)
+
+**Note:** Version bump only for package @substrate/txwrapper-orml
+
+
+
+
+
+## [3.1.6](https://github.com/paritytech/txwrapper-core/compare/v3.1.5...v3.1.6) (2022-07-12)
+
+**Note:** Version bump only for package @substrate/txwrapper-orml
+
+
+
+
+
+## [3.1.5](https://github.com/paritytech/txwrapper-core/compare/v3.1.4...v3.1.5) (2022-07-05)
+
+**Note:** Version bump only for package @substrate/txwrapper-orml
+
+
+
+
+
+## [3.1.4](https://github.com/paritytech/txwrapper-core/compare/v3.1.3...v3.1.4) (2022-06-27)
+
+**Note:** Version bump only for package @substrate/txwrapper-orml
+
+
+
+
+
+## [3.1.3](https://github.com/paritytech/txwrapper-core/compare/v3.1.2...v3.1.3) (2022-06-20)
+
+**Note:** Version bump only for package @substrate/txwrapper-orml
+
+
+
+
+
 ## [3.1.2](https://github.com/paritytech/txwrapper-core/compare/v3.1.1...v3.1.2) (2022-06-15)
 
 **Note:** Version bump only for package @substrate/txwrapper-orml

@@ -3,6 +3,81 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.1](https://github.com/paritytech/txwrapper-core/compare/v3.2.0...v3.2.1) (2022-08-30)
+
+
+### Bug Fixes
+
+* **deps:** correctly fix asSpecifiedCallsOnlyV14 with the polkadot-js update ([#246](https://github.com/paritytech/txwrapper-core/issues/246)) ([12431c1](https://github.com/paritytech/txwrapper-core/commit/12431c19017c266866de4d9c68692487733e3a3c))
+* **types:** Update polkadot-js deps to get the latest types ([#250](https://github.com/paritytech/txwrapper-core/issues/250)) ([76be717](https://github.com/paritytech/txwrapper-core/commit/76be7176306caee35b34c323585e77fdda6c6890))
+
+
+
+
+
+# [3.2.0](https://github.com/paritytech/txwrapper-core/compare/v3.1.7...v3.2.0) (2022-08-16)
+
+**Note:** Version bump only for package @substrate/txwrapper-examples
+
+
+
+
+
+## [3.1.7](https://github.com/paritytech/txwrapper-core/compare/v3.1.6...v3.1.7) (2022-07-26)
+
+
+### Bug Fixes
+
+* **types:** Update polkadot-js deps to get the latest types ([#240](https://github.com/paritytech/txwrapper-core/issues/240)) ([813dfcb](https://github.com/paritytech/txwrapper-core/commit/813dfcb9a8f9947fc1aaa5b0fd168c47fada91d1))
+
+
+
+
+
+## [3.1.6](https://github.com/paritytech/txwrapper-core/compare/v3.1.5...v3.1.6) (2022-07-12)
+
+
+### Bug Fixes
+
+* **types:** Update polkadot-js deps to get the latest types ([#238](https://github.com/paritytech/txwrapper-core/issues/238)) ([41a559b](https://github.com/paritytech/txwrapper-core/commit/41a559ba223506cab051eb2e78b619e5ea29e37e))
+
+
+
+
+
+## [3.1.5](https://github.com/paritytech/txwrapper-core/compare/v3.1.4...v3.1.5) (2022-07-05)
+
+
+### Bug Fixes
+
+* **types:** Update polkadot-js deps to get the latest types ([#237](https://github.com/paritytech/txwrapper-core/issues/237)) ([60dcd70](https://github.com/paritytech/txwrapper-core/commit/60dcd70ca930e79fbe0a3c2f518685f76756dd61))
+
+
+
+
+
+## [3.1.4](https://github.com/paritytech/txwrapper-core/compare/v3.1.3...v3.1.4) (2022-06-27)
+
+
+### Bug Fixes
+
+* **types:** Update polkadot-js deps to get the latest types ([#236](https://github.com/paritytech/txwrapper-core/issues/236)) ([71fb6ea](https://github.com/paritytech/txwrapper-core/commit/71fb6ea6205c29aa3d9fe1f55d62ddb39ed595f9))
+
+
+
+
+
+## [3.1.3](https://github.com/paritytech/txwrapper-core/compare/v3.1.2...v3.1.3) (2022-06-20)
+
+
+### Bug Fixes
+
+* **types:** Update polkadot-js deps to get the latest types ([#233](https://github.com/paritytech/txwrapper-core/issues/233)) ([5c55722](https://github.com/paritytech/txwrapper-core/commit/5c5572215c0f811f450b10c25e0ab9ccdf1a60de))
+
+
+
+
+
 ## [3.1.2](https://github.com/paritytech/txwrapper-core/compare/v3.1.1...v3.1.2) (2022-06-15)
 
 
