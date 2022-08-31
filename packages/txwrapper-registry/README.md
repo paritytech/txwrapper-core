@@ -36,3 +36,11 @@ import { getRegistry } from '@substrate/txwrapper-registry';
 ```
 
 Have a look at the [examples](/packages/txwrapper-examples/README.md) to see how `getRegistry` is used in the whole lifecycle of a transaction, from generation to signing to broadcast.
+
+## **Config**
+
+In order to instantiate a registry with your chains custom types you must pass in the path to your your own types bundle file. If you would like to generate a types bundle file and dont know how to, feel free to use this helper library we have create to generate these types. [generate-type-bundle](https://github.com/paritytech/generate-type-bundle).
+
+The following env variable is accepted:
+
+`TX_TYPES_BUNDLE=/path-to-file` - Note: It must be a valid JSON file that has the same structure as the [`OverrideBundleTypes`](https://github.com/polkadot-js/api/blob/master/packages/types/src/types/registry.ts#L75-L78) in polkadot-js.
