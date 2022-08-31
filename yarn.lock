@@ -1879,7 +1879,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@polkadot/keyring@npm:^10.1.6":
+"@polkadot/keyring@npm:10.1.6, @polkadot/keyring@npm:^10.1.6":
   version: 10.1.6
   resolution: "@polkadot/keyring@npm:10.1.6"
   dependencies:
@@ -2404,6 +2404,7 @@ __metadata:
   resolution: "@substrate/txwrapper-core@workspace:packages/txwrapper-core"
   dependencies:
     "@polkadot/api": 9.2.4
+    "@polkadot/keyring": 10.1.6
     "@substrate/txwrapper-dev": ^3.2.0
     "@types/memoizee": ^0.4.3
     memoizee: 0.4.15
