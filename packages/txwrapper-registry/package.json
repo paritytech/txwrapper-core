@@ -19,7 +19,6 @@
   },
   "dependencies": {
     "@polkadot/networks": "^10.1.6",
-    "@substrate/txwrapper-core": "^3.2.1",
-    "confmgr": "1.0.9"
+    "@substrate/txwrapper-core": "^3.2.1"
   }
 }

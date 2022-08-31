@@ -2,17 +2,13 @@
 /* eslint-disable @typescript-eslint/no-unsafe-argument */
 import { allNetworks as substrateSS58Registry } from '@polkadot/networks';
 import { TypeRegistry } from '@polkadot/types';
+import { OverrideBundleType } from '@polkadot/types/types';
 import { getSpecTypes } from '@polkadot/types-known';
 import {
 	ChainProperties,
 	getRegistryBase,
 	GetRegistryOptsCore,
 } from '@substrate/txwrapper-core';
-import { ConfigManager } from 'confmgr';
-
-import { CONFIG, MODULES, Specs } from './Specs';
-
-const config = ConfigManager.getInstance(Specs.specs).getConfig();
 
 /**
  * Known chain properties based on the substrate ss58 registry.
@@ -52,7 +48,9 @@ export interface GetRegistryOpts extends GetRegistryOptsCore {
 	properties?: ChainProperties;
 }
 
-const getTypesBundle = config.Get(MODULES.SUBSTRATE, CONFIG.TYPES_BUNDLE);
+const typesBundle: OverrideBundleType = process.env.SUBSTRATE_TYPES_BUNDLE
+	? require(process.env.SUBSTRATE_TYPES_BUNDLE)
+	: undefined;
 
 /**
  * Create a registry with `knownTypes` via env variables.
@@ -61,7 +59,7 @@ const getTypesBundle = config.Get(MODULES.SUBSTRATE, CONFIG.TYPES_BUNDLE);
 export function createRegistry(): TypeRegistry {
 	const registry = new TypeRegistry();
 	registry.setKnownTypes({
-		typesBundle: getTypesBundle ? require(getTypesBundle) : undefined,
+		typesBundle: typesBundle,
 	});
 
 	return registry;
