@@ -39,7 +39,7 @@ Have a look at the [examples](/packages/txwrapper-examples/README.md) to see how
 
 ## **Config**
 
-In order to instantiate a registry with your chains custom types you must pass in the path to your your own types bundle file. If you would like to generate a types bundle file and dont know how to, feel free to use this helper library we have create to generate these types. [generate-type-bundle](https://github.com/paritytech/generate-type-bundle).
+In order to instantiate a registry with your chains custom types you must pass in the path to your own types bundle file. If you would like to generate a types bundle file and don't know how to, feel free to use this helper library we have created to generate these types. [generate-type-bundle](https://github.com/paritytech/generate-type-bundle).
 
 The following env variable is accepted:
 
