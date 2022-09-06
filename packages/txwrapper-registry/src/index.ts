@@ -48,9 +48,26 @@ export interface GetRegistryOpts extends GetRegistryOptsCore {
 	properties?: ChainProperties;
 }
 
-const typesBundle: OverrideBundleType | undefined = process.env.TX_TYPES_BUNDLE
-	? require(process.env.TX_TYPES_BUNDLE)
-	: undefined;
+/**
+ * Ensure the following type bundle exists and is a valid JSON file.
+ *
+ * @param path String given by TX_TYPES_BUNDLE
+ */
+function checkTypeBundle(path: string | undefined): boolean {
+	if (!path) return false;
+
+	const splitPath = path.split('.');
+	if (splitPath[splitPath.length - 1] !== 'json') {
+		throw Error('TX_TYPES_BUNDLE must point to a valid json file.');
+	}
+
+	return true;
+}
+
+const typesBundle: OverrideBundleType | undefined =
+	checkTypeBundle(process.env.TX_TYPES_BUNDLE) && process.env.TX_TYPES_BUNDLE
+		? require(process.env.TX_TYPES_BUNDLE)
+		: undefined;
 
 /**
  * Create a registry with `knownTypes` via env variables.
