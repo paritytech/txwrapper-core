@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.2](http://%3Clink%20to%20the%20github%20repo%20this%20package%20lives%20in%3E/compare/v3.2.1...v3.2.2) (2022-09-06)
+
+**Note:** Version bump only for package @substrate/txwrapper-template
+
+
+
+
+
 ## [3.2.1](http://%3Clink%20to%20the%20github%20repo%20this%20package%20lives%20in%3E/compare/v3.2.0...v3.2.1) (2022-08-30)
 
 **Note:** Version bump only for package @substrate/txwrapper-template
