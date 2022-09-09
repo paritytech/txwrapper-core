@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.2](https://github.com/paritytech/txwrapper-core/compare/v3.2.1...v3.2.2) (2022-09-06)
+
+
+### Bug Fixes
+
+* **types:** Update polkadot-js deps to get the latest types ([#252](https://github.com/paritytech/txwrapper-core/issues/252)) ([82a1177](https://github.com/paritytech/txwrapper-core/commit/82a117736699d165e8f43529fac2b3034744f587))
+* decodeSigningPayload for immortal era ([#248](https://github.com/paritytech/txwrapper-core/issues/248)) ([58627f1](https://github.com/paritytech/txwrapper-core/commit/58627f1a2e6dd48c3289e4faf2b0b187e21c3a26))
+
+
+
+
+
 ## [3.2.1](https://github.com/paritytech/txwrapper-core/compare/v3.2.0...v3.2.1) (2022-08-30)
 
 
