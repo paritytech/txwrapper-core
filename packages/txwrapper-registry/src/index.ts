@@ -70,7 +70,7 @@ function parseTypesBundle(
 const typesBundle: OverrideBundleType | undefined = parseTypesBundle(
 	process.env.TX_TYPES_BUNDLE
 );
-console.log(typesBundle);
+
 /**
  * Create a registry with `knownTypes` via env variables.
  * ie: STX_TYPES_BUNDLE; STX_TYPES_CHAIN
