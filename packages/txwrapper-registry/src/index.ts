@@ -9,6 +9,7 @@ import {
 	getRegistryBase,
 	GetRegistryOptsCore,
 } from '@substrate/txwrapper-core';
+import fs from 'fs';
 
 /**
  * Known chain properties based on the substrate ss58 registry.
@@ -48,27 +49,28 @@ export interface GetRegistryOpts extends GetRegistryOptsCore {
 	properties?: ChainProperties;
 }
 
-/**
- * Ensure the following type bundle exists and is a valid JSON file.
- *
- * @param path String given by TX_TYPES_BUNDLE
- */
-function checkTypeBundle(path: string | undefined): boolean {
-	if (!path) return false;
+function parseTypesBundle(
+	path: string | undefined
+): OverrideBundleType | undefined {
+	if (!path) return undefined;
 
-	const splitPath = path.split('.');
-	if (splitPath[splitPath.length - 1] !== 'json') {
-		throw Error('TX_TYPES_BUNDLE must point to a valid json file.');
+	let parsedJson: OverrideBundleType | undefined;
+	try {
+		const rawData = fs.readFileSync(path, { encoding: 'utf-8' });
+		parsedJson = JSON.parse(rawData);
+	} catch (e) {
+		console.error(
+			`Invalid file path. Not able to parse to JSON: ${e as string}`
+		);
 	}
 
-	return true;
+	return parsedJson;
 }
 
-const typesBundle: OverrideBundleType | undefined =
-	checkTypeBundle(process.env.TX_TYPES_BUNDLE) && process.env.TX_TYPES_BUNDLE
-		? require(process.env.TX_TYPES_BUNDLE)
-		: undefined;
-
+const typesBundle: OverrideBundleType | undefined = parseTypesBundle(
+	process.env.TX_TYPES_BUNDLE
+);
+console.log(typesBundle);
 /**
  * Create a registry with `knownTypes` via env variables.
  * ie: STX_TYPES_BUNDLE; STX_TYPES_CHAIN
