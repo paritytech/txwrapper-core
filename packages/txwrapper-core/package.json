@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@polkadot/api": "9.3.3",
+    "@polkadot/keyring": "10.1.7",
     "memoizee": "0.4.15"
   },
   "devDependencies": {

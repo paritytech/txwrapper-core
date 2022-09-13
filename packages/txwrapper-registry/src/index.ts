@@ -1,12 +1,15 @@
-import { typesBundle } from '@polkadot/apps-config/api';
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
 import { allNetworks as substrateSS58Registry } from '@polkadot/networks';
 import { TypeRegistry } from '@polkadot/types';
+import { OverrideBundleType } from '@polkadot/types/types';
 import { getSpecTypes } from '@polkadot/types-known';
 import {
 	ChainProperties,
 	getRegistryBase,
 	GetRegistryOptsCore,
 } from '@substrate/txwrapper-core';
+import fs from 'fs';
 
 /**
  * Known chain properties based on the substrate ss58 registry.
@@ -46,13 +49,36 @@ export interface GetRegistryOpts extends GetRegistryOptsCore {
 	properties?: ChainProperties;
 }
 
+function parseTypesBundle(
+	path: string | undefined
+): OverrideBundleType | undefined {
+	if (!path) return undefined;
+
+	let parsedJson: OverrideBundleType | undefined;
+	try {
+		const rawData = fs.readFileSync(path, { encoding: 'utf-8' });
+		parsedJson = JSON.parse(rawData);
+	} catch (e) {
+		console.error(
+			`Invalid file path or not able to parse file to JSON: ${e as string}`
+		);
+	}
+
+	return parsedJson;
+}
+
+const typesBundle: OverrideBundleType | undefined = parseTypesBundle(
+	process.env.TX_TYPES_BUNDLE
+);
+
 /**
- * Create a registry with `knownTypes` set with types from @polkadot/apps-config.
+ * Create a registry with `knownTypes` via env variables.
+ * ie: STX_TYPES_BUNDLE; STX_TYPES_CHAIN
  */
-function getAppsConfigRegistry(): TypeRegistry {
+export function createRegistry(): TypeRegistry {
 	const registry = new TypeRegistry();
 	registry.setKnownTypes({
-		typesBundle,
+		typesBundle: typesBundle,
 	});
 
 	return registry;
@@ -73,11 +99,7 @@ export function getRegistry({
 	asCallsOnlyArg,
 	asSpecifiedCallsOnlyV14,
 }: GetRegistryOpts): TypeRegistry {
-	// Polkadot, kusama, and westend have known types in the default polkadot-js registry. If we are
-	// dealing with another network, use the apps-config types to fill the registry.
-	const registry = ['polkadot', 'kusama', 'westend'].includes(specName)
-		? new TypeRegistry()
-		: getAppsConfigRegistry();
+	const registry = createRegistry();
 
 	return getRegistryBase({
 		chainProperties: properties || knownChainProperties[specName],
