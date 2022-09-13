@@ -60,7 +60,7 @@ function parseTypesBundle(
 		parsedJson = JSON.parse(rawData);
 	} catch (e) {
 		console.error(
-			`Invalid file path. Not able to parse to JSON: ${e as string}`
+			`Invalid file path or not able to parse file to JSON: ${e as string}`
 		);
 	}
 
