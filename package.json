@@ -11,7 +11,7 @@
     "deploy": "yarn run build && lerna version --conventional-commits --create-release github && lerna publish from-package",
     "version": "yarn install && git stage yarn.lock",
     "build": "lerna run build",
-    "build:workspace": "cd $INIT_CWD && rimraf lib/ && tsc -p tsconfig.build.json",
+    "build:workspace": "substrate-exec-rimraf $INIT_CWD/lib/ && cd $INIT_CWD && tsc -p tsconfig.build.json",
     "lint": "substrate-dev-run-lint --fix",
     "lint:ci": "substrate-dev-run-lint",
     "test": "substrate-exec-jest",
@@ -21,27 +21,16 @@
     "update-pjs-deps": "substrate-update-pjs-deps"
   },
   "devDependencies": {
-    "@babel/plugin-transform-modules-commonjs": "^7.18.6",
     "@polkadot/util-crypto": "^10.1.6",
-    "@substrate/dev": "^0.6.3",
-    "@types/jest": "^27.5.2",
-    "@typescript-eslint/eslint-plugin": "^5.30.0",
-    "@typescript-eslint/parser": "^5.30.0",
-    "eslint": "^8.18.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-prettier": "^4.1.0",
-    "eslint-plugin-simple-import-sort": "^7.0.0",
-    "jest": "^27.5.1",
+    "@substrate/dev": "^0.6.5",
     "lerna": "^4.0.0",
-    "prettier": "^2.7.1",
-    "rimraf": "^3.0.2",
     "ts-jest": "^27.1.5",
     "ts-node": "^9.1.1",
     "tsconfig-paths": "^3.9.0",
     "typedoc": "^0.22.10",
     "typedoc-plugin-markdown": "^3.11.8",
     "typedoc-plugin-missing-exports": "^0.22.6",
-    "typescript": "^4.7.4"
+    "typescript": "^4.8.2"
   },
   "packageManager": "yarn@3.2.3"
 }
