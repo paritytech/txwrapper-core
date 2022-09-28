@@ -13,11 +13,6 @@ async function main(): Promise<void> {
 
 	/**
 	 * Create the type registry.
-	 *
-	 * In order to minimize the metadata, add the asSpecifiedCallsOnlyV14 option
-	 * which will point to an array that will contain pallets names as strings. Each pallet
-	 * specified will include the types needed for constructing transactions for those pallets only
-	 * within the metadata.
 	 */
 	const registry = getRegistry({
 		chainName: 'Polkadot',
