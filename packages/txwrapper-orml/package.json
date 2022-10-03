@@ -1,6 +1,6 @@
 {
   "name": "@substrate/txwrapper-orml",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "author": "Parity Technologies <admin@parity.io>",
   "description": "Selected dispatchables of ORML pallets, to be re-exported by txwrappers.",
   "license": "Apache-2.0",
@@ -18,10 +18,10 @@
     "build": "yarn build:workspace"
   },
   "dependencies": {
-    "@substrate/txwrapper-core": "^4.0.0"
+    "@substrate/txwrapper-core": "^4.0.1"
   },
   "devDependencies": {
     "@acala-network/type-definitions": "^0.7.4-1",
-    "@substrate/txwrapper-dev": "^4.0.0"
+    "@substrate/txwrapper-dev": "^4.0.1"
   }
 }

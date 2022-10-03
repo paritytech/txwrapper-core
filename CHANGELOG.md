@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.1](https://github.com/paritytech/txwrapper-core/compare/v4.0.0...v4.0.1) (2022-10-03)
+
+
+### Bug Fixes
+
+* remove asSpecifiedCallsOnlyV14 from getRegistryBase ([#249](https://github.com/paritytech/txwrapper-core/issues/249)) ([8d94be4](https://github.com/paritytech/txwrapper-core/commit/8d94be4958cf171cb34121bc71dc95d7b111c698))
+
+
+
+
+
 # [4.0.0](https://github.com/paritytech/txwrapper-core/compare/v3.2.2...v4.0.0) (2022-09-21)
 
 
