@@ -18,8 +18,8 @@
     "build": "yarn build:workspace"
   },
   "dependencies": {
-    "@polkadot/api": "^9.4.3",
-    "@polkadot/keyring": "^10.1.9",
+    "@polkadot/api": "^9.9.1",
+    "@polkadot/keyring": "^10.1.13",
     "memoizee": "0.4.15"
   },
   "devDependencies": {
