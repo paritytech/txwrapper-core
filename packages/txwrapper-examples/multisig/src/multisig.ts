@@ -336,7 +336,7 @@ async function main(): Promise<void> {
 			otherSignatories: otherSignatoriesSortedExAlice,
 			maybeTimepoint: null,
 			callHash: callTxHashMulti,
-			maxWeight: '640000000',
+			maxWeight: { refTime: '640000000', proofSize: '0' },
 		},
 		{
 			address: deriveAddress(
@@ -505,7 +505,7 @@ async function main(): Promise<void> {
 			},
 			call: unsignedTXMultiEncodedMethod,
 			storeCall: false,
-			maxWeight: '640000000',
+			maxWeight: { refTime: '640000000', proofSize: '0' },
 		},
 		{
 			address: deriveAddress(
