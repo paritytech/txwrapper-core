@@ -30,7 +30,7 @@ The extrinsic index in which the call to `anonymous` was processed.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/proxy/killAnonymous.ts:29](https://github.com/paritytech/txwrapper-core/blob/54903b8/packages/txwrapper-substrate/src/methods/proxy/killAnonymous.ts#L29)
+[txwrapper-substrate/src/methods/proxy/killAnonymous.ts:29](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-substrate/src/methods/proxy/killAnonymous.ts#L29)
 
 ___
 
@@ -42,7 +42,7 @@ The height of the chain when the call to `anonymous` was processed.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/proxy/killAnonymous.ts:25](https://github.com/paritytech/txwrapper-core/blob/54903b8/packages/txwrapper-substrate/src/methods/proxy/killAnonymous.ts#L25)
+[txwrapper-substrate/src/methods/proxy/killAnonymous.ts:25](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-substrate/src/methods/proxy/killAnonymous.ts#L25)
 
 ___
 
@@ -54,7 +54,7 @@ The disambiguation index originally passed to `anonymous`. Probably `0`
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/proxy/killAnonymous.ts:21](https://github.com/paritytech/txwrapper-core/blob/54903b8/packages/txwrapper-substrate/src/methods/proxy/killAnonymous.ts#L21)
+[txwrapper-substrate/src/methods/proxy/killAnonymous.ts:21](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-substrate/src/methods/proxy/killAnonymous.ts#L21)
 
 ___
 
@@ -66,7 +66,7 @@ The proxy type originally passed to `anonymous`.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/proxy/killAnonymous.ts:17](https://github.com/paritytech/txwrapper-core/blob/54903b8/packages/txwrapper-substrate/src/methods/proxy/killAnonymous.ts#L17)
+[txwrapper-substrate/src/methods/proxy/killAnonymous.ts:17](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-substrate/src/methods/proxy/killAnonymous.ts#L17)
 
 ___
 
@@ -78,4 +78,4 @@ The account that originally called `anonymous` to create this account.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/proxy/killAnonymous.ts:13](https://github.com/paritytech/txwrapper-core/blob/54903b8/packages/txwrapper-substrate/src/methods/proxy/killAnonymous.ts#L13)
+[txwrapper-substrate/src/methods/proxy/killAnonymous.ts:13](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-substrate/src/methods/proxy/killAnonymous.ts#L13)

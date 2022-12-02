@@ -25,7 +25,7 @@ Used to reduce the metadata size by only having the calls
 
 #### Defined in
 
-[txwrapper-core/src/core/metadata/getRegistryBase.ts:24](https://github.com/paritytech/txwrapper-core/blob/54903b8/packages/txwrapper-core/src/core/metadata/getRegistryBase.ts#L24)
+[txwrapper-core/src/core/metadata/getRegistryBase.ts:24](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-core/src/core/metadata/getRegistryBase.ts#L24)
 
 ___
 
@@ -37,7 +37,7 @@ Chain properties, normally returned by the `system_properties` call.
 
 #### Defined in
 
-[txwrapper-core/src/core/metadata/getRegistryBase.ts:12](https://github.com/paritytech/txwrapper-core/blob/54903b8/packages/txwrapper-core/src/core/metadata/getRegistryBase.ts#L12)
+[txwrapper-core/src/core/metadata/getRegistryBase.ts:12](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-core/src/core/metadata/getRegistryBase.ts#L12)
 
 ___
 
@@ -49,7 +49,7 @@ Used to set the correct metadata for the registry
 
 #### Defined in
 
-[txwrapper-core/src/core/metadata/getRegistryBase.ts:20](https://github.com/paritytech/txwrapper-core/blob/54903b8/packages/txwrapper-core/src/core/metadata/getRegistryBase.ts#L20)
+[txwrapper-core/src/core/metadata/getRegistryBase.ts:20](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-core/src/core/metadata/getRegistryBase.ts#L20)
 
 ___
 
@@ -61,7 +61,7 @@ Array of signedExtensions
 
 #### Defined in
 
-[txwrapper-core/src/core/metadata/getRegistryBase.ts:28](https://github.com/paritytech/txwrapper-core/blob/54903b8/packages/txwrapper-core/src/core/metadata/getRegistryBase.ts#L28)
+[txwrapper-core/src/core/metadata/getRegistryBase.ts:28](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-core/src/core/metadata/getRegistryBase.ts#L28)
 
 ___
 
@@ -73,7 +73,7 @@ Chain specific type definitions to registry.
 
 #### Defined in
 
-[txwrapper-core/src/core/metadata/getRegistryBase.ts:16](https://github.com/paritytech/txwrapper-core/blob/54903b8/packages/txwrapper-core/src/core/metadata/getRegistryBase.ts#L16)
+[txwrapper-core/src/core/metadata/getRegistryBase.ts:16](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-core/src/core/metadata/getRegistryBase.ts#L16)
 
 ___
 
@@ -85,4 +85,4 @@ User extensions used to inject into the type registry
 
 #### Defined in
 
-[txwrapper-core/src/core/metadata/getRegistryBase.ts:32](https://github.com/paritytech/txwrapper-core/blob/54903b8/packages/txwrapper-core/src/core/metadata/getRegistryBase.ts#L32)
+[txwrapper-core/src/core/metadata/getRegistryBase.ts:32](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-core/src/core/metadata/getRegistryBase.ts#L32)

@@ -18,6 +18,7 @@
 - [KeyringPair](txwrapper_polkadot_src.md#keyringpair)
 - [Options](txwrapper_polkadot_src.md#options)
 - [OptionsWithMeta](txwrapper_polkadot_src.md#optionswithmeta)
+- [PolkadotSS58Format](txwrapper_polkadot_src.md#polkadotss58format)
 - [TxInfo](txwrapper_polkadot_src.md#txinfo)
 - [TxMethod](txwrapper_polkadot_src.md#txmethod)
 - [UnsignedTransaction](txwrapper_polkadot_src.md#unsignedtransaction)
@@ -119,6 +120,12 @@ Re-exports [OptionsWithMeta](../interfaces/txwrapper_core_src.OptionsWithMeta.md
 
 ___
 
+### PolkadotSS58Format
+
+Re-exports [PolkadotSS58Format](../enums/txwrapper_core_src.PolkadotSS58Format.md)
+
+___
+
 ### TxInfo
 
 Re-exports [TxInfo](../interfaces/txwrapper_core_src.TxInfo.md)
@@ -189,7 +196,7 @@ Re-exports [toTxMethod](txwrapper_core_src.md#totxmethod)
 | :------ | :------ |
 | `assets` | [`assets`](txwrapper_substrate_src.methods.assets.md) |
 | `balances` | [`balances`](txwrapper_substrate_src.methods.balances.md) |
-| `crowdloan` | [`"/Users/ikeralustiza/txwrapper_doc_test/txwrapper-core/packages/txwrapper-polkadot/src/methods/crowdloan/index"`](txwrapper_polkadot_src._internal_.__Users_ikeralustiza_txwrapper_doc_test_txwrapper_core_packages_txwrapper_polkadot_src_methods_crowdloan_index_.md) |
+| `crowdloan` | [`"/Users/tarikgul/Desktop/parity/tools-team/txwrapper-core/packages/txwrapper-polkadot/src/methods/crowdloan/index"`](txwrapper_polkadot_src._internal_.__Users_tarikgul_Desktop_parity_tools_team_txwrapper_core_packages_txwrapper_polkadot_src_methods_crowdloan_index_.md) |
 | `democracy` | [`democracy`](txwrapper_substrate_src.methods.democracy.md) |
 | `multisig` | [`multisig`](txwrapper_substrate_src.methods.multisig.md) |
 | `proxy` | [`proxy`](txwrapper_substrate_src.methods.proxy.md) |
@@ -201,7 +208,7 @@ Re-exports [toTxMethod](txwrapper_core_src.md#totxmethod)
 
 #### Defined in
 
-[txwrapper-polkadot/src/index.ts:16](https://github.com/paritytech/txwrapper-core/blob/54903b8/packages/txwrapper-polkadot/src/index.ts#L16)
+[txwrapper-polkadot/src/index.ts:16](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-polkadot/src/index.ts#L16)
 
 ## Functions
 
@@ -223,4 +230,4 @@ Get a type registry for networks that txwrapper-polkadot supports.
 
 #### Defined in
 
-[txwrapper-polkadot/src/index.ts:81](https://github.com/paritytech/txwrapper-core/blob/54903b8/packages/txwrapper-polkadot/src/index.ts#L81)
+[txwrapper-polkadot/src/index.ts:81](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-polkadot/src/index.ts#L81)
