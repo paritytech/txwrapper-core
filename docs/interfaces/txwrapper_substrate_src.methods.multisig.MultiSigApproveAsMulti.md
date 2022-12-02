@@ -30,19 +30,19 @@ The hash of the call to be executed.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/multisig/approveAsMulti.ts:30](https://github.com/paritytech/txwrapper-core/blob/54903b8/packages/txwrapper-substrate/src/methods/multisig/approveAsMulti.ts#L30)
+[txwrapper-substrate/src/methods/multisig/approveAsMulti.ts:30](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-substrate/src/methods/multisig/approveAsMulti.ts#L30)
 
 ___
 
 ### maxWeight
 
-• **maxWeight**: `string` \| `number`
+• **maxWeight**: `string` \| { `proofSize`: `string` \| `number` ; `refTime`: `string` \| `number`  }
 
 Maximium weight the call being approved may consume.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/multisig/approveAsMulti.ts:34](https://github.com/paritytech/txwrapper-core/blob/54903b8/packages/txwrapper-substrate/src/methods/multisig/approveAsMulti.ts#L34)
+[txwrapper-substrate/src/methods/multisig/approveAsMulti.ts:34](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-substrate/src/methods/multisig/approveAsMulti.ts#L34)
 
 ___
 
@@ -56,7 +56,7 @@ approving transaction.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/multisig/approveAsMulti.ts:26](https://github.com/paritytech/txwrapper-core/blob/54903b8/packages/txwrapper-substrate/src/methods/multisig/approveAsMulti.ts#L26)
+[txwrapper-substrate/src/methods/multisig/approveAsMulti.ts:26](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-substrate/src/methods/multisig/approveAsMulti.ts#L26)
 
 ___
 
@@ -69,7 +69,7 @@ May not be empty.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/multisig/approveAsMulti.ts:20](https://github.com/paritytech/txwrapper-core/blob/54903b8/packages/txwrapper-substrate/src/methods/multisig/approveAsMulti.ts#L20)
+[txwrapper-substrate/src/methods/multisig/approveAsMulti.ts:20](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-substrate/src/methods/multisig/approveAsMulti.ts#L20)
 
 ___
 
@@ -81,4 +81,4 @@ The total number of approvals required for this dispatch before it is executed.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/multisig/approveAsMulti.ts:15](https://github.com/paritytech/txwrapper-core/blob/54903b8/packages/txwrapper-substrate/src/methods/multisig/approveAsMulti.ts#L15)
+[txwrapper-substrate/src/methods/multisig/approveAsMulti.ts:15](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-substrate/src/methods/multisig/approveAsMulti.ts#L15)

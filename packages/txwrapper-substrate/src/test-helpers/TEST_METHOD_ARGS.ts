@@ -176,7 +176,7 @@ export const TEST_METHOD_ARGS = {
 			},
 			callHash:
 				'0xd4e2732526969517357298ac70357e6cfa78b6ce2282b55de4143168667f4f49',
-			maxWeight: '90071992547409910',
+			maxWeight: { refTime: '90071992547409910', proofSize: '0' },
 		},
 		asMulti: {
 			threshold: 2,
@@ -189,9 +189,9 @@ export const TEST_METHOD_ARGS = {
 				height: 123,
 				index: 3,
 			},
-			call: '0x0500306721211d5404bd9da88e0204360a1a9ab8b87c66c1bc2fcdd37f3c2222cc200f00a0be1c448399',
+			call: '0x040300cc5fc7439d3c49984e7345319de148561cd930748fb401276d289f714acdd50c28',
 			storeCall: false,
-			maxWeight: '90071992547409910',
+			maxWeight: { refTime: '90071992547409910', proofSize: '0' },
 		},
 	},
 };

@@ -31,7 +31,7 @@ export function getRegistryKusama(
 }
 
 /**
- * Polkadot v9122 TypeRegistry
+ * Kusama v9160 TypeRegistry
  */
 export const kusamaRegistryV9160 = getRegistryKusama(
 	9160,

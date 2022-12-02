@@ -31,7 +31,7 @@ export interface MultiSigApproveAsMulti extends Args {
 	/**
 	 * Maximium weight the call being approved may consume.
 	 */
-	maxWeight: string | number;
+	maxWeight: { refTime: number | string; proofSize: number | string };
 }
 
 /**

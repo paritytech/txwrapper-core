@@ -58,7 +58,7 @@ The dispatch origin for this call must be _Signed_.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/utility/asDerivative.ts:48](https://github.com/paritytech/txwrapper-core/blob/54903b8/packages/txwrapper-substrate/src/methods/utility/asDerivative.ts#L48)
+[txwrapper-substrate/src/methods/utility/asDerivative.ts:48](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-substrate/src/methods/utility/asDerivative.ts#L48)
 
 ___
 
@@ -80,7 +80,7 @@ ___
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/utility/batch.ts:18](https://github.com/paritytech/txwrapper-core/blob/54903b8/packages/txwrapper-substrate/src/methods/utility/batch.ts#L18)
+[txwrapper-substrate/src/methods/utility/batch.ts:18](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-substrate/src/methods/utility/batch.ts#L18)
 
 ___
 
@@ -110,4 +110,4 @@ If origin is root then calls are dispatch without checking origin filter.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/utility/batchAll.ts:23](https://github.com/paritytech/txwrapper-core/blob/54903b8/packages/txwrapper-substrate/src/methods/utility/batchAll.ts#L23)
+[txwrapper-substrate/src/methods/utility/batchAll.ts:23](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-substrate/src/methods/utility/batchAll.ts#L23)
