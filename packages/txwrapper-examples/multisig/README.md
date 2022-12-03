@@ -126,8 +126,14 @@ In [Sidecar](https://github.com/paritytech/substrate-api-sidecar) we can access 
   ```
 
   For our specific Multisig example code, the endpoint would be :
+
+  below Sidecar v14.0.0 :
   ```bash
   /pallets/multisig/storage/multisigs?key1=value_of_Ss58MultiSigAddress_variable&key2=value_of_callTxHashMulti_variable
+  ```
+  Sidecar v14.0.0 or above :
+  ```bash
+  /pallets/multisig/storage/multisigs?keys[]=value_of_Ss58MultiSigAddress_variable&keys[]=value_of_callTxHashMulti_variable
   ```
 
   **NOTE** : Keep in mind that in order to see the corresponding values (block **height** and **index** of the `approveAsMulti` call) with the above endpoint, you need to access it before the `Multisig` is executed (so before the `asMulti` is called). This is due to the fact that this endpoint gives us access to **Open** multisig operations.
