@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "deploy": "yarn run build && lerna version --conventional-commits --create-release github && lerna publish from-package",
-    "deploy:force": "yarn run build && yarn lerna ${FORCE_VERSION} --force-publish --conventional-commits --create-release github && yarn lerna publish from-package",
+    "deploy:force": "yarn run build && yarn lerna version ${FORCE_VERSION} --force-publish --conventional-commits --create-release github && yarn lerna publish from-package",
     "version": "yarn install && git stage yarn.lock",
     "build": "lerna run build",
     "build:workspace": "substrate-exec-rimraf $INIT_CWD/lib/ && cd $INIT_CWD && tsc -p tsconfig.build.json",
