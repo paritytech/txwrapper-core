@@ -8,6 +8,7 @@
     "packages/*"
   ],
   "scripts": {
+    "deploy:force": "yarn run build && yarn lerna version  --force-publish --conventional-commits --create-release github && yarn lerna publish from-package",
     "deploy": "yarn run build && lerna version --conventional-commits --create-release github && lerna publish from-package",
     "version": "yarn install && git stage yarn.lock",
     "build": "lerna run build",
