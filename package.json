@@ -17,6 +17,7 @@
     "test": "substrate-exec-jest",
     "test:watch": "substrate-exec-jest --watch",
     "test:cov": "substrate-exec-jest --coverage",
+    "test:ci": "NODE_ENV=test substrate-exec-jest --runInBand",
     "docs": "typedoc --gitRemote origin",
     "update-pjs-deps": "substrate-update-pjs-deps"
   },
