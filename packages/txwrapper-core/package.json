@@ -1,6 +1,6 @@
 {
   "name": "@substrate/txwrapper-core",
-  "version": "4.0.2",
+  "version": "4.0.3",
   "author": "Parity Technologies <admin@parity.io>",
   "description": "Core components for creating a txwrapper lib.",
   "license": "Apache-2.0",
@@ -23,7 +23,7 @@
     "memoizee": "0.4.15"
   },
   "devDependencies": {
-    "@substrate/txwrapper-dev": "^4.0.2",
+    "@substrate/txwrapper-dev": "^4.0.3",
     "@types/memoizee": "^0.4.3"
   }
 }
