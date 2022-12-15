@@ -36,7 +36,7 @@ export function createSignedTx(
 	const extrinsic = registry.createType(
 		'Extrinsic',
 		{ method: unsigned.method },
-		{ version: unsigned.version },
+		{ version: unsigned.version }
 	);
 
 	extrinsic.addSignature(unsigned.address, signature, unsigned);
