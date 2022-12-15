@@ -21,7 +21,6 @@ export function transferKeepAlive(
 	info: BaseTxInfo,
 	options: OptionsWithMeta
 ): UnsignedTransaction {
-
 	return defineMethod(
 		{
 			method: {

@@ -54,13 +54,13 @@ export function decodeSigningPayload(
 	const eraPeriod = payload.era.isMortalEra
 		? payload.era.asMortalEra.period.toNumber()
 		: 0;
-	
+
 	let assetId: number | undefined;
-	
-	if(payload.inner.assetId) {
+
+	if (payload.inner.assetId) {
 		assetId = payload.inner.assetId.isSome
-		? parseInt(payload.inner.assetId.toString())
-		: undefined;
+			? parseInt(payload.inner.assetId.toString())
+			: undefined;
 	}
 
 	return {
