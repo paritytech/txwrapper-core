@@ -20,7 +20,7 @@ export function rpcToLocalNode(
 	method: string,
 	params: any[] = []
 ): Promise<any> {
-	return fetch('http://0.0.0.0:9933', {
+	return fetch('http://127.0.0.1:49605', {
 		body: JSON.stringify({
 			id: 1,
 			jsonrpc: '2.0',
@@ -60,7 +60,6 @@ export function signWith(
 	// Important! The registry needs to be updated with latest metadata, so make
 	// sure to run `registry.setMetadata(metadata)` before signing.
 	registry.setMetadata(createMetadata(registry, metadataRpc));
-
 	const { signature } = registry
 		.createType('ExtrinsicPayload', signingPayload, {
 			version: EXTRINSIC_VERSION,

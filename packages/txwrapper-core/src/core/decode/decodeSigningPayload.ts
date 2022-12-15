@@ -47,6 +47,7 @@ export function decodeSigningPayload(
 			},
 		]
 	);
+	
 	const methodCall: Call = createTypeUnsafe(registry, 'Call', [payload.method]);
 	const method = toTxMethod(registry, methodCall);
 
@@ -55,7 +56,12 @@ export function decodeSigningPayload(
 		? payload.era.asMortalEra.period.toNumber()
 		: 0;
 
+	const assetId = payload.inner.assetId.isSome
+	? parseInt(payload.inner.assetId.toString())
+	: undefined;
+
 	return {
+		assetId,
 		blockHash: payload.blockHash.toHex(),
 		eraPeriod,
 		genesisHash: payload.genesisHash.toHex(),

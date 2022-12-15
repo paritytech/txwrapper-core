@@ -18,7 +18,7 @@ export async function signWithAlice(
 	// Use ed25519 because it has deterministic signatures
 	const keyring = new Keyring({ type: 'ed25519' });
 	const alice = keyring.addFromUri('//Alice', { name: 'Alice default' });
-
+	console.log("SIGNWITHALICE--------------");
 	const { signature } = registry
 		.createType('ExtrinsicPayload', signingPayload, {
 			version: 4,
