@@ -60,6 +60,7 @@ export function signWith(
 	// Important! The registry needs to be updated with latest metadata, so make
 	// sure to run `registry.setMetadata(metadata)` before signing.
 	registry.setMetadata(createMetadata(registry, metadataRpc));
+	
 	const { signature } = registry
 		.createType('ExtrinsicPayload', signingPayload, {
 			version: EXTRINSIC_VERSION,
