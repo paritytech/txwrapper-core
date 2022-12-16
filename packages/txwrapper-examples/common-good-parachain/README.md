@@ -4,25 +4,7 @@
 
 ## Get Started
 
-1) Clone & build Polkadot
-
-    bash
-    ```
-    git clone -b release-v0.9.23 --depth 1 https://github.com/paritytech/polkadot
-    cd polkadot && cargo build –-release
-    cp ./target/release/polkadot ../trappist/bin
-    ```
-
-2) Clone & build Cumulus (*)
-
-    bash
-    ```
-    git clone -b xcm-demo --depth 1 https://github.com/stiiifff/cumulus-asset-fees
-    cd cumulus-asset-fees && cargo build –-release
-    cp ./target/releases/polkadot-parachain ../trappist/bin
-    ```
-
-3) Clone & build Trappist
+1) Clone & build Trappist
 
     bash
     ```
@@ -31,7 +13,26 @@
     cp ./target/release/trappist-collator ./bin
     ```
 
-4) Install zombienet utility: download the latest binary for your operating system at https://github.com/paritytech/zombienet/releases
+2) Clone & build Polkadot
+
+    bash
+    ```
+    git clone -b release-v0.9.23 --depth 1 https://github.com/paritytech/polkadot
+    cd polkadot && cargo build –-release
+    cp ./target/release/polkadot ../trappist/bin
+    ```
+
+3) Clone & build Cumulus (*)
+
+    bash
+    ```
+    git clone -b xcm-demo --depth 1 https://github.com/stiiifff/cumulus-asset-fees
+    cd cumulus-asset-fees && cargo build –-release
+    cp ./target/release/polkadot-parachain ../trappist/bin/polkadot-collator
+    cp ./target/release/parachain-collator ../trappist/bin
+    ```
+
+4) Install zombienet utility: download the latest binary for your operating system at `https://github.com/paritytech/zombienet/releases`
 
 ## Run Local Zombienet test nodes
 
@@ -42,12 +43,12 @@
     ./zombienet-macos -p native spawn xcm-playground.toml | tee zombienet.log
     ```
 
-6) Open Trappist Local Node in Polkadot.js apps: When the various nodes have been started, open browser windows with the Polkadot.js apps for the node you wish to use(ie `trappist-collator01` from zombienet console output)
+6) Open the `Trappist Local` node in `Polkadot.js` apps: Once the various test nodes have been started, open a browser window with the Polkadot.js apps for the node you wish to use(e.g. check the ws port for `trappist-collator01` from the zombienet console output use use a custom port in polkadot.js)
 
     Mac: cat zombienet.log | grep -Eo 'https://polkadot.js.org/apps/.+' | xargs open -a /Applications/Google\ Chrome.app
     Linux: cat zombienet.log | grep -Eo 'https://polkadot.js.org/apps/.+' | xargs google-chrome
 
-    Alternatively use the direct link given in zombienets output: (example direct link output: https://polkadot.js.org/apps/?rpc=ws://127.0.0.1:54303#/explorer. Note: your ws port will be different)
+    Alternatively, use the direct link given in zombienets console output: (example direct link output: https://polkadot.js.org/apps/?rpc=ws://127.0.0.1:54303#/explorer. Note: your ws port will be different.)
 
 ## Create a test Asset in Polkadot.js Apps
 
@@ -87,7 +88,8 @@ Note for this step: If an `orange` icon appears in the top right after submittin
 13) After upodating the http port in the previous step and adding the correct `assetId` to the `transferKeepAlive` function in `commonGoodParachain.ts`, run the example script in the `txwrapper-examples` package (see [txwrapper-core/packages/txwrapper-examples/common-good-parachain/src/commonGoodParachain.ts](txwrapper-core/packages/txwrapper-examples/common-good-parachain/src/commonGoodParachain.ts)). It will interact with your local node.
 
 From the root of `txwrapper-examples`
-    ```bash
+    bash
+    ```
     yarn run common-good-parachain
     ```
 
