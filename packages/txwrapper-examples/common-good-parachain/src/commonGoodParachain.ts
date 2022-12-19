@@ -19,8 +19,8 @@ import {
 import { rpcToLocalNode, signWith } from '../../common/util';
 
 /**
- * Entry point of the script. This script assumes a Polkadot node is running
- * locally on `http://0.0.0.0:9933`.
+ * Entry point of the script. This script assumes a substrate node is running
+ * locally. Refer to the README.md file for instructions on which port to provide for the rpc call.
  */
 async function main(): Promise<void> {
 	// Wait for the promise to resolve async WASM
