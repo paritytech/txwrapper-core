@@ -6,8 +6,7 @@
 
 1) Clone & build Trappist
 
-    bash
-    ```
+    ```bash
     git clone -b xcm-demo --depth 1 https://github.com/paritytech/trappist
     cd trappist && cargo build –-release
     cp ./target/release/trappist-collator ./bin
@@ -15,8 +14,7 @@
 
 2) Clone & build Polkadot
 
-    bash
-    ```
+    ```bash
     git clone -b release-v0.9.23 --depth 1 https://github.com/paritytech/polkadot
     cd polkadot && cargo build –-release
     cp ./target/release/polkadot ../trappist/bin
@@ -24,8 +22,7 @@
 
 3) Clone & build Cumulus (*)
 
-    bash
-    ```
+    ```bash
     git clone -b xcm-demo --depth 1 https://github.com/stiiifff/cumulus-asset-fees
     cd cumulus-asset-fees && cargo build –-release
     cp ./target/release/polkadot-parachain ../trappist/bin/polkadot-collator
@@ -43,7 +40,7 @@
     ./zombienet-macos -p native spawn xcm-playground.toml | tee zombienet.log
     ```
 
-6) Open the `Trappist Local` node in `Polkadot.js` apps: Once the various test nodes have been started, open a browser window with the Polkadot.js apps for the node you wish to use(e.g. check the ws port for `trappist-collator01` from the zombienet console output use use a custom port in polkadot.js)
+6) Open the `Trappist Local` node in `Polkadot.js` apps: Once the various test nodes have been started, open a browser window with the Polkadot.js apps for the node you wish to use (e.g. check the ws port for `trappist-collator01` in the zombienet console output and provide it as a custom port in polkadot.js).
 
     Mac: cat zombienet.log | grep -Eo 'https://polkadot.js.org/apps/.+' | xargs open -a /Applications/Google\ Chrome.app
     Linux: cat zombienet.log | grep -Eo 'https://polkadot.js.org/apps/.+' | xargs google-chrome
@@ -52,7 +49,7 @@
 
 ## Create a test Asset in Polkadot.js Apps
 
-7) In Polkadot.js apps, click the `Network` menu and select `Assets`. On the Assets overview page, clock `Create` and provide an asset name(e.g. TEST), symbol(e.g. TEST), number of decimals(e.g. 12), minimum balance(e.g. 10000) and id(e.g. 1). Click next, then confirm the admin, issuer and freezer accounts(or use default of ALICE). Afterwards, click `Create` to create your test asset.
+7) In Polkadot.js apps, click the `Network` menu and select `Assets`. On the Assets overview page, click `Create` and provide an asset name (e.g. TEST), symbol (e.g. TEST), number of decimals (e.g. 12), minimum balance (e.g. 10000) and id (e.g. 1). Click next, then confirm the admin, issuer and freezer accounts (or use default of ALICE). Afterwards, click `Create` to create your test asset.
 
 ## Make your Test Asset Sufficient
 
@@ -60,10 +57,9 @@
 
 Note for this step: If an `orange` icon appears in the top right after submitting the transaction that shows `error badOrigin`, refresh and resubmit the transaction until it succeeds.
 
-
 ## Mint some test Asset to Alice's account
 
-9) After creating and making your test asset sufficient, its time to mint some of your asset to `Alice`'s account. Click the `Network` menu and select `Assets`. Here you should see your created test asset and on the far right a `Mint` button. Click `Mint`, ensure `Alice` is the `mint to address`, enter the amount to mint(e.g. 100000) then click Mint and sign the transaction.
+9) After creating and making your test asset sufficient, it's time to mint some of your asset to `Alice`'s account. Click the `Network` menu and select `Assets`. Here you should see your created test asset and on the far right a `Mint` button. Click `Mint`, ensure `Alice` is the `mint to address`, enter the amount to mint(e.g. 100000) then click Mint and sign the transaction.
 
 ## Construct and submit example transaction in Txwrapper-Core
 
@@ -88,11 +84,10 @@ Note for this step: If an `orange` icon appears in the top right after submittin
 13) After upodating the http port in the previous step and adding the correct `assetId` to the `transferKeepAlive` function in `commonGoodParachain.ts`, run the example script in the `txwrapper-examples` package (see [txwrapper-core/packages/txwrapper-examples/common-good-parachain/src/commonGoodParachain.ts](txwrapper-core/packages/txwrapper-examples/common-good-parachain/src/commonGoodParachain.ts)). It will interact with your local node.
 
 From the root of `txwrapper-examples`
-    bash
-    ```
+
+    ```bash
     yarn run common-good-parachain
     ```
-
 
 ## Example Output
 

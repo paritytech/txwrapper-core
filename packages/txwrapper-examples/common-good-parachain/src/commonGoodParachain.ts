@@ -86,7 +86,6 @@ async function main(): Promise<void> {
 	 *   asCallsOnlyArg: true
 	 * }
 	 */
-
 	const unsigned = methods.balances.transferKeepAlive(
 		{
 			value: '10000000000000',
