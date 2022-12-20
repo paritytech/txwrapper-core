@@ -27,7 +27,7 @@ async function main(): Promise<void> {
 	await cryptoWaitReady();
 	// Create a new keyring, and add an "Alice" account
 	const keyring = new Keyring();
-	const alice = keyring.addFromUri('//Alice', { name: 'Bob' }, 'sr25519');
+	const alice = keyring.addFromUri('//Alice', { name: 'Alice' }, 'sr25519');
 	console.log(
 		"Alice's SS58-Encoded Address:",
 		deriveAddress(alice.publicKey, PolkadotSS58Format.westend)
