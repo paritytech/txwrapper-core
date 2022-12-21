@@ -15,7 +15,7 @@
   "scripts": {
     "build": "yarn build:workspace",
     "polkadot": "node lib/polkadot/src/polkadot",
-    "common-good-parachain": "node lib/common-good-parachain/src/commonGoodParachain",
+    "statemint": "node lib/statemint/src/statemint",
     "polkadotBatchAll": "node lib/polkadotBatchAll/src/polkadotBatchAll",
     "mandala": "node lib/mandala",
     "multisig": "node lib/multisig/src/multisig",

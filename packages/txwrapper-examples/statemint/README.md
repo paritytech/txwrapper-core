@@ -1,4 +1,6 @@
-# Common Good Parachain Sufficient Asset Example:
+# Statemint/Statemine Sufficient Asset Example:
+
+# Note: this example uses the substrate chain `trappist-rococo` which serves as a wrapper for a statemint/statemine environment
 
 ## How to construct a transaction using a sufficient asset to pay fees in `txwrapper-core`
 
@@ -53,7 +55,7 @@
 
 ## Make your Test Asset Sufficient
 
-8) In order to use your asset to pay for tx fees it must have a status of `sufficient`. With your test asset created, select the `Developer` menu and select `Sudo`. Under the section labeled `Submit the following change` select `sudo` and in the dropdown menu next to this label select `sudo(call)`. In the section labeled `call: Call` select `assets` and in the dropdown menu next to this select `forceAssetStatus(id, owner, issuer, admin, freezer, minBalance, isSufficient, isFrozen)`. In the field labeled `id` enter the id you provided for your test asset. For all account related fields ensure that `Alice` is the account selected. Set `minBalance` to 10000, change `isSuffcient` from `No` to `Yes` and then click `Submit sudo` at the bottom right corner. Once the transaction appears click `Sign and Submit` to submit the transaction to the node.
+8) In order to use your asset to pay for tx fees it must have a status of `sufficient`(see `https://wiki.polkadot.network/docs/build-integrate-assets#assets-basics` for more details). With your test asset created, select the `Developer` menu and select `Sudo`. Under the section labeled `Submit the following change` select `sudo` and in the dropdown menu next to this label select `sudo(call)`. In the section labeled `call: Call` select `assets` and in the dropdown menu next to this select `forceAssetStatus(id, owner, issuer, admin, freezer, minBalance, isSufficient, isFrozen)`. In the field labeled `id` enter the id you provided for your test asset. For all account related fields ensure that `Alice` is the account selected. Set `minBalance` to 10000, change `isSuffcient` from `No` to `Yes` and then click `Submit sudo` at the bottom right corner. Once the transaction appears click `Sign and Submit` to submit the transaction to the node.
 
 Note for this step: If an `orange` icon appears in the top right after submitting the transaction that shows `error badOrigin`, refresh and resubmit the transaction until it succeeds.
 
@@ -97,19 +99,19 @@ Decoded Transaction
   To: 5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty
   Amount: 10000000000000
 
-Payload to Sign: 0xa80a03008eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a480b00a0724e1809950318000101000000010000000100000075c76a73e7c27e00e1df318ab3df8fbdf63971a631015bba54af8b35e6764ced7ab9bf00e9e73e7109439ea97b2581b968bc3d289e3b3fa10ae0be87cce027e4
+Payload to Sign: 0xa80a03008eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a480b00a0724e1809b50128000101000000010000000100000075c76a73e7c27e00e1df318ab3df8fbdf63971a631015bba54af8b35e6764cedd23a9634ed20f3da6cd80f3116786d2524cfb9d7b9e9e077846faf364a170ec7
 
 Decoded Transaction
   To: 5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty
   Amount: 10000000000000
   AssetId: 1
 
-Signature: 0x016c84699ec3e53dcca07bfce1b657b6e1f1ac7090720bf8356d0df0ad90946a5adfc62242d070b80464078da09563f6ab80509685eb2d80f5ce367fa9bc4de182
+Signature: 0x01e481eae76f12d11d603130e75d0cade65228da517048fa7c9c64014f20dc0e2ad69f754ee1bb661a049ad0fec2349ff067b8a73c79f61e61d359802778576c8e
 
-Transaction to Submit: 0x59028400d43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d016c84699ec3e53dcca07bfce1b657b6e1f1ac7090720bf8356d0df0ad90946a5adfc62242d070b80464078da09563f6ab80509685eb2d80f5ce367fa9bc4de1829503180001010000000a03008eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a480b00a0724e1809
+Transaction to Submit: 0x59028400d43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d01e481eae76f12d11d603130e75d0cade65228da517048fa7c9c64014f20dc0e2ad69f754ee1bb661a049ad0fec2349ff067b8a73c79f61e61d359802778576c8eb501280001010000000a03008eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a480b00a0724e1809
 
-Expected Tx Hash: 0x629dd46aa0c08916ca791cc0c4436c82d774752ca91d3762dec6afe3ffc715dd
-Actual Tx Hash: 0x629dd46aa0c08916ca791cc0c4436c82d774752ca91d3762dec6afe3ffc715dd
+Expected Tx Hash: 0x85af8647ba03f4437709f95cdaae27350cb6bfa20abdf4ba5819c0548af23d31
+Actual Tx Hash: 0x85af8647ba03f4437709f95cdaae27350cb6bfa20abdf4ba5819c0548af23d31
 
 Decoded Transaction
   To: 5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty
