@@ -86,7 +86,7 @@ async function main(): Promise<void> {
 	 *   asCallsOnlyArg: true
 	 * }
 	 */
-	const nonce =  await rpcToLocalNode('account_nextIndex', [alice.address]);
+	const nonce = await rpcToLocalNode('account_nextIndex', [alice.address]);
 	const unsigned = methods.balances.transferKeepAlive(
 		{
 			value: '10000000000000',

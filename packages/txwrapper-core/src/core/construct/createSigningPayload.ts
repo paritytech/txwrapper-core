@@ -56,8 +56,13 @@ export function createSigningPayload(
 ): string {
 	const { registry } = options;
 
-	if(unsigned.assetId && !unsigned.signedExtensions.includes('ChargeAssetTxPayment')) {
-		throw new Error("invalid transaction argument: assetId. Unsupported signed extension ChargeAssetTxPayment");
+	if (
+		unsigned.assetId &&
+		!unsigned.signedExtensions.includes('ChargeAssetTxPayment')
+	) {
+		throw new Error(
+			'invalid transaction argument: assetId. Unsupported signed extension ChargeAssetTxPayment'
+		);
 	}
 
 	return registry
