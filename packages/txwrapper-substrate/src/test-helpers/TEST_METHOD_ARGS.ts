@@ -82,6 +82,11 @@ export const TEST_METHOD_ARGS = {
 			delay: 30,
 			index: 1,
 		},
+		createPure: {
+			proxyType: 'Any',
+			delay: 30,
+			index: 1,
+		},
 		killAnonymous: {
 			spawner: '14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3',
 			proxyType: 'Any',
