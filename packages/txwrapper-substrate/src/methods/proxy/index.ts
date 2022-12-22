@@ -3,6 +3,7 @@ export * from './announce';
 export * from './anonymous';
 export * from './createPure';
 export * from './killAnonymous';
+export * from './killPure';
 export * from './proxy';
 export * from './proxyAnnounced';
 export * from './rejectAnnouncement';

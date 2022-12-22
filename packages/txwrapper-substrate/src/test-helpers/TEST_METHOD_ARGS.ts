@@ -94,6 +94,13 @@ export const TEST_METHOD_ARGS = {
 			height: 1000000,
 			extIndex: 0,
 		},
+		killPure: {
+			spawner: '14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3',
+			proxyType: 'Any',
+			index: 0,
+			height: 1000000,
+			extIndex: 0,
+		},
 	},
 	session: {
 		setKeys: {
