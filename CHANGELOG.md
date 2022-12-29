@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.1.0](https://github.com/paritytech/txwrapper-core/compare/v4.0.3...v4.1.0) (2022-12-29)
+
+
+### Features
+
+* Add create pure and kill pure transaction for version > 0.9.30 ([#276](https://github.com/paritytech/txwrapper-core/issues/276)) ([8af876e](https://github.com/paritytech/txwrapper-core/commit/8af876ee76e2c572f16c06ca838eecd020eaa3b9))
+
+
+
+
+
 ## [4.0.3](https://github.com/paritytech/txwrapper-core/compare/v4.0.2...v4.0.3) (2022-12-07)
 
 
