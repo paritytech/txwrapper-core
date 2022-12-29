@@ -1,6 +1,6 @@
 # Statemint/Statemine Sufficient Asset Example:
 
-# Note: this example uses the substrate chain `trappist-rococo` which serves as a wrapper for a statemint/statemine environment
+Note: this example uses the substrate chain `trappist-rococo` which serves as a wrapper for a statemint/statemine environment
 
 ## How to construct a transaction using a sufficient asset to pay fees in `txwrapper-core`
 
