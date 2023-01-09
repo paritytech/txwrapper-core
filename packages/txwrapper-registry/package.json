@@ -18,7 +18,7 @@
     "build": "yarn build:workspace"
   },
   "dependencies": {
-    "@polkadot/networks": "10.2.1",
+    "@polkadot/networks": "^10.2.3",
     "@substrate/txwrapper-core": "^4.1.0"
   }
 }

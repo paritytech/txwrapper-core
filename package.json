@@ -23,7 +23,7 @@
     "update-pjs-deps": "substrate-update-pjs-deps"
   },
   "devDependencies": {
-    "@polkadot/util-crypto": "^10.1.13",
+    "@polkadot/util-crypto": "^10.2.3",
     "@substrate/dev": "^0.6.5",
     "lerna": "^4.0.0",
     "ts-jest": "^27.1.5",
