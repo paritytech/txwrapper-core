@@ -19,7 +19,7 @@ export interface MultisigAsMulti
 	 * want the call stored on chain so others can see. The call will always be
 	 * removed from storage once the call is executed.
 	 */
-	storeCall: boolean;
+	// storeCall: boolean;
 }
 
 /**
