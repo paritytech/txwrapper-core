@@ -504,7 +504,6 @@ async function main(): Promise<void> {
 				index: multisigCallIndex,
 			},
 			call: unsignedTXMultiEncodedMethod,
-			storeCall: false,
 			maxWeight: { refTime: '640000000', proofSize: '0' },
 		},
 		{

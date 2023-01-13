@@ -202,7 +202,6 @@ export const TEST_METHOD_ARGS = {
 				index: 3,
 			},
 			call: '0x040300cc5fc7439d3c49984e7345319de148561cd930748fb401276d289f714acdd50c28',
-			storeCall: false,
 			maxWeight: { refTime: '90071992547409910', proofSize: '0' },
 		},
 	},
