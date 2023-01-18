@@ -19,8 +19,7 @@
     "test:watch": "substrate-exec-jest --watch",
     "test:cov": "substrate-exec-jest --coverage",
     "test:ci": "NODE_ENV=test substrate-exec-jest --runInBand",
-    "docs": "typedoc --gitRemote origin",
-    "update-pjs-deps": "substrate-update-pjs-deps"
+    "docs": "typedoc --gitRemote origin"
   },
   "devDependencies": {
     "@polkadot/util-crypto": "^10.2.3",
