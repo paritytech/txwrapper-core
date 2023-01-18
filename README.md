@@ -103,7 +103,7 @@ $ yarn dedupe
 
 2. Checkout a branch `name-update-deps`.
 
-3. In order to update all the polkadot-js dependencies and resolutions, run `yarn up @polkadot/*`.
+3. In order to update all the polkadot-js dependencies and resolutions, run `yarn up '@polkadot/*'`.
 
 5. Ensure there are no issues by running the following commands. If any type errors occur due to the updated dependencies, please file an issue [here](https://github.com/paritytech/txwrapper-core/issues).
 
