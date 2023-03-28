@@ -13,9 +13,6 @@ export function getRegistryMandala(
 	metadataRpc: `0x${string}`
 ): TypeRegistry {
 	const registry = new TypeRegistry();
-	// registry.setKnownTypes({
-	// 	typesBundle: typesBundleForPolkadot as unknown as OverrideBundleType,
-	// });
 
 	return getRegistryBase({
 		chainProperties: {
