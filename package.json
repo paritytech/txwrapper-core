@@ -22,8 +22,9 @@
     "docs": "typedoc --gitRemote origin"
   },
   "devDependencies": {
-    "@polkadot/util-crypto": "^10.4.2",
+    "@polkadot/util-crypto": "^11.1.2",
     "@substrate/dev": "^0.6.6",
+    "@types/node-fetch": "^2.6.2",
     "lerna": "^4.0.0",
     "ts-jest": "^27.1.5",
     "ts-node": "^9.1.1",
