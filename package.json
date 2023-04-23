@@ -23,10 +23,9 @@
   },
   "devDependencies": {
     "@polkadot/util-crypto": "^11.1.2",
-    "@substrate/dev": "^0.6.6",
+    "@substrate/dev": "^0.6.7",
     "@types/node-fetch": "^2.6.3",
     "lerna": "^4.0.0",
-    "ts-jest": "^27.1.5",
     "ts-node": "^9.1.1",
     "tsconfig-paths": "^3.9.0",
     "typedoc": "^0.22.10",
