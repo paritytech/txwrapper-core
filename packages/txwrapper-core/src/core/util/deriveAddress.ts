@@ -3,7 +3,9 @@ import { hexToU8a, isHex } from '@polkadot/util';
 import { blake2AsU8a } from '@polkadot/util-crypto';
 
 /**
- * The slightly modified below logic is copyrighted from polkadot-js/common. The exact path to the code can be seen here:
+ * Copyright 2023 via polkadot-js/common
+ * 
+ * The slightly modified below logic is copyrighted from polkadot-js/common . The exact path to the code can be seen here:
  * https://github.com/polkadot-js/common/blob/e5cb0ba2b4a6b5817626cc964b4f66334f2410e4/packages/keyring/src/pair/index.ts#L44-L49
  */
 const TYPE_ADDRESS = {
