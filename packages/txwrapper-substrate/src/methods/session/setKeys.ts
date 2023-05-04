@@ -10,7 +10,7 @@ export interface SessionSetKeysArgs extends Args {
 	/**
 	 * The 5 keys to set.
 	 */
-	keys: string[];
+	keys: {};
 	/**
 	 * Proof of key ownership (currently unused).
 	 */
