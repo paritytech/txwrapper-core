@@ -1,12 +1,10 @@
 import {
 	itHasCorrectBaseTxInfo,
+	KUSAMA_TEST_OPTIONS,
 	TEST_BASE_TX_INFO,
 } from '@substrate/txwrapper-dev';
 
-import {
-	TEST_METHOD_ARGS,
-	WESTEND_9030_TEST_OPTIONS,
-} from '../../test-helpers';
+import { TEST_METHOD_ARGS } from '../../test-helpers';
 import { contribute } from './contribute';
 
 describe('crowdloan::contribute', () => {
@@ -14,13 +12,13 @@ describe('crowdloan::contribute', () => {
 		const unsigned = contribute(
 			TEST_METHOD_ARGS.crowdloan.contribute,
 			TEST_BASE_TX_INFO,
-			WESTEND_9030_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS
 		);
 
 		itHasCorrectBaseTxInfo(unsigned);
 
 		expect(unsigned.method).toBe(
-			'0x40013013f6ffffffffff3f010101ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff'
+			'0x49013013f6ffffffffff3f010101ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff'
 		);
 	});
 });
