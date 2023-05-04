@@ -8,7 +8,11 @@ import { kusamaV9160MetadataHex } from '../metadata/kusama/kusamaV9160MetadataHe
 import { kusamaV9320MetadataHex } from '../metadata/kusama/kusamaV9320MetadataHex';
 import { metadataRpc } from '../metadata/static/staticV3-1-1';
 import { metadataRpcV29 } from '../metadata/static/staticV4-3-1';
-import { getRegistryKusama, getRegistryPolkadot } from '../registries';
+import {
+	getRegistryKusama,
+	getRegistryPolkadot,
+	memoizedGetRegistry,
+} from '../registries';
 export { metadataRpc };
 
 /**
@@ -49,7 +53,7 @@ export const TEST_BASE_TX_INFO_V29 = {
 
 export const KUSAMA_TEST_OPTIONS = {
 	metadataRpc: metadataHex,
-	registry: getRegistryKusama(9390, metadataHex),
+	registry: memoizedGetRegistry(9390, metadataHex),
 };
 
 /**
