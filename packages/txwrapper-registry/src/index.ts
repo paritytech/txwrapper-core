@@ -97,6 +97,8 @@ export function getRegistry({
 	metadataRpc,
 	properties,
 	asCallsOnlyArg,
+	typesBundle,
+	additionalTypes,
 }: GetRegistryOpts): TypeRegistry {
 	const registry = createRegistry();
 
@@ -106,5 +108,7 @@ export function getRegistry({
 		specTypes: getSpecTypes(registry, chainName, specName, specVersion),
 		metadataRpc,
 		asCallsOnlyArg,
+		typesBundle,
+		additionalTypes,
 	});
 }

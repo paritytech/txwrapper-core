@@ -87,6 +87,8 @@ export function getRegistry({
 	asCallsOnlyArg,
 	signedExtensions,
 	userExtensions,
+	typesBundle,
+	additionalTypes,
 }: GetRegistryOpts): TypeRegistry {
 	// The default type registry has polkadot types
 	const registry = new TypeRegistry();
@@ -107,5 +109,7 @@ export function getRegistry({
 		asCallsOnlyArg,
 		signedExtensions,
 		userExtensions,
+		typesBundle,
+		additionalTypes,
 	});
 }
