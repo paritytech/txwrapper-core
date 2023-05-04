@@ -8,6 +8,7 @@ import { kusamaV9320MetadataHex } from '../metadata/kusama/kusamaV9320MetadataHe
 import { metadataRpc } from '../metadata/static/staticV3-1-1';
 import { metadataRpcV29 } from '../metadata/static/staticV4-3-1';
 import { getRegistryKusama, getRegistryPolkadot } from '../registries';
+import { metadataHex } from '../metadata/kusama';
 export { metadataRpc };
 
 /**
@@ -21,7 +22,7 @@ export const TEST_BASE_TX_INFO = {
 	eraPeriod: 2400,
 	genesisHash:
 		'0xe3777fa922cafbff200cadeaea1a76bd7898ad5b89f7848999058b50e715f636',
-	metadataRpc: metadataRpc,
+	metadataRpc: metadataHex,
 	nonce: 2,
 	specVersion: 1019,
 	tip: 0,
@@ -45,6 +46,11 @@ export const TEST_BASE_TX_INFO_V29 = {
 	tip: 0,
 	transactionVersion: 6,
 };
+
+export const KUSAMA_TEST_OPTIONS = {
+	metadataRpc: metadataHex,
+	registry: getRegistryKusama(9390, metadataHex)
+}
 
 /**
  * Use this registry in tests.
