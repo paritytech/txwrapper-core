@@ -19,10 +19,10 @@ describe('decodeUnsignedHexTx', () => {
 		const expectedResponse = {
 			method: {
 				args: {
-					dest: '14PiLtTQ3EBwsn6KimaBLH7qsZrryxFZtqFwAognHVZhFxU1',
+					dest: { id: 'Fy2rsYCoowQBtuFXqLE65ehAY9T6KWcGiNCQAyPDCkfpm4s' },
 					value: 12,
 				},
-				callIndex: '0x0600',
+				callIndex: '0x0400',
 			},
 			version: 4,
 		};

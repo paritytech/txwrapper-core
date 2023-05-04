@@ -17,7 +17,7 @@ import {
 } from '../registries';
 export { metadataRpc };
 
-const KUSAMA_SPEC_VERSION = 9390;
+export const KUSAMA_SPEC_VERSION = 9390;
 const STATEMINT_SPEC_VERSION = 9360;
 
 /**
