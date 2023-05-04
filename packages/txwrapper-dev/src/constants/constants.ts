@@ -76,6 +76,12 @@ export const KUSAMA_TEST_OPTIONS = {
 	registry: memoizedKusamaGetRegistry(KUSAMA_SPEC_VERSION, kusamaMetadataHex),
 };
 
+export const KUSAMA_TEST_OPTIONS_CALLS_ONLY = {
+	metadataRpc: polkadotV9122MetadataHex,
+	registry: memoizedKusamaGetRegistry(KUSAMA_SPEC_VERSION, kusamaMetadataHex),
+	asCallsOnlyArg: true,
+};
+
 export const STATEMINE_TEST_OPTIONS = {
 	metadataRpc: statemineMetadataHex,
 	registry: memoizedStatemineGetRegistry(
