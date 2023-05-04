@@ -67,7 +67,7 @@ function parseTypesBundle(
 	return parsedJson;
 }
 
-const typesBundle: OverrideBundleType | undefined = parseTypesBundle(
+const envTypesBundle: OverrideBundleType | undefined = parseTypesBundle(
 	process.env.TX_TYPES_BUNDLE
 );
 
@@ -75,10 +75,10 @@ const typesBundle: OverrideBundleType | undefined = parseTypesBundle(
  * Create a registry with `knownTypes` via env variables.
  * ie: STX_TYPES_BUNDLE; STX_TYPES_CHAIN
  */
-export function createRegistry(): TypeRegistry {
+export function createRegistry(typesBundle?: OverrideBundleType): TypeRegistry {
 	const registry = new TypeRegistry();
 	registry.setKnownTypes({
-		typesBundle: typesBundle,
+		typesBundle: typesBundle || envTypesBundle,
 	});
 
 	return registry;
