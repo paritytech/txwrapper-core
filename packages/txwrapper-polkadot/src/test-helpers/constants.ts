@@ -1,27 +1,3 @@
-import { getRegistry } from '../index';
-import { kusamaMetadataRpc9240 } from './kusamaMetadataRpc9240';
-import { westendMetadataRpc9030 } from './westendMetadataRpc9030';
-
-export const WESTEND_9030_TEST_OPTIONS = {
-	metadataRpc: westendMetadataRpc9030,
-	registry: getRegistry({
-		specName: 'westend',
-		chainName: 'Westend',
-		specVersion: 9030,
-		metadataRpc: westendMetadataRpc9030,
-	}),
-};
-
-export const KUSAMA_9240_TEST_OPTIONS = {
-	metadataRpc: kusamaMetadataRpc9240,
-	registry: getRegistry({
-		specName: 'kusama',
-		chainName: 'Kusama',
-		specVersion: 9240,
-		metadataRpc: kusamaMetadataRpc9240,
-	}),
-};
-
 /**
  * Centralized source for all arguments used in specs for methods.
  */
