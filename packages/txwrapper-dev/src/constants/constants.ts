@@ -3,17 +3,22 @@ import {
 	polkadotV9340MetadataHex,
 	polkadotV9350MetadataHex,
 } from '../metadata/';
-import { metadataHex } from '../metadata/kusama';
+import { kusamaMetadataHex } from '../metadata/kusama';
 import { kusamaV9160MetadataHex } from '../metadata/kusama/kusamaV9160MetadataHex';
 import { kusamaV9320MetadataHex } from '../metadata/kusama/kusamaV9320MetadataHex';
+import { statemineMetadataHex } from '../metadata/statemine';
 import { metadataRpc } from '../metadata/static/staticV3-1-1';
 import { metadataRpcV29 } from '../metadata/static/staticV4-3-1';
 import {
 	getRegistryKusama,
 	getRegistryPolkadot,
-	memoizedGetRegistry,
+	memoizedKusamaGetRegistry,
+	memoizedStatemineGetRegistry,
 } from '../registries';
 export { metadataRpc };
+
+const KUSAMA_SPEC_VERSION = 9390;
+const STATEMINT_SPEC_VERSION = 9360;
 
 /**
  * Base tx information common to all tested transactions
@@ -26,9 +31,24 @@ export const TEST_BASE_TX_INFO = {
 	eraPeriod: 2400,
 	genesisHash:
 		'0xe3777fa922cafbff200cadeaea1a76bd7898ad5b89f7848999058b50e715f636',
-	metadataRpc: metadataHex,
+	metadataRpc: kusamaMetadataHex,
 	nonce: 2,
-	specVersion: 1019,
+	specVersion: KUSAMA_SPEC_VERSION,
+	tip: 0,
+	transactionVersion: 6,
+};
+
+export const STATEMINT_TEST_BASE_TX_INFO = {
+	address: '15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5', // seed "//Alice"
+	blockHash:
+		'0x1fc7493f3c1e9ac758a183839906475f8363aafb1b1d3e910fe16fab4ae1b582',
+	blockNumber: 4302222,
+	eraPeriod: 2400,
+	genesisHash:
+		'0xe3777fa922cafbff200cadeaea1a76bd7898ad5b89f7848999058b50e715f636',
+	metadataRpc: kusamaMetadataHex,
+	nonce: 2,
+	specVersion: STATEMINT_SPEC_VERSION,
 	tip: 0,
 	transactionVersion: 6,
 };
@@ -52,8 +72,16 @@ export const TEST_BASE_TX_INFO_V29 = {
 };
 
 export const KUSAMA_TEST_OPTIONS = {
-	metadataRpc: metadataHex,
-	registry: memoizedGetRegistry(9390, metadataHex),
+	metadataRpc: kusamaMetadataHex,
+	registry: memoizedKusamaGetRegistry(KUSAMA_SPEC_VERSION, kusamaMetadataHex),
+};
+
+export const STATEMINE_TEST_OPTIONS = {
+	metadataRpc: statemineMetadataHex,
+	registry: memoizedStatemineGetRegistry(
+		STATEMINT_SPEC_VERSION,
+		statemineMetadataHex
+	),
 };
 
 /**

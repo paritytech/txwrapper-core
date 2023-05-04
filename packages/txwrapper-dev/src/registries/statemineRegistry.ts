@@ -2,7 +2,6 @@ import { TypeRegistry } from '@polkadot/types';
 import { getSpecTypes } from '@polkadot/types-known';
 import memoizee from 'memoizee';
 
-import { kusamaV9160MetadataHex } from '../metadata/kusama/kusamaV9160MetadataHex';
 import { mockGetRegistryBase } from './mockGetRegistry';
 
 /**
@@ -11,7 +10,7 @@ import { mockGetRegistryBase } from './mockGetRegistry';
  * @param specVersion
  * @param metadataRpc
  */
-export function getRegistryKusama(
+export function getRegistryStatemine(
 	specVersion: number,
 	metadataRpc: `0x${string}`
 ): TypeRegistry {
@@ -23,20 +22,12 @@ export function getRegistryKusama(
 		},
 		specTypes: getSpecTypes(
 			new TypeRegistry(),
-			'Kusama',
-			'kusama',
+			'Statemine',
+			'statemine',
 			specVersion
 		),
 		metadataRpc,
 	});
 }
 
-export const memoizedKusamaGetRegistry = memoizee(getRegistryKusama);
-
-/**
- * Kusama v9160 TypeRegistry
- */
-export const kusamaRegistryV9160 = getRegistryKusama(
-	9160,
-	kusamaV9160MetadataHex
-);
+export const memoizedStatemineGetRegistry = memoizee(getRegistryStatemine);
