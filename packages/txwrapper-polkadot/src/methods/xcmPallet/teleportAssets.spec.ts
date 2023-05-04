@@ -1,7 +1,7 @@
 import {
 	itHasCorrectBaseTxInfo,
+	KUSAMA_TEST_OPTIONS,
 	TEST_BASE_TX_INFO,
-	KUSAMA_TEST_OPTIONS
 } from '@substrate/txwrapper-dev';
 
 import { TEST_METHOD_ARGS } from '../../test-helpers';

@@ -1,5 +1,5 @@
 import {
-	POLKADOT_25_TEST_OPTIONS,
+	KUSAMA_TEST_OPTIONS,
 	TEST_BASE_TX_INFO,
 	TEST_METHOD_ARGS,
 } from '@substrate/txwrapper-dev';
@@ -12,16 +12,13 @@ describe('encodeUnsignedTransaction', () => {
 		const unsigned = balancesTransfer(
 			TEST_METHOD_ARGS.balances.transfer,
 			TEST_BASE_TX_INFO,
-			POLKADOT_25_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS
 		);
 
-		const encoded = encodeUnsignedTransaction(
-			unsigned,
-			POLKADOT_25_TEST_OPTIONS
-		);
+		const encoded = encodeUnsignedTransaction(unsigned, KUSAMA_TEST_OPTIONS);
 
 		expect(encoded).toBe(
-			'0x9004060096074594cccf1cd185fa8a72ceaeefd86648f8d45514f3ce33c31bdd07e4655d30'
+			'0x940404000096074594cccf1cd185fa8a72ceaeefd86648f8d45514f3ce33c31bdd07e4655d30'
 		);
 	});
 });
