@@ -70,29 +70,17 @@ export const TEST_METHOD_ARGS = {
 			delegate: 'HNZata7iMYWmk5RvZRTiAsSDhV8366zq2YGb3tLH5Upf74F', // seed "//Alice"
 			real: '14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3', // seed "//Bob",
 			forceProxyType: 'Any',
-			call: '0x0500306721211d5404bd9da88e0204360a1a9ab8b87c66c1bc2fcdd37f3c2222cc200f00a0be1c448399',
+			call: '0x0400004aca27604ad033f7c45b1cfc23b55520826db4abb69a8a7c165461c40f330c6b0700e8764817',
 		},
 		proxy: {
 			real: '14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3', // seed "//Bob",
 			forceProxyType: 'Any',
-			call: '0x0500306721211d5404bd9da88e0204360a1a9ab8b87c66c1bc2fcdd37f3c2222cc200f00a0be1c448399',
-		},
-		anonymous: {
-			proxyType: 'Any',
-			delay: 30,
-			index: 1,
+			call: '0x0400004aca27604ad033f7c45b1cfc23b55520826db4abb69a8a7c165461c40f330c6b0700e8764817',
 		},
 		createPure: {
 			proxyType: 'Any',
 			delay: 30,
 			index: 1,
-		},
-		killAnonymous: {
-			spawner: '14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3',
-			proxyType: 'Any',
-			index: 0,
-			height: 1000000,
-			extIndex: 0,
 		},
 		killPure: {
 			spawner: '14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3',

@@ -1,6 +1,6 @@
 import {
 	itHasCorrectBaseTxInfo,
-	POLKADOT_9350_TEST_OPTIONS,
+	KUSAMA_TEST_OPTIONS,
 	TEST_BASE_TX_INFO,
 } from '@substrate/txwrapper-dev';
 
@@ -12,11 +12,11 @@ describe('proxy::createPure', () => {
 		const unsigned = createPure(
 			TEST_METHOD_ARGS.proxy.createPure,
 			TEST_BASE_TX_INFO,
-			POLKADOT_9350_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS
 		);
 
 		itHasCorrectBaseTxInfo(unsigned);
 
-		expect(unsigned.method).toBe('0x1d04001e0000000100');
+		expect(unsigned.method).toBe('0x1e04001e0000000100');
 	});
 });

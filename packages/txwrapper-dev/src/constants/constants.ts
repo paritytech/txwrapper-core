@@ -3,12 +3,12 @@ import {
 	polkadotV9340MetadataHex,
 	polkadotV9350MetadataHex,
 } from '../metadata/';
+import { metadataHex } from '../metadata/kusama';
 import { kusamaV9160MetadataHex } from '../metadata/kusama/kusamaV9160MetadataHex';
 import { kusamaV9320MetadataHex } from '../metadata/kusama/kusamaV9320MetadataHex';
 import { metadataRpc } from '../metadata/static/staticV3-1-1';
 import { metadataRpcV29 } from '../metadata/static/staticV4-3-1';
 import { getRegistryKusama, getRegistryPolkadot } from '../registries';
-import { metadataHex } from '../metadata/kusama';
 export { metadataRpc };
 
 /**
@@ -49,8 +49,8 @@ export const TEST_BASE_TX_INFO_V29 = {
 
 export const KUSAMA_TEST_OPTIONS = {
 	metadataRpc: metadataHex,
-	registry: getRegistryKusama(9390, metadataHex)
-}
+	registry: getRegistryKusama(9390, metadataHex),
+};
 
 /**
  * Use this registry in tests.
