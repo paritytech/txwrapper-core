@@ -45,79 +45,84 @@ export const TEST_METHOD_ARGS = {
 		},
 	},
 	xcmPallet: {
-		V0: {
+		V2: {
 			dest: {
-				V0: {
-					X1: {
-						Parachain: 2000,
+				V2: {
+					parents: 1,
+					interior: {
+						here: null,
 					},
 				},
 			},
 			beneficiary: {
-				V0: {
-					X1: {
-						AccountId32: {
-							id: '0x66168b7e94b956ce2ba83d4a0b8226c1de7a3526139f30690c08be5daa9ebe32',
-							network: {
-								Any: null,
+				V2: {
+					parents: 0,
+					interior: {
+						x1: {
+							accountId32: {
+								id: '0xf5d5714c084c112843aca74f8c498da06cc5a2d63153b825189baa51043b1f0b',
+								network: {
+									any: null,
+								},
 							},
 						},
 					},
 				},
 			},
 			assets: {
-				V0: [
+				V2: [
 					{
-						ConcreteFungible: {
-							amount: '1000000000000',
-							id: {
-								Null: null,
+						id: {
+							concrete: {
+								parents: 1,
+								interior: {
+									here: null,
+								},
 							},
+						},
+						fun: {
+							fungible: 100,
 						},
 					},
 				],
 			},
 			feeAssetItem: 0,
 		},
-		V1: {
+		V3: {
 			dest: {
-				V1: {
+				V3: {
+					parents: 1,
 					interior: {
-						X1: {
-							Parachain: 2085,
-						},
+						here: null,
 					},
-					parents: 0,
 				},
 			},
 			beneficiary: {
-				V1: {
+				V3: {
+					parents: 0,
 					interior: {
-						X1: {
-							AccountId32: {
-								id: '0x54fabff72b8ec769b862e4e841837cd394b59910c8507ec6b753e7b89364cf60',
-								network: {
-									Any: null,
-								},
+						x1: {
+							accountId32: {
+								id: '0xf5d5714c084c112843aca74f8c498da06cc5a2d63153b825189baa51043b1f0b',
+								network: null,
 							},
 						},
 					},
-					parents: 0,
 				},
 			},
 			assets: {
-				V1: [
+				V3: [
 					{
-						fun: {
-							Fungible: '70000000000000',
-						},
 						id: {
-							Concrete: {
+							concrete: {
+								parents: 1,
 								interior: {
-									Here: null,
+									here: null,
 								},
-								parents: 0,
 							},
+						},
+						fun: {
+							fungible: 100,
 						},
 					},
 				],
