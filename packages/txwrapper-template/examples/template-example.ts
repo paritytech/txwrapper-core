@@ -53,7 +53,7 @@ async function main(): Promise<void> {
 	const unsigned = methods.balances.transfer(
 		{
 			value: '90071992547409910',
-			dest: '14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3', // Bob
+			dest: { id: '14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3' }, // Bob
 		},
 		{
 			address: deriveAddress(alice.publicKey, 42), // TODO, use correct prefix

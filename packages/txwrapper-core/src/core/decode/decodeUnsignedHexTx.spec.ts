@@ -1,5 +1,5 @@
 import {
-	POLKADOT_25_TEST_OPTIONS,
+	KUSAMA_TEST_OPTIONS,
 	TEST_BASE_TX_INFO,
 	TEST_METHOD_ARGS,
 } from '@substrate/txwrapper-dev';
@@ -13,7 +13,7 @@ describe('decodeUnsignedHexTx', () => {
 		const unsigned = balancesTransfer(
 			TEST_METHOD_ARGS.balances.transfer,
 			TEST_BASE_TX_INFO,
-			POLKADOT_25_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS
 		);
 
 		const expectedResponse = {
@@ -27,11 +27,8 @@ describe('decodeUnsignedHexTx', () => {
 			version: 4,
 		};
 
-		const encoded = encodeUnsignedTransaction(
-			unsigned,
-			POLKADOT_25_TEST_OPTIONS
-		);
-		const decoded = decodeUnsignedHexTx(encoded, POLKADOT_25_TEST_OPTIONS);
+		const encoded = encodeUnsignedTransaction(unsigned, KUSAMA_TEST_OPTIONS);
+		const decoded = decodeUnsignedHexTx(encoded, KUSAMA_TEST_OPTIONS);
 
 		expect(decoded).toStrictEqual(expectedResponse);
 	});

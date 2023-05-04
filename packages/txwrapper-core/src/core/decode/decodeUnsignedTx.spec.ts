@@ -1,5 +1,5 @@
 import {
-	POLKADOT_25_TEST_OPTIONS,
+	KUSAMA_TEST_OPTIONS,
 	TEST_BASE_TX_INFO,
 	TEST_METHOD_ARGS,
 } from '@substrate/txwrapper-dev';
@@ -32,10 +32,10 @@ describe('decodeUnsignedTx', () => {
 		const unsigned = balancesTransfer(
 			TEST_METHOD_ARGS.balances.transfer,
 			TEST_BASE_TX_INFO,
-			POLKADOT_25_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS
 		);
 
-		const decoded = decodeUnsignedTx(unsigned, POLKADOT_25_TEST_OPTIONS);
+		const decoded = decodeUnsignedTx(unsigned, KUSAMA_TEST_OPTIONS);
 
 		itDecodesUnsignedBalanceTransferTx(decoded);
 
@@ -44,7 +44,7 @@ describe('decodeUnsignedTx', () => {
 
 	it('Should decode balances::transfer for an immortal era', () => {
 		const adjustedOptions = {
-			...POLKADOT_25_TEST_OPTIONS,
+			...KUSAMA_TEST_OPTIONS,
 			isImmortalEra: true,
 		};
 		const unsigned = balancesTransfer(

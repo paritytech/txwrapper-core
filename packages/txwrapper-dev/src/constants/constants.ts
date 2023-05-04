@@ -24,7 +24,7 @@ const STATEMINT_SPEC_VERSION = 9360;
  * Base tx information common to all tested transactions
  */
 export const TEST_BASE_TX_INFO = {
-	address: '15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5', // seed "//Alice"
+	address: 'HNZata7iMYWmk5RvZRTiAsSDhV8366zq2YGb3tLH5Upf74F', // seed "//Alice"
 	blockHash:
 		'0x1fc7493f3c1e9ac758a183839906475f8363aafb1b1d3e910fe16fab4ae1b582',
 	blockNumber: 4302222,
@@ -39,7 +39,7 @@ export const TEST_BASE_TX_INFO = {
 };
 
 export const STATEMINT_TEST_BASE_TX_INFO = {
-	address: '15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5', // seed "//Alice"
+	address: 'HNZata7iMYWmk5RvZRTiAsSDhV8366zq2YGb3tLH5Upf74F', // seed "//Alice"
 	blockHash:
 		'0x1fc7493f3c1e9ac758a183839906475f8363aafb1b1d3e910fe16fab4ae1b582',
 	blockNumber: 4302222,
@@ -155,7 +155,7 @@ export const POLKADOT_9350_TEST_OPTIONS = {
 export const TEST_METHOD_ARGS = {
 	balances: {
 		transfer: {
-			dest: '14PiLtTQ3EBwsn6KimaBLH7qsZrryxFZtqFwAognHVZhFxU1',
+			dest: { id: 'Fy2rsYCoowQBtuFXqLE65ehAY9T6KWcGiNCQAyPDCkfpm4s' },
 			value: 12,
 		},
 	},

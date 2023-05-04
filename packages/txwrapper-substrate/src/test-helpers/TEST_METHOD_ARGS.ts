@@ -31,11 +31,11 @@ export const TEST_METHOD_ARGS = {
 	},
 	balances: {
 		transferKeepAlive: {
-			dest: 'Fy2rsYCoowQBtuFXqLE65ehAY9T6KWcGiNCQAyPDCkfpm4s',
+			dest: { id: 'Fy2rsYCoowQBtuFXqLE65ehAY9T6KWcGiNCQAyPDCkfpm4s' },
 			value: 12,
 		},
 		transferAll: {
-			dest: 'Fy2rsYCoowQBtuFXqLE65ehAY9T6KWcGiNCQAyPDCkfpm4s',
+			dest: { id: 'Fy2rsYCoowQBtuFXqLE65ehAY9T6KWcGiNCQAyPDCkfpm4s' },
 			keepAlive: true,
 		},
 	},
