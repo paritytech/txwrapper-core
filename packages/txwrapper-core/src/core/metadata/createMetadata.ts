@@ -51,11 +51,11 @@ export function createMetadataUnmemoized(
  * @param asCallsOnlyArg - Option to decreases the metadata to calls only
  */
 export const createMetadata = memoizee(createMetadataUnmemoized, {
-	length: 3,
-	max: process.env.METADATA_CACHE_MAX
-		? parseInt(process.env.METADATA_CACHE_MAX)
+	length: 4,
+	max: process.env.TXWRAPPER_METADATA_CACHE_MAX
+		? parseInt(process.env.TXWRAPPER_METADATA_CACHE_MAX)
 		: undefined,
-	maxAge: process.env.METADATA_CACHE_MAX_AGE
-		? parseInt(process.env.METADATA_CACHE_MAX_AGE)
+	maxAge: process.env.TXWRAPPER_METADATA_CACHE_MAX_AGE
+		? parseInt(process.env.TXWRAPPER_METADATA_CACHE_MAX_AGE)
 		: undefined,
 });
