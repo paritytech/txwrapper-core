@@ -1,5 +1,5 @@
 import {
-	POLKADOT_25_TEST_OPTIONS,
+	KUSAMA_TEST_OPTIONS,
 	TEST_BASE_TX_INFO,
 	TEST_METHOD_ARGS,
 } from '@substrate/txwrapper-dev';
@@ -31,15 +31,12 @@ describe('decodeSigningPayload', () => {
 			balancesTransfer(
 				TEST_METHOD_ARGS.balances.transfer,
 				TEST_BASE_TX_INFO,
-				POLKADOT_25_TEST_OPTIONS
+				KUSAMA_TEST_OPTIONS
 			),
-			POLKADOT_25_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS
 		);
 
-		const decoded = decodeSigningPayload(
-			signingPayload,
-			POLKADOT_25_TEST_OPTIONS
-		);
+		const decoded = decodeSigningPayload(signingPayload, KUSAMA_TEST_OPTIONS);
 
 		itDecodesSigningPayloadBalancesTransfer(decoded);
 
@@ -51,15 +48,12 @@ describe('decodeSigningPayload', () => {
 			balancesTransfer(
 				TEST_METHOD_ARGS.balances.transfer,
 				TEST_BASE_TX_INFO,
-				Object.assign({}, POLKADOT_25_TEST_OPTIONS, { isImmortalEra: true })
+				Object.assign({}, KUSAMA_TEST_OPTIONS, { isImmortalEra: true })
 			),
-			POLKADOT_25_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS
 		);
 
-		const decoded = decodeSigningPayload(
-			signingPayload,
-			POLKADOT_25_TEST_OPTIONS
-		);
+		const decoded = decodeSigningPayload(signingPayload, KUSAMA_TEST_OPTIONS);
 
 		expect(decoded.eraPeriod).toBe(0);
 	});

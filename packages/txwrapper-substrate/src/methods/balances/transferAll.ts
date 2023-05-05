@@ -10,7 +10,7 @@ export interface BalancesTransferAllArgs extends Args {
 	/**
 	 * The recipient of the transfer.
 	 */
-	dest: string;
+	dest: { id: string };
 
 	/**
 	 * A boolean to determine if the `transfer_all` operation should send all

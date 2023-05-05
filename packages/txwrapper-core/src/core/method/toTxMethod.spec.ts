@@ -1,9 +1,9 @@
 import { hexToU8a } from '@polkadot/util';
-import { KUSAMA_9160_TEST_OPTIONS } from '@substrate/txwrapper-dev';
+import { KUSAMA_TEST_OPTIONS } from '@substrate/txwrapper-dev';
 
 import { toTxMethod } from './toTxMethod';
 
-const { registry } = KUSAMA_9160_TEST_OPTIONS;
+const { registry } = KUSAMA_TEST_OPTIONS;
 
 describe('toTxMethod', () => {
 	// transferKeepAlive signedTx constructed using kusama v9160 metadata
@@ -26,10 +26,7 @@ describe('toTxMethod', () => {
 			pallet: 'balances',
 		};
 
-		const txMethod = toTxMethod(
-			KUSAMA_9160_TEST_OPTIONS.registry,
-			txMethodCall
-		);
+		const txMethod = toTxMethod(registry, txMethodCall);
 
 		expect(txMethod).toStrictEqual(expectedResponse);
 	});

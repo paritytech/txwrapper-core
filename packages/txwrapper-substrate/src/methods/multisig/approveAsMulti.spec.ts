@@ -1,6 +1,6 @@
 import {
 	itHasCorrectBaseTxInfo,
-	KUSAMA_9320_TEST_OPTIONS,
+	KUSAMA_TEST_OPTIONS,
 	TEST_BASE_TX_INFO,
 } from '@substrate/txwrapper-dev';
 
@@ -12,7 +12,7 @@ describe('multisig::approveAsMulti', () => {
 		const unsigned = approveAsMulti(
 			TEST_METHOD_ARGS.multisig.approveAsMulti,
 			TEST_BASE_TX_INFO,
-			KUSAMA_9320_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS
 		);
 
 		itHasCorrectBaseTxInfo(unsigned);

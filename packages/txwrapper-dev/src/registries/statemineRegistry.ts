@@ -1,39 +1,33 @@
 import { TypeRegistry } from '@polkadot/types';
 import { getSpecTypes } from '@polkadot/types-known';
+import memoizee from 'memoizee';
 
-import { polkadotV9122MetadataHex } from '../metadata/polkadot/polkadotV9122MetadataHex';
 import { mockGetRegistryBase } from './mockGetRegistry';
 
 /**
- * Get the Polkadot type registry for a given spec version for testing purposes
+ * Get the Kusama type registry for a given spec version for testing purposes
  *
  * @param specVersion
  * @param metadataRpc
  */
-export function getRegistryPolkadot(
+export function getRegistryStatemine(
 	specVersion: number,
 	metadataRpc: `0x${string}`
 ): TypeRegistry {
 	return mockGetRegistryBase({
 		chainProperties: {
-			ss58Format: 0,
-			tokenDecimals: 10,
-			tokenSymbol: 'DOT',
+			ss58Format: 2,
+			tokenDecimals: 12,
+			tokenSymbol: 'KSM',
 		},
 		specTypes: getSpecTypes(
 			new TypeRegistry(),
-			'Polkadot',
-			'polkadot',
+			'Statemine',
+			'statemine',
 			specVersion
 		),
 		metadataRpc,
 	});
 }
 
-/**
- * Polkadot v9122 TypeRegistry
- */
-export const polkadotRegistryV9122 = getRegistryPolkadot(
-	9122,
-	polkadotV9122MetadataHex
-);
+export const memoizedStatemineGetRegistry = memoizee(getRegistryStatemine);

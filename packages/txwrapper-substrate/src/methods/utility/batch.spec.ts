@@ -1,6 +1,6 @@
 import {
 	itHasCorrectBaseTxInfo,
-	POLKADOT_25_TEST_OPTIONS,
+	KUSAMA_TEST_OPTIONS,
 	TEST_BASE_TX_INFO,
 } from '@substrate/txwrapper-dev';
 
@@ -13,7 +13,7 @@ describe('utility::batch', () => {
 		const unsignedBalancesTransferKeepAlive = transferKeepAlive(
 			TEST_METHOD_ARGS.balances.transferKeepAlive,
 			TEST_BASE_TX_INFO,
-			POLKADOT_25_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS
 		);
 
 		const unsignedBatch = batch(
@@ -21,13 +21,13 @@ describe('utility::batch', () => {
 				calls: [unsignedBalancesTransferKeepAlive.method],
 			},
 			TEST_BASE_TX_INFO,
-			POLKADOT_25_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS
 		);
 
 		itHasCorrectBaseTxInfo(unsignedBatch);
 
 		expect(unsignedBatch.method).toBe(
-			'0x010004060396074594cccf1cd185fa8a72ceaeefd86648f8d45514f3ce33c31bdd07e4655d30'
+			'0x18000404030096074594cccf1cd185fa8a72ceaeefd86648f8d45514f3ce33c31bdd07e4655d30'
 		);
 	});
 });

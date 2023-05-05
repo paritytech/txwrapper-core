@@ -1,6 +1,6 @@
 import {
 	itHasCorrectBaseTxInfo,
-	POLKADOT_25_TEST_OPTIONS,
+	KUSAMA_TEST_OPTIONS,
 	TEST_BASE_TX_INFO,
 } from '@substrate/txwrapper-dev';
 
@@ -12,12 +12,12 @@ describe('democracy::vote', () => {
 		const unsigned = vote(
 			TEST_METHOD_ARGS.democracy.vote,
 			TEST_BASE_TX_INFO,
-			POLKADOT_25_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS
 		);
 
 		itHasCorrectBaseTxInfo(unsigned);
 		expect(unsigned.method).toBe(
-			'0x0a02000081d2040000000000000000000000000000'
+			'0x0d02000081d2040000000000000000000000000000'
 		);
 	});
 });

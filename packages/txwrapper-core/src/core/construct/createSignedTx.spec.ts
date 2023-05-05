@@ -1,5 +1,5 @@
 import {
-	POLKADOT_25_TEST_OPTIONS,
+	KUSAMA_TEST_OPTIONS,
 	signWithAlice,
 	TEST_BASE_TX_INFO,
 	TEST_METHOD_ARGS,
@@ -14,17 +14,14 @@ describe('createSignedTx', () => {
 		const unsigned = balancesTransfer(
 			TEST_METHOD_ARGS.balances.transfer,
 			TEST_BASE_TX_INFO,
-			POLKADOT_25_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS
 		);
-		const signingPayload = createSigningPayload(
-			unsigned,
-			POLKADOT_25_TEST_OPTIONS
-		);
+		const signingPayload = createSigningPayload(unsigned, KUSAMA_TEST_OPTIONS);
 		const signature = await signWithAlice(signingPayload);
 
-		const tx = createSignedTx(unsigned, signature, POLKADOT_25_TEST_OPTIONS);
+		const tx = createSignedTx(unsigned, signature, KUSAMA_TEST_OPTIONS);
 		expect(tx).toBe(
-			'0x250284d43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d00483ff9e9dd1a0473bd47f359732f3c0c61a4c7753ffecbba785213eee19acdab289febd634144d70e1b50b0b77b0394103bb5e13b0945c8b366c808069de130ceb580800060096074594cccf1cd185fa8a72ceaeefd86648f8d45514f3ce33c31bdd07e4655d30'
+			'0x2d028400d43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d00100481b4de72b4a70b16db6573f707eb8047980c76bf34b3e055c4bf0e00c3fee59272d9072cea0a3af3a3aa04d158781e09049ea8c6dc5322fe39a567a3410beb58080004000096074594cccf1cd185fa8a72ceaeefd86648f8d45514f3ce33c31bdd07e4655d30'
 		);
 	});
 });

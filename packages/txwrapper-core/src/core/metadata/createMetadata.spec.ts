@@ -1,34 +1,39 @@
 import { Metadata } from '@polkadot/types';
 import { MetadataVersioned } from '@polkadot/types/metadata/MetadataVersioned';
 import {
-	polkadotRegistryV9122,
-	polkadotV9122MetadataHex,
+	KUSAMA_SPEC_VERSION,
+	kusamaMetadataHex,
+	memoizedKusamaGetRegistry,
 } from '@substrate/txwrapper-dev';
 
 import { createMetadata, createMetadataUnmemoized } from './createMetadata';
 
 describe('createMetadata', () => {
+	const registry = memoizedKusamaGetRegistry(
+		KUSAMA_SPEC_VERSION,
+		kusamaMetadataHex
+	);
 	const unmemoizedMetadata: Metadata = createMetadataUnmemoized(
-		polkadotRegistryV9122,
-		polkadotV9122MetadataHex
+		registry,
+		kusamaMetadataHex
 	);
 	const unmemoizedMetadataAsCalls: MetadataVersioned = createMetadataUnmemoized(
-		polkadotRegistryV9122,
-		polkadotV9122MetadataHex,
+		registry,
+		kusamaMetadataHex,
 		true
 	);
 	const memoizedMetadata: Metadata = createMetadata(
-		polkadotRegistryV9122,
-		polkadotV9122MetadataHex
+		registry,
+		kusamaMetadataHex
 	);
 	const memoizedMetadataAsCalls: MetadataVersioned = createMetadata(
-		polkadotRegistryV9122,
-		polkadotV9122MetadataHex,
+		registry,
+		kusamaMetadataHex,
 		true
 	);
 	const memoizedMetadataAsSpecifiedCalls: MetadataVersioned = createMetadata(
-		polkadotRegistryV9122,
-		polkadotV9122MetadataHex,
+		registry,
+		kusamaMetadataHex,
 		false,
 		['balances', 'system']
 	);

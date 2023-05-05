@@ -90,7 +90,7 @@ async function main(): Promise<void> {
 	const unsigned = methods.balances.transferKeepAlive(
 		{
 			value: '10000000000000',
-			dest: '5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty', // Bob
+			dest: { id: '5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty' }, // Bob
 		},
 		{
 			address: deriveAddress(alice.publicKey, PolkadotSS58Format.westend),

@@ -1,8 +1,7 @@
 import { Metadata, TypeRegistry } from '@polkadot/types';
 import {
-	POLKADOT_25_TEST_OPTIONS,
-	POLKADOT_9122_TEST_OPTIONS,
-	POLKADOT_9122_TEST_OPTIONS_CALLS_ONLY,
+	KUSAMA_TEST_OPTIONS,
+	KUSAMA_TEST_OPTIONS_CALLS_ONLY,
 	TEST_BASE_TX_INFO,
 	TEST_METHOD_ARGS,
 } from '@substrate/txwrapper-dev';
@@ -28,7 +27,7 @@ describe('defineMethod', () => {
 					pallet: 'staking',
 				},
 			},
-			POLKADOT_25_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS
 		);
 
 		expect(unsigned.era).toBe('0xe500');
@@ -49,7 +48,7 @@ describe('defineMethod', () => {
 						pallet: 'staking',
 					},
 				},
-				POLKADOT_25_TEST_OPTIONS
+				KUSAMA_TEST_OPTIONS
 			)
 		).toThrow(InvalidEraPeriodTooLow);
 	});
@@ -63,7 +62,7 @@ describe('defineMethod', () => {
 		 * Adds isImmortalEra to the options.
 		 */
 		const adjustedOptions = {
-			...POLKADOT_25_TEST_OPTIONS,
+			...KUSAMA_TEST_OPTIONS,
 			isImmortalEra: true,
 		};
 		const unsigned = defineMethod(
@@ -95,11 +94,12 @@ describe('defineMethod', () => {
 					pallet: 'staking',
 				},
 			},
-			POLKADOT_25_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS
 		);
 
 		expect(unsigned.era).toBe('0x2100');
 		expect(unsigned.signedExtensions).toStrictEqual([
+			'CheckNonZeroSender',
 			'CheckSpecVersion',
 			'CheckTxVersion',
 			'CheckGenesis',
@@ -108,7 +108,7 @@ describe('defineMethod', () => {
 			'CheckWeight',
 			'ChargeTransactionPayment',
 		]);
-		expect(unsigned.method).toBe('0x0806');
+		expect(unsigned.method).toBe('0x0606');
 		expect(unsigned.nonce).toBe('0x00000002');
 		expect(unsigned.address).toBe(TEST_BASE_TX_INFO.address);
 		expect(unsigned.blockNumber).toBe('0x0041a58e');
@@ -119,13 +119,13 @@ describe('defineMethod', () => {
 		const unsignedPayload = balancesTransfer(
 			TEST_METHOD_ARGS.balances.transfer,
 			TEST_BASE_TX_INFO,
-			POLKADOT_9122_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS
 		);
 
 		const unsignedPayloadCallsOnly = balancesTransfer(
 			TEST_METHOD_ARGS.balances.transfer,
 			TEST_BASE_TX_INFO,
-			POLKADOT_9122_TEST_OPTIONS_CALLS_ONLY
+			KUSAMA_TEST_OPTIONS_CALLS_ONLY
 		);
 
 		expect(
@@ -139,7 +139,7 @@ describe('defineMethod', () => {
 		const unsignedPayload = balancesTransfer(
 			TEST_METHOD_ARGS.balances.transfer,
 			TEST_BASE_TX_INFO,
-			POLKADOT_9122_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS
 		);
 
 		/**
@@ -153,7 +153,7 @@ describe('defineMethod', () => {
 	});
 
 	describe('createEra', () => {
-		const { registry } = POLKADOT_9122_TEST_OPTIONS;
+		const { registry } = KUSAMA_TEST_OPTIONS;
 
 		it('Should handle values less than 4 correctly', () => {
 			expect(() => {
