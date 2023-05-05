@@ -52,4 +52,10 @@ export function createMetadataUnmemoized(
  */
 export const createMetadata = memoizee(createMetadataUnmemoized, {
 	length: 3,
+	max: process.env.METADATA_CACHE_MAX
+		? parseInt(process.env.METADATA_CACHE_MAX)
+		: undefined,
+	maxAge: process.env.METADATA_CACHE_MAX_AGE
+		? parseInt(process.env.METADATA_CACHE_MAX_AGE)
+		: undefined,
 });

@@ -7,7 +7,7 @@ import {
 } from '@polkadot/types/types';
 
 import { ChainProperties } from '../../types';
-import { createMetadata } from './createMetadata';
+import { createMetadataUnmemoized } from './createMetadata';
 
 export interface GetRegistryBaseArgs {
 	/**
@@ -58,8 +58,7 @@ export function getRegistryBase({
 	additionalTypes,
 }: GetRegistryBaseArgs): TypeRegistry {
 	const registry = new TypeRegistry();
-
-	const generatedMetadata = createMetadata(
+	const generatedMetadata = createMetadataUnmemoized(
 		registry,
 		metadataRpc,
 		asCallsOnlyArg
