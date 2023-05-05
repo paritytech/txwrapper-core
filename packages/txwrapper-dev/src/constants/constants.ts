@@ -5,7 +5,7 @@ import {
 	memoizedStatemineGetRegistry,
 } from '../registries';
 
-export const KUSAMA_SPEC_VERSION = 9390;
+export const KUSAMA_SPEC_VERSION = 9420;
 const STATEMINT_SPEC_VERSION = 9360;
 
 /**
@@ -68,6 +68,10 @@ export const TEST_METHOD_ARGS = {
 			dest: { id: 'Fy2rsYCoowQBtuFXqLE65ehAY9T6KWcGiNCQAyPDCkfpm4s' },
 			value: 12,
 		},
+		transferAllowDeath: {
+			dest: { id: 'Fy2rsYCoowQBtuFXqLE65ehAY9T6KWcGiNCQAyPDCkfpm4s' },
+			value: 12,
+		}
 	},
 };
 
