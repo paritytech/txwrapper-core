@@ -51,7 +51,7 @@ describe('getRegistryBase', () => {
 		const testRegistry = getRegistryBase({
 			chainProperties: knownChainProperties['polkadot'],
 			specTypes: getSpecTypes(registry, 'Polkadot', 'polkadot', 9122),
-			metadataRpc: POLKADOT_9122_TEST_OPTIONS.metadataRpc,
+			metadataRpc: KUSAMA_TEST_OPTIONS.metadataRpc,
 			typesBundle,
 		});
 		expect(
@@ -66,7 +66,7 @@ describe('getRegistryBase', () => {
 		const testRegistry = getRegistryBase({
 			chainProperties: knownChainProperties['polkadot'],
 			specTypes: getSpecTypes(registry, 'Polkadot', 'polkadot', 9122),
-			metadataRpc: POLKADOT_9122_TEST_OPTIONS.metadataRpc,
+			metadataRpc: KUSAMA_TEST_OPTIONS.metadataRpc,
 			additionalTypes: { TestingType: 'u32' },
 		});
 
