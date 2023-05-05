@@ -6,7 +6,7 @@ export interface TestBalancesTransferArgs extends Args {
 	/**
 	 * The recipient address, SS-58 encoded.
 	 */
-	dest: string;
+	dest: { id: string };
 	/**
 	 * The amount to send.
 	 */

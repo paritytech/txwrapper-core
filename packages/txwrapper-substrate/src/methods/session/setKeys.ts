@@ -10,7 +10,14 @@ export interface SessionSetKeysArgs extends Args {
 	/**
 	 * The 5 keys to set.
 	 */
-	keys: string[];
+	keys: {
+		authority_discovery: string;
+		babe: string;
+		grandpa: string;
+		im_online: string;
+		para_assignment: string;
+		para_validator: string;
+	};
 	/**
 	 * Proof of key ownership (currently unused).
 	 */

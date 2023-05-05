@@ -1,6 +1,6 @@
 import {
 	itHasCorrectBaseTxInfo,
-	POLKADOT_25_TEST_OPTIONS,
+	KUSAMA_TEST_OPTIONS,
 	TEST_BASE_TX_INFO,
 } from '@substrate/txwrapper-dev';
 
@@ -12,10 +12,10 @@ describe('staking::validate', () => {
 		const unsigned = validate(
 			TEST_METHOD_ARGS.staking.validate,
 			TEST_BASE_TX_INFO,
-			POLKADOT_25_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS
 		);
 
 		itHasCorrectBaseTxInfo(unsigned);
-		expect(unsigned.method).toBe('0x080414');
+		expect(unsigned.method).toBe('0x06041400');
 	});
 });

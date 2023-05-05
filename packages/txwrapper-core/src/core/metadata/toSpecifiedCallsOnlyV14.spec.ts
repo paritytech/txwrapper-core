@@ -1,6 +1,7 @@
 import {
-	kusamaRegistryV9160,
-	kusamaV9160MetadataHex,
+	KUSAMA_SPEC_VERSION,
+	kusamaMetadataHex,
+	memoizedKusamaGetRegistry,
 	mockCreateMetadata,
 } from '@substrate/txwrapper-dev';
 
@@ -8,16 +9,16 @@ import mockToSpecifiedCallsV14 from '../../test-helpers/mock/toSpecifiedCallsOnl
 import { toSpecifiedCallsOnlyV14 } from './';
 
 describe('toSpecifiedCallsOnly', () => {
+	const registry = memoizedKusamaGetRegistry(
+		KUSAMA_SPEC_VERSION,
+		kusamaMetadataHex
+	);
 	it('Should correctly parse the metadata', () => {
-		const metadata = mockCreateMetadata(
-			kusamaRegistryV9160,
-			kusamaV9160MetadataHex
-		);
-		const callsOnly = toSpecifiedCallsOnlyV14(
-			kusamaRegistryV9160,
-			metadata.asLatest,
-			['balances', 'system']
-		);
+		const metadata = mockCreateMetadata(registry, kusamaMetadataHex);
+		const callsOnly = toSpecifiedCallsOnlyV14(registry, metadata.asLatest, [
+			'balances',
+			'system',
+		]);
 
 		expect(callsOnly).toStrictEqual(mockToSpecifiedCallsV14);
 	});

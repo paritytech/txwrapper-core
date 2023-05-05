@@ -1,6 +1,6 @@
 import {
 	itHasCorrectBaseTxInfo,
-	POLKADOT_25_TEST_OPTIONS,
+	KUSAMA_TEST_OPTIONS,
 	TEST_BASE_TX_INFO,
 } from '@substrate/txwrapper-dev';
 
@@ -12,12 +12,12 @@ describe('staking::setController', () => {
 		const unsigned = setController(
 			TEST_METHOD_ARGS.staking.setController,
 			TEST_BASE_TX_INFO,
-			POLKADOT_25_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS
 		);
 
 		itHasCorrectBaseTxInfo(unsigned);
 		expect(unsigned.method).toBe(
-			'0x08088eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48'
+			'0x0608008eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48'
 		);
 	});
 });

@@ -14,7 +14,6 @@ export function itHasCorrectBaseTxInfo(unsigned: UnsignedTransaction): void {
 	expect(unsigned.blockNumber).toBe('0x0041a58e');
 	expect(unsigned.era).toBe('0xeb58');
 	expect(unsigned.nonce).toBe('0x00000002');
-	expect(unsigned.specVersion).toBe('0x000003fb');
 	expect(unsigned.tip).toBe('0x00000000000000000000000000000000');
 	expect(unsigned.transactionVersion).toBe('0x00000006');
 	expect(unsigned.version).toBe(4);

@@ -194,7 +194,7 @@ async function main(): Promise<void> {
 	const unsigned = methods.balances.transferKeepAlive(
 		{
 			value: '3000000000000000',
-			dest: Ss58MultiSigAddress, // MultiSig Address
+			dest: { id: Ss58MultiSigAddress }, // MultiSig Address
 		},
 		{
 			address: deriveAddress(
@@ -275,7 +275,7 @@ async function main(): Promise<void> {
 	const unsignedTXMulti = methods.balances.transferKeepAlive(
 		{
 			value: '1500000000000000',
-			dest: eveSs58Address, // Eve's Address
+			dest: { id: eveSs58Address }, // Eve's Address
 		},
 		{
 			address: Ss58MultiSigAddress,

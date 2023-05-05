@@ -1,5 +1,5 @@
 import {
-	POLKADOT_25_TEST_OPTIONS,
+	KUSAMA_TEST_OPTIONS,
 	signWithAlice,
 	TEST_BASE_TX_INFO,
 	TEST_METHOD_ARGS,
@@ -14,22 +14,22 @@ describe('getTxHash', () => {
 		const unsigned = balancesTransfer(
 			TEST_METHOD_ARGS.balances.transfer,
 			TEST_BASE_TX_INFO,
-			POLKADOT_25_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS
 		);
 		const signingPayload = construct.signingPayload(
 			unsigned,
-			POLKADOT_25_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS
 		);
 		const signature = await signWithAlice(signingPayload);
 		const signedTx = construct.signedTx(
 			unsigned,
 			signature,
-			POLKADOT_25_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS
 		);
 
 		const txHash = getTxHash(signedTx);
 		expect(txHash).toBe(
-			'0xaab69a09a92afaa992d369304b58cd698db1153d48a271e7f9bf4156a9cc5b00'
+			'0x11299badfd660c00d4845ee3eb2be8c4a0185f032819a6124022e801e2544690'
 		);
 	});
 });
