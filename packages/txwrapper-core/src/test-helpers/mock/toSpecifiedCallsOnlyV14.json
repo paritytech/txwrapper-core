@@ -36778,6 +36778,7 @@
         },
         "events": null,
         "constants": [],
+        "docs": [],
         "errors": null,
         "index": 0
       },
@@ -36789,10 +36790,12 @@
         },
         "events": null,
         "constants": [],
+        "docs": [],
         "errors": null,
         "index": 4
       }
     ],
+    "apis": [],
     "extrinsic": {
       "type": 857,
       "version": 4,
