@@ -3,6 +3,41 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.0.0](https://github.com/paritytech/txwrapper-core/compare/v5.0.1...v6.0.0) (2023-05-08)
+
+
+### Bug Fixes
+
+* adjust memoization and cache ([#298](https://github.com/paritytech/txwrapper-core/issues/298)) ([a0ae8c7](https://github.com/paritytech/txwrapper-core/commit/a0ae8c72570910598ef6787228a559c11196d001))
+* rework `deriveAddress` to have all schemes support ([#293](https://github.com/paritytech/txwrapper-core/issues/293)) ([5b99d23](https://github.com/paritytech/txwrapper-core/commit/5b99d2396a078186145377e11beb2faf1c4e7815))
+
+
+* fix!: refactor the whole testing system with metadata, remove old calls, and fix some types (#295) ([58d026a](https://github.com/paritytech/txwrapper-core/commit/58d026ad7c0d9eaa0816fddf33735d4015e22edd)), closes [#295](https://github.com/paritytech/txwrapper-core/issues/295)
+
+
+### Features
+
+* add `additionalTypes`, and `typesBundle` to `getRegistryBase` ([#294](https://github.com/paritytech/txwrapper-core/issues/294)) ([671a2d1](https://github.com/paritytech/txwrapper-core/commit/671a2d168a114866455aff2f01d0d019eeeed2d3))
+
+
+### BREAKING CHANGES
+
+* fix balances
+
+* metadata and decode
+
+* method
+
+* remove constants
+
+* remove a large amount of bloat
+
+* ensure setKets kets type is correct
+
+
+
+
+
 ## [5.0.1](https://github.com/paritytech/txwrapper-core/compare/v5.0.0...v5.0.1) (2023-02-28)
 
 **Note:** Version bump only for package @substrate/txwrapper-core

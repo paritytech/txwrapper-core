@@ -2345,19 +2345,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@substrate/txwrapper-core@^5.0.1, @substrate/txwrapper-core@workspace:packages/txwrapper-core":
+"@substrate/txwrapper-core@^6.0.0, @substrate/txwrapper-core@workspace:packages/txwrapper-core":
   version: 0.0.0-use.local
   resolution: "@substrate/txwrapper-core@workspace:packages/txwrapper-core"
   dependencies:
     "@polkadot/api": ^10.6.1
     "@polkadot/keyring": ^12.1.2
-    "@substrate/txwrapper-dev": ^5.0.0
+    "@substrate/txwrapper-dev": ^6.0.0
     "@types/memoizee": ^0.4.3
     memoizee: 0.4.15
   languageName: unknown
   linkType: soft
 
-"@substrate/txwrapper-dev@^5.0.0, @substrate/txwrapper-dev@workspace:packages/txwrapper-dev":
+"@substrate/txwrapper-dev@^6.0.0, @substrate/txwrapper-dev@workspace:packages/txwrapper-dev":
   version: 0.0.0-use.local
   resolution: "@substrate/txwrapper-dev@workspace:packages/txwrapper-dev"
   dependencies:
@@ -2370,8 +2370,8 @@ __metadata:
   resolution: "@substrate/txwrapper-examples@workspace:packages/txwrapper-examples"
   dependencies:
     "@polkadot/api": ^10.6.1
-    "@substrate/txwrapper-polkadot": ^5.0.1
-    "@substrate/txwrapper-registry": ^5.0.1
+    "@substrate/txwrapper-polkadot": ^6.0.0
+    "@substrate/txwrapper-registry": ^6.0.0
   languageName: unknown
   linkType: soft
 
@@ -2379,36 +2379,36 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@substrate/txwrapper-orml@workspace:packages/txwrapper-orml"
   dependencies:
-    "@substrate/txwrapper-core": ^5.0.1
-    "@substrate/txwrapper-dev": ^5.0.0
+    "@substrate/txwrapper-core": ^6.0.0
+    "@substrate/txwrapper-dev": ^6.0.0
   languageName: unknown
   linkType: soft
 
-"@substrate/txwrapper-polkadot@^5.0.1, @substrate/txwrapper-polkadot@workspace:packages/txwrapper-polkadot":
+"@substrate/txwrapper-polkadot@^6.0.0, @substrate/txwrapper-polkadot@workspace:packages/txwrapper-polkadot":
   version: 0.0.0-use.local
   resolution: "@substrate/txwrapper-polkadot@workspace:packages/txwrapper-polkadot"
   dependencies:
-    "@substrate/txwrapper-core": ^5.0.1
-    "@substrate/txwrapper-dev": ^5.0.0
-    "@substrate/txwrapper-substrate": ^5.0.1
+    "@substrate/txwrapper-core": ^6.0.0
+    "@substrate/txwrapper-dev": ^6.0.0
+    "@substrate/txwrapper-substrate": ^6.0.0
   languageName: unknown
   linkType: soft
 
-"@substrate/txwrapper-registry@^5.0.1, @substrate/txwrapper-registry@workspace:packages/txwrapper-registry":
+"@substrate/txwrapper-registry@^6.0.0, @substrate/txwrapper-registry@workspace:packages/txwrapper-registry":
   version: 0.0.0-use.local
   resolution: "@substrate/txwrapper-registry@workspace:packages/txwrapper-registry"
   dependencies:
     "@polkadot/networks": ^12.1.2
-    "@substrate/txwrapper-core": ^5.0.1
+    "@substrate/txwrapper-core": ^6.0.0
   languageName: unknown
   linkType: soft
 
-"@substrate/txwrapper-substrate@^5.0.1, @substrate/txwrapper-substrate@workspace:packages/txwrapper-substrate":
+"@substrate/txwrapper-substrate@^6.0.0, @substrate/txwrapper-substrate@workspace:packages/txwrapper-substrate":
   version: 0.0.0-use.local
   resolution: "@substrate/txwrapper-substrate@workspace:packages/txwrapper-substrate"
   dependencies:
-    "@substrate/txwrapper-core": ^5.0.1
-    "@substrate/txwrapper-dev": ^5.0.0
+    "@substrate/txwrapper-core": ^6.0.0
+    "@substrate/txwrapper-dev": ^6.0.0
   languageName: unknown
   linkType: soft
 
@@ -2416,9 +2416,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@substrate/txwrapper-template@workspace:packages/txwrapper-template"
   dependencies:
-    "@substrate/txwrapper-core": ^5.0.1
-    "@substrate/txwrapper-registry": ^5.0.1
-    "@substrate/txwrapper-substrate": ^5.0.1
+    "@substrate/txwrapper-core": ^6.0.0
+    "@substrate/txwrapper-registry": ^6.0.0
+    "@substrate/txwrapper-substrate": ^6.0.0
     ts-node: 9.1.1
     typescript: 4.8.3
   languageName: unknown
