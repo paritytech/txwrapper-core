@@ -1,9 +1,9 @@
 import { Metadata } from '@polkadot/types';
 import { TypeRegistry } from '@polkadot/types';
 import { MetadataVersioned } from '@polkadot/types/metadata/MetadataVersioned';
-import { isBrowser } from '../util';
 import memoizee from 'memoizee';
 
+import { isBrowser } from '../util';
 import { toSpecifiedCallsOnlyV14 } from './toSpecifiedCallsOnlyV14';
 
 /**
