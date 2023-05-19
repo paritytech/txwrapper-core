@@ -17,7 +17,7 @@
 # - The latest matching rule, if multiple, takes precedence.
 
 # main codeowner @paritytech/tools-team
-* @paritytech/tools-team
+* @paritytech/integrations-tools-js-ts
 
 # CI
-/.github/ @paritytech/ci @paritytech/tools-team
+/.github/ @paritytech/ci @paritytech/integrations-tools-js-ts

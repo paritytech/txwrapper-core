@@ -8,6 +8,7 @@ import {
 	ChainProperties,
 	getRegistryBase,
 	GetRegistryOptsCore,
+	isBrowser,
 } from '@substrate/txwrapper-core';
 import fs from 'fs';
 
@@ -67,18 +68,20 @@ function parseTypesBundle(
 	return parsedJson;
 }
 
-const typesBundle: OverrideBundleType | undefined = parseTypesBundle(
-	process.env.TX_TYPES_BUNDLE
+const envTypesBundle: OverrideBundleType | undefined = parseTypesBundle(
+	!isBrowser && typeof process?.env?.TX_TYPES_BUNDLE !== 'undefined'
+		? process.env.TX_TYPES_BUNDLE
+		: undefined
 );
 
 /**
  * Create a registry with `knownTypes` via env variables.
  * ie: STX_TYPES_BUNDLE; STX_TYPES_CHAIN
  */
-export function createRegistry(): TypeRegistry {
+export function createRegistry(typesBundle?: OverrideBundleType): TypeRegistry {
 	const registry = new TypeRegistry();
 	registry.setKnownTypes({
-		typesBundle: typesBundle,
+		typesBundle: typesBundle || envTypesBundle,
 	});
 
 	return registry;
@@ -97,6 +100,8 @@ export function getRegistry({
 	metadataRpc,
 	properties,
 	asCallsOnlyArg,
+	typesBundle,
+	additionalTypes,
 }: GetRegistryOpts): TypeRegistry {
 	const registry = createRegistry();
 
@@ -106,5 +111,7 @@ export function getRegistry({
 		specTypes: getSpecTypes(registry, chainName, specName, specVersion),
 		metadataRpc,
 		asCallsOnlyArg,
+		typesBundle,
+		additionalTypes,
 	});
 }

@@ -3,6 +3,62 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.0.0](/compare/v5.0.1...v6.0.0) (2023-05-08)
+
+
+* fix!: refactor the whole testing system with metadata, remove old calls, and fix some types (#295) 58d026a, closes #295
+
+
+### BREAKING CHANGES
+
+* fix balances
+
+* metadata and decode
+
+* method
+
+* remove constants
+
+* remove a large amount of bloat
+
+* ensure setKets kets type is correct
+
+
+
+
+
+## [5.0.1](/compare/v5.0.0...v5.0.1) (2023-02-28)
+
+**Note:** Version bump only for package @substrate/txwrapper-template
+
+
+
+
+
+# [5.0.0](/compare/v4.1.0...v5.0.0) (2023-01-13)
+
+**Note:** Version bump only for package @substrate/txwrapper-template
+
+
+
+
+
+# [4.1.0](/compare/v4.0.3...v4.1.0) (2022-12-29)
+
+**Note:** Version bump only for package @substrate/txwrapper-template
+
+
+
+
+
+## [4.0.3](/compare/v4.0.2...v4.0.3) (2022-12-07)
+
+**Note:** Version bump only for package @substrate/txwrapper-template
+
+
+
+
+
 ## [4.0.2](/compare/v4.0.1...v4.0.2) (2022-11-28)
 
 **Note:** Version bump only for package @substrate/txwrapper-template

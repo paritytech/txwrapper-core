@@ -157,6 +157,7 @@ export function defineMethod(
 
 	return {
 		address: info.address,
+		assetId: registry.createType('Compact<AssetId>', info.assetId).toNumber(),
 		blockHash: info.blockHash,
 		blockNumber: registry.createType('BlockNumber', info.blockNumber).toHex(),
 		era: extrinsicEra.toHex(),

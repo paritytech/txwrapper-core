@@ -3,6 +3,79 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.0.0](https://github.com/paritytech/txwrapper-core/compare/v5.0.1...v6.0.0) (2023-05-08)
+
+
+### Bug Fixes
+
+* adjust memoization and cache ([#298](https://github.com/paritytech/txwrapper-core/issues/298)) ([a0ae8c7](https://github.com/paritytech/txwrapper-core/commit/a0ae8c72570910598ef6787228a559c11196d001))
+* rework `deriveAddress` to have all schemes support ([#293](https://github.com/paritytech/txwrapper-core/issues/293)) ([5b99d23](https://github.com/paritytech/txwrapper-core/commit/5b99d2396a078186145377e11beb2faf1c4e7815))
+
+
+* fix!: refactor the whole testing system with metadata, remove old calls, and fix some types (#295) ([58d026a](https://github.com/paritytech/txwrapper-core/commit/58d026ad7c0d9eaa0816fddf33735d4015e22edd)), closes [#295](https://github.com/paritytech/txwrapper-core/issues/295)
+
+
+### Features
+
+* add `additionalTypes`, and `typesBundle` to `getRegistryBase` ([#294](https://github.com/paritytech/txwrapper-core/issues/294)) ([671a2d1](https://github.com/paritytech/txwrapper-core/commit/671a2d168a114866455aff2f01d0d019eeeed2d3))
+
+
+### BREAKING CHANGES
+
+* fix balances
+
+* metadata and decode
+
+* method
+
+* remove constants
+
+* remove a large amount of bloat
+
+* ensure setKets kets type is correct
+
+
+
+
+
+## [5.0.1](https://github.com/paritytech/txwrapper-core/compare/v5.0.0...v5.0.1) (2023-02-28)
+
+**Note:** Version bump only for package @substrate/txwrapper-core
+
+
+
+
+
+# [5.0.0](https://github.com/paritytech/txwrapper-core/compare/v4.1.0...v5.0.0) (2023-01-13)
+
+
+### Bug Fixes
+
+* add example for sufficient asset transfer ([#275](https://github.com/paritytech/txwrapper-core/issues/275)) ([5899b36](https://github.com/paritytech/txwrapper-core/commit/5899b3611467ac1e1db31465cfd89eb8562eae12))
+
+
+
+
+
+# [4.1.0](https://github.com/paritytech/txwrapper-core/compare/v4.0.3...v4.1.0) (2022-12-29)
+
+**Note:** Version bump only for package @substrate/txwrapper-core
+
+
+
+
+
+## [4.0.3](https://github.com/paritytech/txwrapper-core/compare/v4.0.2...v4.0.3) (2022-12-07)
+
+
+### Bug Fixes
+
+* **types:** Update polkadot-js deps to get the latest types ([#272](https://github.com/paritytech/txwrapper-core/issues/272)) ([b78b085](https://github.com/paritytech/txwrapper-core/commit/b78b0850343c8fe269c96b2ec9d1dbbe6a466a34))
+
+
+
+
+
 ## [4.0.2](https://github.com/paritytech/txwrapper-core/compare/v4.0.1...v4.0.2) (2022-11-28)
 
 **Note:** Version bump only for package @substrate/txwrapper-core

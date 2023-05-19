@@ -6,31 +6,33 @@ import {
 	UnsignedTransaction,
 } from '@substrate/txwrapper-core';
 
-interface ProxyKillAnonymousArgs extends Args {
+interface ProxyKillPureArgs extends Args {
 	/**
-	 * The account that originally called `anonymous` to create this account.
+	 * The account that originally called `createPure` to create this account.
 	 */
 	spawner: string;
 	/**
-	 * The proxy type originally passed to `anonymous`.
+	 * The proxy type originally passed to `createPure`.
 	 */
 	proxyType: string;
 	/**
-	 * The disambiguation index originally passed to `anonymous`. Probably `0`
+	 * The disambiguation index originally passed to `createPure`. Probably `0`
 	 */
 	index: number;
 	/**
-	 * The height of the chain when the call to `anonymous` was processed.
+	 * The height of the chain when the call to `createPure` was processed.
 	 */
 	height: number;
 	/**
-	 * The extrinsic index in which the call to `anonymous` was processed.
+	 * The extrinsic index in which the call to `createPure` was processed.
 	 */
 	extIndex: number;
 }
 
 /**
- * Removes a previously spawned anonymous proxy.
+ * Removes a previously spawned pure proxy.
+ *
+ * NOTE: Was named killAnonymous before v9300
  *
  * WARNING: **All access to this account will be lost.** Any funds held in it will be
  * inaccessible.
@@ -46,8 +48,8 @@ interface ProxyKillAnonymousArgs extends Args {
  * @param options Registry and metadata used for constructing the method.
  * @returns
  */
-export function killAnonymous(
-	args: ProxyKillAnonymousArgs,
+export function killPure(
+	args: ProxyKillPureArgs,
 	info: BaseTxInfo,
 	options: OptionsWithMeta
 ): UnsignedTransaction {
@@ -55,7 +57,7 @@ export function killAnonymous(
 		{
 			method: {
 				args,
-				name: 'killAnonymous',
+				name: 'killPure',
 				pallet: 'proxy',
 			},
 			...info,

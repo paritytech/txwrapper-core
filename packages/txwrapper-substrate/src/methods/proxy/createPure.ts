@@ -6,7 +6,7 @@ import {
 	UnsignedTransaction,
 } from '@substrate/txwrapper-core';
 
-interface ProxyAnonymousArgs extends Args {
+interface ProxyCreatePureArgs extends Args {
 	/**
 	 * The type of the proxy that the sender will be registered as over the
 	 * new account. This will almost always be the most permissive `ProxyType` possible to
@@ -30,6 +30,8 @@ interface ProxyAnonymousArgs extends Args {
  * Spawn a fresh new account that is guaranteed to be otherwise inaccessible, and
  * initialize it with a proxy of `proxy_type` for `origin` sender.
  *
+ * NOTE: Was named anonymous before v9300
+ *
  * Requires a `Signed` origin
  *
  * Fails with `Duplicate` if this has already been called in this transaction, from the
@@ -41,8 +43,8 @@ interface ProxyAnonymousArgs extends Args {
  * @param info - Information required to construct the transaction.
  * @param options - Registry and metadata used for constructing the method.
  */
-export function anonymous(
-	args: ProxyAnonymousArgs,
+export function createPure(
+	args: ProxyCreatePureArgs,
 	info: BaseTxInfo,
 	options: OptionsWithMeta
 ): UnsignedTransaction {
@@ -50,7 +52,7 @@ export function anonymous(
 		{
 			method: {
 				args,
-				name: 'anonymous',
+				name: 'createPure',
 				pallet: 'proxy',
 			},
 			...info,

@@ -28,6 +28,7 @@ For example, those looking to construct a transaction offline on Polkadot would 
 
 #### Non-published
 
+- [@substrate/txwrapper-dev](/packages/txwrapper-dev/README.md) Exported development helpers such as registries and metadata.
 - [@substrate/txwrapper-example](/packages/txwrapper-examples/README.md) Usage examples including how to construct, sign, and decode an extrinsic with @substrate/txwrapper-polkadot.
 - [@substrate/txwrapper-template](/packages/txwrapper-template/README.md) Template package for chain builders.
 
@@ -103,7 +104,7 @@ $ yarn dedupe
 
 2. Checkout a branch `name-update-deps`.
 
-3. In order to update all the polkadot-js dependencies and resolutions, run `yarn update-pjs-deps && yarn`.
+3. In order to update all the polkadot-js dependencies and resolutions, run `yarn up '@polkadot/*'`.
 
 5. Ensure there are no issues by running the following commands. If any type errors occur due to the updated dependencies, please file an issue [here](https://github.com/paritytech/txwrapper-core/issues).
 

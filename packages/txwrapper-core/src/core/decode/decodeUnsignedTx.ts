@@ -46,6 +46,9 @@ export function decodeUnsignedTx(
 
 	return {
 		address: unsigned.address,
+		assetId: registry
+			.createType('Compact<AssetId>', unsigned.assetId)
+			.toNumber(),
 		blockHash: unsigned.blockHash,
 		blockNumber: registry
 			.createType('BlockNumber', unsigned.blockNumber)

@@ -1,6 +1,6 @@
 import {
 	itHasCorrectBaseTxInfo,
-	KUSAMA_9320_TEST_OPTIONS,
+	KUSAMA_TEST_OPTIONS,
 	TEST_BASE_TX_INFO,
 } from '@substrate/txwrapper-dev';
 
@@ -13,7 +13,7 @@ describe('multisig::asMulti', () => {
 		const unsigned = asMulti(
 			TEST_METHOD_ARGS.multisig.asMulti,
 			TEST_BASE_TX_INFO,
-			KUSAMA_9320_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS
 		);
 
 		itHasCorrectBaseTxInfo(unsigned);
@@ -27,7 +27,7 @@ describe('multisig::asMulti', () => {
 		const unsignedBalancesTransferKeepAlive = transferKeepAlive(
 			TEST_METHOD_ARGS.balances.transferKeepAlive,
 			TEST_BASE_TX_INFO,
-			KUSAMA_9320_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS
 		);
 
 		const unsignedAsMulti = asMulti(
@@ -36,7 +36,7 @@ describe('multisig::asMulti', () => {
 				call: unsignedBalancesTransferKeepAlive.method,
 			},
 			TEST_BASE_TX_INFO,
-			KUSAMA_9320_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS
 		);
 
 		itHasCorrectBaseTxInfo(unsignedAsMulti);

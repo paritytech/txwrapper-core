@@ -9,28 +9,30 @@
   ],
   "scripts": {
     "deploy": "yarn run build && lerna version --conventional-commits --create-release github && lerna publish from-package",
+    "deploy:force": "yarn run build && yarn lerna version ${FORCE_VERSION} --force-publish --conventional-commits --create-release github && yarn lerna publish from-package",
     "version": "yarn install && git stage yarn.lock",
     "build": "lerna run build",
     "build:workspace": "substrate-exec-rimraf $INIT_CWD/lib/ && cd $INIT_CWD && tsc -p tsconfig.build.json",
-    "lint": "substrate-dev-run-lint --fix",
+    "lint": "substrate-dev-run-lint",
+    "lint:fix": "substrate-dev-run-lint --fix",
     "lint:ci": "substrate-dev-run-lint",
-    "test": "substrate-exec-jest",
+    "test": "substrate-exec-jest --detectOpenHandles",
     "test:watch": "substrate-exec-jest --watch",
-    "test:cov": "substrate-exec-jest --coverage",
-    "docs": "typedoc --gitRemote origin",
-    "update-pjs-deps": "substrate-update-pjs-deps"
+    "test:cov": "substrate-exec-jest --detectOpenHandles --coverage",
+    "test:ci": "NODE_ENV=test substrate-exec-jest --detectOpenHandles --runInBand",
+    "docs": "typedoc --gitRemote origin"
   },
   "devDependencies": {
-    "@polkadot/util-crypto": "^10.1.13",
-    "@substrate/dev": "^0.6.5",
+    "@polkadot/util-crypto": "^12.2.1",
+    "@substrate/dev": "^0.6.7",
+    "@types/node-fetch": "^2.6.3",
     "lerna": "^4.0.0",
-    "ts-jest": "^27.1.5",
     "ts-node": "^9.1.1",
     "tsconfig-paths": "^3.9.0",
     "typedoc": "^0.22.10",
     "typedoc-plugin-markdown": "^3.11.8",
     "typedoc-plugin-missing-exports": "^0.22.6",
-    "typescript": "^4.8.3"
+    "typescript": "4.9.4"
   },
-  "packageManager": "yarn@3.2.4"
+  "packageManager": "yarn@3.3.1"
 }

@@ -1,4 +1,5 @@
 import { ExtDef } from '@polkadot/types/extrinsic/signedExtensions/types';
+import { OverrideBundleType, RegistryTypes } from '@polkadot/types/types';
 
 import { ChainProperties } from './codec';
 
@@ -38,4 +39,12 @@ export interface GetRegistryOptsCore {
 	 * User extensions used to inject into the type registry
 	 */
 	userExtensions?: ExtDef;
+	/**
+	 * OverrideTypesBundle to set to registry
+	 */
+	typesBundle?: OverrideBundleType;
+	/**
+	 * Additional types to register in the registry.
+	 */
+	additionalTypes?: RegistryTypes;
 }

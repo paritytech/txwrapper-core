@@ -29,6 +29,7 @@ export function rpcToLocalNode(
 		}),
 		headers: {
 			'Content-Type': 'application/json',
+			connection: 'keep-alive',
 		},
 		method: 'POST',
 	})

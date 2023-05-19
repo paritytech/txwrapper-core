@@ -1,6 +1,6 @@
 import {
 	itHasCorrectBaseTxInfo,
-	POLKADOT_25_TEST_OPTIONS,
+	KUSAMA_TEST_OPTIONS,
 	TEST_BASE_TX_INFO,
 } from '@substrate/txwrapper-dev';
 
@@ -12,10 +12,10 @@ describe('staking::rebond', () => {
 		const unsigned = rebond(
 			TEST_METHOD_ARGS.staking.rebond,
 			TEST_BASE_TX_INFO,
-			POLKADOT_25_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS
 		);
 
 		itHasCorrectBaseTxInfo(unsigned);
-		expect(unsigned.method).toBe('0x08139101');
+		expect(unsigned.method).toBe('0x06139101');
 	});
 });

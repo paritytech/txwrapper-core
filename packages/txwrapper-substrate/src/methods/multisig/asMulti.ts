@@ -13,13 +13,6 @@ export interface MultisigAsMulti
 	 * The call to be executed as a SCALE encoded hex string.
 	 */
 	call: string;
-	/**
-	 * Wether or not to store the call in the pallet storage item `Calls`. Storing the call
-	 * is normally only useful if this is the first approval, threshold > 1, and you
-	 * want the call stored on chain so others can see. The call will always be
-	 * removed from storage once the call is executed.
-	 */
-	storeCall: boolean;
 }
 
 /**
