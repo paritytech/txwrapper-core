@@ -3,6 +3,7 @@ import { TypeRegistry } from '@polkadot/types';
 import { MetadataVersioned } from '@polkadot/types/metadata/MetadataVersioned';
 import memoizee from 'memoizee';
 
+import { isBrowser } from '../util';
 import { toSpecifiedCallsOnlyV14 } from './toSpecifiedCallsOnlyV14';
 
 /**
@@ -52,10 +53,14 @@ export function createMetadataUnmemoized(
  */
 export const createMetadata = memoizee(createMetadataUnmemoized, {
 	length: 4,
-	max: process.env.TXWRAPPER_METADATA_CACHE_MAX
-		? parseInt(process.env.TXWRAPPER_METADATA_CACHE_MAX)
-		: undefined,
-	maxAge: process.env.TXWRAPPER_METADATA_CACHE_MAX_AGE
-		? parseInt(process.env.TXWRAPPER_METADATA_CACHE_MAX_AGE)
-		: undefined,
+	max:
+		!isBrowser &&
+		typeof process?.env?.TXWRAPPER_METADATA_CACHE_MAX !== 'undefined'
+			? parseInt(process.env.TXWRAPPER_METADATA_CACHE_MAX)
+			: undefined,
+	maxAge:
+		!isBrowser &&
+		typeof process?.env?.TXWRAPPER_METADATA_CACHE_MAX_AGE !== 'undefined'
+			? parseInt(process.env.TXWRAPPER_METADATA_CACHE_MAX_AGE)
+			: undefined,
 });
