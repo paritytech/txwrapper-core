@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.0.1](https://github.com/paritytech/txwrapper-core/compare/v6.0.0...v6.0.1) (2023-05-25)
+
+
+### Bug Fixes
+
+* safer process.env access ([#301](https://github.com/paritytech/txwrapper-core/issues/301)) ([0035d23](https://github.com/paritytech/txwrapper-core/commit/0035d236db34b33ced4a419c710890b566628980))
+
+
+
+
+
 # [6.0.0](https://github.com/paritytech/txwrapper-core/compare/v5.0.1...v6.0.0) (2023-05-08)
 
 
