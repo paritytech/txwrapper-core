@@ -9,7 +9,7 @@ Here's a mini-tutorial on how `txwrapper-polkadot` can interact with a Polkadot 
 1) Fetch the latest Substrate or Polkadot/Kusama node from the above link. Follow the instructions to build it, and start a dev chain.
 
     ```bash
-    target/release/polkadot --dev
+    target/release/polkadot --dev --rpc-port 9933
     ```
 
 2) Install dependencies and build the JS target
