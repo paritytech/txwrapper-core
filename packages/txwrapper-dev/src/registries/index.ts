@@ -1,2 +1,2 @@
+export * from './assetHubKusamaRegistry';
 export * from './kusamaRegistry';
-export * from './statemineRegistry';

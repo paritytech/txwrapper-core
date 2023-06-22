@@ -10,7 +10,7 @@ import { mockGetRegistryBase } from './mockGetRegistry';
  * @param specVersion
  * @param metadataRpc
  */
-export function getRegistryStatemine(
+export function getRegistryAssetHubKusama(
 	specVersion: number,
 	metadataRpc: `0x${string}`
 ): TypeRegistry {
@@ -22,7 +22,7 @@ export function getRegistryStatemine(
 		},
 		specTypes: getSpecTypes(
 			new TypeRegistry(),
-			'Statemine',
+			'Asset Hub Kusama',
 			'statemine',
 			specVersion
 		),
@@ -30,4 +30,6 @@ export function getRegistryStatemine(
 	});
 }
 
-export const memoizedStatemineGetRegistry = memoizee(getRegistryStatemine);
+export const memoizedAssetHubKusamaGetRegistry = memoizee(
+	getRegistryAssetHubKusama
+);

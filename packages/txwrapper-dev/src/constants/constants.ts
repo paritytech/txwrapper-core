@@ -1,12 +1,12 @@
+import { assetHubKusamaMetadataHex } from '../metadata/asset-hub-kusama';
 import { kusamaMetadataHex } from '../metadata/kusama';
-import { statemineMetadataHex } from '../metadata/statemine';
 import {
+	memoizedAssetHubKusamaGetRegistry,
 	memoizedKusamaGetRegistry,
-	memoizedStatemineGetRegistry,
 } from '../registries';
 
 export const KUSAMA_SPEC_VERSION = 9390;
-const STATEMINT_SPEC_VERSION = 9360;
+const ASSET_HUB_POLKADOT_SPEC_VERSION = 9360;
 
 /**
  * Base tx information common to all tested transactions
@@ -26,7 +26,7 @@ export const TEST_BASE_TX_INFO = {
 	transactionVersion: 6,
 };
 
-export const STATEMINT_TEST_BASE_TX_INFO = {
+export const ASSET_HUB_POLKADOT_TEST_BASE_TX_INFO = {
 	address: 'HNZata7iMYWmk5RvZRTiAsSDhV8366zq2YGb3tLH5Upf74F', // seed "//Alice"
 	blockHash:
 		'0x1fc7493f3c1e9ac758a183839906475f8363aafb1b1d3e910fe16fab4ae1b582',
@@ -36,7 +36,7 @@ export const STATEMINT_TEST_BASE_TX_INFO = {
 		'0xe3777fa922cafbff200cadeaea1a76bd7898ad5b89f7848999058b50e715f636',
 	metadataRpc: kusamaMetadataHex,
 	nonce: 2,
-	specVersion: STATEMINT_SPEC_VERSION,
+	specVersion: ASSET_HUB_POLKADOT_SPEC_VERSION,
 	tip: 0,
 	transactionVersion: 6,
 };
@@ -52,11 +52,11 @@ export const KUSAMA_TEST_OPTIONS_CALLS_ONLY = {
 	asCallsOnlyArg: true,
 };
 
-export const STATEMINE_TEST_OPTIONS = {
-	metadataRpc: statemineMetadataHex,
-	registry: memoizedStatemineGetRegistry(
-		STATEMINT_SPEC_VERSION,
-		statemineMetadataHex
+export const ASSET_HUB_KUSAMA_TEST_OPTIONS = {
+	metadataRpc: assetHubKusamaMetadataHex,
+	registry: memoizedAssetHubKusamaGetRegistry(
+		ASSET_HUB_POLKADOT_SPEC_VERSION,
+		assetHubKusamaMetadataHex
 	),
 };
 /**

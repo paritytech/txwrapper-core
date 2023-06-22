@@ -9,8 +9,8 @@ import { methods as substrateMethods } from '@substrate/txwrapper-substrate';
 
 import * as polkadotMethods from './methods';
 
-// Export methods of pallets included in the Polkadot, Kusama, Westend, Rococo
-// and State{mint, mine} runtimes.
+// Export methods of pallets included in the Polkadot, Kusama, Westend, Rococo,
+// Asset Hub Polkadot and Asset Hub Kusama runtimes.
 // Note: in the future this may also include methods defined within this package
 // that do not exist in Substrate.
 export const methods = {
@@ -24,7 +24,7 @@ export const methods = {
 	vesting: substrateMethods.vesting,
 	multisig: substrateMethods.multisig,
 	crowdloan: polkadotMethods.crowdloan,
-	// assets is only applicable to State{mint, mine}
+	// assets is only applicable to Asset Hub Polkadot and Asset Hub Kusama
 	assets: substrateMethods.assets,
 };
 
@@ -94,7 +94,8 @@ export function getRegistry({
 	const registry = new TypeRegistry();
 
 	// As of now statemine is not a supported specName in the default polkadot-js/api type registry.
-	const chainNameAdjusted = chainName === 'Statemine' ? 'Statemint' : chainName;
+	const chainNameAdjusted =
+		chainName === 'Asset Hub Kusama' ? 'Asset Hub Polkadot' : chainName;
 	const specNameAdjusted = specName === 'statemine' ? 'statemint' : specName;
 
 	return getRegistryBase({
