@@ -71,7 +71,7 @@ export const TEST_METHOD_ARGS = {
 		transferAllowDeath: {
 			dest: { id: 'Fy2rsYCoowQBtuFXqLE65ehAY9T6KWcGiNCQAyPDCkfpm4s' },
 			value: 12,
-		}
+		},
 	},
 };
 
