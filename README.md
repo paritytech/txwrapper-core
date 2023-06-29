@@ -28,6 +28,7 @@ For example, those looking to construct a transaction offline on Polkadot would 
 
 #### Non-published
 
+- [@substrate/txwrapper-dev](/packages/txwrapper-dev/README.md) Exported development helpers such as registries and metadata.
 - [@substrate/txwrapper-example](/packages/txwrapper-examples/README.md) Usage examples including how to construct, sign, and decode an extrinsic with @substrate/txwrapper-polkadot.
 - [@substrate/txwrapper-template](/packages/txwrapper-template/README.md) Template package for chain builders.
 

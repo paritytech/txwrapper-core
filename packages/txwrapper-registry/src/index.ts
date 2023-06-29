@@ -8,6 +8,7 @@ import {
 	ChainProperties,
 	getRegistryBase,
 	GetRegistryOptsCore,
+	isBrowser,
 } from '@substrate/txwrapper-core';
 import fs from 'fs';
 
@@ -68,7 +69,9 @@ function parseTypesBundle(
 }
 
 const envTypesBundle: OverrideBundleType | undefined = parseTypesBundle(
-	process.env.TX_TYPES_BUNDLE
+	!isBrowser && typeof process?.env?.TX_TYPES_BUNDLE !== 'undefined'
+		? process.env.TX_TYPES_BUNDLE
+		: undefined
 );
 
 /**
