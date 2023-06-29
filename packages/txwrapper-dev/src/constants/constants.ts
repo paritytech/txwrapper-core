@@ -5,7 +5,7 @@ import {
 	memoizedStatemineGetRegistry,
 } from '../registries';
 
-export const KUSAMA_SPEC_VERSION = 9420;
+export const KUSAMA_SPEC_VERSION = 9430;
 const STATEMINT_SPEC_VERSION = 9360;
 
 /**
