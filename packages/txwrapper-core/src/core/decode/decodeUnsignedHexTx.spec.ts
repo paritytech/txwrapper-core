@@ -22,7 +22,7 @@ describe('decodeUnsignedHexTx', () => {
 					dest: { id: 'Fy2rsYCoowQBtuFXqLE65ehAY9T6KWcGiNCQAyPDCkfpm4s' },
 					value: 12,
 				},
-				callIndex: '0x0400',
+				callIndex: '0x0407',
 			},
 			version: 4,
 		};

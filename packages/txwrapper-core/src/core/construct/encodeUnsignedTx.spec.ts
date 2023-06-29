@@ -18,7 +18,7 @@ describe('encodeUnsignedTransaction', () => {
 		const encoded = encodeUnsignedTransaction(unsigned, KUSAMA_TEST_OPTIONS);
 
 		expect(encoded).toBe(
-			'0x940404000096074594cccf1cd185fa8a72ceaeefd86648f8d45514f3ce33c31bdd07e4655d30'
+			'0x940404070096074594cccf1cd185fa8a72ceaeefd86648f8d45514f3ce33c31bdd07e4655d30'
 		);
 	});
 });
