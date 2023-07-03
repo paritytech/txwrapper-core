@@ -66,6 +66,10 @@ yarn run build
 
 We welcome contributions!
 
+#### Commits
+
+All the commits in this repo follow the [Conventional Commits spec](https://www.conventionalcommits.org/en/v1.0.0/#summary). When merging a PR, make sure 1) to use squash merge and 2) that the title of the PR follows the Conventional Commits spec.
+
 #### Before submitting your PR, make sure to run the following commands
 
 Run all tests:
@@ -84,7 +88,7 @@ yarn run lint
 yarn run lint --fix
 ```
 
-### Maintenence
+### Maintenance
 
 #### Yarn
 

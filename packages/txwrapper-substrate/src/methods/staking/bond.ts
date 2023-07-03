@@ -9,10 +9,6 @@ import { StakingSetPayeeArgs } from './setPayee';
 
 export interface StakingBondArgs extends StakingSetPayeeArgs {
 	/**
-	 * The SS-58 encoded address of the Controller account.
-	 */
-	controller: string;
-	/**
 	 * The number of tokens to bond.
 	 */
 	value: number | string;
