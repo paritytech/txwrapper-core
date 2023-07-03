@@ -53,7 +53,7 @@ NOTES:
 
 - It is recommended to use a value greater 2 for the cache size as regressions have been seen in some cases for 2 or lower.
 
-#### `TXWRAPPER_METADATA_CACHE_MAX`
+#### `TXWRAPPER_METADATA_CACHE_MAX_AGE`
 
 **Summary**:
-Set the TTL (Time To Live) for items in the memoized cache. This takes in an integer in the measurement of milliseconds. Ex: `export TXWRAPPER_METADATA_CACHE_MAX=1000` for 1 second.
+Set the TTL (Time To Live) for items in the memoized cache. This takes in an integer in the measurement of milliseconds. Ex: `export TXWRAPPER_METADATA_CACHE_MAX_AGE=1000` for 1 second.
