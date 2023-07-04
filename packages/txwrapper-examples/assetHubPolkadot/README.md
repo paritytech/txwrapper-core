@@ -1,6 +1,6 @@
-# Statemint/Statemine Sufficient Asset Example:
+# Asset Hub Polkadot/Asset Hub Kusama Sufficient Asset Example:
 
-Note: this example uses the substrate chain `trappist-rococo` which serves as a wrapper for a statemint/statemine environment
+Note: this example uses the substrate chain `trappist-rococo` which serves as a wrapper for a Asset Hub Polkadot/Asset Hub Kusama environment
 
 ## How to construct a transaction using a sufficient asset to pay fees in `txwrapper-core`
 
@@ -81,14 +81,14 @@ Note for this step: If an `orange` icon appears in the top right after submittin
 
 11) In `txwrapper-core/packages/txwrapper-examples/common/util.ts`, update the http port in the `rpcToLocalNode` function to your `trappist-collator1` node's ws port + 1(e.g. given a `trappist-local` ws port of `54600`, update txwrapper-cores http port to `54601`)
 
-12) In `txwrapper-core/packages/txwrapper-examples/statemint/src/statemint.ts`, update the `assetId` in the `transferKeepAlive` function to the asset id you provided for your test asset.
+12) In `txwrapper-core/packages/txwrapper-examples/assetHubPolkadot/src/assetHubPolkadot.ts`, update the `assetId` in the `transferKeepAlive` function to the asset id you provided for your test asset.
 
-13) After upodating the http port in the previous step and adding the correct `assetId` to the `transferKeepAlive` function in `statemint.ts`, run the example script in the `txwrapper-examples` package (see [txwrapper-core/packages/txwrapper-examples/statemint/src/statemint.ts](txwrapper-core/packages/txwrapper-examples/statemint/src/statemint.ts)). It will interact with your local node.
+13) After updating the http port in the previous step and adding the correct `assetId` to the `transferKeepAlive` function in `assetHubPolkadot.ts`, run the example script in the `txwrapper-examples` package (see [txwrapper-core/packages/txwrapper-examples/assetHubPolkadot/src/assetHubPolkadot.ts](txwrapper-core/packages/txwrapper-examples/assetHubPolkadot/src/assetHubPolkadot.ts)). It will interact with your local node.
 
 From the root of `txwrapper-examples`
 
     ```bash
-    yarn run statemint
+    yarn run assetHubPolkadot
     ```
 
 ## Example Output

@@ -1,7 +1,7 @@
 import {
+	ASSET_HUB_KUSAMA_TEST_OPTIONS,
+	ASSET_HUB_POLKADOT_TEST_BASE_TX_INFO,
 	itHasCorrectBaseTxInfo,
-	STATEMINE_TEST_OPTIONS,
-	STATEMINT_TEST_BASE_TX_INFO,
 } from '@substrate/txwrapper-dev';
 
 import { TEST_METHOD_ARGS } from '../../test-helpers';
@@ -11,8 +11,8 @@ describe('assets:cancelApproval', () => {
 	it('should work', () => {
 		const unsigned = transferApproved(
 			TEST_METHOD_ARGS.assets.transferApproved,
-			STATEMINT_TEST_BASE_TX_INFO,
-			STATEMINE_TEST_OPTIONS
+			ASSET_HUB_POLKADOT_TEST_BASE_TX_INFO,
+			ASSET_HUB_KUSAMA_TEST_OPTIONS
 		);
 
 		itHasCorrectBaseTxInfo(unsigned);
