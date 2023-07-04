@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.1](https://github.com/paritytech/txwrapper-core/compare/v7.0.0...v7.0.1) (2023-07-04)
+
+
+### Bug Fixes
+
+* rename state{mint, mine} to asset-hub-* ([#307](https://github.com/paritytech/txwrapper-core/issues/307)) ([3a1822a](https://github.com/paritytech/txwrapper-core/commit/3a1822a4fca281f4ad4dffc9ee97bdcd10504094))
+
+
+
+
+
 # [7.0.0](https://github.com/paritytech/txwrapper-core/compare/v6.0.1...v7.0.0) (2023-07-03)
 
 **Note:** Version bump only for package @substrate/txwrapper-polkadot
