@@ -6,15 +6,26 @@ import {
 	UnsignedTransaction,
 } from '@substrate/txwrapper-core';
 
+export interface BalancesTransferAllowDeathArgs extends Args {
+	/**
+	 * The recipient address, SS-58 encoded.
+	 */
+	dest: { id: string };
+	/**
+	 * The amount to send.
+	 */
+	value: number | string;
+}
+
 /**
- * (Re-)sets the controller of a stash to the stash itself. Comes into effect at the beginning of the next era.
+ * Construct a balance transfer transaction offline.
  *
  * @param args - Arguments specific to this method.
  * @param info - Information required to construct the transaction.
  * @param options - Registry and metadata used for constructing the method.
  */
-export function setController(
-	args: Args,
+export function transferAllowDeath(
+	args: BalancesTransferAllowDeathArgs,
 	info: BaseTxInfo,
 	options: OptionsWithMeta
 ): UnsignedTransaction {
@@ -22,8 +33,8 @@ export function setController(
 		{
 			method: {
 				args,
-				name: 'setController',
-				pallet: 'staking',
+				name: 'transferAllowDeath',
+				pallet: 'balances',
 			},
 			...info,
 		},

@@ -29,7 +29,7 @@ describe('getTxHash', () => {
 
 		const txHash = getTxHash(signedTx);
 		expect(txHash).toBe(
-			'0x11299badfd660c00d4845ee3eb2be8c4a0185f032819a6124022e801e2544690'
+			'0x50cbe175485736a5284a5758e29608d4e3f95c329ca42b108f7445f9f2ed06bb'
 		);
 	});
 });
