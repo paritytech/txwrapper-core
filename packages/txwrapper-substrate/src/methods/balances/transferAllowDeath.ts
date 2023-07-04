@@ -6,7 +6,7 @@ import {
 	UnsignedTransaction,
 } from '@substrate/txwrapper-core';
 
-export interface BalancesTransferArgs extends Args {
+export interface BalancesTransferAllowDeathArgs extends Args {
 	/**
 	 * The recipient address, SS-58 encoded.
 	 */
@@ -25,7 +25,7 @@ export interface BalancesTransferArgs extends Args {
  * @param options - Registry and metadata used for constructing the method.
  */
 export function transferAllowDeath(
-	args: BalancesTransferArgs,
+	args: BalancesTransferAllowDeathArgs,
 	info: BaseTxInfo,
 	options: OptionsWithMeta
 ): UnsignedTransaction {
