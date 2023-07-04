@@ -16,8 +16,8 @@ export function getRegistryWestend(
 ): TypeRegistry {
 	return mockGetRegistryBase({
 		chainProperties: {
-			ss58Format: 0,
-			tokenDecimals: 10,
+			ss58Format: 42,
+			tokenDecimals: 12,
 			tokenSymbol: 'WND',
 		},
 		specTypes: getSpecTypes(
