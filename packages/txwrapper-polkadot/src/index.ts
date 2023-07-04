@@ -52,6 +52,8 @@ const KNOWN_CHAIN_PROPERTIES = {
 		tokenDecimals: 12,
 		tokenSymbol: 'WND',
 	},
+	// Even though we are transitioning to `asset-hub-*`, we will keep
+	// statemint, statemine, and westmint for a smooth transition.
 	statemint: {
 		ss58Format: PolkadotSS58Format.polkadot,
 		tokenDecimals: 10,
@@ -61,6 +63,26 @@ const KNOWN_CHAIN_PROPERTIES = {
 		ss58Format: PolkadotSS58Format.kusama,
 		tokenDecimals: 12,
 		tokenSymbol: 'KSM',
+	},
+	westmint: {
+		ss58Format: PolkadotSS58Format.westend,
+		tokenDecimals: 12,
+		tokenSymbol: 'WND',
+	},
+	'asset-hub-kusama': {
+		ss58Format: PolkadotSS58Format.kusama,
+		tokenDecimals: 12,
+		tokenSymbol: 'KSM',
+	},
+	'asset-hub-polkadot': {
+		ss58Format: PolkadotSS58Format.polkadot,
+		tokenDecimals: 10,
+		tokenSymbol: 'DOT',
+	},
+	'asset-hub-westend': {
+		ss58Format: PolkadotSS58Format.westend,
+		tokenDecimals: 12,
+		tokenSymbol: 'WND',
 	},
 };
 
@@ -93,19 +115,9 @@ export function getRegistry({
 	// The default type registry has polkadot types
 	const registry = new TypeRegistry();
 
-	// As of now statemine is not a supported specName in the default polkadot-js/api type registry.
-	const chainNameAdjusted =
-		chainName === 'Asset Hub Kusama' ? 'Asset Hub Polkadot' : chainName;
-	const specNameAdjusted = specName === 'statemine' ? 'statemint' : specName;
-
 	return getRegistryBase({
 		chainProperties: properties || KNOWN_CHAIN_PROPERTIES[specName],
-		specTypes: getSpecTypes(
-			registry,
-			chainNameAdjusted,
-			specNameAdjusted,
-			specVersion
-		),
+		specTypes: getSpecTypes(registry, chainName, specName, specVersion),
 		metadataRpc,
 		asCallsOnlyArg,
 		signedExtensions,
