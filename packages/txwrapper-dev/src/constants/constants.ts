@@ -2,10 +2,9 @@ import { assetHubKusamaMetadataHex } from '../metadata/asset-hub-kusama';
 import { kusamaMetadataHex } from '../metadata/kusama';
 import { polkadotMetadataHex } from '../metadata/polkadot';
 import { westendMetadataHex } from '../metadata/westend';
-
 import {
-	memoizedKusamaGetRegistry,
 	memoizedAssetHubKusamaGetRegistry,
+	memoizedKusamaGetRegistry,
 	memoizedPolkadotGetRegistry,
 	memoizedWestendGetRegistry,
 } from '../registries';
