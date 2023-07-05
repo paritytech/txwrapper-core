@@ -12,7 +12,7 @@ import {
 export const KUSAMA_SPEC_VERSION = 9430;
 export const POLKADOT_SPEC_VERSION = 9430;
 const ASSET_HUB_POLKADOT_SPEC_VERSION = 9360;
-const WESTEND_SPEC_VERSION = 9430;
+export const WESTEND_SPEC_VERSION = 9430;
 
 /**
  * Base tx information common to all tested transactions
