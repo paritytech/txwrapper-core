@@ -17,6 +17,7 @@
     "polkadot": "node lib/polkadot/src/polkadot",
     "assetHubPolkadot": "node lib/assetHubPolkadot/src/assetHubPolkadot",
     "polkadotBatchAll": "node lib/polkadotBatchAll/src/polkadotBatchAll",
+    "payFeesWithAssetWestend": "node lib/payFeesWithAssetWestend/src/payFeesWithAssetWestend",
     "mandala": "node lib/mandala",
     "multisig": "node lib/multisig/src/multisig",
     "asSpecifiedCallsOnlyV14": "node lib/options/src/asSpecifiedCallsOnlyV14"

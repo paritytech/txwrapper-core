@@ -1,0 +1,65 @@
+[settings]
+timeout = 1000
+
+[relaychain]
+chain = "westend-local"
+default_command = "./zombienet/polkadot"
+
+  [[relaychain.nodes]]
+  name = "alice"
+  validator = true
+  ws_port = 9900
+  extra_args = [ "-lparachain=debug" ]
+
+  [[relaychain.nodes]]
+  name = "bob"
+  validator = true
+    ws_port = 9901
+  extra_args = [ "-lparachain=debug" ]
+
+  [[relaychain.nodes]]
+  name = "charlie"
+  validator = true
+    ws_port = 9902
+  extra_args = [ "-lparachain=debug" ]
+
+  [[relaychain.nodes]]
+  name = "dave"
+  validator = true
+  ws_port = 9903
+  extra_args = [ "-lparachain=debug" ]
+
+[[parachains]]
+id = 1000
+add_to_genesis = true
+cumulus_based = true
+chain = "asset-hub-westend-local"
+
+  [[parachains.collators]]
+  name = "westmint-collator01"
+  command = "./zombienet/polkadot-parachain"
+  ws_port = 9933
+  args = ["--log=xcm=trace,pallet-assets=trace"]
+
+  [[parachains.collators]]
+  name = "westmint-collator02"
+  command = "./zombienet/polkadot-parachain"
+  ws_port = 9911
+  args = ["--log=xcm=trace,pallet-assets=trace"]
+
+id = 1001
+add_to_genesis = true
+cumulus_based = true
+chain = "asset-hub-westend-local"
+
+  [[parachains.collators]]
+  name = "westmint-collator11"
+  command = "./zombienet/polkadot-parachain"
+  ws_port = 9920
+  args = ["--log=xcm=trace,pallet-assets=trace"]
+
+  [[parachains.collators]]
+  name = "westmint-collator12"
+  command = "./zombienet/polkadot-parachain"
+  ws_port = 9921
+  args = ["--log=xcm=trace,pallet-assets=trace"]
