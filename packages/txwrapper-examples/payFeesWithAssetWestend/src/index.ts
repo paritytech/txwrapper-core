@@ -1,7 +1,6 @@
 import '@polkadot/api-augment';
 import { ApiPromise, WsProvider } from '@polkadot/api';
 import { Keyring } from '@polkadot/api';
-import { DispatchError } from '@polkadot/types/interfaces';
 import { cryptoWaitReady } from '@polkadot/util-crypto';
 import {
 	rpcToLocalNode, signWith
