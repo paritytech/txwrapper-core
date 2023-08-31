@@ -34,9 +34,9 @@ For example, those looking to construct a transaction offline on Polkadot would 
 
 ## Modules
 
-- [txwrapper-core/src](modules/txwrapper_core_src.md)
-- [txwrapper-polkadot/src](modules/txwrapper_polkadot_src.md)
-- [txwrapper-substrate/src](modules/txwrapper_substrate_src.md)
+- [txwrapper-core/src](docs/modules/txwrapper_core_src.md)
+- [txwrapper-polkadot/src](docs/modules/txwrapper_polkadot_src.md)
+- [txwrapper-substrate/src](docs/modules/txwrapper_substrate_src.md)
 
 ## End user examples
 
