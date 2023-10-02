@@ -16,8 +16,7 @@ import {
  * Node endpoints to whcich we will connect.
  * These endpoints are set on zombienet via the config.toml file.
 */
-const WESTEND_ALICE_WS_URL = 'ws://127.0.0.1:9900';
-const WESTMINT_WS_URL = 'ws://127.0.0.1:9910';
+const WESTMINT_WS_URL = 'ws://127.0.0.1:9944';
 
 const main = async () => {
 	await cryptoWaitReady();
@@ -33,12 +32,6 @@ const main = async () => {
 
 	await westmintApi.isReady;
 
-	const westendApi = await ApiPromise.create({
-		provider: new WsProvider(WESTEND_ALICE_WS_URL),
-		noInitWarn: true,
-	});
-
-	await westendApi.isReady;
 	/**
 		 * Now we create the main tx, a simple transfer of the native asset,
 		 * and sign it using data we fetch through RPCs to the local parachain node,
@@ -108,7 +101,7 @@ const main = async () => {
 	 */
 	const registry = getRegistry({
 		specName,
-		chainName: 'Westend',
+		chainName: 'westmint',
 		specVersion,
 		metadataRpc,
 	});
