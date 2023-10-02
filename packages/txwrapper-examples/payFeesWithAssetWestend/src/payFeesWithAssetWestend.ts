@@ -127,8 +127,7 @@ const main = async () => {
 			metadataRpc,
 			nonce,
 			specVersion,
-			tip: 0,
-			transactionVersion,
+			transactionVersion
 		},
 		{
 			metadataRpc,
