@@ -7,11 +7,10 @@ import {
 
 import { LimitedXcmAssetArgs } from './types';
 
-export type XcmLimitedReserveTransferAssets = LimitedXcmAssetArgs;
+export type XcmLimitedTeleportAssets = LimitedXcmAssetArgs;
 
 /**
- * Transfer some assets from the local chain to the sovereign account of a destination
- * chain and forward a notification XCM.
+ * Teleport some assets from the local chain to some destination chain.
  *
  * Fee payment on the destination side is made from the asset in the `assets` vector of
  * index `fee_asset_item`, up to enough to pay for `weight_limit` of weight. If more weight
@@ -22,8 +21,8 @@ export type XcmLimitedReserveTransferAssets = LimitedXcmAssetArgs;
  * @param info - Information required to construct the transaction.
  * @param options - Registry and metadata used for constructing the method.
  */
-export function limitedReserveTransferAssets(
-	args: XcmLimitedReserveTransferAssets,
+export function limitedTeleportAssets(
+	args: XcmLimitedTeleportAssets,
 	info: BaseTxInfo,
 	options: OptionsWithMeta
 ): UnsignedTransaction {
@@ -31,7 +30,7 @@ export function limitedReserveTransferAssets(
 		{
 			method: {
 				args,
-				name: 'limitedReserveTransferAssets',
+				name: 'limitedTeleportAssets',
 				pallet: 'xcmPallet',
 			},
 			...info,
