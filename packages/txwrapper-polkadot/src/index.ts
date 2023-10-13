@@ -26,6 +26,7 @@ export const methods = {
 	crowdloan: polkadotMethods.crowdloan,
 	// assets is only applicable to Asset Hub Polkadot and Asset Hub Kusama
 	assets: substrateMethods.assets,
+	xcmPallet: polkadotMethods.xcmPallet,
 };
 
 // Re-export all of txwrapper-core so users have access to utilities, construct functions,
