@@ -23,3 +23,12 @@ export interface XcmBaseAssetArgs extends Args {
 	 */
 	feeAssetItem: number;
 }
+
+export interface LimitedXcmAssetArgs extends XcmBaseAssetArgs {
+	/**
+	 * The remote-side weight limit, if any, for the XCM fee purchase.
+	 */
+	weightLimit:
+		| { Limited: { refTime: string; proofSize: string } }
+		| { Unlimited: null };
+}
