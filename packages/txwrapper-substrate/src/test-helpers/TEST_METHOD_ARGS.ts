@@ -200,5 +200,11 @@ export const TEST_METHOD_ARGS = {
 			amount: '1000000',
 			poolId: 1,
 		},
+		bondExtra: {
+			extra: {
+				FreeBalance: '1000000',
+				Rewards: null,
+			},
+		},
 	},
 };
