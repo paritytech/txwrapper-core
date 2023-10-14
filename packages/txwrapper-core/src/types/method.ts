@@ -42,6 +42,11 @@ export interface OptionsWithMeta extends Options {
 export type Args = Record<string, AnyJson>;
 
 /**
+ * Empty args.
+ */
+export type EmptyArgs = Record<string, never>;
+
+/**
  * Format used in txwrapper to represent a method.
  */
 export interface TxMethod {
