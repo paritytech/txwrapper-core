@@ -195,4 +195,10 @@ export const TEST_METHOD_ARGS = {
 			maxWeight: { refTime: '90071992547409910', proofSize: '0' },
 		},
 	},
+	nominationPools: {
+		join: {
+			amount: '1000000',
+			poolId: 1,
+		},
+	},
 };
