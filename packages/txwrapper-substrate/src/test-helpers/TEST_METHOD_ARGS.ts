@@ -210,5 +210,9 @@ export const TEST_METHOD_ARGS = {
 			memberAccount: '15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5',
 			unbondingPoints: '10000000',
 		},
+		poolWithdrawUnbonded: {
+			poolId: 1,
+			numSlashingSpans: 2,
+		},
 	},
 };
