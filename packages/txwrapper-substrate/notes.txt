@@ -1,8 +1,6 @@
 /**
  * Method calls
  * 
- * claim_payout_other
- * set_commission
  * set_commision_max
  * set_commission_change_rate
  * claim_commission

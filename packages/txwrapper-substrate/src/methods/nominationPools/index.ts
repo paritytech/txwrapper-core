@@ -9,6 +9,7 @@ export * from './join';
 export * from './nominate';
 export * from './poolWithdrawUnbonded';
 export * from './setClaimPermission';
+export * from './setCommission';
 export * from './setConfigs';
 export * from './setMetadata';
 export * from './setState';

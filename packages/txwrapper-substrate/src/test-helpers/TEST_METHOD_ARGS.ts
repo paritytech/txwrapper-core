@@ -250,6 +250,13 @@ export const TEST_METHOD_ARGS = {
 		setClaimPermission: {
 			permission: 'Permissioned',
 		},
+		setCommission: {
+			poolId: 4,
+			newCommission: [
+				'1000000000',
+				'15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5',
+			] as [string, string],
+		},
 		setConfigs: {
 			minJoinBond: { Set: '1000000' },
 			minCreateBond: { Set: '1000000' },
