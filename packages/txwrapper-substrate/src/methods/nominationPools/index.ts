@@ -1,6 +1,7 @@
 export * from './bondExtra';
 export * from './bondExtraOther';
 export * from './chill';
+export * from './claimCommission';
 export * from './claimPayout';
 export * from './claimPayoutOther';
 export * from './create';

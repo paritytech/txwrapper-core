@@ -199,6 +199,9 @@ export const TEST_METHOD_ARGS = {
 		chill: {
 			poolId: 4,
 		},
+		claimCommission: {
+			poolId: 4,
+		},
 		claimPayoutOther: {
 			other: '15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5',
 		},

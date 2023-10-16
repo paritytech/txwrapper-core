@@ -1,6 +1,5 @@
 /**
  * Method calls
  * 
- * set_commission_change_rate
  * claim_commission
  */
