@@ -6,7 +6,7 @@ import {
 	UnsignedTransaction,
 } from '@substrate/txwrapper-core';
 
-type ConfigOp<T> = {
+export type ConfigOp<T> = {
 	Noop?: null;
 	Remove?: null;
 	Set: T;

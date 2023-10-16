@@ -9,4 +9,5 @@ export * from './setConfigs';
 export * from './setMetadata';
 export * from './setState';
 export * from './unbond';
+export * from './updateRoles';
 export * from './withdrawUnbonded';

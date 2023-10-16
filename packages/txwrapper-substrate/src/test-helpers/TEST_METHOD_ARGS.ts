@@ -250,6 +250,12 @@ export const TEST_METHOD_ARGS = {
 			poolId: 4,
 			metadata: `0x00000000000`,
 		},
+		updateRoles: {
+			poolId: 4,
+			newRoot: { Set: '15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5' },
+			newNominator: { Set: '15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5' },
+			newBouncer: { Set: '15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5' },
+		},
 		withdrawUnbonded: {
 			memberAccount: '15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5',
 			numSlashingSpans: 2,
