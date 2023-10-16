@@ -244,6 +244,9 @@ export const TEST_METHOD_ARGS = {
 			poolId: 1,
 			numSlashingSpans: 2,
 		},
+		setClaimPermission: {
+			permission: 'Permissioned',
+		},
 		setConfigs: {
 			minJoinBond: { Set: '1000000' },
 			minCreateBond: { Set: '1000000' },
