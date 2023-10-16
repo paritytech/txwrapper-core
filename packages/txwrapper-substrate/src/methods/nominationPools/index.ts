@@ -5,6 +5,7 @@ export * from './createWithPoolId';
 export * from './join';
 export * from './nominate';
 export * from './poolWithdrawUnbonded';
+export * from './setConfigs';
 export * from './setMetadata';
 export * from './setState';
 export * from './unbond';

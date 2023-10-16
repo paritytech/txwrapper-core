@@ -234,6 +234,14 @@ export const TEST_METHOD_ARGS = {
 			poolId: 1,
 			numSlashingSpans: 2,
 		},
+		setConfigs: {
+			minJoinBond: { Set: '1000000' },
+			minCreateBond: { Set: '1000000' },
+			maxPools: { Set: 2 },
+			maxMembers: { Set: 10 },
+			maxMembersPerPool: { Set: 5 },
+			globalMaxCommission: { Set: '1000000000' },
+		},
 		setState: {
 			poolId: 4,
 			state: 'Open',
