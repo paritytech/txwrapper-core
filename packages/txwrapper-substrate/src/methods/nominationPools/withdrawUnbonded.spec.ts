@@ -7,7 +7,7 @@ import {
 import { TEST_METHOD_ARGS } from '../../test-helpers';
 import { withdrawUnbonded } from './withdrawUnbonded';
 
-describe('nominationPools::poolWithdrawUnbonded', () => {
+describe('nominationPools::withdrawUnbonded', () => {
 	it('should work', () => {
 		const unsigned = withdrawUnbonded(
 			TEST_METHOD_ARGS.nominationPools.withdrawUnbonded,

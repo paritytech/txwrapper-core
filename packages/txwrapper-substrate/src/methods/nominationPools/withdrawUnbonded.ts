@@ -8,7 +8,7 @@ import {
 
 export interface NominationPoolsWithdrawUnbonded extends Args {
 	/**
-	 * Pool id that will have `withdraw_unbonded` called on it.
+	 * Account to unbond.
 	 */
 	memberAccount: string;
 	/**
