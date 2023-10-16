@@ -195,4 +195,107 @@ export const TEST_METHOD_ARGS = {
 			maxWeight: { refTime: '90071992547409910', proofSize: '0' },
 		},
 	},
+	nominationPools: {
+		chill: {
+			poolId: 4,
+		},
+		claimCommission: {
+			poolId: 4,
+		},
+		claimPayoutOther: {
+			other: '15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5',
+		},
+		create: {
+			amount: '10000000',
+			root: '15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5',
+			nominator: '15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5',
+			bouncer: '15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5',
+		},
+		createWithPoolId: {
+			amount: '10000000',
+			root: '15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5',
+			nominator: '15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5',
+			bouncer: '15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5',
+			poolId: 4,
+		},
+		join: {
+			amount: '1000000',
+			poolId: 1,
+		},
+		bondExtra: {
+			extra: {
+				FreeBalance: '1000000',
+				Rewards: null,
+			},
+		},
+		bondExtraOther: {
+			member: '15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5',
+			extra: {
+				FreeBalance: '1000000',
+				Rewards: null,
+			},
+		},
+		unbond: {
+			memberAccount: '15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5',
+			unbondingPoints: '10000000',
+		},
+		nominate: {
+			poolId: 4,
+			validators: [
+				'15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5',
+				'14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3',
+			],
+		},
+		poolWithdrawUnbonded: {
+			poolId: 1,
+			numSlashingSpans: 2,
+		},
+		setClaimPermission: {
+			permission: 'Permissioned',
+		},
+		setCommission: {
+			poolId: 4,
+			newCommission: [
+				'1000000000',
+				'15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5',
+			] as [string, string],
+		},
+		setCommissionChangeRate: {
+			poolId: 4,
+			changeRate: {
+				maxIncrease: '10000000',
+				minDelay: 10,
+			},
+		},
+		setCommissionMax: {
+			poolId: 4,
+			maxCommission: '10000000',
+		},
+		setConfigs: {
+			minJoinBond: { Set: '1000000' },
+			minCreateBond: { Set: '1000000' },
+			maxPools: { Set: 2 },
+			maxMembers: { Set: 10 },
+			maxMembersPerPool: { Set: 5 },
+			globalMaxCommission: { Set: '1000000000' },
+		},
+		setState: {
+			poolId: 4,
+			state: 'Open',
+		},
+		setMetadata: {
+			poolId: 4,
+			metadata: `0x00000000000`,
+		},
+		updateRoles: {
+			poolId: 4,
+			newRoot: { Set: '15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5' },
+			newNominator: { Set: '15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5' },
+			newBouncer: { Set: '15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5' },
+		},
+		withdrawUnbonded: {
+			memberAccount: '15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5',
+			numSlashingSpans: 2,
+		},
+	},
 };

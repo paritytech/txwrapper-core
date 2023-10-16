@@ -3,6 +3,7 @@ export * as assets from './assets';
 export * as balances from './balances';
 export * as democracy from './democracy';
 export * as multisig from './multisig';
+export * as nominationPools from './nominationPools';
 export * as proxy from './proxy';
 export * as session from './session';
 export * as staking from './staking';
