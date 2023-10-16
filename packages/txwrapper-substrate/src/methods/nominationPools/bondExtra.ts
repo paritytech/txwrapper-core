@@ -30,7 +30,7 @@ export interface NominationPoolsBondExtra extends Args {
  *
  * NOTE: this transaction is implemented with the sole purpose of readability and
  * correctness, not optimization. We read/write several storage items multiple times instead
- * of just once, in the spirit reusing code.
+ * of just once, in the spirit of reusing code.
  *
  * @param args - Arguments specific to this method.
  * @param info - Information required to construct the transaction.
