@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.1.0](https://github.com/paritytech/txwrapper-core/compare/v7.0.1...v7.1.0) (2023-10-16)
+
+
+### Features
+
+* **txwrapper-substrate:** Add nominationPools calls ([#330](https://github.com/paritytech/txwrapper-core/issues/330)) ([856262a](https://github.com/paritytech/txwrapper-core/commit/856262af8204c3671bb56d44577f89ad531375a8))
+
+
+
+
+
 ## [7.0.1](https://github.com/paritytech/txwrapper-core/compare/v7.0.0...v7.0.1) (2023-07-04)
 
 
