@@ -1,28 +1,37 @@
 import {
+	Args,
 	BaseTxInfo,
 	defineMethod,
 	OptionsWithMeta,
 	UnsignedTransaction,
 } from '@substrate/txwrapper-core';
 
-import { NominationPoolsCreate } from './create';
-
-export interface NominationPoolsCreateWithPoolId extends NominationPoolsCreate {
+export interface NominationPoolsNominate extends Args {
 	/**
 	 * A valid PoolId.
 	 */
-	poolId: string | number;
+	poolId: number | string;
+	/**
+	 * Array of validators.
+	 */
+	validators: Array<string>;
 }
 
 /**
- * Create a new delegation pool with a previously used pool id
+ * Nominate on behalf of the pool.
+ *
+ * The dispatch origin of this call must be signed by the pool nominator or the pool
+ * root role.
+ *
+ * This directly forward the call to the staking pallet, on behalf of the pool bonded
+ * account.
  *
  * @param args - Arguments specific to this method.
  * @param info - Information required to construct the transaction.
  * @param options - Registry and metadata used for constructing the method.
  */
-export function createWithPoolId(
-	args: NominationPoolsCreateWithPoolId,
+export function nominate(
+	args: NominationPoolsNominate,
 	info: BaseTxInfo,
 	options: OptionsWithMeta
 ): UnsignedTransaction {
@@ -30,7 +39,7 @@ export function createWithPoolId(
 		{
 			method: {
 				args,
-				name: 'createWithPoolId',
+				name: 'nominate',
 				pallet: 'nominationPools',
 			},
 			...info,

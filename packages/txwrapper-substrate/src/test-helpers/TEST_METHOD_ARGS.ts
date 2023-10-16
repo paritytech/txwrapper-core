@@ -223,6 +223,13 @@ export const TEST_METHOD_ARGS = {
 			memberAccount: '15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5',
 			unbondingPoints: '10000000',
 		},
+		nominate: {
+			poolId: 4,
+			validators: [
+				'15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5',
+				'14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3',
+			],
+		},
 		poolWithdrawUnbonded: {
 			poolId: 1,
 			numSlashingSpans: 2,
