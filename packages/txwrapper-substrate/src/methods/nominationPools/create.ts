@@ -12,7 +12,7 @@ export interface NominationPoolsCreate extends Args {
 	 * deposit since the pools creator cannot fully unbond funds until the pool is being
 	 * destroyed.
 	 */
-	amount: string | number;
+	amount: string;
 	/**
 	 * The account to set as [`PoolRoles::root`].
 	 */

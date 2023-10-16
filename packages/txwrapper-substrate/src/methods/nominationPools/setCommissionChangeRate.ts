@@ -10,7 +10,7 @@ export interface NominationPoolsSetCommissionChangeRate extends Args {
 	/**
 	 * A valid PoolId.
 	 */
-	poolId: number;
+	poolId: number | string;
 	changeRate: {
 		/**
 		 * The maximum amount the commission can be updated by per `min_delay` period.

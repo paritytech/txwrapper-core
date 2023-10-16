@@ -10,7 +10,7 @@ export interface NominationPoolsSetCommission extends Args {
 	/**
 	 * A valid PoolId.
 	 */
-	poolId: number;
+	poolId: number | string;
 	/**
 	 * Set the new commission.
 	 * If a `None` is supplied to `new_commission`, existing commission will be removed.

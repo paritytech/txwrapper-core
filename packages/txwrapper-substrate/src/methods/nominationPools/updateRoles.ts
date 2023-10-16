@@ -12,7 +12,7 @@ export interface NominationPoolsUpdateRoles extends Args {
 	/**
 	 * A valid PoolId.
 	 */
-	poolId: number;
+	poolId: number | string;
 	/**
 	 * New root account.
 	 */

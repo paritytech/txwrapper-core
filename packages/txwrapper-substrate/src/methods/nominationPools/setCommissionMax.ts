@@ -10,7 +10,7 @@ export interface NominationPoolsSetCommissionMax extends Args {
 	/**
 	 * A valid PoolId.
 	 */
-	poolId: number;
+	poolId: number | string;
 	/**
 	 * Value to set the max commission too.
 	 */
