@@ -202,6 +202,13 @@ export const TEST_METHOD_ARGS = {
 			nominator: '15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5',
 			bouncer: '15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5',
 		},
+		createWithPoolId: {
+			amount: '10000000',
+			root: '15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5',
+			nominator: '15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5',
+			bouncer: '15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5',
+			poolId: 4,
+		},
 		join: {
 			amount: '1000000',
 			poolId: 1,
