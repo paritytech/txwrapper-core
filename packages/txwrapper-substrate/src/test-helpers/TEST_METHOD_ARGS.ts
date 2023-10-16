@@ -257,6 +257,13 @@ export const TEST_METHOD_ARGS = {
 				'15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5',
 			] as [string, string],
 		},
+		setCommissionChangeRate: {
+			poolId: 4,
+			changeRate: {
+				maxIncrease: '10000000',
+				minDelay: 10,
+			},
+		},
 		setCommissionMax: {
 			poolId: 4,
 			maxCommission: '10000000',

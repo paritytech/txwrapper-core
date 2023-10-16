@@ -1,7 +1,6 @@
 /**
  * Method calls
  * 
- * set_commision_max
  * set_commission_change_rate
  * claim_commission
  */
