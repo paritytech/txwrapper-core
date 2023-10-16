@@ -214,5 +214,9 @@ export const TEST_METHOD_ARGS = {
 			poolId: 1,
 			numSlashingSpans: 2,
 		},
+		withdrawUnbonded: {
+			memberAccount: '15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5',
+			numSlashingSpans: 2,
+		},
 	},
 };
