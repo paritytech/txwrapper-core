@@ -7,7 +7,7 @@ import {
 import { TEST_METHOD_ARGS } from '../../test-helpers';
 import { updateRoles } from './updateRoles';
 
-describe('nominationPools::setConfigs', () => {
+describe('nominationPools::updateRoles', () => {
 	it('should work', () => {
 		const unsigned = updateRoles(
 			TEST_METHOD_ARGS.nominationPools.updateRoles,

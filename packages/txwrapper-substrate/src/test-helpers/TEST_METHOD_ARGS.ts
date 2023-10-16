@@ -196,6 +196,9 @@ export const TEST_METHOD_ARGS = {
 		},
 	},
 	nominationPools: {
+		chill: {
+			poolId: 4,
+		},
 		create: {
 			amount: '10000000',
 			root: '15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5',

@@ -1,4 +1,5 @@
 export * from './bondExtra';
+export * from './chill';
 export * from './claimPayout';
 export * from './create';
 export * from './createWithPoolId';
