@@ -222,6 +222,13 @@ export const TEST_METHOD_ARGS = {
 				Rewards: null,
 			},
 		},
+		bondExtraOther: {
+			member: '15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5',
+			extra: {
+				FreeBalance: '1000000',
+				Rewards: null,
+			},
+		},
 		unbond: {
 			memberAccount: '15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5',
 			unbondingPoints: '10000000',
