@@ -19,7 +19,7 @@ export interface NominationPoolsChill extends Args {
  * The dispatch origin of this call must be signed by the pool nominator or the pool
  * root role, same as [`Pallet::nominate`].
  *
- * This directly forward the call to the staking pallet, on behalf of the pool bonded
+ * This directly forwards the call to the staking pallet, on behalf of the pool bonded
  * account.
  *
  * @param args - Arguments specific to this method.
