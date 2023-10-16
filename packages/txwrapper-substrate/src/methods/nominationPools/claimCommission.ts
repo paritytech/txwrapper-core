@@ -10,7 +10,7 @@ export interface NominationPoolsClaimCommission extends Args {
 	/**
 	 * A valid poolId.
 	 */
-	poolId: number;
+	poolId: number | string;
 }
 
 /**

@@ -10,7 +10,7 @@ export interface NominationPoolsChill extends Args {
 	/**
 	 * A valid PoolId.
 	 */
-	poolId: number;
+	poolId: number | string;
 }
 
 /**
