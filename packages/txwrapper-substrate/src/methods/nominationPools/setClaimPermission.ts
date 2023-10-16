@@ -9,9 +9,9 @@ import {
 export interface NominationPoolsSetClaimPermission extends Args {
 	/**
 	 * Account to claim reward. The value will either be:
-     * `Permissioned` | `PermissionlessCompound` | `PermissionlessWithdraw` | `PermissionlessAll`
+	 * `Permissioned` | `PermissionlessCompound` | `PermissionlessWithdraw` | `PermissionlessAll`
 	 */
-    permission: string;
+	permission: string;
 }
 
 /**

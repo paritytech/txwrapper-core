@@ -2,6 +2,7 @@ export * from './bondExtra';
 export * from './bondExtraOther';
 export * from './chill';
 export * from './claimPayout';
+export * from './claimPayoutOther';
 export * from './create';
 export * from './createWithPoolId';
 export * from './join';
