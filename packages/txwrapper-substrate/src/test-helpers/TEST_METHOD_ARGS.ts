@@ -238,6 +238,10 @@ export const TEST_METHOD_ARGS = {
 			poolId: 4,
 			state: 'Open',
 		},
+		setMetadata: {
+			poolId: 4,
+			metadata: `0x00000000000`,
+		},
 		withdrawUnbonded: {
 			memberAccount: '15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5',
 			numSlashingSpans: 2,
