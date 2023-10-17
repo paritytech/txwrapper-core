@@ -286,7 +286,7 @@ export const toSpecifiedCallsOnlyV14 = (
 			};
 		});
 
-	const extrinsicTypeId = latestMetadata.extrinsic.type.toString()
+	const extrinsicTypeId = latestMetadata.extrinsic.type.toString();
 	typeCache.add(extrinsicTypeId);
 	// Store extrinsic signed extension types
 	latestMetadata.extrinsic.signedExtensions.forEach((val) => {
