@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.1.0](https://github.com/paritytech/txwrapper-core/compare/v7.0.1...v7.1.0) (2023-10-16)
+
+
+### Bug Fixes
+
+* **txwrapper-polkadot:** export xcmPallet as part of methods ([#326](https://github.com/paritytech/txwrapper-core/issues/326)) ([d68ddd2](https://github.com/paritytech/txwrapper-core/commit/d68ddd29a20882af9c1df9b985e70968b3f68703))
+
+
+### Features
+
+* **txwrapper-polkadot:** Add limited xcm calls for reserve and teleport ([#327](https://github.com/paritytech/txwrapper-core/issues/327)) ([44594f5](https://github.com/paritytech/txwrapper-core/commit/44594f590163780166bf81f9b3c973b7d3640bf3))
+
+
+
+
+
 ## [7.0.1](https://github.com/paritytech/txwrapper-core/compare/v7.0.0...v7.0.1) (2023-07-04)
 
 

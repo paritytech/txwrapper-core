@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.1.0](/compare/v7.0.1...v7.1.0) (2023-10-16)
+
+**Note:** Version bump only for package @substrate/txwrapper-template
+
+
+
+
+
 ## [7.0.1](/compare/v7.0.0...v7.0.1) (2023-07-04)
 
 **Note:** Version bump only for package @substrate/txwrapper-template

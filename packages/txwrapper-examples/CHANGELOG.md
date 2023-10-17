@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.1.0](https://github.com/paritytech/txwrapper-core/compare/v7.0.1...v7.1.0) (2023-10-16)
+
+
+### Bug Fixes
+
+* **txwrapper-dev:** Add `@polkadot/api` dependency ([#315](https://github.com/paritytech/txwrapper-core/issues/315)) ([2e19ac5](https://github.com/paritytech/txwrapper-core/commit/2e19ac5da03a03b59230f6d8cb1b6085325a0df4))
+
+
+
+
+
 ## [7.0.1](https://github.com/paritytech/txwrapper-core/compare/v7.0.0...v7.0.1) (2023-07-04)
 
 
