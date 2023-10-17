@@ -154,14 +154,16 @@ export function defineMethod(
 		  };
 
 	const extrinsicEra = createEra(registry, eraOptions);
+	const blockHash = info.blockHash as `0x${string}`;
+	const genesisHash = info.genesisHash as `0x${string}`;
 
 	return {
 		address: info.address,
 		assetId: registry.createType('Compact<AssetId>', info.assetId).toNumber(),
-		blockHash: info.blockHash,
+		blockHash,
 		blockNumber: registry.createType('BlockNumber', info.blockNumber).toHex(),
 		era: extrinsicEra.toHex(),
-		genesisHash: info.genesisHash,
+		genesisHash,
 		metadataRpc: generatedMetadata.toHex(),
 		method,
 		nonce: registry.createType('Compact<Index>', info.nonce).toHex(),

@@ -7,7 +7,7 @@
 // Source: https://github.com/polkadot-js/api/blob/9b794e963df5d3cb4aa3ff122a9a9eb94f51ab81/packages/types/src/metadata/util/toCallsOnly.ts
 
 import type {
-	MetadataLatest,
+	MetadataV14,
 	PalletCallMetadataLatest,
 	PalletMetadataV14,
 	PortableType,
@@ -264,7 +264,7 @@ const findLookupIdsInParams = (
  */
 export const toSpecifiedCallsOnlyV14 = (
 	registry: Registry,
-	latestMetadata: MetadataLatest,
+	latestMetadata: MetadataV14,
 	includePallets: string[] = []
 ): AnyJson => {
 	// Stores typeId's as strings
@@ -286,7 +286,6 @@ export const toSpecifiedCallsOnlyV14 = (
 			};
 		});
 
-	// Store the extrinsic types
 	const extrinsicTypeId = latestMetadata.extrinsic.type.toString();
 	typeCache.add(extrinsicTypeId);
 	// Store extrinsic signed extension types
