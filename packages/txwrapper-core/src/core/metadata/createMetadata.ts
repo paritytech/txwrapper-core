@@ -30,7 +30,7 @@ export function createMetadataUnmemoized(
 			metadata: registry.createTypeUnsafe('MetadataAll', [
 				toSpecifiedCallsOnlyV14(
 					registry,
-					metadata.asLatest,
+					metadata.asV14,
 					asSpecifiedCallsOnlyV14
 				),
 				14,

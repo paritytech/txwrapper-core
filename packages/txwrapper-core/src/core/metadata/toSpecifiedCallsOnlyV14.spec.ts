@@ -15,7 +15,7 @@ describe('toSpecifiedCallsOnly', () => {
 	);
 	it('Should correctly parse the metadata', () => {
 		const metadata = mockCreateMetadata(registry, polkadotMetadataHex);
-		const callsOnly = toSpecifiedCallsOnlyV14(registry, metadata.asLatest, [
+		const callsOnly = toSpecifiedCallsOnlyV14(registry, metadata.asV14, [
 			'balances',
 			'system',
 		]);

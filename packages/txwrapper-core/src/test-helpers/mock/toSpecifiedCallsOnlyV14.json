@@ -35014,6 +35014,11 @@
       }
     ]
   },
+  "outerEnums": {
+    "callType": 0,
+    "errorType": 0,
+    "eventType": 0
+  },
   "pallets": [
     {
       "name": "System",
@@ -35092,5 +35097,8 @@
     ]
   },
   "type": 0,
-  "apis": []
+  "apis": [],
+  "custom":  {
+    "map": {}
+  }
 }
