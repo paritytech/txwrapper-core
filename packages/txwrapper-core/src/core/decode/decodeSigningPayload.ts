@@ -61,12 +61,7 @@ export function decodeSigningPayload(
 	}
 
 	return {
-		assetId:
-			typeof assetId === 'object'
-				? assetId
-				: typeof assetId === 'number'
-				? parseInt(assetId.toString())
-				: undefined,
+		assetId: assetId,
 		blockHash: payload.blockHash.toHex(),
 		eraPeriod,
 		genesisHash: payload.genesisHash.toHex(),
