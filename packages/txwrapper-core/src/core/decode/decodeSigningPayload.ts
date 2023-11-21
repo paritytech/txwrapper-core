@@ -55,15 +55,18 @@ export function decodeSigningPayload(
 		? payload.era.asMortalEra.period.toNumber()
 		: 0;
 
-	let assetId: number | undefined;
+	let assetId: number | object | undefined;
 	if (payload.inner.assetId) {
-		assetId = payload.inner.assetId.isSome
-			? parseInt(payload.inner.assetId.toString())
-			: undefined;
+		assetId = payload.inner.assetId.isSome ? payload.inner.assetId : undefined;
 	}
 
 	return {
-		assetId,
+		assetId:
+			typeof assetId === 'object'
+				? assetId
+				: typeof assetId === 'number'
+				? parseInt(assetId.toString())
+				: undefined,
 		blockHash: payload.blockHash.toHex(),
 		eraPeriod,
 		genesisHash: payload.genesisHash.toHex(),
