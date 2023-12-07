@@ -1,3 +1,3 @@
 export * from './balancesTransfer';
-export * from './itDecodesBalancesTransferCommon';
 export * from './itDecodesBalancesTransferAstar';
+export * from './itDecodesBalancesTransferCommon';

@@ -20,12 +20,7 @@ export function getRegistryAstar(
 			tokenDecimals: 18,
 			tokenSymbol: 'ASTR',
 		},
-		specTypes: getSpecTypes(
-			new TypeRegistry(),
-			'astar',
-			'astar',
-			specVersion
-		),
+		specTypes: getSpecTypes(new TypeRegistry(), 'astar', 'astar', specVersion),
 		metadataRpc,
 	});
 }

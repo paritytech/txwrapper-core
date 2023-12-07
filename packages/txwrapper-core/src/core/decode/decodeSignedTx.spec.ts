@@ -8,7 +8,10 @@ import {
 	TEST_METHOD_ARGS,
 } from '@substrate/txwrapper-dev';
 
-import { balancesTransfer, itDecodesBalancesTransferAstar } from '../../test-helpers';
+import {
+	balancesTransfer,
+	itDecodesBalancesTransferAstar,
+} from '../../test-helpers';
 import { itDecodesBalancesTransferCommon } from '../../test-helpers';
 import { DecodedSignedTx } from '../../types';
 import { construct } from '..';

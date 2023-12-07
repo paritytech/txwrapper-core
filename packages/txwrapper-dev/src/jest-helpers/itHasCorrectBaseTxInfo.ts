@@ -24,7 +24,9 @@ export function itHasCorrectBaseTxInfo(unsigned: UnsignedTransaction): void {
  *
  * @param unsigned - Unsigned transaction to test
  */
-export function itHasCorrectBaseTxInfoForAstar(unsigned: UnsignedTransaction): void {
+export function itHasCorrectBaseTxInfoForAstar(
+	unsigned: UnsignedTransaction
+): void {
 	(['address', 'blockHash', 'genesisHash'] as const).forEach((key) =>
 		expect(unsigned[key]).toBe(ASTAR_TEST_BASE_TX_INFO[key])
 	);

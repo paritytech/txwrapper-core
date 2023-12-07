@@ -1,10 +1,10 @@
 import {
+	ASTAR_TEST_BASE_TX_INFO,
+	ASTAR_TEST_METHOD_ARGS,
+	ASTAR_TEST_OPTIONS,
 	KUSAMA_TEST_OPTIONS,
 	TEST_BASE_TX_INFO,
 	TEST_METHOD_ARGS,
-	ASTAR_TEST_BASE_TX_INFO,
-	ASTAR_TEST_METHOD_ARGS,
-	ASTAR_TEST_OPTIONS
 } from '@substrate/txwrapper-dev';
 
 import { balancesTransfer } from '../../test-helpers';

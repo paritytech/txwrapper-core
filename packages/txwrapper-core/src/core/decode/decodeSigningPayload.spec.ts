@@ -1,14 +1,17 @@
 import {
-	KUSAMA_TEST_OPTIONS,
-	TEST_BASE_TX_INFO,
-	TEST_METHOD_ARGS,
 	ASTAR_TEST_BASE_TX_INFO,
 	ASTAR_TEST_METHOD_ARGS,
 	ASTAR_TEST_OPTIONS,
+	KUSAMA_TEST_OPTIONS,
+	TEST_BASE_TX_INFO,
+	TEST_METHOD_ARGS,
 } from '@substrate/txwrapper-dev';
 
 import { balancesTransfer } from '../../test-helpers';
-import { itDecodesBalancesTransferCommon, itDecodesBalancesTransferAstar } from '../../test-helpers';
+import {
+	itDecodesBalancesTransferAstar,
+	itDecodesBalancesTransferCommon,
+} from '../../test-helpers';
 import { DecodedSigningPayload } from '../../types';
 import { construct } from '..';
 import { decodeSigningPayload } from './decodeSigningPayload';

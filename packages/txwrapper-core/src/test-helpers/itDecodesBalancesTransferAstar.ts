@@ -1,4 +1,7 @@
-import { ASTAR_TEST_BASE_TX_INFO, ASTAR_TEST_METHOD_ARGS } from '@substrate/txwrapper-dev';
+import {
+	ASTAR_TEST_BASE_TX_INFO,
+	ASTAR_TEST_METHOD_ARGS,
+} from '@substrate/txwrapper-dev';
 
 import {
 	DecodedSignedTx,
@@ -23,5 +26,7 @@ export function itDecodesBalancesTransferAstar(
 
 	// The actual period is the smallest power of 2 greater than the input
 	// period.
-	expect(decoded.eraPeriod).toBeGreaterThanOrEqual(ASTAR_TEST_BASE_TX_INFO.eraPeriod);
+	expect(decoded.eraPeriod).toBeGreaterThanOrEqual(
+		ASTAR_TEST_BASE_TX_INFO.eraPeriod
+	);
 }

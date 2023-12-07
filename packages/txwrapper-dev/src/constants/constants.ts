@@ -1,5 +1,5 @@
-import { astarMetadataHex } from '../metadata/astar';
 import { assetHubKusamaMetadataHex } from '../metadata/asset-hub-kusama';
+import { astarMetadataHex } from '../metadata/astar';
 import { kusamaMetadataHex } from '../metadata/kusama';
 import { polkadotMetadataHex } from '../metadata/polkadot';
 import { westendMetadataHex } from '../metadata/westend';
@@ -131,13 +131,10 @@ export const WESTEND_TEST_OPTIONS = {
 };
 export const ASTAR_TEST_OPTIONS = {
 	metadataRpc: astarMetadataHex,
-	registry: memoizedAstarGetRegistry(
-		ASTAR_SPEC_VERSION,
-		astarMetadataHex
-	),
+	registry: memoizedAstarGetRegistry(ASTAR_SPEC_VERSION, astarMetadataHex),
 };
 /**
- * 
+ *
  * Dummy arguments for all methods we're testing.
  */
 export const TEST_METHOD_ARGS = {
@@ -158,12 +155,12 @@ export const ASTAR_TEST_METHOD_ARGS = {
 		transfer: {
 			dest: { id: 'XYJkwdMbojBtNzngQxLHEdciMDE5baLihb5RWTL3QHGfnwy' },
 			value: 12,
-			tip: 50000000000000000
+			tip: 50000000000000000,
 		},
 		transferAllowDeath: {
 			dest: { id: 'XYJkwdMbojBtNzngQxLHEdciMDE5baLihb5RWTL3QHGfnwy' },
 			value: 12,
-			tip: 50000000000000000
+			tip: 50000000000000000,
 		},
 	},
 };
