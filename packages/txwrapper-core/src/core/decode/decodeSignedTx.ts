@@ -35,12 +35,20 @@ export function decodeSignedTx(
 	const methodCall = registry.createType('Call', tx.method);
 	const method = toTxMethod(registry, methodCall);
 
+	let tip: number | string;
+
+	try {
+		tip = tx.tip.toNumber()
+	} catch(_error) {
+		tip = tx.tip.toString();
+	}
+
 	return {
 		address: tx.signer.toString(),
 		eraPeriod: tx.era.asMortalEra.period.toNumber(),
 		metadataRpc,
 		method,
 		nonce: tx.nonce.toNumber(),
-		tip: tx.tip.toString(),
+		tip,
 	};
 }

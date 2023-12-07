@@ -61,6 +61,12 @@ export function decodeSigningPayload(
 			? parseInt(payload.inner.assetId.toString())
 			: undefined;
 	}
+	let tip: number | string;
+	try {
+		tip = payload.tip.toNumber()
+	} catch(_error) {
+		tip = payload.tip.toString();
+	}
 
 	return {
 		assetId,
@@ -71,7 +77,7 @@ export function decodeSigningPayload(
 		method,
 		nonce: payload.nonce.toNumber(),
 		specVersion: payload.specVersion.toNumber(),
-		tip: payload.tip.toString(),
+		tip,
 		transactionVersion: payload.transactionVersion.toNumber(),
 	};
 }

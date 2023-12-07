@@ -31,7 +31,7 @@ export const TEST_BASE_TX_INFO = {
 	metadataRpc: kusamaMetadataHex,
 	nonce: 2,
 	specVersion: KUSAMA_SPEC_VERSION,
-	tip: '0',
+	tip: 0,
 	transactionVersion: 6,
 };
 
@@ -46,7 +46,7 @@ export const ASSET_HUB_POLKADOT_TEST_BASE_TX_INFO = {
 	metadataRpc: kusamaMetadataHex,
 	nonce: 2,
 	specVersion: ASSET_HUB_POLKADOT_SPEC_VERSION,
-	tip: '0',
+	tip: 0,
 	transactionVersion: 6,
 };
 
@@ -61,7 +61,7 @@ export const POLKADOT_TEST_BASE_TX_INFO = {
 	metadataRpc: polkadotMetadataHex,
 	nonce: 2,
 	specVersion: POLKADOT_SPEC_VERSION,
-	tip: '0',
+	tip: 0,
 	transactionVersion: 6,
 };
 
@@ -76,7 +76,7 @@ export const WESTEND_TEST_BASE_TX_INFO = {
 	metadataRpc: westendMetadataHex,
 	nonce: 2,
 	specVersion: WESTEND_SPEC_VERSION,
-	tip: '0',
+	tip: 0,
 	transactionVersion: 6,
 };
 
@@ -131,7 +131,10 @@ export const WESTEND_TEST_OPTIONS = {
 };
 export const ASTAR_TEST_OPTIONS = {
 	metadataRpc: astarMetadataHex,
-	registry: memoizedAstarGetRegistry(ASTAR_SPEC_VERSION, astarMetadataHex),
+	registry: memoizedAstarGetRegistry(
+		ASTAR_SPEC_VERSION, 
+		astarMetadataHex
+		),
 };
 /**
  *
