@@ -63,8 +63,8 @@ export function decodeSigningPayload(
 	}
 	let tip: number | string;
 	try {
-		tip = payload.tip.toNumber()
-	} catch(_error) {
+		tip = payload.tip.toNumber();
+	} catch (_error) {
 		tip = payload.tip.toString();
 	}
 

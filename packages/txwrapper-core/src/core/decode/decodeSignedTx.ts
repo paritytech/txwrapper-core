@@ -38,8 +38,8 @@ export function decodeSignedTx(
 	let tip: number | string;
 
 	try {
-		tip = tx.tip.toNumber()
-	} catch(_error) {
+		tip = tx.tip.toNumber();
+	} catch (_error) {
 		tip = tx.tip.toString();
 	}
 

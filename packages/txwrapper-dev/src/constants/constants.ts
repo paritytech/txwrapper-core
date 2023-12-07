@@ -131,10 +131,7 @@ export const WESTEND_TEST_OPTIONS = {
 };
 export const ASTAR_TEST_OPTIONS = {
 	metadataRpc: astarMetadataHex,
-	registry: memoizedAstarGetRegistry(
-		ASTAR_SPEC_VERSION, 
-		astarMetadataHex
-		),
+	registry: memoizedAstarGetRegistry(ASTAR_SPEC_VERSION, astarMetadataHex),
 };
 /**
  *

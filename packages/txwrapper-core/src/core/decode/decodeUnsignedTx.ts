@@ -46,7 +46,7 @@ export function decodeUnsignedTx(
 
 	let tip: number | string;
 	try {
-		tip = registry.createType('Compact<Balance>', unsigned.tip).toNumber()
+		tip = registry.createType('Compact<Balance>', unsigned.tip).toNumber();
 	} catch (_error) {
 		tip = registry.createType('Compact<Balance>', unsigned.tip).toString();
 	}
