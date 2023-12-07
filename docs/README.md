@@ -30,14 +30,15 @@ For example, those looking to construct a transaction offline on Polkadot would 
 
 #### Non-published
 
+- [@substrate/txwrapper-dev](/packages/txwrapper-dev/README.md) Exported development helpers such as registries and metadata.
 - [@substrate/txwrapper-example](/packages/txwrapper-examples/README.md) Usage examples including how to construct, sign, and decode an extrinsic with @substrate/txwrapper-polkadot.
 - [@substrate/txwrapper-template](/packages/txwrapper-template/README.md) Template package for chain builders.
 
 ## Modules
 
-- [txwrapper-core/src](modules/txwrapper_core_src.md)
-- [txwrapper-polkadot/src](modules/txwrapper_polkadot_src.md)
-- [txwrapper-substrate/src](modules/txwrapper_substrate_src.md)
+- [txwrapper-core/src](docs/modules/txwrapper_core_src.md)
+- [txwrapper-polkadot/src](docs/modules/txwrapper_polkadot_src.md)
+- [txwrapper-substrate/src](docs/modules/txwrapper_substrate_src.md)
 
 ## End user examples
 
@@ -67,6 +68,10 @@ yarn run build
 
 We welcome contributions!
 
+#### Commits
+
+All the commits in this repo follow the [Conventional Commits spec](https://www.conventionalcommits.org/en/v1.0.0/#summary). When merging a PR, make sure 1) to use squash merge and 2) that the title of the PR follows the Conventional Commits spec.
+
 #### Before submitting your PR, make sure to run the following commands
 
 Run all tests:
@@ -85,7 +90,7 @@ yarn run lint
 yarn run lint --fix
 ```
 
-### Maintenence
+### Maintenance
 
 #### Yarn
 
@@ -105,7 +110,7 @@ $ yarn dedupe
 
 2. Checkout a branch `name-update-deps`.
 
-3. In order to update all the polkadot-js dependencies and resolutions, run `yarn update-pjs-deps && yarn`.
+3. In order to update all the polkadot-js dependencies and resolutions, run `yarn up '@polkadot/*'`.
 
 5. Ensure there are no issues by running the following commands. If any type errors occur due to the updated dependencies, please file an issue [here](https://github.com/paritytech/txwrapper-core/issues).
 

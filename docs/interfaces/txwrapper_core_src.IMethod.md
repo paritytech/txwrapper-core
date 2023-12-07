@@ -21,7 +21,7 @@ Primitive version of `DecodeMethodInput` interface from polkadot-js.
 
 #### Defined in
 
-[txwrapper-core/src/types/decode.ts:31](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-core/src/types/decode.ts#L31)
+[txwrapper-core/src/types/decode.ts:31](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-core/src/types/decode.ts#L31)
 
 ___
 
@@ -31,4 +31,4 @@ ___
 
 #### Defined in
 
-[txwrapper-core/src/types/decode.ts:32](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-core/src/types/decode.ts#L32)
+[txwrapper-core/src/types/decode.ts:32](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-core/src/types/decode.ts#L32)

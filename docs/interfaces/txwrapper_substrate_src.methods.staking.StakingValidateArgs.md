@@ -32,4 +32,4 @@ Set the desired commission for the validator. Value is Perbill.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/staking/validate.ts:13](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-substrate/src/methods/staking/validate.ts#L13)
+[txwrapper-substrate/src/methods/staking/validate.ts:13](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/staking/validate.ts#L13)
