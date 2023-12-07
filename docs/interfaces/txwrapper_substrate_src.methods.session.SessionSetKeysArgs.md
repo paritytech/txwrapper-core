@@ -21,13 +21,24 @@
 
 ### keys
 
-• **keys**: `string`[]
+• **keys**: `Object`
 
 The 5 keys to set.
 
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `authority_discovery` | `string` |
+| `babe` | `string` |
+| `grandpa` | `string` |
+| `im_online` | `string` |
+| `para_assignment` | `string` |
+| `para_validator` | `string` |
+
 #### Defined in
 
-[txwrapper-substrate/src/methods/session/setKeys.ts:13](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-substrate/src/methods/session/setKeys.ts#L13)
+[txwrapper-substrate/src/methods/session/setKeys.ts:13](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/session/setKeys.ts#L13)
 
 ___
 
@@ -39,4 +50,4 @@ Proof of key ownership (currently unused).
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/session/setKeys.ts:17](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-substrate/src/methods/session/setKeys.ts#L17)
+[txwrapper-substrate/src/methods/session/setKeys.ts:24](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/session/setKeys.ts#L24)

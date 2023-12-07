@@ -21,13 +21,19 @@
 
 ### dest
 
-• **dest**: `string`
+• **dest**: `Object`
 
 The recipient address, SS-58 encoded.
 
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `id` | `string` |
+
 #### Defined in
 
-[txwrapper-substrate/src/methods/balances/transfer.ts:13](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-substrate/src/methods/balances/transfer.ts#L13)
+[txwrapper-substrate/src/methods/balances/transfer.ts:13](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/balances/transfer.ts#L13)
 
 ___
 
@@ -39,4 +45,4 @@ The amount to send.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/balances/transfer.ts:17](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-substrate/src/methods/balances/transfer.ts#L17)
+[txwrapper-substrate/src/methods/balances/transfer.ts:17](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/balances/transfer.ts#L17)

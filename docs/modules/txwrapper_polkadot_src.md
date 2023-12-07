@@ -13,6 +13,7 @@
 - [DecodedSigningPayload](txwrapper_polkadot_src.md#decodedsigningpayload)
 - [DecodedUnsignedHexTx](txwrapper_polkadot_src.md#decodedunsignedhextx)
 - [DecodedUnsignedTx](txwrapper_polkadot_src.md#decodedunsignedtx)
+- [EmptyArgs](txwrapper_polkadot_src.md#emptyargs)
 - [GetRegistryOptsCore](txwrapper_polkadot_src.md#getregistryoptscore)
 - [IMethod](txwrapper_polkadot_src.md#imethod)
 - [KeyringPair](txwrapper_polkadot_src.md#keyringpair)
@@ -28,6 +29,7 @@
 - [deriveAddress](txwrapper_polkadot_src.md#deriveaddress)
 - [getRegistryBase](txwrapper_polkadot_src.md#getregistrybase)
 - [importPrivateKey](txwrapper_polkadot_src.md#importprivatekey)
+- [isBrowser](txwrapper_polkadot_src.md#isbrowser)
 - [toTxMethod](txwrapper_polkadot_src.md#totxmethod)
 
 ### Namespaces
@@ -87,6 +89,12 @@ ___
 ### DecodedUnsignedTx
 
 Re-exports [DecodedUnsignedTx](txwrapper_core_src.md#decodedunsignedtx)
+
+___
+
+### EmptyArgs
+
+Re-exports [EmptyArgs](txwrapper_core_src.md#emptyargs)
 
 ___
 
@@ -180,6 +188,12 @@ Re-exports [importPrivateKey](txwrapper_core_src.md#importprivatekey)
 
 ___
 
+### isBrowser
+
+Re-exports [isBrowser](txwrapper_core_src.md#isbrowser)
+
+___
+
 ### toTxMethod
 
 Re-exports [toTxMethod](txwrapper_core_src.md#totxmethod)
@@ -196,7 +210,7 @@ Re-exports [toTxMethod](txwrapper_core_src.md#totxmethod)
 | :------ | :------ |
 | `assets` | [`assets`](txwrapper_substrate_src.methods.assets.md) |
 | `balances` | [`balances`](txwrapper_substrate_src.methods.balances.md) |
-| `crowdloan` | [`"/Users/tarikgul/Desktop/parity/tools-team/txwrapper-core/packages/txwrapper-polkadot/src/methods/crowdloan/index"`](txwrapper_polkadot_src._internal_.__Users_tarikgul_Desktop_parity_tools_team_txwrapper_core_packages_txwrapper_polkadot_src_methods_crowdloan_index_.md) |
+| `crowdloan` | [`"/home/bee344/Documentos/parity/txwrapper-core/packages/txwrapper-polkadot/src/methods/crowdloan/index"`](txwrapper_polkadot_src._internal_.__home_bee344_Documentos_parity_txwrapper_core_packages_txwrapper_polkadot_src_methods_crowdloan_index_.md) |
 | `democracy` | [`democracy`](txwrapper_substrate_src.methods.democracy.md) |
 | `multisig` | [`multisig`](txwrapper_substrate_src.methods.multisig.md) |
 | `proxy` | [`proxy`](txwrapper_substrate_src.methods.proxy.md) |
@@ -205,10 +219,11 @@ Re-exports [toTxMethod](txwrapper_core_src.md#totxmethod)
 | `system` | [`system`](txwrapper_substrate_src.methods.system.md) |
 | `utility` | [`utility`](txwrapper_substrate_src.methods.utility.md) |
 | `vesting` | [`vesting`](txwrapper_substrate_src.methods.vesting.md) |
+| `xcmPallet` | [`"/home/bee344/Documentos/parity/txwrapper-core/packages/txwrapper-polkadot/src/methods/xcmPallet/index"`](txwrapper_polkadot_src._internal_.__home_bee344_Documentos_parity_txwrapper_core_packages_txwrapper_polkadot_src_methods_xcmPallet_index_.md) |
 
 #### Defined in
 
-[txwrapper-polkadot/src/index.ts:16](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-polkadot/src/index.ts#L16)
+[txwrapper-polkadot/src/index.ts:16](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-polkadot/src/index.ts#L16)
 
 ## Functions
 
@@ -230,4 +245,4 @@ Get a type registry for networks that txwrapper-polkadot supports.
 
 #### Defined in
 
-[txwrapper-polkadot/src/index.ts:81](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-polkadot/src/index.ts#L81)
+[txwrapper-polkadot/src/index.ts:104](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-polkadot/src/index.ts#L104)

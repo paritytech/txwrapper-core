@@ -15,7 +15,6 @@
 ### Properties
 
 - [call](txwrapper_substrate_src.methods.multisig.MultisigAsMulti.md#call)
-- [storeCall](txwrapper_substrate_src.methods.multisig.MultisigAsMulti.md#storecall)
 
 ## Properties
 
@@ -27,19 +26,4 @@ The call to be executed as a SCALE encoded hex string.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/multisig/asMulti.ts:15](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-substrate/src/methods/multisig/asMulti.ts#L15)
-
-___
-
-### storeCall
-
-• **storeCall**: `boolean`
-
-Wether or not to store the call in the pallet storage item `Calls`. Storing the call
-is normally only useful if this is the first approval, threshold > 1, and you
-want the call stored on chain so others can see. The call will always be
-removed from storage once the call is executed.
-
-#### Defined in
-
-[txwrapper-substrate/src/methods/multisig/asMulti.ts:22](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-substrate/src/methods/multisig/asMulti.ts#L22)
+[txwrapper-substrate/src/methods/multisig/asMulti.ts:15](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/multisig/asMulti.ts#L15)

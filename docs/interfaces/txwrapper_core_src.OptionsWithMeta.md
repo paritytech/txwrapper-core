@@ -35,7 +35,7 @@ Used to reduce the metadata size by only having the calls
 
 #### Defined in
 
-[txwrapper-core/src/types/method.ts:21](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-core/src/types/method.ts#L21)
+[txwrapper-core/src/types/method.ts:21](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-core/src/types/method.ts#L21)
 
 ___
 
@@ -50,7 +50,7 @@ An Array which contains all the pallets that should be included in the metadata
 
 #### Defined in
 
-[txwrapper-core/src/types/method.ts:28](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-core/src/types/method.ts#L28)
+[txwrapper-core/src/types/method.ts:28](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-core/src/types/method.ts#L28)
 
 ___
 
@@ -70,7 +70,7 @@ Note: When creating an Immortal tx, the blockHash should be set as the genesis h
 
 #### Defined in
 
-[txwrapper-core/src/types/method.ts:139](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-core/src/types/method.ts#L139)
+[txwrapper-core/src/types/method.ts:156](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-core/src/types/method.ts#L156)
 
 ___
 
@@ -82,7 +82,7 @@ The metadata of the runtime.
 
 #### Defined in
 
-[txwrapper-core/src/types/method.ts:17](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-core/src/types/method.ts#L17)
+[txwrapper-core/src/types/method.ts:17](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-core/src/types/method.ts#L17)
 
 ___
 
@@ -98,7 +98,7 @@ The type registry of the runtime.
 
 #### Defined in
 
-[txwrapper-core/src/types/method.ts:131](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-core/src/types/method.ts#L131)
+[txwrapper-core/src/types/method.ts:148](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-core/src/types/method.ts#L148)
 
 ___
 
@@ -110,7 +110,7 @@ Array of signedExtensions
 
 #### Defined in
 
-[txwrapper-core/src/types/method.ts:32](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-core/src/types/method.ts#L32)
+[txwrapper-core/src/types/method.ts:32](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-core/src/types/method.ts#L32)
 
 ___
 
@@ -122,4 +122,4 @@ User extensions used to inject into the type registry
 
 #### Defined in
 
-[txwrapper-core/src/types/method.ts:36](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-core/src/types/method.ts#L36)
+[txwrapper-core/src/types/method.ts:36](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-core/src/types/method.ts#L36)
