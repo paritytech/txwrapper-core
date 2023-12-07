@@ -1,9 +1,11 @@
+import { astarMetadataHex } from '../metadata/astar';
 import { assetHubKusamaMetadataHex } from '../metadata/asset-hub-kusama';
 import { kusamaMetadataHex } from '../metadata/kusama';
 import { polkadotMetadataHex } from '../metadata/polkadot';
 import { westendMetadataHex } from '../metadata/westend';
 import {
 	memoizedAssetHubKusamaGetRegistry,
+	memoizedAstarGetRegistry,
 	memoizedKusamaGetRegistry,
 	memoizedPolkadotGetRegistry,
 	memoizedWestendGetRegistry,
@@ -13,6 +15,7 @@ export const KUSAMA_SPEC_VERSION = 9430;
 export const POLKADOT_SPEC_VERSION = 9430;
 const ASSET_HUB_POLKADOT_SPEC_VERSION = 9360;
 export const WESTEND_SPEC_VERSION = 9430;
+export const ASTAR_SPEC_VERSION = 72;
 
 /**
  * Base tx information common to all tested transactions
@@ -28,7 +31,7 @@ export const TEST_BASE_TX_INFO = {
 	metadataRpc: kusamaMetadataHex,
 	nonce: 2,
 	specVersion: KUSAMA_SPEC_VERSION,
-	tip: 0,
+	tip: '0',
 	transactionVersion: 6,
 };
 
@@ -43,7 +46,7 @@ export const ASSET_HUB_POLKADOT_TEST_BASE_TX_INFO = {
 	metadataRpc: kusamaMetadataHex,
 	nonce: 2,
 	specVersion: ASSET_HUB_POLKADOT_SPEC_VERSION,
-	tip: 0,
+	tip: '0',
 	transactionVersion: 6,
 };
 
@@ -58,7 +61,7 @@ export const POLKADOT_TEST_BASE_TX_INFO = {
 	metadataRpc: polkadotMetadataHex,
 	nonce: 2,
 	specVersion: POLKADOT_SPEC_VERSION,
-	tip: 0,
+	tip: '0',
 	transactionVersion: 6,
 };
 
@@ -73,8 +76,23 @@ export const WESTEND_TEST_BASE_TX_INFO = {
 	metadataRpc: westendMetadataHex,
 	nonce: 2,
 	specVersion: WESTEND_SPEC_VERSION,
-	tip: 0,
+	tip: '0',
 	transactionVersion: 6,
+};
+
+export const ASTAR_TEST_BASE_TX_INFO = {
+	address: 'XYJkwdMbojBtNzngQxLHEdciMDE5baLihb5RWTL3QHGfnwy',
+	blockHash:
+		'0x6c8453305b978e867b2ccacea94e01a4ea49dfd6eb0965b6c0ccf36b295e16b5',
+	blockNumber: 5034669,
+	eraPeriod: 2400,
+	genesisHash:
+		'0x9eb76c5184c4ab8679d2d5d819fdf90b9c001403e9e17da2e14b6d8aec4029c6',
+	metadataRpc: astarMetadataHex,
+	nonce: 2,
+	specVersion: ASTAR_SPEC_VERSION,
+	tip: '50000000000000000', // 0.05 ASTR
+	transactionVersion: 2,
 };
 
 export const POLKADOT_TEST_OPTIONS = {
@@ -111,7 +129,15 @@ export const WESTEND_TEST_OPTIONS = {
 		westendMetadataHex
 	),
 };
+export const ASTAR_TEST_OPTIONS = {
+	metadataRpc: astarMetadataHex,
+	registry: memoizedAstarGetRegistry(
+		ASTAR_SPEC_VERSION,
+		astarMetadataHex
+	),
+};
 /**
+ * 
  * Dummy arguments for all methods we're testing.
  */
 export const TEST_METHOD_ARGS = {
@@ -127,6 +153,21 @@ export const TEST_METHOD_ARGS = {
 	},
 };
 
+export const ASTAR_TEST_METHOD_ARGS = {
+	balances: {
+		transfer: {
+			dest: { id: 'XYJkwdMbojBtNzngQxLHEdciMDE5baLihb5RWTL3QHGfnwy' },
+			value: 12,
+			tip: 50000000000000000
+		},
+		transferAllowDeath: {
+			dest: { id: 'XYJkwdMbojBtNzngQxLHEdciMDE5baLihb5RWTL3QHGfnwy' },
+			value: 12,
+			tip: 50000000000000000
+		},
+	},
+};
+
 /**
  * Prefix for ss58-encoded addresses on Polkadot, Kusama, and Westend. Note:
  * 42, the Westend prefix, is also the default for Substrate-based chains.
@@ -136,4 +177,5 @@ export enum PolkadotSS58Format {
 	kusama = 2,
 	westend = 42,
 	substrate = 42,
+	astar = 5,
 }

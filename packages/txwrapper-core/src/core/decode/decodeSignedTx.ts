@@ -41,6 +41,6 @@ export function decodeSignedTx(
 		metadataRpc,
 		method,
 		nonce: tx.nonce.toNumber(),
-		tip: tx.tip.toNumber(),
+		tip: tx.tip.toString(),
 	};
 }

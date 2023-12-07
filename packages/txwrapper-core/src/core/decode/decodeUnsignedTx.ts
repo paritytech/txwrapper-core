@@ -59,7 +59,7 @@ export function decodeUnsignedTx(
 		method,
 		nonce: registry.createType('Compact<Index>', unsigned.nonce).toNumber(),
 		specVersion: registry.createType('u32', unsigned.specVersion).toNumber(),
-		tip: registry.createType('Compact<Balance>', unsigned.tip).toNumber(),
+		tip: registry.createType('Compact<Balance>', unsigned.tip).toString(),
 		transactionVersion: registry
 			.createType('u32', unsigned.transactionVersion)
 			.toNumber(),

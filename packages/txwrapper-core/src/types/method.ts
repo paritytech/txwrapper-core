@@ -130,7 +130,7 @@ export interface BaseTxInfo {
 	 *
 	 * @default 0
 	 */
-	tip?: number;
+	tip?: number | string;
 	/**
 	 * The current transaction version for the runtime.
 	 */

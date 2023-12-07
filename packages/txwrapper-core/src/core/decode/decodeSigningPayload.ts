@@ -71,7 +71,7 @@ export function decodeSigningPayload(
 		method,
 		nonce: payload.nonce.toNumber(),
 		specVersion: payload.specVersion.toNumber(),
-		tip: payload.tip.toNumber(),
+		tip: payload.tip.toString(),
 		transactionVersion: payload.transactionVersion.toNumber(),
 	};
 }
