@@ -11,7 +11,7 @@
 ## Create a Liquidity Pool
 
 4) Now you need to create the asset in the Asset Hub that we'll use in this example via [`polkadot-js/apss`](https://polkadot.js.org/apps/?rpc=ws://127.0.0.1:9933), with `assetId = 1` and `decimals = 0`, and mint some to `Alice`.
-5) Then you can create a Liquidity Pool with that assset and the chain's native asset:
+5) Then you can create a Liquidity Pool with that asset and the chain's native asset:
 
 ![](media/poolCreation.png)
 
