@@ -16,6 +16,7 @@
     "build": "yarn build:workspace",
     "polkadot": "node lib/polkadot/src/polkadot",
     "assetHubPolkadot": "node lib/assetHubPolkadot/src/assetHubPolkadot",
+    "assetHubKusama": "node lib/assetHubKusama/src/assetHubKusama",
     "polkadotBatchAll": "node lib/polkadotBatchAll/src/polkadotBatchAll",
     "mandala": "node lib/mandala",
     "multisig": "node lib/multisig/src/multisig",
