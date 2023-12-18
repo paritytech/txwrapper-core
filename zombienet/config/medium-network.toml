@@ -1,0 +1,43 @@
+[relaychain]
+default_command = "./bin/polkadot"
+default_args = [ "-lparachain=debug" ]
+chain = "rococo-local"
+
+  [[relaychain.nodes]]
+  name = "alice"
+  validator = true
+  extra_args = [ "-lparachain=debug" ]
+  ws_port = 9900
+
+  [[relaychain.nodes]]
+  name = "bob"
+  validator = true
+  extra_args = [ "-lparachain=debug" ]
+
+  [[relaychain.nodes]]
+  name = "charlie"
+  validator = true
+  extra_args = [ "-lparachain=debug" ]
+
+  [[relaychain.nodes]]
+  name = "dave"
+  validator = true
+  extra_args = [ "-lparachain=debug" ]
+
+[[parachains]]
+id = 1000
+addToGenesis = true
+chain = "statemine-local"
+cumulus_based = true
+
+  [[parachains.collators]]
+  name = "statemine-collator01"
+  command = "./bin/polkadot-parachain"
+  args = ["--log=xcm=trace,pallet-assets=trace"]
+  ws_port = 9933
+
+  [[parachains.collators]]
+  name = "statemine-collator02"
+  command = "./bin/polkadot-parachain"
+  ws_port = 9911
+  args = ["--log=xcm=trace,pallet-assets=trace"]
