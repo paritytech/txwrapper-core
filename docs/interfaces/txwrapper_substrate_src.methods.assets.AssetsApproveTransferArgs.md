@@ -29,7 +29,7 @@ already an approval in place, then this acts additively.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/assets/approveTransfer.ts:22](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-substrate/src/methods/assets/approveTransfer.ts#L22)
+[txwrapper-substrate/src/methods/assets/approveTransfer.ts:22](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/assets/approveTransfer.ts#L22)
 
 ___
 
@@ -41,7 +41,7 @@ The account to delegate permission to transfer asset.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/assets/approveTransfer.ts:17](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-substrate/src/methods/assets/approveTransfer.ts#L17)
+[txwrapper-substrate/src/methods/assets/approveTransfer.ts:17](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/assets/approveTransfer.ts#L17)
 
 ___
 
@@ -53,4 +53,4 @@ The identifier of the asset.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/assets/approveTransfer.ts:13](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-substrate/src/methods/assets/approveTransfer.ts#L13)
+[txwrapper-substrate/src/methods/assets/approveTransfer.ts:13](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/assets/approveTransfer.ts#L13)

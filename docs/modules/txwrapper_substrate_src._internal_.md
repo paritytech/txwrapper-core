@@ -9,8 +9,8 @@
 ### Interfaces
 
 - [ProxyAnnounceArgs](../interfaces/txwrapper_substrate_src._internal_.ProxyAnnounceArgs.md)
-- [ProxyAnonymousArgs](../interfaces/txwrapper_substrate_src._internal_.ProxyAnonymousArgs.md)
-- [ProxyKillAnonymousArgs](../interfaces/txwrapper_substrate_src._internal_.ProxyKillAnonymousArgs.md)
+- [ProxyCreatePureArgs](../interfaces/txwrapper_substrate_src._internal_.ProxyCreatePureArgs.md)
+- [ProxyKillPureArgs](../interfaces/txwrapper_substrate_src._internal_.ProxyKillPureArgs.md)
 
 ### Type aliases
 
@@ -35,7 +35,7 @@ balance. The stake behind a parachain can e.g. be split e.g. 2/3 aye and
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/democracy/types.ts:30](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-substrate/src/methods/democracy/types.ts#L30)
+[txwrapper-substrate/src/methods/democracy/types.ts:30](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/democracy/types.ts#L30)
 
 ___
 
@@ -56,7 +56,7 @@ multisig account was created to be uniquely identified.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/multisig/types.ts:6](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-substrate/src/methods/multisig/types.ts#L6)
+[txwrapper-substrate/src/methods/multisig/types.ts:6](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/multisig/types.ts#L6)
 
 ___
 
@@ -75,4 +75,4 @@ A vote in a referendum
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/democracy/types.ts:7](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-substrate/src/methods/democracy/types.ts#L7)
+[txwrapper-substrate/src/methods/democracy/types.ts:7](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/democracy/types.ts#L7)

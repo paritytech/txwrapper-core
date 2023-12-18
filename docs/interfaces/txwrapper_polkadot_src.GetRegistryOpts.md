@@ -16,6 +16,7 @@ Options for txwrapper-polkadot's `getRegistry` function.
 
 ### Properties
 
+- [additionalTypes](txwrapper_polkadot_src.GetRegistryOpts.md#additionaltypes)
 - [asCallsOnlyArg](txwrapper_polkadot_src.GetRegistryOpts.md#ascallsonlyarg)
 - [chainName](txwrapper_polkadot_src.GetRegistryOpts.md#chainname)
 - [metadataRpc](txwrapper_polkadot_src.GetRegistryOpts.md#metadatarpc)
@@ -23,9 +24,26 @@ Options for txwrapper-polkadot's `getRegistry` function.
 - [signedExtensions](txwrapper_polkadot_src.GetRegistryOpts.md#signedextensions)
 - [specName](txwrapper_polkadot_src.GetRegistryOpts.md#specname)
 - [specVersion](txwrapper_polkadot_src.GetRegistryOpts.md#specversion)
+- [typesBundle](txwrapper_polkadot_src.GetRegistryOpts.md#typesbundle)
 - [userExtensions](txwrapper_polkadot_src.GetRegistryOpts.md#userextensions)
 
 ## Properties
+
+### additionalTypes
+
+• `Optional` **additionalTypes**: `RegistryTypes`
+
+Additional types to register in the registry.
+
+#### Inherited from
+
+[GetRegistryOptsCore](txwrapper_core_src.GetRegistryOptsCore.md).[additionalTypes](txwrapper_core_src.GetRegistryOptsCore.md#additionaltypes)
+
+#### Defined in
+
+[txwrapper-core/src/types/registry.ts:49](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-core/src/types/registry.ts#L49)
+
+___
 
 ### asCallsOnlyArg
 
@@ -39,7 +57,7 @@ Used to reduce the metadata size by only having the calls
 
 #### Defined in
 
-[txwrapper-core/src/types/registry.ts:32](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-core/src/types/registry.ts#L32)
+[txwrapper-core/src/types/registry.ts:33](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-core/src/types/registry.ts#L33)
 
 ___
 
@@ -55,7 +73,7 @@ chainName
 
 #### Defined in
 
-[txwrapper-core/src/types/registry.ts:16](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-core/src/types/registry.ts#L16)
+[txwrapper-core/src/types/registry.ts:17](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-core/src/types/registry.ts#L17)
 
 ___
 
@@ -71,7 +89,7 @@ SCALE encoded runtime metadata as a hex string
 
 #### Defined in
 
-[txwrapper-core/src/types/registry.ts:24](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-core/src/types/registry.ts#L24)
+[txwrapper-core/src/types/registry.ts:25](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-core/src/types/registry.ts#L25)
 
 ___
 
@@ -87,7 +105,7 @@ Chain ss58format, token decimals, and token ID
 
 #### Defined in
 
-[txwrapper-core/src/types/registry.ts:28](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-core/src/types/registry.ts#L28)
+[txwrapper-core/src/types/registry.ts:29](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-core/src/types/registry.ts#L29)
 
 ___
 
@@ -103,13 +121,13 @@ Array of signedExtensions
 
 #### Defined in
 
-[txwrapper-core/src/types/registry.ts:36](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-core/src/types/registry.ts#L36)
+[txwrapper-core/src/types/registry.ts:37](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-core/src/types/registry.ts#L37)
 
 ___
 
 ### specName
 
-• **specName**: ``"kusama"`` \| ``"polkadot"`` \| ``"westend"`` \| ``"statemint"`` \| ``"statemine"``
+• **specName**: ``"statemine"`` \| ``"kusama"`` \| ``"polkadot"`` \| ``"westend"`` \| ``"statemint"`` \| ``"westmint"`` \| ``"asset-hub-kusama"`` \| ``"asset-hub-polkadot"`` \| ``"asset-hub-westend"``
 
 Runtime specName
 
@@ -119,7 +137,7 @@ Runtime specName
 
 #### Defined in
 
-[txwrapper-polkadot/src/index.ts:73](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-polkadot/src/index.ts#L73)
+[txwrapper-polkadot/src/index.ts:96](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-polkadot/src/index.ts#L96)
 
 ___
 
@@ -135,7 +153,23 @@ Runtime specVersion
 
 #### Defined in
 
-[txwrapper-core/src/types/registry.ts:20](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-core/src/types/registry.ts#L20)
+[txwrapper-core/src/types/registry.ts:21](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-core/src/types/registry.ts#L21)
+
+___
+
+### typesBundle
+
+• `Optional` **typesBundle**: `OverrideBundleType`
+
+OverrideTypesBundle to set to registry
+
+#### Inherited from
+
+[GetRegistryOptsCore](txwrapper_core_src.GetRegistryOptsCore.md).[typesBundle](txwrapper_core_src.GetRegistryOptsCore.md#typesbundle)
+
+#### Defined in
+
+[txwrapper-core/src/types/registry.ts:45](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-core/src/types/registry.ts#L45)
 
 ___
 
@@ -151,4 +185,4 @@ User extensions used to inject into the type registry
 
 #### Defined in
 
-[txwrapper-core/src/types/registry.ts:40](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-core/src/types/registry.ts#L40)
+[txwrapper-core/src/types/registry.ts:41](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-core/src/types/registry.ts#L41)

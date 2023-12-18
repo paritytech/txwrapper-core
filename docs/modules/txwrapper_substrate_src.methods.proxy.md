@@ -17,8 +17,8 @@
 
 - [addProxy](txwrapper_substrate_src.methods.proxy.md#addproxy)
 - [announce](txwrapper_substrate_src.methods.proxy.md#announce)
-- [anonymous](txwrapper_substrate_src.methods.proxy.md#anonymous)
-- [killAnonymous](txwrapper_substrate_src.methods.proxy.md#killanonymous)
+- [createPure](txwrapper_substrate_src.methods.proxy.md#createpure)
+- [killPure](txwrapper_substrate_src.methods.proxy.md#killpure)
 - [proxy](txwrapper_substrate_src.methods.proxy.md#proxy)
 - [proxyAnnounced](txwrapper_substrate_src.methods.proxy.md#proxyannounced)
 - [rejectAnnouncement](txwrapper_substrate_src.methods.proxy.md#rejectannouncement)
@@ -47,7 +47,7 @@ Register a proxy account for the sender that is able to make calls on its behalf
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/proxy/addProxy.ts:32](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-substrate/src/methods/proxy/addProxy.ts#L32)
+[txwrapper-substrate/src/methods/proxy/addProxy.ts:32](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/proxy/addProxy.ts#L32)
 
 ___
 
@@ -84,16 +84,18 @@ The dispatch origin for this call must be _Signed_ and a proxy of `real`.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/proxy/announce.ts:40](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-substrate/src/methods/proxy/announce.ts#L40)
+[txwrapper-substrate/src/methods/proxy/announce.ts:40](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/proxy/announce.ts#L40)
 
 ___
 
-### anonymous
+### createPure
 
-▸ **anonymous**(`args`, `info`, `options`): [`UnsignedTransaction`](../interfaces/txwrapper_core_src.UnsignedTransaction.md)
+▸ **createPure**(`args`, `info`, `options`): [`UnsignedTransaction`](../interfaces/txwrapper_core_src.UnsignedTransaction.md)
 
 Spawn a fresh new account that is guaranteed to be otherwise inaccessible, and
 initialize it with a proxy of `proxy_type` for `origin` sender.
+
+NOTE: Was named anonymous before v9300
 
 Requires a `Signed` origin
 
@@ -106,7 +108,7 @@ Fails if there are insufficient funds to pay for deposit.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `args` | [`ProxyAnonymousArgs`](../interfaces/txwrapper_substrate_src._internal_.ProxyAnonymousArgs.md) | Arguments specific to this method. |
+| `args` | [`ProxyCreatePureArgs`](../interfaces/txwrapper_substrate_src._internal_.ProxyCreatePureArgs.md) | Arguments specific to this method. |
 | `info` | [`BaseTxInfo`](../interfaces/txwrapper_core_src.BaseTxInfo.md) | Information required to construct the transaction. |
 | `options` | [`OptionsWithMeta`](../interfaces/txwrapper_core_src.OptionsWithMeta.md) | Registry and metadata used for constructing the method. |
 
@@ -116,15 +118,17 @@ Fails if there are insufficient funds to pay for deposit.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/proxy/anonymous.ts:44](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-substrate/src/methods/proxy/anonymous.ts#L44)
+[txwrapper-substrate/src/methods/proxy/createPure.ts:46](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/proxy/createPure.ts#L46)
 
 ___
 
-### killAnonymous
+### killPure
 
-▸ **killAnonymous**(`args`, `info`, `options`): [`UnsignedTransaction`](../interfaces/txwrapper_core_src.UnsignedTransaction.md)
+▸ **killPure**(`args`, `info`, `options`): [`UnsignedTransaction`](../interfaces/txwrapper_core_src.UnsignedTransaction.md)
 
-Removes a previously spawned anonymous proxy.
+Removes a previously spawned pure proxy.
+
+NOTE: Was named killAnonymous before v9300
 
 WARNING: **All access to this account will be lost.** Any funds held in it will be
 inaccessible.
@@ -139,7 +143,7 @@ account whose `anonymous` call has corresponding parameters.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `args` | [`ProxyKillAnonymousArgs`](../interfaces/txwrapper_substrate_src._internal_.ProxyKillAnonymousArgs.md) | Arguments specific to this method. |
+| `args` | [`ProxyKillPureArgs`](../interfaces/txwrapper_substrate_src._internal_.ProxyKillPureArgs.md) | Arguments specific to this method. |
 | `info` | [`BaseTxInfo`](../interfaces/txwrapper_core_src.BaseTxInfo.md) | Information required to construct the transaction. |
 | `options` | [`OptionsWithMeta`](../interfaces/txwrapper_core_src.OptionsWithMeta.md) | Registry and metadata used for constructing the method. |
 
@@ -149,7 +153,7 @@ account whose `anonymous` call has corresponding parameters.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/proxy/killAnonymous.ts:49](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-substrate/src/methods/proxy/killAnonymous.ts#L49)
+[txwrapper-substrate/src/methods/proxy/killPure.ts:51](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/proxy/killPure.ts#L51)
 
 ___
 
@@ -173,7 +177,7 @@ Dispatch the given `call` from an account for which the sender is authorized.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/proxy/proxy.ts:33](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-substrate/src/methods/proxy/proxy.ts#L33)
+[txwrapper-substrate/src/methods/proxy/proxy.ts:33](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/proxy/proxy.ts#L33)
 
 ___
 
@@ -202,7 +206,7 @@ The dispatch origin for this call must be _Signed_.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/proxy/proxyAnnounced.ts:41](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-substrate/src/methods/proxy/proxyAnnounced.ts#L41)
+[txwrapper-substrate/src/methods/proxy/proxyAnnounced.ts:41](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/proxy/proxyAnnounced.ts#L41)
 
 ___
 
@@ -226,7 +230,7 @@ Remove the given announcement of a delegate and return the deposit. Made by the 
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/proxy/rejectAnnouncement.ts:27](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-substrate/src/methods/proxy/rejectAnnouncement.ts#L27)
+[txwrapper-substrate/src/methods/proxy/rejectAnnouncement.ts:27](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/proxy/rejectAnnouncement.ts#L27)
 
 ___
 
@@ -250,7 +254,7 @@ Unregister all proxy accounts for the sender.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/proxy/removeProxies.ts:15](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-substrate/src/methods/proxy/removeProxies.ts#L15)
+[txwrapper-substrate/src/methods/proxy/removeProxies.ts:15](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/proxy/removeProxies.ts#L15)
 
 ___
 
@@ -274,4 +278,4 @@ Unregister a proxy account for the sender.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/proxy/removeProxy.ts:17](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-substrate/src/methods/proxy/removeProxy.ts#L17)
+[txwrapper-substrate/src/methods/proxy/removeProxy.ts:17](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/proxy/removeProxy.ts#L17)

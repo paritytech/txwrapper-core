@@ -27,4 +27,4 @@ locked under this module.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/vesting/vestOther.ts:14](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-substrate/src/methods/vesting/vestOther.ts#L14)
+[txwrapper-substrate/src/methods/vesting/vestOther.ts:14](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/vesting/vestOther.ts#L14)

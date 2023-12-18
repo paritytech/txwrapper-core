@@ -44,6 +44,13 @@ export function decodeUnsignedTx(
 		? hexToNumber(registry.createType('ImmortalEra', unsigned.era).toHex())
 		: registry.createType('MortalEra', unsigned.era).period.toNumber();
 	const assetId = unsigned.assetId;
+
+	let tip: number | string;
+	try {
+		tip = registry.createType('Compact<Balance>', unsigned.tip).toNumber();
+	} catch (_error) {
+		tip = registry.createType('Compact<Balance>', unsigned.tip).toString();
+	}
 	return {
 		address: unsigned.address,
 		assetId:
@@ -60,7 +67,7 @@ export function decodeUnsignedTx(
 		method,
 		nonce: registry.createType('Compact<Index>', unsigned.nonce).toNumber(),
 		specVersion: registry.createType('u32', unsigned.specVersion).toNumber(),
-		tip: registry.createType('Compact<Balance>', unsigned.tip).toNumber(),
+		tip,
 		transactionVersion: registry
 			.createType('u32', unsigned.transactionVersion)
 			.toNumber(),

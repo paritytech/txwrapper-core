@@ -12,6 +12,7 @@
 - [balances](txwrapper_substrate_src.methods.balances.md)
 - [democracy](txwrapper_substrate_src.methods.democracy.md)
 - [multisig](txwrapper_substrate_src.methods.multisig.md)
+- [nominationPools](txwrapper_substrate_src.methods.nominationPools.md)
 - [proxy](txwrapper_substrate_src.methods.proxy.md)
 - [session](txwrapper_substrate_src.methods.session.md)
 - [staking](txwrapper_substrate_src.methods.staking.md)

@@ -13,7 +13,6 @@
 - [StakingNominateArgs](../interfaces/txwrapper_substrate_src.methods.staking.StakingNominateArgs.md)
 - [StakingPayoutStakersArgs](../interfaces/txwrapper_substrate_src.methods.staking.StakingPayoutStakersArgs.md)
 - [StakingRebondArgs](../interfaces/txwrapper_substrate_src.methods.staking.StakingRebondArgs.md)
-- [StakingSetControllerArgs](../interfaces/txwrapper_substrate_src.methods.staking.StakingSetControllerArgs.md)
 - [StakingSetPayeeArgs](../interfaces/txwrapper_substrate_src.methods.staking.StakingSetPayeeArgs.md)
 - [StakingUnbondArgs](../interfaces/txwrapper_substrate_src.methods.staking.StakingUnbondArgs.md)
 - [StakingValidateArgs](../interfaces/txwrapper_substrate_src.methods.staking.StakingValidateArgs.md)
@@ -55,7 +54,7 @@ Construct a transaction to bond funds and create a Stash account.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/staking/bond.ts:28](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-substrate/src/methods/staking/bond.ts#L28)
+[txwrapper-substrate/src/methods/staking/bond.ts:24](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/staking/bond.ts#L24)
 
 ___
 
@@ -82,7 +81,7 @@ Can only be called when `EraElectionStatus` is `Closed`.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/staking/bondExtra.ts:26](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-substrate/src/methods/staking/bondExtra.ts#L26)
+[txwrapper-substrate/src/methods/staking/bondExtra.ts:26](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/staking/bondExtra.ts#L26)
 
 ___
 
@@ -108,7 +107,7 @@ Can only be called when `EraElectionStatus` is `Closed`.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/staking/chill.ts:17](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-substrate/src/methods/staking/chill.ts#L17)
+[txwrapper-substrate/src/methods/staking/chill.ts:17](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/staking/chill.ts#L17)
 
 ___
 
@@ -134,7 +133,7 @@ Can only be called when `EraElectionStatus` is `Closed`.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/staking/nominate.ts:28](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-substrate/src/methods/staking/nominate.ts#L28)
+[txwrapper-substrate/src/methods/staking/nominate.ts:28](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/staking/nominate.ts#L28)
 
 ___
 
@@ -162,7 +161,7 @@ Can only be called when `EraElectionStatus` is `Closed`.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/staking/payoutStakers.ts:34](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-substrate/src/methods/staking/payoutStakers.ts#L34)
+[txwrapper-substrate/src/methods/staking/payoutStakers.ts:34](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/staking/payoutStakers.ts#L34)
 
 ___
 
@@ -189,7 +188,7 @@ The dispatch origin must be signed by the controller, and it can be only called 
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/staking/rebond.ts:23](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-substrate/src/methods/staking/rebond.ts#L23)
+[txwrapper-substrate/src/methods/staking/rebond.ts:23](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/staking/rebond.ts#L23)
 
 ___
 
@@ -197,13 +196,13 @@ ___
 
 ▸ **setController**(`args`, `info`, `options`): [`UnsignedTransaction`](../interfaces/txwrapper_core_src.UnsignedTransaction.md)
 
-(Re-)set the controller of a stash. Comes into effect at the beginning of the next era.
+(Re-)sets the controller of a stash to the stash itself. Comes into effect at the beginning of the next era.
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `args` | [`StakingSetControllerArgs`](../interfaces/txwrapper_substrate_src.methods.staking.StakingSetControllerArgs.md) | Arguments specific to this method. |
+| `args` | [`Args`](txwrapper_core_src.md#args) | Arguments specific to this method. |
 | `info` | [`BaseTxInfo`](../interfaces/txwrapper_core_src.BaseTxInfo.md) | Information required to construct the transaction. |
 | `options` | [`OptionsWithMeta`](../interfaces/txwrapper_core_src.OptionsWithMeta.md) | Registry and metadata used for constructing the method. |
 
@@ -213,7 +212,7 @@ ___
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/staking/setController.ts:23](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-substrate/src/methods/staking/setController.ts#L23)
+[txwrapper-substrate/src/methods/staking/setController.ts:16](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/staking/setController.ts#L16)
 
 ___
 
@@ -241,7 +240,7 @@ Comes into effect at the beginning of the next era.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/staking/setPayee.ts:27](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-substrate/src/methods/staking/setPayee.ts#L27)
+[txwrapper-substrate/src/methods/staking/setPayee.ts:27](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/staking/setPayee.ts#L27)
 
 ___
 
@@ -268,7 +267,7 @@ Can only be called when `EraElectionStatus` is `Closed`.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/staking/unbond.ts:26](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-substrate/src/methods/staking/unbond.ts#L26)
+[txwrapper-substrate/src/methods/staking/unbond.ts:26](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/staking/unbond.ts#L26)
 
 ___
 
@@ -294,7 +293,7 @@ Can only be called when `EraElectionStatus` is `Closed`.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/staking/validate.ts:27](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-substrate/src/methods/staking/validate.ts#L27)
+[txwrapper-substrate/src/methods/staking/validate.ts:27](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/staking/validate.ts#L27)
 
 ___
 
@@ -324,4 +323,4 @@ Can only be called when `EraElectionStatus` is `Closed`.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/staking/withdrawUnbonded.ts:26](https://github.com/paritytech/txwrapper-core/blob/6c32f05/packages/txwrapper-substrate/src/methods/staking/withdrawUnbonded.ts#L26)
+[txwrapper-substrate/src/methods/staking/withdrawUnbonded.ts:26](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/staking/withdrawUnbonded.ts#L26)
