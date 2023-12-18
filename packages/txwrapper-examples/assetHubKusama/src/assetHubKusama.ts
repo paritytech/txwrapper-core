@@ -87,18 +87,20 @@ async function main(): Promise<void> {
 	 * }
 	 */
 	const nonce = await rpcToLocalNode('account_nextIndex', [alice.address]);
-	// MultiLocation of the Asset backed by a Liquidity Pool used to pay the fees 
+	// MultiLocation of the Asset backed by a Liquidity Pool used to pay the fees
 	const asset = {
 		parents: 0,
 		interior: {
-			X2: [{
-				palletInstance: 50
-			},
-			{
-				generalIndex: 1
-			}]
-		}
-	}
+			X2: [
+				{
+					palletInstance: 50,
+				},
+				{
+					generalIndex: 1,
+				},
+			],
+		},
+	};
 	const unsigned = methods.balances.transferKeepAlive(
 		{
 			value: '10000000000000',
@@ -131,7 +133,8 @@ async function main(): Promise<void> {
 	});
 
 	console.log(
-		`\nDecoded Transaction\n  To: ${(decodedUnsigned.method.args.dest as { id: string })?.id
+		`\nDecoded Transaction\n  To: ${
+			(decodedUnsigned.method.args.dest as { id: string })?.id
 		}\n` + `  Amount: ${decodedUnsigned.method.args.value}`
 	);
 
@@ -145,10 +148,11 @@ async function main(): Promise<void> {
 		registry,
 	});
 	console.log(
-		`\nDecoded Transaction\n  To: ${(payloadInfo.method.args.dest as { id: string })?.id
+		`\nDecoded Transaction\n  To: ${
+			(payloadInfo.method.args.dest as { id: string })?.id
 		}\n` +
-		`  Amount: ${payloadInfo.method.args.value}\n` +
-		`  AssetId: ${payloadInfo.assetId}`
+			`  Amount: ${payloadInfo.method.args.value}\n` +
+			`  AssetId: ${payloadInfo.assetId}`
 	);
 
 	// Sign a payload. This operation should be performed on an offline device.
@@ -182,7 +186,8 @@ async function main(): Promise<void> {
 	});
 
 	console.log(
-		`\nDecoded Transaction\n  To: ${(txInfo.method.args.dest as { id: string })?.id
+		`\nDecoded Transaction\n  To: ${
+			(txInfo.method.args.dest as { id: string })?.id
 		}\n` + `  Amount: ${txInfo.method.args.value}\n`
 	);
 }
