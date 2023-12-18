@@ -5,7 +5,7 @@
 ## Testnet setup
 
 1) First you need to download the binaries for the [node](https://github.com/paritytech/polkadot-sdk/releases): polkadot, polkadot-parachain, polkadot-prepare-worker and polkadot-execute-worker, and place them in the `zombienet/bin/` directory.
-2) You will also need the zombienet executable for your os, which you can download [here](https://github.com/paritytech/zombienet/releases), adn place it in the `zombienet` folder.
+2) You will also need the zombienet executable for your os, which you can download [here](https://github.com/paritytech/zombienet/releases), and place it in the `zombienet` folder.
 3) Run the test network from the root of this project with the command `./zombienet/<your-os-zombienet-executable> -p native spawn ./zombienet/config/medium-network.toml | tee zombienet.log`
 
 ## Create a Liquidity Pool
