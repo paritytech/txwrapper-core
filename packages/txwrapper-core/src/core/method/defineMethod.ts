@@ -156,10 +156,14 @@ export function defineMethod(
 	const extrinsicEra = createEra(registry, eraOptions);
 	const blockHash = info.blockHash as `0x${string}`;
 	const genesisHash = info.genesisHash as `0x${string}`;
+	const assetId = info.assetId;
 
 	return {
 		address: info.address,
-		assetId: registry.createType('Compact<AssetId>', info.assetId).toNumber(),
+		assetId:
+			typeof assetId === 'object'
+				? registry.createType('MultiLocation', assetId)
+				: registry.createType('Compact<AssetId>', assetId).toNumber(),
 		blockHash,
 		blockNumber: registry.createType('BlockNumber', info.blockNumber).toHex(),
 		era: extrinsicEra.toHex(),

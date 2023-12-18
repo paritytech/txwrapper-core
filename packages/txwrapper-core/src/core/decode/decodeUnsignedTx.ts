@@ -43,6 +43,7 @@ export function decodeUnsignedTx(
 	const eraPeriod = isImmortalEra
 		? hexToNumber(registry.createType('ImmortalEra', unsigned.era).toHex())
 		: registry.createType('MortalEra', unsigned.era).period.toNumber();
+	const assetId = unsigned.assetId;
 
 	let tip: number | string;
 	try {
@@ -52,9 +53,10 @@ export function decodeUnsignedTx(
 	}
 	return {
 		address: unsigned.address,
-		assetId: registry
-			.createType('Compact<AssetId>', unsigned.assetId)
-			.toNumber(),
+		assetId:
+			typeof assetId === 'object'
+				? registry.createType('MultiLocation', assetId)
+				: registry.createType('Compact<AssetId>', assetId).toNumber(),
 		blockHash: unsigned.blockHash,
 		blockNumber: registry
 			.createType('BlockNumber', unsigned.blockNumber)

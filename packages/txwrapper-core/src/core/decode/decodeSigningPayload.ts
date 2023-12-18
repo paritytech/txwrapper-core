@@ -55,11 +55,9 @@ export function decodeSigningPayload(
 		? payload.era.asMortalEra.period.toNumber()
 		: 0;
 
-	let assetId: number | undefined;
+	let assetId: number | object | undefined;
 	if (payload.inner.assetId) {
-		assetId = payload.inner.assetId.isSome
-			? parseInt(payload.inner.assetId.toString())
-			: undefined;
+		assetId = payload.inner.assetId.isSome ? payload.inner.assetId : undefined;
 	}
 	let tip: number | string;
 	try {
@@ -69,7 +67,7 @@ export function decodeSigningPayload(
 	}
 
 	return {
-		assetId,
+		assetId: assetId,
 		blockHash: payload.blockHash.toHex(),
 		eraPeriod,
 		genesisHash: payload.genesisHash.toHex(),

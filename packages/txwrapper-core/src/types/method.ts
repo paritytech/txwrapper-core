@@ -69,9 +69,8 @@ export interface UnsignedTransaction extends SignerPayloadJSON {
 	/**
 	 * The assetId used in ChargeAssetTxPayment
 	 *
-	 * @default 0
 	 */
-	assetId?: number;
+	assetId?: number | object;
 	/**
 	 * The SCALE-encoded metadata, as a hex string. Can be retrieved via the RPC
 	 * call `state_getMetadata`.
@@ -90,9 +89,8 @@ export interface BaseTxInfo {
 	/**
 	 * The assetId used in ChargeAssetTxPayment
 	 *
-	 * @default 0
 	 */
-	assetId?: number;
+	assetId?: number | object;
 	/**
 	 * The checkpoint hash of the block, in hex.
 	 */
