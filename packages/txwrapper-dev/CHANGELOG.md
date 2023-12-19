@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.2.0](https://github.com/paritytech/txwrapper-core/compare/v7.1.1...v7.2.0) (2023-12-19)
+
+
+### Features
+
+* added support for large tip ([#343](https://github.com/paritytech/txwrapper-core/issues/343)) ([bb9e677](https://github.com/paritytech/txwrapper-core/commit/bb9e677624c168f2e735383821c44eda191e52d3))
+
+
+
+
+
 ## [7.1.1](https://github.com/paritytech/txwrapper-core/compare/v7.1.0...v7.1.1) (2023-10-23)
 
 **Note:** Version bump only for package @substrate/txwrapper-dev
