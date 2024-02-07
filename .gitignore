@@ -26,3 +26,8 @@
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+
+# zombienet
+zombienet/bin/*
+zombienet/zombienet-linux-x64
+zombienet/zombienet-macos
