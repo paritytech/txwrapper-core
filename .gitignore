@@ -26,3 +26,5 @@
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+zombienet/zombienet-linux-x64
+zombienet/bin/*
