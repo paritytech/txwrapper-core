@@ -30,7 +30,7 @@ async function main(): Promise<void> {
 	const alice = keyring.addFromUri('//Alice', { name: 'Alice' }, 'sr25519');
 	console.log(
 		"Alice's SS58-Encoded Address:",
-		deriveAddress(alice.publicKey, PolkadotSS58Format.polkadot)
+		deriveAddress(alice.publicKey, PolkadotSS58Format.polkadot),
 	);
 
 	// Construct a balance transfer transaction offline.
@@ -42,7 +42,7 @@ async function main(): Promise<void> {
 	const genesisHash = await rpcToLocalNode('chain_getBlockHash', [0]);
 	const metadataRpc = await rpcToLocalNode('state_getMetadata');
 	const { specVersion, transactionVersion, specName } = await rpcToLocalNode(
-		'state_getRuntimeVersion'
+		'state_getRuntimeVersion',
 	);
 
 	// Create Polkadot's type registry.
@@ -146,7 +146,7 @@ async function main(): Promise<void> {
 				specVersion: specVersion,
 				transactionVersion,
 			},
-			optionsWithMeta
+			optionsWithMeta,
 		);
 
 		return txInfo.method;
@@ -171,7 +171,7 @@ async function main(): Promise<void> {
 			eraPeriod: 64,
 			transactionVersion,
 		},
-		optionsWithMeta
+		optionsWithMeta,
 	);
 
 	// Decode an unsigned transaction.
@@ -181,8 +181,8 @@ async function main(): Promise<void> {
 	});
 	console.log(
 		`\nDecoded Transaction\n  calls: ${JSON.stringify(
-			decodedUnsigned.method.args.calls
-		)}\n`
+			decodedUnsigned.method.args.calls,
+		)}\n`,
 	);
 
 	// Construct the signing payload from an unsigned transaction.
@@ -196,8 +196,8 @@ async function main(): Promise<void> {
 	});
 	console.log(
 		`\nDecoded Transaction\n  calls: ${JSON.stringify(
-			payloadInfo.method.args.calls
-		)}\n`
+			payloadInfo.method.args.calls,
+		)}\n`,
 	);
 
 	// Sign a payload. This operation should be performed on an offline device.
@@ -231,8 +231,8 @@ async function main(): Promise<void> {
 	});
 	console.log(
 		`\nDecoded Transaction\n  calls: ${JSON.stringify(
-			txInfo.method.args.calls
-		)}\n`
+			txInfo.method.args.calls,
+		)}\n`,
 	);
 }
 

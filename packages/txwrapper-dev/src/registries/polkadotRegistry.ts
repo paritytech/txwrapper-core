@@ -12,7 +12,7 @@ import { mockGetRegistryBase } from './mockGetRegistry';
  */
 export function getRegistryPolkadot(
 	specVersion: number,
-	metadataRpc: `0x${string}`
+	metadataRpc: `0x${string}`,
 ): TypeRegistry {
 	return mockGetRegistryBase({
 		chainProperties: {
@@ -24,7 +24,7 @@ export function getRegistryPolkadot(
 			new TypeRegistry(),
 			'Polkadot',
 			'polkadot',
-			specVersion
+			specVersion,
 		),
 		metadataRpc,
 	});

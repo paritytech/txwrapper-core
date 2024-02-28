@@ -12,7 +12,7 @@ describe('nominationPools::setClaimPermission', () => {
 		const unsigned = setClaimPermission(
 			TEST_METHOD_ARGS.nominationPools.setClaimPermission,
 			TEST_BASE_TX_INFO,
-			KUSAMA_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS,
 		);
 
 		itHasCorrectBaseTxInfo(unsigned);

@@ -32,7 +32,7 @@ export interface NominationPoolsPoolWithdrawUnbonded extends Args {
 export function poolWithdrawUnbonded(
 	args: NominationPoolsPoolWithdrawUnbonded,
 	info: BaseTxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	return defineMethod(
 		{
@@ -43,6 +43,6 @@ export function poolWithdrawUnbonded(
 			},
 			...info,
 		},
-		options
+		options,
 	);
 }

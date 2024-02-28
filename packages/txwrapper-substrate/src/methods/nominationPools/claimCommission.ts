@@ -27,7 +27,7 @@ export interface NominationPoolsClaimCommission extends Args {
 export function claimCommission(
 	args: NominationPoolsClaimCommission,
 	info: BaseTxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	return defineMethod(
 		{
@@ -38,6 +38,6 @@ export function claimCommission(
 			},
 			...info,
 		},
-		options
+		options,
 	);
 }

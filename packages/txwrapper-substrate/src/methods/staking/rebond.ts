@@ -23,7 +23,7 @@ export interface StakingRebondArgs extends Args {
 export function rebond(
 	args: StakingRebondArgs,
 	info: BaseTxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	return defineMethod(
 		{
@@ -34,6 +34,6 @@ export function rebond(
 			},
 			...info,
 		},
-		options
+		options,
 	);
 }

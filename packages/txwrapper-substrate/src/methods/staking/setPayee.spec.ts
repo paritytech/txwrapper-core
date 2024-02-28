@@ -12,7 +12,7 @@ describe('staking::setPayee', () => {
 		const unsigned = setPayee(
 			TEST_METHOD_ARGS.staking.setPayee,
 			TEST_BASE_TX_INFO,
-			KUSAMA_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS,
 		);
 
 		itHasCorrectBaseTxInfo(unsigned);

@@ -20,7 +20,7 @@ export interface CurrenciesTransferNativeCurrencyArgs extends Args {
 export function transferNativeCurrency(
 	args: CurrenciesTransferNativeCurrencyArgs,
 	info: BaseTxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	return defineMethod(
 		{
@@ -31,6 +31,6 @@ export function transferNativeCurrency(
 			},
 			...info,
 		},
-		options
+		options,
 	);
 }

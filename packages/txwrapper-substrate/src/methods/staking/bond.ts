@@ -24,7 +24,7 @@ export interface StakingBondArgs extends StakingSetPayeeArgs {
 export function bond(
 	args: StakingBondArgs,
 	info: BaseTxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	return defineMethod(
 		{
@@ -35,6 +35,6 @@ export function bond(
 			},
 			...info,
 		},
-		options
+		options,
 	);
 }

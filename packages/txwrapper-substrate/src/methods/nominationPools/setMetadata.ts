@@ -30,7 +30,7 @@ export interface NominationPoolsSetMetadata extends Args {
 export function setMetadata(
 	args: NominationPoolsSetMetadata,
 	info: BaseTxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	return defineMethod(
 		{
@@ -41,6 +41,6 @@ export function setMetadata(
 			},
 			...info,
 		},
-		options
+		options,
 	);
 }

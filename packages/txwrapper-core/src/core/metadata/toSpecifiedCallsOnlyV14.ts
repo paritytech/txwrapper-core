@@ -43,7 +43,7 @@ const removeDocs = (type: Si1Type, registry: Registry): Si1Type => {
 					index,
 					fields: removeDocsFromFields(registry, fields),
 					docs: [],
-				})
+				}),
 		);
 
 		const typeDef = registry.createType('Si1TypeDef', {
@@ -54,7 +54,7 @@ const removeDocs = (type: Si1Type, registry: Registry): Si1Type => {
 
 		return registry.createType(
 			'Si1Type',
-			objectSpread({}, type, { def: typeDef, docs: [] })
+			objectSpread({}, type, { def: typeDef, docs: [] }),
 		);
 	}
 
@@ -68,7 +68,7 @@ const removeDocs = (type: Si1Type, registry: Registry): Si1Type => {
 
 		return registry.createType(
 			'Si1Type',
-			objectSpread({}, type, { def: typeDef, docs: [] })
+			objectSpread({}, type, { def: typeDef, docs: [] }),
 		);
 	}
 
@@ -83,7 +83,7 @@ const removeDocs = (type: Si1Type, registry: Registry): Si1Type => {
  */
 const removeDocsFromFields = (
 	registry: Registry,
-	fields: Vec<Si1Field>
+	fields: Vec<Si1Field>,
 ): Si1Field[] => {
 	return fields.map(({ name, type, typeName }) =>
 		registry.createType('Si1Field', {
@@ -91,7 +91,7 @@ const removeDocsFromFields = (
 			type,
 			typeName,
 			docs: [],
-		})
+		}),
 	);
 };
 
@@ -106,7 +106,7 @@ const removeDocsFromFields = (
 const tryAddType = (
 	lookupId: Si1LookupTypeId,
 	cache: Set<unknown>,
-	stack: string[]
+	stack: string[],
 ) => {
 	const lookupStr = lookupId.toString();
 	if (!cache.has(lookupStr)) {
@@ -126,7 +126,7 @@ const tryAddType = (
 const findLookupIdsInTypeDef = (
 	type: Si1Type,
 	cache: Set<unknown>,
-	stack: string[]
+	stack: string[],
 ): void => {
 	const { def } = type;
 
@@ -183,7 +183,7 @@ const findLookupIdsInTypeDef = (
  */
 const findLookupIdsInPallet = (
 	pallet: PalletMetadataV14,
-	cache: Set<unknown>
+	cache: Set<unknown>,
 ): void => {
 	// Storage types
 	if (pallet.storage.isSome) {
@@ -240,7 +240,7 @@ const findLookupIdsInPallet = (
 const findLookupIdsInParams = (
 	type: Si1Type,
 	cache: Set<unknown>,
-	stack: string[]
+	stack: string[],
 ) => {
 	const { params } = type;
 
@@ -265,7 +265,7 @@ const findLookupIdsInParams = (
 export const toSpecifiedCallsOnlyV14 = (
 	registry: Registry,
 	latestMetadata: MetadataV14,
-	includePallets: string[] = []
+	includePallets: string[] = [],
 ): AnyJson => {
 	// Stores typeId's as strings
 	const typeCache = new Set();
@@ -322,7 +322,7 @@ export const toSpecifiedCallsOnlyV14 = (
 					id,
 					type: objectSpread({}, removeDocs(type, registry), { docs: [] }),
 				},
-			])
+			]),
 		);
 
 	return registry

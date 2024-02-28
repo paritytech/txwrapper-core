@@ -35,7 +35,7 @@ export function mockGetRegistryBase({
 	const generatedMetadata = mockCreateMetadata(
 		registry,
 		metadataRpc,
-		asCallsOnlyArg
+		asCallsOnlyArg,
 	);
 
 	registry.register(specTypes);
@@ -52,8 +52,8 @@ export function mockGetRegistryBase({
 	registry.setChainProperties(
 		registry.createType(
 			'ChainProperties',
-			chainProperties
-		) as GenericChainProperties
+			chainProperties,
+		) as GenericChainProperties,
 	);
 
 	return registry;

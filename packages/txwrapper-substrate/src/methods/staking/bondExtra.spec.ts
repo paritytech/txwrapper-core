@@ -12,7 +12,7 @@ describe('staking::bondExtra', () => {
 		const unsigned = bondExtra(
 			TEST_METHOD_ARGS.staking.bondExtra,
 			TEST_BASE_TX_INFO,
-			KUSAMA_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS,
 		);
 
 		itHasCorrectBaseTxInfo(unsigned);

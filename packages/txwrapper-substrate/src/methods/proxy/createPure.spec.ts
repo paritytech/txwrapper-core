@@ -12,7 +12,7 @@ describe('proxy::createPure', () => {
 		const unsigned = createPure(
 			TEST_METHOD_ARGS.proxy.createPure,
 			TEST_BASE_TX_INFO,
-			KUSAMA_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS,
 		);
 
 		itHasCorrectBaseTxInfo(unsigned);

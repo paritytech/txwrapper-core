@@ -12,7 +12,7 @@ describe('nominationPools::poolWithdrawUnbonded', () => {
 		const unsigned = poolWithdrawUnbonded(
 			TEST_METHOD_ARGS.nominationPools.poolWithdrawUnbonded,
 			TEST_BASE_TX_INFO,
-			KUSAMA_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS,
 		);
 
 		itHasCorrectBaseTxInfo(unsigned);

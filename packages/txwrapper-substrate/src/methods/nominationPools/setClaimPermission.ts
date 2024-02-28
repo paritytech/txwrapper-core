@@ -30,7 +30,7 @@ export interface NominationPoolsSetClaimPermission extends Args {
 export function setClaimPermission(
 	args: NominationPoolsSetClaimPermission,
 	info: BaseTxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	return defineMethod(
 		{
@@ -41,6 +41,6 @@ export function setClaimPermission(
 			},
 			...info,
 		},
-		options
+		options,
 	);
 }

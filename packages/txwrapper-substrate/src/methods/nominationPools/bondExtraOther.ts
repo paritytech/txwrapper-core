@@ -33,7 +33,7 @@ export interface NominationPoolsBondExtraOther
 export function bondExtraOther(
 	args: NominationPoolsBondExtraOther,
 	info: BaseTxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	return defineMethod(
 		{
@@ -44,6 +44,6 @@ export function bondExtraOther(
 			},
 			...info,
 		},
-		options
+		options,
 	);
 }

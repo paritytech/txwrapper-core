@@ -12,7 +12,7 @@ describe('nominationPools::claimCommission', () => {
 		const unsigned = claimCommission(
 			TEST_METHOD_ARGS.nominationPools.claimCommission,
 			TEST_BASE_TX_INFO,
-			KUSAMA_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS,
 		);
 
 		itHasCorrectBaseTxInfo(unsigned);

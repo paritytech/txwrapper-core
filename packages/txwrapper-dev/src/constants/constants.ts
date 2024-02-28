@@ -99,7 +99,7 @@ export const POLKADOT_TEST_OPTIONS = {
 	metadataRpc: polkadotMetadataHex,
 	registry: memoizedPolkadotGetRegistry(
 		POLKADOT_SPEC_VERSION,
-		polkadotMetadataHex
+		polkadotMetadataHex,
 	),
 };
 
@@ -118,7 +118,7 @@ export const ASSET_HUB_KUSAMA_TEST_OPTIONS = {
 	metadataRpc: assetHubKusamaMetadataHex,
 	registry: memoizedAssetHubKusamaGetRegistry(
 		ASSET_HUB_POLKADOT_SPEC_VERSION,
-		assetHubKusamaMetadataHex
+		assetHubKusamaMetadataHex,
 	),
 };
 
@@ -126,7 +126,7 @@ export const WESTEND_TEST_OPTIONS = {
 	metadataRpc: westendMetadataHex,
 	registry: memoizedWestendGetRegistry(
 		WESTEND_SPEC_VERSION,
-		westendMetadataHex
+		westendMetadataHex,
 	),
 };
 export const ASTAR_TEST_OPTIONS = {
@@ -172,7 +172,7 @@ export const ASTAR_TEST_METHOD_ARGS = {
 export enum PolkadotSS58Format {
 	polkadot = 0,
 	kusama = 2,
-	westend = 42,
 	substrate = 42,
+	westend = substrate,
 	astar = 5,
 }

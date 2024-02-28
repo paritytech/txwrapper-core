@@ -16,7 +16,7 @@ import { DecodedUnsignedTx } from '../../types';
 import { decodeUnsignedTx } from './decodeUnsignedTx';
 
 export function itDecodesUnsignedBalanceTransferTx(
-	decoded: DecodedUnsignedTx
+	decoded: DecodedUnsignedTx,
 ): void {
 	(
 		[
@@ -34,7 +34,7 @@ export function itDecodesUnsignedBalanceTransferTx(
 }
 
 export function itDecodesAstarUnsignedBalanceTransferTx(
-	decoded: DecodedUnsignedTx
+	decoded: DecodedUnsignedTx,
 ): void {
 	(
 		[
@@ -56,7 +56,7 @@ describe('decodeUnsignedTx', () => {
 		const unsigned = balancesTransfer(
 			TEST_METHOD_ARGS.balances.transfer,
 			TEST_BASE_TX_INFO,
-			KUSAMA_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS,
 		);
 
 		const decoded = decodeUnsignedTx(unsigned, KUSAMA_TEST_OPTIONS);
@@ -70,7 +70,7 @@ describe('decodeUnsignedTx', () => {
 		const unsigned = balancesTransfer(
 			ASTAR_TEST_METHOD_ARGS.balances.transfer,
 			ASTAR_TEST_BASE_TX_INFO,
-			ASTAR_TEST_OPTIONS
+			ASTAR_TEST_OPTIONS,
 		);
 
 		const decoded = decodeUnsignedTx(unsigned, ASTAR_TEST_OPTIONS);
@@ -88,7 +88,7 @@ describe('decodeUnsignedTx', () => {
 		const unsigned = balancesTransfer(
 			TEST_METHOD_ARGS.balances.transfer,
 			TEST_BASE_TX_INFO,
-			adjustedOptions
+			adjustedOptions,
 		);
 
 		const decoded = decodeUnsignedTx(unsigned, adjustedOptions);
@@ -104,7 +104,7 @@ describe('decodeUnsignedTx', () => {
 		const unsigned = balancesTransfer(
 			ASTAR_TEST_METHOD_ARGS.balances.transfer,
 			ASTAR_TEST_BASE_TX_INFO,
-			adjustedOptions
+			adjustedOptions,
 		);
 
 		const decoded = decodeUnsignedTx(unsigned, adjustedOptions);

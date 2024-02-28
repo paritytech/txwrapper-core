@@ -11,7 +11,7 @@ import { toSpecifiedCallsOnlyV14 } from './';
 describe('toSpecifiedCallsOnly', () => {
 	const registry = memoizedPolkadotGetRegistry(
 		POLKADOT_SPEC_VERSION,
-		polkadotMetadataHex
+		polkadotMetadataHex,
 	);
 	it('Should correctly parse the metadata', () => {
 		const metadata = mockCreateMetadata(registry, polkadotMetadataHex);

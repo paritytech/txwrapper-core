@@ -49,7 +49,7 @@ function delay(ms: number) {
 }
 
 function createMultisigAccount(
-	keyring: Keyring
+	keyring: Keyring,
 ): [string[], string, { [key: string]: KeyringPair }, string] {
 	console.log(`\n${CYAN}Creating a MultiSig account`);
 	console.log(`===========================${RESET}\n`);
@@ -61,23 +61,23 @@ function createMultisigAccount(
 	const signatoriesDict: { [key: string]: KeyringPair } = {};
 
 	console.log(
-		'The accounts/addresses that compose the Multi Signature Account'
+		'The accounts/addresses that compose the Multi Signature Account',
 	);
 
 	const addressesArray = signatories.map((val, idx) => {
 		signatoriesDict[signatories[idx]] = keyring.addFromUri(
 			'//' + val,
 			{ name: val },
-			'sr25519'
+			'sr25519',
 		);
 		addressesDict[signatories[idx]] = deriveAddress(
 			signatoriesDict[signatories[idx]].publicKey,
-			PolkadotSS58Format.polkadot
+			PolkadotSS58Format.polkadot,
 		);
 
 		console.log(
 			`${signatories[idx]}\t: ` +
-				`${GREEN} ${addressesDict[signatories[idx]]} ${RESET}`
+				`${GREEN} ${addressesDict[signatories[idx]]} ${RESET}`,
 		);
 
 		return addressesDict[signatories[idx]];
@@ -104,11 +104,11 @@ function createMultisigAccount(
 
 function createOtherSignatories(
 	addressesArray: string[],
-	senderIndex: number
+	senderIndex: number,
 ): string[] {
 	// Take addresses and remove the sender.
 	const otherSignatories = addressesArray.filter(
-		(who) => who !== addressesArray[senderIndex]
+		(who) => who !== addressesArray[senderIndex],
 	);
 
 	// Sort them by public key.
@@ -144,7 +144,7 @@ async function main(): Promise<void> {
 	// Create Signatories Sorted excluding the sender (Alice)
 	const otherSignatoriesSortedExAlice = createOtherSignatories(
 		addressesArray,
-		signatories.indexOf('Alice')
+		signatories.indexOf('Alice'),
 	);
 
 	// Construct a balance transfer transaction offline.
@@ -156,7 +156,7 @@ async function main(): Promise<void> {
 	const genesisHash = await rpcToLocalNode('chain_getBlockHash', [0]);
 	const metadataRpc = await rpcToLocalNode('state_getMetadata');
 	const { specVersion, transactionVersion, specName } = await rpcToLocalNode(
-		'state_getRuntimeVersion'
+		'state_getRuntimeVersion',
 	);
 
 	/**
@@ -176,10 +176,10 @@ async function main(): Promise<void> {
 	});
 
 	console.log(
-		`${CYAN}Sending funds from Alice's account to the MultiSig account`
+		`${CYAN}Sending funds from Alice's account to the MultiSig account`,
 	);
 	console.log(
-		`==========================================================${RESET}`
+		`==========================================================${RESET}`,
 	);
 
 	/**
@@ -199,7 +199,7 @@ async function main(): Promise<void> {
 		{
 			address: deriveAddress(
 				signatoriesDict['Alice'].publicKey,
-				PolkadotSS58Format.polkadot
+				PolkadotSS58Format.polkadot,
 			),
 			blockHash,
 			blockNumber: registry
@@ -216,7 +216,7 @@ async function main(): Promise<void> {
 		{
 			metadataRpc,
 			registry,
-		}
+		},
 	);
 
 	// Decode an unsigned transaction.
@@ -227,7 +227,7 @@ async function main(): Promise<void> {
 	console.log(
 		`\nDecoded Transaction\n  To\t: ${
 			(decodedUnsigned.method.args.dest as { id: string })?.id
-		}\n` + `  Amount: ${decodedUnsigned.method.args.value}`
+		}\n` + `  Amount: ${decodedUnsigned.method.args.value}`,
 	);
 
 	// Construct the signing payload from an unsigned transaction.
@@ -259,16 +259,16 @@ async function main(): Promise<void> {
 	console.log(`Actual Tx Hash\t : ${actualTxHash}`);
 
 	console.log(
-		`\n${CYAN}Sending funds from the MultiSig account to Eve's account`
+		`\n${CYAN}Sending funds from the MultiSig account to Eve's account`,
 	);
 	console.log(
-		`========================================================${RESET}\n`
+		`========================================================${RESET}\n`,
 	);
 
 	const eve = keyring.addFromUri('//Eve', { name: 'Eve' }, 'sr25519');
 	const eveSs58Address = deriveAddress(
 		eve.publicKey,
-		PolkadotSS58Format.polkadot
+		PolkadotSS58Format.polkadot,
 	);
 	console.log("Eve's SS58-Encoded Address:", eveSs58Address);
 
@@ -294,7 +294,7 @@ async function main(): Promise<void> {
 		{
 			metadataRpc,
 			registry,
-		}
+		},
 	);
 
 	// Decode an unsigned transaction.
@@ -308,19 +308,19 @@ async function main(): Promise<void> {
 		}\n` +
 			`  Amount: ${decodedUnsignedTXMulti.method.args.value}` +
 			`\n` +
-			`  From\t: ${decodedUnsignedTXMulti.address}`
+			`  From\t: ${decodedUnsignedTXMulti.address}`,
 	);
 
 	// Encoded method of the unsigned multisig tx
 	const unsignedTXMultiEncodedMethod = unsignedTXMulti.method;
 	console.log(
-		`\nUnsigned Tx Multi Encoded Method: ${unsignedTXMultiEncodedMethod}`
+		`\nUnsigned Tx Multi Encoded Method: ${unsignedTXMultiEncodedMethod}`,
 	);
 
 	// Derive the tx hash of an unsigned multisig transaction.
 	const callTxHashMulti = construct.txHash(unsignedTXMultiEncodedMethod);
 	console.log(
-		`\nCall Hash of the ${GREEN}\`unsignedTXMulti\`${RESET} call : ${GREEN}${callTxHashMulti}${RESET}`
+		`\nCall Hash of the ${GREEN}\`unsignedTXMulti\`${RESET} call : ${GREEN}${callTxHashMulti}${RESET}`,
 	);
 
 	// The next steps include the calls `approveAsMulti` and `asMulti`
@@ -341,7 +341,7 @@ async function main(): Promise<void> {
 		{
 			address: deriveAddress(
 				signatoriesDict['Alice'].publicKey,
-				PolkadotSS58Format.polkadot
+				PolkadotSS58Format.polkadot,
 			),
 			blockHash,
 			blockNumber: registry
@@ -358,7 +358,7 @@ async function main(): Promise<void> {
 		{
 			metadataRpc,
 			registry,
-		}
+		},
 	);
 
 	// Decode an unsigned transaction.
@@ -370,7 +370,7 @@ async function main(): Promise<void> {
 		`\nDecoded Transaction\n` +
 			`  Threshold: ${decodedUnsignedApproveAsMulti.method.args.threshold}` +
 			`\n` +
-			`  Approve From: ${decodedUnsignedApproveAsMulti.address}`
+			`  Approve From: ${decodedUnsignedApproveAsMulti.address}`,
 	);
 
 	// Construct the signing payload from an unsigned transaction.
@@ -378,7 +378,7 @@ async function main(): Promise<void> {
 		unsignedTxApproveAsMulti,
 		{
 			registry,
-		}
+		},
 	);
 	console.log(`\nPayload to Sign: ${signingPayloadApproveAsMulti}`);
 
@@ -389,7 +389,7 @@ async function main(): Promise<void> {
 		{
 			metadataRpc,
 			registry,
-		}
+		},
 	);
 	console.log(`\nSignature: ${signatureApproveAsMulti}`);
 
@@ -400,14 +400,14 @@ async function main(): Promise<void> {
 		{
 			metadataRpc,
 			registry,
-		}
+		},
 	);
 	console.log(`\nTransaction to Submit: ${txApproveAsMulti}`);
 
 	// Derive the tx hash of a signed transaction offline.
 	const expectedTxHashApproveAsMulti = construct.txHash(txApproveAsMulti);
 	console.log(
-		`\nExpected Tx Hash of the \`approveAsMulti\` call \t: ${expectedTxHashApproveAsMulti}`
+		`\nExpected Tx Hash of the \`approveAsMulti\` call \t: ${expectedTxHashApproveAsMulti}`,
 	);
 
 	// Send the tx to the node. Again, since `txwrapper` is offline-only, this
@@ -415,11 +415,11 @@ async function main(): Promise<void> {
 	// request directly to the node.
 	const actualTxHashApproveAsMulti = await rpcToLocalNode(
 		'author_submitExtrinsic',
-		[txApproveAsMulti]
+		[txApproveAsMulti],
 	);
 	console.log(
 		`Actual Tx Hash of the ${GREEN}\`approveAsMulti\`${RESET} call \t: ` +
-			`${GREEN}${actualTxHashApproveAsMulti}${RESET}`
+			`${GREEN}${actualTxHashApproveAsMulti}${RESET}`,
 	);
 
 	// Decode a signed payload.
@@ -430,13 +430,13 @@ async function main(): Promise<void> {
 	console.log(
 		`\nDecoded Transaction of \`approveAsMulti\`\n` +
 			`  Call Hash of unsignedTXMulti: ${txInfoApproveAsMulti.method.args.callHash}\n` +
-			`  Threshold of unsignedTXMulti: ${txInfoApproveAsMulti.method.args.threshold}`
+			`  Threshold of unsignedTXMulti: ${txInfoApproveAsMulti.method.args.threshold}`,
 	);
 
 	// Create Signatories Sorted excluding the sender (Bob)
 	const otherSignatoriesSortedExBob = createOtherSignatories(
 		addressesArray,
-		signatories.indexOf('Bob')
+		signatories.indexOf('Bob'),
 	);
 
 	// In the following lines we dynamically retrieve the timepoint of the
@@ -453,7 +453,7 @@ async function main(): Promise<void> {
 	const multisigStorageHash = xxhashAsHex('Multisigs', 128);
 	const multisigAddressHash = xxhashAsHex(
 		keyring.decodeAddress(Ss58MultiSigAddress),
-		64
+		64,
 	);
 	const multisigCallHash = blake2AsHex(callTxHashMulti, 128);
 	const multisigStorageKey =
@@ -468,7 +468,7 @@ async function main(): Promise<void> {
 	console.log(
 		`${PURPLE}Waiting 10 seconds ${RESET}before making the RPC request` +
 			` so that we are sure that the Multisig storage has been updated` +
-			` with the info from the \`approveAsMulti\` transaction.`
+			` with the info from the \`approveAsMulti\` transaction.`,
 	);
 	await delay(10000);
 
@@ -482,7 +482,7 @@ async function main(): Promise<void> {
 	// 3. Creating the Multisig type using the registry and the result from our RPC call
 	const multisigType = registry.createType(
 		'PalletMultisigMultisig',
-		multisigStorage
+		multisigStorage,
 	);
 
 	// Parsing the Multisig's index
@@ -509,7 +509,7 @@ async function main(): Promise<void> {
 		{
 			address: deriveAddress(
 				signatoriesDict['Bob'].publicKey,
-				PolkadotSS58Format.polkadot
+				PolkadotSS58Format.polkadot,
 			),
 			blockHash,
 			blockNumber: registry
@@ -526,7 +526,7 @@ async function main(): Promise<void> {
 		{
 			metadataRpc,
 			registry,
-		}
+		},
 	);
 
 	// Construct the signing payload from an unsigned transaction.
@@ -542,7 +542,7 @@ async function main(): Promise<void> {
 		{
 			metadataRpc,
 			registry,
-		}
+		},
 	);
 	console.log(`\nSignature: ${signatureAsMulti}`);
 
@@ -556,7 +556,7 @@ async function main(): Promise<void> {
 	// Derive the tx hash of a signed transaction offline.
 	const expectedTxHashAsMulti = construct.txHash(txAsMulti);
 	console.log(
-		`\nExpected Tx Hash of the \`asMulti\` call \t: ${expectedTxHashAsMulti}`
+		`\nExpected Tx Hash of the \`asMulti\` call \t: ${expectedTxHashAsMulti}`,
 	);
 
 	// Send the tx to the node. Again, since `txwrapper` is offline-only, this
@@ -567,7 +567,7 @@ async function main(): Promise<void> {
 	]);
 	console.log(
 		`Actual Tx Hash of the ${GREEN}\`asMulti\`${RESET} call \t: ` +
-			`${GREEN}${actualTxHashAsMulti}${RESET}`
+			`${GREEN}${actualTxHashAsMulti}${RESET}`,
 	);
 
 	// Decode a signed payload.
@@ -578,7 +578,7 @@ async function main(): Promise<void> {
 	console.log(
 		`\nDecoded Transaction of \`asMulti\`\n` +
 			`  Call of unsignedTXMulti: ${txInfoAsMulti.method.args.call}\n` +
-			`  Threshold of unsignedTXMulti: ${txInfoAsMulti.method.args.threshold}\n`
+			`  Threshold of unsignedTXMulti: ${txInfoAsMulti.method.args.threshold}\n`,
 	);
 }
 

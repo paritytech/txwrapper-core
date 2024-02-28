@@ -8,7 +8,7 @@ import { UnsignedTransaction } from '../mock-types';
  */
 export function itHasCorrectBaseTxInfo(unsigned: UnsignedTransaction): void {
 	(['address', 'blockHash', 'genesisHash'] as const).forEach((key) =>
-		expect(unsigned[key]).toBe(TEST_BASE_TX_INFO[key])
+		expect(unsigned[key]).toBe(TEST_BASE_TX_INFO[key]),
 	);
 
 	expect(unsigned.blockNumber).toBe('0x0041a58e');
@@ -25,10 +25,10 @@ export function itHasCorrectBaseTxInfo(unsigned: UnsignedTransaction): void {
  * @param unsigned - Unsigned transaction to test
  */
 export function itHasCorrectBaseTxInfoForAstar(
-	unsigned: UnsignedTransaction
+	unsigned: UnsignedTransaction,
 ): void {
 	(['address', 'blockHash', 'genesisHash'] as const).forEach((key) =>
-		expect(unsigned[key]).toBe(ASTAR_TEST_BASE_TX_INFO[key])
+		expect(unsigned[key]).toBe(ASTAR_TEST_BASE_TX_INFO[key]),
 	);
 
 	expect(unsigned.blockNumber).toBe('0x004cd2ad');

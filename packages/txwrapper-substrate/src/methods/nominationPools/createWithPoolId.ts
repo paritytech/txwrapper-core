@@ -24,7 +24,7 @@ export interface NominationPoolsCreateWithPoolId extends NominationPoolsCreate {
 export function createWithPoolId(
 	args: NominationPoolsCreateWithPoolId,
 	info: BaseTxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	return defineMethod(
 		{
@@ -35,6 +35,6 @@ export function createWithPoolId(
 			},
 			...info,
 		},
-		options
+		options,
 	);
 }

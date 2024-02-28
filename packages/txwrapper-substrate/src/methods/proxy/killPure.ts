@@ -51,7 +51,7 @@ interface ProxyKillPureArgs extends Args {
 export function killPure(
 	args: ProxyKillPureArgs,
 	info: BaseTxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	return defineMethod(
 		{
@@ -62,6 +62,6 @@ export function killPure(
 			},
 			...info,
 		},
-		options
+		options,
 	);
 }

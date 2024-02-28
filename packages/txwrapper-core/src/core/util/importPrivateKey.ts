@@ -15,7 +15,7 @@ export type KeyringPair = KeyringPairBase; // eslint-disable-line @typescript-es
  */
 export function importPrivateKey(
 	privateKey: string | Uint8Array,
-	ss58Format: number
+	ss58Format: number,
 ): KeyringPair {
 	const keyring = new Keyring({ type: 'ed25519' });
 	keyring.setSS58Format(ss58Format);

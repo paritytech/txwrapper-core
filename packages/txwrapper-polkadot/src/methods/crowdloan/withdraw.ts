@@ -14,7 +14,7 @@ export interface CroadloanWithdrawArgs extends Args {
 export function withdraw(
 	args: CroadloanWithdrawArgs,
 	info: BaseTxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	return defineMethod(
 		{
@@ -25,6 +25,6 @@ export function withdraw(
 			},
 			...info,
 		},
-		options
+		options,
 	);
 }

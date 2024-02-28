@@ -17,7 +17,7 @@ import { construct } from '..';
 import { decodeSigningPayload } from './decodeSigningPayload';
 
 export function itDecodesSigningPayloadBalancesTransfer(
-	decoded: DecodedSigningPayload
+	decoded: DecodedSigningPayload,
 ): void {
 	(
 		[
@@ -32,7 +32,7 @@ export function itDecodesSigningPayloadBalancesTransfer(
 }
 
 export function itDecodesSigningPayloadBalancesTransferAstar(
-	decoded: DecodedSigningPayload
+	decoded: DecodedSigningPayload,
 ): void {
 	(
 		[
@@ -52,9 +52,9 @@ describe('decodeSigningPayload', () => {
 			balancesTransfer(
 				TEST_METHOD_ARGS.balances.transfer,
 				TEST_BASE_TX_INFO,
-				KUSAMA_TEST_OPTIONS
+				KUSAMA_TEST_OPTIONS,
 			),
-			KUSAMA_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS,
 		);
 
 		const decoded = decodeSigningPayload(signingPayload, KUSAMA_TEST_OPTIONS);
@@ -69,9 +69,9 @@ describe('decodeSigningPayload', () => {
 			balancesTransfer(
 				TEST_METHOD_ARGS.balances.transfer,
 				TEST_BASE_TX_INFO,
-				Object.assign({}, KUSAMA_TEST_OPTIONS, { isImmortalEra: true })
+				Object.assign({}, KUSAMA_TEST_OPTIONS, { isImmortalEra: true }),
 			),
-			KUSAMA_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS,
 		);
 
 		const decoded = decodeSigningPayload(signingPayload, KUSAMA_TEST_OPTIONS);
@@ -84,9 +84,9 @@ describe('decodeSigningPayload', () => {
 			balancesTransfer(
 				ASTAR_TEST_METHOD_ARGS.balances.transfer,
 				ASTAR_TEST_BASE_TX_INFO,
-				ASTAR_TEST_OPTIONS
+				ASTAR_TEST_OPTIONS,
 			),
-			ASTAR_TEST_OPTIONS
+			ASTAR_TEST_OPTIONS,
 		);
 
 		const decoded = decodeSigningPayload(signingPayload, ASTAR_TEST_OPTIONS);
@@ -101,9 +101,9 @@ describe('decodeSigningPayload', () => {
 			balancesTransfer(
 				ASTAR_TEST_METHOD_ARGS.balances.transfer,
 				ASTAR_TEST_BASE_TX_INFO,
-				Object.assign({}, ASTAR_TEST_OPTIONS, { isImmortalEra: true })
+				Object.assign({}, ASTAR_TEST_OPTIONS, { isImmortalEra: true }),
 			),
-			ASTAR_TEST_OPTIONS
+			ASTAR_TEST_OPTIONS,
 		);
 
 		const decoded = decodeSigningPayload(signingPayload, ASTAR_TEST_OPTIONS);

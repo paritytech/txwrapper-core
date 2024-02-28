@@ -29,7 +29,7 @@ export interface NominationPoolsChill extends Args {
 export function chill(
 	args: NominationPoolsChill,
 	info: BaseTxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	return defineMethod(
 		{
@@ -40,6 +40,6 @@ export function chill(
 			},
 			...info,
 		},
-		options
+		options,
 	);
 }

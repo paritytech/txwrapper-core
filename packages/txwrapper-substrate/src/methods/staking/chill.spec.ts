@@ -12,7 +12,7 @@ describe('staking::chill', () => {
 		const unsigned = chill(
 			TEST_METHOD_ARGS.staking.chill,
 			TEST_BASE_TX_INFO,
-			KUSAMA_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS,
 		);
 
 		itHasCorrectBaseTxInfo(unsigned);

@@ -25,9 +25,9 @@ describe('getRegistryBase', () => {
 		});
 
 		expect(
-			Buffer.from(completeRegistry.metadata.toHex(), 'utf-8').byteLength
+			Buffer.from(completeRegistry.metadata.toHex(), 'utf-8').byteLength,
 		).toBeGreaterThan(
-			Buffer.from(callsOnlyRegistry.metadata.toHex(), 'utf-8').byteLength
+			Buffer.from(callsOnlyRegistry.metadata.toHex(), 'utf-8').byteLength,
 		);
 	});
 
@@ -55,7 +55,7 @@ describe('getRegistryBase', () => {
 			typesBundle,
 		});
 		expect(
-			testRegistry.knownTypes.typesBundle?.spec?.['polkadot'].types?.[0].types
+			testRegistry.knownTypes.typesBundle?.spec?.['polkadot'].types?.[0].types,
 		).toEqual({
 			TestingType: 'u32',
 		});

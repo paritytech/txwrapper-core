@@ -19,7 +19,7 @@ export type BalancesTransferKeepAliveArgs = BalancesTransferArgs;
 export function transferKeepAlive(
 	args: BalancesTransferKeepAliveArgs,
 	info: BaseTxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	return defineMethod(
 		{
@@ -30,6 +30,6 @@ export function transferKeepAlive(
 			},
 			...info,
 		},
-		options
+		options,
 	);
 }

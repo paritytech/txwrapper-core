@@ -27,7 +27,7 @@ describe('defineMethod', () => {
 					pallet: 'staking',
 				},
 			},
-			KUSAMA_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS,
 		);
 
 		expect(unsigned.era).toBe('0xe500');
@@ -48,8 +48,8 @@ describe('defineMethod', () => {
 						pallet: 'staking',
 					},
 				},
-				KUSAMA_TEST_OPTIONS
-			)
+				KUSAMA_TEST_OPTIONS,
+			),
 		).toThrow(InvalidEraPeriodTooLow);
 	});
 
@@ -74,7 +74,7 @@ describe('defineMethod', () => {
 					pallet: 'staking',
 				},
 			},
-			adjustedOptions
+			adjustedOptions,
 		);
 
 		expect(unsigned.era).toBe('0x00');
@@ -94,7 +94,7 @@ describe('defineMethod', () => {
 					pallet: 'staking',
 				},
 			},
-			KUSAMA_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS,
 		);
 
 		expect(unsigned.era).toBe('0x2100');
@@ -119,19 +119,19 @@ describe('defineMethod', () => {
 		const unsignedPayload = balancesTransfer(
 			TEST_METHOD_ARGS.balances.transfer,
 			TEST_BASE_TX_INFO,
-			KUSAMA_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS,
 		);
 
 		const unsignedPayloadCallsOnly = balancesTransfer(
 			TEST_METHOD_ARGS.balances.transfer,
 			TEST_BASE_TX_INFO,
-			KUSAMA_TEST_OPTIONS_CALLS_ONLY
+			KUSAMA_TEST_OPTIONS_CALLS_ONLY,
 		);
 
 		expect(
-			Buffer.from(JSON.stringify(unsignedPayloadCallsOnly), 'utf-8').length
+			Buffer.from(JSON.stringify(unsignedPayloadCallsOnly), 'utf-8').length,
 		).toBeLessThan(
-			Buffer.from(JSON.stringify(unsignedPayload), 'utf-8').length
+			Buffer.from(JSON.stringify(unsignedPayload), 'utf-8').length,
 		);
 	});
 
@@ -139,7 +139,7 @@ describe('defineMethod', () => {
 		const unsignedPayload = balancesTransfer(
 			TEST_METHOD_ARGS.balances.transfer,
 			TEST_BASE_TX_INFO,
-			KUSAMA_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS,
 		);
 
 		/**
@@ -148,7 +148,7 @@ describe('defineMethod', () => {
 		 */
 		const registry = new TypeRegistry();
 		expect(
-			() => new Metadata(registry, unsignedPayload.metadataRpc)
+			() => new Metadata(registry, unsignedPayload.metadataRpc),
 		).not.toThrow();
 	});
 

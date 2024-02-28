@@ -18,7 +18,7 @@ import fetch from 'node-fetch';
  */
 export function rpcToLocalNode(
 	method: string,
-	params: any[] = []
+	params: any[] = [],
 ): Promise<any> {
 	return fetch('http://0.0.0.0:9933', {
 		body: JSON.stringify({
@@ -37,7 +37,7 @@ export function rpcToLocalNode(
 		.then(({ error, result }) => {
 			if (error) {
 				throw new Error(
-					`${error.code} ${error.message}: ${JSON.stringify(error.data)}`
+					`${error.code} ${error.message}: ${JSON.stringify(error.data)}`,
 				);
 			}
 
@@ -54,7 +54,7 @@ export function rpcToLocalNode(
 export function signWith(
 	pair: KeyringPair,
 	signingPayload: string,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): `0x${string}` {
 	const { registry, metadataRpc } = options;
 	// Important! The registry needs to be updated with latest metadata, so make

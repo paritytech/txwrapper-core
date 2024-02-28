@@ -57,7 +57,7 @@ export interface NominationPoolsUnbond extends Args {
 export function unbond(
 	args: NominationPoolsUnbond,
 	info: BaseTxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	return defineMethod(
 		{
@@ -68,6 +68,6 @@ export function unbond(
 			},
 			...info,
 		},
-		options
+		options,
 	);
 }

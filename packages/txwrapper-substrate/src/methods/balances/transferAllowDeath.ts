@@ -27,7 +27,7 @@ export interface BalancesTransferAllowDeathArgs extends Args {
 export function transferAllowDeath(
 	args: BalancesTransferAllowDeathArgs,
 	info: BaseTxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	return defineMethod(
 		{
@@ -38,6 +38,6 @@ export function transferAllowDeath(
 			},
 			...info,
 		},
-		options
+		options,
 	);
 }

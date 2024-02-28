@@ -12,7 +12,7 @@ describe('crowdloan::addMemo', () => {
 		const unsigned = addMemo(
 			TEST_METHOD_ARGS.crowdloan.addMemo,
 			TEST_BASE_TX_INFO,
-			KUSAMA_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS,
 		);
 
 		itHasCorrectBaseTxInfo(unsigned);

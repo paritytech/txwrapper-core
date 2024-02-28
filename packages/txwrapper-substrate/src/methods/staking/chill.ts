@@ -17,7 +17,7 @@ import {
 export function chill(
 	args: {},
 	info: BaseTxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	return defineMethod(
 		{
@@ -28,6 +28,6 @@ export function chill(
 			},
 			...info,
 		},
-		options
+		options,
 	);
 }

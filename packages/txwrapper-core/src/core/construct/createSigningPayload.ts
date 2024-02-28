@@ -52,7 +52,7 @@ import { Options, UnsignedTransaction } from '../../types';
  */
 export function createSigningPayload(
 	unsigned: UnsignedTransaction,
-	options: Options
+	options: Options,
 ): string {
 	const { registry } = options;
 
@@ -61,7 +61,7 @@ export function createSigningPayload(
 		!unsigned.signedExtensions.includes('ChargeAssetTxPayment')
 	) {
 		throw new Error(
-			'invalid transaction argument: assetId. Unsupported signed extension ChargeAssetTxPayment'
+			'invalid transaction argument: assetId. Unsupported signed extension ChargeAssetTxPayment',
 		);
 	}
 

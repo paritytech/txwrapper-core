@@ -9,12 +9,12 @@ import { Options, UnsignedTransaction } from '../../types';
  */
 export function encodeUnsignedTransaction(
 	unsigned: UnsignedTransaction,
-	options: Options
+	options: Options,
 ): string {
 	const tx = options.registry.createType(
 		'Extrinsic',
 		{ method: unsigned.method },
-		{ version: unsigned.version }
+		{ version: unsigned.version },
 	);
 	return tx.toHex();
 }

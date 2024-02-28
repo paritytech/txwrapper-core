@@ -23,7 +23,7 @@ export interface TestBalancesTransferArgs extends Args {
 export function balancesTransfer(
 	args: TestBalancesTransferArgs,
 	info: BaseTxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	return defineMethod(
 		{
@@ -34,6 +34,6 @@ export function balancesTransfer(
 			},
 			...info,
 		},
-		options
+		options,
 	);
 }

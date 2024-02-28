@@ -19,17 +19,17 @@ describe('decode', () => {
 		const unsigned = balancesTransfer(
 			TEST_METHOD_ARGS.balances.transfer,
 			TEST_BASE_TX_INFO,
-			KUSAMA_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS,
 		);
 		const signingPayload = construct.signingPayload(
 			unsigned,
-			KUSAMA_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS,
 		);
 		const signature = await signWithAlice(signingPayload);
 		const signedTx = construct.signedTx(
 			unsigned,
 			signature,
-			KUSAMA_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS,
 		);
 
 		const decoded = decode(signedTx, KUSAMA_TEST_OPTIONS);
@@ -43,7 +43,7 @@ describe('decode', () => {
 		const unsigned = balancesTransfer(
 			TEST_METHOD_ARGS.balances.transfer,
 			TEST_BASE_TX_INFO,
-			KUSAMA_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS,
 		);
 		const decoded = decode(unsigned, KUSAMA_TEST_OPTIONS);
 
@@ -56,16 +56,16 @@ describe('decode', () => {
 		const unsigned = balancesTransfer(
 			TEST_METHOD_ARGS.balances.transfer,
 			TEST_BASE_TX_INFO,
-			KUSAMA_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS,
 		);
 		const signingPayload = construct.signingPayload(
 			unsigned,
-			KUSAMA_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS,
 		);
 
 		const decoded = decode(
 			signingPayload,
-			KUSAMA_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS,
 		) as unknown as DecodedSigningPayload;
 
 		itDecodesSigningPayloadBalancesTransfer(decoded);

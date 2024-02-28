@@ -34,7 +34,7 @@ export interface SessionSetKeysArgs extends Args {
 export function setKeys(
 	args: SessionSetKeysArgs,
 	info: BaseTxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	const { keys, proof = '0x' } = args;
 
@@ -50,6 +50,6 @@ export function setKeys(
 			},
 			...info,
 		},
-		options
+		options,
 	);
 }

@@ -31,7 +31,7 @@ export interface NominationPoolsSetCommissionMax extends Args {
 export function setCommissionMax(
 	args: NominationPoolsSetCommissionMax,
 	info: BaseTxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	return defineMethod(
 		{
@@ -42,6 +42,6 @@ export function setCommissionMax(
 			},
 			...info,
 		},
-		options
+		options,
 	);
 }

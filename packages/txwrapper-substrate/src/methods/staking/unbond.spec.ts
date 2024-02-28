@@ -12,7 +12,7 @@ describe('staking::unbond', () => {
 		const unsigned = unbond(
 			TEST_METHOD_ARGS.staking.unbond,
 			TEST_BASE_TX_INFO,
-			KUSAMA_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS,
 		);
 
 		itHasCorrectBaseTxInfo(unsigned);

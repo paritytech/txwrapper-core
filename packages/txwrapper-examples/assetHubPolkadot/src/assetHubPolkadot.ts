@@ -30,7 +30,7 @@ async function main(): Promise<void> {
 	const alice = keyring.addFromUri('//Alice', { name: 'Alice' }, 'sr25519');
 	console.log(
 		"Alice's SS58-Encoded Address:",
-		deriveAddress(alice.publicKey, PolkadotSS58Format.westend)
+		deriveAddress(alice.publicKey, PolkadotSS58Format.westend),
 	);
 
 	// Construct a balance transfer transaction offline.
@@ -42,7 +42,7 @@ async function main(): Promise<void> {
 	const genesisHash = await rpcToLocalNode('chain_getBlockHash', [0]);
 	const metadataRpc = await rpcToLocalNode('state_getMetadata');
 	const { specVersion, transactionVersion, specName } = await rpcToLocalNode(
-		'state_getRuntimeVersion'
+		'state_getRuntimeVersion',
 	);
 
 	/**
@@ -109,7 +109,7 @@ async function main(): Promise<void> {
 		{
 			metadataRpc,
 			registry,
-		}
+		},
 	);
 
 	// Decode an unsigned transaction.
@@ -121,7 +121,7 @@ async function main(): Promise<void> {
 	console.log(
 		`\nDecoded Transaction\n  To: ${
 			(decodedUnsigned.method.args.dest as { id: string })?.id
-		}\n` + `  Amount: ${decodedUnsigned.method.args.value}`
+		}\n` + `  Amount: ${decodedUnsigned.method.args.value}`,
 	);
 
 	// Construct the signing payload from an unsigned transaction.
@@ -138,7 +138,7 @@ async function main(): Promise<void> {
 			(payloadInfo.method.args.dest as { id: string })?.id
 		}\n` +
 			`  Amount: ${payloadInfo.method.args.value}\n` +
-			`  AssetId: ${payloadInfo.assetId}`
+			`  AssetId: ${payloadInfo.assetId}`,
 	);
 
 	// Sign a payload. This operation should be performed on an offline device.
@@ -174,7 +174,7 @@ async function main(): Promise<void> {
 	console.log(
 		`\nDecoded Transaction\n  To: ${
 			(txInfo.method.args.dest as { id: string })?.id
-		}\n` + `  Amount: ${txInfo.method.args.value}\n`
+		}\n` + `  Amount: ${txInfo.method.args.value}\n`,
 	);
 }
 

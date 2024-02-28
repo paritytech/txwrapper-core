@@ -24,7 +24,7 @@ export interface VestingVestOtherArgs extends Args {
 export function vestOther(
 	args: VestingVestOtherArgs,
 	info: BaseTxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	return defineMethod(
 		{
@@ -35,6 +35,6 @@ export function vestOther(
 			},
 			...info,
 		},
-		options
+		options,
 	);
 }

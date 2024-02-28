@@ -16,7 +16,7 @@ import {
 export function setController(
 	args: Args,
 	info: BaseTxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	return defineMethod(
 		{
@@ -27,6 +27,6 @@ export function setController(
 			},
 			...info,
 		},
-		options
+		options,
 	);
 }

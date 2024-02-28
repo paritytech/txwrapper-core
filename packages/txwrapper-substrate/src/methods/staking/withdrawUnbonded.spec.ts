@@ -12,7 +12,7 @@ describe('staking::withdrawUnbonded', () => {
 		const unsigned = withdrawUnbonded(
 			TEST_METHOD_ARGS.staking.withdrawUnbonded,
 			TEST_BASE_TX_INFO,
-			KUSAMA_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS,
 		);
 
 		itHasCorrectBaseTxInfo(unsigned);

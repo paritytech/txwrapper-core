@@ -10,7 +10,7 @@ import { TokensTransferArgs } from './transfer';
 export function transferKeepAlive(
 	args: TokensTransferArgs,
 	info: BaseTxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	return defineMethod(
 		{
@@ -21,6 +21,6 @@ export function transferKeepAlive(
 			},
 			...info,
 		},
-		options
+		options,
 	);
 }

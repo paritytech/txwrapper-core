@@ -12,7 +12,7 @@ describe('nominationPools::chill', () => {
 		const unsigned = chill(
 			TEST_METHOD_ARGS.nominationPools.chill,
 			TEST_BASE_TX_INFO,
-			KUSAMA_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS,
 		);
 
 		itHasCorrectBaseTxInfo(unsigned);

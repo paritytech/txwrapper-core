@@ -17,7 +17,7 @@ export interface CrowdloanContributeArgs extends Args {
 export function contribute(
 	args: CrowdloanContributeArgs,
 	info: BaseTxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	return defineMethod(
 		{
@@ -28,6 +28,6 @@ export function contribute(
 			},
 			...info,
 		},
-		options
+		options,
 	);
 }

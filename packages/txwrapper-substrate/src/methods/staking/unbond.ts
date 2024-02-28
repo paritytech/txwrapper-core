@@ -26,7 +26,7 @@ export interface StakingUnbondArgs extends Args {
 export function unbond(
 	args: StakingUnbondArgs,
 	info: BaseTxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	return defineMethod(
 		{
@@ -37,6 +37,6 @@ export function unbond(
 			},
 			...info,
 		},
-		options
+		options,
 	);
 }

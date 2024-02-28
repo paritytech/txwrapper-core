@@ -24,7 +24,7 @@ const TYPE_ADDRESS = {
 export function deriveAddress(
 	publicKey: string | Uint8Array,
 	ss58Format: number,
-	scheme: 'ed25519' | 'sr25519' | 'ecdsa' = 'sr25519'
+	scheme: 'ed25519' | 'sr25519' | 'ecdsa' = 'sr25519',
 ): string {
 	const raw = isHex(publicKey)
 		? hexToU8a(publicKey)

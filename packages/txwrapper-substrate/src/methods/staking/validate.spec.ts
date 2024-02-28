@@ -12,7 +12,7 @@ describe('staking::validate', () => {
 		const unsigned = validate(
 			TEST_METHOD_ARGS.staking.validate,
 			TEST_BASE_TX_INFO,
-			KUSAMA_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS,
 		);
 
 		itHasCorrectBaseTxInfo(unsigned);

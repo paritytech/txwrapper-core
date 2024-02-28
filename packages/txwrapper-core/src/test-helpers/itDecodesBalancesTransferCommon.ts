@@ -12,12 +12,12 @@ import {
  * @param decoded info from a decoded tx
  */
 export function itDecodesBalancesTransferCommon(
-	decoded: DecodedSignedTx | DecodedSigningPayload | DecodedUnsignedTx
+	decoded: DecodedSignedTx | DecodedSigningPayload | DecodedUnsignedTx,
 ): void {
 	expect(decoded.method.pallet).toBe('balances');
 	expect(decoded.method.name).toBe('transfer');
 	expect(decoded.method.args.dest).toEqual(
-		TEST_METHOD_ARGS.balances.transfer.dest
+		TEST_METHOD_ARGS.balances.transfer.dest,
 	);
 	expect(decoded.method.args.value).toEqual('12');
 

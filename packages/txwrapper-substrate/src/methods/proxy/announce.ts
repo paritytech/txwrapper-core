@@ -40,7 +40,7 @@ interface ProxyAnnounceArgs extends Args {
 export function announce(
 	args: ProxyAnnounceArgs,
 	info: BaseTxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	return defineMethod(
 		{
@@ -51,6 +51,6 @@ export function announce(
 			},
 			...info,
 		},
-		options
+		options,
 	);
 }

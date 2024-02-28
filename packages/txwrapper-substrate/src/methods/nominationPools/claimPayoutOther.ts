@@ -26,7 +26,7 @@ export interface NominationPoolsClaimPayoutOther extends Args {
 export function claimPayoutOther(
 	args: NominationPoolsClaimPayoutOther,
 	info: BaseTxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	return defineMethod(
 		{
@@ -37,6 +37,6 @@ export function claimPayoutOther(
 			},
 			...info,
 		},
-		options
+		options,
 	);
 }

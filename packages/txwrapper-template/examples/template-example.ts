@@ -23,7 +23,7 @@ async function main(): Promise<void> {
 	const alice = keyring.addFromUri('//Alice', { name: 'Alice' }, 'sr25519');
 	console.log(
 		"Alice's SS58-Encoded Address:",
-		deriveAddress(alice.publicKey, 42) // TODO, use correct prefix
+		deriveAddress(alice.publicKey, 42), // TODO, use correct prefix
 	);
 
 	// To construct the tx, we need some up-to-date information from the node.
@@ -34,7 +34,7 @@ async function main(): Promise<void> {
 	const genesisHash = await rpcToLocalNode('chain_getBlockHash', [0]);
 	const metadataRpc = await rpcToLocalNode('state_getMetadata');
 	const { specVersion, transactionVersion, specName } = await rpcToLocalNode(
-		'state_getRuntimeVersion'
+		'state_getRuntimeVersion',
 	);
 
 	// Create [TODO CHAIN NAME] type registry.
@@ -72,7 +72,7 @@ async function main(): Promise<void> {
 		{
 			metadataRpc,
 			registry,
-		}
+		},
 	);
 
 	// Decode an unsigned transaction.
@@ -83,7 +83,7 @@ async function main(): Promise<void> {
 	console.log(
 		// TODO all the log messages need to be updated to be relevant to the method used
 		`\nDecoded Transaction\n  To: ${decodedUnsigned.method.args.dest}\n` +
-			`  Amount: ${decodedUnsigned.method.args.value}`
+			`  Amount: ${decodedUnsigned.method.args.value}`,
 	);
 
 	// Construct the signing payload from an unsigned transaction.
@@ -98,7 +98,7 @@ async function main(): Promise<void> {
 	console.log(
 		// TODO all the log messages need to be updated to be relevant to the method used
 		`\nDecoded Transaction\n  To: ${payloadInfo.method.args.dest}\n` +
-			`  Amount: ${payloadInfo.method.args.value}`
+			`  Amount: ${payloadInfo.method.args.value}`,
 	);
 
 	// Sign a payload. This operation should be performed on an offline device.
@@ -133,7 +133,7 @@ async function main(): Promise<void> {
 	console.log(
 		// TODO all the log messages need to be updated to be relevant to the method used
 		`\nDecoded Transaction\n  To: ${txInfo.method.args.dest}\n` +
-			`  Amount: ${txInfo.method.args.value}\n`
+			`  Amount: ${txInfo.method.args.value}\n`,
 	);
 }
 

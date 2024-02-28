@@ -10,7 +10,7 @@ import { getRegistryBase, PolkadotSS58Format } from '@substrate/txwrapper-core';
  */
 export function getRegistryMandala(
 	specVersion: number,
-	metadataRpc: `0x${string}`
+	metadataRpc: `0x${string}`,
 ): TypeRegistry {
 	const registry = new TypeRegistry();
 

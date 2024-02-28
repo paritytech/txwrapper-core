@@ -8828,6 +8828,8 @@ __metadata:
     "@polkadot/util-crypto": "npm:^12.6.2"
     "@substrate/dev": "npm:^0.7.1"
     "@types/node-fetch": "npm:^2.6.3"
+    "@typescript-eslint/eslint-plugin": "npm:^6.11.0"
+    "@typescript-eslint/parser": "npm:^6.11.0"
     lerna: "npm:^8.1.2"
     ts-jest: "npm:^29.1.1"
     ts-node: "npm:^9.1.1"

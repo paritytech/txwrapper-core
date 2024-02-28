@@ -34,7 +34,7 @@ export interface AssetsTransferKeepAliveArgs extends Args {
 export function transferKeepAlive(
 	args: AssetsTransferKeepAliveArgs,
 	info: BaseTxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	return defineMethod(
 		{
@@ -45,6 +45,6 @@ export function transferKeepAlive(
 			},
 			...info,
 		},
-		options
+		options,
 	);
 }

@@ -12,7 +12,7 @@ describe('nominationPools::join', () => {
 		const unsigned = join(
 			TEST_METHOD_ARGS.nominationPools.join,
 			TEST_BASE_TX_INFO,
-			KUSAMA_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS,
 		);
 
 		itHasCorrectBaseTxInfo(unsigned);

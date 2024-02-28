@@ -12,7 +12,7 @@ describe('staking::bond', () => {
 		const unsigned = bond(
 			TEST_METHOD_ARGS.staking.bond,
 			WESTEND_TEST_BASE_TX_INFO,
-			WESTEND_TEST_OPTIONS
+			WESTEND_TEST_OPTIONS,
 		);
 
 		itHasCorrectBaseTxInfo(unsigned);
@@ -23,12 +23,12 @@ describe('staking::bond', () => {
 		const unsignedLowerCase = bond(
 			{ ...TEST_METHOD_ARGS.staking.bond, payee: 'staked' },
 			WESTEND_TEST_BASE_TX_INFO,
-			WESTEND_TEST_OPTIONS
+			WESTEND_TEST_OPTIONS,
 		);
 		const unsignedCapitalized = bond(
 			{ ...TEST_METHOD_ARGS.staking.bond, payee: 'Staked' },
 			WESTEND_TEST_BASE_TX_INFO,
-			WESTEND_TEST_OPTIONS
+			WESTEND_TEST_OPTIONS,
 		);
 
 		expect(unsignedLowerCase.method).toBe(unsignedCapitalized.method);
