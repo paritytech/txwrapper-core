@@ -1,16 +1,12 @@
 {
-  "packages": [
-    "packages/*"
-  ],
-  "version": "7.2.0",
-  "npmClient": "yarn",
-  "useWorkspaces": true,
-  "command": {
-    "publish": {
-      "ignoreChanges": [
-        "*.md"
-      ],
-      "message": "chore(release): publish"
-    }
-  }
+	"packages": ["packages/*"],
+	"version": "7.2.0",
+	"npmClient": "yarn",
+	"command": {
+		"publish": {
+			"ignoreChanges": ["*.md"],
+			"message": "chore(release): publish"
+		}
+	},
+	"$schema": "node_modules/lerna/schemas/lerna-schema.json"
 }
