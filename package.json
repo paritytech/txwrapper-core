@@ -25,15 +25,15 @@
   },
   "devDependencies": {
     "@polkadot/util-crypto": "^12.6.2",
-    "@substrate/dev": "^0.6.7",
+    "@substrate/dev": "^0.7.1",
     "@types/node-fetch": "^2.6.3",
     "lerna": "^8.1.2",
+    "ts-jest": "^29.1.1",
     "ts-node": "^9.1.1",
     "tsconfig-paths": "^3.9.0",
     "typedoc": "^0.22.10",
     "typedoc-plugin-markdown": "^3.11.8",
     "typedoc-plugin-missing-exports": "^0.22.6",
     "typescript": "4.9.4"
-  },
-  "packageManager": "yarn@4.1.0"
+  }
 }
