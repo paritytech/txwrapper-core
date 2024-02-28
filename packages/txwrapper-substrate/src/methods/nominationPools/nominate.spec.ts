@@ -12,13 +12,13 @@ describe('nominationPools::nominate', () => {
 		const unsigned = nominate(
 			TEST_METHOD_ARGS.nominationPools.nominate,
 			TEST_BASE_TX_INFO,
-			KUSAMA_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS,
 		);
 
 		itHasCorrectBaseTxInfo(unsigned);
 
 		expect(unsigned.method).toBe(
-			'0x29080400000008d43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d8eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48'
+			'0x29080400000008d43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d8eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48',
 		);
 	});
 });

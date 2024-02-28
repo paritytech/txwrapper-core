@@ -34,7 +34,7 @@ export interface StakingPayoutStakersArgs extends Args {
 export function payoutStakers(
 	args: StakingPayoutStakersArgs,
 	info: BaseTxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	return defineMethod(
 		{
@@ -45,6 +45,6 @@ export function payoutStakers(
 			},
 			...info,
 		},
-		options
+		options,
 	);
 }

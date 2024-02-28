@@ -28,7 +28,7 @@ export interface TokensTransferAllArgs extends Args {
 export function transferAll(
 	args: TokensTransferAllArgs,
 	info: BaseTxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	return defineMethod(
 		{
@@ -39,6 +39,6 @@ export function transferAll(
 			},
 			...info,
 		},
-		options
+		options,
 	);
 }

@@ -32,7 +32,7 @@ export interface ProxyAddProxy extends Args {
 export function addProxy(
 	args: ProxyAddProxy,
 	info: BaseTxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	return defineMethod(
 		{
@@ -43,6 +43,6 @@ export function addProxy(
 			},
 			...info,
 		},
-		options
+		options,
 	);
 }

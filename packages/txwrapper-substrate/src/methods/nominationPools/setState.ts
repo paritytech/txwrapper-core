@@ -37,7 +37,7 @@ export interface NominationPoolsSetState extends Args {
 export function setState(
 	args: NominationPoolsSetState,
 	info: BaseTxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	return defineMethod(
 		{
@@ -48,6 +48,6 @@ export function setState(
 			},
 			...info,
 		},
-		options
+		options,
 	);
 }

@@ -51,7 +51,7 @@ export interface MultiSigApproveAsMulti extends Args {
 export function approveAsMulti(
 	args: MultiSigApproveAsMulti,
 	info: BaseTxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	return defineMethod(
 		{
@@ -62,6 +62,6 @@ export function approveAsMulti(
 			},
 			...info,
 		},
-		options
+		options,
 	);
 }

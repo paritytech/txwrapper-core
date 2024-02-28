@@ -42,7 +42,7 @@ export interface NominationPoolsCreate extends Args {
 export function create(
 	args: NominationPoolsCreate,
 	info: BaseTxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	return defineMethod(
 		{
@@ -53,6 +53,6 @@ export function create(
 			},
 			...info,
 		},
-		options
+		options,
 	);
 }

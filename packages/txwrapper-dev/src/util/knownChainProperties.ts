@@ -18,5 +18,5 @@ export const knownChainProperties = substrateSS58Registry.reduce(
 
 		return acc;
 	},
-	{} as Record<string, ChainProperties>
+	{} as Record<string, ChainProperties>,
 );

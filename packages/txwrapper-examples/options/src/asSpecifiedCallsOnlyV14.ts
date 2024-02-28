@@ -6,7 +6,7 @@ import { rpcToLocalNode } from '../../common/util';
 async function main(): Promise<void> {
 	const metadataRpc: `0x${string}` = await rpcToLocalNode('state_getMetadata');
 	const { specVersion, specName } = await rpcToLocalNode(
-		'state_getRuntimeVersion'
+		'state_getRuntimeVersion',
 	);
 
 	const asSpecifiedCallsOnlyV14 = ['balances', 'system'];
@@ -30,7 +30,7 @@ async function main(): Promise<void> {
 		// eslint-disable-next-line @typescript-eslint/no-unsafe-argument
 		metadataRpc,
 		false,
-		asSpecifiedCallsOnlyV14
+		asSpecifiedCallsOnlyV14,
 	);
 
 	// eslint-disable-next-line @typescript-eslint/no-unsafe-argument
@@ -39,7 +39,7 @@ async function main(): Promise<void> {
 
 	console.log(`Original metadata byte size: ${oldMetadataByteSize}`);
 	console.log(
-		`Specified Calls Only V14 metadata byte size: ${newMetadataByteSize}`
+		`Specified Calls Only V14 metadata byte size: ${newMetadataByteSize}`,
 	);
 
 	const percentageDecrease =

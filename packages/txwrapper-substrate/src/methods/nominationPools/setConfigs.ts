@@ -50,7 +50,7 @@ export interface NominationPoolsSetConfigs extends Args {
 export function setConfigs(
 	args: NominationPoolsSetConfigs,
 	info: BaseTxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	return defineMethod(
 		{
@@ -61,6 +61,6 @@ export function setConfigs(
 			},
 			...info,
 		},
-		options
+		options,
 	);
 }

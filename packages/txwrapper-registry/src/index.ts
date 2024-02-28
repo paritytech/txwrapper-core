@@ -32,7 +32,7 @@ export const knownChainProperties = substrateSS58Registry.reduce(
 
 		return acc;
 	},
-	{} as Record<string, ChainProperties>
+	{} as Record<string, ChainProperties>,
 );
 
 // We override the`specName` property in order to get narrower type specificity. We add a doc
@@ -51,7 +51,7 @@ export interface GetRegistryOpts extends GetRegistryOptsCore {
 }
 
 function parseTypesBundle(
-	path: string | undefined
+	path: string | undefined,
 ): OverrideBundleType | undefined {
 	if (!path) return undefined;
 
@@ -61,7 +61,7 @@ function parseTypesBundle(
 		parsedJson = JSON.parse(rawData);
 	} catch (e) {
 		console.error(
-			`Invalid file path or not able to parse file to JSON: ${e as string}`
+			`Invalid file path or not able to parse file to JSON: ${e as string}`,
 		);
 	}
 
@@ -71,7 +71,7 @@ function parseTypesBundle(
 const envTypesBundle: OverrideBundleType | undefined = parseTypesBundle(
 	!isBrowser && typeof process?.env?.TX_TYPES_BUNDLE !== 'undefined'
 		? process.env.TX_TYPES_BUNDLE
-		: undefined
+		: undefined,
 );
 
 /**

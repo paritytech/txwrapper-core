@@ -54,7 +54,7 @@ export enum MethodErrorMessages {
  */
 export function createEra(
 	registry: TypeRegistry,
-	options: EraOptions
+	options: EraOptions,
 ): ExtrinsicEra {
 	const { InvalidEraPeriodTooLow, InvalidEraPeriodTooHigh } =
 		MethodErrorMessages;
@@ -99,7 +99,7 @@ export function createEra(
  */
 export function defineMethod(
 	info: TxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	const {
 		metadataRpc,
@@ -115,7 +115,7 @@ export function defineMethod(
 		registry,
 		metadataRpc,
 		asCallsOnlyArg,
-		asSpecifiedCallsOnlyV14
+		asSpecifiedCallsOnlyV14,
 	);
 
 	registry.setMetadata(generatedMetadata, signedExtensions, userExtensions);
@@ -137,12 +137,12 @@ export function defineMethod(
 				throw new Error(
 					`Method ${info.method.pallet}::${
 						info.method.name
-					} expects argument ${arg.toString()}, but got undefined`
+					} expects argument ${arg.toString()}, but got undefined`,
 				);
 			}
 
 			return info.method.args[stringCamelCase(arg.name.toString())];
-		})
+		}),
 	).toHex();
 
 	const eraOptions: EraOptions = isImmortalEra
@@ -151,7 +151,7 @@ export function defineMethod(
 				kind: 'mortal',
 				blockNumber: info.blockNumber,
 				period: info.eraPeriod,
-		  };
+			};
 
 	const extrinsicEra = createEra(registry, eraOptions);
 	const blockHash = info.blockHash as `0x${string}`;

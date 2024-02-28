@@ -15,18 +15,18 @@ import {
  * @param decoded info from a decoded tx
  */
 export function itDecodesBalancesTransferAstar(
-	decoded: DecodedSignedTx | DecodedSigningPayload | DecodedUnsignedTx
+	decoded: DecodedSignedTx | DecodedSigningPayload | DecodedUnsignedTx,
 ): void {
 	expect(decoded.method.pallet).toBe('balances');
 	expect(decoded.method.name).toBe('transfer');
 	expect(decoded.method.args.dest).toEqual(
-		ASTAR_TEST_METHOD_ARGS.balances.transfer.dest
+		ASTAR_TEST_METHOD_ARGS.balances.transfer.dest,
 	);
 	expect(decoded.method.args.value).toEqual('12');
 
 	// The actual period is the smallest power of 2 greater than the input
 	// period.
 	expect(decoded.eraPeriod).toBeGreaterThanOrEqual(
-		ASTAR_TEST_BASE_TX_INFO.eraPeriod
+		ASTAR_TEST_BASE_TX_INFO.eraPeriod,
 	);
 }

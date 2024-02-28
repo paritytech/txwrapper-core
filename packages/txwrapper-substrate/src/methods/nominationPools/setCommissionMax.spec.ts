@@ -12,7 +12,7 @@ describe('nominationPools::setCommissionMax', () => {
 		const unsigned = setCommissionMax(
 			TEST_METHOD_ARGS.nominationPools.setCommissionMax,
 			TEST_BASE_TX_INFO,
-			KUSAMA_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS,
 		);
 
 		itHasCorrectBaseTxInfo(unsigned);

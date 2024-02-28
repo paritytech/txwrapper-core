@@ -39,7 +39,7 @@ export interface MultisigAsMulti
 export function asMulti(
 	args: MultisigAsMulti,
 	info: BaseTxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	return defineMethod(
 		{
@@ -50,6 +50,6 @@ export function asMulti(
 			},
 			...info,
 		},
-		options
+		options,
 	);
 }

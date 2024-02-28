@@ -11,7 +11,7 @@ describe('staking::setController', () => {
 		const unsigned = setController(
 			{},
 			WESTEND_TEST_BASE_TX_INFO,
-			WESTEND_TEST_OPTIONS
+			WESTEND_TEST_OPTIONS,
 		);
 
 		itHasCorrectBaseTxInfo(unsigned);

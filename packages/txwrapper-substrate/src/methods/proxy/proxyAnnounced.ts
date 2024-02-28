@@ -41,7 +41,7 @@ export interface ProxyProxyAnnouncedArgs extends Args {
 export function proxyAnnounced(
 	args: ProxyProxyAnnouncedArgs,
 	info: BaseTxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	return defineMethod(
 		{
@@ -52,6 +52,6 @@ export function proxyAnnounced(
 			},
 			...info,
 		},
-		options
+		options,
 	);
 }

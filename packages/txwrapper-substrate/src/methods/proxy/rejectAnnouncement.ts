@@ -27,7 +27,7 @@ export interface ProxyRejectAnnouncementArgs extends Args {
 export function rejectAnnouncement(
 	args: ProxyRejectAnnouncementArgs,
 	info: BaseTxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	return defineMethod(
 		{
@@ -38,6 +38,6 @@ export function rejectAnnouncement(
 			},
 			...info,
 		},
-		options
+		options,
 	);
 }

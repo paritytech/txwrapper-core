@@ -17,7 +17,7 @@ import { ProxyAddProxy } from './addProxy';
 export function removeProxy(
 	args: ProxyAddProxy,
 	info: BaseTxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	return defineMethod(
 		{
@@ -28,6 +28,6 @@ export function removeProxy(
 			},
 			...info,
 		},
-		options
+		options,
 	);
 }

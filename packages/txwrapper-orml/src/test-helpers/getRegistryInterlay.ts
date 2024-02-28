@@ -10,7 +10,7 @@ import { getRegistryBase } from '@substrate/txwrapper-core';
  */
 export function getRegistryInterlay(
 	specVersion: number,
-	metadataRpc: `0x${string}`
+	metadataRpc: `0x${string}`,
 ): TypeRegistry {
 	const registry = new TypeRegistry();
 
@@ -24,7 +24,7 @@ export function getRegistryInterlay(
 			registry,
 			'Interlay',
 			'interlay-parachain',
-			specVersion
+			specVersion,
 		),
 		metadataRpc,
 	});

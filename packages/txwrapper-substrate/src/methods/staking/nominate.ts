@@ -28,7 +28,7 @@ export interface StakingNominateArgs extends Args {
 export function nominate(
 	args: StakingNominateArgs,
 	info: BaseTxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	return defineMethod(
 		{
@@ -39,6 +39,6 @@ export function nominate(
 			},
 			...info,
 		},
-		options
+		options,
 	);
 }

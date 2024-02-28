@@ -15,7 +15,7 @@ import {
 export function removeProxies(
 	args: {},
 	info: BaseTxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	return defineMethod(
 		{
@@ -26,6 +26,6 @@ export function removeProxies(
 			},
 			...info,
 		},
-		options
+		options,
 	);
 }

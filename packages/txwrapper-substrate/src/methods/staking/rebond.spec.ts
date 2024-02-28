@@ -12,7 +12,7 @@ describe('staking::rebond', () => {
 		const unsigned = rebond(
 			TEST_METHOD_ARGS.staking.rebond,
 			TEST_BASE_TX_INFO,
-			KUSAMA_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS,
 		);
 
 		itHasCorrectBaseTxInfo(unsigned);

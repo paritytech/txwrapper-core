@@ -10,7 +10,7 @@ describe('importPrivateKey', () => {
 		const keypair = importPrivateKey(PRIVATE_KEY, PolkadotSS58Format.kusama);
 
 		expect(keypair.address).toBe(
-			'HSgj13mnepYxuysui2XroHKigftFpQsg1dcSfA9PckdZJW4'
+			'HSgj13mnepYxuysui2XroHKigftFpQsg1dcSfA9PckdZJW4',
 		);
 	});
 
@@ -18,7 +18,7 @@ describe('importPrivateKey', () => {
 		const keypair = importPrivateKey(PRIVATE_KEY, PolkadotSS58Format.polkadot);
 
 		expect(keypair.address).toBe(
-			'15sND1xy2556eoAx6eGV6zkURiPJ9T9qJ8XMDHsYTuZezp7f'
+			'15sND1xy2556eoAx6eGV6zkURiPJ9T9qJ8XMDHsYTuZezp7f',
 		);
 	});
 });

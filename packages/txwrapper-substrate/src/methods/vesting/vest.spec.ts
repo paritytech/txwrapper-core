@@ -12,7 +12,7 @@ describe('vesting::vest', () => {
 		const unsigned = vest(
 			TEST_METHOD_ARGS.vesting.vest,
 			TEST_BASE_TX_INFO,
-			KUSAMA_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS,
 		);
 
 		itHasCorrectBaseTxInfo(unsigned);

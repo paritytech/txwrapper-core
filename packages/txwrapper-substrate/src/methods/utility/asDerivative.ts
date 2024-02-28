@@ -48,7 +48,7 @@ export interface UtilityAsDerivativeArgs extends Args {
 export function asDerivative(
 	args: UtilityAsDerivativeArgs,
 	info: BaseTxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	return defineMethod(
 		{
@@ -59,6 +59,6 @@ export function asDerivative(
 			},
 			...info,
 		},
-		options
+		options,
 	);
 }

@@ -31,7 +31,7 @@ export interface NominationPoolsSetCommission extends Args {
 export function setCommission(
 	args: NominationPoolsSetCommission,
 	info: BaseTxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	return defineMethod(
 		{
@@ -42,6 +42,6 @@ export function setCommission(
 			},
 			...info,
 		},
-		options
+		options,
 	);
 }

@@ -61,7 +61,7 @@ export function getRegistryBase({
 	const generatedMetadata = createMetadataUnmemoized(
 		registry,
 		metadataRpc,
-		asCallsOnlyArg
+		asCallsOnlyArg,
 	);
 
 	registry.register(specTypes);
@@ -76,7 +76,7 @@ export function getRegistryBase({
 
 	// Register the chain properties for this registry
 	registry.setChainProperties(
-		registry.createType('ChainProperties', chainProperties)
+		registry.createType('ChainProperties', chainProperties),
 	);
 
 	return registry;

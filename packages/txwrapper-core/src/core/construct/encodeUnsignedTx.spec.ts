@@ -15,13 +15,13 @@ describe('encodeUnsignedTransaction', () => {
 		const unsigned = balancesTransfer(
 			TEST_METHOD_ARGS.balances.transfer,
 			TEST_BASE_TX_INFO,
-			KUSAMA_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS,
 		);
 
 		const encoded = encodeUnsignedTransaction(unsigned, KUSAMA_TEST_OPTIONS);
 
 		expect(encoded).toBe(
-			'0x940404070096074594cccf1cd185fa8a72ceaeefd86648f8d45514f3ce33c31bdd07e4655d30'
+			'0x940404070096074594cccf1cd185fa8a72ceaeefd86648f8d45514f3ce33c31bdd07e4655d30',
 		);
 	});
 
@@ -29,13 +29,13 @@ describe('encodeUnsignedTransaction', () => {
 		const unsigned = balancesTransfer(
 			ASTAR_TEST_METHOD_ARGS.balances.transfer,
 			ASTAR_TEST_BASE_TX_INFO,
-			ASTAR_TEST_OPTIONS
+			ASTAR_TEST_OPTIONS,
 		);
 
 		const encoded = encodeUnsignedTransaction(unsigned, ASTAR_TEST_OPTIONS);
 
 		expect(encoded).toBe(
-			'0x94041f070046ef637afac0ffa9ec7a7cf76c5e0148200a401e2a1efcf2c16ee1554b74a22030'
+			'0x94041f070046ef637afac0ffa9ec7a7cf76c5e0148200a401e2a1efcf2c16ee1554b74a22030',
 		);
 	});
 });

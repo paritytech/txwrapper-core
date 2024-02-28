@@ -11,43 +11,43 @@ import { createMetadata, createMetadataUnmemoized } from './createMetadata';
 describe('createMetadata', () => {
 	const registry = memoizedPolkadotGetRegistry(
 		POLKADOT_SPEC_VERSION,
-		polkadotMetadataHex
+		polkadotMetadataHex,
 	);
 	const unmemoizedMetadata: Metadata = createMetadataUnmemoized(
 		registry,
-		polkadotMetadataHex
+		polkadotMetadataHex,
 	);
 	const unmemoizedMetadataAsCalls: MetadataVersioned = createMetadataUnmemoized(
 		registry,
 		polkadotMetadataHex,
-		true
+		true,
 	);
 	const memoizedMetadata: Metadata = createMetadata(
 		registry,
-		polkadotMetadataHex
+		polkadotMetadataHex,
 	);
 	const memoizedMetadataAsCalls: MetadataVersioned = createMetadata(
 		registry,
 		polkadotMetadataHex,
-		true
+		true,
 	);
 	const memoizedMetadataAsSpecifiedCalls: MetadataVersioned = createMetadata(
 		registry,
 		polkadotMetadataHex,
 		false,
-		['balances', 'system']
+		['balances', 'system'],
 	);
 
 	it('Metadata should decrease in byte size when `asCallsOnlyArg` is true with `createMetadataUnmemoized`', () => {
 		const metadataBuffer = Buffer.from(unmemoizedMetadata.toHex(), 'utf-8');
 		const metadataAsCallsBuffer = Buffer.from(
 			unmemoizedMetadataAsCalls.toHex(),
-			'utf-8'
+			'utf-8',
 		);
 
 		expect(metadataAsCallsBuffer.byteLength).toBeGreaterThan(0);
 		expect(metadataBuffer.byteLength).toBeGreaterThan(
-			metadataAsCallsBuffer.byteLength
+			metadataAsCallsBuffer.byteLength,
 		);
 	});
 
@@ -55,28 +55,28 @@ describe('createMetadata', () => {
 		const metadataBuffer = Buffer.from(memoizedMetadata.toHex(), 'utf-8');
 		const metadataAsCallsBuffer = Buffer.from(
 			memoizedMetadataAsCalls.toHex(),
-			'utf-8'
+			'utf-8',
 		);
 
 		expect(metadataAsCallsBuffer.byteLength).toBeGreaterThan(0);
 		expect(metadataBuffer.byteLength).toBeGreaterThan(
-			metadataAsCallsBuffer.byteLength
+			metadataAsCallsBuffer.byteLength,
 		);
 	});
 
 	it('Metadata should decrease in byte size when `asSpecifiedCallsOnlyV14` is used', () => {
 		const metadataAsSpecifiedCallsBuffer = Buffer.from(
 			memoizedMetadataAsSpecifiedCalls.toHex(),
-			'utf-8'
+			'utf-8',
 		);
 		const metadataAsCallsBuffer = Buffer.from(
 			memoizedMetadataAsCalls.toHex(),
-			'utf-8'
+			'utf-8',
 		);
 
 		expect(metadataAsCallsBuffer.byteLength).toBeGreaterThan(0);
 		expect(metadataAsSpecifiedCallsBuffer.byteLength).toBeLessThan(
-			metadataAsCallsBuffer.byteLength
+			metadataAsCallsBuffer.byteLength,
 		);
 	});
 });

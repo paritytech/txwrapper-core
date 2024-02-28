@@ -23,7 +23,7 @@ export interface SystemRemarkArgs extends Args {
 export function remark(
 	args: SystemRemarkArgs,
 	info: BaseTxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	return defineMethod(
 		{
@@ -34,6 +34,6 @@ export function remark(
 			},
 			...info,
 		},
-		options
+		options,
 	);
 }

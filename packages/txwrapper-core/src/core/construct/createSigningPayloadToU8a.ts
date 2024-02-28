@@ -15,7 +15,7 @@ import { Options, UnsignedTransaction } from '../../types';
  */
 export function createSigningPayloadToU8a(
 	unsigned: UnsignedTransaction,
-	options: Options
+	options: Options,
 ): Uint8Array {
 	const { registry } = options;
 	const extrinsicPayload = registry.createType('ExtrinsicPayload', unsigned, {

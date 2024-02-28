@@ -37,7 +37,7 @@ export interface BalancesTransferAllArgs extends Args {
 export function transferAll(
 	args: BalancesTransferAllArgs,
 	info: BaseTxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	return defineMethod(
 		{
@@ -48,6 +48,6 @@ export function transferAll(
 			},
 			...info,
 		},
-		options
+		options,
 	);
 }

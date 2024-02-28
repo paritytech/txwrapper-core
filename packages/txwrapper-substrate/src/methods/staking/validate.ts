@@ -27,7 +27,7 @@ export interface StakingValidateArgs extends Args {
 export function validate(
 	args: StakingValidateArgs,
 	info: BaseTxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	return defineMethod(
 		{
@@ -38,6 +38,6 @@ export function validate(
 			},
 			...info,
 		},
-		options
+		options,
 	);
 }

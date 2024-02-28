@@ -46,7 +46,7 @@ interface ProxyCreatePureArgs extends Args {
 export function createPure(
 	args: ProxyCreatePureArgs,
 	info: BaseTxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	return defineMethod(
 		{
@@ -57,6 +57,6 @@ export function createPure(
 			},
 			...info,
 		},
-		options
+		options,
 	);
 }

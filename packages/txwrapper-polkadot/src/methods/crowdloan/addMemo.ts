@@ -14,7 +14,7 @@ export interface CrowdloanAddMemo extends Args {
 export function addMemo(
 	args: CrowdloanAddMemo,
 	info: BaseTxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	return defineMethod(
 		{
@@ -25,6 +25,6 @@ export function addMemo(
 			},
 			...info,
 		},
-		options
+		options,
 	);
 }

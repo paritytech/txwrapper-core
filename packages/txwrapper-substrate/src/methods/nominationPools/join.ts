@@ -36,7 +36,7 @@ export interface NominationPoolsJoin extends Args {
 export function join(
 	args: NominationPoolsJoin,
 	info: BaseTxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	return defineMethod(
 		{
@@ -47,6 +47,6 @@ export function join(
 			},
 			...info,
 		},
-		options
+		options,
 	);
 }

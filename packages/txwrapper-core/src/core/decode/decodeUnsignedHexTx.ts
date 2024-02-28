@@ -11,11 +11,11 @@ import { DecodedUnsignedHexTx, IMethod, OptionsWithMeta } from '../../types';
  */
 export function decodeUnsignedHexTx(
 	encodedUnsignedTx: string,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): DecodedUnsignedHexTx {
 	const decodedTx = options.registry.createType(
 		'Extrinsic',
-		hexToU8a(encodedUnsignedTx)
+		hexToU8a(encodedUnsignedTx),
 	);
 
 	return {

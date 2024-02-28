@@ -23,7 +23,7 @@ import { UtilityBatch } from './batch';
 export function batchAll(
 	args: UtilityBatch,
 	info: BaseTxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	return defineMethod(
 		{
@@ -34,6 +34,6 @@ export function batchAll(
 			},
 			...info,
 		},
-		options
+		options,
 	);
 }

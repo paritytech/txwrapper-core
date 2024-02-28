@@ -27,7 +27,7 @@ export interface AssetsCancelApprovalArgs extends Args {
 export function cancelApproval(
 	args: AssetsCancelApprovalArgs,
 	info: BaseTxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	return defineMethod(
 		{
@@ -38,6 +38,6 @@ export function cancelApproval(
 			},
 			...info,
 		},
-		options
+		options,
 	);
 }

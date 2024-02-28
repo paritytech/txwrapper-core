@@ -12,7 +12,7 @@ import { mockGetRegistryBase } from './mockGetRegistry';
  */
 export function getRegistryKusama(
 	specVersion: number,
-	metadataRpc: `0x${string}`
+	metadataRpc: `0x${string}`,
 ): TypeRegistry {
 	return mockGetRegistryBase({
 		chainProperties: {
@@ -24,7 +24,7 @@ export function getRegistryKusama(
 			new TypeRegistry(),
 			'Kusama',
 			'kusama',
-			specVersion
+			specVersion,
 		),
 		metadataRpc,
 	});

@@ -18,7 +18,7 @@ import { createMetadata, toTxMethod } from '..';
  */
 export function decodeUnsignedTx(
 	unsigned: UnsignedTransaction,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): DecodedUnsignedTx {
 	const {
 		metadataRpc,
@@ -33,8 +33,8 @@ export function decodeUnsignedTx(
 			registry,
 			metadataRpc,
 			asCallsOnlyArg,
-			asSpecifiedCallsOnlyV14
-		)
+			asSpecifiedCallsOnlyV14,
+		),
 	);
 
 	const methodCall = registry.createType('Call', unsigned.method);

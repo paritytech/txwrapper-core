@@ -12,12 +12,12 @@ describe('democracy::vote', () => {
 		const unsigned = vote(
 			TEST_METHOD_ARGS.democracy.vote,
 			POLKADOT_TEST_BASE_TX_INFO,
-			POLKADOT_TEST_OPTIONS
+			POLKADOT_TEST_OPTIONS,
 		);
 
 		itHasCorrectBaseTxInfo(unsigned);
 		expect(unsigned.method).toBe(
-			'0x0e02000081d2040000000000000000000000000000'
+			'0x0e02000081d2040000000000000000000000000000',
 		);
 	});
 });

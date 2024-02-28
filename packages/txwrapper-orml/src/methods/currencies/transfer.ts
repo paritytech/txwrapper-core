@@ -18,7 +18,7 @@ export interface CurrenciesTransferArgs
 export function transfer(
 	args: CurrenciesTransferArgs,
 	info: BaseTxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	return defineMethod(
 		{
@@ -29,6 +29,6 @@ export function transfer(
 			},
 			...info,
 		},
-		options
+		options,
 	);
 }

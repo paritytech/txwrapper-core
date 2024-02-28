@@ -15,7 +15,7 @@ import { createMetadata, toTxMethod } from '..';
  */
 export function decodeSignedTx(
 	signedTx: string,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): DecodedSignedTx {
 	const { metadataRpc, registry, asCallsOnlyArg, asSpecifiedCallsOnlyV14 } =
 		options;
@@ -25,8 +25,8 @@ export function decodeSignedTx(
 			registry,
 			metadataRpc,
 			asCallsOnlyArg,
-			asSpecifiedCallsOnlyV14
-		)
+			asSpecifiedCallsOnlyV14,
+		),
 	);
 
 	const tx = registry.createType('Extrinsic', hexToU8a(signedTx), {

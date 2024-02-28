@@ -14,13 +14,13 @@ describe('currencies::transfer', () => {
 		const unsigned = transfer(
 			TEST_METHOD_ARGS.currencies.transfer,
 			TEST_BASE_TX_INFO,
-			MANDALA_2082_TEST_OPTIONS
+			MANDALA_2082_TEST_OPTIONS,
 		);
 
 		itHasCorrectBaseTxInfo(unsigned);
 
 		expect(unsigned.method).toBe(
-			'0x0c00008eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48000030'
+			'0x0c00008eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48000030',
 		);
 	});
 
@@ -31,13 +31,13 @@ describe('currencies::transfer', () => {
 				amount: '9007199254740996', // MAX_SAFE_INTEGER + 5
 			},
 			TEST_BASE_TX_INFO,
-			MANDALA_2082_TEST_OPTIONS
+			MANDALA_2082_TEST_OPTIONS,
 		);
 
 		itHasCorrectBaseTxInfo(unsigned);
 
 		expect(unsigned.method).toBe(
-			'0x0c00008eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a4800000f04000000000020'
+			'0x0c00008eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a4800000f04000000000020',
 		);
 	});
 });

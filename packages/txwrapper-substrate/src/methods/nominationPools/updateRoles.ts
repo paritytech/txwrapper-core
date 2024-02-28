@@ -43,7 +43,7 @@ export interface NominationPoolsUpdateRoles extends Args {
 export function updateRoles(
 	args: NominationPoolsUpdateRoles,
 	info: BaseTxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	return defineMethod(
 		{
@@ -54,6 +54,6 @@ export function updateRoles(
 			},
 			...info,
 		},
-		options
+		options,
 	);
 }

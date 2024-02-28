@@ -12,7 +12,7 @@ describe('nominationPools::bondExtra', () => {
 		const unsigned = bondExtra(
 			TEST_METHOD_ARGS.nominationPools.bondExtra,
 			TEST_BASE_TX_INFO,
-			KUSAMA_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS,
 		);
 
 		itHasCorrectBaseTxInfo(unsigned);

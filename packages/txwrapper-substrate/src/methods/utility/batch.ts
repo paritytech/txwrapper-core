@@ -18,7 +18,7 @@ export interface UtilityBatch extends Args {
 export function batch(
 	args: UtilityBatch,
 	info: BaseTxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	return defineMethod(
 		{
@@ -29,6 +29,6 @@ export function batch(
 			},
 			...info,
 		},
-		options
+		options,
 	);
 }

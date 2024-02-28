@@ -16,7 +16,7 @@ import memoizee from 'memoizee';
 export function mockCreateMetadataUnmemoized(
 	registry: TypeRegistry,
 	metadataRpc: `0x${string}`,
-	asCallsOnlyArg = false
+	asCallsOnlyArg = false,
 ): Metadata | MetadataVersioned {
 	const metadata = new Metadata(registry, metadataRpc);
 	return asCallsOnlyArg ? metadata.asCallsOnly : metadata;

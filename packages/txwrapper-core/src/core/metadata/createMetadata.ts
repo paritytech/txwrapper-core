@@ -20,7 +20,7 @@ export function createMetadataUnmemoized(
 	registry: TypeRegistry,
 	metadataRpc: `0x${string}`,
 	asCallsOnlyArg = false,
-	asSpecifiedCallsOnlyV14?: string[]
+	asSpecifiedCallsOnlyV14?: string[],
 ): Metadata | MetadataVersioned {
 	const metadata = new Metadata(registry, metadataRpc);
 
@@ -31,7 +31,7 @@ export function createMetadataUnmemoized(
 				toSpecifiedCallsOnlyV14(
 					registry,
 					metadata.asV14,
-					asSpecifiedCallsOnlyV14
+					asSpecifiedCallsOnlyV14,
 				),
 				14,
 			]),

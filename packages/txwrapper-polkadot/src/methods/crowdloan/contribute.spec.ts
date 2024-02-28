@@ -12,13 +12,13 @@ describe('crowdloan::contribute', () => {
 		const unsigned = contribute(
 			TEST_METHOD_ARGS.crowdloan.contribute,
 			TEST_BASE_TX_INFO,
-			KUSAMA_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS,
 		);
 
 		itHasCorrectBaseTxInfo(unsigned);
 
 		expect(unsigned.method).toBe(
-			'0x49013013f6ffffffffff3f010101ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff'
+			'0x49013013f6ffffffffff3f010101ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff',
 		);
 	});
 });

@@ -12,13 +12,13 @@ describe('balances::transferKeepAlive', () => {
 		const unsigned = transferKeepAlive(
 			TEST_METHOD_ARGS.balances.transferKeepAlive,
 			TEST_BASE_TX_INFO,
-			KUSAMA_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS,
 		);
 
 		itHasCorrectBaseTxInfo(unsigned);
 
 		expect(unsigned.method).toBe(
-			'0x04030096074594cccf1cd185fa8a72ceaeefd86648f8d45514f3ce33c31bdd07e4655d30'
+			'0x04030096074594cccf1cd185fa8a72ceaeefd86648f8d45514f3ce33c31bdd07e4655d30',
 		);
 	});
 });

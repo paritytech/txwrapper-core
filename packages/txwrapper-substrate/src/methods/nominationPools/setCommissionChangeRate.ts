@@ -36,7 +36,7 @@ export interface NominationPoolsSetCommissionChangeRate extends Args {
 export function setCommissionChangeRate(
 	args: NominationPoolsSetCommissionChangeRate,
 	info: BaseTxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	return defineMethod(
 		{
@@ -47,6 +47,6 @@ export function setCommissionChangeRate(
 			},
 			...info,
 		},
-		options
+		options,
 	);
 }

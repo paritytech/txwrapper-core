@@ -12,7 +12,7 @@ describe('nominationPools::setMetadata', () => {
 		const unsigned = setMetadata(
 			TEST_METHOD_ARGS.nominationPools.setMetadata,
 			TEST_BASE_TX_INFO,
-			KUSAMA_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS,
 		);
 
 		itHasCorrectBaseTxInfo(unsigned);

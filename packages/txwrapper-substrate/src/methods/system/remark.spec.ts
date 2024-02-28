@@ -12,7 +12,7 @@ describe('system::remark', () => {
 		const unsigned = remark(
 			TEST_METHOD_ARGS.system.remark,
 			TEST_BASE_TX_INFO,
-			KUSAMA_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS,
 		);
 
 		itHasCorrectBaseTxInfo(unsigned);

@@ -33,7 +33,7 @@ export interface NominationPoolsNominate extends Args {
 export function nominate(
 	args: NominationPoolsNominate,
 	info: BaseTxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	return defineMethod(
 		{
@@ -44,6 +44,6 @@ export function nominate(
 			},
 			...info,
 		},
-		options
+		options,
 	);
 }

@@ -12,7 +12,7 @@ import { mockGetRegistryBase } from './mockGetRegistry';
  */
 export function getRegistryAssetHubKusama(
 	specVersion: number,
-	metadataRpc: `0x${string}`
+	metadataRpc: `0x${string}`,
 ): TypeRegistry {
 	return mockGetRegistryBase({
 		chainProperties: {
@@ -24,12 +24,12 @@ export function getRegistryAssetHubKusama(
 			new TypeRegistry(),
 			'Asset Hub Kusama',
 			'statemine',
-			specVersion
+			specVersion,
 		),
 		metadataRpc,
 	});
 }
 
 export const memoizedAssetHubKusamaGetRegistry = memoizee(
-	getRegistryAssetHubKusama
+	getRegistryAssetHubKusama,
 );

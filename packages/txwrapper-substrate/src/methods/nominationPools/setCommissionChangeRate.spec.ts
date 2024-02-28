@@ -12,7 +12,7 @@ describe('nominationPools::setCommissionChangeRate', () => {
 		const unsigned = setCommissionChangeRate(
 			TEST_METHOD_ARGS.nominationPools.setCommissionChangeRate,
 			TEST_BASE_TX_INFO,
-			KUSAMA_TEST_OPTIONS
+			KUSAMA_TEST_OPTIONS,
 		);
 
 		itHasCorrectBaseTxInfo(unsigned);

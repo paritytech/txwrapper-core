@@ -16,7 +16,7 @@ import { createMetadata, toTxMethod } from '..';
  */
 export function decodeSigningPayload(
 	signingPayload: string,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): DecodedSigningPayload {
 	const { metadataRpc, registry, asCallsOnlyArg, asSpecifiedCallsOnlyV14 } =
 		options;
@@ -26,8 +26,8 @@ export function decodeSigningPayload(
 			registry,
 			metadataRpc,
 			asCallsOnlyArg,
-			asSpecifiedCallsOnlyV14
-		)
+			asSpecifiedCallsOnlyV14,
+		),
 	);
 
 	// We use `createTypeUnsafe` here because it allows us to specify `withoutLog: true`,
@@ -45,7 +45,7 @@ export function decodeSigningPayload(
 			{
 				version: EXTRINSIC_VERSION,
 			},
-		]
+		],
 	);
 	const methodCall: Call = createTypeUnsafe(registry, 'Call', [payload.method]);
 	const method = toTxMethod(registry, methodCall);

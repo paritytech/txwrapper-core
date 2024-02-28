@@ -23,7 +23,7 @@ import {
 export function claimPayout(
 	args: EmptyArgs,
 	info: BaseTxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	return defineMethod(
 		{
@@ -34,6 +34,6 @@ export function claimPayout(
 			},
 			...info,
 		},
-		options
+		options,
 	);
 }

@@ -32,7 +32,7 @@ export interface MultisigCancelAsMulti
 export function cancelAsMulti(
 	args: MultisigCancelAsMulti,
 	info: BaseTxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	return defineMethod(
 		{
@@ -43,6 +43,6 @@ export function cancelAsMulti(
 			},
 			...info,
 		},
-		options
+		options,
 	);
 }

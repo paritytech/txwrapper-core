@@ -24,7 +24,7 @@ export type XcmReserveTransferAssets = XcmBaseAssetArgs;
 export function reserveTransferAssets(
 	args: XcmReserveTransferAssets,
 	info: BaseTxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	return defineMethod(
 		{
@@ -35,6 +35,6 @@ export function reserveTransferAssets(
 			},
 			...info,
 		},
-		options
+		options,
 	);
 }

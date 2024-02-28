@@ -29,7 +29,7 @@ export interface DemocracyVoteArgs extends Args {
 export function vote(
 	args: DemocracyVoteArgs,
 	info: BaseTxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	return defineMethod(
 		{
@@ -40,6 +40,6 @@ export function vote(
 			},
 			...info,
 		},
-		options
+		options,
 	);
 }

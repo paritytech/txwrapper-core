@@ -27,7 +27,7 @@ export interface StakingSetPayeeArgs extends Args {
 export function setPayee(
 	args: StakingSetPayeeArgs,
 	info: BaseTxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	return defineMethod(
 		{
@@ -38,6 +38,6 @@ export function setPayee(
 			},
 			...info,
 		},
-		options
+		options,
 	);
 }

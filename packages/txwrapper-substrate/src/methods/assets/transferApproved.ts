@@ -37,7 +37,7 @@ export interface AssetsTransferApprovedArgs extends Args {
 export function transferApproved(
 	args: AssetsTransferApprovedArgs,
 	info: BaseTxInfo,
-	options: OptionsWithMeta
+	options: OptionsWithMeta,
 ): UnsignedTransaction {
 	return defineMethod(
 		{
@@ -48,6 +48,6 @@ export function transferApproved(
 			},
 			...info,
 		},
-		options
+		options,
 	);
 }
