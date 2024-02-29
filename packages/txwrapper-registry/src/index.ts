@@ -1,6 +1,6 @@
 /**
  * Registry creation support, catering to chains with types in [@polkadot/apps-config](https://github.com/polkadot-js/apps/tree/master/packages/apps-config/README.md).
- * 
+ *
  * @module txwrapper-registry
  */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */

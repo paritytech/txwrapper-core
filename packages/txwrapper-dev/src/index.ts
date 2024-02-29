@@ -1,6 +1,6 @@
 /**
  * Dev components for creating a txwrapper lib.
- * 
+ *
  * @module txwrapper-dev
  */
 export * from './constants';

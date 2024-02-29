@@ -1,6 +1,6 @@
 /**
  * Selected dispatchables of Substrate pallets, to be re-exported by chain specific txwrappers.
- * 
+ *
  * @module txwrapper-substrate
  */
 // Note: In the future we may re-export txwrapper-core if this library makes
