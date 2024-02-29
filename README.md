@@ -1,14 +1,23 @@
-# txwrapper-core
+<br /><br />
 
-Tools for FRAME chain builders to publish chain specific offline transaction generation libraries.
+<div align="center">
+  <h1 align="center">txwrapper-core</h1>
+  <h4 align="center"> Tools for FRAME chain builders to publish chain specific offline transaction generation libraries.
+ </h4>
+  <p align="center">
+    <a href="https://www.npmjs.com/package/@substrate/txwrapper-core">
+      <img alt="npm" src="https://img.shields.io/npm/v/@substrate/txwrapper-core" />
+    </a>
+    <a href="https://github.com/paritytech/txwrapper-core/actions">
+      <img alt="Github Actions" src="https://github.com/paritytech/txwrapper-core/workflows/pr/badge.svg" />
+    </a>
+    <a href="https://github.com/paritytech/txwrapper-core/blob/master/LICENSE">
+      <img alt="GPL-3.0-or-later" src="https://img.shields.io/npm/l/@substrate/txwrapper-core" />
+    </a>
+  </p>
+</div>
 
-## Table of contents
-
-- [Overview](#overview)
-- [Modules](#modules)
-- [End user examples](packages/txwrapper-examples/README.md)
-- [Chain builder guide](CHAIN_BUILDER.md)
-- [Develop, contribute, and maintain](#develop-contribute-and-maintain)
+<br /><br />
 
 ## Overview
 
@@ -20,31 +29,31 @@ For example, those looking to construct a transaction offline on Polkadot would 
 
 #### Published
 
-- [@substrate/txwrapper-polkadot](/packages/txwrapper-polkadot/README.md) Helper functions for offline transaction generation for polkadot relay and system chains; specifically the following chains: Polkadot, Kusama, Rococo, Westend, Asset Hub Polkadot and Asset Hub Kusama.
-- [@substrate/txwrapper-core](/packages/txwrapper-core/README.md) The essentials for creating a chain specific txwrapper lib.
-- [@substrate/txwrapper-registry](/packages/txwrapper-registry/README.md) Registry creation support, catering to chains with types in [@polkadot/apps-config](https://github.com/polkadot-js/apps/tree/master/packages/apps-config/README.md).
-- [@substrate/txwrapper-substrate](/packages/txwrapper-substrate/README.md) Selected dispatchables of Substrate pallets, to be re-exported by txwrappers (e.g. @substrate/txwrapper-polkadot).
-- [@substrate/txwrapper-orml](/packages/txwrapper-orml/README.md) Selected dispatchables of ORML pallets, to be re-exported by txwrappers (e.g. txwrapper-acala).
+- [@substrate/txwrapper-polkadot](modules/txwrapper_polkadot_src.html) Helper functions for offline transaction generation for polkadot relay and system chains; specifically the following chains: Polkadot, Kusama, Rococo, Westend, Asset Hub Polkadot and Asset Hub Kusama.
+- [@substrate/txwrapper-core](modules/txwrapper_core_src.html) The essentials for creating a chain specific txwrapper lib.
+- [@substrate/txwrapper-registry](modules/txwrapper_registry_src.html) Registry creation support, catering to chains with types in [@polkadot/apps-config](https://github.com/polkadot-js/apps/tree/master/packages/apps-config/README.md).
+- [@substrate/txwrapper-substrate](modules/txwrapper_substrate_src.html) Selected dispatchables of Substrate pallets, to be re-exported by txwrappers (e.g. @substrate/txwrapper-polkadot).
+- [@substrate/txwrapper-orml](modules/txwrapper_orml_src.html) Selected dispatchables of ORML pallets, to be re-exported by txwrappers (e.g. txwrapper-acala).
+- [@substrate/txwrapper-dev](https://github.com/paritytech/txwrapper-core/tree/main/packages/txwrapper-dev) Exported development helpers such as registries and metadata.
 
 #### Non-published
 
-- [@substrate/txwrapper-dev](/packages/txwrapper-dev/README.md) Exported development helpers such as registries and metadata.
-- [@substrate/txwrapper-example](/packages/txwrapper-examples/README.md) Usage examples including how to construct, sign, and decode an extrinsic with @substrate/txwrapper-polkadot.
-- [@substrate/txwrapper-template](/packages/txwrapper-template/README.md) Template package for chain builders.
+- [@substrate/txwrapper-example](https://github.com/paritytech/txwrapper-core/tree/main/packages/txwrapper-examples) Usage examples including how to construct, sign, and decode an extrinsic with @substrate/txwrapper-polkadot.
+- [@substrate/txwrapper-template](https://github.com/paritytech/txwrapper-core/tree/main/packages/txwrapper-template) Template package for chain builders.
 
 ## Modules
 
-- [txwrapper-core/src](docs/modules/txwrapper_core_src.md)
-- [txwrapper-polkadot/src](docs/modules/txwrapper_polkadot_src.md)
-- [txwrapper-substrate/src](docs/modules/txwrapper_substrate_src.md)
+- [txwrapper-core/src](modules/txwrapper_core_src.html)
+- [txwrapper-polkadot/src](modules/txwrapper_polkadot_src.html)
+- [txwrapper-substrate/src](modules/txwrapper_substrate_src.html)
 
 ## End user examples
 
-[Click here for examples on how to use txwrappers for constructing, signing, and decoding transactions.](packages/txwrapper-examples/README.md)
+[Click here for examples on how to use txwrappers for constructing, signing, and decoding transactions.](https://github.com/paritytech/txwrapper-core/tree/main/packages/txwrapper-examples)
 
 ## Chain builder guide
 
-[Click here to find our guide for chain builders.](CHAIN_BUILDER.md) The guide explains how to make a chain specific txwrapper.
+[Click here to find our guide for chain builders.](https://github.com/paritytech/txwrapper-core/blob/main/CHAIN_BUILDER.md). The guide explains how to make a chain specific txwrapper.
 
 ## Develop, contribute, and maintain
 
@@ -127,7 +136,7 @@ This libraries release process uses Lerna, and the following below is required t
 
 * **N.B.** Ensure you have [`GH_TOKEN` env variable set](https://github.com/lerna/lerna/tree/main/commands/version#--create-release-type) to a GitHub personal access token (PAT) so lerna can publish the release on github.
 
-* The publisher will need publishing permissions to the @substrate npm org.
+* The publisher will need publishing permissions to the [substrate](https://www.npmjs.com/org/substrate) npm org.
 
 1. Make sure you're logged in to `npm` using `npm login`.
 

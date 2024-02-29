@@ -1,3 +1,8 @@
+/**
+ * Helper functions for Polkadot, Kusama, Rococo and Westend offline transaction generation.
+ *
+ * @module txwrapper-polkadot
+ */
 import {
 	getRegistryBase,
 	GetRegistryOptsCore,

@@ -12,9 +12,6 @@ export { defineMethod, toTxMethod } from './method';
 export * from './util';
 export { getSpecTypes } from '@polkadot/types-known';
 
-/**
- * Functions for each step of the transaction construction process.
- */
 export const construct = {
 	signedTx,
 	signingPayload,

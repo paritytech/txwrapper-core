@@ -10,7 +10,7 @@ import { createMetadata, toTxMethod } from '..';
 /**
  * Parse the transaction information from a signed transaction offline.
  *
- * @param unsigned - The JSON representing the unsigned transaction.
+ * @param signedTx - The JSON representing the signed transaction.
  * @param options - Runtime-specific data used for decoding the transaction.
  */
 export function decodeSignedTx(

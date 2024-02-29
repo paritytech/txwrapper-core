@@ -4397,6 +4397,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fs-extra@npm:11.1.1":
+  version: 11.1.1
+  resolution: "fs-extra@npm:11.1.1"
+  dependencies:
+    graceful-fs: "npm:^4.2.0"
+    jsonfile: "npm:^6.0.1"
+    universalify: "npm:^2.0.0"
+  checksum: 10/c4e9fabf9762a70d1403316b7faa899f3d3303c8afa765b891c2210fdeba368461e04ae1203920b64ef6a7d066a39ab8cef2160b5ce8d1011bb4368688cd9bb7
+  languageName: node
+  linkType: hard
+
 "fs-extra@npm:^11.1.0, fs-extra@npm:^11.1.1":
   version: 11.2.0
   resolution: "fs-extra@npm:11.2.0"
@@ -8851,8 +8862,9 @@ __metadata:
     ts-node: "npm:^9.1.1"
     tsconfig-paths: "npm:^3.9.0"
     typedoc: "npm:^0.25.9"
-    typedoc-plugin-markdown: "npm:^3.17.1"
     typedoc-plugin-missing-exports: "npm:^2.2.0"
+    typedoc-plugin-remove-references: "npm:^0.0.6"
+    typedoc-theme-hierarchy: "npm:^4.0.0"
     typescript: "npm:4.9.4"
   languageName: unknown
   linkType: soft
@@ -8936,23 +8948,30 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typedoc-plugin-markdown@npm:^3.17.1":
-  version: 3.17.1
-  resolution: "typedoc-plugin-markdown@npm:3.17.1"
-  dependencies:
-    handlebars: "npm:^4.7.7"
-  peerDependencies:
-    typedoc: ">=0.24.0"
-  checksum: 10/21bfe7fba60e3c27e15700196b1b4abdf5b63bfdc9a4af57cf6f0891f9d359ac561435773709c6ea3555bae402b7a81b637d055e767afd33e2c0dc717d0449d2
-  languageName: node
-  linkType: hard
-
 "typedoc-plugin-missing-exports@npm:^2.2.0":
   version: 2.2.0
   resolution: "typedoc-plugin-missing-exports@npm:2.2.0"
   peerDependencies:
     typedoc: 0.24.x || 0.25.x
   checksum: 10/db691b3494c8e112d7ea8621fcf79f1988ef8f0c9fc43eb5fc308fda0caa1b1e007c3d51db83236247cf9b52cdfec1186a7eb25ec3416fa03ef65f68b4e88e4e
+  languageName: node
+  linkType: hard
+
+"typedoc-plugin-remove-references@npm:^0.0.6":
+  version: 0.0.6
+  resolution: "typedoc-plugin-remove-references@npm:0.0.6"
+  checksum: 10/7bfa040b97db4d0ec7bf84e0f640e25eb9bcd67f5fb668d3afd95947825ddba19226ec49d10cc31b5ec9530e8c3de2f1409bd4056c2011d79ba07be16d5cde0c
+  languageName: node
+  linkType: hard
+
+"typedoc-theme-hierarchy@npm:^4.0.0":
+  version: 4.1.2
+  resolution: "typedoc-theme-hierarchy@npm:4.1.2"
+  dependencies:
+    fs-extra: "npm:11.1.1"
+  peerDependencies:
+    typedoc: ^0.24.0 || ^0.25.0
+  checksum: 10/f674124d2cf8cfb1dd9768fde5efd3d09f1ce9bea0a8e8878acc635e1c769b7fd377aa7408b2d07bdd6415cf8be9f2712e8bf848cdd77fc6652cd077453c34c3
   languageName: node
   linkType: hard
 
