@@ -13,7 +13,7 @@ import { createMetadata } from './createMetadata';
  *
  * @ignore
  * @param registry - The registry of the metadata.
- * @param metadata - The metadata as hex string.
+ * @param metadataRpc - The metadata as hex string.
  */
 export function createDecoratedTx(
 	registry: TypeRegistry,
@@ -28,7 +28,7 @@ export function createDecoratedTx(
  * modules with their constants.
  *
  * @param registry - The registry of the metadata.
- * @param metadata - The metadata as hex string.
+ * @param metadataRpc - The metadata as hex string.
  */
 export function createDecoratedConstants(
 	registry: TypeRegistry,
