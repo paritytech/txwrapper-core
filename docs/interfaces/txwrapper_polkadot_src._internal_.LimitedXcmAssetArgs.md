@@ -37,7 +37,7 @@ The assets to be withdrawn. This should include the assets used to pay the fee o
 
 #### Defined in
 
-[txwrapper-polkadot/src/methods/xcmPallet/types.ts:19](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-polkadot/src/methods/xcmPallet/types.ts#L19)
+[txwrapper-polkadot/src/methods/xcmPallet/types.ts:19](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-polkadot/src/methods/xcmPallet/types.ts#L19)
 
 ___
 
@@ -54,7 +54,7 @@ an `AccountId32` value.
 
 #### Defined in
 
-[txwrapper-polkadot/src/methods/xcmPallet/types.ts:14](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-polkadot/src/methods/xcmPallet/types.ts#L14)
+[txwrapper-polkadot/src/methods/xcmPallet/types.ts:14](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-polkadot/src/methods/xcmPallet/types.ts#L14)
 
 ___
 
@@ -71,7 +71,7 @@ from parachain to parachain, or `X1(Parachain(..))` to send from relay to parach
 
 #### Defined in
 
-[txwrapper-polkadot/src/methods/xcmPallet/types.ts:9](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-polkadot/src/methods/xcmPallet/types.ts#L9)
+[txwrapper-polkadot/src/methods/xcmPallet/types.ts:9](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-polkadot/src/methods/xcmPallet/types.ts#L9)
 
 ___
 
@@ -88,7 +88,7 @@ fees.
 
 #### Defined in
 
-[txwrapper-polkadot/src/methods/xcmPallet/types.ts:24](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-polkadot/src/methods/xcmPallet/types.ts#L24)
+[txwrapper-polkadot/src/methods/xcmPallet/types.ts:24](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-polkadot/src/methods/xcmPallet/types.ts#L24)
 
 ___
 
@@ -100,4 +100,4 @@ The remote-side weight limit, if any, for the XCM fee purchase.
 
 #### Defined in
 
-[txwrapper-polkadot/src/methods/xcmPallet/types.ts:31](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-polkadot/src/methods/xcmPallet/types.ts#L31)
+[txwrapper-polkadot/src/methods/xcmPallet/types.ts:31](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-polkadot/src/methods/xcmPallet/types.ts#L31)

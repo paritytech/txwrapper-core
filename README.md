@@ -127,7 +127,7 @@ This libraries release process uses Lerna, and the following below is required t
 
 * **N.B.** Ensure you have [`GH_TOKEN` env variable set](https://github.com/lerna/lerna/tree/main/commands/version#--create-release-type) to a GitHub personal access token (PAT) so lerna can publish the release on github.
 
-* The publisher will need publishing permissions to the @substrate npm org.
+* The publisher will need publishing permissions to the [substrate](https://www.npmjs.com/org/substrate) npm org.
 
 1. Make sure you're logged in to `npm` using `npm login`.
 

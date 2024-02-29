@@ -30,4 +30,4 @@ The rewards destination. Can be "Stash", "Staked", "Controller" or "{ Account: a
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/staking/setPayee.ts:13](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/staking/setPayee.ts#L13)
+[txwrapper-substrate/src/methods/staking/setPayee.ts:13](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/staking/setPayee.ts#L13)

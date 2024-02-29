@@ -28,4 +28,4 @@ The number of tokens to unbond.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/staking/unbond.ts:13](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/staking/unbond.ts#L13)
+[txwrapper-substrate/src/methods/staking/unbond.ts:13](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/staking/unbond.ts#L13)

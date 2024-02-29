@@ -28,7 +28,7 @@ Base Argument object for methods.
 
 #### Defined in
 
-[txwrapper-polkadot/src/methods/crowdloan/contribute.ts:12](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-polkadot/src/methods/crowdloan/contribute.ts#L12)
+[txwrapper-polkadot/src/methods/crowdloan/contribute.ts:12](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-polkadot/src/methods/crowdloan/contribute.ts#L12)
 
 ___
 
@@ -38,7 +38,7 @@ ___
 
 #### Defined in
 
-[txwrapper-polkadot/src/methods/crowdloan/contribute.ts:14](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-polkadot/src/methods/crowdloan/contribute.ts#L14)
+[txwrapper-polkadot/src/methods/crowdloan/contribute.ts:14](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-polkadot/src/methods/crowdloan/contribute.ts#L14)
 
 ___
 
@@ -48,4 +48,4 @@ ___
 
 #### Defined in
 
-[txwrapper-polkadot/src/methods/crowdloan/contribute.ts:13](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-polkadot/src/methods/crowdloan/contribute.ts#L13)
+[txwrapper-polkadot/src/methods/crowdloan/contribute.ts:13](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-polkadot/src/methods/crowdloan/contribute.ts#L13)

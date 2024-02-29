@@ -32,7 +32,7 @@ To take advantage of txwrapper methods, this could be UnsignedTransaction.method
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/proxy/proxyAnnounced.ts:26](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/proxy/proxyAnnounced.ts#L26)
+[txwrapper-substrate/src/methods/proxy/proxyAnnounced.ts:26](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/proxy/proxyAnnounced.ts#L26)
 
 ___
 
@@ -44,7 +44,7 @@ The account that previously announced the call.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/proxy/proxyAnnounced.ts:13](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/proxy/proxyAnnounced.ts#L13)
+[txwrapper-substrate/src/methods/proxy/proxyAnnounced.ts:13](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/proxy/proxyAnnounced.ts#L13)
 
 ___
 
@@ -56,7 +56,7 @@ Specify the exact proxy type to be used and checked for this call.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/proxy/proxyAnnounced.ts:21](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/proxy/proxyAnnounced.ts#L21)
+[txwrapper-substrate/src/methods/proxy/proxyAnnounced.ts:21](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/proxy/proxyAnnounced.ts#L21)
 
 ___
 
@@ -68,4 +68,4 @@ The account that the proxy will make a call on behalf of.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/proxy/proxyAnnounced.ts:17](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/proxy/proxyAnnounced.ts#L17)
+[txwrapper-substrate/src/methods/proxy/proxyAnnounced.ts:17](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/proxy/proxyAnnounced.ts#L17)

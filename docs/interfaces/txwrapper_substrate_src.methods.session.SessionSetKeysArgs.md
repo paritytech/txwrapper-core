@@ -40,7 +40,7 @@ The 5 keys to set.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/session/setKeys.ts:13](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/session/setKeys.ts#L13)
+[txwrapper-substrate/src/methods/session/setKeys.ts:13](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/session/setKeys.ts#L13)
 
 ___
 
@@ -52,4 +52,4 @@ Proof of key ownership (currently unused).
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/session/setKeys.ts:24](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/session/setKeys.ts#L24)
+[txwrapper-substrate/src/methods/session/setKeys.ts:24](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/session/setKeys.ts#L24)

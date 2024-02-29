@@ -35,7 +35,7 @@ destroyed.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/nominationPools/create.ts:15](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/nominationPools/create.ts#L15)
+[txwrapper-substrate/src/methods/nominationPools/create.ts:15](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/nominationPools/create.ts#L15)
 
 ___
 
@@ -47,7 +47,7 @@ The account to set as the [`PoolRoles::bouncer`].
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/nominationPools/create.ts:27](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/nominationPools/create.ts#L27)
+[txwrapper-substrate/src/methods/nominationPools/create.ts:27](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/nominationPools/create.ts#L27)
 
 ___
 
@@ -59,7 +59,7 @@ The account to set as the [`PoolRoles::nominator`].
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/nominationPools/create.ts:23](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/nominationPools/create.ts#L23)
+[txwrapper-substrate/src/methods/nominationPools/create.ts:23](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/nominationPools/create.ts#L23)
 
 ___
 
@@ -71,4 +71,4 @@ The account to set as [`PoolRoles::root`].
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/nominationPools/create.ts:19](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/nominationPools/create.ts#L19)
+[txwrapper-substrate/src/methods/nominationPools/create.ts:19](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/nominationPools/create.ts#L19)

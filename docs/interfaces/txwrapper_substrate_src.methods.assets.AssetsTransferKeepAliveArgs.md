@@ -33,7 +33,7 @@ the minimum balance. Must be greater than zero.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/assets/transferKeepAlive.ts:24](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/assets/transferKeepAlive.ts#L24)
+[txwrapper-substrate/src/methods/assets/transferKeepAlive.ts:24](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/assets/transferKeepAlive.ts#L24)
 
 ___
 
@@ -45,7 +45,7 @@ The identifier of the asset to have some amount transferred.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/assets/transferKeepAlive.ts:13](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/assets/transferKeepAlive.ts#L13)
+[txwrapper-substrate/src/methods/assets/transferKeepAlive.ts:13](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/assets/transferKeepAlive.ts#L13)
 
 ___
 
@@ -57,4 +57,4 @@ The account to be credited.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/assets/transferKeepAlive.ts:17](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/assets/transferKeepAlive.ts#L17)
+[txwrapper-substrate/src/methods/assets/transferKeepAlive.ts:17](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/assets/transferKeepAlive.ts#L17)

@@ -29,7 +29,7 @@ The assetId used in ChargeAssetTxPayment
 
 #### Defined in
 
-[txwrapper-core/src/types/method.ts:73](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-core/src/types/method.ts#L73)
+[txwrapper-core/src/types/method.ts:73](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-core/src/types/method.ts#L73)
 
 ___
 
@@ -42,4 +42,4 @@ call `state_getMetadata`.
 
 #### Defined in
 
-[txwrapper-core/src/types/method.ts:78](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-core/src/types/method.ts#L78)
+[txwrapper-core/src/types/method.ts:78](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-core/src/types/method.ts#L78)

@@ -35,7 +35,7 @@ The recipient address, SS-58 encoded.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/balances/transfer.ts:13](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/balances/transfer.ts#L13)
+[txwrapper-substrate/src/methods/balances/transfer.ts:13](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/balances/transfer.ts#L13)
 
 ___
 
@@ -47,4 +47,4 @@ The amount to send.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/balances/transfer.ts:17](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/balances/transfer.ts#L17)
+[txwrapper-substrate/src/methods/balances/transfer.ts:17](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/balances/transfer.ts#L17)

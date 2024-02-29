@@ -33,7 +33,7 @@ Set [`GlobalMaxCommission`].
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/nominationPools/setConfigs.ts:39](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/nominationPools/setConfigs.ts#L39)
+[txwrapper-substrate/src/methods/nominationPools/setConfigs.ts:39](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/nominationPools/setConfigs.ts#L39)
 
 ___
 
@@ -45,7 +45,7 @@ Set [`MaxPoolMembers`].
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/nominationPools/setConfigs.ts:31](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/nominationPools/setConfigs.ts#L31)
+[txwrapper-substrate/src/methods/nominationPools/setConfigs.ts:31](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/nominationPools/setConfigs.ts#L31)
 
 ___
 
@@ -57,7 +57,7 @@ Set [`MaxPoolMembersPerPool`].
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/nominationPools/setConfigs.ts:35](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/nominationPools/setConfigs.ts#L35)
+[txwrapper-substrate/src/methods/nominationPools/setConfigs.ts:35](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/nominationPools/setConfigs.ts#L35)
 
 ___
 
@@ -69,7 +69,7 @@ Set [`MaxPools`].
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/nominationPools/setConfigs.ts:27](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/nominationPools/setConfigs.ts#L27)
+[txwrapper-substrate/src/methods/nominationPools/setConfigs.ts:27](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/nominationPools/setConfigs.ts#L27)
 
 ___
 
@@ -81,7 +81,7 @@ Set [`MinCreateBond`].
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/nominationPools/setConfigs.ts:23](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/nominationPools/setConfigs.ts#L23)
+[txwrapper-substrate/src/methods/nominationPools/setConfigs.ts:23](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/nominationPools/setConfigs.ts#L23)
 
 ___
 
@@ -93,4 +93,4 @@ Set [`MinJoinBond`].
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/nominationPools/setConfigs.ts:19](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/nominationPools/setConfigs.ts#L19)
+[txwrapper-substrate/src/methods/nominationPools/setConfigs.ts:19](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/nominationPools/setConfigs.ts#L19)

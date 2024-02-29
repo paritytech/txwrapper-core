@@ -38,7 +38,7 @@
 
 #### Defined in
 
-[txwrapper-polkadot/src/methods/crowdloan/types.ts:1](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-polkadot/src/methods/crowdloan/types.ts#L1)
+[txwrapper-polkadot/src/methods/crowdloan/types.ts:1](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-polkadot/src/methods/crowdloan/types.ts#L1)
 
 ## Functions
 
@@ -60,7 +60,7 @@
 
 #### Defined in
 
-[txwrapper-polkadot/src/methods/crowdloan/addMemo.ts:14](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-polkadot/src/methods/crowdloan/addMemo.ts#L14)
+[txwrapper-polkadot/src/methods/crowdloan/addMemo.ts:14](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-polkadot/src/methods/crowdloan/addMemo.ts#L14)
 
 ___
 
@@ -82,7 +82,7 @@ ___
 
 #### Defined in
 
-[txwrapper-polkadot/src/methods/crowdloan/contribute.ts:17](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-polkadot/src/methods/crowdloan/contribute.ts#L17)
+[txwrapper-polkadot/src/methods/crowdloan/contribute.ts:17](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-polkadot/src/methods/crowdloan/contribute.ts#L17)
 
 ___
 
@@ -104,4 +104,4 @@ ___
 
 #### Defined in
 
-[txwrapper-polkadot/src/methods/crowdloan/withdraw.ts:14](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-polkadot/src/methods/crowdloan/withdraw.ts#L14)
+[txwrapper-polkadot/src/methods/crowdloan/withdraw.ts:14](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-polkadot/src/methods/crowdloan/withdraw.ts#L14)

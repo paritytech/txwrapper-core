@@ -28,4 +28,4 @@ A valid PoolId.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/nominationPools/chill.ts:13](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/nominationPools/chill.ts#L13)
+[txwrapper-substrate/src/methods/nominationPools/chill.ts:13](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/nominationPools/chill.ts#L13)

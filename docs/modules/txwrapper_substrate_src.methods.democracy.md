@@ -36,4 +36,4 @@ Vote in a referendum.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/democracy/vote.ts:29](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/democracy/vote.ts#L29)
+[txwrapper-substrate/src/methods/democracy/vote.ts:29](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/democracy/vote.ts#L29)

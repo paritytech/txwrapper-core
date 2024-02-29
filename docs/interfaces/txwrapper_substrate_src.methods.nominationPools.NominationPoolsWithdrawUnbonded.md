@@ -29,7 +29,7 @@ Account to unbond.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/nominationPools/withdrawUnbonded.ts:13](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/nominationPools/withdrawUnbonded.ts#L13)
+[txwrapper-substrate/src/methods/nominationPools/withdrawUnbonded.ts:13](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/nominationPools/withdrawUnbonded.ts#L13)
 
 ___
 
@@ -41,4 +41,4 @@ Number of slashing spans.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/nominationPools/withdrawUnbonded.ts:17](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/nominationPools/withdrawUnbonded.ts#L17)
+[txwrapper-substrate/src/methods/nominationPools/withdrawUnbonded.ts:17](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/nominationPools/withdrawUnbonded.ts#L17)

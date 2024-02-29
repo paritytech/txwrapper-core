@@ -35,4 +35,4 @@ Base Argument object for methods.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/nominationPools/bondExtra.ts:10](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/nominationPools/bondExtra.ts#L10)
+[txwrapper-substrate/src/methods/nominationPools/bondExtra.ts:10](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/nominationPools/bondExtra.ts#L10)

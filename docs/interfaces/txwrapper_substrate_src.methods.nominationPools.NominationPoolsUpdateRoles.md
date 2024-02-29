@@ -31,7 +31,7 @@ New bouncer account.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/nominationPools/updateRoles.ts:27](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/nominationPools/updateRoles.ts#L27)
+[txwrapper-substrate/src/methods/nominationPools/updateRoles.ts:27](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/nominationPools/updateRoles.ts#L27)
 
 ___
 
@@ -43,7 +43,7 @@ New nominator account.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/nominationPools/updateRoles.ts:23](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/nominationPools/updateRoles.ts#L23)
+[txwrapper-substrate/src/methods/nominationPools/updateRoles.ts:23](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/nominationPools/updateRoles.ts#L23)
 
 ___
 
@@ -55,7 +55,7 @@ New root account.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/nominationPools/updateRoles.ts:19](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/nominationPools/updateRoles.ts#L19)
+[txwrapper-substrate/src/methods/nominationPools/updateRoles.ts:19](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/nominationPools/updateRoles.ts#L19)
 
 ___
 
@@ -67,4 +67,4 @@ A valid PoolId.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/nominationPools/updateRoles.ts:15](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/nominationPools/updateRoles.ts#L15)
+[txwrapper-substrate/src/methods/nominationPools/updateRoles.ts:15](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/nominationPools/updateRoles.ts#L15)

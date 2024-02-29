@@ -223,7 +223,7 @@ Re-exports [toTxMethod](txwrapper_core_src.md#totxmethod)
 
 #### Defined in
 
-[txwrapper-polkadot/src/index.ts:16](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-polkadot/src/index.ts#L16)
+[txwrapper-polkadot/src/index.ts:16](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-polkadot/src/index.ts#L16)
 
 ## Functions
 
@@ -245,4 +245,4 @@ Get a type registry for networks that txwrapper-polkadot supports.
 
 #### Defined in
 
-[txwrapper-polkadot/src/index.ts:104](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-polkadot/src/index.ts#L104)
+[txwrapper-polkadot/src/index.ts:104](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-polkadot/src/index.ts#L104)

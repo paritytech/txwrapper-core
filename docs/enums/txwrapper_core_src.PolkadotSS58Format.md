@@ -24,7 +24,7 @@ Prefix for ss58-encoded addresses on Polkadot, Kusama, and Westend. Note:
 
 #### Defined in
 
-[txwrapper-core/src/core/util/polkadotss58Format.ts:7](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-core/src/core/util/polkadotss58Format.ts#L7)
+[txwrapper-core/src/core/util/polkadotss58Format.ts:7](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-core/src/core/util/polkadotss58Format.ts#L7)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[txwrapper-core/src/core/util/polkadotss58Format.ts:6](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-core/src/core/util/polkadotss58Format.ts#L6)
+[txwrapper-core/src/core/util/polkadotss58Format.ts:6](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-core/src/core/util/polkadotss58Format.ts#L6)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[txwrapper-core/src/core/util/polkadotss58Format.ts:8](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-core/src/core/util/polkadotss58Format.ts#L8)
+[txwrapper-core/src/core/util/polkadotss58Format.ts:8](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-core/src/core/util/polkadotss58Format.ts#L8)
 
 ___
 
@@ -54,4 +54,4 @@ ___
 
 #### Defined in
 
-[txwrapper-core/src/core/util/polkadotss58Format.ts:9](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-core/src/core/util/polkadotss58Format.ts#L9)
+[txwrapper-core/src/core/util/polkadotss58Format.ts:9](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-core/src/core/util/polkadotss58Format.ts#L9)

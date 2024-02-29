@@ -29,7 +29,7 @@ A valid PoolId.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/nominationPools/setState.ts:13](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/nominationPools/setState.ts#L13)
+[txwrapper-substrate/src/methods/nominationPools/setState.ts:13](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/nominationPools/setState.ts#L13)
 
 ___
 
@@ -42,4 +42,4 @@ This can be set to `Open` | `Blocked` | `Destorying`.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/nominationPools/setState.ts:18](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/nominationPools/setState.ts#L18)
+[txwrapper-substrate/src/methods/nominationPools/setState.ts:18](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/nominationPools/setState.ts#L18)

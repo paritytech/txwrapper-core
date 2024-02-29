@@ -32,7 +32,7 @@ The extrinsic index in which the call to `createPure` was processed.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/proxy/killPure.ts:29](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/proxy/killPure.ts#L29)
+[txwrapper-substrate/src/methods/proxy/killPure.ts:29](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/proxy/killPure.ts#L29)
 
 ___
 
@@ -44,7 +44,7 @@ The height of the chain when the call to `createPure` was processed.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/proxy/killPure.ts:25](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/proxy/killPure.ts#L25)
+[txwrapper-substrate/src/methods/proxy/killPure.ts:25](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/proxy/killPure.ts#L25)
 
 ___
 
@@ -56,7 +56,7 @@ The disambiguation index originally passed to `createPure`. Probably `0`
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/proxy/killPure.ts:21](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/proxy/killPure.ts#L21)
+[txwrapper-substrate/src/methods/proxy/killPure.ts:21](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/proxy/killPure.ts#L21)
 
 ___
 
@@ -68,7 +68,7 @@ The proxy type originally passed to `createPure`.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/proxy/killPure.ts:17](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/proxy/killPure.ts#L17)
+[txwrapper-substrate/src/methods/proxy/killPure.ts:17](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/proxy/killPure.ts#L17)
 
 ___
 
@@ -80,4 +80,4 @@ The account that originally called `createPure` to create this account.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/proxy/killPure.ts:13](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/proxy/killPure.ts#L13)
+[txwrapper-substrate/src/methods/proxy/killPure.ts:13](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/proxy/killPure.ts#L13)

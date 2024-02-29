@@ -27,7 +27,7 @@ Base Argument object for methods.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/democracy/vote.ts:15](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/democracy/vote.ts#L15)
+[txwrapper-substrate/src/methods/democracy/vote.ts:15](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/democracy/vote.ts#L15)
 
 ___
 
@@ -39,4 +39,4 @@ Vote.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/democracy/vote.ts:19](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/democracy/vote.ts#L19)
+[txwrapper-substrate/src/methods/democracy/vote.ts:19](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/democracy/vote.ts#L19)

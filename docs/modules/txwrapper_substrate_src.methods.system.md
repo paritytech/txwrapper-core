@@ -36,4 +36,4 @@ Make some on-chain remark.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/system/remark.ts:23](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/system/remark.ts#L23)
+[txwrapper-substrate/src/methods/system/remark.ts:23](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/system/remark.ts#L23)

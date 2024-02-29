@@ -31,7 +31,7 @@ may be dispatched. If zero, then no announcement is needed.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/proxy/addProxy.ts:22](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/proxy/addProxy.ts#L22)
+[txwrapper-substrate/src/methods/proxy/addProxy.ts:22](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/proxy/addProxy.ts#L22)
 
 ___
 
@@ -43,7 +43,7 @@ The account that the `caller` would like to make a proxy.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/proxy/addProxy.ts:13](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/proxy/addProxy.ts#L13)
+[txwrapper-substrate/src/methods/proxy/addProxy.ts:13](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/proxy/addProxy.ts#L13)
 
 ___
 
@@ -55,4 +55,4 @@ The permissions for this proxy account. See the chain's runtime for the `call` f
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/proxy/addProxy.ts:17](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/proxy/addProxy.ts#L17)
+[txwrapper-substrate/src/methods/proxy/addProxy.ts:17](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/proxy/addProxy.ts#L17)

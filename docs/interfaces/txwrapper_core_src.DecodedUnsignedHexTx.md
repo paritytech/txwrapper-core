@@ -23,7 +23,7 @@ which is the counterpart to `encodeUnsignedTransaction`.
 
 #### Defined in
 
-[txwrapper-core/src/types/decode.ts:23](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-core/src/types/decode.ts#L23)
+[txwrapper-core/src/types/decode.ts:23](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-core/src/types/decode.ts#L23)
 
 ___
 
@@ -33,4 +33,4 @@ ___
 
 #### Defined in
 
-[txwrapper-core/src/types/decode.ts:24](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-core/src/types/decode.ts#L24)
+[txwrapper-core/src/types/decode.ts:24](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-core/src/types/decode.ts#L24)

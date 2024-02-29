@@ -29,4 +29,4 @@ Account to claim reward. The value will either be:
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/nominationPools/setClaimPermission.ts:14](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/nominationPools/setClaimPermission.ts#L14)
+[txwrapper-substrate/src/methods/nominationPools/setClaimPermission.ts:14](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/nominationPools/setClaimPermission.ts#L14)

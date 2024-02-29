@@ -29,7 +29,7 @@ Number of slashing spans.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/nominationPools/poolWithdrawUnbonded.ts:17](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/nominationPools/poolWithdrawUnbonded.ts#L17)
+[txwrapper-substrate/src/methods/nominationPools/poolWithdrawUnbonded.ts:17](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/nominationPools/poolWithdrawUnbonded.ts#L17)
 
 ___
 
@@ -41,4 +41,4 @@ Pool id that will have `withdraw_unbonded` called on it.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/nominationPools/poolWithdrawUnbonded.ts:13](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/nominationPools/poolWithdrawUnbonded.ts#L13)
+[txwrapper-substrate/src/methods/nominationPools/poolWithdrawUnbonded.ts:13](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/nominationPools/poolWithdrawUnbonded.ts#L13)

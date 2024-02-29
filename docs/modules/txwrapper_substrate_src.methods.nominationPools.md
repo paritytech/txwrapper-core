@@ -79,7 +79,7 @@
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/nominationPools/setConfigs.ts:9](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/nominationPools/setConfigs.ts#L9)
+[txwrapper-substrate/src/methods/nominationPools/setConfigs.ts:9](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/nominationPools/setConfigs.ts#L9)
 
 ## Functions
 
@@ -113,7 +113,7 @@ of just once, in the spirit of reusing code.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/nominationPools/bondExtra.ts:39](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/nominationPools/bondExtra.ts#L39)
+[txwrapper-substrate/src/methods/nominationPools/bondExtra.ts:39](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/nominationPools/bondExtra.ts#L39)
 
 ___
 
@@ -145,7 +145,7 @@ In the case of `origin != other`, `origin` can only bond extra pending rewards o
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/nominationPools/bondExtraOther.ts:33](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/nominationPools/bondExtraOther.ts#L33)
+[txwrapper-substrate/src/methods/nominationPools/bondExtraOther.ts:33](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/nominationPools/bondExtraOther.ts#L33)
 
 ___
 
@@ -175,7 +175,7 @@ account.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/nominationPools/chill.ts:29](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/nominationPools/chill.ts#L29)
+[txwrapper-substrate/src/methods/nominationPools/chill.ts:29](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/nominationPools/chill.ts#L29)
 
 ___
 
@@ -203,7 +203,7 @@ is reset to zero. the current.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/nominationPools/claimCommission.ts:27](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/nominationPools/claimCommission.ts#L27)
+[txwrapper-substrate/src/methods/nominationPools/claimCommission.ts:27](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/nominationPools/claimCommission.ts#L27)
 
 ___
 
@@ -234,7 +234,7 @@ A bonded member can use this to claim their payout based on the rewards that the
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/nominationPools/claimPayout.ts:23](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/nominationPools/claimPayout.ts#L23)
+[txwrapper-substrate/src/methods/nominationPools/claimPayout.ts:23](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/nominationPools/claimPayout.ts#L23)
 
 ___
 
@@ -261,7 +261,7 @@ for this call to be successful.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/nominationPools/claimPayoutOther.ts:26](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/nominationPools/claimPayoutOther.ts#L26)
+[txwrapper-substrate/src/methods/nominationPools/claimPayoutOther.ts:26](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/nominationPools/claimPayoutOther.ts#L26)
 
 ___
 
@@ -290,7 +290,7 @@ needs at have at least `amount + existential_deposit` transferrable.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/nominationPools/create.ts:42](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/nominationPools/create.ts#L42)
+[txwrapper-substrate/src/methods/nominationPools/create.ts:42](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/nominationPools/create.ts#L42)
 
 ___
 
@@ -314,7 +314,7 @@ Create a new delegation pool with a previously used pool id
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/nominationPools/createWithPoolId.ts:24](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/nominationPools/createWithPoolId.ts#L24)
+[txwrapper-substrate/src/methods/nominationPools/createWithPoolId.ts:24](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/nominationPools/createWithPoolId.ts#L24)
 
 ___
 
@@ -347,7 +347,7 @@ Note:
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/nominationPools/join.ts:36](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/nominationPools/join.ts#L36)
+[txwrapper-substrate/src/methods/nominationPools/join.ts:36](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/nominationPools/join.ts#L36)
 
 ___
 
@@ -377,7 +377,7 @@ account.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/nominationPools/nominate.ts:33](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/nominationPools/nominate.ts#L33)
+[txwrapper-substrate/src/methods/nominationPools/nominate.ts:33](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/nominationPools/nominate.ts#L33)
 
 ___
 
@@ -406,7 +406,7 @@ they attempt to unbond.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/nominationPools/poolWithdrawUnbonded.ts:32](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/nominationPools/poolWithdrawUnbonded.ts#L32)
+[txwrapper-substrate/src/methods/nominationPools/poolWithdrawUnbonded.ts:32](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/nominationPools/poolWithdrawUnbonded.ts#L32)
 
 ___
 
@@ -436,7 +436,7 @@ pool.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/nominationPools/setClaimPermission.ts:30](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/nominationPools/setClaimPermission.ts#L30)
+[txwrapper-substrate/src/methods/nominationPools/setClaimPermission.ts:30](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/nominationPools/setClaimPermission.ts#L30)
 
 ___
 
@@ -463,7 +463,7 @@ tuple. Where a `current` of `None` is provided, any current commission will be r
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/nominationPools/setCommission.ts:31](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/nominationPools/setCommission.ts#L31)
+[txwrapper-substrate/src/methods/nominationPools/setCommission.ts:31](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/nominationPools/setCommission.ts#L31)
 
 ___
 
@@ -490,7 +490,7 @@ tuple. Where a `current` of `None` is provided, any current commission will be r
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/nominationPools/setCommissionChangeRate.ts:36](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/nominationPools/setCommissionChangeRate.ts#L36)
+[txwrapper-substrate/src/methods/nominationPools/setCommissionChangeRate.ts:36](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/nominationPools/setCommissionChangeRate.ts#L36)
 
 ___
 
@@ -518,7 +518,7 @@ Set the maximum commission of a pool.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/nominationPools/setCommissionMax.ts:31](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/nominationPools/setCommissionMax.ts#L31)
+[txwrapper-substrate/src/methods/nominationPools/setCommissionMax.ts:31](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/nominationPools/setCommissionMax.ts#L31)
 
 ___
 
@@ -543,7 +543,7 @@ Root.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/nominationPools/setConfigs.ts:50](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/nominationPools/setConfigs.ts#L50)
+[txwrapper-substrate/src/methods/nominationPools/setConfigs.ts:50](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/nominationPools/setConfigs.ts#L50)
 
 ___
 
@@ -570,7 +570,7 @@ pool.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/nominationPools/setMetadata.ts:30](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/nominationPools/setMetadata.ts#L30)
+[txwrapper-substrate/src/methods/nominationPools/setMetadata.ts:30](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/nominationPools/setMetadata.ts#L30)
 
 ___
 
@@ -603,7 +603,7 @@ Set a new state for the pool.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/nominationPools/setState.ts:37](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/nominationPools/setState.ts#L37)
+[txwrapper-substrate/src/methods/nominationPools/setState.ts:37](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/nominationPools/setState.ts#L37)
 
 ___
 
@@ -657,7 +657,7 @@ staking system.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/nominationPools/unbond.ts:57](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/nominationPools/unbond.ts#L57)
+[txwrapper-substrate/src/methods/nominationPools/unbond.ts:57](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/nominationPools/unbond.ts#L57)
 
 ___
 
@@ -687,7 +687,7 @@ most pool members and they should be informed of changes to pool roles.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/nominationPools/updateRoles.ts:43](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/nominationPools/updateRoles.ts#L43)
+[txwrapper-substrate/src/methods/nominationPools/updateRoles.ts:43](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/nominationPools/updateRoles.ts#L43)
 
 ___
 
@@ -729,4 +729,4 @@ If the target is the depositor, the pool will be destroyed.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/nominationPools/withdrawUnbonded.ts:45](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/nominationPools/withdrawUnbonded.ts#L45)
+[txwrapper-substrate/src/methods/nominationPools/withdrawUnbonded.ts:45](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-substrate/src/methods/nominationPools/withdrawUnbonded.ts#L45)

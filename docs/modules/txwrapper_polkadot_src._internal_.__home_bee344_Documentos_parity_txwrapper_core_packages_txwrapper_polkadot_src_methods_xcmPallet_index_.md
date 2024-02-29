@@ -28,7 +28,7 @@
 
 #### Defined in
 
-[txwrapper-polkadot/src/methods/xcmPallet/limitedReserveTransferAssets.ts:10](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-polkadot/src/methods/xcmPallet/limitedReserveTransferAssets.ts#L10)
+[txwrapper-polkadot/src/methods/xcmPallet/limitedReserveTransferAssets.ts:10](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-polkadot/src/methods/xcmPallet/limitedReserveTransferAssets.ts#L10)
 
 ___
 
@@ -38,7 +38,7 @@ ___
 
 #### Defined in
 
-[txwrapper-polkadot/src/methods/xcmPallet/limitedTeleportAssets.ts:10](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-polkadot/src/methods/xcmPallet/limitedTeleportAssets.ts#L10)
+[txwrapper-polkadot/src/methods/xcmPallet/limitedTeleportAssets.ts:10](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-polkadot/src/methods/xcmPallet/limitedTeleportAssets.ts#L10)
 
 ___
 
@@ -48,7 +48,7 @@ ___
 
 #### Defined in
 
-[txwrapper-polkadot/src/methods/xcmPallet/reserveTransferAssets.ts:10](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-polkadot/src/methods/xcmPallet/reserveTransferAssets.ts#L10)
+[txwrapper-polkadot/src/methods/xcmPallet/reserveTransferAssets.ts:10](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-polkadot/src/methods/xcmPallet/reserveTransferAssets.ts#L10)
 
 ___
 
@@ -58,7 +58,7 @@ ___
 
 #### Defined in
 
-[txwrapper-polkadot/src/methods/xcmPallet/teleportAssets.ts:10](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-polkadot/src/methods/xcmPallet/teleportAssets.ts#L10)
+[txwrapper-polkadot/src/methods/xcmPallet/teleportAssets.ts:10](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-polkadot/src/methods/xcmPallet/teleportAssets.ts#L10)
 
 ## Functions
 
@@ -88,7 +88,7 @@ at risk.
 
 #### Defined in
 
-[txwrapper-polkadot/src/methods/xcmPallet/limitedReserveTransferAssets.ts:25](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-polkadot/src/methods/xcmPallet/limitedReserveTransferAssets.ts#L25)
+[txwrapper-polkadot/src/methods/xcmPallet/limitedReserveTransferAssets.ts:25](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-polkadot/src/methods/xcmPallet/limitedReserveTransferAssets.ts#L25)
 
 ___
 
@@ -117,7 +117,7 @@ at risk.
 
 #### Defined in
 
-[txwrapper-polkadot/src/methods/xcmPallet/limitedTeleportAssets.ts:24](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-polkadot/src/methods/xcmPallet/limitedTeleportAssets.ts#L24)
+[txwrapper-polkadot/src/methods/xcmPallet/limitedTeleportAssets.ts:24](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-polkadot/src/methods/xcmPallet/limitedTeleportAssets.ts#L24)
 
 ___
 
@@ -146,7 +146,7 @@ with all fees taken as needed from the asset.
 
 #### Defined in
 
-[txwrapper-polkadot/src/methods/xcmPallet/reserveTransferAssets.ts:24](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-polkadot/src/methods/xcmPallet/reserveTransferAssets.ts#L24)
+[txwrapper-polkadot/src/methods/xcmPallet/reserveTransferAssets.ts:24](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-polkadot/src/methods/xcmPallet/reserveTransferAssets.ts#L24)
 
 ___
 
@@ -174,4 +174,4 @@ with all fees taken as needed from the asset.
 
 #### Defined in
 
-[txwrapper-polkadot/src/methods/xcmPallet/teleportAssets.ts:23](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-polkadot/src/methods/xcmPallet/teleportAssets.ts#L23)
+[txwrapper-polkadot/src/methods/xcmPallet/teleportAssets.ts:23](https://github.com/paritytech/txwrapper-core/blob/fe8eeb2/packages/txwrapper-polkadot/src/methods/xcmPallet/teleportAssets.ts#L23)
