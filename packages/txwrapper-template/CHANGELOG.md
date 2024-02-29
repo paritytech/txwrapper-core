@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.2.1](/compare/v7.2.0...v7.2.1) (2024-02-29)
+
+
+### Bug Fixes
+
+* **deps:** bumped `@substrate/dev` to `v0.7.1` (#357) 47bda87, closes #357
+
+
+
+
+
 # [7.2.0](/compare/v7.1.1...v7.2.0) (2023-12-19)
 
 **Note:** Version bump only for package @substrate/txwrapper-template

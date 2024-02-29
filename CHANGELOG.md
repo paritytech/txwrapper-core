@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.2.1](https://github.com/paritytech/txwrapper-core/compare/v7.2.0...v7.2.1) (2024-02-29)
+
+
+### Bug Fixes
+
+* **deps:** bumped `@substrate/dev` to `v0.7.1` ([#357](https://github.com/paritytech/txwrapper-core/issues/357)) ([47bda87](https://github.com/paritytech/txwrapper-core/commit/47bda87d427adf77bdbd7233668da1e0c931e1cf))
+* **deps:** bumped `typedoc` to `v0.25.9`  ([#359](https://github.com/paritytech/txwrapper-core/issues/359)) ([a09c1f6](https://github.com/paritytech/txwrapper-core/commit/a09c1f66b8bb6dddb2695e5d4e0cbd2e0d8d5fdc))
+* **deps:** updated lerna to 8.1.2 ([#356](https://github.com/paritytech/txwrapper-core/issues/356)) ([5173831](https://github.com/paritytech/txwrapper-core/commit/517383163b980bc2b85b2b4b747beaaa3a2b2ddd))
+
+
+
+
+
 # [7.2.0](https://github.com/paritytech/txwrapper-core/compare/v7.1.1...v7.2.0) (2023-12-19)
 
 
