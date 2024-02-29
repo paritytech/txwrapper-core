@@ -4,6 +4,8 @@
 
 [methods](../modules/txwrapper_substrate_src.methods.md).[proxy](../modules/txwrapper_substrate_src.methods.proxy.md).ProxyProxy
 
+Base Argument object for methods.
+
 ## Hierarchy
 
 - [`Args`](../modules/txwrapper_core_src.md#args)
@@ -22,14 +24,14 @@
 
 ### call
 
-• **call**: `string` \| { `args?`: `string` ; `callIndex?`: `string`  }
+• **call**: `string` \| \{ `args?`: `string` ; `callIndex?`: `string`  }
 
 The call to be made by the `real` account.
 To take advantage of txwrapper methods, this could be UnsignedTransaction.method.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/proxy/proxy.ts:23](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/proxy/proxy.ts#L23)
+[txwrapper-substrate/src/methods/proxy/proxy.ts:23](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/proxy/proxy.ts#L23)
 
 ___
 
@@ -41,7 +43,7 @@ Specify the exact proxy type to be used and checked for this call.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/proxy/proxy.ts:18](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/proxy/proxy.ts#L18)
+[txwrapper-substrate/src/methods/proxy/proxy.ts:18](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/proxy/proxy.ts#L18)
 
 ___
 
@@ -54,4 +56,4 @@ through, `add_proxy`.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/proxy/proxy.ts:14](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/proxy/proxy.ts#L14)
+[txwrapper-substrate/src/methods/proxy/proxy.ts:14](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/proxy/proxy.ts#L14)

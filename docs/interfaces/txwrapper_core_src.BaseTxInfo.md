@@ -38,21 +38,19 @@ The ss-58 encoded address of the sending account.
 
 #### Defined in
 
-[txwrapper-core/src/types/method.ts:89](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-core/src/types/method.ts#L89)
+[txwrapper-core/src/types/method.ts:88](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-core/src/types/method.ts#L88)
 
 ___
 
 ### assetId
 
-• `Optional` **assetId**: `number`
+• `Optional` **assetId**: `number` \| `object`
 
 The assetId used in ChargeAssetTxPayment
 
-**`default`** 0
-
 #### Defined in
 
-[txwrapper-core/src/types/method.ts:95](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-core/src/types/method.ts#L95)
+[txwrapper-core/src/types/method.ts:93](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-core/src/types/method.ts#L93)
 
 ___
 
@@ -64,7 +62,7 @@ The checkpoint hash of the block, in hex.
 
 #### Defined in
 
-[txwrapper-core/src/types/method.ts:99](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-core/src/types/method.ts#L99)
+[txwrapper-core/src/types/method.ts:97](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-core/src/types/method.ts#L97)
 
 ___
 
@@ -76,7 +74,7 @@ The checkpoint block number (u32), in hex.
 
 #### Defined in
 
-[txwrapper-core/src/types/method.ts:103](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-core/src/types/method.ts#L103)
+[txwrapper-core/src/types/method.ts:101](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-core/src/types/method.ts#L101)
 
 ___
 
@@ -87,11 +85,15 @@ ___
 Describe the longevity of a transaction. It represents the validity from
 the `blockHash` field, in number of blocks. Defaults to 64 blocks.
 
-**`default`** 64
+**`Default`**
+
+```ts
+64
+```
 
 #### Defined in
 
-[txwrapper-core/src/types/method.ts:110](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-core/src/types/method.ts#L110)
+[txwrapper-core/src/types/method.ts:108](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-core/src/types/method.ts#L108)
 
 ___
 
@@ -103,20 +105,20 @@ The genesis hash of the chain, in hex.
 
 #### Defined in
 
-[txwrapper-core/src/types/method.ts:114](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-core/src/types/method.ts#L114)
+[txwrapper-core/src/types/method.ts:112](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-core/src/types/method.ts#L112)
 
 ___
 
 ### metadataRpc
 
-• **metadataRpc**: \`0x${string}\`
+• **metadataRpc**: \`0x$\{string}\`
 
 The SCALE-encoded metadata, as a hex string. Can be retrieved via the RPC
 call `state_getMetadata`.
 
 #### Defined in
 
-[txwrapper-core/src/types/method.ts:119](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-core/src/types/method.ts#L119)
+[txwrapper-core/src/types/method.ts:117](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-core/src/types/method.ts#L117)
 
 ___
 
@@ -128,7 +130,7 @@ The nonce for this transaction.
 
 #### Defined in
 
-[txwrapper-core/src/types/method.ts:123](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-core/src/types/method.ts#L123)
+[txwrapper-core/src/types/method.ts:121](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-core/src/types/method.ts#L121)
 
 ___
 
@@ -140,7 +142,7 @@ The current spec version of the runtime.
 
 #### Defined in
 
-[txwrapper-core/src/types/method.ts:127](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-core/src/types/method.ts#L127)
+[txwrapper-core/src/types/method.ts:125](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-core/src/types/method.ts#L125)
 
 ___
 
@@ -150,11 +152,15 @@ ___
 
 The tip for this transaction, in hex.
 
-**`default`** 0
+**`Default`**
+
+```ts
+0
+```
 
 #### Defined in
 
-[txwrapper-core/src/types/method.ts:133](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-core/src/types/method.ts#L133)
+[txwrapper-core/src/types/method.ts:131](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-core/src/types/method.ts#L131)
 
 ___
 
@@ -166,4 +172,4 @@ The current transaction version for the runtime.
 
 #### Defined in
 
-[txwrapper-core/src/types/method.ts:137](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-core/src/types/method.ts#L137)
+[txwrapper-core/src/types/method.ts:135](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-core/src/types/method.ts#L135)

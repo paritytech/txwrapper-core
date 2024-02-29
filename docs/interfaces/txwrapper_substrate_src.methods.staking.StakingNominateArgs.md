@@ -4,6 +4,8 @@
 
 [methods](../modules/txwrapper_substrate_src.methods.md).[staking](../modules/txwrapper_substrate_src.methods.staking.md).StakingNominateArgs
 
+Base Argument object for methods.
+
 ## Hierarchy
 
 - [`Args`](../modules/txwrapper_core_src.md#args)
@@ -29,4 +31,4 @@ Warning: This provides no checks as to whether these targets are actual validato
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/staking/nominate.ts:16](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/staking/nominate.ts#L16)
+[txwrapper-substrate/src/methods/staking/nominate.ts:16](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/staking/nominate.ts#L16)

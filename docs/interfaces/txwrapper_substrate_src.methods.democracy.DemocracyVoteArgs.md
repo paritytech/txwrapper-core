@@ -4,6 +4,8 @@
 
 [methods](../modules/txwrapper_substrate_src.methods.md).[democracy](../modules/txwrapper_substrate_src.methods.democracy.md).DemocracyVoteArgs
 
+Base Argument object for methods.
+
 ## Hierarchy
 
 - [`Args`](../modules/txwrapper_core_src.md#args)
@@ -25,7 +27,7 @@
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/democracy/vote.ts:15](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/democracy/vote.ts#L15)
+[txwrapper-substrate/src/methods/democracy/vote.ts:15](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/democracy/vote.ts#L15)
 
 ___
 
@@ -37,4 +39,4 @@ Vote.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/democracy/vote.ts:19](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/democracy/vote.ts#L19)
+[txwrapper-substrate/src/methods/democracy/vote.ts:19](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/democracy/vote.ts#L19)

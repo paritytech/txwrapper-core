@@ -4,6 +4,8 @@
 
 [methods](../modules/txwrapper_substrate_src.methods.md).[nominationPools](../modules/txwrapper_substrate_src.methods.nominationPools.md).NominationPoolsSetClaimPermission
 
+Base Argument object for methods.
+
 ## Hierarchy
 
 - [`Args`](../modules/txwrapper_core_src.md#args)
@@ -27,4 +29,4 @@ Account to claim reward. The value will either be:
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/nominationPools/setClaimPermission.ts:14](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/nominationPools/setClaimPermission.ts#L14)
+[txwrapper-substrate/src/methods/nominationPools/setClaimPermission.ts:14](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/nominationPools/setClaimPermission.ts#L14)

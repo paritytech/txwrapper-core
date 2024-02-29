@@ -1,8 +1,8 @@
-[txwrapper-core](../README.md) / [Modules](../modules.md) / [txwrapper-core/src](../modules/txwrapper_core_src.md) / [<internal\>](../modules/txwrapper_core_src._internal_.md) / GetRegistryBaseArgs
+[txwrapper-core](../README.md) / [Modules](../modules.md) / [txwrapper-core/src](../modules/txwrapper_core_src.md) / [\<internal\>](../modules/txwrapper_core_src._internal_.md) / GetRegistryBaseArgs
 
 # Interface: GetRegistryBaseArgs
 
-[txwrapper-core/src](../modules/txwrapper_core_src.md).[<internal>](../modules/txwrapper_core_src._internal_.md).GetRegistryBaseArgs
+[txwrapper-core/src](../modules/txwrapper_core_src.md).[\<internal\>](../modules/txwrapper_core_src._internal_.md).GetRegistryBaseArgs
 
 ## Table of contents
 
@@ -27,7 +27,7 @@ Additional types to register in the registry.
 
 #### Defined in
 
-[txwrapper-core/src/core/metadata/getRegistryBase.ts:44](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-core/src/core/metadata/getRegistryBase.ts#L44)
+[txwrapper-core/src/core/metadata/getRegistryBase.ts:44](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-core/src/core/metadata/getRegistryBase.ts#L44)
 
 ___
 
@@ -39,7 +39,7 @@ Used to reduce the metadata size by only having the calls
 
 #### Defined in
 
-[txwrapper-core/src/core/metadata/getRegistryBase.ts:28](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-core/src/core/metadata/getRegistryBase.ts#L28)
+[txwrapper-core/src/core/metadata/getRegistryBase.ts:28](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-core/src/core/metadata/getRegistryBase.ts#L28)
 
 ___
 
@@ -51,19 +51,19 @@ Chain properties, normally returned by the `system_properties` call.
 
 #### Defined in
 
-[txwrapper-core/src/core/metadata/getRegistryBase.ts:16](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-core/src/core/metadata/getRegistryBase.ts#L16)
+[txwrapper-core/src/core/metadata/getRegistryBase.ts:16](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-core/src/core/metadata/getRegistryBase.ts#L16)
 
 ___
 
 ### metadataRpc
 
-• **metadataRpc**: \`0x${string}\`
+• **metadataRpc**: \`0x$\{string}\`
 
 Used to set the correct metadata for the registry
 
 #### Defined in
 
-[txwrapper-core/src/core/metadata/getRegistryBase.ts:24](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-core/src/core/metadata/getRegistryBase.ts#L24)
+[txwrapper-core/src/core/metadata/getRegistryBase.ts:24](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-core/src/core/metadata/getRegistryBase.ts#L24)
 
 ___
 
@@ -75,7 +75,7 @@ Array of signedExtensions
 
 #### Defined in
 
-[txwrapper-core/src/core/metadata/getRegistryBase.ts:32](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-core/src/core/metadata/getRegistryBase.ts#L32)
+[txwrapper-core/src/core/metadata/getRegistryBase.ts:32](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-core/src/core/metadata/getRegistryBase.ts#L32)
 
 ___
 
@@ -87,7 +87,7 @@ Chain specific type definitions to registry.
 
 #### Defined in
 
-[txwrapper-core/src/core/metadata/getRegistryBase.ts:20](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-core/src/core/metadata/getRegistryBase.ts#L20)
+[txwrapper-core/src/core/metadata/getRegistryBase.ts:20](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-core/src/core/metadata/getRegistryBase.ts#L20)
 
 ___
 
@@ -99,7 +99,7 @@ OverrideTypesBundle to set to registry
 
 #### Defined in
 
-[txwrapper-core/src/core/metadata/getRegistryBase.ts:40](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-core/src/core/metadata/getRegistryBase.ts#L40)
+[txwrapper-core/src/core/metadata/getRegistryBase.ts:40](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-core/src/core/metadata/getRegistryBase.ts#L40)
 
 ___
 
@@ -111,4 +111,4 @@ User extensions used to inject into the type registry
 
 #### Defined in
 
-[txwrapper-core/src/core/metadata/getRegistryBase.ts:36](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-core/src/core/metadata/getRegistryBase.ts#L36)
+[txwrapper-core/src/core/metadata/getRegistryBase.ts:36](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-core/src/core/metadata/getRegistryBase.ts#L36)

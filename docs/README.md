@@ -129,36 +129,4 @@ This libraries release process uses Lerna, and the following below is required t
 
 * **N.B.** Ensure you have [`GH_TOKEN` env variable set](https://github.com/lerna/lerna/tree/main/commands/version#--create-release-type) to a GitHub personal access token (PAT) so lerna can publish the release on github.
 
-* The publisher will need publishing permissions to the @substrate npm org.
-
-1. Make sure you're logged in to `npm` using `npm login`.
-
-2. Make sure to be in the `main` branch, and `git pull origin main`.
-
-3. Before deploying a new release run the following sanity checks.
-
-    ```bash
-    yarn run build
-    yarn run test
-    ```
-
-4. Deploy the new release. It is important to note there will be a step that asks you to confirm whether or not the version bump is correct. Please confirm with the maintainers the suggested versions are correct.
-
-    ```bash
-    yarn run deploy
-    ```
-
-    **NOTES:**
-
-    This repo requires signed and verified commits, so when using a yubikey there are several points where you are required to sign a commit while Lerna sets up the github release. The output from Lerna won't warn you that you have to sign it, so the `deploy` step will error if you forget. I'd advise keeping an eye on your Yubikey; it'll start flashing when it's needed to sign something.
-
-    If you don't sign a commit in time and get an error, you may need to "undo" some steps:
-    - If a new commit was created locally, `git reset --hard HEAD~1` to undo it.
-    - If a new tag was created locally, `git tag -d <new-version>` to remove it.
-    - If `lerna-debug.log` was created, `rm -rf lerna-debug.log` to remove it.
-
-    If you forget to login to NPM, the GitHub steps will all complete successfully, but the publishing step will fail. In that case, you can do the following:
-    - run `yarn run build` to ensure that all packages are built and ready to be published (**This is important; `yarn run deploy` does this for us, but if we skip to publishing, we must ensure that the packages are in a good state ourselves**).
-    - run `npx lerna publish from-package` to publish the packages.
-
-    If you don't have the permissions you need on the GitHub repository, you may find that you're able to push a tag but not the actual commit. In this case, you can delete the version tag on GitHub with `git push origin :<new-version>`.
+* The publisher will need publishing permissions to the

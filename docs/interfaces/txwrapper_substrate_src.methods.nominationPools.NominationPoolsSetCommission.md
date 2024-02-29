@@ -4,6 +4,8 @@
 
 [methods](../modules/txwrapper_substrate_src.methods.md).[nominationPools](../modules/txwrapper_substrate_src.methods.nominationPools.md).NominationPoolsSetCommission
 
+Base Argument object for methods.
+
 ## Hierarchy
 
 - [`Args`](../modules/txwrapper_core_src.md#args)
@@ -28,7 +30,7 @@ If a `None` is supplied to `new_commission`, existing commission will be removed
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/nominationPools/setCommission.ts:18](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/nominationPools/setCommission.ts#L18)
+[txwrapper-substrate/src/methods/nominationPools/setCommission.ts:18](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/nominationPools/setCommission.ts#L18)
 
 ___
 
@@ -40,4 +42,4 @@ A valid PoolId.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/nominationPools/setCommission.ts:13](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/nominationPools/setCommission.ts#L13)
+[txwrapper-substrate/src/methods/nominationPools/setCommission.ts:13](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/nominationPools/setCommission.ts#L13)

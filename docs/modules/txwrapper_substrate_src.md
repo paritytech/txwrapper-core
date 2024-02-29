@@ -4,7 +4,10 @@
 
 ## Table of contents
 
+### Modules
+
+- [\<internal\>](txwrapper_substrate_src._internal_.md)
+
 ### Namespaces
 
-- [&lt;internal\&gt;](txwrapper_substrate_src._internal_.md)
 - [methods](txwrapper_substrate_src.methods.md)

@@ -1,8 +1,10 @@
-[txwrapper-core](../README.md) / [Modules](../modules.md) / [txwrapper-polkadot/src](../modules/txwrapper_polkadot_src.md) / [<internal\>](../modules/txwrapper_polkadot_src._internal_.md) / ["/home/bee344/Documentos/parity/txwrapper-core/packages/txwrapper-polkadot/src/methods/crowdloan/index"](../modules/txwrapper_polkadot_src._internal_.__home_bee344_Documentos_parity_txwrapper_core_packages_txwrapper_polkadot_src_methods_crowdloan_index_.md) / CrowdloanContributeArgs
+[txwrapper-core](../README.md) / [Modules](../modules.md) / [txwrapper-polkadot/src](../modules/txwrapper_polkadot_src.md) / [\<internal\>](../modules/txwrapper_polkadot_src._internal_.md) / ["/home/bee344/Documentos/parity/txwrapper-core/packages/txwrapper-polkadot/src/methods/crowdloan/index"](../modules/txwrapper_polkadot_src._internal_.__home_bee344_Documentos_parity_txwrapper_core_packages_txwrapper_polkadot_src_methods_crowdloan_index_.md) / CrowdloanContributeArgs
 
 # Interface: CrowdloanContributeArgs
 
-[<internal>](../modules/txwrapper_polkadot_src._internal_.md).["/home/bee344/Documentos/parity/txwrapper-core/packages/txwrapper-polkadot/src/methods/crowdloan/index"](../modules/txwrapper_polkadot_src._internal_.__home_bee344_Documentos_parity_txwrapper_core_packages_txwrapper_polkadot_src_methods_crowdloan_index_.md).CrowdloanContributeArgs
+[\<internal\>](../modules/txwrapper_polkadot_src._internal_.md).["/home/bee344/Documentos/parity/txwrapper-core/packages/txwrapper-polkadot/src/methods/crowdloan/index"](../modules/txwrapper_polkadot_src._internal_.__home_bee344_Documentos_parity_txwrapper_core_packages_txwrapper_polkadot_src_methods_crowdloan_index_.md).CrowdloanContributeArgs
+
+Base Argument object for methods.
 
 ## Hierarchy
 
@@ -26,7 +28,7 @@
 
 #### Defined in
 
-[txwrapper-polkadot/src/methods/crowdloan/contribute.ts:12](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-polkadot/src/methods/crowdloan/contribute.ts#L12)
+[txwrapper-polkadot/src/methods/crowdloan/contribute.ts:12](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-polkadot/src/methods/crowdloan/contribute.ts#L12)
 
 ___
 
@@ -36,7 +38,7 @@ ___
 
 #### Defined in
 
-[txwrapper-polkadot/src/methods/crowdloan/contribute.ts:14](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-polkadot/src/methods/crowdloan/contribute.ts#L14)
+[txwrapper-polkadot/src/methods/crowdloan/contribute.ts:14](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-polkadot/src/methods/crowdloan/contribute.ts#L14)
 
 ___
 
@@ -46,4 +48,4 @@ ___
 
 #### Defined in
 
-[txwrapper-polkadot/src/methods/crowdloan/contribute.ts:13](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-polkadot/src/methods/crowdloan/contribute.ts#L13)
+[txwrapper-polkadot/src/methods/crowdloan/contribute.ts:13](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-polkadot/src/methods/crowdloan/contribute.ts#L13)

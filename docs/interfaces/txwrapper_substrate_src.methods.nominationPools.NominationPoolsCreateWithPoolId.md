@@ -4,6 +4,8 @@
 
 [methods](../modules/txwrapper_substrate_src.methods.md).[nominationPools](../modules/txwrapper_substrate_src.methods.nominationPools.md).NominationPoolsCreateWithPoolId
 
+Base Argument object for methods.
+
 ## Hierarchy
 
 - [`NominationPoolsCreate`](txwrapper_substrate_src.methods.nominationPools.NominationPoolsCreate.md)
@@ -36,7 +38,7 @@ destroyed.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/nominationPools/create.ts:15](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/nominationPools/create.ts#L15)
+[txwrapper-substrate/src/methods/nominationPools/create.ts:15](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/nominationPools/create.ts#L15)
 
 ___
 
@@ -52,7 +54,7 @@ The account to set as the [`PoolRoles::bouncer`].
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/nominationPools/create.ts:27](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/nominationPools/create.ts#L27)
+[txwrapper-substrate/src/methods/nominationPools/create.ts:27](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/nominationPools/create.ts#L27)
 
 ___
 
@@ -68,7 +70,7 @@ The account to set as the [`PoolRoles::nominator`].
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/nominationPools/create.ts:23](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/nominationPools/create.ts#L23)
+[txwrapper-substrate/src/methods/nominationPools/create.ts:23](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/nominationPools/create.ts#L23)
 
 ___
 
@@ -80,7 +82,7 @@ A valid PoolId.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/nominationPools/createWithPoolId.ts:14](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/nominationPools/createWithPoolId.ts#L14)
+[txwrapper-substrate/src/methods/nominationPools/createWithPoolId.ts:14](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/nominationPools/createWithPoolId.ts#L14)
 
 ___
 
@@ -96,4 +98,4 @@ The account to set as [`PoolRoles::root`].
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/nominationPools/create.ts:19](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/nominationPools/create.ts#L19)
+[txwrapper-substrate/src/methods/nominationPools/create.ts:19](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/nominationPools/create.ts#L19)

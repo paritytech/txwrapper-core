@@ -4,6 +4,8 @@
 
 [methods](../modules/txwrapper_substrate_src.methods.md).[nominationPools](../modules/txwrapper_substrate_src.methods.nominationPools.md).NominationPoolsBondExtraOther
 
+Base Argument object for methods.
+
 ## Hierarchy
 
 - [`NominationPoolsBondExtra`](txwrapper_substrate_src.methods.nominationPools.NominationPoolsBondExtra.md)
@@ -36,7 +38,7 @@
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/nominationPools/bondExtra.ts:10](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/nominationPools/bondExtra.ts#L10)
+[txwrapper-substrate/src/methods/nominationPools/bondExtra.ts:10](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/nominationPools/bondExtra.ts#L10)
 
 ___
 
@@ -48,4 +50,4 @@ AccountId.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/nominationPools/bondExtraOther.ts:15](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/nominationPools/bondExtraOther.ts#L15)
+[txwrapper-substrate/src/methods/nominationPools/bondExtraOther.ts:15](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/nominationPools/bondExtraOther.ts#L15)

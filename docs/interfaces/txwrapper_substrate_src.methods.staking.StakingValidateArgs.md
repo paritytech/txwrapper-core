@@ -4,6 +4,8 @@
 
 [methods](../modules/txwrapper_substrate_src.methods.md).[staking](../modules/txwrapper_substrate_src.methods.staking.md).StakingValidateArgs
 
+Base Argument object for methods.
+
 ## Hierarchy
 
 - [`Args`](../modules/txwrapper_core_src.md#args)
@@ -32,4 +34,4 @@ Set the desired commission for the validator. Value is Perbill.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/staking/validate.ts:13](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/staking/validate.ts#L13)
+[txwrapper-substrate/src/methods/staking/validate.ts:13](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/staking/validate.ts#L13)

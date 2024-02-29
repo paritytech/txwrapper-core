@@ -4,6 +4,8 @@
 
 [methods](../modules/txwrapper_substrate_src.methods.md).[nominationPools](../modules/txwrapper_substrate_src.methods.nominationPools.md).NominationPoolsSetConfigs
 
+Base Argument object for methods.
+
 ## Hierarchy
 
 - [`Args`](../modules/txwrapper_core_src.md#args)
@@ -25,70 +27,70 @@
 
 ### globalMaxCommission
 
-• **globalMaxCommission**: [`ConfigOp`](../modules/txwrapper_substrate_src.methods.nominationPools.md#configop)<`string`\>
+• **globalMaxCommission**: [`ConfigOp`](../modules/txwrapper_substrate_src.methods.nominationPools.md#configop)\<`string`\>
 
 Set [`GlobalMaxCommission`].
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/nominationPools/setConfigs.ts:39](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/nominationPools/setConfigs.ts#L39)
+[txwrapper-substrate/src/methods/nominationPools/setConfigs.ts:39](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/nominationPools/setConfigs.ts#L39)
 
 ___
 
 ### maxMembers
 
-• **maxMembers**: [`ConfigOp`](../modules/txwrapper_substrate_src.methods.nominationPools.md#configop)<`string` \| `number`\>
+• **maxMembers**: [`ConfigOp`](../modules/txwrapper_substrate_src.methods.nominationPools.md#configop)\<`string` \| `number`\>
 
 Set [`MaxPoolMembers`].
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/nominationPools/setConfigs.ts:31](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/nominationPools/setConfigs.ts#L31)
+[txwrapper-substrate/src/methods/nominationPools/setConfigs.ts:31](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/nominationPools/setConfigs.ts#L31)
 
 ___
 
 ### maxMembersPerPool
 
-• **maxMembersPerPool**: [`ConfigOp`](../modules/txwrapper_substrate_src.methods.nominationPools.md#configop)<`string` \| `number`\>
+• **maxMembersPerPool**: [`ConfigOp`](../modules/txwrapper_substrate_src.methods.nominationPools.md#configop)\<`string` \| `number`\>
 
 Set [`MaxPoolMembersPerPool`].
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/nominationPools/setConfigs.ts:35](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/nominationPools/setConfigs.ts#L35)
+[txwrapper-substrate/src/methods/nominationPools/setConfigs.ts:35](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/nominationPools/setConfigs.ts#L35)
 
 ___
 
 ### maxPools
 
-• **maxPools**: [`ConfigOp`](../modules/txwrapper_substrate_src.methods.nominationPools.md#configop)<`string` \| `number`\>
+• **maxPools**: [`ConfigOp`](../modules/txwrapper_substrate_src.methods.nominationPools.md#configop)\<`string` \| `number`\>
 
 Set [`MaxPools`].
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/nominationPools/setConfigs.ts:27](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/nominationPools/setConfigs.ts#L27)
+[txwrapper-substrate/src/methods/nominationPools/setConfigs.ts:27](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/nominationPools/setConfigs.ts#L27)
 
 ___
 
 ### minCreateBond
 
-• **minCreateBond**: [`ConfigOp`](../modules/txwrapper_substrate_src.methods.nominationPools.md#configop)<`string`\>
+• **minCreateBond**: [`ConfigOp`](../modules/txwrapper_substrate_src.methods.nominationPools.md#configop)\<`string`\>
 
 Set [`MinCreateBond`].
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/nominationPools/setConfigs.ts:23](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/nominationPools/setConfigs.ts#L23)
+[txwrapper-substrate/src/methods/nominationPools/setConfigs.ts:23](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/nominationPools/setConfigs.ts#L23)
 
 ___
 
 ### minJoinBond
 
-• **minJoinBond**: [`ConfigOp`](../modules/txwrapper_substrate_src.methods.nominationPools.md#configop)<`string`\>
+• **minJoinBond**: [`ConfigOp`](../modules/txwrapper_substrate_src.methods.nominationPools.md#configop)\<`string`\>
 
 Set [`MinJoinBond`].
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/nominationPools/setConfigs.ts:19](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/nominationPools/setConfigs.ts#L19)
+[txwrapper-substrate/src/methods/nominationPools/setConfigs.ts:19](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/nominationPools/setConfigs.ts#L19)

@@ -32,9 +32,9 @@
 - [isBrowser](txwrapper_polkadot_src.md#isbrowser)
 - [toTxMethod](txwrapper_polkadot_src.md#totxmethod)
 
-### Namespaces
+### Modules
 
-- [&lt;internal\&gt;](txwrapper_polkadot_src._internal_.md)
+- [\<internal\>](txwrapper_polkadot_src._internal_.md)
 
 ### Interfaces
 
@@ -202,7 +202,7 @@ Re-exports [toTxMethod](txwrapper_core_src.md#totxmethod)
 
 ### methods
 
-• **methods**: `Object`
+• `Const` **methods**: `Object`
 
 #### Type declaration
 
@@ -223,7 +223,7 @@ Re-exports [toTxMethod](txwrapper_core_src.md#totxmethod)
 
 #### Defined in
 
-[txwrapper-polkadot/src/index.ts:16](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-polkadot/src/index.ts#L16)
+[txwrapper-polkadot/src/index.ts:16](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-polkadot/src/index.ts#L16)
 
 ## Functions
 
@@ -245,4 +245,4 @@ Get a type registry for networks that txwrapper-polkadot supports.
 
 #### Defined in
 
-[txwrapper-polkadot/src/index.ts:104](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-polkadot/src/index.ts#L104)
+[txwrapper-polkadot/src/index.ts:104](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-polkadot/src/index.ts#L104)

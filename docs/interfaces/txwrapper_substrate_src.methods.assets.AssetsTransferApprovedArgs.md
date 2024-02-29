@@ -4,6 +4,8 @@
 
 [methods](../modules/txwrapper_substrate_src.methods.md).[assets](../modules/txwrapper_substrate_src.methods.assets.md).AssetsTransferApprovedArgs
 
+Base Argument object for methods.
+
 ## Hierarchy
 
 - [`Args`](../modules/txwrapper_core_src.md#args)
@@ -29,7 +31,7 @@ The amount of assets to transfer.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/assets/transferApproved.ts:26](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/assets/transferApproved.ts#L26)
+[txwrapper-substrate/src/methods/assets/transferApproved.ts:26](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/assets/transferApproved.ts#L26)
 
 ___
 
@@ -41,7 +43,7 @@ The account to which the asset balance of `amount` will be transferred.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/assets/transferApproved.ts:22](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/assets/transferApproved.ts#L22)
+[txwrapper-substrate/src/methods/assets/transferApproved.ts:22](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/assets/transferApproved.ts#L22)
 
 ___
 
@@ -53,7 +55,7 @@ The identifier of the asset.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/assets/transferApproved.ts:13](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/assets/transferApproved.ts#L13)
+[txwrapper-substrate/src/methods/assets/transferApproved.ts:13](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/assets/transferApproved.ts#L13)
 
 ___
 
@@ -66,4 +68,4 @@ from which the asset balance will be withdrawn.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/assets/transferApproved.ts:18](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/assets/transferApproved.ts#L18)
+[txwrapper-substrate/src/methods/assets/transferApproved.ts:18](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/assets/transferApproved.ts#L18)

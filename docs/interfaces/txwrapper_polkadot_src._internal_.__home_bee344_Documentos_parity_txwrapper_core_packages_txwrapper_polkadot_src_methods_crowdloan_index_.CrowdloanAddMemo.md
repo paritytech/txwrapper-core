@@ -1,8 +1,10 @@
-[txwrapper-core](../README.md) / [Modules](../modules.md) / [txwrapper-polkadot/src](../modules/txwrapper_polkadot_src.md) / [<internal\>](../modules/txwrapper_polkadot_src._internal_.md) / ["/home/bee344/Documentos/parity/txwrapper-core/packages/txwrapper-polkadot/src/methods/crowdloan/index"](../modules/txwrapper_polkadot_src._internal_.__home_bee344_Documentos_parity_txwrapper_core_packages_txwrapper_polkadot_src_methods_crowdloan_index_.md) / CrowdloanAddMemo
+[txwrapper-core](../README.md) / [Modules](../modules.md) / [txwrapper-polkadot/src](../modules/txwrapper_polkadot_src.md) / [\<internal\>](../modules/txwrapper_polkadot_src._internal_.md) / ["/home/bee344/Documentos/parity/txwrapper-core/packages/txwrapper-polkadot/src/methods/crowdloan/index"](../modules/txwrapper_polkadot_src._internal_.__home_bee344_Documentos_parity_txwrapper_core_packages_txwrapper_polkadot_src_methods_crowdloan_index_.md) / CrowdloanAddMemo
 
 # Interface: CrowdloanAddMemo
 
-[<internal>](../modules/txwrapper_polkadot_src._internal_.md).["/home/bee344/Documentos/parity/txwrapper-core/packages/txwrapper-polkadot/src/methods/crowdloan/index"](../modules/txwrapper_polkadot_src._internal_.__home_bee344_Documentos_parity_txwrapper_core_packages_txwrapper_polkadot_src_methods_crowdloan_index_.md).CrowdloanAddMemo
+[\<internal\>](../modules/txwrapper_polkadot_src._internal_.md).["/home/bee344/Documentos/parity/txwrapper-core/packages/txwrapper-polkadot/src/methods/crowdloan/index"](../modules/txwrapper_polkadot_src._internal_.__home_bee344_Documentos_parity_txwrapper_core_packages_txwrapper_polkadot_src_methods_crowdloan_index_.md).CrowdloanAddMemo
+
+Base Argument object for methods.
 
 ## Hierarchy
 
@@ -25,7 +27,7 @@
 
 #### Defined in
 
-[txwrapper-polkadot/src/methods/crowdloan/addMemo.ts:10](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-polkadot/src/methods/crowdloan/addMemo.ts#L10)
+[txwrapper-polkadot/src/methods/crowdloan/addMemo.ts:10](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-polkadot/src/methods/crowdloan/addMemo.ts#L10)
 
 ___
 
@@ -35,4 +37,4 @@ ___
 
 #### Defined in
 
-[txwrapper-polkadot/src/methods/crowdloan/addMemo.ts:11](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-polkadot/src/methods/crowdloan/addMemo.ts#L11)
+[txwrapper-polkadot/src/methods/crowdloan/addMemo.ts:11](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-polkadot/src/methods/crowdloan/addMemo.ts#L11)

@@ -4,6 +4,8 @@
 
 [methods](../modules/txwrapper_substrate_src.methods.md).[system](../modules/txwrapper_substrate_src.methods.system.md).SystemRemarkArgs
 
+Base Argument object for methods.
+
 ## Hierarchy
 
 - [`Args`](../modules/txwrapper_core_src.md#args)
@@ -26,4 +28,4 @@ The remark to set on chain, in hex or bytes.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/system/remark.ts:13](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/system/remark.ts#L13)
+[txwrapper-substrate/src/methods/system/remark.ts:13](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/system/remark.ts#L13)

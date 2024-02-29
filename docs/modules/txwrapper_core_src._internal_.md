@@ -1,8 +1,6 @@
-[txwrapper-core](../README.md) / [Modules](../modules.md) / [txwrapper-core/src](txwrapper_core_src.md) / <internal\>
+[txwrapper-core](../README.md) / [Modules](../modules.md) / [txwrapper-core/src](txwrapper_core_src.md) / \<internal\>
 
-# Namespace: <internal\>
-
-[txwrapper-core/src](txwrapper_core_src.md).<internal>
+# Module: \<internal\>
 
 ## Table of contents
 

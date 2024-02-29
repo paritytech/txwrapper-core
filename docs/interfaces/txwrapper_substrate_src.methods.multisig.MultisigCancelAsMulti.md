@@ -6,7 +6,7 @@
 
 ## Hierarchy
 
-- `Omit`<[`MultiSigApproveAsMulti`](txwrapper_substrate_src.methods.multisig.MultiSigApproveAsMulti.md), ``"maxWeight"`` \| ``"maybeTimepoint"``\>
+- `Omit`\<[`MultiSigApproveAsMulti`](txwrapper_substrate_src.methods.multisig.MultiSigApproveAsMulti.md), ``"maxWeight"`` \| ``"maybeTimepoint"``\>
 
   ↳ **`MultisigCancelAsMulti`**
 
@@ -27,7 +27,7 @@ The hash of the call to be executed.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/multisig/cancelAsMulti.ts:21](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/multisig/cancelAsMulti.ts#L21)
+[txwrapper-substrate/src/methods/multisig/cancelAsMulti.ts:21](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/multisig/cancelAsMulti.ts#L21)
 
 ___
 
@@ -40,4 +40,4 @@ transaction for this dispatch.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/multisig/cancelAsMulti.ts:17](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/multisig/cancelAsMulti.ts#L17)
+[txwrapper-substrate/src/methods/multisig/cancelAsMulti.ts:17](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/multisig/cancelAsMulti.ts#L17)

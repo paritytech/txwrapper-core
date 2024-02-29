@@ -4,6 +4,8 @@
 
 [methods](../modules/txwrapper_substrate_src.methods.md).[staking](../modules/txwrapper_substrate_src.methods.staking.md).StakingPayoutStakersArgs
 
+Base Argument object for methods.
+
 ## Hierarchy
 
 - [`Args`](../modules/txwrapper_core_src.md#args)
@@ -28,7 +30,7 @@ retains up to `history_depth` eras of reward information.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/staking/payoutStakers.ts:19](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/staking/payoutStakers.ts#L19)
+[txwrapper-substrate/src/methods/staking/payoutStakers.ts:19](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/staking/payoutStakers.ts#L19)
 
 ___
 
@@ -41,4 +43,4 @@ The Stash account of a _validator._ Their nominators, up to, the maximum
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/staking/payoutStakers.ts:14](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/staking/payoutStakers.ts#L14)
+[txwrapper-substrate/src/methods/staking/payoutStakers.ts:14](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/staking/payoutStakers.ts#L14)

@@ -4,6 +4,8 @@
 
 [methods](../modules/txwrapper_substrate_src.methods.md).[balances](../modules/txwrapper_substrate_src.methods.balances.md).BalancesTransferArgs
 
+Base Argument object for methods.
+
 ## Hierarchy
 
 - [`Args`](../modules/txwrapper_core_src.md#args)
@@ -33,7 +35,7 @@ The recipient address, SS-58 encoded.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/balances/transfer.ts:13](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/balances/transfer.ts#L13)
+[txwrapper-substrate/src/methods/balances/transfer.ts:13](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/balances/transfer.ts#L13)
 
 ___
 
@@ -45,4 +47,4 @@ The amount to send.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/balances/transfer.ts:17](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/balances/transfer.ts#L17)
+[txwrapper-substrate/src/methods/balances/transfer.ts:17](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/balances/transfer.ts#L17)

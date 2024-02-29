@@ -23,25 +23,23 @@ JSON format for an unsigned transaction.
 
 ### assetId
 
-• `Optional` **assetId**: `number`
+• `Optional` **assetId**: `number` \| `object`
 
 The assetId used in ChargeAssetTxPayment
 
-**`default`** 0
-
 #### Defined in
 
-[txwrapper-core/src/types/method.ts:74](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-core/src/types/method.ts#L74)
+[txwrapper-core/src/types/method.ts:73](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-core/src/types/method.ts#L73)
 
 ___
 
 ### metadataRpc
 
-• **metadataRpc**: \`0x${string}\`
+• **metadataRpc**: \`0x$\{string}\`
 
 The SCALE-encoded metadata, as a hex string. Can be retrieved via the RPC
 call `state_getMetadata`.
 
 #### Defined in
 
-[txwrapper-core/src/types/method.ts:79](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-core/src/types/method.ts#L79)
+[txwrapper-core/src/types/method.ts:78](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-core/src/types/method.ts#L78)

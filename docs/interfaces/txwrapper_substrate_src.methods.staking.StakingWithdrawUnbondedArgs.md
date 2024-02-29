@@ -4,6 +4,8 @@
 
 [methods](../modules/txwrapper_substrate_src.methods.md).[staking](../modules/txwrapper_substrate_src.methods.staking.md).StakingWithdrawUnbondedArgs
 
+Base Argument object for methods.
+
 ## Hierarchy
 
 - [`Args`](../modules/txwrapper_core_src.md#args)
@@ -24,4 +26,4 @@
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/staking/withdrawUnbonded.ts:10](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/staking/withdrawUnbonded.ts#L10)
+[txwrapper-substrate/src/methods/staking/withdrawUnbonded.ts:10](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/staking/withdrawUnbonded.ts#L10)

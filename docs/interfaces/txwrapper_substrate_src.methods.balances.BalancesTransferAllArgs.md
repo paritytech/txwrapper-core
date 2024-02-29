@@ -4,6 +4,8 @@
 
 [methods](../modules/txwrapper_substrate_src.methods.md).[balances](../modules/txwrapper_substrate_src.methods.balances.md).BalancesTransferAllArgs
 
+Base Argument object for methods.
+
 ## Hierarchy
 
 - [`Args`](../modules/txwrapper_core_src.md#args)
@@ -33,7 +35,7 @@ The recipient of the transfer.
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/balances/transferAll.ts:13](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/balances/transferAll.ts#L13)
+[txwrapper-substrate/src/methods/balances/transferAll.ts:13](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/balances/transferAll.ts#L13)
 
 ___
 
@@ -48,4 +50,4 @@ keep the sender account alive (true).
 
 #### Defined in
 
-[txwrapper-substrate/src/methods/balances/transferAll.ts:21](https://github.com/paritytech/txwrapper-core/blob/bb9e677/packages/txwrapper-substrate/src/methods/balances/transferAll.ts#L21)
+[txwrapper-substrate/src/methods/balances/transferAll.ts:21](https://github.com/paritytech/txwrapper-core/blob/a09c1f6/packages/txwrapper-substrate/src/methods/balances/transferAll.ts#L21)
