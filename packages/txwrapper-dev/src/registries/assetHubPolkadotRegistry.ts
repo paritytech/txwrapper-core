@@ -16,7 +16,7 @@ export function getRegistryAssetHubPolkadot(
 ): TypeRegistry {
 	return mockGetRegistryBase({
 		chainProperties: {
-			ss58Format: 2,
+			ss58Format: 0,
 			tokenDecimals: 10,
 			tokenSymbol: 'DOT',
 		},
