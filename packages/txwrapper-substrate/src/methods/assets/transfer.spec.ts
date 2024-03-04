@@ -1,6 +1,6 @@
 import {
+	ASSET_HUB_KUSAMA_TEST_BASE_TX_INFO,
 	ASSET_HUB_KUSAMA_TEST_OPTIONS,
-	ASSET_HUB_POLKADOT_TEST_BASE_TX_INFO,
 	itHasCorrectBaseTxInfo,
 } from '@substrate/txwrapper-dev';
 
@@ -11,7 +11,7 @@ describe('assets:transfer', () => {
 	it('should work', () => {
 		const unsigned = transfer(
 			TEST_METHOD_ARGS.assets.transfer,
-			ASSET_HUB_POLKADOT_TEST_BASE_TX_INFO,
+			ASSET_HUB_KUSAMA_TEST_BASE_TX_INFO,
 			ASSET_HUB_KUSAMA_TEST_OPTIONS,
 		);
 
