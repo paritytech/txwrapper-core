@@ -156,7 +156,7 @@ async function main(): Promise<void> {
 	// Derive the tx hash of a signed transaction offline.
 	const expectedTxHash = construct.txHash(tx);
 	console.log(`\nExpected Tx Hash: ${expectedTxHash}`);
-    
+
 	// Decode a signed payload.
 	const txInfo = decode(tx, {
 		metadataRpc,
