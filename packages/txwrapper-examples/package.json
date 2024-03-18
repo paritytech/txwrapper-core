@@ -4,7 +4,6 @@
   "author": "Parity Technologies <admin@parity.io>",
   "description": "Examples for txwrapper-* usage.",
   "license": "Apache-2.0",
-  "main": "lib/index.js",
   "private": true,
   "repository": "https://github.com/paritytech/txwrapper-core",
   "bugs": "https://github.com/paritytech/txwrapper-core/issues",
@@ -14,14 +13,14 @@
   },
   "scripts": {
     "build": "yarn build:workspace",
-    "polkadot": "node lib/polkadot/src/polkadot",
-    "assetHubPolkadot": "node lib/assetHubPolkadot/src/assetHubPolkadot",
-    "assetHubKusama": "node lib/assetHubKusama/src/assetHubKusama",
-    "foreignAssets": "node lib/foreignAssets/src/foreignAssets",
-    "polkadotBatchAll": "node lib/polkadotBatchAll/src/polkadotBatchAll",
+    "polkadot": "node ./lib/txwrapper-examples/txwrapper-examples/polkadot/src/polkadot",
+    "assetHubPolkadot": "node ./lib/txwrapper-examples/assetHubPolkadot/src/assetHubPolkadot",
+    "assetHubKusama": "node ./lib/txwrapper-examples/assetHubKusama/src/assetHubKusama",
+    "foreignAssets": "node ./lib/txwrapper-examples/foreignAssets/src/foreignAssets",
+    "polkadotBatchAll": "node ./lib/txwrapper-examples/polkadotBatchAll/src/polkadotBatchAll",
     "mandala": "node lib/mandala",
-    "multisig": "node lib/multisig/src/multisig",
-    "asSpecifiedCallsOnlyV14": "node lib/options/src/asSpecifiedCallsOnlyV14"
+    "multisig": "node ./lib/txwrapper-examples/lib/multisig/src/multisig",
+    "asSpecifiedCallsOnlyV14": "node ./lib/options/src/asSpecifiedCallsOnlyV14"
   },
   "dependencies": {
     "@polkadot/api": "^10.11.3",

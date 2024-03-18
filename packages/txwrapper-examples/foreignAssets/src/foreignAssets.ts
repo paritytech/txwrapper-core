@@ -156,13 +156,7 @@ async function main(): Promise<void> {
 	// Derive the tx hash of a signed transaction offline.
 	const expectedTxHash = construct.txHash(tx);
 	console.log(`\nExpected Tx Hash: ${expectedTxHash}`);
-
-	// Send the tx to the node. Again, since `txwrapper` is offline-only, this
-	// operation should be handled externally. Here, we just send a JSONRPC
-	// request directly to the node.
-	const actualTxHash = await rpcToLocalNode('author_submitExtrinsic', [tx]);
-	console.log(`Actual Tx Hash: ${actualTxHash}`);
-
+    
 	// Decode a signed payload.
 	const txInfo = decode(tx, {
 		metadataRpc,
