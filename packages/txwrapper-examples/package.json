@@ -17,6 +17,7 @@
     "polkadot": "node lib/polkadot/src/polkadot",
     "assetHubPolkadot": "node lib/assetHubPolkadot/src/assetHubPolkadot",
     "assetHubKusama": "node lib/assetHubKusama/src/assetHubKusama",
+    "foreignAssets": "node lib/foreignAssets/src/foreignAssets",
     "polkadotBatchAll": "node lib/polkadotBatchAll/src/polkadotBatchAll",
     "mandala": "node lib/mandala",
     "multisig": "node lib/multisig/src/multisig",

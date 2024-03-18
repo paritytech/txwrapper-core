@@ -1,0 +1,68 @@
+# Asset Hub Kusama Foreign Asset Example
+
+Note: this example uses the substrate chain `Asset Hub Rococo` which serves as a wrapper for a Asset Hub Polkadot/Asset Hub Kusama environment
+
+## How to construct a transaction using a sufficient asset to pay fees in `txwrapper-core`
+
+## Get Started
+
+1) Clone & build Polkadot
+
+    ```bash
+    git clone https://github.com/paritytech/polkadot-sdk
+    cd polkadot-sdk
+    cargo build --release --features fast-runtime --bin polkadot
+    cargo build --release --features fast-runtime --bin polkadot-prepare-worker
+    cargo build --release --features fast-runtime --bin polkadot-execute-worker
+    cargo build --release -p polkadot-parachain-bin
+    cp ./target/release/polkadot ../txwrapper-core/zombienet/bin/
+    cp ./target/release/polkadot-execute-worker ../txwrapper-core/zombienet/bin/
+    cp ./target/release/polkadot-prepare-worker ../txwrapper-core/zombienet/bin/
+    cp ./target/release/polkadot-parachain ../txwrapper-core/zombienet/bin/
+    ```
+
+2) Install zombienet utility: download the latest binary for your operating system at `https://github.com/paritytech/zombienet/releases`
+
+## Run Local Zombienet test nodes
+
+5) Copy the zombienet binary in the zombienet directory of the Txwrapper-core repository, and then launch the local environment. Example:
+
+    bash
+
+    ```
+    ./zombienet/zombienet-linux-x64 -p native spawn ./zombienet/config/asset-hub.toml | tee zombienet.log
+    ```
+
+6) Open the `Local Node` in `Polkadot.js` apps: Once the various test nodes have been started, open a browser window with the Polkadot.js apps for the node you wish to use (e.g. check the ws port for `rockmint-collator01` in the zombienet console output and provide it as a custom port in polkadot.js).
+
+## Create a test Foreign Asset in Polkadot.js Apps
+
+1) In Polkadot.js apps, click the `Developer` menu and select `Extrinsics`. On the Submission page, select `foreignAssets` and `create` and provide an asset ID (e.g. { parents: 1, interior: { X1: { Parachain: 1836 } } }), an admin (e.g. Alice), and a minimum balance (e.g. 10000). Click `Submit Signed` to create your test foreign asset.
+
+## Mint some test Asset to Alice's account
+
+1) After creating and making your test asset sufficient, it's time to mint some of your asset to `Alice`'s account. Click the `Developer` menu and select `Extrinsics`.  On the Submission page, select `foreignAssets` and `mint` and provide the foreign asset ID, an amount and the beneficiary (e.g. Alice). Click `Submit Signed` to create your test foreign asset.
+
+## Construct and submit example transaction in Txwrapper-Core
+
+1) Install dependencies and build the JS target
+
+    ```bash
+    # from this repos root directory run
+    yarn install && yarn build
+
+    # change to the examples directory
+    cd packages/txwrapper-examples
+
+    # build the JS target
+    # NOTE: This does not need to be run unless you have made changes to the example as the package will already be built via the command that ran from the root directory above.
+    yarn run build
+    ```
+
+3) Run the example script in the `txwrapper-examples` package (see [txwrapper-core/packages/txwrapper-examples/foreignAssets/src/foreignAssets.ts](txwrapper-core/packages/txwrapper-examples/foreignAssets/src/foreignAssets.ts)). It will interact with your local node.
+
+From the root of `txwrapper-examples`
+
+    ```bash
+    yarn run foreignAssets
+    ```
