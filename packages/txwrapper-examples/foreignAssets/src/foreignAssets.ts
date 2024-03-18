@@ -73,7 +73,7 @@ async function main(): Promise<void> {
 	});
 
 	/**
-	 * Now we can create our `balances.transferKeepAlive` unsigned tx. The following
+	 * Now we can create our `foreignAssets.transferKeepAlive` unsigned tx. The following
 	 * function takes the above data as arguments, so it can be performed offline
 	 * if desired.
 	 *
