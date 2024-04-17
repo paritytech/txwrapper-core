@@ -15,7 +15,7 @@ import {
 
 export const KUSAMA_SPEC_VERSION = 9430;
 export const POLKADOT_SPEC_VERSION = 9430;
-export const ASSET_HUB_KUSAMA_SPEC_VERSION = 9360;
+export const ASSET_HUB_KUSAMA_SPEC_VERSION = 1001002;
 export const ASSET_HUB_POLKADOT_SPEC_VERSION = 1001002;
 export const WESTEND_SPEC_VERSION = 9430;
 export const ASTAR_SPEC_VERSION = 72;
@@ -61,7 +61,7 @@ export const ASSET_HUB_KUSAMA_TEST_BASE_TX_INFO = {
 	eraPeriod: 2400,
 	genesisHash:
 		'0xe3777fa922cafbff200cadeaea1a76bd7898ad5b89f7848999058b50e715f636',
-	metadataRpc: kusamaMetadataHex,
+	metadataRpc: assetHubKusamaMetadataHex,
 	nonce: 2,
 	specVersion: ASSET_HUB_KUSAMA_SPEC_VERSION,
 	tip: 0,

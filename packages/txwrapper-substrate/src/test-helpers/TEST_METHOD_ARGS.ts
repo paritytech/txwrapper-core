@@ -66,6 +66,33 @@ export const TEST_METHOD_ARGS = {
 			delegate: '14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3', // seed "//Bob"
 		},
 	},
+	poolAssets: {
+		transfer: {
+			id: 4,
+			target: '14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3', // seed "//Bob"
+			amount: 1234,
+		},
+		transferKeepAlive: {
+			id: 4,
+			target: '14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3', // seed "//Bob"
+			amount: 1234,
+		},
+		approveTransfer: {
+			id: 4,
+			delegate: '14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3', // seed "//Bob"
+			amount: 1234,
+		},
+		transferApproved: {
+			id: 4,
+			owner: '14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3', // seed "//Bob",
+			destination: 'HNZata7iMYWmk5RvZRTiAsSDhV8366zq2YGb3tLH5Upf74F', // seed "//Alice"
+			amount: 1234,
+		},
+		cancelApproval: {
+			id: 4,
+			delegate: '14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3', // seed "//Bob"
+		},
+	},
 	democracy: {
 		vote: {
 			refIndex: 0,
