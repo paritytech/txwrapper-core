@@ -8,7 +8,7 @@ import {
 
 export interface PoolAssetsApproveTransferArgs extends Args {
 	/**
-	 * The identifier of the poolAsset formatted as a MultiLocation.
+	 * The identifier of the asset from poolAsset formatted as a MultiLocation.
 	 */
 	id: number;
 	/**
@@ -16,16 +16,16 @@ export interface PoolAssetsApproveTransferArgs extends Args {
 	 */
 	delegate: string;
 	/**
-	 * The amount of poolAsset that may be transferred by `delegate`. If there is
+	 * The amount of the asset from poolAsset that may be transferred by `delegate`. If there is
 	 * already an approval in place, then this acts additively.
 	 */
 	amount: number | string;
 }
 
 /**
- * Approve an amount of poolAssets for transfer by a delegated third-party account.
+ * Approve an amount of an asset from poolAssets for transfer by a delegated third-party account.
  *
- * NOTE: The signing account does not need to own `amount` of poolAssets at the point of
+ * NOTE: The signing account does not need to own `amount` the asset of poolAssets at the point of
  * making this call.
  *
  * @param args - Arguments specific to this method.

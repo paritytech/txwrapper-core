@@ -8,7 +8,7 @@ import {
 
 export interface PoolAssetsTransferArgs extends Args {
 	/**
-	 * The identifier of the foreignAsset to have some amount transferred formatted as a MultiLocation.
+	 * The identifier of the asset from poolAsset to have some amount transferred formatted as a number.
 	 */
 	id: number;
 	/**
@@ -16,7 +16,7 @@ export interface PoolAssetsTransferArgs extends Args {
 	 */
 	target: string;
 	/**
-	 * The amount by which the sender's balance of poolAssets should be reduced and
+	 * The amount by which the sender's balance of the asset from poolAssets should be reduced and
 	 * `target`'s balance increased. The amount actually transferred may be slightly greater in
 	 * the case that the transfer would otherwise take the sender balance above zero but below
 	 * the minimum balance. Must be greater than zero.
@@ -25,7 +25,7 @@ export interface PoolAssetsTransferArgs extends Args {
 }
 
 /**
- * Move some foreignAsset from the sender account to another.
+ * Move some asset from poolAssets from the sender account to another.
  *
  * @param args - Arguments specific to this method.
  * @param info - Information required to construct the transaction.

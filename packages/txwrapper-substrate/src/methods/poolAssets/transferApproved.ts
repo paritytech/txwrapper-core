@@ -8,26 +8,27 @@ import {
 
 export interface PoolAssetsTransferApprovedArgs extends Args {
 	/**
-	 * The identifier of the foreignAsset formatted as a MultiLocation.
+	 * The identifier of the asset from poolAssets formatted as a MultiLocation.
 	 */
 	id: number;
 	/**
 	 * The account which previously approved for a transfer of at least `amount` and
-	 * from which the foreignAsset balance will be withdrawn.
+	 * from which the asset from poolAssets balance will be withdrawn.
 	 */
 	owner: string;
 	/**
-	 * The account to which the foreignAsset balance of `amount` will be transferred.
+	 * The account to which the asset from poolAssets balance of `amount` will be transferred.
 	 */
 	destination: string;
 	/**
-	 * The amount of poolAssets to transfer.
+	 * The amount of asset from
+	 * poolAssets to transfer.
 	 */
 	amount: number | string;
 }
 
 /**
- * Transfer some foreignAsset balance from a previously delegated account to some third-party
+ * Transfer some asset from poolAssets balance from a previously delegated account to some third-party
  * account.
  *
  * @param args - Arguments specific to this method.

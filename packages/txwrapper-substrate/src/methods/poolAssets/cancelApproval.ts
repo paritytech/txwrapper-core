@@ -8,17 +8,17 @@ import {
 
 export interface PoolAssetsCancelApprovalArgs extends Args {
 	/**
-	 * The identifier of the poolAsset.
+	 * The identifier of the asset from poolAsset.
 	 */
 	id: number;
 	/**
-	 * The account delegated permission to transfer poolAsset.
+	 * The account delegated permission to transfer an asset from poolAsset.
 	 */
 	delegate: string;
 }
 
 /**
- * Cancel all of some poolAsset approved for delegated transfer by a third-party account.
+ * Cancel all of some asset of poolAsset approved for delegated transfer by a third-party account.
  *
  * @param args - Arguments specific to this method.
  * @param info - Information required to construct the transaction.
