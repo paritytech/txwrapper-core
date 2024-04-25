@@ -9,7 +9,7 @@ import {
 
 export interface SwapExactTokensArgs extends Args {
 	/**
-	 * The path of the assets in to be swappeds, as an array of XCM `Locations`.
+	 * The path of the assets in to be swapped, as an array of XCM `Locations`.
 	 */
 	path: AnyJson[];
 	/**
