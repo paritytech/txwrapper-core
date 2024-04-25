@@ -29,6 +29,64 @@ export const TEST_METHOD_ARGS = {
 			delegate: '14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3', // seed "//Bob"
 		},
 	},
+	assetConversion: {
+		createPool: {
+			asset1: {
+				parents: 0,
+				interior: { X2: [{ palletInstance: 50 }, { generalIndex: 1984 }] },
+			},
+			asset2: { parenst: 1, interior: 'Here' },
+		},
+		addLiquidity: {
+			asset1: {
+				parents: 0,
+				interior: { X2: [{ palletInstance: 50 }, { generalIndex: 1984 }] },
+			},
+			asset2: { parenst: 1, interior: 'Here' },
+			amount1Desired: 1000000,
+			amount2Desired: 10000000,
+			amount1Min: 1000,
+			amount2Min: 1000,
+			mintTo: 'Fy2rsYCoowQBtuFXqLE65ehAY9T6KWcGiNCQAyPDCkfpm4s',
+		},
+		removeLiquidity: {
+			asset1: {
+				parents: 0,
+				interior: { X2: [{ palletInstance: 50 }, { generalIndex: 1984 }] },
+			},
+			asset2: { parenst: 1, interior: 'Here' },
+			lpTokenBurn: 10,
+			amount1MinReceive: 1000,
+			amount2MinReceive: 1000,
+			withdrawTo: 'Fy2rsYCoowQBtuFXqLE65ehAY9T6KWcGiNCQAyPDCkfpm4s',
+		},
+		swapExactTokensForTokens: {
+			path: [
+				{
+					parents: 0,
+					interior: { X2: [{ palletInstance: 50 }, { generalIndex: 1984 }] },
+				},
+				{ parenst: 1, interior: 'Here' },
+			],
+			amountIn: 10,
+			amountOutMin: 1000,
+			sendTo: 'Fy2rsYCoowQBtuFXqLE65ehAY9T6KWcGiNCQAyPDCkfpm4s',
+			keepAlive: true,
+		},
+		swapTokensForExactTokens: {
+			path: [
+				{
+					parents: 0,
+					interior: { X2: [{ palletInstance: 50 }, { generalIndex: 1984 }] },
+				},
+				{ parenst: 1, interior: 'Here' },
+			],
+			amountOut: 10,
+			amountInMax: 1000,
+			sendTo: 'Fy2rsYCoowQBtuFXqLE65ehAY9T6KWcGiNCQAyPDCkfpm4s',
+			keepAlive: true,
+		},
+	},
 	balances: {
 		transferKeepAlive: {
 			dest: { id: 'Fy2rsYCoowQBtuFXqLE65ehAY9T6KWcGiNCQAyPDCkfpm4s' },
