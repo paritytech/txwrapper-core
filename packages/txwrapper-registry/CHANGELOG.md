@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.4.0](https://github.com/paritytech/txwrapper-core/compare/v7.3.0...v7.4.0) (2024-04-25)
+
+**Note:** Version bump only for package @substrate/txwrapper-registry
+
+
+
+
+
 # [7.3.0](https://github.com/paritytech/txwrapper-core/compare/v7.2.1...v7.3.0) (2024-03-19)
 
 **Note:** Version bump only for package @substrate/txwrapper-registry
