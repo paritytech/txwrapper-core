@@ -7,7 +7,7 @@ import {
 import { TEST_METHOD_ARGS } from '../../test-helpers';
 import { addLiquidity } from './addLiquidity';
 
-describe('assetsConversion:addLiqudity', () => {
+describe('assetsConversion:addLiquidity', () => {
 	it('should work', () => {
 		const unsigned = addLiquidity(
 			TEST_METHOD_ARGS.assetConversion.addLiquidity,
