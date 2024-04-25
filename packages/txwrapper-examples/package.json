@@ -23,7 +23,7 @@
     "asSpecifiedCallsOnlyV14": "node ./lib/options/src/asSpecifiedCallsOnlyV14"
   },
   "dependencies": {
-    "@polkadot/api": "^10.12.2",
+    "@polkadot/api": "^11.0.2",
     "@substrate/txwrapper-polkadot": "^7.3.0",
     "@substrate/txwrapper-registry": "^7.3.0"
   }
