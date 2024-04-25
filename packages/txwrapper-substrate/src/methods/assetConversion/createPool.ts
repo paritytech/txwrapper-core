@@ -21,7 +21,7 @@ export interface CreatePoolArgs extends Args {
 /**
  * Creates an empty liquidity pool and an associated new `lpToken` asset.
  *
- * Once a pool is created, someone may add liquidity to it.
+ * Once a pool is created, anyone may add liquidity to it.
  *
  * @param args - Arguments specific to this method.
  * @param info - Information required to construct the transaction.
