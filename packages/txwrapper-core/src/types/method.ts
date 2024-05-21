@@ -110,11 +110,13 @@ export interface BaseTxInfo {
 	 * The genesis hash of the chain, in hex.
 	 */
 	genesisHash: string;
+	metadataHash?: string;
 	/**
 	 * The SCALE-encoded metadata, as a hex string. Can be retrieved via the RPC
 	 * call `state_getMetadata`.
 	 */
 	metadataRpc: `0x${string}`;
+	mode?: number;
 	/**
 	 * The nonce for this transaction.
 	 */
