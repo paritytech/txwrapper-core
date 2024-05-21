@@ -13,7 +13,7 @@
   },
   "scripts": {
     "build": "yarn build:workspace",
-    "polkadot": "node ./lib/txwrapper-examples/txwrapper-examples/polkadot/src/polkadot",
+    "polkadot": "node ./lib/txwrapper-examples/polkadot/src/polkadot",
     "assetHubPolkadot": "node ./lib/txwrapper-examples/assetHubPolkadot/src/assetHubPolkadot",
     "assetHubKusama": "node ./lib/txwrapper-examples/assetHubKusama/src/assetHubKusama",
     "foreignAssets": "node ./lib/txwrapper-examples/foreignAssets/src/foreignAssets",
