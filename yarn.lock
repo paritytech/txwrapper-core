@@ -2010,19 +2010,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@substrate/txwrapper-core@npm:^7.4.0, @substrate/txwrapper-core@workspace:packages/txwrapper-core":
+"@substrate/txwrapper-core@npm:^7.5.0, @substrate/txwrapper-core@workspace:packages/txwrapper-core":
   version: 0.0.0-use.local
   resolution: "@substrate/txwrapper-core@workspace:packages/txwrapper-core"
   dependencies:
     "@polkadot/api": "npm:^11.2.1"
     "@polkadot/keyring": "npm:^12.6.2"
-    "@substrate/txwrapper-dev": "npm:^7.4.0"
+    "@substrate/txwrapper-dev": "npm:^7.5.0"
     "@types/memoizee": "npm:^0.4.3"
     memoizee: "npm:0.4.15"
   languageName: unknown
   linkType: soft
 
-"@substrate/txwrapper-dev@npm:^7.4.0, @substrate/txwrapper-dev@workspace:packages/txwrapper-dev":
+"@substrate/txwrapper-dev@npm:^7.5.0, @substrate/txwrapper-dev@workspace:packages/txwrapper-dev":
   version: 0.0.0-use.local
   resolution: "@substrate/txwrapper-dev@workspace:packages/txwrapper-dev"
   dependencies:
@@ -2036,8 +2036,8 @@ __metadata:
   resolution: "@substrate/txwrapper-examples@workspace:packages/txwrapper-examples"
   dependencies:
     "@polkadot/api": "npm:^11.2.1"
-    "@substrate/txwrapper-polkadot": "npm:^7.4.0"
-    "@substrate/txwrapper-registry": "npm:^7.4.0"
+    "@substrate/txwrapper-polkadot": "npm:^7.5.0"
+    "@substrate/txwrapper-registry": "npm:^7.5.0"
   languageName: unknown
   linkType: soft
 
@@ -2045,36 +2045,36 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@substrate/txwrapper-orml@workspace:packages/txwrapper-orml"
   dependencies:
-    "@substrate/txwrapper-core": "npm:^7.4.0"
-    "@substrate/txwrapper-dev": "npm:^7.4.0"
+    "@substrate/txwrapper-core": "npm:^7.5.0"
+    "@substrate/txwrapper-dev": "npm:^7.5.0"
   languageName: unknown
   linkType: soft
 
-"@substrate/txwrapper-polkadot@npm:^7.4.0, @substrate/txwrapper-polkadot@workspace:packages/txwrapper-polkadot":
+"@substrate/txwrapper-polkadot@npm:^7.5.0, @substrate/txwrapper-polkadot@workspace:packages/txwrapper-polkadot":
   version: 0.0.0-use.local
   resolution: "@substrate/txwrapper-polkadot@workspace:packages/txwrapper-polkadot"
   dependencies:
-    "@substrate/txwrapper-core": "npm:^7.4.0"
-    "@substrate/txwrapper-dev": "npm:^7.4.0"
-    "@substrate/txwrapper-substrate": "npm:^7.4.0"
+    "@substrate/txwrapper-core": "npm:^7.5.0"
+    "@substrate/txwrapper-dev": "npm:^7.5.0"
+    "@substrate/txwrapper-substrate": "npm:^7.5.0"
   languageName: unknown
   linkType: soft
 
-"@substrate/txwrapper-registry@npm:^7.4.0, @substrate/txwrapper-registry@workspace:packages/txwrapper-registry":
+"@substrate/txwrapper-registry@npm:^7.5.0, @substrate/txwrapper-registry@workspace:packages/txwrapper-registry":
   version: 0.0.0-use.local
   resolution: "@substrate/txwrapper-registry@workspace:packages/txwrapper-registry"
   dependencies:
     "@polkadot/networks": "npm:^12.6.2"
-    "@substrate/txwrapper-core": "npm:^7.4.0"
+    "@substrate/txwrapper-core": "npm:^7.5.0"
   languageName: unknown
   linkType: soft
 
-"@substrate/txwrapper-substrate@npm:^7.4.0, @substrate/txwrapper-substrate@workspace:packages/txwrapper-substrate":
+"@substrate/txwrapper-substrate@npm:^7.5.0, @substrate/txwrapper-substrate@workspace:packages/txwrapper-substrate":
   version: 0.0.0-use.local
   resolution: "@substrate/txwrapper-substrate@workspace:packages/txwrapper-substrate"
   dependencies:
-    "@substrate/txwrapper-core": "npm:^7.4.0"
-    "@substrate/txwrapper-dev": "npm:^7.4.0"
+    "@substrate/txwrapper-core": "npm:^7.5.0"
+    "@substrate/txwrapper-dev": "npm:^7.5.0"
   languageName: unknown
   linkType: soft
 
@@ -2082,9 +2082,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@substrate/txwrapper-template@workspace:packages/txwrapper-template"
   dependencies:
-    "@substrate/txwrapper-core": "npm:^7.4.0"
-    "@substrate/txwrapper-registry": "npm:^7.4.0"
-    "@substrate/txwrapper-substrate": "npm:^7.4.0"
+    "@substrate/txwrapper-core": "npm:^7.5.0"
+    "@substrate/txwrapper-registry": "npm:^7.5.0"
+    "@substrate/txwrapper-substrate": "npm:^7.5.0"
     ts-node: "npm:9.1.1"
     typescript: "npm:4.8.3"
   languageName: unknown
