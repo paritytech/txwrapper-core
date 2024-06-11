@@ -11,6 +11,14 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
+# [7.5.0](/compare/v7.4.0...v7.5.0) (2024-06-11)
+
+**Note:** Version bump only for package @substrate/txwrapper-template
+
+
+
+
+
 # [7.4.0](/compare/v7.3.0...v7.4.0) (2024-04-25)
 
 **Note:** Version bump only for package @substrate/txwrapper-template
