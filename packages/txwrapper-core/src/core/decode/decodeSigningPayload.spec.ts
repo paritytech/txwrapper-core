@@ -7,11 +7,12 @@ import {
 	TEST_METHOD_ARGS,
 } from '@substrate/txwrapper-dev';
 
-import { balancesTransfer } from '../../test-helpers';
 import {
-	itDecodesBalancesTransferAstar,
-	itDecodesBalancesTransferCommon,
+	balancesTransfer,
+	balancesTransferKeepAlive,
+	itDecodesBalancesTransferKeepAlive,
 } from '../../test-helpers';
+import { itDecodesBalancesTransferAstar } from '../../test-helpers';
 import { DecodedSigningPayload } from '../../types';
 import { construct } from '..';
 import { decodeSigningPayload } from './decodeSigningPayload';
@@ -47,10 +48,10 @@ export function itDecodesSigningPayloadBalancesTransferAstar(
 }
 
 describe('decodeSigningPayload', () => {
-	it('should decode balances::transfer', () => {
+	it('should decode balances::transferKeepAlive', () => {
 		const signingPayload = construct.signingPayload(
-			balancesTransfer(
-				TEST_METHOD_ARGS.balances.transfer,
+			balancesTransferKeepAlive(
+				TEST_METHOD_ARGS.balances.transferKeepAlive,
 				TEST_BASE_TX_INFO,
 				KUSAMA_TEST_OPTIONS,
 			),
@@ -61,13 +62,13 @@ describe('decodeSigningPayload', () => {
 
 		itDecodesSigningPayloadBalancesTransfer(decoded);
 
-		itDecodesBalancesTransferCommon(decoded);
+		itDecodesBalancesTransferKeepAlive(decoded);
 	});
 
 	it('should decode balances::transfer with an immortal era', () => {
 		const signingPayload = construct.signingPayload(
-			balancesTransfer(
-				TEST_METHOD_ARGS.balances.transfer,
+			balancesTransferKeepAlive(
+				TEST_METHOD_ARGS.balances.transferKeepAlive,
 				TEST_BASE_TX_INFO,
 				Object.assign({}, KUSAMA_TEST_OPTIONS, { isImmortalEra: true }),
 			),

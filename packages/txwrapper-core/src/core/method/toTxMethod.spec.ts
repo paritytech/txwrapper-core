@@ -6,9 +6,9 @@ import { toTxMethod } from './toTxMethod';
 const { registry } = KUSAMA_TEST_OPTIONS;
 
 describe('toTxMethod', () => {
-	// transferKeepAlive signedTx constructed using kusama v9160 metadata
+	// transferKeepAlive signedTx constructed using kusama v102005 metadata
 	const signedTx =
-		'0x4d028400d43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d014c39c61d2526afa7adf0a5683a97cefe6cd1cbdc4dd220eaa34ee20c88051057ad726f28371bbe9dcede5213ed29ef5817da15090db7d1886698836847098887550100000403008eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a4813f6ffffffffff3f01';
+		'0x35028400d43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d0158cce12a918473c52dd677597fae52ae73f1ad62bf05a4973bceba165be8c91dac0182fdda489a30013ad253979e14ba1948938a6af163e33237dd8431eb43810502000000040300d43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d011f';
 	const extrinsic = registry.createType('Extrinsic', hexToU8a(signedTx), {
 		isSigned: true,
 	});
@@ -18,9 +18,9 @@ describe('toTxMethod', () => {
 		const expectedResponse = {
 			args: {
 				dest: {
-					id: 'FoQJpPyadYccjavVdTWxpxU7rUEaYhfLCPwXgkfD6Zat9QP',
+					id: 'HNZata7iMYWmk5RvZRTiAsSDhV8366zq2YGb3tLH5Upf74F',
 				},
-				value: '90071992547409910',
+				value: '1984',
 			},
 			name: 'transferKeepAlive',
 			pallet: 'balances',

@@ -4,15 +4,17 @@ import {
 	ASTAR_TEST_OPTIONS,
 	KUSAMA_TEST_OPTIONS,
 	signWithAlice,
+	signWithAliceAstar,
 	TEST_BASE_TX_INFO,
 	TEST_METHOD_ARGS,
 } from '@substrate/txwrapper-dev';
 
 import {
 	balancesTransfer,
+	balancesTransferKeepAlive,
 	itDecodesBalancesTransferAstar,
 } from '../../test-helpers';
-import { itDecodesBalancesTransferCommon } from '../../test-helpers';
+import { itDecodesBalancesTransferKeepAlive } from '../../test-helpers';
 import { DecodedSignedTx } from '../../types';
 import { construct } from '..';
 import { decodeSignedTx } from './decodeSignedTx';
@@ -35,8 +37,8 @@ export function itDecodesSignedBalancesTransferTxAstar(
 
 describe('decodeSignedTx', () => {
 	it('should decode balances::transfer', async () => {
-		const unsigned = balancesTransfer(
-			TEST_METHOD_ARGS.balances.transfer,
+		const unsigned = balancesTransferKeepAlive(
+			TEST_METHOD_ARGS.balances.transferKeepAlive,
 			TEST_BASE_TX_INFO,
 			KUSAMA_TEST_OPTIONS,
 		);
@@ -55,7 +57,7 @@ describe('decodeSignedTx', () => {
 
 		itDecodesSignedBalancesTransferTx(decoded);
 
-		itDecodesBalancesTransferCommon(decoded);
+		itDecodesBalancesTransferKeepAlive(decoded);
 	});
 
 	it('should decode balances::transfer for Astar', async () => {
@@ -68,7 +70,7 @@ describe('decodeSignedTx', () => {
 			unsigned,
 			ASTAR_TEST_OPTIONS,
 		);
-		const signature = await signWithAlice(signingPayload);
+		const signature = await signWithAliceAstar(signingPayload);
 		const signedTx = construct.signedTx(
 			unsigned,
 			signature,

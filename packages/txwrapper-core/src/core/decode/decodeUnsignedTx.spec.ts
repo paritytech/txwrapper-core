@@ -7,11 +7,12 @@ import {
 	TEST_METHOD_ARGS,
 } from '@substrate/txwrapper-dev';
 
-import { balancesTransfer } from '../../test-helpers';
 import {
-	itDecodesBalancesTransferAstar,
-	itDecodesBalancesTransferCommon,
+	balancesTransfer,
+	balancesTransferKeepAlive,
+	itDecodesBalancesTransferKeepAlive,
 } from '../../test-helpers';
+import { itDecodesBalancesTransferAstar } from '../../test-helpers';
 import { DecodedUnsignedTx } from '../../types';
 import { decodeUnsignedTx } from './decodeUnsignedTx';
 
@@ -53,8 +54,8 @@ export function itDecodesAstarUnsignedBalanceTransferTx(
 
 describe('decodeUnsignedTx', () => {
 	it('should decode balances::transfer for Kusama', () => {
-		const unsigned = balancesTransfer(
-			TEST_METHOD_ARGS.balances.transfer,
+		const unsigned = balancesTransferKeepAlive(
+			TEST_METHOD_ARGS.balances.transferKeepAlive,
 			TEST_BASE_TX_INFO,
 			KUSAMA_TEST_OPTIONS,
 		);
@@ -63,7 +64,7 @@ describe('decodeUnsignedTx', () => {
 
 		itDecodesUnsignedBalanceTransferTx(decoded);
 
-		itDecodesBalancesTransferCommon(decoded);
+		itDecodesBalancesTransferKeepAlive(decoded);
 	});
 
 	it('should decode balances::transfer for Astar', () => {
@@ -85,8 +86,8 @@ describe('decodeUnsignedTx', () => {
 			...KUSAMA_TEST_OPTIONS,
 			isImmortalEra: true,
 		};
-		const unsigned = balancesTransfer(
-			TEST_METHOD_ARGS.balances.transfer,
+		const unsigned = balancesTransferKeepAlive(
+			TEST_METHOD_ARGS.balances.transferKeepAlive,
 			TEST_BASE_TX_INFO,
 			adjustedOptions,
 		);

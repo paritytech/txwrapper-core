@@ -5,8 +5,8 @@ import {
 	TEST_METHOD_ARGS,
 } from '@substrate/txwrapper-dev';
 
-import { balancesTransfer } from '../../test-helpers';
-import { itDecodesBalancesTransferCommon } from '../../test-helpers';
+import { balancesTransferKeepAlive } from '../../test-helpers';
+import { itDecodesBalancesTransferKeepAlive } from '../../test-helpers';
 import { DecodedSigningPayload } from '../../types';
 import { construct } from '..';
 import { decode } from './decode';
@@ -16,7 +16,7 @@ import { itDecodesUnsignedBalanceTransferTx } from './decodeUnsignedTx.spec';
 
 describe('decode', () => {
 	it('should decode signedTx', async () => {
-		const unsigned = balancesTransfer(
+		const unsigned = balancesTransferKeepAlive(
 			TEST_METHOD_ARGS.balances.transfer,
 			TEST_BASE_TX_INFO,
 			KUSAMA_TEST_OPTIONS,
@@ -36,12 +36,12 @@ describe('decode', () => {
 
 		itDecodesSignedBalancesTransferTx(decoded);
 
-		itDecodesBalancesTransferCommon(decoded);
+		itDecodesBalancesTransferKeepAlive(decoded);
 	});
 
 	it('decodes an unsigned tx', () => {
-		const unsigned = balancesTransfer(
-			TEST_METHOD_ARGS.balances.transfer,
+		const unsigned = balancesTransferKeepAlive(
+			TEST_METHOD_ARGS.balances.transferKeepAlive,
 			TEST_BASE_TX_INFO,
 			KUSAMA_TEST_OPTIONS,
 		);
@@ -49,12 +49,12 @@ describe('decode', () => {
 
 		itDecodesUnsignedBalanceTransferTx(decoded);
 
-		itDecodesBalancesTransferCommon(decoded);
+		itDecodesBalancesTransferKeepAlive(decoded);
 	});
 
 	it('should decode signing payload', () => {
-		const unsigned = balancesTransfer(
-			TEST_METHOD_ARGS.balances.transfer,
+		const unsigned = balancesTransferKeepAlive(
+			TEST_METHOD_ARGS.balances.transferKeepAlive,
 			TEST_BASE_TX_INFO,
 			KUSAMA_TEST_OPTIONS,
 		);
@@ -70,6 +70,6 @@ describe('decode', () => {
 
 		itDecodesSigningPayloadBalancesTransfer(decoded);
 
-		itDecodesBalancesTransferCommon(decoded);
+		itDecodesBalancesTransferKeepAlive(decoded);
 	});
 });

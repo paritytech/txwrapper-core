@@ -4,14 +4,14 @@ import {
 	TEST_METHOD_ARGS,
 } from '@substrate/txwrapper-dev';
 
-import { balancesTransfer } from '../../test-helpers';
+import { balancesTransferKeepAlive } from '../../test-helpers';
 import { encodeUnsignedTransaction } from '../construct/encodeUnsignedTx';
 import { decodeUnsignedHexTx } from './decodeUnsignedHexTx';
 
 describe('decodeUnsignedHexTx', () => {
 	it('should return the correct output', () => {
-		const unsigned = balancesTransfer(
-			TEST_METHOD_ARGS.balances.transfer,
+		const unsigned = balancesTransferKeepAlive(
+			TEST_METHOD_ARGS.balances.transferKeepAlive,
 			TEST_BASE_TX_INFO,
 			KUSAMA_TEST_OPTIONS,
 		);
@@ -22,7 +22,7 @@ describe('decodeUnsignedHexTx', () => {
 					dest: { id: 'Fy2rsYCoowQBtuFXqLE65ehAY9T6KWcGiNCQAyPDCkfpm4s' },
 					value: 12,
 				},
-				callIndex: '0x0407',
+				callIndex: '0x0403',
 			},
 			version: 4,
 		};

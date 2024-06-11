@@ -13,7 +13,7 @@
   },
   "scripts": {
     "build": "yarn build:workspace",
-    "polkadot": "node ./lib/txwrapper-examples/txwrapper-examples/polkadot/src/polkadot",
+    "polkadot": "node ./lib/txwrapper-examples/polkadot/src/polkadot",
     "assetHubPolkadot": "node ./lib/txwrapper-examples/assetHubPolkadot/src/assetHubPolkadot",
     "assetHubKusama": "node ./lib/txwrapper-examples/assetHubKusama/src/assetHubKusama",
     "foreignAssets": "node ./lib/txwrapper-examples/foreignAssets/src/foreignAssets",
@@ -23,7 +23,7 @@
     "asSpecifiedCallsOnlyV14": "node ./lib/options/src/asSpecifiedCallsOnlyV14"
   },
   "dependencies": {
-    "@polkadot/api": "^11.0.2",
+    "@polkadot/api": "^11.2.1",
     "@substrate/txwrapper-polkadot": "^7.4.0",
     "@substrate/txwrapper-registry": "^7.4.0"
   }

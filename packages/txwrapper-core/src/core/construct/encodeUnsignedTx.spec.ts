@@ -7,13 +7,16 @@ import {
 	TEST_METHOD_ARGS,
 } from '@substrate/txwrapper-dev';
 
-import { balancesTransfer } from '../../test-helpers';
+import {
+	balancesTransfer,
+	balancesTransferKeepAlive,
+} from '../../test-helpers';
 import { encodeUnsignedTransaction } from './encodeUnsignedTx';
 
 describe('encodeUnsignedTransaction', () => {
 	it('should return the correct output', () => {
-		const unsigned = balancesTransfer(
-			TEST_METHOD_ARGS.balances.transfer,
+		const unsigned = balancesTransferKeepAlive(
+			TEST_METHOD_ARGS.balances.transferKeepAlive,
 			TEST_BASE_TX_INFO,
 			KUSAMA_TEST_OPTIONS,
 		);
@@ -21,7 +24,7 @@ describe('encodeUnsignedTransaction', () => {
 		const encoded = encodeUnsignedTransaction(unsigned, KUSAMA_TEST_OPTIONS);
 
 		expect(encoded).toBe(
-			'0x940404070096074594cccf1cd185fa8a72ceaeefd86648f8d45514f3ce33c31bdd07e4655d30',
+			'0x940404030096074594cccf1cd185fa8a72ceaeefd86648f8d45514f3ce33c31bdd07e4655d30',
 		);
 	});
 

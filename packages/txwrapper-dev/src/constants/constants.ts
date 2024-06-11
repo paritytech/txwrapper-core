@@ -13,7 +13,7 @@ import {
 	memoizedWestendGetRegistry,
 } from '../registries';
 
-export const KUSAMA_SPEC_VERSION = 9430;
+export const KUSAMA_SPEC_VERSION = 102005;
 export const POLKADOT_SPEC_VERSION = 9430;
 export const ASSET_HUB_KUSAMA_SPEC_VERSION = 1001002;
 export const ASSET_HUB_POLKADOT_SPEC_VERSION = 1001002;
@@ -170,6 +170,10 @@ export const TEST_METHOD_ARGS = {
 			value: 12,
 		},
 		transferAllowDeath: {
+			dest: { id: 'Fy2rsYCoowQBtuFXqLE65ehAY9T6KWcGiNCQAyPDCkfpm4s' },
+			value: 12,
+		},
+		transferKeepAlive: {
 			dest: { id: 'Fy2rsYCoowQBtuFXqLE65ehAY9T6KWcGiNCQAyPDCkfpm4s' },
 			value: 12,
 		},

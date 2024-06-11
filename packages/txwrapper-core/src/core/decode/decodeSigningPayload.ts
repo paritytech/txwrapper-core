@@ -65,12 +65,19 @@ export function decodeSigningPayload(
 	} catch (_error) {
 		tip = payload.tip.toString();
 	}
+	let metadataHash: string | undefined;
+	if (payload.inner.metadataHash) {
+		metadataHash = payload.inner.metadataHash.isSome
+			? payload.inner.metadataHash.toString()
+			: undefined;
+	}
 
 	return {
-		assetId: assetId,
+		assetId,
 		blockHash: payload.blockHash.toHex(),
 		eraPeriod,
 		genesisHash: payload.genesisHash.toHex(),
+		metadataHash,
 		metadataRpc,
 		method,
 		nonce: payload.nonce.toNumber(),

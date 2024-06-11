@@ -30,7 +30,7 @@ async function main(): Promise<void> {
 	const alice = keyring.addFromUri('//Alice', { name: 'Alice' }, 'sr25519');
 	console.log(
 		"Alice's SS58-Encoded Address:",
-		deriveAddress(alice.publicKey, PolkadotSS58Format.polkadot),
+		deriveAddress(alice.publicKey, PolkadotSS58Format.substrate),
 	);
 
 	// Construct a balance transfer transaction offline.
@@ -92,7 +92,7 @@ async function main(): Promise<void> {
 			dest: { id: '14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3' }, // Bob
 		},
 		{
-			address: deriveAddress(alice.publicKey, PolkadotSS58Format.polkadot),
+			address: deriveAddress(alice.publicKey, PolkadotSS58Format.substrate),
 			blockHash,
 			blockNumber: registry
 				.createType('BlockNumber', block.header.number)

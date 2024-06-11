@@ -2,13 +2,18 @@ import { TxInfo } from '.';
 
 export type DecodedUnsignedTx = TxInfo;
 
-export type DecodedSigningPayload = Omit<TxInfo, 'address' | 'blockNumber'>;
+export type DecodedSigningPayload = Omit<
+	TxInfo,
+	'address' | 'blockNumber' | 'mode'
+>;
 
 export type DecodedSignedTx = Omit<
 	TxInfo,
 	| 'blockHash'
 	| 'blockNumber'
 	| 'genesisHash'
+	| 'metadataHash'
+	| 'mode'
 	| 'specVersion'
 	| 'transactionVersion'
 	| 'version'

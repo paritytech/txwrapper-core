@@ -63,6 +63,7 @@ export function decodeUnsignedTx(
 			.toNumber(),
 		eraPeriod,
 		genesisHash: unsigned.genesisHash,
+		metadataHash: unsigned.metadataHash,
 		metadataRpc,
 		method,
 		nonce: registry.createType('Compact<Index>', unsigned.nonce).toNumber(),
