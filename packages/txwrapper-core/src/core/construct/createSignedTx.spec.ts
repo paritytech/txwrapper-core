@@ -4,6 +4,7 @@ import {
 	ASTAR_TEST_OPTIONS,
 	KUSAMA_TEST_OPTIONS,
 	signWithAlice,
+	signWithAliceAstar,
 	TEST_BASE_TX_INFO,
 	TEST_METHOD_ARGS,
 } from '@substrate/txwrapper-dev';
@@ -38,7 +39,7 @@ describe('createSignedTx', () => {
 			ASTAR_TEST_OPTIONS,
 		);
 		const signingPayload = createSigningPayload(unsigned, ASTAR_TEST_OPTIONS);
-		const signature = await signWithAlice(signingPayload);
+		const signature = await signWithAliceAstar(signingPayload);
 
 		const tx = createSignedTx(unsigned, signature, ASTAR_TEST_OPTIONS);
 		expect(tx).toBe(

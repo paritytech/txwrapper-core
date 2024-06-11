@@ -4,6 +4,7 @@ import {
 	ASTAR_TEST_OPTIONS,
 	KUSAMA_TEST_OPTIONS,
 	signWithAlice,
+	signWithAliceAstar,
 	TEST_BASE_TX_INFO,
 	TEST_METHOD_ARGS,
 } from '@substrate/txwrapper-dev';
@@ -49,7 +50,7 @@ describe('getTxHash', () => {
 			unsigned,
 			ASTAR_TEST_OPTIONS,
 		);
-		const signature = await signWithAlice(signingPayload);
+		const signature = await signWithAliceAstar(signingPayload);
 		const signedTx = construct.signedTx(
 			unsigned,
 			signature,
@@ -58,7 +59,7 @@ describe('getTxHash', () => {
 
 		const txHash = getTxHash(signedTx);
 		expect(txHash).toBe(
-			'0x48598a4b920b83b931777088e6d1c9bcc1466518cb1ae0faa2a29553798e2f9c',
+			'0x1fc108525d6569889d53cbc092cba9c7ad0f59d668c60eff3447c774815d0485',
 		);
 	});
 });
