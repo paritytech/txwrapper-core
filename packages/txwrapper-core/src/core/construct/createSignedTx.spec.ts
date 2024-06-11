@@ -8,14 +8,17 @@ import {
 	TEST_METHOD_ARGS,
 } from '@substrate/txwrapper-dev';
 
-import { balancesTransfer } from '../../test-helpers';
+import {
+	balancesTransfer,
+	balancesTransferKeepAlive,
+} from '../../test-helpers';
 import { createSignedTx } from './createSignedTx';
 import { createSigningPayload } from './createSigningPayload';
 
 describe('createSignedTx', () => {
 	it('should work', async () => {
-		const unsigned = balancesTransfer(
-			TEST_METHOD_ARGS.balances.transfer,
+		const unsigned = balancesTransferKeepAlive(
+			TEST_METHOD_ARGS.balances.transferKeepAlive,
 			TEST_BASE_TX_INFO,
 			KUSAMA_TEST_OPTIONS,
 		);
@@ -24,7 +27,7 @@ describe('createSignedTx', () => {
 
 		const tx = createSignedTx(unsigned, signature, KUSAMA_TEST_OPTIONS);
 		expect(tx).toBe(
-			'0x2d028400d43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d005b4cf1d210c93eb6e6428a88c1b298e280d761fe50fe02d6c3253075ed23f239bcbc9a4f9bf0494a869f797355daf55ed6de373572328a1f6f4519f48f8f280feb58080004070096074594cccf1cd185fa8a72ceaeefd86648f8d45514f3ce33c31bdd07e4655d30',
+			'0x31028400d43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d006ac2635aa767cad3c73c2ba7e508b7428dc6d2aafba03e9d5602cb2715d4eedc1726d08350fef3b9cbd99193fd2849c79272bf1ba2e526caac5c99638bb3d60deb5808000004030096074594cccf1cd185fa8a72ceaeefd86648f8d45514f3ce33c31bdd07e4655d30',
 		);
 	});
 

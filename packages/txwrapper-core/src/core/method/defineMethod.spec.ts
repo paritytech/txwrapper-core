@@ -6,7 +6,7 @@ import {
 	TEST_METHOD_ARGS,
 } from '@substrate/txwrapper-dev';
 
-import { balancesTransfer } from '../../test-helpers';
+import { balancesTransferKeepAlive } from '../../test-helpers';
 import { createEra, defineMethod, MethodErrorMessages } from './defineMethod';
 
 describe('defineMethod', () => {
@@ -107,6 +107,7 @@ describe('defineMethod', () => {
 			'CheckNonce',
 			'CheckWeight',
 			'ChargeTransactionPayment',
+			'CheckMetadataHash',
 		]);
 		expect(unsigned.method).toBe('0x0606');
 		expect(unsigned.nonce).toBe('0x00000002');
@@ -116,14 +117,14 @@ describe('defineMethod', () => {
 
 	it('Should have a smaller unsigned tx size when using `asCallsOnlyArg` with V14 formatted metadata', () => {
 		// balancesTransfer is a test helper that uses defineMethod to construct a unsigned tx
-		const unsignedPayload = balancesTransfer(
-			TEST_METHOD_ARGS.balances.transfer,
+		const unsignedPayload = balancesTransferKeepAlive(
+			TEST_METHOD_ARGS.balances.transferKeepAlive,
 			TEST_BASE_TX_INFO,
 			KUSAMA_TEST_OPTIONS,
 		);
 
-		const unsignedPayloadCallsOnly = balancesTransfer(
-			TEST_METHOD_ARGS.balances.transfer,
+		const unsignedPayloadCallsOnly = balancesTransferKeepAlive(
+			TEST_METHOD_ARGS.balances.transferKeepAlive,
 			TEST_BASE_TX_INFO,
 			KUSAMA_TEST_OPTIONS_CALLS_ONLY,
 		);
@@ -136,8 +137,8 @@ describe('defineMethod', () => {
 	});
 
 	it('The integrity of the metadata in an unsigned transaction should be reuseable', () => {
-		const unsignedPayload = balancesTransfer(
-			TEST_METHOD_ARGS.balances.transfer,
+		const unsignedPayload = balancesTransferKeepAlive(
+			TEST_METHOD_ARGS.balances.transferKeepAlive,
 			TEST_BASE_TX_INFO,
 			KUSAMA_TEST_OPTIONS,
 		);

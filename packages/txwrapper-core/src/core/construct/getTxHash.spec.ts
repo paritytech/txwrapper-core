@@ -8,14 +8,17 @@ import {
 	TEST_METHOD_ARGS,
 } from '@substrate/txwrapper-dev';
 
-import { balancesTransfer } from '../../test-helpers';
+import {
+	balancesTransfer,
+	balancesTransferKeepAlive,
+} from '../../test-helpers';
 import { construct } from '..';
 import { getTxHash } from './getTxHash';
 
 describe('getTxHash', () => {
 	it('should work', async () => {
-		const unsigned = balancesTransfer(
-			TEST_METHOD_ARGS.balances.transfer,
+		const unsigned = balancesTransferKeepAlive(
+			TEST_METHOD_ARGS.balances.transferKeepAlive,
 			TEST_BASE_TX_INFO,
 			KUSAMA_TEST_OPTIONS,
 		);
@@ -32,7 +35,7 @@ describe('getTxHash', () => {
 
 		const txHash = getTxHash(signedTx);
 		expect(txHash).toBe(
-			'0x50cbe175485736a5284a5758e29608d4e3f95c329ca42b108f7445f9f2ed06bb',
+			'0xd1b90c86cefbce9639cf70b6b03a00947fff6a0daa53038a940a70b489fe77e6',
 		);
 	});
 
@@ -55,7 +58,7 @@ describe('getTxHash', () => {
 
 		const txHash = getTxHash(signedTx);
 		expect(txHash).toBe(
-			'0x1fc108525d6569889d53cbc092cba9c7ad0f59d668c60eff3447c774815d0485',
+			'0x48598a4b920b83b931777088e6d1c9bcc1466518cb1ae0faa2a29553798e2f9c',
 		);
 	});
 });
