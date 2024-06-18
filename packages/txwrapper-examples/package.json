@@ -25,6 +25,6 @@
   "dependencies": {
     "@polkadot/api": "^11.2.1",
     "@substrate/txwrapper-polkadot": "^7.5.0",
-    "@substrate/txwrapper-registry": "^7.4.0"
+    "@substrate/txwrapper-registry": "^7.5.0"
   }
 }

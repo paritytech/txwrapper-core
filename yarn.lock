@@ -2037,7 +2037,7 @@ __metadata:
   dependencies:
     "@polkadot/api": "npm:^11.2.1"
     "@substrate/txwrapper-polkadot": "npm:^7.5.0"
-    "@substrate/txwrapper-registry": "npm:^7.4.0"
+    "@substrate/txwrapper-registry": "npm:^7.5.0"
   languageName: unknown
   linkType: soft
 
@@ -2060,7 +2060,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@substrate/txwrapper-registry@npm:^7.4.0, @substrate/txwrapper-registry@npm:^7.5.0, @substrate/txwrapper-registry@workspace:packages/txwrapper-registry":
+"@substrate/txwrapper-registry@npm:^7.5.0, @substrate/txwrapper-registry@workspace:packages/txwrapper-registry":
   version: 0.0.0-use.local
   resolution: "@substrate/txwrapper-registry@workspace:packages/txwrapper-registry"
   dependencies:
