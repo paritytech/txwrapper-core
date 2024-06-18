@@ -29,6 +29,27 @@ describe('createSigningPayload', () => {
 		);
 	});
 
+	it('should create a payload with mode and metadataHash', () => {
+		const txBaseInfo = {
+			...TEST_BASE_TX_INFO,
+			mode: 1,
+			metadataHash:
+				'0x0011224515464857485896265474151515487488585696356565252625874847',
+		};
+		const signingPayload = createSigningPayload(
+			balancesTransferKeepAlive(
+				TEST_METHOD_ARGS.balances.transferKeepAlive,
+				txBaseInfo,
+				KUSAMA_TEST_OPTIONS,
+			),
+			KUSAMA_TEST_OPTIONS,
+		);
+
+		expect(signingPayload).toEqual(
+			'0x9004030096074594cccf1cd185fa8a72ceaeefd86648f8d45514f3ce33c31bdd07e4655d30eb58080001758e010006000000e3777fa922cafbff200cadeaea1a76bd7898ad5b89f7848999058b50e715f6361fc7493f3c1e9ac758a183839906475f8363aafb1b1d3e910fe16fab4ae1b582010011224515464857485896265474151515487488585696356565252625874847',
+		);
+	});
+
 	it('should work for Astar', () => {
 		const signingPayload = createSigningPayload(
 			balancesTransfer(

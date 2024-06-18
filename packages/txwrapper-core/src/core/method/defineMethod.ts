@@ -157,6 +157,7 @@ export function defineMethod(
 	const blockHash = info.blockHash as `0x${string}`;
 	const genesisHash = info.genesisHash as `0x${string}`;
 	const assetId = info.assetId;
+	const metadataHash = info.metadataHash as `0x${string}`;
 
 	return {
 		address: info.address,
@@ -168,8 +169,10 @@ export function defineMethod(
 		blockNumber: registry.createType('BlockNumber', info.blockNumber).toHex(),
 		era: extrinsicEra.toHex(),
 		genesisHash,
+		metadataHash: metadataHash,
 		metadataRpc: generatedMetadata.toHex(),
 		method,
+		mode: info.mode,
 		nonce: registry.createType('Compact<Index>', info.nonce).toHex(),
 		signedExtensions: registry.signedExtensions,
 		specVersion: registry.createType('u32', info.specVersion).toHex(),
