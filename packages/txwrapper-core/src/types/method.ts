@@ -120,7 +120,7 @@ export interface BaseTxInfo {
 	 */
 	metadataRpc: `0x${string}`;
 	/**
-	 * The mode for `CheckGenesisHash`.
+	 * The mode for `CheckMetadataHash`.
 	 */
 	mode?: number;
 	/**
