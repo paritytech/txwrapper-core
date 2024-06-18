@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.5.1](https://github.com/paritytech/txwrapper-core/compare/v7.5.0...v7.5.1) (2024-06-18)
+
+
+### Bug Fixes
+
+* **bug:** updated `SigningPayload` ([#381](https://github.com/paritytech/txwrapper-core/issues/381)) ([ed5234d](https://github.com/paritytech/txwrapper-core/commit/ed5234d2dfcee64455ec345fb8c50fcd48626021))
+
+
+
+
+
 # [7.5.0](https://github.com/paritytech/txwrapper-core/compare/v7.4.0...v7.5.0) (2024-06-11)
 
 
