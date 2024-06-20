@@ -55,12 +55,14 @@ export const createMetadata = memoizee(createMetadataUnmemoized, {
 	length: 4,
 	max:
 		!isBrowser &&
-		typeof process?.env?.TXWRAPPER_METADATA_CACHE_MAX !== 'undefined'
+		typeof process !== 'undefined' &&
+		typeof process.env?.TXWRAPPER_METADATA_CACHE_MAX !== 'undefined'
 			? parseInt(process.env.TXWRAPPER_METADATA_CACHE_MAX)
 			: undefined,
 	maxAge:
 		!isBrowser &&
-		typeof process?.env?.TXWRAPPER_METADATA_CACHE_MAX_AGE !== 'undefined'
+		typeof process !== 'undefined' &&
+		typeof process.env?.TXWRAPPER_METADATA_CACHE_MAX_AGE !== 'undefined'
 			? parseInt(process.env.TXWRAPPER_METADATA_CACHE_MAX_AGE)
 			: undefined,
 });
