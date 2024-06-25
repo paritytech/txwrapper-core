@@ -14,7 +14,7 @@ import {
 } from '../registries';
 
 export const KUSAMA_SPEC_VERSION = 102005;
-export const POLKADOT_SPEC_VERSION = 1002004;
+export const POLKADOT_SPEC_VERSION = 9430;
 export const ASSET_HUB_KUSAMA_SPEC_VERSION = 1002005;
 export const ASSET_HUB_POLKADOT_SPEC_VERSION = 1002004;
 export const WESTEND_SPEC_VERSION = 1013000;
