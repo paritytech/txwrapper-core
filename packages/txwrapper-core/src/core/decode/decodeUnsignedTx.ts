@@ -53,7 +53,9 @@ export function decodeUnsignedTx(
 	}
 	return {
 		address: unsigned.address,
-		assetId: !assetId ? undefined : typeof assetId === 'object'
+		assetId: !assetId
+			? undefined
+			: typeof assetId === 'object'
 				? registry.createType('MultiLocation', assetId)
 				: registry.createType('Compact<AssetId>', assetId).toNumber(),
 		blockHash: unsigned.blockHash,

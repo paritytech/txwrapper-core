@@ -161,7 +161,9 @@ export function defineMethod(
 
 	return {
 		address: info.address,
-		assetId: !assetId ? undefined : typeof assetId === 'object'
+		assetId: !assetId
+			? undefined
+			: typeof assetId === 'object'
 				? registry.createType('MultiLocation', assetId)
 				: registry.createType('Compact<AssetId>', assetId).toNumber(),
 		blockHash,
