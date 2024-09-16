@@ -90,7 +90,7 @@ export interface BaseTxInfo {
 	 * The assetId used in ChargeAssetTxPayment
 	 *
 	 */
-	assetId?: number | object;
+	assetId?: number | object | HexString;
 	/**
 	 * The checkpoint hash of the block, in hex.
 	 */
