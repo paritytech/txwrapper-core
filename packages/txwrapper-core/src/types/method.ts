@@ -1,7 +1,7 @@
 import { TypeRegistry } from '@polkadot/types';
 import { ExtDef } from '@polkadot/types/extrinsic/signedExtensions/types';
-import { AnyJson } from '@polkadot/types/types';
-import { SignerPayloadJSON } from '@polkadot/types/types';
+import type { AnyJson, SignerPayloadJSON } from '@polkadot/types/types';
+import type { HexString } from '@polkadot/util/types';
 
 export { TypeRegistry } from '@polkadot/types';
 export { SignerPayloadJSON } from '@polkadot/types/types';
@@ -70,7 +70,7 @@ export interface UnsignedTransaction extends SignerPayloadJSON {
 	 * The assetId used in ChargeAssetTxPayment
 	 *
 	 */
-	assetId?: number | object;
+	assetId?: HexString;
 	/**
 	 * The SCALE-encoded metadata, as a hex string. Can be retrieved via the RPC
 	 * call `state_getMetadata`.
