@@ -55,7 +55,7 @@ export function decodeSigningPayload(
 		? payload.era.asMortalEra.period.toNumber()
 		: 0;
 
-	let assetId: number | object | undefined;
+	let assetId: object | number | undefined;
 	if (payload.inner.assetId) {
 		assetId = payload.inner.assetId.isSome ? payload.inner.assetId : undefined;
 	}
