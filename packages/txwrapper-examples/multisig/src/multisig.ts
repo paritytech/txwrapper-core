@@ -235,7 +235,7 @@ async function main(): Promise<void> {
 	console.log(`\nPayload to Sign: ${signingPayload}`);
 
 	// Sign a payload. This operation should be performed on an offline device.
-	const signature = signWith(signatoriesDict['Alice'], signingPayload, {
+	const signature = signWith(signatoriesDict['Alice'], unsigned, {
 		metadataRpc,
 		registry,
 	});
@@ -385,7 +385,7 @@ async function main(): Promise<void> {
 	// Sign a payload. This operation should be performed on an offline device.
 	const signatureApproveAsMulti = signWith(
 		signatoriesDict['Alice'],
-		signingPayloadApproveAsMulti,
+		unsignedTxApproveAsMulti,
 		{
 			metadataRpc,
 			registry,
@@ -538,7 +538,7 @@ async function main(): Promise<void> {
 	// Sign a payload. This operation should be performed on an offline device.
 	const signatureAsMulti = signWith(
 		signatoriesDict['Bob'],
-		signingPayloadAsMulti,
+		unsignedTxAsMulti,
 		{
 			metadataRpc,
 			registry,

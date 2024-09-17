@@ -66,7 +66,8 @@ export function createSigningPayload(
 	}
 
 	const payload = new GenericSignerPayload(registry, {
-		...unsigned
+		...unsigned,
+		runtimeVersion: { specVersion: unsigned.specVersion, transactionVersion: unsigned.transactionVersion }
 	}).toPayload();
 
 	return registry
