@@ -51,7 +51,6 @@ export function decodeUnsignedTx(
 		tip = registry.createType('Compact<Balance>', unsigned.tip).toString();
 	}
 
-	console.log('unsigned.assetId: ', unsigned.assetId);
 	return {
 		address: unsigned.address,
 		assetId: !unsigned.assetId

@@ -158,8 +158,6 @@ export function defineMethod(
 	const genesisHash = info.genesisHash as `0x${string}`;
 	const metadataHash = info.metadataHash as `0x${string}`;
 
-	console.log('info.assetId: ', info.assetId)
-
 	return {
 		address: info.address,
 		assetId: !info.assetId ? undefined : typeof info.assetId === 'object'
