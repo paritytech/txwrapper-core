@@ -536,14 +536,10 @@ async function main(): Promise<void> {
 	console.log(`\nPayload to Sign: ${signingPayloadAsMulti}`);
 
 	// Sign a payload. This operation should be performed on an offline device.
-	const signatureAsMulti = signWith(
-		signatoriesDict['Bob'],
-		unsignedTxAsMulti,
-		{
-			metadataRpc,
-			registry,
-		},
-	);
+	const signatureAsMulti = signWith(signatoriesDict['Bob'], unsignedTxAsMulti, {
+		metadataRpc,
+		registry,
+	});
 	console.log(`\nSignature: ${signatureAsMulti}`);
 
 	// Serialize a signed transaction.

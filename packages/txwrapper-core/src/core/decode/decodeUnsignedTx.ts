@@ -57,7 +57,9 @@ export function decodeUnsignedTx(
 			? undefined
 			: typeof unsigned.assetId === 'object'
 				? registry.createType('MultiLocation', unsigned.assetId)
-				: typeof unsigned.assetId === 'number' ? registry.createType('Compact<AssetId>', unsigned.assetId).toNumber() : unsigned.assetId,
+				: typeof unsigned.assetId === 'number'
+					? registry.createType('Compact<AssetId>', unsigned.assetId).toNumber()
+					: unsigned.assetId,
 		blockHash: unsigned.blockHash,
 		blockNumber: registry
 			.createType('BlockNumber', unsigned.blockNumber)

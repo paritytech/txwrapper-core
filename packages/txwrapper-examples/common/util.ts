@@ -6,7 +6,7 @@
  * @ignore Don't show this file in documentation.
  */ /** */
 import { KeyringPair } from '@polkadot/keyring/types';
-import { GenericSignerPayload } from '@polkadot/types'; 
+import { GenericSignerPayload } from '@polkadot/types';
 import { UnsignedTransaction } from '@substrate/txwrapper-dev';
 import { createMetadata, OptionsWithMeta } from '@substrate/txwrapper-polkadot';
 import fetch from 'node-fetch';
@@ -65,7 +65,10 @@ export function signWith(
 
 	const payload = new GenericSignerPayload(registry, {
 		...signingPayload,
-		runtimeVersion: { specVersion: signingPayload.specVersion, transactionVersion: signingPayload.transactionVersion }
+		runtimeVersion: {
+			specVersion: signingPayload.specVersion,
+			transactionVersion: signingPayload.transactionVersion,
+		},
 	}).toPayload();
 
 	const { signature } = registry

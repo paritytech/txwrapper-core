@@ -160,9 +160,13 @@ export function defineMethod(
 
 	return {
 		address: info.address,
-		assetId: !info.assetId ? undefined : typeof info.assetId === 'object'
+		assetId: !info.assetId
+			? undefined
+			: typeof info.assetId === 'object'
 				? registry.createType('MultiLocation', info.assetId).toHex()
-				: typeof info.assetId === 'number' ? registry.createType('Compact<AssetId>', info.assetId).toHex() : info.assetId,
+				: typeof info.assetId === 'number'
+					? registry.createType('Compact<AssetId>', info.assetId).toHex()
+					: info.assetId,
 		blockHash,
 		blockNumber: registry.createType('BlockNumber', info.blockNumber).toHex(),
 		era: extrinsicEra.toHex(),

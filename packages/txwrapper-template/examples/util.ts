@@ -6,10 +6,10 @@
  * @ignore Don't show this file in documentation.
  */ /** */
 import { KeyringPair } from '@polkadot/keyring/types';
+import { GenericSignerPayload } from '@polkadot/types';
 import { createMetadata, OptionsWithMeta } from '@substrate/txwrapper-polkadot';
-import fetch from 'node-fetch';
-import { GenericSignerPayload } from '@polkadot/types'; 
 import { UnsignedTransaction } from '@substrate/txwrapper-polkadot';
+import fetch from 'node-fetch';
 /**
  * Send a JSONRPC request to the node at http://0.0.0.0:9933.
  *
@@ -63,7 +63,10 @@ export function signWith(
 
 	const payload = new GenericSignerPayload(registry, {
 		...signingPayload,
-		runtimeVersion: { specVersion: signingPayload.specVersion, transactionVersion: signingPayload.transactionVersion }
+		runtimeVersion: {
+			specVersion: signingPayload.specVersion,
+			transactionVersion: signingPayload.transactionVersion,
+		},
 	}).toPayload();
 
 	const { signature } = registry

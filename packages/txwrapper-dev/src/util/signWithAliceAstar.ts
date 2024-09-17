@@ -1,9 +1,9 @@
 import { Keyring } from '@polkadot/api';
+import { GenericSignerPayload } from '@polkadot/types';
 import { cryptoWaitReady } from '@polkadot/util-crypto';
 
 import { ASTAR_TEST_OPTIONS } from '../constants';
-import { UnsignedTransaction } from '@substrate/txwrapper-core';
-import { GenericSignerPayload } from '@polkadot/types';
+import { UnsignedTransaction } from '../mock-types';
 
 /**
  * Sign a payload with seed `//Alice`.
@@ -20,7 +20,10 @@ export async function signWithAliceAstar(
 
 	const genericPayload = new GenericSignerPayload(ASTAR_TEST_OPTIONS.registry, {
 		...signingPayload,
-		runtimeVersion: { specVersion: signingPayload.specVersion, transactionVersion: signingPayload.transactionVersion }
+		runtimeVersion: {
+			specVersion: signingPayload.specVersion,
+			transactionVersion: signingPayload.transactionVersion,
+		},
 	}).toPayload();
 
 	const { signature } = ASTAR_TEST_OPTIONS.registry

@@ -1,12 +1,16 @@
 /**
  * @ignore
  */ /** */
+import { GenericSignerPayload } from '@polkadot/types';
 import { createTypeUnsafe } from '@polkadot/types/create';
 import { Call, ExtrinsicPayload } from '@polkadot/types/interfaces';
 
-import { DecodedSigningPayload, OptionsWithMeta, UnsignedTransaction } from '../../types';
+import {
+	DecodedSigningPayload,
+	OptionsWithMeta,
+	UnsignedTransaction,
+} from '../../types';
 import { createMetadata, toTxMethod } from '..';
-import { GenericSignerPayload } from '@polkadot/types';
 
 /**
  * Parse the transaction information from a signing payload.
@@ -15,7 +19,7 @@ import { GenericSignerPayload } from '@polkadot/types';
  * @param options - Runtime-specific data used for decoding the transaction.
  */
 export function decodeSigningPayload(
-	signingPayload: UnsignedTransaction,
+	signingPayload: UnsignedTransaction | string,
 	options: OptionsWithMeta,
 ): DecodedSigningPayload {
 	const { metadataRpc, registry, asCallsOnlyArg, asSpecifiedCallsOnlyV14 } =
@@ -30,10 +34,7 @@ export function decodeSigningPayload(
 		),
 	);
 
-	const genericPayload = new GenericSignerPayload(registry, {
-		...signingPayload,
-		runtimeVersion: { specVersion: signingPayload.specVersion, transactionVersion: signingPayload.transactionVersion }
-	}).toPayload();
+	let payload: ExtrinsicPayload;
 
 	// We use `createTypeUnsafe` here because it allows us to specify `withoutLog: true`,
 	// which silences an internal error message from polkadot-js. This is helpful in `decode`
@@ -42,16 +43,30 @@ export function decodeSigningPayload(
 	// If that fails we catch, knowing through process of elimination it should be a
 	// signed tx. `withoutLog: true` prevents an alarming error message from bubbling up
 	// to the user when we catch.
-	const payload: ExtrinsicPayload = createTypeUnsafe(
-		registry,
-		'ExtrinsicPayload',
-		[
+	if (typeof signingPayload === 'string') {
+		payload = createTypeUnsafe(registry, 'ExtrinsicPayload', [
+			signingPayload,
+			{
+				version: 4,
+			},
+		]);
+	} else {
+		const genericPayload = new GenericSignerPayload(registry, {
+			...signingPayload,
+			runtimeVersion: {
+				specVersion: signingPayload.specVersion,
+				transactionVersion: signingPayload.transactionVersion,
+			},
+		}).toPayload();
+
+		payload = createTypeUnsafe(registry, 'ExtrinsicPayload', [
 			genericPayload,
 			{
 				version: genericPayload.version,
 			},
-		],
-	);
+		]);
+	}
+
 	const methodCall: Call = createTypeUnsafe(registry, 'Call', [payload.method]);
 	const method = toTxMethod(registry, methodCall);
 

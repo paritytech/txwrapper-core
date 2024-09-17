@@ -1,5 +1,6 @@
-import { Options, UnsignedTransaction } from '../../types';
 import { GenericSignerPayload } from '@polkadot/types';
+
+import { Options, UnsignedTransaction } from '../../types';
 
 /**
  * Create a signing payload with the method prefix removed.
@@ -21,7 +22,10 @@ export function createSigningPayloadToU8a(
 	const { registry } = options;
 	const payload = new GenericSignerPayload(registry, {
 		...unsigned,
-		runtimeVersion: { specVersion: unsigned.specVersion, transactionVersion: unsigned.transactionVersion }
+		runtimeVersion: {
+			specVersion: unsigned.specVersion,
+			transactionVersion: unsigned.transactionVersion,
+		},
 	}).toPayload();
 
 	const extrinsicPayload = registry.createType('ExtrinsicPayload', payload, {

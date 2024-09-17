@@ -102,7 +102,7 @@ async function main(): Promise<void> {
 	);
 
 	// Sign a payload. This operation should be performed on an offline device.
-	const signature = signWith(alice, signingPayload, {
+	const signature = signWith(alice, unsigned, {
 		metadataRpc,
 		registry,
 	});
