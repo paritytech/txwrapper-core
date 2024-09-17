@@ -2,11 +2,11 @@
  * @ignore
  */ /** */
 import { createTypeUnsafe } from '@polkadot/types/create';
-import { EXTRINSIC_VERSION } from '@polkadot/types/extrinsic/v4/Extrinsic';
 import { Call, ExtrinsicPayload } from '@polkadot/types/interfaces';
 
-import { DecodedSigningPayload, OptionsWithMeta } from '../../types';
+import { DecodedSigningPayload, OptionsWithMeta, UnsignedTransaction } from '../../types';
 import { createMetadata, toTxMethod } from '..';
+import { GenericSignerPayload } from '@polkadot/types';
 
 /**
  * Parse the transaction information from a signing payload.
@@ -15,7 +15,7 @@ import { createMetadata, toTxMethod } from '..';
  * @param options - Runtime-specific data used for decoding the transaction.
  */
 export function decodeSigningPayload(
-	signingPayload: string,
+	signingPayload: UnsignedTransaction,
 	options: OptionsWithMeta,
 ): DecodedSigningPayload {
 	const { metadataRpc, registry, asCallsOnlyArg, asSpecifiedCallsOnlyV14 } =
@@ -30,6 +30,11 @@ export function decodeSigningPayload(
 		),
 	);
 
+	const genericPayload = new GenericSignerPayload(registry, {
+		...signingPayload,
+		runtimeVersion: { specVersion: signingPayload.specVersion, transactionVersion: signingPayload.transactionVersion }
+	}).toPayload();
+
 	// We use `createTypeUnsafe` here because it allows us to specify `withoutLog: true`,
 	// which silences an internal error message from polkadot-js. This is helpful in `decode`
 	// which takes in just a string. We determine if the string is a signing payload or a
@@ -41,9 +46,9 @@ export function decodeSigningPayload(
 		registry,
 		'ExtrinsicPayload',
 		[
-			signingPayload,
+			genericPayload,
 			{
-				version: EXTRINSIC_VERSION,
+				version: genericPayload.version,
 			},
 		],
 	);
