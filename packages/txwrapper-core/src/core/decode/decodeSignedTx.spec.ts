@@ -66,11 +66,7 @@ describe('decodeSignedTx', () => {
 			ASTAR_TEST_BASE_TX_INFO,
 			ASTAR_TEST_OPTIONS,
 		);
-		const signingPayload = construct.signingPayload(
-			unsigned,
-			ASTAR_TEST_OPTIONS,
-		);
-		const signature = await signWithAliceAstar(signingPayload);
+		const signature = await signWithAliceAstar(unsigned);
 		const signedTx = construct.signedTx(
 			unsigned,
 			signature,

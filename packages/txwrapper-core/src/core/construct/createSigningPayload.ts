@@ -1,5 +1,6 @@
-import { Options, UnsignedTransaction } from '../../types';
+import { GenericSignerPayload } from '@polkadot/types';
 
+import { Options, UnsignedTransaction } from '../../types';
 /**
  * Construct the signing payload from an unsigned transaction and export it to
  * a remote signer (this is often called "detached signing").
@@ -65,9 +66,17 @@ export function createSigningPayload(
 		);
 	}
 
+	const payload = new GenericSignerPayload(registry, {
+		...unsigned,
+		runtimeVersion: {
+			specVersion: unsigned.specVersion,
+			transactionVersion: unsigned.transactionVersion,
+		},
+	}).toPayload();
+
 	return registry
-		.createType('ExtrinsicPayload', unsigned, {
-			version: unsigned.version,
+		.createType('ExtrinsicPayload', payload, {
+			version: payload.version,
 		})
 		.toHex();
 }

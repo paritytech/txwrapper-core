@@ -1,3 +1,5 @@
+import { GenericSignerPayload } from '@polkadot/types';
+
 import { Options, UnsignedTransaction } from '../../types';
 
 /**
@@ -18,8 +20,16 @@ export function createSigningPayloadToU8a(
 	options: Options,
 ): Uint8Array {
 	const { registry } = options;
-	const extrinsicPayload = registry.createType('ExtrinsicPayload', unsigned, {
-		version: unsigned.version,
+	const payload = new GenericSignerPayload(registry, {
+		...unsigned,
+		runtimeVersion: {
+			specVersion: unsigned.specVersion,
+			transactionVersion: unsigned.transactionVersion,
+		},
+	}).toPayload();
+
+	const extrinsicPayload = registry.createType('ExtrinsicPayload', payload, {
+		version: payload.version,
 	});
 
 	/**

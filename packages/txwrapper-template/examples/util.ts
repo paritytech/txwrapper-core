@@ -6,10 +6,10 @@
  * @ignore Don't show this file in documentation.
  */ /** */
 import { KeyringPair } from '@polkadot/keyring/types';
-import { EXTRINSIC_VERSION } from '@polkadot/types/extrinsic/v4/Extrinsic';
+import { GenericSignerPayload } from '@polkadot/types';
 import { createMetadata, OptionsWithMeta } from '@substrate/txwrapper-polkadot';
+import { UnsignedTransaction } from '@substrate/txwrapper-polkadot';
 import fetch from 'node-fetch';
-
 /**
  * Send a JSONRPC request to the node at http://0.0.0.0:9933.
  *
@@ -53,7 +53,7 @@ export function rpcToLocalNode(
  */
 export function signWith(
 	pair: KeyringPair,
-	signingPayload: string,
+	signingPayload: UnsignedTransaction,
 	options: OptionsWithMeta,
 ): `0x${string}` {
 	const { registry, metadataRpc } = options;
@@ -61,9 +61,17 @@ export function signWith(
 	// sure to run `registry.setMetadata(metadata)` before signing.
 	registry.setMetadata(createMetadata(registry, metadataRpc));
 
+	const payload = new GenericSignerPayload(registry, {
+		...signingPayload,
+		runtimeVersion: {
+			specVersion: signingPayload.specVersion,
+			transactionVersion: signingPayload.transactionVersion,
+		},
+	}).toPayload();
+
 	const { signature } = registry
-		.createType('ExtrinsicPayload', signingPayload, {
-			version: EXTRINSIC_VERSION,
+		.createType('ExtrinsicPayload', payload, {
+			version: payload.version,
 		})
 		.sign(pair);
 

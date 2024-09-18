@@ -38,8 +38,7 @@ describe('createSignedTx', () => {
 			ASTAR_TEST_BASE_TX_INFO,
 			ASTAR_TEST_OPTIONS,
 		);
-		const signingPayload = createSigningPayload(unsigned, ASTAR_TEST_OPTIONS);
-		const signature = await signWithAliceAstar(signingPayload);
+		const signature = await signWithAliceAstar(unsigned);
 
 		const tx = createSignedTx(unsigned, signature, ASTAR_TEST_OPTIONS);
 		expect(tx).toBe(
