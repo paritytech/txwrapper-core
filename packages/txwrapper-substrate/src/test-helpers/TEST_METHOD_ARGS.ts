@@ -8,6 +8,11 @@ export const TEST_METHOD_ARGS = {
 			target: '14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3', // seed "//Bob"
 			amount: 1234,
 		},
+		transferAll: {
+			id: 10,
+			dest: '14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3', // seed "//Bob"
+			keepAlive: true,
+		},
 		transferKeepAlive: {
 			id: 10,
 			target: '14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3', // seed "//Bob"
