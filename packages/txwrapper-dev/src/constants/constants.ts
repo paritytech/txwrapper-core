@@ -1,5 +1,6 @@
 import { assetHubKusamaMetadataHex } from '../metadata/asset-hub-kusama';
 import { assetHubPolkadotMetadataHex } from '../metadata/asset-hub-polkadot';
+import { assetHubWestendMetadataHex } from '../metadata/asset-hub-westend';
 import { astarMetadataHex } from '../metadata/astar';
 import { kusamaMetadataHex } from '../metadata/kusama';
 import { polkadotMetadataHex } from '../metadata/polkadot';
@@ -12,12 +13,14 @@ import {
 	memoizedPolkadotGetRegistry,
 	memoizedWestendGetRegistry,
 } from '../registries';
+import { memoizedAssetHubWestendGetRegistry } from '../registries/westendAssetHubRegistry';
 
 export const KUSAMA_SPEC_VERSION = 102005;
 export const POLKADOT_SPEC_VERSION = 9430;
 export const ASSET_HUB_KUSAMA_SPEC_VERSION = 1002005;
 export const ASSET_HUB_POLKADOT_SPEC_VERSION = 1002004;
 export const WESTEND_SPEC_VERSION = 1013000;
+export const ASSET_HUB_WESTEND_SPEC_VERSION = 1016000;
 export const ASTAR_SPEC_VERSION = 72;
 
 /**
@@ -98,6 +101,21 @@ export const WESTEND_TEST_BASE_TX_INFO = {
 	transactionVersion: 6,
 };
 
+export const ASSET_HUB_WESTEND_TEST_BASE_TX_INFO = {
+	address: 'HNZata7iMYWmk5RvZRTiAsSDhV8366zq2YGb3tLH5Upf74F', // seed "//Alice"
+	blockHash:
+		'0x1fc7493f3c1e9ac758a183839906475f8363aafb1b1d3e910fe16fab4ae1b582',
+	blockNumber: 4302222,
+	eraPeriod: 2400,
+	genesisHash:
+		'0xe3777fa922cafbff200cadeaea1a76bd7898ad5b89f7848999058b50e715f636',
+	metadataRpc: assetHubWestendMetadataHex,
+	nonce: 2,
+	specVersion: ASSET_HUB_WESTEND_SPEC_VERSION,
+	tip: 0,
+	transactionVersion: 6,
+};
+
 export const ASTAR_TEST_BASE_TX_INFO = {
 	address: 'XYJkwdMbojBtNzngQxLHEdciMDE5baLihb5RWTL3QHGfnwy',
 	blockHash:
@@ -155,6 +173,15 @@ export const WESTEND_TEST_OPTIONS = {
 		westendMetadataHex,
 	),
 };
+
+export const ASSET_HUB_WESTEND_TEST_OPTIONS = {
+	metadataRpc: assetHubWestendMetadataHex,
+	registry: memoizedAssetHubWestendGetRegistry(
+		ASSET_HUB_WESTEND_SPEC_VERSION,
+		assetHubWestendMetadataHex,
+	),
+};
+
 export const ASTAR_TEST_OPTIONS = {
 	metadataRpc: astarMetadataHex,
 	registry: memoizedAstarGetRegistry(ASTAR_SPEC_VERSION, astarMetadataHex),
