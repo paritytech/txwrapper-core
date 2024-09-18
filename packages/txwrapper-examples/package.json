@@ -20,10 +20,10 @@
     "polkadotBatchAll": "node ./lib/txwrapper-examples/polkadotBatchAll/src/polkadotBatchAll",
     "mandala": "node lib/mandala",
     "multisig": "node ./lib/txwrapper-examples/lib/multisig/src/multisig",
-    "asSpecifiedCallsOnlyV14": "node ./lib/options/src/asSpecifiedCallsOnlyV14"
+    "asSpecifiedCallsOnlyV14": "node ./lib/txwrapper-examples/options/src/asSpecifiedCallsOnlyV14"
   },
   "dependencies": {
-    "@polkadot/api": "^13.0.1",
+    "@polkadot/api": "^13.1.1",
     "@substrate/txwrapper-polkadot": "^7.5.1",
     "@substrate/txwrapper-registry": "^7.5.1"
   }
