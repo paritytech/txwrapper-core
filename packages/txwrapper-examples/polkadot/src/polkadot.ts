@@ -118,15 +118,6 @@ async function main(): Promise<void> {
 
 	registry.setMetadata(metadata);
 
-	const extrinsic = registry.createType(
-		'Extrinsic',
-		{ method: unsigned.method },
-		{
-			version: 5,
-			subVersionV5: 'signed'
-		},
-	);
-
 	const payload = new GenericSignerPayload(registry, {
 		...unsigned,
 		runtimeVersion: {
@@ -136,21 +127,16 @@ async function main(): Promise<void> {
 		version: 5,
 	}).toPayload();
 
-	const { signature } = registry
+	const general = registry
 		.createType('ExtrinsicPayload', payload, {
 			version: 5,
-			subVersionV5: 'signed'
+			subVersionV5: 'general'
 		})
-		.sign(alice);
+
+	console.log(`\nTransaction to Submit: ${general.toHex()}`);
 
 
-
-	extrinsic.addSignature(unsigned.address, signature, unsigned)
-
-	console.log(`\nTransaction to Submit: ${extrinsic.toHex()}`);
-
-
-	const actualTxHash = await rpcToLocalNode('author_submitExtrinsic', [extrinsic.toHex()]);
+	const actualTxHash = await rpcToLocalNode('author_submitExtrinsic', [general.toHex()]);
 	console.log(`Actual Tx Hash: ${actualTxHash}`);
 
 }
