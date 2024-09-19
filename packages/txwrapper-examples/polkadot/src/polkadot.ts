@@ -7,16 +7,16 @@
 
 import { Keyring } from '@polkadot/api';
 import { cryptoWaitReady } from '@polkadot/util-crypto';
+import { GenericSignerPayload } from '@polkadot/types';
 import {
-	construct,
-	decode,
+	createMetadata,
 	deriveAddress,
 	getRegistry,
 	methods,
 	PolkadotSS58Format,
 } from '@substrate/txwrapper-polkadot';
 
-import { rpcToLocalNode, signWith } from '../../common/util';
+import { rpcToLocalNode } from '../../common/util';
 
 /**
  * Entry point of the script. This script assumes a Polkadot node is running
@@ -100,7 +100,7 @@ async function main(): Promise<void> {
 			eraPeriod: 64,
 			genesisHash,
 			metadataRpc,
-			nonce: 6, // Assuming this is Alice's first tx on the chain
+			nonce: 0, // Assuming this is Alice's first tx on the chain
 			specVersion,
 			tip: 0,
 			transactionVersion,
@@ -111,78 +111,48 @@ async function main(): Promise<void> {
 		},
 	);
 
-	// Decode an unsigned transaction.
-	const decodedUnsigned = decode(unsigned, {
-		metadataRpc,
+	const metadata = createMetadata(
 		registry,
-	});
-	console.log(
-		`\nDecoded Transaction\n  To: ${
-			(decodedUnsigned.method.args.dest as { id: string })?.id
-		}\n` + `  Amount: ${decodedUnsigned.method.args.value}`,
+		metadataRpc,
 	);
 
-	// Construct the signing payload from an unsigned transaction.
-	const signingPayload = construct.signingPayload(unsigned, { registry });
-	console.log(`\nPayload to Sign: ${signingPayload}`);
+	registry.setMetadata(metadata);
 
-	// Decode the information from a signing payload.
-	const payloadInfo = decode(signingPayload, {
-		metadataRpc,
-		registry,
-	});
-	console.log(
-		`\nDecoded Transaction\n  To: ${
-			(payloadInfo.method.args.dest as { id: string })?.id
-		}\n` + `  Amount: ${payloadInfo.method.args.value}`,
+	const extrinsic = registry.createType(
+		'Extrinsic',
+		{ method: unsigned.method },
+		{
+			version: 5,
+			subVersionV5: 'signed'
+		},
 	);
 
-	const genEx = registry.createType('Extrinsic', {
+	const payload = new GenericSignerPayload(registry, {
+		...unsigned,
+		runtimeVersion: {
+			specVersion: unsigned.specVersion,
+			transactionVersion: unsigned.transactionVersion,
+		},
 		version: 5,
-		subVersion: 'general'
+	}).toPayload();
 
-	});
-
-
-	// Sign a payload. This operation should be performed on an offline device.
-	const signature = signWith(alice, unsigned, {
-		metadataRpc,
-		registry,
-	});
-	console.log(`\nSignature: ${signature}`);
-
-	genEx.addSignature(unsigned.address, signature, unsigned)
-
-	console.log('hex', registry.hash(genEx.toU8a()).toHex())
+	const { signature } = registry
+		.createType('ExtrinsicPayload', payload, {
+			version: 5,
+			subVersionV5: 'signed'
+		})
+		.sign(alice);
 
 
-	// // Serialize a signed transaction.
-	// const tx = construct.signedTx(unsigned, signature, {
-	// 	metadataRpc,
-	// 	registry,
-	// });
-	// console.log(`\nTransaction to Submit: ${tx}`);
 
-	// // Derive the tx hash of a signed transaction offline.
-	// const expectedTxHash = construct.txHash(tx);
-	// console.log(`\nExpected Tx Hash: ${expectedTxHash}`);
+	extrinsic.addSignature(unsigned.address, signature, unsigned)
 
-	// // Send the tx to the node. Again, since `txwrapper` is offline-only, this
-	// // operation should be handled externally. Here, we just send a JSONRPC
-	// // request directly to the node.
-	// const actualTxHash = await rpcToLocalNode('author_submitExtrinsic', [tx]);
-	// console.log(`Actual Tx Hash: ${actualTxHash}`);
+	console.log(`\nTransaction to Submit: ${extrinsic.toHex()}`);
 
-	// // Decode a signed payload.
-	// const txInfo = decode(tx, {
-	// 	metadataRpc,
-	// 	registry,
-	// });
-	// console.log(
-	// 	`\nDecoded Transaction\n  To: ${
-	// 		(txInfo.method.args.dest as { id: string })?.id
-	// 	}\n` + `  Amount: ${txInfo.method.args.value}\n`,
-	// );
+
+	const actualTxHash = await rpcToLocalNode('author_submitExtrinsic', [extrinsic.toHex()]);
+	console.log(`Actual Tx Hash: ${actualTxHash}`);
+
 }
 
 main().catch((error) => {
