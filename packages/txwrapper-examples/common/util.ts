@@ -71,6 +71,8 @@ export function signWith(
 		},
 	}).toPayload();
 
+	console.log('versionn', payload.version)
+
 	const { signature } = registry
 		.createType('ExtrinsicPayload', payload, {
 			version: payload.version,

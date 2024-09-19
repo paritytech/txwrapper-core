@@ -100,7 +100,7 @@ async function main(): Promise<void> {
 			eraPeriod: 64,
 			genesisHash,
 			metadataRpc,
-			nonce: 0, // Assuming this is Alice's first tx on the chain
+			nonce: 6, // Assuming this is Alice's first tx on the chain
 			specVersion,
 			tip: 0,
 			transactionVersion,
@@ -137,6 +137,13 @@ async function main(): Promise<void> {
 		}\n` + `  Amount: ${payloadInfo.method.args.value}`,
 	);
 
+	const genEx = registry.createType('Extrinsic', {
+		version: 5,
+		subVersion: 'general'
+
+	});
+
+
 	// Sign a payload. This operation should be performed on an offline device.
 	const signature = signWith(alice, unsigned, {
 		metadataRpc,
@@ -144,33 +151,38 @@ async function main(): Promise<void> {
 	});
 	console.log(`\nSignature: ${signature}`);
 
-	// Serialize a signed transaction.
-	const tx = construct.signedTx(unsigned, signature, {
-		metadataRpc,
-		registry,
-	});
-	console.log(`\nTransaction to Submit: ${tx}`);
+	genEx.addSignature(unsigned.address, signature, unsigned)
 
-	// Derive the tx hash of a signed transaction offline.
-	const expectedTxHash = construct.txHash(tx);
-	console.log(`\nExpected Tx Hash: ${expectedTxHash}`);
+	console.log('hex', registry.hash(genEx.toU8a()).toHex())
 
-	// Send the tx to the node. Again, since `txwrapper` is offline-only, this
-	// operation should be handled externally. Here, we just send a JSONRPC
-	// request directly to the node.
-	const actualTxHash = await rpcToLocalNode('author_submitExtrinsic', [tx]);
-	console.log(`Actual Tx Hash: ${actualTxHash}`);
 
-	// Decode a signed payload.
-	const txInfo = decode(tx, {
-		metadataRpc,
-		registry,
-	});
-	console.log(
-		`\nDecoded Transaction\n  To: ${
-			(txInfo.method.args.dest as { id: string })?.id
-		}\n` + `  Amount: ${txInfo.method.args.value}\n`,
-	);
+	// // Serialize a signed transaction.
+	// const tx = construct.signedTx(unsigned, signature, {
+	// 	metadataRpc,
+	// 	registry,
+	// });
+	// console.log(`\nTransaction to Submit: ${tx}`);
+
+	// // Derive the tx hash of a signed transaction offline.
+	// const expectedTxHash = construct.txHash(tx);
+	// console.log(`\nExpected Tx Hash: ${expectedTxHash}`);
+
+	// // Send the tx to the node. Again, since `txwrapper` is offline-only, this
+	// // operation should be handled externally. Here, we just send a JSONRPC
+	// // request directly to the node.
+	// const actualTxHash = await rpcToLocalNode('author_submitExtrinsic', [tx]);
+	// console.log(`Actual Tx Hash: ${actualTxHash}`);
+
+	// // Decode a signed payload.
+	// const txInfo = decode(tx, {
+	// 	metadataRpc,
+	// 	registry,
+	// });
+	// console.log(
+	// 	`\nDecoded Transaction\n  To: ${
+	// 		(txInfo.method.args.dest as { id: string })?.id
+	// 	}\n` + `  Amount: ${txInfo.method.args.value}\n`,
+	// );
 }
 
 main().catch((error) => {
