@@ -72,6 +72,7 @@ export function createSigningPayload(
 			specVersion: unsigned.specVersion,
 			transactionVersion: unsigned.transactionVersion,
 		},
+		version: 5,
 	}).toPayload();
 
 	return registry

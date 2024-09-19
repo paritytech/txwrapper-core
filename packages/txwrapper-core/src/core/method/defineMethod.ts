@@ -1,7 +1,6 @@
 /**
  * @ignore
  */ /** */
-import { EXTRINSIC_VERSION } from '@polkadot/types/extrinsic/v4/Extrinsic';
 import { ExtrinsicEra } from '@polkadot/types/interfaces/extrinsics';
 import { ModuleExtrinsics } from '@polkadot/types/metadata/decorate/types';
 import { stringCamelCase } from '@polkadot/util';
@@ -184,6 +183,6 @@ export function defineMethod(
 		transactionVersion: registry
 			.createType('u32', info.transactionVersion)
 			.toHex(),
-		version: EXTRINSIC_VERSION,
+		version: registry.metadata.extrinsic.version.toNumber(),
 	};
 }
