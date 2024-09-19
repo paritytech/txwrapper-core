@@ -73,6 +73,24 @@ async function main(): Promise<void> {
 	});
 
 	/**
+	 * This is the Location of the asset that we'll use to pay the fees.
+	 * It must have a Liquidity Pool against the chain's Native Token.
+	 */ 
+	const asset = {
+		parents: 0,
+		interior: {
+			X2: [
+				{
+					palletInstance: 50,
+				},
+				{
+					generalIndex: 6543,
+				},
+			],
+		},
+	};
+
+	/**
 	 * Now we can create our `balances.transferKeepAlive` unsigned tx. The following
 	 * function takes the above data as arguments, so it can be performed offline
 	 * if desired.
@@ -94,7 +112,7 @@ async function main(): Promise<void> {
 		},
 		{
 			address: deriveAddress(alice.publicKey, PolkadotSS58Format.polkadot),
-			assetId: 1, // id of sufficient asset used to pay for fees
+			assetId: asset,
 			blockHash,
 			blockNumber: registry
 				.createType('BlockNumber', block.header.number)
