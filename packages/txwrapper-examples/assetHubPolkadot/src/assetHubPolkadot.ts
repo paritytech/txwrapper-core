@@ -30,7 +30,7 @@ async function main(): Promise<void> {
 	const alice = keyring.addFromUri('//Alice', { name: 'Alice' }, 'sr25519');
 	console.log(
 		"Alice's SS58-Encoded Address:",
-		deriveAddress(alice.publicKey, PolkadotSS58Format.westend),
+		deriveAddress(alice.publicKey, PolkadotSS58Format.polkadot),
 	);
 
 	// Construct a balance transfer transaction offline.
@@ -66,7 +66,7 @@ async function main(): Promise<void> {
 	 * ```
 	 */
 	const registry = getRegistry({
-		chainName: 'trappist-rococo',
+		chainName: 'statemint',
 		specName,
 		specVersion,
 		metadataRpc,
@@ -93,7 +93,7 @@ async function main(): Promise<void> {
 			dest: { id: '5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty' }, // Bob
 		},
 		{
-			address: deriveAddress(alice.publicKey, PolkadotSS58Format.westend),
+			address: deriveAddress(alice.publicKey, PolkadotSS58Format.polkadot),
 			assetId: 1, // id of sufficient asset used to pay for fees
 			blockHash,
 			blockNumber: registry
