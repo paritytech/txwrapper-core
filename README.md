@@ -29,7 +29,7 @@ For example, those looking to construct a transaction offline on Polkadot would 
 
 #### Published
 
-- [@substrate/txwrapper-polkadot](modules/txwrapper_polkadot_src.html) Helper functions for offline transaction generation for polkadot relay and system chains; specifically the following chains: Polkadot, Kusama, Rococo, Westend, Asset Hub Polkadot and Asset Hub Kusama.
+- [@substrate/txwrapper-polkadot](modules/txwrapper_polkadot_src.html) Helper functions for offline transaction generation for polkadot relay and system chains; specifically the following chains: Polkadot, Kusama, Paseo, Westend, Asset Hub Polkadot and Asset Hub Kusama.
 - [@substrate/txwrapper-core](modules/txwrapper_core_src.html) The essentials for creating a chain specific txwrapper lib.
 - [@substrate/txwrapper-registry](modules/txwrapper_registry_src.html) Registry creation support, catering to chains with types in [@polkadot/apps-config](https://github.com/polkadot-js/apps/tree/master/packages/apps-config/README.md).
 - [@substrate/txwrapper-substrate](modules/txwrapper_substrate_src.html) Selected dispatchables of Substrate pallets, to be re-exported by txwrappers (e.g. @substrate/txwrapper-polkadot).

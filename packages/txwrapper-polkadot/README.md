@@ -1,7 +1,7 @@
 <br /><br />
 
 <h1 align="center">@substrate/txwrapper-polkadot</h1>
-<h4 align="center">Helper functions for Polkadot, Kusama, Rococo and Westend offline transaction generation.</h4>
+<h4 align="center">Helper functions for Polkadot, Kusama, Paseo and Westend offline transaction generation.</h4>
 
 <p align="center">
   <a href="https://www.npmjs.com/package/@substrate/txwrapper-polkadot">
@@ -19,7 +19,7 @@
 
 # About
 
-Txwrapper library for polkadot relay and system chains; specifically Polkadot, Kusama, Rococo, Westend, Asset Hub Polkadot and Asset Hub Kusama.
+Txwrapper library for polkadot relay and system chains; specifically Polkadot, Kusama, Paseo, Westend, Asset Hub Polkadot and Asset Hub Kusama.
 
 Note: not all methods available apply to all supported chains. To check what methods are supported by a chain consult the pallets included in chain's runtime.
 

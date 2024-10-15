@@ -1,53 +1,16 @@
 # Asset Hub Polkadot/Asset Hub Kusama Sufficient Asset Example:
 
-Note: this example uses the substrate chain `trappist-rococo` which serves as a wrapper for a Asset Hub Polkadot/Asset Hub Kusama environment
+Note: this example uses the substrate chain `Paseo Asset Hub` which serves as a wrapper for a Asset Hub Polkadot/Asset Hub Kusama environment
 
 ## How to construct a transaction using a sufficient asset to pay fees in `txwrapper-core`
 
 ## Get Started
 
-1) Clone & build Trappist
+1) First you need to clone the repo for the [node](https://github.com/paritytech/polkadot-sdk/tree/polkadot-stable2409) and build the binaries, with `features=fast-runtime` in order to shorten the session duration: polkadot, polkadot-parachain, polkadot-prepare-worker and polkadot-execute-worker, and place them in the `zombienet/bin/` directory.
 
-    ```bash
-    git clone -b xcm-demo --depth 1 https://github.com/paritytech/trappist
-    cd trappist && cargo build –-release
-    cp ./target/release/trappist-collator ./bin
-    ```
+2) You will also need the zombienet executable for your os, which you can download [here](https://github.com/paritytech/zombienet/releases), and place it in the `zombienet` folder.
 
-2) Clone & build Polkadot
-
-    ```bash
-    git clone -b release-v0.9.23 --depth 1 https://github.com/paritytech/polkadot
-    cd polkadot && cargo build –-release
-    cp ./target/release/polkadot ../trappist/bin
-    ```
-
-3) Clone & build Cumulus (*)
-
-    ```bash
-    git clone -b xcm-demo --depth 1 https://github.com/stiiifff/cumulus-asset-fees
-    cd cumulus-asset-fees && cargo build –-release
-    cp ./target/release/polkadot-parachain ../trappist/bin/polkadot-collator
-    cp ./target/release/parachain-collator ../trappist/bin
-    ```
-
-4) Install zombienet utility: download the latest binary for your operating system at `https://github.com/paritytech/zombienet/releases`
-
-## Run Local Zombienet test nodes
-
-5) Copy the zombienet binary in the root directory of the Trappist repository, and then launch the local environment. Example:
-
-    bash
-    ```
-    ./zombienet-macos -p native spawn xcm-playground.toml | tee zombienet.log
-    ```
-
-6) Open the `Trappist Local` node in `Polkadot.js` apps: Once the various test nodes have been started, open a browser window with the Polkadot.js apps for the node you wish to use (e.g. check the ws port for `trappist-collator01` in the zombienet console output and provide it as a custom port in polkadot.js).
-
-    Mac: cat zombienet.log | grep -Eo 'https://polkadot.js.org/apps/.+' | xargs open -a /Applications/Google\ Chrome.app
-    Linux: cat zombienet.log | grep -Eo 'https://polkadot.js.org/apps/.+' | xargs google-chrome
-
-    Alternatively, use the direct link given in zombienets console output: (example direct link output: https://polkadot.js.org/apps/?rpc=ws://127.0.0.1:54303#/explorer. Note: your ws port will be different.)
+3) Run the test network from the root of this project with the command `./zombienet/<your-os-zombienet-executable> -p native spawn ./zombienet/config/medium-network.toml | tee zombienet.log`
 
 ## Create a test Asset in Polkadot.js Apps
 
@@ -68,7 +31,7 @@ Note for this step: If an `orange` icon appears in the top right after submittin
 10) Install dependencies and build the JS target
 
     ```bash
-    # from this repos root directory run
+    # from this repo\'s root directory run
     yarn install && yarn build
 
     # change to the examples directory

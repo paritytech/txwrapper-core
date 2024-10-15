@@ -4,13 +4,16 @@
 
 ## Testnet setup
 
-1) First you need to download the binaries for the [node](https://github.com/paritytech/polkadot-sdk/releases): polkadot, polkadot-parachain, polkadot-prepare-worker and polkadot-execute-worker, and place them in the `zombienet/bin/` directory.
+1) First you need to clone the repo for the [node](https://github.com/paritytech/polkadot-sdk/tree/polkadot-stable2409) and build the binaries, with `features=fast-runtime` in order to shorten the session duration: polkadot, polkadot-parachain, polkadot-prepare-worker and polkadot-execute-worker, and place them in the `zombienet/bin/` directory.
+
 2) You will also need the zombienet executable for your os, which you can download [here](https://github.com/paritytech/zombienet/releases), and place it in the `zombienet` folder.
+
 3) Run the test network from the root of this project with the command `./zombienet/<your-os-zombienet-executable> -p native spawn ./zombienet/config/medium-network.toml | tee zombienet.log`
 
 ## Create a Liquidity Pool
 
 4) Now you need to create the asset in the Asset Hub that we'll use in this example via [`polkadot-js/apss`](https://polkadot.js.org/apps/?rpc=ws://127.0.0.1:9933), with `assetId = 1` and `decimals = 0`, and mint some to `Alice`.
+
 5) Then you can create a Liquidity Pool with that asset and the chain's native asset:
 
 ![](media/poolCreation.png)
