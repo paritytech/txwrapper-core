@@ -1,2 +1,2 @@
 **/lib/*
-**/src/*.{d.ts, js.map}
+**/src/*.{d.ts, js.map, spec.d.ts, spec.js.map}
