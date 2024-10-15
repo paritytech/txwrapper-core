@@ -1,7 +1,7 @@
 [relaychain]
-default_command = "./bin/polkadot"
+default_command = "../polkadot"
 default_args = [ "-lparachain=debug" ]
-chain = "rococo-local"
+chain_spec_path = "./paseo-local.plain.json"
 
   [[relaychain.nodes]]
   name = "alice"
@@ -27,17 +27,17 @@ chain = "rococo-local"
 [[parachains]]
 id = 1000
 addToGenesis = true
-chain = "asset-hub-rococo-local"
+chain_spec_path = "./asset-hub-paseo-local.plain.json"
 cumulus_based = true
 
   [[parachains.collators]]
-  name = "rockmint-collator01"
-  command = "./bin/polkadot-parachain"
+  name = "paseo-asset-hub-collator01"
+  command = "../polkadot-parachain"
   args = ["--log=xcm=trace,pallet-assets=trace"]
   ws_port = 9933
 
   [[parachains.collators]]
-  name = "rockmint-collator02"
-  command = "./bin/polkadot-parachain"
+  name = "paseo-asset-hub-collator02"
+  command = "../polkadot-parachain"
   ws_port = 9911
   args = ["--log=xcm=trace,pallet-assets=trace"]
