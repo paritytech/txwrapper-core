@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.5.2](https://github.com/paritytech/txwrapper-core/compare/v7.5.1...v7.5.2) (2024-10-15)
+
+
+### Bug Fixes
+
+* add `assets::transferAll` call ([#405](https://github.com/paritytech/txwrapper-core/issues/405)) ([0142e0a](https://github.com/paritytech/txwrapper-core/commit/0142e0afe5028f86746d73a45dd8adc37008adaf))
+* dependabot ([#400](https://github.com/paritytech/txwrapper-core/issues/400)) ([dc527ec](https://github.com/paritytech/txwrapper-core/commit/dc527ecf3b7b989096c3b5360859b7630abf8ec9))
+* prevent error in service worker environment ([#384](https://github.com/paritytech/txwrapper-core/issues/384)) ([6145ea6](https://github.com/paritytech/txwrapper-core/commit/6145ea62d1610d55650a5ed1c3babfb92ccc437b))
+* set assetId to default to undefined instead of 0 ([#397](https://github.com/paritytech/txwrapper-core/issues/397)) ([e392a2d](https://github.com/paritytech/txwrapper-core/commit/e392a2d666a1740f71bc4568bd1e8d2f268083ed))
+
+
+
+
+
 ## [7.5.1](https://github.com/paritytech/txwrapper-core/compare/v7.5.0...v7.5.1) (2024-06-18)
 
 
