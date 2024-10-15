@@ -1,6 +1,6 @@
 # Asset Hub Kusama Foreign Asset Example
 
-Note: this example uses the substrate chain `Asset Hub Paseo` which serves as a wrapper for a Asset Hub Polkadot/Asset Hub Kusama environment
+Note: this example uses the substrate chain `Paseo Asset Hub` which serves as a wrapper for a Asset Hub Polkadot/Asset Hub Kusama environment
 
 ## How to construct a foreign asset transfer
 
