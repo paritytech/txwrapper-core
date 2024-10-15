@@ -1,5 +1,5 @@
 /**
- * Helper functions for Polkadot, Kusama, Rococo and Westend offline transaction generation.
+ * Helper functions for Polkadot, Kusama, Paseo and Westend offline transaction generation.
  *
  * @module txwrapper-polkadot
  */
@@ -14,7 +14,7 @@ import { methods as substrateMethods } from '@substrate/txwrapper-substrate';
 
 import * as polkadotMethods from './methods';
 
-// Export methods of pallets included in the Polkadot, Kusama, Westend, Rococo,
+// Export methods of pallets included in the Polkadot, Kusama, Westend, Paseo,
 // Asset Hub Polkadot and Asset Hub Kusama runtimes.
 // Note: in the future this may also include methods defined within this package
 // that do not exist in Substrate.

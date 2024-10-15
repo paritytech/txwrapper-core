@@ -30,7 +30,7 @@ async function main(): Promise<void> {
 	const alice = keyring.addFromUri('//Alice', { name: 'Alice' }, 'sr25519');
 	console.log(
 		"Alice's SS58-Encoded Address:",
-		deriveAddress(alice.publicKey, PolkadotSS58Format.westend),
+		deriveAddress(alice.publicKey, PolkadotSS58Format.polkadot),
 	);
 
 	// Construct a balance transfer transaction offline.
@@ -66,11 +66,29 @@ async function main(): Promise<void> {
 	 * ```
 	 */
 	const registry = getRegistry({
-		chainName: 'trappist-rococo',
+		chainName: 'statemint',
 		specName,
 		specVersion,
 		metadataRpc,
 	});
+
+	/**
+	 * This is the Location of the asset that we'll use to pay the fees.
+	 * It must have a Liquidity Pool against the chain's Native Token.
+	 */
+	const asset = {
+		parents: 0,
+		interior: {
+			X2: [
+				{
+					palletInstance: 50,
+				},
+				{
+					generalIndex: 6543,
+				},
+			],
+		},
+	};
 
 	/**
 	 * Now we can create our `balances.transferKeepAlive` unsigned tx. The following
@@ -93,8 +111,8 @@ async function main(): Promise<void> {
 			dest: { id: '5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty' }, // Bob
 		},
 		{
-			address: deriveAddress(alice.publicKey, PolkadotSS58Format.westend),
-			assetId: 1, // id of sufficient asset used to pay for fees
+			address: deriveAddress(alice.publicKey, PolkadotSS58Format.polkadot),
+			assetId: asset,
 			blockHash,
 			blockNumber: registry
 				.createType('BlockNumber', block.header.number)

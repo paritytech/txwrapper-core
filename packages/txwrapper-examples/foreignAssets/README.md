@@ -1,6 +1,6 @@
 # Asset Hub Kusama Foreign Asset Example
 
-Note: this example uses the substrate chain `Asset Hub Rococo` which serves as a wrapper for a Asset Hub Polkadot/Asset Hub Kusama environment
+Note: this example uses the substrate chain `Paseo Asset Hub` which serves as a wrapper for a Asset Hub Polkadot/Asset Hub Kusama environment
 
 ## How to construct a foreign asset transfer
 
@@ -9,7 +9,7 @@ Note: this example uses the substrate chain `Asset Hub Rococo` which serves as a
 1) Clone & build Polkadot
 
     ```bash
-    git clone https://github.com/paritytech/polkadot-sdk
+    git clone https://github.com/paritytech/polkadot-sdk/tree/polkadot-stable2409
     cd polkadot-sdk
     cargo build --release --features fast-runtime --bin polkadot
     cargo build --release --features fast-runtime --bin polkadot-prepare-worker
@@ -30,7 +30,7 @@ Note: this example uses the substrate chain `Asset Hub Rococo` which serves as a
     bash
 
     ```
-    ./zombienet/zombienet-linux-x64 -p native spawn ./zombienet/config/asset-hub.toml | tee zombienet.log
+    ./zombienet/<your-os-zombienet-executable> -p native spawn ./zombienet/config/medium-network.toml | tee zombienet.log
     ```
 
 ## Construct and mock an example foreign asset transfer transaction in Txwrapper-Core

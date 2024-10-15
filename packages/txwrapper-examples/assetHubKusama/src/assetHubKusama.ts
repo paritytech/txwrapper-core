@@ -87,7 +87,10 @@ async function main(): Promise<void> {
 	 * }
 	 */
 	const nonce = await rpcToLocalNode('account_nextIndex', [alice.address]);
-	// MultiLocation of the Asset backed by a Liquidity Pool used to pay the fees
+	/**
+	 * This is the Location of the asset that we'll use to pay the fees.
+	 * It must have a Liquidity Pool against the chain's Native Token.
+	 */
 	const asset = {
 		parents: 0,
 		interior: {
