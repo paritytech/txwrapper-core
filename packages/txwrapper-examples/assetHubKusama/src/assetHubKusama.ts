@@ -90,7 +90,7 @@ async function main(): Promise<void> {
 	/**
 	 * This is the Location of the asset that we'll use to pay the fees.
 	 * It must have a Liquidity Pool against the chain's Native Token.
-	 */ 
+	 */
 	const asset = {
 		parents: 0,
 		interior: {
