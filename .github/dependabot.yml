@@ -17,9 +17,9 @@ updates:
       timezone: "America/New_York"
     rebase-strategy: "auto"
     groups:
-    pjs:
-      patterns:
-        - "@polkadot/*"
+      pjs:
+        patterns:
+          - "@polkadot/*"
     commit-message:
       # Prefix all commit messages with "chore"
       # include a list of updated dependencies
