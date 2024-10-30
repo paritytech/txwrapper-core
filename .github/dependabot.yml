@@ -16,10 +16,14 @@ updates:
       # EST timezone
       timezone: "America/New_York"
     rebase-strategy: "auto"
-    open-pull-requests-limit: 0
+    groups:
+    pjs:
+      patterns:
+        - "@polkadot/*"
     commit-message:
       # Prefix all commit messages with "chore"
       # include a list of updated dependencies
-      prefix: "chore(deps):"
+      prefix: "chore"
+      include: "scope"
     labels:
       - "dependencies"
