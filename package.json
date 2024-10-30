@@ -25,12 +25,11 @@
   },
   "devDependencies": {
     "@polkadot/util-crypto": "^13.1.1",
-    "@substrate/dev": "^0.7.1",
+    "@substrate/dev": "^0.9.0",
     "@types/node-fetch": "^2.6.3",
     "@typescript-eslint/eslint-plugin": "^6.11.0",
     "@typescript-eslint/parser": "^6.11.0",
     "lerna": "8.1.2",
-    "rimraf": "3.0.2",
     "ts-jest": "^29.1.1",
     "ts-node": "^9.1.1",
     "tsconfig-paths": "^3.9.0",
