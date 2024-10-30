@@ -8870,7 +8870,7 @@ __metadata:
     ts-node: "npm:^9.1.1"
     tsconfig-paths: "npm:^3.9.0"
     typedoc: "npm:^0.25.9"
-    typedoc-plugin-missing-exports: "npm:^2.2.0"
+    typedoc-plugin-missing-exports: "npm:^3.0.0"
     typedoc-plugin-remove-references: "npm:^0.0.6"
     typedoc-theme-hierarchy: "npm:^4.0.0"
     typescript: "npm:4.9.4"
@@ -8956,12 +8956,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typedoc-plugin-missing-exports@npm:^2.2.0":
-  version: 2.2.0
-  resolution: "typedoc-plugin-missing-exports@npm:2.2.0"
+"typedoc-plugin-missing-exports@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "typedoc-plugin-missing-exports@npm:3.0.0"
   peerDependencies:
-    typedoc: 0.24.x || 0.25.x
-  checksum: 10/db691b3494c8e112d7ea8621fcf79f1988ef8f0c9fc43eb5fc308fda0caa1b1e007c3d51db83236247cf9b52cdfec1186a7eb25ec3416fa03ef65f68b4e88e4e
+    typedoc: 0.26.x
+  checksum: 10/75f4f16a68c0a356a92d01e516e8d8220bf064c4a1af1f9f9da1d2cf4516293f32d94f8738324b16f973b9bbf34622e1edf3596015af04595f48e85242f86e54
   languageName: node
   linkType: hard
 
