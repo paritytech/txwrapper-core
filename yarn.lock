@@ -8001,7 +8001,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rimraf@npm:3.0.2, rimraf@npm:^3.0.2":
+"rimraf@npm:^3.0.2":
   version: 3.0.2
   resolution: "rimraf@npm:3.0.2"
   dependencies:
@@ -8876,7 +8876,6 @@ __metadata:
     "@typescript-eslint/eslint-plugin": "npm:^6.11.0"
     "@typescript-eslint/parser": "npm:^6.11.0"
     lerna: "npm:8.1.2"
-    rimraf: "npm:3.0.2"
     ts-jest: "npm:^29.1.1"
     ts-node: "npm:^9.1.1"
     tsconfig-paths: "npm:^3.9.0"

@@ -30,7 +30,6 @@
     "@typescript-eslint/eslint-plugin": "^6.11.0",
     "@typescript-eslint/parser": "^6.11.0",
     "lerna": "8.1.2",
-    "rimraf": "3.0.2",
     "ts-jest": "^29.1.1",
     "ts-node": "^9.1.1",
     "tsconfig-paths": "^3.9.0",
