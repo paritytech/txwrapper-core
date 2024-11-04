@@ -33,7 +33,7 @@
     "ts-jest": "^29.1.1",
     "ts-node": "^9.1.1",
     "tsconfig-paths": "^3.9.0",
-    "typedoc": "^0.25.9",
+    "typedoc": "^0.26.11",
     "typedoc-plugin-missing-exports": "^3.0.0",
     "typedoc-plugin-remove-references": "^0.0.6",
     "typedoc-theme-hierarchy": "^4.0.0",
