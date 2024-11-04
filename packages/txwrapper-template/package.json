@@ -24,7 +24,7 @@
     "@substrate/txwrapper-substrate": "^7.5.2"
   },
   "devDependencies": {
-    "ts-node": "9.1.1",
+    "ts-node": "10.9.2",
     "typescript": "4.8.3"
   }
 }
