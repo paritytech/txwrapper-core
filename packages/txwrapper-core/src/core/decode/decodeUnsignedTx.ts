@@ -47,6 +47,7 @@ export function decodeUnsignedTx(
 	let tip: number | string;
 	try {
 		tip = registry.createType('Compact<Balance>', unsigned.tip).toNumber();
+		// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	} catch (_error) {
 		tip = registry.createType('Compact<Balance>', unsigned.tip).toString();
 	}
