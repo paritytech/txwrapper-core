@@ -2052,7 +2052,7 @@ __metadata:
     "@polkadot/keyring": "npm:^13.1.1"
     "@substrate/txwrapper-dev": "npm:^7.5.2"
     "@types/memoizee": "npm:^0.4.3"
-    memoizee: "npm:0.4.15"
+    memoizee: "npm:0.4.17"
   languageName: unknown
   linkType: soft
 
@@ -2061,7 +2061,7 @@ __metadata:
   resolution: "@substrate/txwrapper-dev@workspace:packages/txwrapper-dev"
   dependencies:
     "@polkadot/api": "npm:^14.0.1"
-    memoizee: "npm:0.4.15"
+    memoizee: "npm:0.4.17"
   languageName: unknown
   linkType: soft
 
@@ -3755,6 +3755,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"d@npm:^1.0.2":
+  version: 1.0.2
+  resolution: "d@npm:1.0.2"
+  dependencies:
+    es5-ext: "npm:^0.10.64"
+    type: "npm:^2.7.2"
+  checksum: 10/a3f45ef964622f683f6a1cb9b8dcbd75ce490cd2f4ac9794099db3d8f0e2814d412d84cd3fe522e58feb1f273117bb480f29c5381f6225f0abca82517caaa77a
+  languageName: node
+  linkType: hard
+
 "dargs@npm:^7.0.0":
   version: 7.0.0
   resolution: "dargs@npm:7.0.0"
@@ -4079,7 +4089,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"es5-ext@npm:^0.10.35, es5-ext@npm:^0.10.46, es5-ext@npm:^0.10.50, es5-ext@npm:^0.10.53, es5-ext@npm:^0.10.62, es5-ext@npm:~0.10.14, es5-ext@npm:~0.10.2, es5-ext@npm:~0.10.46":
+"es5-ext@npm:^0.10.35, es5-ext@npm:^0.10.46, es5-ext@npm:^0.10.50, es5-ext@npm:^0.10.62, es5-ext@npm:~0.10.14, es5-ext@npm:~0.10.2, es5-ext@npm:~0.10.46":
   version: 0.10.63
   resolution: "es5-ext@npm:0.10.63"
   dependencies:
@@ -4088,6 +4098,18 @@ __metadata:
     esniff: "npm:^2.0.1"
     next-tick: "npm:^1.1.0"
   checksum: 10/69e373ffcf4664f12697adfab4a043a5cd93386c5e9d9b3eda4bd59f3591c7bebba3647475a3c9ccb1b48ec941b93c9507bf54727f0311a65e7220bc895eade9
+  languageName: node
+  linkType: hard
+
+"es5-ext@npm:^0.10.64":
+  version: 0.10.64
+  resolution: "es5-ext@npm:0.10.64"
+  dependencies:
+    es6-iterator: "npm:^2.0.3"
+    es6-symbol: "npm:^3.1.3"
+    esniff: "npm:^2.0.1"
+    next-tick: "npm:^1.1.0"
+  checksum: 10/0c5d8657708b1695ddc4b06f4e0b9fbdda4d2fe46d037b6bedb49a7d1931e542ec9eecf4824d59e1d357e93229deab014bb4b86485db2d41b1d68e54439689ce
   languageName: node
   linkType: hard
 
@@ -6670,19 +6692,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"memoizee@npm:0.4.15":
-  version: 0.4.15
-  resolution: "memoizee@npm:0.4.15"
+"memoizee@npm:0.4.17":
+  version: 0.4.17
+  resolution: "memoizee@npm:0.4.17"
   dependencies:
-    d: "npm:^1.0.1"
-    es5-ext: "npm:^0.10.53"
+    d: "npm:^1.0.2"
+    es5-ext: "npm:^0.10.64"
     es6-weak-map: "npm:^2.0.3"
     event-emitter: "npm:^0.3.5"
     is-promise: "npm:^2.2.2"
     lru-queue: "npm:^0.1.0"
     next-tick: "npm:^1.1.0"
     timers-ext: "npm:^0.1.7"
-  checksum: 10/3c72cc59ae721e40980b604479e11e7d702f4167943f40f1e5c5d5da95e4b2664eec49ae533b2d41ffc938f642f145b48389ee4099e0945996fcf297e3dcb221
+  checksum: 10/b7abda74d1057878f3570c45995f24da8a4f8636e0e9a7c29a6709be2314bf40c7d78e3be93c0b1660ba419de5740fa5e447c400ab5df407ffbd236421066380
   languageName: node
   linkType: hard
 

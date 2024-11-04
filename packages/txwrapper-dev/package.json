@@ -19,6 +19,6 @@
   },
   "dependencies": {
     "@polkadot/api": "^14.0.1",
-    "memoizee": "0.4.15"
+    "memoizee": "0.4.17"
   }
 }
