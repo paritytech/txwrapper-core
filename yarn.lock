@@ -9266,7 +9266,7 @@ __metadata:
     typedoc: "npm:^0.26.11"
     typedoc-plugin-missing-exports: "npm:^3.0.0"
     typedoc-plugin-remove-references: "npm:^0.0.6"
-    typedoc-theme-hierarchy: "npm:^4.0.0"
+    typedoc-theme-hierarchy: "npm:^5.0.3"
     typescript: "npm:4.9.4"
   languageName: unknown
   linkType: soft
@@ -9366,14 +9366,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typedoc-theme-hierarchy@npm:^4.0.0":
-  version: 4.1.2
-  resolution: "typedoc-theme-hierarchy@npm:4.1.2"
+"typedoc-theme-hierarchy@npm:^5.0.3":
+  version: 5.0.3
+  resolution: "typedoc-theme-hierarchy@npm:5.0.3"
   dependencies:
     fs-extra: "npm:11.1.1"
   peerDependencies:
-    typedoc: ^0.24.0 || ^0.25.0
-  checksum: 10/f674124d2cf8cfb1dd9768fde5efd3d09f1ce9bea0a8e8878acc635e1c769b7fd377aa7408b2d07bdd6415cf8be9f2712e8bf848cdd77fc6652cd077453c34c3
+    typedoc: ^0.26.0
+  checksum: 10/7b188945c1fbe8167badf17e04a976e39938aadf74df8d44e1ae2574b2d43a0a256c67027b1d718211e10af3c8ef8cb453c927863471bf9d6c67b3456e0d0653
   languageName: node
   linkType: hard
 
