@@ -13,6 +13,7 @@ import {
  * @param options - Registry and metadata used for constructing the method.
  */
 export function removeProxies(
+	// eslint-disable-next-line @typescript-eslint/no-empty-object-type
 	args: {},
 	info: BaseTxInfo,
 	options: OptionsWithMeta,

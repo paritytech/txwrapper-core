@@ -39,6 +39,7 @@ export function decodeSignedTx(
 
 	try {
 		tip = tx.tip.toNumber();
+		// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	} catch (_error) {
 		tip = tx.tip.toString();
 	}
