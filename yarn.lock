@@ -2320,9 +2320,9 @@ __metadata:
   linkType: hard
 
 "@types/memoizee@npm:^0.4.3":
-  version: 0.4.5
-  resolution: "@types/memoizee@npm:0.4.5"
-  checksum: 10/271d195827aaeab0aa70c73d5c3ccd97d1c4b09ba65a7d75976e8cb2a51d409cd60fea40257f518723e956a34af7891139723292f73b3ccbee49a2bffaaff560
+  version: 0.4.11
+  resolution: "@types/memoizee@npm:0.4.11"
+  checksum: 10/1ecc8b617738a97d9063fbd9aa9bf366ec984d94100ba570392cd9fab632a2066b925d8c8b98139a51931fc081e5e893770b63a7678abe991f48d4f35d897c0b
   languageName: node
   linkType: hard
 
