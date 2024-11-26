@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.5.3](https://github.com/paritytech/txwrapper-core/compare/v7.5.2...v7.5.3) (2024-11-26)
+
+
+### Bug Fixes
+
+* dependabot indendation ([#413](https://github.com/paritytech/txwrapper-core/issues/413)) ([ef8040c](https://github.com/paritytech/txwrapper-core/commit/ef8040c246b11f0910276bdbabd8ac65194ec796))
+
+
+
+
+
 ## [7.5.2](https://github.com/paritytech/txwrapper-core/compare/v7.5.1...v7.5.2) (2024-10-15)
 
 
