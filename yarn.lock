@@ -2303,13 +2303,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/json5@npm:^0.0.29":
-  version: 0.0.29
-  resolution: "@types/json5@npm:0.0.29"
-  checksum: 10/4e5aed58cabb2bbf6f725da13421aa50a49abb6bc17bfab6c31b8774b073fa7b50d557c61f961a09a85f6056151190f8ac95f13f5b48136ba5841f7d4484ec56
-  languageName: node
-  linkType: hard
-
 "@types/mdast@npm:^4.0.0":
   version: 4.0.4
   resolution: "@types/mdast@npm:4.0.4"
@@ -6225,17 +6218,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"json5@npm:^1.0.1":
-  version: 1.0.2
-  resolution: "json5@npm:1.0.2"
-  dependencies:
-    minimist: "npm:^1.2.0"
-  bin:
-    json5: lib/cli.js
-  checksum: 10/a78d812dbbd5642c4f637dd130954acfd231b074965871c3e28a5bbd571f099d623ecf9161f1960c4ddf68e0cc98dee8bebfdb94a71ad4551f85a1afc94b63f6
-  languageName: node
-  linkType: hard
-
 "json5@npm:^2.2.2, json5@npm:^2.2.3":
   version: 2.2.3
   resolution: "json5@npm:2.2.3"
@@ -9243,19 +9225,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tsconfig-paths@npm:^3.9.0":
-  version: 3.9.0
-  resolution: "tsconfig-paths@npm:3.9.0"
-  dependencies:
-    "@types/json5": "npm:^0.0.29"
-    json5: "npm:^1.0.1"
-    minimist: "npm:^1.2.0"
-    strip-bom: "npm:^3.0.0"
-  checksum: 10/446159450fcb00ff8e85aee963ceb6db2f6e20ffaad2ffd7ada5457fdf0d9da7ae89b47d550b6a93c235559e935df305859234f8695f2343a48ba6b85fa2a694
-  languageName: node
-  linkType: hard
-
-"tsconfig-paths@npm:^4.1.2":
+"tsconfig-paths@npm:^4.1.2, tsconfig-paths@npm:^4.2.0":
   version: 4.2.0
   resolution: "tsconfig-paths@npm:4.2.0"
   dependencies:
@@ -9314,7 +9284,7 @@ __metadata:
     lerna: "npm:8.1.2"
     ts-jest: "npm:^29.1.1"
     ts-node: "npm:^10.9.2"
-    tsconfig-paths: "npm:^3.9.0"
+    tsconfig-paths: "npm:^4.2.0"
     typedoc: "npm:^0.26.11"
     typedoc-plugin-missing-exports: "npm:^3.0.0"
     typedoc-plugin-remove-references: "npm:^0.0.6"
