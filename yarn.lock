@@ -9151,11 +9151,11 @@ __metadata:
   linkType: hard
 
 "typedoc-plugin-missing-exports@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "typedoc-plugin-missing-exports@npm:3.0.0"
+  version: 3.1.0
+  resolution: "typedoc-plugin-missing-exports@npm:3.1.0"
   peerDependencies:
-    typedoc: 0.26.x
-  checksum: 10/75f4f16a68c0a356a92d01e516e8d8220bf064c4a1af1f9f9da1d2cf4516293f32d94f8738324b16f973b9bbf34622e1edf3596015af04595f48e85242f86e54
+    typedoc: 0.26.x || 0.27.x
+  checksum: 10/969d1f5c0e867e198ddb3faf76999c5a1a9e59d4acb82aea07f07dde20b9f2923cfff591ee960b9325621c8c24a219fe87b5e88ed6ad46f0f7f40617642a4df2
   languageName: node
   linkType: hard
 
