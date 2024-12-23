@@ -9126,13 +9126,13 @@ __metadata:
   linkType: hard
 
 "typedoc-theme-hierarchy@npm:^5.0.3":
-  version: 5.0.3
-  resolution: "typedoc-theme-hierarchy@npm:5.0.3"
+  version: 5.0.4
+  resolution: "typedoc-theme-hierarchy@npm:5.0.4"
   dependencies:
     fs-extra: "npm:11.1.1"
   peerDependencies:
-    typedoc: ^0.26.0
-  checksum: 10/7b188945c1fbe8167badf17e04a976e39938aadf74df8d44e1ae2574b2d43a0a256c67027b1d718211e10af3c8ef8cb453c927863471bf9d6c67b3456e0d0653
+    typedoc: ^0.26.0 || ^0.27.0
+  checksum: 10/1b7dcfcc4feda4ad85edc0711360896ed7f4af8b258d5b8305cc0ae6bc206a84abe0ce61c1b0b88e17c429bef4a75623d97ae5d9027c88f27f1160421105bbc5
   languageName: node
   linkType: hard
 
