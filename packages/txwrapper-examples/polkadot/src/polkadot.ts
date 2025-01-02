@@ -119,7 +119,7 @@ async function main(): Promise<void> {
 	console.log(
 		`\nDecoded Transaction\n  To: ${
 			(decodedUnsigned.method.args.dest as { id: string })?.id
-		}\n` + `  Amount: ${decodedUnsigned.method.args.value}`,
+		}\n` + `  Amount: ${JSON.stringify(decodedUnsigned.method.args.value)}`,
 	);
 
 	// Construct the signing payload from an unsigned transaction.
@@ -134,7 +134,7 @@ async function main(): Promise<void> {
 	console.log(
 		`\nDecoded Transaction\n  To: ${
 			(payloadInfo.method.args.dest as { id: string })?.id
-		}\n` + `  Amount: ${payloadInfo.method.args.value}`,
+		}\n` + `  Amount: ${JSON.stringify(payloadInfo.method.args.value)}`,
 	);
 
 	// Sign a payload. This operation should be performed on an offline device.
@@ -169,7 +169,7 @@ async function main(): Promise<void> {
 	console.log(
 		`\nDecoded Transaction\n  To: ${
 			(txInfo.method.args.dest as { id: string })?.id
-		}\n` + `  Amount: ${txInfo.method.args.value}\n`,
+		}\n` + `  Amount: ${JSON.stringify(txInfo.method.args.value)}\n`,
 	);
 }
 
