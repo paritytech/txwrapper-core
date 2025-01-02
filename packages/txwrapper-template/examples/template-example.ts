@@ -82,8 +82,8 @@ async function main(): Promise<void> {
 	});
 	console.log(
 		// TODO all the log messages need to be updated to be relevant to the method used
-		`\nDecoded Transaction\n  To: ${decodedUnsigned.method.args.dest}\n` +
-			`  Amount: ${decodedUnsigned.method.args.value}`,
+		`\nDecoded Transaction\n  To: ${JSON.stringify(decodedUnsigned.method.args.dest)}\n` +
+			`  Amount: ${JSON.stringify(decodedUnsigned.method.args.value)}`,
 	);
 
 	// Construct the signing payload from an unsigned transaction.
@@ -97,8 +97,8 @@ async function main(): Promise<void> {
 	});
 	console.log(
 		// TODO all the log messages need to be updated to be relevant to the method used
-		`\nDecoded Transaction\n  To: ${payloadInfo.method.args.dest}\n` +
-			`  Amount: ${payloadInfo.method.args.value}`,
+		`\nDecoded Transaction\n  To: ${JSON.stringify(payloadInfo.method.args.dest)}\n` +
+			`  Amount: ${JSON.stringify(payloadInfo.method.args.value)}`,
 	);
 
 	// Sign a payload. This operation should be performed on an offline device.
@@ -132,8 +132,8 @@ async function main(): Promise<void> {
 	});
 	console.log(
 		// TODO all the log messages need to be updated to be relevant to the method used
-		`\nDecoded Transaction\n  To: ${txInfo.method.args.dest}\n` +
-			`  Amount: ${txInfo.method.args.value}\n`,
+		`\nDecoded Transaction\n  To: ${JSON.stringify(txInfo.method.args.dest)}\n` +
+			`  Amount: ${JSON.stringify(txInfo.method.args.value)}\n`,
 	);
 }
 

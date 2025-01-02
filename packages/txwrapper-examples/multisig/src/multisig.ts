@@ -227,7 +227,7 @@ async function main(): Promise<void> {
 	console.log(
 		`\nDecoded Transaction\n  To\t: ${
 			(decodedUnsigned.method.args.dest as { id: string })?.id
-		}\n` + `  Amount: ${decodedUnsigned.method.args.value}`,
+		}\n` + `  Amount: ${JSON.stringify(decodedUnsigned.method.args.value)}`,
 	);
 
 	// Construct the signing payload from an unsigned transaction.
@@ -306,9 +306,9 @@ async function main(): Promise<void> {
 		`\nDecoded Transaction\n  To\t: ${
 			(decodedUnsignedTXMulti.method.args.dest as { id: string })?.id
 		}\n` +
-			`  Amount: ${decodedUnsignedTXMulti.method.args.value}` +
+			`  Amount: ${JSON.stringify(decodedUnsignedTXMulti.method.args.value)}` +
 			`\n` +
-			`  From\t: ${decodedUnsignedTXMulti.address}`,
+			`  From\t: ${JSON.stringify(decodedUnsignedTXMulti.address)}`,
 	);
 
 	// Encoded method of the unsigned multisig tx
@@ -368,9 +368,9 @@ async function main(): Promise<void> {
 	});
 	console.log(
 		`\nDecoded Transaction\n` +
-			`  Threshold: ${decodedUnsignedApproveAsMulti.method.args.threshold}` +
+			`  Threshold: ${JSON.stringify(decodedUnsignedApproveAsMulti.method.args.threshold)}` +
 			`\n` +
-			`  Approve From: ${decodedUnsignedApproveAsMulti.address}`,
+			`  Approve From: ${JSON.stringify(decodedUnsignedApproveAsMulti.address)}`,
 	);
 
 	// Construct the signing payload from an unsigned transaction.
@@ -429,8 +429,8 @@ async function main(): Promise<void> {
 	});
 	console.log(
 		`\nDecoded Transaction of \`approveAsMulti\`\n` +
-			`  Call Hash of unsignedTXMulti: ${txInfoApproveAsMulti.method.args.callHash}\n` +
-			`  Threshold of unsignedTXMulti: ${txInfoApproveAsMulti.method.args.threshold}`,
+			`  Call Hash of unsignedTXMulti: ${JSON.stringify(txInfoApproveAsMulti.method.args.callHash)}\n` +
+			`  Threshold of unsignedTXMulti: ${JSON.stringify(txInfoApproveAsMulti.method.args.threshold)}`,
 	);
 
 	// Create Signatories Sorted excluding the sender (Bob)
@@ -573,8 +573,8 @@ async function main(): Promise<void> {
 	});
 	console.log(
 		`\nDecoded Transaction of \`asMulti\`\n` +
-			`  Call of unsignedTXMulti: ${txInfoAsMulti.method.args.call}\n` +
-			`  Threshold of unsignedTXMulti: ${txInfoAsMulti.method.args.threshold}\n`,
+			`  Call of unsignedTXMulti: ${JSON.stringify(txInfoAsMulti.method.args.call)}\n` +
+			`  Threshold of unsignedTXMulti: ${JSON.stringify(txInfoAsMulti.method.args.threshold)}\n`,
 	);
 }
 
